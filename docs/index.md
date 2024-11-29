@@ -18,7 +18,7 @@ This project has a few prerequisites.
     installed with `Homebrew` using `brew install docker-compose`.
 * When not using Docker
   * [`Node.js`](https://nodejs.org/) for compilation and linting of the API
-    specification. Ideally Node 12 or above.
+    specification. Ideally Node 18 or above.
   * [`Yarn`](https://yarnpkg.com/) is the Node package manager for this project.
     It can be installed with `npm i -g yarn` if Node is installed.
   * [`YamlLint`](https://github.com/adrienverge/yamllint) is the linter to validate
@@ -45,7 +45,7 @@ docker-compose up --build
 
 ## Run with Node
 
-To run with Node directly, make sure you have Node 14 or higher installed.
+To run with Node directly, make sure you have Node 18 or higher installed.
 
 ```sh
 yarn install

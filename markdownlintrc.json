@@ -15,5 +15,8 @@
 	},
 	"ul-indent": false,
 	"link-image-reference-definitions": false,
-	"reference-links-images": false
+	"reference-links-images": false,
+	"no-duplicate-heading": false,
+	"table-pipe-style": false,
+	"table-column-count": false
 }
