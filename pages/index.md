@@ -23,7 +23,7 @@ sibling_id: content
 parent_id: ''
 next_page_id: ''
 previous_page_id: ''
-source_url: 'https://github.com/box/developer.box.com/blob/main/content/pages/index.md'
+source_url: https://github.com/box/developer.box.com/blob/main/content/pages/index.md
 ---
 # Box Platform
 
