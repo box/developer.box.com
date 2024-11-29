@@ -22,6 +22,13 @@ troubleshooting purposes.
   for real-time troubleshooting in the future.
 </Message>
 
+
+<Message type="notice">
+This report is being rolled out gradually to customers. We plan to have the
+report fully released by October 25th, 2021.
+</Message>
+
+
 ## 1. Click on the **App Diagnostics** Tab
 
 To run the App Diagnostics Report, click the **App Diagnostics** option located
