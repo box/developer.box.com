@@ -24,7 +24,7 @@ A Box Admin needs an application's Client ID in order to properly
 authorize or enable it in the Admin Console.
 
 <Message>
-You can use [My Apps][apps] view to quickly look up
+You can use [Integrations][apps] view to quickly look up
 the authorization and enablement status of your application.
 </Message>
 
@@ -67,7 +67,7 @@ application.
 2. Scroll down to the OAuth 2.0 Credentials section and copy the **Client ID** value to provide to a Box Admin.
 
 Alternatively, hover over the application in the
-[My Apps][apps] view to look up the **ClientID** and then
+[My Platform Apps][apps] view to look up the **ClientID** and then
 copy it using the `copy` button.
 
 <Message>
@@ -75,20 +75,20 @@ copy it using the `copy` button.
 
   If you don't know your enterprise Admin, go to your Box [Account
   Settings][settings] page and scroll to the bottom. If an admin contact is set
-  you should see their contact information under "Admin Contact".
+  you should see their contact information under **Admin Contact**.
 </Message>
 
 ### As an Admin
 
-1. Navigate to the [Admin Console][adminconsole] and select the **Apps** tab (1) from the left navigation panel.
-2. Click the **Custom Apps Manager** tab (2) at the top of your screen.
-3. For both Server and User Authentication Apps screens, click the **Add App** (3) button in the top right corner to add a new app.
-4. Alternatively, you can use the Custom Apps Manager table menu (4) to authorize and enable apps.
+1. Navigate to the [Admin Console][adminconsole] and select the **Integrations** tab (1) from the left navigation panel.
+2. Click the **Platform Apps Manager** tab (2) at the top of your screen.
+3. For both Server and User Authentication Apps screens, click the **Add Platform App** (3) button in the top right corner to add a new app.
+4. Alternatively, you can use the Platform Apps Manager table menu (4) to authorize and enable apps.
 
 #### Server Authentication Apps
 
 <ImageFrame border center>
-  ![Server Apps tab](images/jwt_app_approval_flow.png)
+  ![Server tab](images/oauth_app_approval_flow.png)
 </ImageFrame>
 
 #### User Authentication Apps

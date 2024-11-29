@@ -10,43 +10,52 @@ alias_paths:
 
 # Box Embed
 
-Box Embed is a HTML-based framework that makes it possible to embed the entire
-Box Web App experience anywhere people work. Box Embed provides the ability to
-upload, search, comment, share, tag, and edit files using Box Edit.
+Box Embed is a HTML-based framework that allows embedding the entire
+Box Web App experience in a custom-made application. Box Embed provides the ability to upload, search, comment, share, tag, and edit files using Box Edit.
 
-## Configure
+## Before you start
 
-To create the widget, you need to set the folder for sharing and you
-need to have at least **Viewer** [permissions][5].
+To create a widget, you need to:
 
-### From the web
+* Set an embeddable element, such as a **folder**, **file**, or **Hub** for sharing. 
+* Have at least **Viewer** [permissions][5].
 
-To grab your Box Embed code from the Box web app:
+## Using web app
 
-- navigate to the folder of choice,
-- click on the ellipsis beside the folder,
-- go to **More Actions**,
-- click **Embed Widget**.
+To fetch the Box Embed widget code from the Box web app, perform the following steps.
+
+### Files and folders
+
+1. Navigate to the chosen file or folder. 
+2. Click on the ellipsis next to the folder. 
+3. Go to  **More Actions** >  **Embed Widget**.
+
+### Hubs
+
+1. Navigate to the chosen Hub. 
+2. Click on the ellipsis menu in the top right corner. 
+3. Click **Embed Hub**.
 
 <ImageFrame border>
   ![Box Embed](./box-embed-new.png)
 </ImageFrame>
 
-The next screen allows you to configure the size, sorting, and view of
-the widget. You can also choose to hide the folder path, and to expand
-the navigation & sidebar by default.
+In the next step, configure the parameters of an embeddable element.
+
+| Files | Folders  | Hubs  |
+|----------|----------|------------------------|
+|Size of the widget.| Size of the widget, sorting of the files in a folder, hiding the navigation path and sidebar | Size of the widget,  hiding the parent navigation path and sidebar. |
 
 <ImageFrame border>
   ![Box Embed Configuration](./embed-configuration.png)
 </ImageFrame>
 
-Once you are done customizing the embed widget, you need to copy
+When you are done customizing the embed widget, copy
 and paste the embed code into your site or web application.
 
 ## Programmatically
 
-If you want to add more customization to Box Embed, you have the ability to
-build it programmatically. The format for an embed snippet is as follows.
+If you want to customize Box Embed even further, you can do it programmatically. The format for an embed snippet is as follows:
 
 ```html
 <iframe
@@ -102,25 +111,27 @@ a list of optional parameters you can configure.
 
 |                       |                                                                                              |
 | --------------------- | -------------------------------------------------------------------------------------------- |
-| `view`                | The view type for your files or folders. Can be `list` (default) or `icon`.                  |
+| `view`                | The view type for your files or folders. Can be `list` (default) or `icon`. For logged-in users the view type from user preferences takes precedence.                  |
 | `sortColumn`          | The order the files or folders are sorted in. Can be `name`, `date` (default), or `size`.    |
 | `sortDirection`       | The sort direction of files or folders. Can be `ASC` (default) or `DESC`.                    |
 | `showParentPath`      | Hide or show the folder path in the header of the frame. Can be `true` or `false` (default). |
-| `showItemFeedActions` | Hide or show file comments or tasks. Can be true (default) or false.                         |
+| `showItemFeedActions` | Hide or show file comments or tasks. Can be `true` (default) or `false`.                         |
+| `hideHubsGallery` | Hide or show navigation chevron button to go back to Hubs gallery. Can be `true` or `false` (default).                         |
+| `uxLite` | Show the limited content preview (Preview Light), with no cloud game. Works only for shared files.                     |
 
-### Full Screen Capabilities
+### Full screen capabilities
 
 To enable full screen capabilities for the Box Embed snippet, include one or more
 of the following parameters if you want the object to be viewable in full screen
 within an `<iframe>`:
 
-- `allowfullscreen`
-- `webkitallowfullscreen`
-- `mozallowfullscreen`
-- `oallowfullscreen`
-- `msallowfullscreen`
+* `allowfullscreen`
+* `webkitallowfullscreen`
+* `mozallowfullscreen`
+* `oallowfullscreen`
+* `msallowfullscreen`
 
-## Expiring Embed Links
+## Expiring embed links
 
 For files, another option is to call the [`GET /files/:id`][1]
 and request an `expiring_embed_link` using the `fields` query parameter.
@@ -195,7 +206,7 @@ https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
 | `showDownload`    | Shows the download button in the embedded header bar if the viewer has permissions to download the file. Document file types will also show a print button since print and download are governed by the same permissions. Defaults to `false`.                                                                                                                                                                                              |
 | `showAnnotations` | Enables users with permission Preview and above to annotate document and image previews. Also shows annotations that are already on the document. To learn more about the file types that annotations is available on as well as the types of annotations, you can refer to our Annotations page. Annotations are available today on web browsers only. On mobile browsers, users will be able to view annotations but not create new ones. |
 
-## Cloud Game
+## Cloud game
 
 The cloud game is a widget created to prevent clickjacking.
 It's shown for embedded sites that aren’t partner integrations.
@@ -214,7 +225,7 @@ game is displayed.
 If the `showCloudGame` status is `false`, user is navigated to the login
 page.
 
-## Custom Logo
+## Custom logo
 
 Paid Box customers have the option to remove the Box logo in the file Preview.
 To do so, visit the **Admin Console**, **Enterprise Settings**, **Custom

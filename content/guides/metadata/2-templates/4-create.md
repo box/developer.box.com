@@ -85,7 +85,7 @@ can select respectively one or many options from a list of items.
 
 When a metadata template is created, a `templateKey` is automatically generated
 from the `displayName` of the template unless a `templateKey` is explicitly
-provided. When creating the template key any spaces and irregular
+provided. When creating the template key, any spaces and irregular
 characters in the name are removed, and the string is transformed to camel case.
 
 For example, a metadata template that is named

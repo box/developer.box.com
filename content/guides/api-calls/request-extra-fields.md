@@ -10,25 +10,15 @@ required_guides: []
 alias_paths: []
 ---
 
-# Request Extra Fields
+# Request extra fields
 
-The number of fields returned for a resource can depend on the API endpoint used
+The number of fields returned for a resource depends on the API endpoint used
 to request the resource.
 
-| Variant  |                                                                                                                                                                                                                                                                  |
-| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Standard | The standard set of fields returned when requesting a resource for its own endpoints, for example when requesting a file through the [`GET /files/:id`](endpoint://get_files_id) endpoint                                                                        |
-| Full     | The full set of fields that can be returned through a resource's own endpoints by using the `field` query parameter                                                                                                                                              |
-| Mini     | A subset of fields that is returned when a resource is returned as a nested part of another resource, for example when a file is returned when requesting all items in a folder through the [`GET /folders/:id/items`](endpoint://get_folders_id_items) endpoint |
-
-The API reference documentation has each of these variations labeled in more
-detail. Most notably, the file, folder, web link, and user items have full and
-mini variations.
-
-## Using the field query parameter
+## Use the `fields` query parameter
 
 To request a specific field for a resource that is not returned by default in
-the standard response, append the `field` query parameter to your request. The
+the standard response, append the `fields` query parameter to your request. The
 value of this parameter is a comma separated list of field names.
 
 ```curl
@@ -48,18 +38,18 @@ curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
 
 <Message type='notice'>
   It is important to note that when a specific field is requested no other
-  fields are returned except for those requested and the "base" set of fields.
+  fields are returned except for those requested and the **base** set of fields.
   For a file, this base set is comprised of the `etag`, `id`, and `type` values.
 </Message>
 
-## Resource
+## Resource variants
 
-The following resource variants are available via our API.
+The following resource variants are available in the Box API.
 
 ### Standard
 
-The default set of fields returned in an API response is commonly known as the
-standard resource variant. It is generally returned when requesting a resource
+The default set of fields returned in an API response. 
+The standard variant is returned when requesting a resource
 through the main APIs available for that resource. For example, when requesting
 the [`GET /files/:id`](endpoint://get_files_id) endpoint the API will return
 the standard variation of a file.
@@ -148,14 +138,12 @@ curl https://api.box.com/2.0/files/12345 \
 
 ### Full
 
-The total set of fields that can be returned in an API response is commonly known
-as the full resource variant. It can generally be returned when requesting a resource
+The total set of fields that can be returned in an API response. The full variant is returned when requesting a resource
 through the main APIs available for that resource and by appending the `fields`
 query parameter.
 
 For example, when requesting the [`GET /files/:id`](endpoint://get_files_id)
-endpoint with the `fields=is_package,lock` parameter the API will return the fields
-specified plus the basic fields for the file.
+endpoint with the `fields=is_package,lock` parameter the API will return the fields specified plus the basic fields for the file.
 
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=is_package,lock \

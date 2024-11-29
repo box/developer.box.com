@@ -4,17 +4,18 @@ related_endpoints:
   - post_ai_text_gen
   - post_ai_ask
 related_guides:
-  - box-ai/prerequisites
-  - box-ai/ask-questions
-  - box-ai/generate-text
+  - box-ai/ai-tutorials/prerequisites
+  - box-ai/ai-tutorials/ask-questions
+  - box-ai/ai-tutorials/generate-text
+  - box-ai/ai-tutorials/extract-metadata-structured
+  - box-ai/ai-tutorials/extract-metadata
+
 ---
 
 # Box AI
 
 <Message type="notice">
-Box AI Platform API is currently in beta which means the
-available capabilities may change.
-Box AI Platform API is available to all Enterprise Plus customers.
+Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 </Message>
 
 Box AI API allows you to use Box AI
@@ -34,8 +35,11 @@ in your application workflows.
 Currently, you can ask Box AI to answer
 user questions, summarize the document content,
 or generate text you can use in your documents.
-You can also use [Box AI for UI Elements][boxaielement]
-to embed Box AI functionality in your apps.
+You can also use Box AI to extract metadata from the
+provided input, such as a schema or metadata template.
+
+The [Box AI for UI Elements][boxaielement] functionality
+allows embedding Box AI in your apps.
 
 ### Ask questions to Box AI
 
@@ -70,9 +74,16 @@ For details, see [Box AI for Notes][boxainotes].
 
 ![box ai in notes](./images/box-ai-in-notes.png)
 
-## Configuration overrides
+### Metadata extraction
 
-You can use the `ai_agent` parameter available in the [`POST /2.0/ai/ask`][ask] and [`POST /2.0/ai/text_gen`][text-gen] requests to override the default agent configuration and introduce your own custom settings.
+The [`POST /2.0/ai/extract`][extract] and [`POST /2.0/ai/extract_structured`][extract-structured] endpoints allow you to extract data from the provided input and return them in a form of key-value pairs.
+
+* Use the `extract_structured` endpoint to extract data according to a pre-defined structure obtained from the metadata template, or a set of fields.
+* Use the `extract` endpoint to extract data from a file using a prompt that can include a stringified version of formats such as JSON or XML, or even plain text.
+
+### Configuration overrides
+
+You can use the `ai_agent` parameter available in the Box AI API requests to override the default agent configuration and introduce your own custom settings.
 
 For details, see [AI agent default configuration][agent-default].
 
@@ -107,21 +118,15 @@ better results for this language.
 
 ## Box AI API in User Activity Report (UAR)
 
-[User Activity Reports][uar] provide an overview of the
-actions the users are taking in Box. Box Admins
-use this report to view the actions taken by their
-users within a given time period, and this
-includes interactions with Box AI. The report
-contains the following action types that Box admins can
-select to get details for Box AI:
+[User Activity Reports][uar] provide an overview of the actions the users are taking in Box. Box Admins use this report to view the actions taken by their users within a given time period, and this includes interactions with Box AI. The report contains the following action types that Box admins can select to get details for Box AI:
 
-- `AI query`: The user queried Box AI and received a response.
-- `Failed AI query`: The user queried Box AI but did not receive a response.
+* **AI query**: The user queried Box AI and received a response.
+* **Failed AI query**: The user queried Box AI but did not receive a response.
 
 [boxainotes]: https://support.box.com/hc/en-us/articles/22198577315347-Box-AI-for-Notes
 [boxaidocs]: https://support.box.com/hc/en-us/articles/22158484213267-Box-AI-for-Documents
 [boxaielement]: g://embed/ui-elements/preview#box-ai-ui-element
 [uar]: https://support.box.com/hc/en-us/articles/4415012490387-User-Activity-Report
-[agent-default]: g://box-ai/get-agent-default-config
-[ask]: e://post_ai_ask#param_ai_agent
-[text-gen]: e://post_ai_text_gen#param_ai_agent
+[agent-default]: g://box-ai/ai-agents/get-agent-default-config
+[extract]: e://post_ai_extract
+[extract-structured]: e://post_ai_extract_structured

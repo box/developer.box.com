@@ -1,6 +1,6 @@
-# Using the latest Node 14
+# Using the latest Node 18
 # FROM ubuntu:20.04
-FROM node:14
+FROM node:18
 
 # Set a working directory to use
 WORKDIR /code

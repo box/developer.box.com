@@ -6,7 +6,7 @@ required_guides: []
 alias_paths: []
 ---
 
-# Permissions & Errors
+# Permissions and errors
 
 The following guides provide information on the permissions or errors related to
 the Box API. It includes pages on [Common Errors][1], [Rate Limits][2],

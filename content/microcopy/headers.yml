@@ -5,6 +5,18 @@ primary:
       // text:
       text: Documentation
 
+    develop:
+      // text:
+      text: Develop
+
+    connect:
+      // text:
+      text: Connect
+
+    explore:
+      // text:
+      text: Explore
+
     quickstarts:
       // text:
       text: Getting Started
@@ -13,8 +25,15 @@ primary:
       // text:
       text: Community
 
+    community_forum:
+      // text:
+      text: Box Developer Community
+
       //url:
-      url: https://forum.box.com
+      url: https://community.box.com/
+
+    events:
+      text: Events
 
     learn:
       // text: The text for the link to the learn section
@@ -29,6 +48,14 @@ primary:
 
       //url: The URL to the learn section
       url: /sign/
+
+    ai_dev_zone:
+      text: Box AI Developer Zone
+      url: /sign/
+
+    buie:
+      text: Box UI Elements
+      url: /box-ui-elements
 
     get_started:
       // text: The text for the link to the old Get Started guides
@@ -73,17 +100,15 @@ primary:
     additional_resouces:
       text: Additional resources
 
+    overview:
+      text: Overview
+
     blog:
       // text: The text for the Medium Dev Blog
       text: Box Developer Blog
 
       // url: The URL to Medium bev blog
       url: https://medium.com/box-developer-blog
-      # events_and_workshops:
-      #   // text: The text for the link to events and workshops
-      #   text: Events & Workshops
-      #   // url: The URL to the developer blog
-      #   url: TBD
 
   buttons:
     dashboard:
@@ -95,7 +120,7 @@ primary:
 
     console:
       // text: The text for the link to the developer console
-      text: My Apps
+      text: My Platform Apps
 
       // url: The URL to the developer console
       url: https://cloud.app.box.com/developers/console
@@ -109,7 +134,7 @@ primary:
 
   featured:
     tag:
-      text: Featured
+      text: New
 
     title:
       text: Box AI Developer Zone
@@ -122,8 +147,38 @@ primary:
     cta:
       text: |-
         Try it out!
-      url:
-        /ai-dev-zone/
+
+  develop_featured:
+    tag:
+      text: Featured
+
+    title:
+      text: Box Sample Code Catalog
+
+    details:
+      text: |-
+        Browse 90+ open-source repositories
+        in various programming languages to find useful scripts,
+        app examples, and inspiring use cases!
+
+    cta:
+      text: |-
+        Browse sample code
+
+  connect_featured:
+    tag:
+      text: Event
+
+    title:
+      text: Box Developer Day Toronto
+
+    details:
+      text: |-
+        Join the upcoming Box Platform Developer Day in Toronto on November 20!
+
+    cta:
+      text: |-
+        Register now
 
 secondary:
   images:
@@ -157,12 +212,6 @@ secondary:
 
       // url: The URL to the developer blog
       url: https://medium.com/box-developer-blog
-      # events_and_workshops:
-      #   // text: The text for the link to events and workshops
-      #   text: Events & Workshops
-
-      #   // url: The URL to the developer blog
-      #   url: TBD
 
   dropdowns:
     // docs: |-
@@ -191,16 +240,15 @@ secondary:
     // message: |-
       The content of the notification
     message: >
-      Add the power of the Box AI API to your custom apps at
-      Content Cloud Summit on May 15
+      Join BoxWorks 2024 to discover what's possible with content and AI!
 
     // href: |-
       The link to navigate to when the CTA is clicked
-    href: "https://events.box.com/series/content-cloud-summit-2024/landing_page"
+    href: "https://boxworks.box.com/boxworks"
 
     // cta: |-
       The text of the CTA
-    cta: Learn more and register!
+    cta: Register now!
 
     // ttl: |-
       The number of seconds to display the message. Should always
