@@ -151,6 +151,12 @@
   "reference.pill.latest_version": "最新バージョン",
   // Pill added to deprecated endpoints and resources
   "reference.pill.deprecated": "非推奨",
+  // Tooltip text for the beta pill
+  "reference.tooltip.beta": "This is a beta version of the endpoint and thus may be subject to changes",
+  // Tooltip text for the latest version pill
+  "reference.tooltip.latest_version": "This is the most recent stable version of the endpoint",
+  // Tooltip text for the deprecated pill
+  "reference.tooltip.deprecated": "This version of the endpoint is deprecated",
   // The title for the sidebar section of an endpoint that showsdeprecated entries
   "reference.sidebar.titles.deprecated_entries": "非推奨",
   // Placeholder text for the search filter in the sidebar
@@ -764,5 +770,9 @@
   "box_ui_elements.demoTiles.contentSidebar.title": "Content Sidebar",
   "box_ui_elements.demoTiles.contentSidebar.description": "ファイル関連のアクティビティ、メタデータ、詳細 (バージョン、コメント、タスクを含む) の表示を実装します。",
   // The prefix for the selected API version
-  "versions.label": "APIバージョン"
+  "versions.label": "APIバージョン",
+  // Label of a link to the page about API versioning
+  "versions.about": "About Box API versioning",
+  // Tooltip text for resource version
+  "versions.resource_version_tooltip": "This resource is used by endpoints in version %s"
 }
