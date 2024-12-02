@@ -43,6 +43,7 @@ submit your app for approval. Box will review your application
 and publish it in the Integrations.
 
 In case of any questions or issues, contact the Partners team:
-integrate@box.com
+[`integrate@box.com`][email]
 
 [integrations]: https://cloud.app.box.com/integrations
+[email]: mailto:integrate@box.com
