@@ -29,11 +29,7 @@ fullyTranslated: true
 
 ウェブアプリ統合を使用した場合、ユーザーはサードパーティ製アプリケーションを使用して、Boxに保存されているコンテンツを変更、共有、または編集できます。また、ウェブアプリ統合では、Boxプレビューに表示される[推奨ウェブ統合][recommended-web-integrations]を通じて、Boxユーザーに新しい機能を提供することもできます。
 
-<ImageFrame border shadow width="600" center>
-
 ![統合の例](./images/recommended-apps-preview.png)
-
-</ImageFrame>
 
 ウェブアプリ統合を有効にすると、アプリケーションを \[推奨アプリ] に追加できるため、ユーザーはそのアプリケーションでファイルを使用できるようになります。統合は、特定のコンテンツタイプとファイル拡張子に制限することができます。
 

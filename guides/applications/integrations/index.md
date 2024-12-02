@@ -50,43 +50,19 @@ Box App Center用のアプリケーションの開発またはBoxパートナー
 * 統合ではOAuth 2.0以外の認証方法がサポートされていないため、アプリケーションではOAuth 2.0認証を利用すること。
 * 開発者として、[開発者コンソール][devconsole]でそのアプリケーションにアクセスできること。
 
-### 1. 開発者コンソールにログインする
+### 手順
 
-[開発者コンソール][devconsole]に移動して、統合に送信するアプリケーションを選択します。
+1. Navigate to the [Developer Console][devconsole] and select your application to submit.
 
-### 2. フォームに入力する
+2. Select the **Publishing** tab from the top menu.
 
-上部のメニューで \[**統合**] タブを選択します。
+   ![\[統合\] パネル](./images/publishing-app.png)
 
-<ImageFrame center border shadow>
+3. Fill in the form with your application's categories, a short and a long description, screenshots and an app icon.
 
-![\[統合\] パネル](./images/app-center.png)
+4. Click **Preview** to see a preview of your application listing.
 
-</ImageFrame>
-
-\[アプリを送信] ボタンをクリックします。
-
-<ImageFrame center border shadow width="400">
-
-![\[アプリを送信\] ボタン](./images/submit-app.png)
-
-</ImageFrame>
-
-次に、フォームで、アプリケーションのカテゴリ、簡単な説明と詳しい説明、スクリーンショット、アプリアイコンを指定します。
-
-### 3. 掲載内容をプレビューする
-
-\[プレビュー] ボタンを選択して、アプリケーションの掲載内容のプレビューを表示します。
-
-<ImageFrame center border shadow>
-
-![プレビューと送信](./images/submit-and-approve.png)
-
-</ImageFrame>
-
-### 4. 承認用に送信する
-
-最後に、\[承認用に送信] ボタンをクリックして、アプリケーションを承認用に送信します。
+5. Finally, submit the application for approval by clicking the **Submit for Approval** button.
 
 <Message>
 

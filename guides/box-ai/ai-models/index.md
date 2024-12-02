@@ -60,6 +60,12 @@ Box AI for Documentsのデフォルト
 
 </strong>
 
+<strong style="background-color: #e8e8e8">
+
+Default for Box AI for Box Notes Q&A
+
+</strong>
+
 <strong style="background-color: #e1ffe7">
 
 利用可能

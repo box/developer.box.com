@@ -27,7 +27,7 @@ fullyTranslated: true
 
 アクセス制限付き統合は、作成時に企業での使用について自動的に承認されます。
 
-ただし、Enterprise設定の \[**アプリトークンを使用する場合に管理者の承認を要求する**] が有効になっている場合、管理者は追加の手順を行う必要があります。
+However, if the enterprise setting to **Require manual Admin authorization for Limited Access Apps** is enabled, an Admin must preform additional steps.
 
 ## 承認の通知
 
@@ -49,19 +49,22 @@ fullyTranslated: true
 
 ### 開発者の場合
 
-開発者の場合、[開発者コンソール][devconsole]で、目的のアプリケーションの \[**構成**] タブに移動します。\[OAuth 2.0資格情報] セクションまで下にスクロールし、Box管理者に提出するクライアントIDの値をコピーします。
+1. [開発者コンソール][devconsole]で、目的のアプリケーションの \[**構成**] タブに移動します。
+2. \[OAuth 2.0資格情報] セクションまで下にスクロールし、Box管理者に提出する \[**クライアントID**] の値をコピーします。
+
+また、\[[マイPlatformアプリ][apps]] ビューでアプリケーションにカーソルを合わせて**クライアントID**を調べ、`copy`ボタンを使用してそのIDをコピーすることもできます。
 
 <Message>
 
 # Box管理者の確認方法
 
-自分の会社の管理者がわからない場合は、Boxの \[[アカウント設定][settings]] ページに移動し、一番下までスクロールしてください。管理者の連絡先が設定されている場合は、\[管理者の連絡先] の下に連絡先情報が表示されます。
+If you don't know your enterprise Admin, go to your Box [Account Settings][settings] page and scroll to the bottom. If an admin contact is set you should see their contact information under **Admin Contact**.
 
 </Message>
 
 ### 管理者の場合
 
-Box管理者の場合、\[[管理コンソール][adminconsole]] に移動し、左側のナビゲーションパネルで \[**統合**] タブ (1) を選択して、画面上部にある \[**Platformアプリ**] タブ (2) をクリックします。この画面では、新しいアプリ承認を追加するための \[**+**] ボタンが右上隅に表示されます。
+As a Box Admin, navigate to the [Admin Console][adminconsole] and select the **Integrations** > **Platform Apps Manager** > **Add Platform App**
 
 <ImageFrame border center>
 
@@ -108,3 +111,5 @@ Box管理者の場合、\[[管理コンソール][adminconsole]] に移動し、
 [app-auth]: https://support.box.com/hc/ja/articles/360043697014-Boxのアプリ承認プロセスでのアプリの承認
 
 <!-- i18n-disable localize-links -->
+
+[apps]: g://applications
