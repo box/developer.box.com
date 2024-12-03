@@ -152,7 +152,7 @@
   // Pill added to deprecated endpoints and resources
   "reference.pill.deprecated": "Deprecated",
   // Tooltip text for the beta pill
-  "reference.tooltip.beta": "This is a beta version of the endpoint and thus may be subject to changes",
+  "reference.tooltip.beta": "This endpoint is in beta version and may be subject to changes",
   // Tooltip text for the latest version pill
   "reference.tooltip.latest_version": "This is the most recent stable version of the endpoint",
   // Tooltip text for the deprecated pill
