@@ -245,7 +245,7 @@ tooltip:
   // beta: |-
     Tooltip text for the beta pill
   beta: |-
-    This is a beta version of the endpoint and thus may be subject to changes
+    This endpoint is in beta version and may be subject to changes
   // latest_version: |-
     Tooltip text for the latest version pill
   latest_version: This is the most recent stable version of the endpoint
