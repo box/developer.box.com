@@ -46,6 +46,7 @@ for solution to common errors encountered when working with the Box APIs.
 ### 400 Bad Request
 
 <!-- i18n-enable localize-links -->
+<!-- markdownlint-disable no-space-in-code -->
 
 | | |
 | --- | -- |
@@ -145,6 +146,7 @@ for solution to common errors encountered when working with the Box APIs.
 | **Solution** | The user that you are attempting to collaborate in on an item is already collaborated on that item. This request is not needed.|
 | |  |
 
+<!-- markdownlint-enable no-space-in-code -->
 <!-- i18n-disable localize-links -->
 
 ### 401 Unauthorized
