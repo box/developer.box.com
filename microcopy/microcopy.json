@@ -152,11 +152,11 @@
   // Pill added to deprecated endpoints and resources
   "reference.pill.deprecated": "非推奨",
   // Tooltip text for the beta pill
-  "reference.tooltip.beta": "This is a beta version of the endpoint and thus may be subject to changes",
+  "reference.tooltip.beta": "これはベータ版のエンドポイントのため、変更される可能性があります",
   // Tooltip text for the latest version pill
-  "reference.tooltip.latest_version": "This is the most recent stable version of the endpoint",
+  "reference.tooltip.latest_version": "これは、エンドポイントの最新の安定したバージョンです",
   // Tooltip text for the deprecated pill
-  "reference.tooltip.deprecated": "This version of the endpoint is deprecated",
+  "reference.tooltip.deprecated": "このバージョンのエンドポイントは非推奨です",
   // The title for the sidebar section of an endpoint that showsdeprecated entries
   "reference.sidebar.titles.deprecated_entries": "非推奨",
   // Placeholder text for the search filter in the sidebar
@@ -772,7 +772,7 @@
   // The prefix for the selected API version
   "versions.label": "APIバージョン",
   // Label of a link to the page about API versioning
-  "versions.about": "About Box API versioning",
+  "versions.about": "Box APIのバージョン管理について",
   // Tooltip text for resource version
-  "versions.resource_version_tooltip": "This resource is used by endpoints in version %s"
+  "versions.resource_version_tooltip": "このリソースは、バージョン%sのエンドポイントで使用されています"
 }
