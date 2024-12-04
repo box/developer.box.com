@@ -21,20 +21,15 @@ the Integrations can be a great way to find new users.
 Integrations groups apps into sections so that you can
 quickly find featured, most popular, or recently added apps.
 
-<ImageFrame shadow center>
-  ![Integrations](./images/app-center.png)
-</ImageFrame>
+  ![Integrations](./images/box-integrations.png)
 
 ## Developing and app or becoming a Box Partner
 
-If you would more information on developing an application for the Box App
-Center or becoming a Box Partner, visit our [Box Partner Resources][bp] guides
-on our community site.
+If you would more information on developing an application for the Box Integrations or becoming a Box Partner, visit our [Box Partner Resources][bp] guides on our community site.
 
 ## Publishing an app
 
-Use the following steps to publish an application in the [App
-Center][app-center].
+Use the following steps to publish an application in Box Integrations.
 
 ### Prerequisites
 
@@ -51,8 +46,7 @@ Your application must meet the following requirements:
 
     ![Integrations panel](./images/publishing-app.png)
 
-3. Fill in the form with your application's categories, a short and a long
-description, screenshots and an app icon.
+3. Fill in the form with your application's categories, a short and a long description, screenshots and an app icon.
 4. Click **Preview** to see a preview of your application listing.
 5. Finally, submit the application for approval by clicking the **Submit for Approval** button.
 
@@ -70,7 +64,7 @@ description, screenshots and an app icon.
 
 Once approved and published, an application can be unpublished from the same
 control panel. Navigate to the [Developer Console][devconsole] and select
-your application. Then, select the "Integrations" panel from the left-hand
+your application. Then, select the **Integrations** panel from the left-hand
 sidebar. The app can be unpublished from this page.
 
 [app-center]: https://app.box.com/services
