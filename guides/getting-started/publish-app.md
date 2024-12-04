@@ -45,7 +45,7 @@ fullyTranslated: true
 
 アプリの詳細を指定し終わったら、承認を得るためにアプリを送信します。Boxがアプリケーションをレビューし、統合で公開します。
 
-In case of any questions or issues, contact the Partners team: [`integrate@box.com`][email]
+ご不明な点や問題がありましたら、パートナーチーム ([`integrate@box.com`][email]) までお問い合わせください。
 
 [integrations]: https://cloud.app.box.com/integrations
 

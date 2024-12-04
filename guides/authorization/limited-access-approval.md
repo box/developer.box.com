@@ -27,7 +27,7 @@ fullyTranslated: true
 
 アクセス制限付き統合は、作成時に企業での使用について自動的に承認されます。
 
-However, if the enterprise setting to **Require manual Admin authorization for Limited Access Apps** is enabled, an Admin must preform additional steps.
+ただし、Enterprise設定の \[**アクセス制限付きアプリの場合に管理者の承認を要求する**] が有効になっている場合、管理者は追加の手順を行う必要があります。
 
 ## 承認の通知
 
@@ -58,13 +58,13 @@ However, if the enterprise setting to **Require manual Admin authorization for L
 
 # Box管理者の確認方法
 
-If you don't know your enterprise Admin, go to your Box [Account Settings][settings] page and scroll to the bottom. If an admin contact is set you should see their contact information under **Admin Contact**.
+自分の会社の管理者がわからない場合は、Boxの \[[アカウント設定][settings]] ページに移動し、一番下までスクロールしてください。管理者の連絡先が設定されている場合は、\[**管理者の連絡先**] の下に連絡先情報が表示されます。
 
 </Message>
 
 ### 管理者の場合
 
-As a Box Admin, navigate to the [Admin Console][adminconsole] and select the **Integrations** > **Platform Apps Manager** > **Add Platform App**
+Box管理者は、[管理コンソール][adminconsole]に移動し、\[**統合**] > \[**Platformアプリマネージャ**] > \[**Platformアプリの追加**] を選択します。
 
 <ImageFrame border center>
 

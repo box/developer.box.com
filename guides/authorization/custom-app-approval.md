@@ -79,7 +79,7 @@ Box管理者は、管理コンソールでアプリケーションを適切に�
 
 # Box管理者の確認方法
 
-If you don't know your enterprise Admin, go to your Box [Account Settings][settings] page and scroll to the bottom. If an admin contact is set you should see their contact information under **Admin Contact**.
+自分の会社の管理者がわからない場合は、Boxの \[[アカウント設定][settings]] ページに移動し、一番下までスクロールしてください。管理者の連絡先が設定されている場合は、\[**管理者の連絡先**] の下に連絡先情報が表示されます。
 
 </Message>
 

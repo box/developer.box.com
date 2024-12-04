@@ -49,13 +49,13 @@ Box開発者コンソールから既存のBox JWTアプリケーションのい�
 
 開発者トークンの生成に使用できる新しいBoxアプリケーションを作成するには、以下の手順に従います。
 
-1. Go to the [Developer Console][devconsole] > **My Platform Apps**.
-2. Select **Create Platform App**.
-3. Select **Custom App** as the type of application to create, and click **Next**.
-4. Enter the **App Name**, an optional **Description** and **Purpose** of the App. Confirm with **Next**.
-5. Select **User Authentication (OAuth 2.0)** as the authentication method, and click **Create App**
+1. \[[開発者コンソール][devconsole]] > \[**マイPlatformアプリ**] に移動します。
+2. \[**Platformアプリの作成**] を選択します。
+3. 作成するアプリケーションの種類として \[**カスタムアプリ**] を選択し、\[**次へ**] をクリックします。
+4. \[**アプリ名**] に加え、必要に応じてアプリの \[**説明**] および \[**目的**] を入力し、\[**次へ**] で確定します。
+5. 認証方法として \[**ユーザー認証 (OAuth 2.0)**] を選択し、\[**アプリの作成**] をクリックします。
 6. 必要に応じて、同じ画面の \[**アプリケーションスコープ**] セクションまでスクロールし、このアプリケーションに対して有効にする必要がある追加の権限を選択します。
-7. At the top of the page click the button to **Save Changes**.
+7. ページ上部にある \[**変更を保存**] ボタンをクリックします。
 
 </Choice>
 

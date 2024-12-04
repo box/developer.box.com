@@ -52,17 +52,17 @@ Box App Center用のアプリケーションの開発またはBoxパートナー
 
 ### 手順
 
-1. Navigate to the [Developer Console][devconsole] and select your application to submit.
+1. [開発者コンソール][devconsole]に移動して、送信するアプリケーションを選択します。
 
-2. Select the **Publishing** tab from the top menu.
+2. 上部のメニューで \[**公開**] タブを選択します。
 
    ![\[統合\] パネル](./images/publishing-app.png)
 
-3. Fill in the form with your application's categories, a short and a long description, screenshots and an app icon.
+3. フォームで、アプリケーションのカテゴリ、簡単な説明と詳しい説明、スクリーンショット、アプリアイコンを指定します。
 
-4. Click **Preview** to see a preview of your application listing.
+4. \[**プレビュー**] をクリックして、アプリケーションの掲載内容のプレビューを表示します。
 
-5. Finally, submit the application for approval by clicking the **Submit for Approval** button.
+5. 最後に、\[**承認用に送信**] ボタンをクリックして、アプリケーションを承認用に送信します。
 
 <Message>
 

@@ -62,7 +62,7 @@ Box AI for Documentsのデフォルト
 
 <strong style="background-color: #e8e8e8">
 
-Default for Box AI for Box Notes Q&A
+Box AI for NotesのQ&Aのデフォルト
 
 </strong>
 
