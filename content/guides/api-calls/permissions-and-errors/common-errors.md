@@ -232,9 +232,9 @@ for solution to common errors encountered when working with the Box APIs.
 
 ### 405 Method Not Allowed
 
-|  |     |
+|  |  |
 | ------- | ------ |
-| **Error**    | `method_not_allowed`        |
+| **Error**    | `method_not_allowed` |
 | **Message**  | Method Not Allowed     |
 | **Solution** | The HTTP method used for the API operation is not allowed. Check the API reference documentation for the HTTP verb needed for the API operation. |
 
@@ -242,7 +242,7 @@ for solution to common errors encountered when working with the Box APIs.
 
 |  |   |
 | ------- | --------------- |
-| **Error**    | `conflict`    |
+| **Error**    | `conflict` |
 | **Message**  | A resource with this value already exists           |
 | **Solution** | This error may be produced when the resource to be created already exists. Check the extended error message in the response body for more details.  |
 |  |   |
