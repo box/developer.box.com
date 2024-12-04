@@ -46,8 +46,7 @@ Your application must meet the following requirements:
 
     ![Integrations panel](./images/publishing-app.png)
 
-3. Fill in the form with your application's categories, a short and a long
-description, screenshots and an app icon.
+3. Fill in the form with your application's categories, a short and a long description, screenshots and an app icon.
 4. Click **Preview** to see a preview of your application listing.
 5. Finally, submit the application for approval by clicking the **Submit for Approval** button.
 
