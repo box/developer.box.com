@@ -107,7 +107,6 @@ for solution to common errors encountered when working with the Box APIs.
 | | |
 | **Error**  | `item_name_invalid`  |
 | **Message**| Item name invalid |
-<!-- markdownlint-disable no-space-in-code -->
 | **Solution** | Verify that the file's name is valid. Box only supports file or folder names that are 255 characters or less. File names containing non-printable characters, names containing the characters `/`, `\`, `<`, `>`, `:`, `|`, `?`, `*`, `—` , names with leading or trailing spaces, and the special names “.” and “..” are also unsupported.   |
 | | |
 | **Error**    | `item_name_too_long` |
