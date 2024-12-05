@@ -269,14 +269,6 @@ This view is called the metadata view and uses
 metadata template and metadata query to find the data you
 want to display.
 
-### Prerequisites
-
-Make sure you have the following installed:
-
-- Node version: `>=18.18.2 <20.11.0`
-- React version `>=17.0.2 <18.0.0`
-- BUIE version `19.0.0`
-
 ### Create and configure an app
 
 1. [Create a Box app][box-app].
@@ -360,8 +352,9 @@ function App() {
 
     // Define metadata source
     // Example: enterprise_123456789.metadatatemplate
-    const metadataSource = `metadata.enterprise_${EID}.${templateName}`;
-
+    const metadataSource = `enterprise_${EID}.${templateName}`;
+    const metadataSourceFieldName = `metadata.${metadataSource}`;
+    
     const metadataQuery = {
         from: metadataSource,
 
@@ -376,22 +369,22 @@ function App() {
 
         // Define which other metadata fields you'd like to display
         fields: [
-            `${metadataSource}.name`,
-            `${metadataSource}.last_contacted_at`,
-            `${metadataSource}.industry`,
-            `${metadataSource}.role`,
+            `${metadataSourceFieldName}.name`,
+            `${metadataSourceFieldName}.last_contacted_at`,
+            `${metadataSourceFieldName}.industry`,
+            `${metadataSourceFieldName}.role`,
         ],
     };
 
     // The metadata fields/columns to view - must be valid field names from the metadata template
     const fieldsToShow = [
         // Determine if the user can edit the metadata directly from Content Explorer component
-        { key: `${metadataSource}.name`, canEdit: false },
+        { key: `${metadataSourceFieldName}.name`, canEdit: false },
 
         // Determine label alias on metadata column with displayName prop
-        { key: `${metadataSource}.industry`, canEdit: false, displayName: "alias" },
-        { key: `${metadataSource}.last_contacted_at`, canEdit: true },
-        { key: `${metadataSource}.role`, canEdit: true },
+        { key: `${metadataSourceFieldName}.industry`, canEdit: false, displayName: "alias" },
+        { key: `${metadataSourceFieldName}.last_contacted_at`, canEdit: true },
+        { key: `${metadataSourceFieldName}.role`, canEdit: true },
     ];
 
     // defaultView - a required prop to paint the metadata view.

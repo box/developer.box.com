@@ -23,7 +23,7 @@ one of these available channels:
 - [Developer Newsletter](page://newsletter): For regular notifications of major events, projects, and releases.
 
 <!-- i18n-enable localize-links -->
-[forum]: https://forum.box.com/
+[forum]: https://community.box.com/
 [twitter]: https://twitter.com/BoxPlatform
 [support]: https://support.box.com/hc/en-us/requests/new
 <!-- i18n-disable localize-links -->

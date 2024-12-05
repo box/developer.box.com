@@ -1,0 +1,9 @@
+---
+// label: The prefix for the selected API version
+label: API version
+
+// about: Label of a link to the page about API versioning
+about: About Box API versioning
+
+// resource_version_tooltip: Tooltip text for resource version
+resource_version_tooltip: This resource is used by endpoints in version %s

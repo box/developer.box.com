@@ -90,7 +90,7 @@ A query supports the following logical operators.
 | `IN`                    | Matches when the template field value is equal to any one of a list of arguments provided. The format for this requires each item in the list to be an explicitly defined `query_params` argument, for example `amount NOT IN (:arg1, :arg2, :arg3)`. |
 | `NOT IN`                | Similar to `IN` but when the template field value matches none of the arguments provided in the list.                                                                                                                                                 |
 | `IS NULL`               | Matches when the template field value is `null`.                                                                                                                                                                                                      |
-| `IS NOT`                | Matches when the template field value is not `null` .                                                                                                                                                                                                 |
+| `IS NOT NULL`                | Matches when the template field value is not `null` .                                                                                                                                                                                                 |
 
 <!-- i18n-disable localize-links -->
 

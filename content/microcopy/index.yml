@@ -43,3 +43,9 @@ sample_code_catalog:
 
 ai_dev_zone:
   $ref: "content/microcopy/ai_dev_zone.yml"
+
+box_ui_elements:
+  $ref: "content/microcopy/box_ui_elements.yml"
+
+versions:
+  $ref: "content/microcopy/versions.yml"

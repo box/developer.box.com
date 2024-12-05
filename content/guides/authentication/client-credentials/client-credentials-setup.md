@@ -19,7 +19,7 @@ alias_paths:
 ## Prerequisites
 
 To set up a Custom App using server-side authentication, you will need to ensure
-you have access the [Developer Console][devconsole] from your Box enterprise
+you have access to the [Developer Console][devconsole] from your Box enterprise 
 account. Alternatively, you may sign up for a [developer account][devaccount].
 
 ## App creation steps
@@ -27,7 +27,7 @@ account. Alternatively, you may sign up for a [developer account][devaccount].
 ### Navigate to the Developer Console
 
 Log into Box and go to the [Developer Console][devconsole].
-Select **Create New App**.
+Select **Create Platform App**.
 
 ### Select application type
 

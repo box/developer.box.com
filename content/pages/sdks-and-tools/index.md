@@ -19,7 +19,7 @@ The following SDKs and tools are developed and supported by Box.
 Here you will find a list of SDKs
 you can use to build your application.
 Separately, we have listed the next generation
-Python, Typescript, and .NET SDKs, which are the
+Python, TypeScript, and .NET SDKs, which are the
 newest addition.
 .NET is still a beta feature, but we encourage
 you to give it a try and explore all the
@@ -42,41 +42,42 @@ these projects to full parity.
 
 ### Next generation SDKs
 
-The latest generation Box Python SDK and Box Typescript
-SDK are designed to elevate the developer
+The latest generation Box Python SDK, Box TypeScript
+SDK, .NET SDK, and Swift SDK are designed to elevate the developer
 experience and streamline your integration
 with the Box Content Cloud.
 
 <Message type='notice'>
-.NET SDK is in a Public Beta phase.
+Swift SDK is in a Public Beta phase.
 </Message>
 
 Here's what you can expect from the new SDKs:
 
-* **Full API Support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
-* **Rapid API Updates**: The new auto-generation development approach allows for adding Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
-* **Embedded Documentation**:  All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
-* **Enhanced Convenience Methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers which help to ensure that you’re using variables correctly, and much more.
+- **Full API Support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
+- **Rapid API Updates**: The new auto-generation development approach allows for adding Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
+- **Embedded Documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
+- **Enhanced Convenience Methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers which help to ensure that you’re using variables correctly, and much more.
 
-| Platform                          | Maintained?  | API Parity |
-| --------------------------------- | ----------- | ------- |
-| [Python Gen SDK][pythongensdk]    | Yes         | Full    |
-| [Typescript Gen SDK][tsgensdk]     | Yes         | Full    |
-| [.NET SDK][dotnetgensdk] (Beta)      | Yes         | Full    |
+| Platform                        | Maintained? | API Parity |
+| ------------------------------- | --------- | -------- |
+| [Python Gen SDK][pythongensdk]  |     Yes     |    Full    |
+| [Typescript Gen SDK][tsgensdk]  |     Yes     |    Full    |
+| [.NET SDK][dotnetgensdk]        |     Yes     |    Full    |
+| [Swift SDK][swiftgensdk] (Beta) |     Yes     |    Full    |
 
 ### SDKs
 
 The table lists Box SDKs that you can use
 when building your applications.
 
-| Platform                          | Maintained? | API Parity |
-| --------------------------------- | ----------- | ------- |
-| [Java SDK][javasdk]               | Yes         | Full    |
-| [.NET SDK][dotnetsdk]             | Yes         | Full    |
-| [Python SDK][pythonsdk]           | Yes         | Full    |
-| [Node SDK][nodesdk]               | Yes         | Full    |
-| [iOS Content SDK][iossdk]         | Yes         | Full    |
-| [Android Content SDK][androidsdk] | No          | Partial |
+| Platform                          |                                     Maintained?                                      | API Parity |
+| --------------------------------- | ------------------------------------------------------------------------------------ | ---------- |
+| [Java SDK][javasdk]               |                                         Yes                                          |    Full    |
+| [iOS Content SDK][iossdk]         |                                         Yes                                          |    Full    |
+| [Android Content SDK][androidsdk] |                                          No                                          |  Partial   |
+| [.NET SDK][dotnetsdk]             | Deprecated. Only critical security updates and bug fixes are implemented.            |    Full    |
+| [Python SDK][pythonsdk]           | Deprecated. Only critical security updates and bug fixes are implemented.            |    Full    |
+| [Node SDK][nodesdk]               | Deprecated. Only critical security updates and bug fixes are implemented.            |    Full    |
 
 <Message type='warning'>
 As of May 31, 2023 Android SDK is no
@@ -97,9 +98,9 @@ Box CLI is a user-friendly command line tool which
 allows both technical and non-technical users to
 leverage Box API to perform routine or bulk actions.
 
-| Platform                          | Maintained?  | API Parity |
-| --------------------------------- | ----------- | ------- |
-| [CLI][cli]                        | Yes         | Full    |
+| Platform   | Maintained? | API Parity |
+| ---------- | ----------- | ---------- |
+| [CLI][cli] | Yes         | Full       |
 
 ## Postman Collection
 
@@ -131,9 +132,9 @@ record to Box folder mapping and handle permission management.
 <Message type='warning'>
   # What the Toolkit does NOT provide
 
-  The Toolkit is not a full-featured APEX wrapper for the BOX Content API. If
-  this is what you are looking for, have a look at the
-  [Box SDK for Salesforce][sf-sdk].
+The Toolkit is not a full-featured APEX wrapper for the BOX Content API. If
+this is what you are looking for, have a look at the
+[Box SDK for Salesforce][sf-sdk].
 </Message>
 
 ## Official UI Libraries
@@ -141,28 +142,28 @@ record to Box folder mapping and handle permission management.
 Extend your application with pre-built UI components to browse, share, and
 preview files on Box.
 
-|         |        |           |
-| ------- | ------ | --------- |
-| Browse  | Share  |Preview    |
-| ![Browse][browseimg]   | ![Share][shareimg]   | ![Preview][previewimg]     |
+|                                                                   |                                                                             |                                                                                      |
+| ----------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Browse                                                            | Share                                                                       | Preview                                                                              |
+| ![Browse][browseimg]                                              | ![Share][shareimg]                                                          | ![Preview][previewimg]                                                               |
 | Navigate and manipulate your files on Box using our pre-built UI. | Share files with our pre-built UI elements for file & folder collaboration. | Review over 120 files types, from PDFs to HD videos, with a rich preview experience. |
 
-| Platform   |      |
-| ---------- | ---------------- |
-| iOS  | [Browse SDK][iosbrowsesdk], [Share SDK][iossharesdk], [Preview SDK][iospreviewsdk]                                                                                                    |
+| Platform   |                                                                                                                                                                                       |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| iOS        | [Browse SDK][iosbrowsesdk], [Share SDK][iossharesdk], [Preview SDK][iospreviewsdk]                                                                                                    |
 | Android    | [Browse SDK](https://github.com/box/box-android-browse-sdk), [Share SDK](https://github.com/box/box-android-share-sdk), [Preview SDK](https://github.com/box/box-android-preview-sdk) |
-| Javascript | [Box UI Elements](guide://embed/ui-elements/)    |
+| Javascript | [Box UI Elements](guide://embed/ui-elements/)                                                                                                                                         |
 
 ## Unofficial & Community Tools
 
 The following tools are developed by Box and maintained by Box and its community
 members. These tools do not receive regular product updates or security updates.
 
-| Platform   | Maintained?    | API Parity  |
-| ---------- | ---------------| ------- |
-| [Salesforce SDK][salesforcesdk] | Limited, by Box and community members |Partial |
-| [Ruby SDK][rubysdk]             | Limited, by Box and community members | Partial |
-| [Client-side JS SDK][jssdk]     | Limited, by Box and community members | Partial |
+| Platform                        | Maintained?                           | API Parity |
+| ------------------------------- | ------------------------------------- | ---------- |
+| [Salesforce SDK][salesforcesdk] | Limited, by Box and community members | Partial    |
+| [Ruby SDK][rubysdk]             | Limited, by Box and community members | Partial    |
+| [Client-side JS SDK][jssdk]     | Limited, by Box and community members | Partial    |
 
 <Message type='notice'>
 **Maintained:** Projects with limited maintenance are updated by Box in
@@ -186,7 +187,7 @@ for these tools.
 [androidsdk]: https://github.com/box/box-android-sdk
 [android-docs]: https://github.com/box/box-java-sdk/blob/main/doc/android.md
 [cli]: https://github.com/box/boxcli
-[forum]: https://forum.box.com/
+[forum]: https://community.box.com/
 [browseimg]: ./browse.jpg
 [shareimg]: ./share.jpg
 [previewimg]: ./preview.jpg
@@ -199,8 +200,12 @@ for these tools.
 [pythongensdk]: https://github.com/box/box-python-sdk-gen
 [tsgensdk]: https://github.com/box/box-typescript-sdk-gen
 [dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen
+[swiftgensdk]: https://github.com/box/box-swift-sdk-gen
 [postman]: https://postman.com
+
 <!-- i18n-enable localize-links -->
+
 [sf-package]: https://support.box.com/hc/en-us/articles/360044195713-Installing-and-Configuring-Box-For-Salesforce
 [sf-sdk]: https://github.com/box/box-salesforce-sdk
+
 <!-- i18n-disable localize-links -->

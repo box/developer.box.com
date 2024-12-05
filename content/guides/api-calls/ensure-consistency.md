@@ -17,9 +17,9 @@ required_guides: []
 alias_paths: []
 ---
 
-# Ensure Consistency
+# Ensure consistency with headers
 
-A few of the Box APIs support headers to control consistency between your
+Some Box APIs support headers used to ensure consistency between your
 application and Box.
 
 ## `etag`, `if-match`, and `if-none-match`
@@ -83,7 +83,7 @@ The following endpoints support this header.
 The response of these APIs calls depends on the existence of the item,
 and whether the `etag` value matches the most recent version.
 
-| Item found? | Etag match? | HTTP Status |
+| Item found? | Etag match? | HTTP status |
 | ----------- | ----------- | ----------- |
 | Yes         | Yes         | 200         |
 | Yes         | No          | 412         |

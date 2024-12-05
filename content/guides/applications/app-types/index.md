@@ -17,13 +17,11 @@ alias_paths:
 The following is an overview of the different Box Application types you can
 create.
 
-<ImageFrame border center>
-  ![Application Types](./images/select-app-type.png)
-</ImageFrame>
+![Application Types](./images/select-app-type.png)
 
 | Application Type              | Authentication Methods                                              |
 | ----------------------------- | ------------------------------------------------------------------- |
-| [Custom App][custom-apps]     | [OAuth 2.0][oauth2], [JWT][jwt], or [Client Credentials Grant][ccg] |
+| [Platform App][custom-apps]     | [OAuth 2.0][oauth2], [JWT][jwt], or [Client Credentials Grant][ccg] |
 | [Limited Access App][laa]     | [App Token][apptoken]                                               |
 | [Custom Skill][custom-skills] | No selection needed                                                 |
 

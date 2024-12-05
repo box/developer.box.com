@@ -13,7 +13,7 @@ related_endpoints:
 It's likely your enterprise already has a list of metadata templates that you
 can use right off-the-shelve without having to create your own.
 
-In general, metadata templates are either available to only your enterprise o
+In general, metadata templates are either available to only your enterprise or
 to every enterprise using Box. The `scope` of a template defines if a template
 is available to everyone (`global`) or only to your enterprise (`enterprise`).
 
@@ -38,7 +38,7 @@ specific to your enterprise's needs.
 A [metadata template][template] describes a set of key/value
 pairs that can be assigned to a file or folder.
 
-For example, an `customerInfo` template might hold data about an customer,
+For example, a `customerInfo` template might hold data about a customer,
 having a field for the customer name as well as the customer's industry.
 
 ```json
