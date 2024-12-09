@@ -1,4 +1,7 @@
 ---
+// title: title of the page
+title: Box UI Elements
+
 demoTiles:
   contentExplorer:
     title: Content Explorer
@@ -14,6 +17,6 @@ demoTiles:
     description: Embed high quality and interactive previews of over 120
       file types.
   contentSidebar:
-    title: Content Sidebar
+    title: Content Preview with Sidebar
     description: Implement viewing file-related activity, metadata, and details
       including versions, comments, and tasks.
