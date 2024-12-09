@@ -41,18 +41,18 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
-    <Tile type="gpt" title="azure_openai__gpt_4o_2024_05_13" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card">
-      A multimodal model, highly efficient in handling complex, multi-step tasks.
-      <div>
-        <strong style="background-color: #e8e8e8">Chat</strong>
-        <strong style="background-color: #e1ffe7">Available</strong>
-      </div>
-    </Tile>
     <Tile type="gemini" title="google__gemini_1_5_flash_001" href="/guides/box-ai/ai-models/google-gemini-1-5-flash-001-model-card">
       The fastest Gemini multimodal model, built for high volume tasks and latency-sensitive applications.
       <div>
         <strong style="background-color: #e8e8e8">Default for Box AI Extract</strong>
         <strong style="background-color: #fffbf3">Preview</strong>
+      </div>
+    </Tile>
+    <Tile type="gpt" title="azure_openai__gpt_4o_2024_05_13" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card">
+      A multimodal model, highly efficient in handling complex, multi-step tasks.
+      <div>
+        <strong style="background-color: #e8e8e8">Chat</strong>
+        <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
         <Tile type="gemini" title="google__gemini_1_5_pro_001" href="/guides/box-ai/ai-models/google-gemini-1-5-pro-001-model-card">
