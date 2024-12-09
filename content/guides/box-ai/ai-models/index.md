@@ -35,6 +35,7 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
     <Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card">
       A multimodal model designed to handle lightweight tasks.
       <div>
+        <strong style="background-color: #e8e8e8">Default for Box AI for Box Hubs</strong>
         <strong style="background-color: #e8e8e8">Default for Box AI for Docs</strong>
         <strong style="background-color: #e8e8e8">Default for Box AI for Box Notes Q&A</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
@@ -43,7 +44,7 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
     <Tile type="gpt" title="azure_openai__gpt_4o_2024_05_13" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card">
       A multimodal model, highly efficient in handling complex, multi-step tasks.
       <div>
-        <strong style="background-color: #e8e8e8">Default for Box AI for Box Hubs</strong>
+        <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
