@@ -28,19 +28,15 @@ fullyTranslated: true
 
 [Box統合][app-center]は、BoxユーザーがBoxと組み合わせて使用できるアプリケーションについて最初に確認できる場所です。アプリケーションが他の企業での使用にも適している場合は、統合にサービスを登録すると、新しいユーザーを見つけるのに役立ちます。統合では、ユーザーが見つけやすいように、アプリが \[おすすめ]、\[人気]、\[新着] セクションに分類されています。
 
-<ImageFrame shadow center>
-
-![統合](./images/app-center.png)
-
-</ImageFrame>
+![統合](./images/box-integrations.png)
 
 ## アプリの開発またはBoxパートナーへの参加
 
-Box App Center用のアプリケーションの開発またはBoxパートナーへの参加の詳細については、Box Supportサイトの[Box Partner Resources][bp]のガイド (英語) を参照してください。
+If you would more information on developing an application for the Box Integrations or becoming a Box Partner, visit our [Box Partner Resources][bp] guides on our community site.
 
 ## アプリを公開する
 
-[App Center][app-center]でアプリケーションを公開するには、以下の手順に従います。
+Use the following steps to publish an application in Box Integrations.
 
 ### 前提条件
 
@@ -76,7 +72,7 @@ Box App Center用のアプリケーションの開発またはBoxパートナー
 
 ## アプリケーションを未公開にする
 
-承認されて公開されたアプリケーションは、同じコントロールパネルから未公開にすることができます。[開発者コンソール][devconsole]に移動して、アプリケーションを選択した後、左側のサイドバーから \[統合] パネルを選択します。このページからアプリを未公開にすることができます。
+Once approved and published, an application can be unpublished from the same control panel. Navigate to the [Developer Console][devconsole] and select your application. Then, select the **Integrations** panel from the left-hand sidebar. The app can be unpublished from this page.
 
 [app-center]: https://app.box.com/services
 

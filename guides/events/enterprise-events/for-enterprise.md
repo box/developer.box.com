@@ -131,6 +131,12 @@ Enterpriseに対して、以下のイベントがトリガーされます。こ�
 | `DOWNLOAD`                                                    | ダウンロード                                                                                                        |
 | `EDIT`                                                        | 編集                                                                                                            |
 | `EDIT_USER`                                                   | ユーザーの編集                                                                                                       |
+| `EDR_CROWDSTRIKE_DEVICE_DETECTED`                             | Device detected by the CrowdStrike Falcon platform                                                            |
+| `EDR_CROWDSTRIKE_NO_BOX_TOOLS`                                | Box Tools package not detected on device with CrowdStrike Falcon platform support                             |
+| `EDR_CROWDSTRIKE_BOX_TOOLS_OUTDATED`                          | Box Tools package outdated on device with CrowdStrike Falcon platform support                                 |
+| `EDR_CROWDSTRIKE_DRIVE_OUTDATED`                              | Box Drive application outdated on device with CrowdStrike Falcon platform support                             |
+| `EDR_CROWDSTRIKE_ACCESS_ALLOWED_NO_CROWDSTRIKE_DEVICE`        | Access allowed to a device not identified by the CrowdStrike Falcon platform                                  |
+| `EDR_CROWDSTRIKE_ACCESS_REVOKED`                              | Access revoked to a device identified by the CrowdStrike Falcon platform                                      |
 | `EMAIL_ALIAS_CONFIRM`                                         | ユーザーのメールエイリアスの確認                                                                                              |
 | `EMAIL_ALIAS_REMOVE`                                          | ユーザーのメールエイリアスの削除                                                                                              |
 | `ENABLE_MULTI_FACTOR_AUTH`                                    | 多要素認証の有効化                                                                                                     |
