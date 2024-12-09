@@ -16,7 +16,7 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/box-ui-elements/index.md
 ---
-# Box AI Developer Zone
+# Box UI Elements
 
 <Centered wide id="buie" >
 
