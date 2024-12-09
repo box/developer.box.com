@@ -168,18 +168,18 @@ primary:
 
   connect_featured:
     tag:
-      text: Event
+      text: Community
 
     title:
-      text: Box Developer Day Toronto
+      text: Box Developer Community forum
 
     details:
       text: |-
-        Join the upcoming Box Platform Developer Day in Toronto on November 20!
+        Meet other Box Platform developers and admins!
 
     cta:
       text: |-
-        Register now
+        Join now
 
 secondary:
   images:

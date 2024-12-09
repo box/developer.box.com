@@ -21,20 +21,15 @@ the Integrations can be a great way to find new users.
 Integrations groups apps into sections so that you can
 quickly find featured, most popular, or recently added apps.
 
-<ImageFrame shadow center>
-  ![Integrations](./images/app-center.png)
-</ImageFrame>
+  ![Integrations](./images/box-integrations.png)
 
 ## Developing and app or becoming a Box Partner
 
-If you would more information on developing an application for the Box App
-Center or becoming a Box Partner, visit our [Box Partner Resources][bp] guides
-on our community site.
+If you would more information on developing an application for the Box Integrations or becoming a Box Partner, visit our [Box Partner Resources][bp] guides on our community site.
 
 ## Publishing an app
 
-Use the following steps to publish an application in the [App
-Center][app-center].
+Use the following steps to publish an application in Box Integrations.
 
 ### Prerequisites
 
@@ -44,40 +39,16 @@ Your application must meet the following requirements:
 * The application leverages OAuth 2.0 authentication, as the Integrations does not support any other authentication methods.
 * You are a developer with access to the application in the [Developer Console][devconsole].
 
-### 1. Log in to the Developer Console
+### Steps
 
-Navigate to the [Developer Console][devconsole] and select your application to
-submit to the Integrations.
+1. Navigate to the [Developer Console][devconsole] and select your application to submit.
+2. Select the **Publishing** tab from the top menu.
 
-### 2. Fill in the form
+    ![Integrations panel](./images/publishing-app.png)
 
-Select the **Integrations** tab from the top menu.
-
-<ImageFrame center border shadow>
-  ![Integrations panel](./images/app-center.png)
-</ImageFrame>
-
-Click the button to "Submit My App".
-
-<ImageFrame center border shadow width='400'>
-  ![Submit My App button](./images/submit-app.png)
-</ImageFrame>
-
-Then, fill in the form with your application's categories, a short and a long
-description, screenshots and an app icon.
-
-### 3. Preview the listing
-
-Select the "Preview" button to see a preview of your application listing.
-
-<ImageFrame center border shadow>
-  ![Preview and Submit](./images/submit-and-approve.png)
-</ImageFrame>
-
-### 4. Submit for approval
-
-Finally, submit the application for approval by clicking the "Submit for
-Approval" button.
+3. Fill in the form with your application's categories, a short and a long description, screenshots and an app icon.
+4. Click **Preview** to see a preview of your application listing.
+5. Finally, submit the application for approval by clicking the **Submit for Approval** button.
 
 <Message>
   # Approval completion
@@ -93,7 +64,7 @@ Approval" button.
 
 Once approved and published, an application can be unpublished from the same
 control panel. Navigate to the [Developer Console][devconsole] and select
-your application. Then, select the "Integrations" panel from the left-hand
+your application. Then, select the **Integrations** panel from the left-hand
 sidebar. The app can be unpublished from this page.
 
 [app-center]: https://app.box.com/services
