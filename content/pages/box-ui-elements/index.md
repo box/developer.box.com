@@ -3,7 +3,7 @@ hide_title: true
 alias_paths: []
 centered: false
 ---
-# Box AI Developer Zone
+# Box UI Elements
 
 <Centered wide id="buie" >
   <HeroImage type="BUIE" imageWidth="548" imageHeight="493">
