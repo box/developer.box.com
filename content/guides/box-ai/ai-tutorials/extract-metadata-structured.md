@@ -55,6 +55,7 @@ New response format example:
   "created_at": "2012-12-12T10:53:43-08:00"
 }
 ```
+
 </Message>
 
 ## Send a request
