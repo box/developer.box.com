@@ -11,7 +11,7 @@ sibling_id: pages
 parent_id: pages
 next_page_id: ''
 previous_page_id: ''
-source_url: 'https://github.com/box/developer.box.com/blob/main/content/pages/sign/index.md'
+source_url: https://github.com/box/developer.box.com/blob/main/content/pages/sign/index.md
 ---
 # Working with Box Sign
 

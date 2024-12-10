@@ -55,28 +55,19 @@ A multimodal model designed to handle lightweight tasks.
 
 <strong style="background-color: #e8e8e8">
 
+Default for Box AI for Box Hubs
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
 Default for Box AI for Docs
 
 </strong>
 
-<strong style="background-color: #e1ffe7">
-
-Available
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="gpt" title="azure_openai__gpt_4o_2024_05_13" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card">
-
-A multimodal model, highly efficient in handling complex, multi-step tasks.
-<div>
-
 <strong style="background-color: #e8e8e8">
 
-Default for Box AI for Box Hubs
+Default for Box AI for Box Notes Q&A
 
 </strong>
 
@@ -104,6 +95,27 @@ Default for Box AI Extract
 <strong style="background-color: #fffbf3">
 
 Preview
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="gpt" title="azure_openai__gpt_4o_2024_05_13" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card">
+
+A multimodal model, highly efficient in handling complex, multi-step tasks.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Chat
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+Available
 
 </strong>
 

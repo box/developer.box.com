@@ -16,10 +16,8 @@ source_url: >-
 ---
 # Configure a Box Platform App
 
-To start making authenticated API calls to the Box API with the **Box iOS
-SDK**, an **Access Token** will be needed. The simplest way to generate a valid
-token is to generate a new **Box Platform App** and manually generate a short lived
-developer token.
+To start making authenticated API calls to the Box API with the **Box iOS SDK**, an **Access Token** will be needed. The simplest way to generate a valid
+token is to generate a new **Box Platform App** and manually generate a short lived developer token.
 
 The developer token is generated through the developer console UI and will be
 valid for one hour before having to be manually refreshed.
@@ -55,14 +53,13 @@ console.
 To create a new Box application that may be used to generate a developer
 token, use the following steps.
 
-1. Go to the [Developer Console][devconsole]
-2. Select **Create Platform App**
-3. Select **Platform App** as the type of application to create, and click **Next**
-4. Select **OAuth 2.0 with JWT** as the authentication method, and click **Next**
-5. Give your Box app a unique name and click **Create Platform App**
-6. Go to the app's configuration by clicking **View Your Platform App**.
-7. Optionally, scroll to the **Required Access Scopes** section of the same screen and select any additional permissions you want to enable for this application.
-8. At the top of the page click the button to **Save Changes**
+1. Go to the [Developer Console][devconsole] > **My Platform Apps**.
+2. Select **Create Platform App**.
+3. Select **Custom App** as the type of application to create, and click **Next**.
+4. Enter the **App Name**, an optional **Description** and **Purpose** of the App. Confirm with **Next**.
+5. Select **User Authentication (OAuth 2.0)** as the authentication method, and click **Create App**
+8. Optionally, scroll to the **Application Scopes** section of the same screen and select any additional permissions you want to enable for this application.
+9. At the top of the page click the button to **Save Changes**.
 
 </Choice>
 

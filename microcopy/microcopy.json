@@ -151,6 +151,12 @@
   "reference.pill.latest_version": "Latest version",
   // Pill added to deprecated endpoints and resources
   "reference.pill.deprecated": "Deprecated",
+  // Tooltip text for the beta pill
+  "reference.tooltip.beta": "This endpoint is in beta version and may be subject to changes",
+  // Tooltip text for the latest version pill
+  "reference.tooltip.latest_version": "This is the most recent stable version of the endpoint",
+  // Tooltip text for the deprecated pill
+  "reference.tooltip.deprecated": "This version of the endpoint is deprecated",
   // The title for the sidebar section of an endpoint that showsdeprecated entries
   "reference.sidebar.titles.deprecated_entries": "Deprecated",
   // Placeholder text for the search filter in the sidebar
@@ -274,10 +280,10 @@
   "headers.primary.develop_featured.title.text": "Box Sample Code Catalog",
   "headers.primary.develop_featured.details.text": "Browse 90+ open-source repositories\nin various programming languages to find useful scripts,\napp examples, and inspiring use cases!",
   "headers.primary.develop_featured.cta.text": "Browse sample code",
-  "headers.primary.connect_featured.tag.text": "Event",
-  "headers.primary.connect_featured.title.text": "Box Developer Day Toronto",
-  "headers.primary.connect_featured.details.text": "Join the upcoming Box Platform Developer Day in Toronto on November 20!",
-  "headers.primary.connect_featured.cta.text": "Register now",
+  "headers.primary.connect_featured.tag.text": "Community",
+  "headers.primary.connect_featured.title.text": "Box Developer Community forum",
+  "headers.primary.connect_featured.details.text": "Meet other Box Platform developers and admins!",
+  "headers.primary.connect_featured.cta.text": "Join now",
   // The HTML alt-text for the site logo
   "headers.secondary.images.logo.alt_text": "Box Developer Documentation",
   // A short label to signify that this page is new
@@ -761,8 +767,12 @@
   "box_ui_elements.demoTiles.contentPicker.description": "Add support for selecting Box files and folders in your web applications.",
   "box_ui_elements.demoTiles.contentPreview.title": "Content Preview",
   "box_ui_elements.demoTiles.contentPreview.description": "Embed high quality and interactive previews of over 120 file types.",
-  "box_ui_elements.demoTiles.contentSidebar.title": "Content Sidebar",
+  "box_ui_elements.demoTiles.contentSidebar.title": "Content Preview with Sidebar",
   "box_ui_elements.demoTiles.contentSidebar.description": "Implement viewing file-related activity, metadata, and details including versions, comments, and tasks.",
   // The prefix for the selected API version
-  "versions.label": "API version"
+  "versions.label": "API version",
+  // Label of a link to the page about API versioning
+  "versions.about": "About Box API versioning",
+  // Tooltip text for resource version
+  "versions.resource_version_tooltip": "This resource is used by endpoints in version %s"
 }

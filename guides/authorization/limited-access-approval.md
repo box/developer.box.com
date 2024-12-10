@@ -28,7 +28,7 @@ Limited Access Integrations are automatically authorized for use in an enterpris
 creation.
 
 However, if the enterprise setting to
-**Require manual admin authorization for transactional access apps** is enabled,
+**Require manual Admin authorization for Limited Access Apps** is enabled,
 an Admin must preform additional steps.
 
 ## Approval Notifications
@@ -56,9 +56,12 @@ application.
 
 ### As a developer
 
-As the developer, navigate to the **Configuration** tab for your application
-in the [Developer Console][devconsole]. Scroll down to the OAuth 2.0 Credentials
-section and copy the Client ID value to provide to a Box Admin.
+1. Navigate to the **Configuration** tab for your application in the [Developer Console][devconsole].
+2. Scroll down to the OAuth 2.0 Credentials section and copy the **Client ID** value to provide to a Box Admin.
+
+Alternatively, hover over the application in the
+[My Platform Apps][apps] view to look up the **ClientID** and then
+copy it using the `copy` button.
 
 <Message>
 
@@ -66,16 +69,14 @@ section and copy the Client ID value to provide to a Box Admin.
 
 If you don't know your enterprise Admin, go to your Box [Account
 Settings][settings] page and scroll to the bottom. If an admin contact is set
-you should see their contact  information under "Admin Contact".
+you should see their contact  information under **Admin Contact**.
 
 </Message>
 
 ### As an Admin
 
 As a Box Admin, navigate to the [Admin Console][adminconsole] and
-select the **Integrations** tab (1) from the left navigation panel. Then, click the
-**Platform Apps** tab (2) at the top of your screen. On this screen, you will
-see a **+** button in the top right corner to add a new app authorization.
+select the **Integrations** > **Platform Apps Manager** > **Add Platform App**
 
 <ImageFrame border center>
 
@@ -120,3 +121,5 @@ of the application name to **Reauthorize App**.
 
 [app-auth]: https://support.box.com/hc/en-us/articles/360043697014-Authorizing-Apps-in-the-Box-App-Approval-Process
 <!-- i18n-disable localize-links -->
+
+[apps]: g://applications

@@ -16,7 +16,7 @@ sibling_id: files
 parent_id: files
 next_page_id: files/limitations
 previous_page_id: ''
-source_url: 'https://github.com/box/developer.box.com/blob/main/content/guides/files/get.md'
+source_url: https://github.com/box/developer.box.com/blob/main/content/guides/files/get.md
 ---
 # Get File Information
 
