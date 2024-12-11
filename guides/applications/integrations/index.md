@@ -32,11 +32,11 @@ fullyTranslated: true
 
 ## アプリの開発またはBoxパートナーへの参加
 
-If you would more information on developing an application for the Box Integrations or becoming a Box Partner, visit our [Box Partner Resources][bp] guides on our community site.
+Box統合用のアプリケーションの開発またはBoxパートナーへの参加の詳細については、Box Supportサイトの[Box Partner Resources][bp]のガイド (英語) を参照してください。
 
 ## アプリを公開する
 
-Use the following steps to publish an application in Box Integrations.
+Box統合でアプリケーションを公開するには、以下の手順に従います。
 
 ### 前提条件
 
@@ -72,7 +72,7 @@ Use the following steps to publish an application in Box Integrations.
 
 ## アプリケーションを未公開にする
 
-Once approved and published, an application can be unpublished from the same control panel. Navigate to the [Developer Console][devconsole] and select your application. Then, select the **Integrations** panel from the left-hand sidebar. The app can be unpublished from this page.
+承認されて公開されたアプリケーションは、同じコントロールパネルから未公開にすることができます。[開発者コンソール][devconsole]に移動して、アプリケーションを選択した後、左側のサイドバーから \[**統合**] パネルを選択します。このページからアプリを未公開にすることができます。
 
 [app-center]: https://app.box.com/services
 

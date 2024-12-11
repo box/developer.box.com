@@ -131,12 +131,12 @@ Enterpriseに対して、以下のイベントがトリガーされます。こ�
 | `DOWNLOAD`                                                    | ダウンロード                                                                                                        |
 | `EDIT`                                                        | 編集                                                                                                            |
 | `EDIT_USER`                                                   | ユーザーの編集                                                                                                       |
-| `EDR_CROWDSTRIKE_DEVICE_DETECTED`                             | Device detected by the CrowdStrike Falcon platform                                                            |
-| `EDR_CROWDSTRIKE_NO_BOX_TOOLS`                                | Box Tools package not detected on device with CrowdStrike Falcon platform support                             |
-| `EDR_CROWDSTRIKE_BOX_TOOLS_OUTDATED`                          | Box Tools package outdated on device with CrowdStrike Falcon platform support                                 |
-| `EDR_CROWDSTRIKE_DRIVE_OUTDATED`                              | Box Drive application outdated on device with CrowdStrike Falcon platform support                             |
-| `EDR_CROWDSTRIKE_ACCESS_ALLOWED_NO_CROWDSTRIKE_DEVICE`        | Access allowed to a device not identified by the CrowdStrike Falcon platform                                  |
-| `EDR_CROWDSTRIKE_ACCESS_REVOKED`                              | Access revoked to a device identified by the CrowdStrike Falcon platform                                      |
+| `EDR_CROWDSTRIKE_DEVICE_DETECTED`                             | CrowdStrike Falconプラットフォームによるデバイスの検出                                                                          |
+| `EDR_CROWDSTRIKE_NO_BOX_TOOLS`                                | CrowdStrike FalconプラットフォームをサポートするデバイスでのBox Toolsパッケージの未検出                                                     |
+| `EDR_CROWDSTRIKE_BOX_TOOLS_OUTDATED`                          | CrowdStrike FalconプラットフォームをサポートするデバイスでのBox Toolsパッケージの期限切れ                                                    |
+| `EDR_CROWDSTRIKE_DRIVE_OUTDATED`                              | CrowdStrike FalconプラットフォームをサポートするデバイスでのBox Driveアプリケーションの期限切れ                                                 |
+| `EDR_CROWDSTRIKE_ACCESS_ALLOWED_NO_CROWDSTRIKE_DEVICE`        | CrowdStrike Falconプラットフォームで識別されていないデバイスへのアクセスの許可                                                              |
+| `EDR_CROWDSTRIKE_ACCESS_REVOKED`                              | CrowdStrike Falconプラットフォームで識別されたデバイスへのアクセスの取り消し                                                               |
 | `EMAIL_ALIAS_CONFIRM`                                         | ユーザーのメールエイリアスの確認                                                                                              |
 | `EMAIL_ALIAS_REMOVE`                                          | ユーザーのメールエイリアスの削除                                                                                              |
 | `ENABLE_MULTI_FACTOR_AUTH`                                    | 多要素認証の有効化                                                                                                     |
