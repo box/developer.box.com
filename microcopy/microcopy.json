@@ -280,10 +280,10 @@
   "headers.primary.develop_featured.title.text": "Boxサンプルコードカタログ",
   "headers.primary.develop_featured.details.text": "さまざまなプログラミング言語の90以上の\nオープンソースリポジトリを参照して、便利なスクリプト、\nサンプルアプリ、ヒントになるユースケースを見つけましょう。",
   "headers.primary.develop_featured.cta.text": "サンプルコードを参照",
-  "headers.primary.connect_featured.tag.text": "イベント",
-  "headers.primary.connect_featured.title.text": "Box Platform Developer Day、トロント",
-  "headers.primary.connect_featured.details.text": "11月20日にトロントで開催されるBox Platform Developer Dayにご参加ください。",
-  "headers.primary.connect_featured.cta.text": "今すぐ登録",
+  "headers.primary.connect_featured.tag.text": "コミュニティ",
+  "headers.primary.connect_featured.title.text": "Box Developer Communityフォーラム",
+  "headers.primary.connect_featured.details.text": "他のBox Platform開発者や管理者と交流しましょう。",
+  "headers.primary.connect_featured.cta.text": "今すぐ参加",
   // The HTML alt-text for the site logo
   "headers.secondary.images.logo.alt_text": "Box Developerドキュメント",
   // A short label to signify that this page is new
@@ -767,7 +767,7 @@
   "box_ui_elements.demoTiles.contentPicker.description": "ウェブアプリ内でBoxのファイルやフォルダを選択できるようサポートを追加します。",
   "box_ui_elements.demoTiles.contentPreview.title": "コンテンツプレビュー",
   "box_ui_elements.demoTiles.contentPreview.description": "120種類以上のファイルの高品質でインタラクティブなプレビューを埋め込みます。",
-  "box_ui_elements.demoTiles.contentSidebar.title": "Content Sidebar",
+  "box_ui_elements.demoTiles.contentSidebar.title": "コンテンツプレビューとサイドバー",
   "box_ui_elements.demoTiles.contentSidebar.description": "ファイル関連のアクティビティ、メタデータ、詳細 (バージョン、コメント、タスクを含む) の表示を実装します。",
   // The prefix for the selected API version
   "versions.label": "APIバージョン",
