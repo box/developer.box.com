@@ -17,27 +17,42 @@ To stay informed about the forthcoming API modifications, monitor the [Changelog
 
 </Message>
 
+<Message type='notice'>
+
+In 2024, Box introduced year-based API versioning.
+
+All endpoints available at the end of 2024 were assigned the version `2024.0`.
+
+**No action is required for API users to continue using Box APIs.**
+
+To make version-aware calls, include the `box-version` header with the value `2024.0` in your requests.
+
+</Message>
+
 ## How Box API versioning works
 
 <Message type='notice'>
 
-Box API supports versioning in URL `path` and `header`. To determine which version to use, look at the API reference and included sample requests.
+Box API supports versioning in `header`. To determine which version to use, look at the API reference and included sample requests.
 
 </Message>
 
-### Versioning in `path`
-
-The default version of the API used in any requests is specified in the URL of the endpoint you call.
-For example, when calling the `https://upload.box.com/api/2.0/files/content` endpoint without any version header specified, you reach the `2.0` version defined in the URL.
-
-If there is a significant change to API behavior, the new endpoint will be exposed under the new URL.
-For example, `https://upload.box.com/api/2.0/files/content` supports a multipart content type when uploading files to Box. If the new version of this API stops supporting this content type, it will be released under a new URL `https://upload.box.com/api/3.0/files/content`.
-
 ### Versioning in `header`
 
-Box API processes the `box-version` header which should contain a valid version name, that is `box-version: 2025.0` and be directed at `https://api.box.com/2.0/files/:file_id/metadata`.
+Box API processes the `box-version` header which should contain a valid version name. For example when client wants
+to get list of all sign requests using version `2025.0`, the request should look like this:
 
-If the provided version is correct, a response is sent back to the client. The response also contains the `box-version` header if it was provided in the request. By default, this header is not present in the response. If the version is wrong, an error with the HTTP code `400` is returned to the client.
+```curl
+curl --location 'https://api.box.com/2.0/sign_requests' \
+     --header 'box-version: 2024.0' \
+     --header 'Authorization: Bearer …
+```
+
+If the provided version is correct and supported by the endpoint, a response is sent to the client.
+If the endpoint is available in multiple versions, the response will include the `box-version` header, 
+which indicates the version used to handle the request.
+Endpoints introduced after 2024 may return a `400` error code if the version is incorrect.
+More information about versioning errors can be found [here](g://api-calls/permissions-and-errors/versioning-errors).
 
 ## Release schedule and naming convention
 
@@ -86,18 +101,6 @@ To keep you informed about the current API state, and improve the readability of
 | `x-stability-level: beta` | Beta | Endpoints marked with **beta**, are offered subject to Box’s Main Beta Agreement, meaning the available capabilities may change at any time. Although beta endpoints not the same as versioned endpoints, they are a part of API lifecycle. |
 |`x-stability-level: stable` or no `x-stability-level` tag  | Latest version | The latest version applies to APIs that are already versioned. **Latest version** marks the most recent stable API version of an endpoint.| 
 | `deprecated: true` | Deprecated |  An endpoint is deprecated, which means it is still available for use, but no new features are added. Such an endpoint is annotated with the `deprecated` attribute set to `true`.|
-
-## Calling an API version
-
-Box API versions are explicitly declared in the `box-version` header that your app makes requests to. For example:
-
-```curl
-curl --location 'https://api.box.com/2.0/sign_requests' \
-    --header 'box-version: 2025.0' \
-    --header 'Authorization: Bearer …
-```
-
-The client gets a list of all created sign requests and asks for version `2025.0`. There are several supported versions of the APIs available, and you specify the version that you want to use with the `box-version` header. There are three types of API versions: **stable**, **deprecated**, and **unstable**.
 
 ## Versioning errors
 
