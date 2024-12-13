@@ -140,7 +140,7 @@ Logs are stored in a `logs` folder located in the main folder. You have access t
 This project is a collection of open source examples and should not be treated as an officially supported product. Use at your own risk and as a source of example how to use Box CLI.
 
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2
-[oauth-guide]: https://developer.box.com/guides/cli/quick-start/
+[oauth-guide]: g://cli/quick-start
 [install-slack]: https://support.box.com/hc/en-us/articles/360044195313-Installing-and-Using-the-Box-for-Slack-Integration
 [content-layer]: https://support.box.com/hc/en-us/articles/4415585987859-Box-as-the-Content-Layer-for-Slack
 [1]: https://github.com/box/boxcli/tree/main/examples/Integration%20Mappings

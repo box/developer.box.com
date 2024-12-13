@@ -44,7 +44,7 @@ updates, as well as new blogs. You can follow at [Box Platform][twitter].
   Next step
 </Next>
 
-[samples]: g://cli/scripts/
+[samples]: g://cli/scripts
 <!-- i18n-enable localize-links -->
 [forum]: https://community.box.com/
 [medium]: https://medium.com/box-developer-blog

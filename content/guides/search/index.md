@@ -93,5 +93,5 @@ for relevance to a human user.
 [mdq]: g://metadata/queries
 [mdq_api]: e://post_metadata_queries_execute_read
 [search]: e://get_search
-[support]: p://support
+[support]: page://support
 [keysafe]: https://www.box.com/security/keysafe

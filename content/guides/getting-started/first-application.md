@@ -89,5 +89,5 @@ You can also use [Box CLI tool][box-cli] if you prefer to use the terminal.
 [integrations]: https://cloud.app.box.com/integrations
 [dev-token]: g://authentication/tokens/developer-tokens/#create-developer-token
 [postman-collection]: g://tooling/postman
-[api-ref]: https://developer.box.com/reference/
+[api-ref]: page://reference
 [box-cli]: https://github.com/box/boxcli

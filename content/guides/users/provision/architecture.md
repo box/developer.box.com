@@ -458,4 +458,4 @@ namespace BoxPlayground {
   </Tab>
 </Tabs>
 
-[sa]:page://platform/user-types/#service-account
+[sa]: page://platform/user-types/#service-account

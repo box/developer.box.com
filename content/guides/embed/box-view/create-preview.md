@@ -118,7 +118,7 @@ attribute set to generated embed URL.
 ## Customized Previewer (UI Elements)
 
 To leverage advanced preview customization and event handling capabilities, use
-the Box [UI Preview Element](guide://embed/ui-elements/preview/).
+the Box [UI Preview Element](guide://embed/ui-elements/preview).
 
 To set up the Preview Element, start by installing the required components.
 
