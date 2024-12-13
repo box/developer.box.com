@@ -25,7 +25,7 @@ All endpoints available at the end of 2024 were assigned the version `2024.0`.
 
 **No action is required for API users to continue using Box APIs.**
 
-To make version-aware calls, include the `box-version` header with the value `2024.0` in your requests.
+To make version-aware API calls, include the `box-version` header with the value `2024.0` in your requests.
 
 </Message>
 
