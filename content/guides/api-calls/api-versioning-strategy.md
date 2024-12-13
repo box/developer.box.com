@@ -39,7 +39,7 @@ Box API supports versioning in `header`. To determine which version to use, look
 
 ### Versioning in `header`
 
-Box API processes the `box-version` header which should contain a valid version name. For example when client wants
+Box API processes the `box-version` header which should contain a valid version name. For example, when the client wants
 to get a list of all sign requests using version `2025.0`, the request should look like this:
 
 ```curl
