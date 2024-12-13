@@ -12,7 +12,7 @@ base_version_notice:
   // endpoint: Notice that the endpoint has a version 2024.0
   endpoint: |-
     This endpoint is in the version 2024.0. No changes are required to continue using it. 
-    For more details, please read about **[Box API versioning](g://api-calls/permissions-and-errors/versioning-errors)**.
+    For more details, see **[Box API versioning](g://api-calls/permissions-and-errors/versioning-errors)**.
   // resource: Notice that the resource has a version 2024.0
   resource: |-
     This resource is used by enpoints in the version 2024.0. 
