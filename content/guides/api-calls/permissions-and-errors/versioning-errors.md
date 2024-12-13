@@ -19,7 +19,7 @@ When using versioned API calls, you can encounter versioning-related errors. Thi
 
 ## Calling with incorrect `box-version` header
 
-If you call an API using an incorrect `box-version` header, the API will respond with an `HTTP error code 400 - Bad Request` error and provide the supported versions in the response message. 
+If you call an API using an incorrect `box-version` header, the API will respond with an `HTTP error code 400 - Bad Request` error and provide the supported versions in the response message.
 
 The response will include one of the following status messages in `message` field:
 
@@ -53,7 +53,7 @@ Box documentation specifies API URLs. For instance, the Sign Requests endpoints 
 When you use an API version that Box has marked as deprecated, the API will respond as usual. Additionally, it will append a `Deprecation` header, stating the deprecation date. For example:
 
 ```sh
-Deprecation: date="Fri, 11 Nov 2023 23:59:59 GMT"
+Deprecation: date="Fri, 11 Nov 2026 23:59:59 GMT"
 Box-API-Deprecated-Reason: https://developer.box.com/reference/deprecated
 ```
 
@@ -61,4 +61,4 @@ You should monitor API responses to verify if the `Deprecation` header is presen
 
 ## Calling a non-existent version
 
-If you attempt to use an outdated API version, such as `2023.0` which has reached its end-of-life, the response will return an `HTTP error code 404 - Not Found`. See [Calling an incorrect API version in the URL](#calling-an-incorrect-api-version-in-the-url) for more information.
+If you attempt to use an outdated API version, such as `2025.0` which has reached its end-of-life, the response will return an `HTTP error code 404 - Not Found`. See [Calling an incorrect API version in the URL](#calling-an-incorrect-api-version-in-the-url) for more information.
