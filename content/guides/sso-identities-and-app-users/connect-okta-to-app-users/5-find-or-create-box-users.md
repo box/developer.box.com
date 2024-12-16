@@ -380,7 +380,7 @@ application.
 
 Once an associated Box user is found for the Okta user we're going to generate
 an access token specifically
-[scoped for that user](g://authentication/jwt/user-access-tokens/) to make Box
+[scoped for that user](g://authentication/jwt/user-access-tokens) to make Box
 API calls, then make a call to get the current user to ensure that everything
 is working and that we have a valid user access token.
 
