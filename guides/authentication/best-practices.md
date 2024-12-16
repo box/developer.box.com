@@ -97,5 +97,5 @@ enhancements.
 Developer Tokens should only be used for development or testing purposes and
 never in production.
 
-[downscope]: g://authentication/tokens/downscope/
-[revoke]: g://authentication/tokens/revoke/
+[downscope]: g://authentication/tokens/downscope
+[revoke]: g://authentication/tokens/revoke

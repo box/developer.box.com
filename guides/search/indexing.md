@@ -151,7 +151,7 @@ Check our community article with the latest details on Search in Box
 
 <!-- i18n-disable localize-links -->
 
-[support]: p://support
+[support]: page://support
 <!-- i18n-enable localize-links -->
 
 [keysafe]: https://www.box.com/security/keysafe

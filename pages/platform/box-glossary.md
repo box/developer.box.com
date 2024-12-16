@@ -85,22 +85,22 @@ Next step
 
 </Next>
 
-[app user]:page://platform/user-types/#app-user
+[app user]: page://platform/user-types/#app-user
 [CLI]: https://github.com/box/boxcli
 [collaborations]: g://collaborations
 [embed]: g://embed/box-embed
-[ui-elements]: g://embed/ui-elements/
+[ui-elements]: g://embed/ui-elements
 [cascade-policy]: https://support.box.com/hc/en-us/articles/360044195873-Cascading-metadata-in-folders
 [content-manager]: https://support.box.com/hc/en-us/articles/360043698294-Managing-Files-And-Folders-From-The-Admin-Console
 [co-admin]: https://support.box.com/hc/en-us/articles/360043694174-Understanding-Administrator-and-Co-Administrator-Permissions
 [info-barriers]: https://support.box.com/hc/en-us/articles/9920431507603-Understanding-Information-Barriers
-[event]: r://event/
+[event]: r://event
 [event-stream]: https://support.box.com/hc/en-us/articles/8391393127955-Using-the-Enterprise-Event-Stream
 [group-admin]: https://support.box.com/hc/en-us/articles/360043694174-Understanding-Administrator-and-Co-Administrator-Permissions
 [managed-users]: https://support.box.com/hc/en-us/articles/360044194353-Understanding-User-Management
 [shared-link]: https://support.box.com/hc/en-us/articles/360043697094-Creating-Shared-Links
-[sdk]: https://developer.box.com/sdks-and-tools/
-[code-catalog]: https://developer.box.com/sample-code/
+[sdk]: page://sdks-and-tools
+[code-catalog]: page://sample-code
 [relay]: https://support.box.com/hc/en-us/articles/360044196213
 [bve]: https://support.box.com/hc/en-us/articles/4401823156883-Box-Verified-Enterprise
 [report]: https://support.box.com/hc/en-us/articles/360043696534-Running-Reports
@@ -113,4 +113,4 @@ Next step
 [custom-app]: g://applications/app-types/custom-apps
 [webhook]: g://webhooks
 [limited-app]: g://applications/app-types/limited-access-apps
-[service-account]:page://platform/user-types/#service-account
+[service-account]: page://platform/user-types/#service-account

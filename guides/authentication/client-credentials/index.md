@@ -97,7 +97,7 @@ This error indicates either:
 
 - the client ID and client secret passed are incorrect or are not for the same application,
 
-- the `box_subject_id` cannot be used based on the selected [application access][aa]. 
+- the `box_subject_id` cannot be used based on the selected [application access][aa].
 
 <Message warning>
 
@@ -124,8 +124,8 @@ Once you make changes to the app settings, don't forget to [reauthorize][reauth]
 <!-- i18n-disable localize-links -->
 
 [devconsole]: https://app.box.com/developers/console
-[accesstoken]: e://post-oauth2-token/
-[sa]: page://platform/user-types/#service-account/
+[accesstoken]: e://post-oauth2-token
+[sa]: page://platform/user-types/#service-account
 [auth]: g://authorization
 [aa]: g://authentication/client-credentials/client-credentials-setup/#application-access
 [reauth]: g://authorization/custom-app-approval#re-authorization-on-changes

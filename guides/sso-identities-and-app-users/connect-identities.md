@@ -98,7 +98,7 @@ accounts over email, for a number of reasons:
 Using the `login` field of a user object to create an account association is
 viable under a few conditions:
 
-* Only the [managed users](getting-started://authentication/user-types/#managed-users/) type is being used, not [app users](page://platform/user-types/#app-user).
+* Only the [managed users](page://platform/user-types/#managed-users) type is being used, not [app users](page://platform/user-types/#app-user).
 * All email addresses and Box account creation requests are managed by your enterprise, meaning that users cannot independently create Box accounts with those email addresses.
 
 <Message warning>

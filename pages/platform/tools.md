@@ -76,10 +76,10 @@ Next step
 
 </Next>
 
-[samples]: g://cli/scripts/
-[sdk]: page://sdks-and-tools/
-[file]: e://get-files-id/
-[tooling]: g://tooling/
+[samples]: g://cli/scripts
+[sdk]: page://sdks-and-tools
+[file]: e://get-files-id
+[tooling]: g://tooling
 <!-- i18n-enable localize-links -->
 
 [sample_code]: https://developer.box.com/sample-code/

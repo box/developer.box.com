@@ -71,7 +71,7 @@ production content.
 <!-- i18n-enable localize-links -->
 
 [boxrelay]: https://support.box.com/hc/en-us/articles/360044196213-Introducing-Box-Relay
-[workflow]: https://developer.box.com/reference/resources/workflow/
+[workflow]: resource://workflow
 [manualstart]: https://support.box.com/hc/en-us/articles/360044628853-Creating-and-Running-a-Manual-Start-Workflow
 [blog]: https://medium.com/box-developer-blog/manual-start-workflow-api-box-relay-4f8d0f51b7a4
 <!-- i18n-disable localize-links -->

@@ -29,5 +29,5 @@ a specific template.
 Once you get a sense of the API, you can create
 [your first signature request][quick-start].
 
-[api-basics]:page://sign/quick-start/api-basics
-[quick-start]:page://sign/quick-start/your-first-request
+[api-basics]: page://sign/quick-start/api-basics
+[quick-start]: page://sign/quick-start/your-first-request

@@ -226,27 +226,27 @@ assumes you do not do this.
 - You can also go to the second part of the [OAuth 2.0 Quick Start][three] for a tutorial on how to use the commands.
 
 [cli]: https://github.com/box/boxcli
-[auth]: g://authentication/jwt/without-sdk/
-[at]: g://authentication/tokens/
+[auth]: g://authentication/jwt/without-sdk
+[at]: g://authentication/tokens
 <!-- i18n-enable localize-links -->
 
 [dc]: https://account.box.com/developers/console
 <!-- i18n-disable localize-links -->
 
 [keypair]: g://authentication/jwt/jwt-setup/#public-and-private-key-pair
-[sa]: page://platform/user-types/#service-account/
-[scopes]: g://api-calls/permissions-and-errors/scopes/
-[ag]: g://authorization/custom-app-approval/
+[sa]: page://platform/user-types/#service-account
+[scopes]: g://api-calls/permissions-and-errors/scopes
+[ag]: g://authorization/custom-app-approval
 <!-- i18n-enable localize-links -->
 
 [blogpost]: https://medium.com/box-developer-blog/box-api-understanding-security-9fcad7b1d72e
 <!-- i18n-disable localize-links -->
 
-[scopes]: g://api-calls/permissions-and-errors/scopes/
+[scopes]: g://api-calls/permissions-and-errors/scopes
 [aa]: g://authentication/jwt/jwt-setup/#application-access
-[three]: g://cli/quick-start/build-commands-help/
-[four]: g://cli/quick-start/options-and-bulk-commands/
+[three]: g://cli/quick-start/build-commands-help
+[four]: g://cli/quick-start/options-and-bulk-commands
 [cache]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsupdate-name
 [ac]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
 [commands]: https://github.com/box/boxcli#command-topics
-[qs]: g://cli/quick-start/
+[qs]: g://cli/quick-start

@@ -213,7 +213,7 @@ Encountering an error status requires creating a new sign request to retry.
 
 </ImageFrame>
 
-[upload]: e://post-files-content/
+[upload]: e://post-files-content
 [documents]: g://representations/supported-file-types/#documents
 [presentations]: g://representations/supported-file-types/#presentations
 [uploads]: g://uploads/direct

@@ -52,4 +52,4 @@ provisioning a user's account, creating a general folder and file structure
 that everyone will have on first login, using groups to control access to
 shared files and folders for users.
 
-[managed]:page://platform/user-types/#managed-users
+[managed]: page://platform/user-types/#managed-users

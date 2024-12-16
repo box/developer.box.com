@@ -76,7 +76,7 @@ the subdomain (`https://*.domain.com`). See the
 **How can I replace the Box logo that shows up on preview?**
 
 See this guide for information on customizing the logo within a
-[Preview UI Element](g://embed/ui-elements/logo/).
+[Preview UI Element](g://embed/ui-elements/logo).
 
 <!-- i18n-enable localize-links -->
 

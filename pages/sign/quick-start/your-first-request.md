@@ -225,5 +225,5 @@ information.
 
 </Message>
 
-[request-options]:page://sign/request-options
-[technical-use-cases]:page://sign/technical-use-cases
+[request-options]: page://sign/request-options
+[technical-use-cases]: page://sign/technical-use-cases

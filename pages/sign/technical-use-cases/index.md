@@ -44,6 +44,6 @@ Signing unstructured docs
 
 </Next>
 
-[unstructured-docs]:page://sign/technical-use-cases/sign-unstructured-docs
-[sign-templates]:page://sign/technical-use-cases/sign-template
-[sign-structured-docs]:page://sign/technical-use-cases/sign-structured-docs
+[unstructured-docs]: page://sign/technical-use-cases/sign-unstructured-docs
+[sign-templates]: page://sign/technical-use-cases/sign-template
+[sign-structured-docs]: page://sign/technical-use-cases/sign-structured-docs
