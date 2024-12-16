@@ -162,7 +162,7 @@ preview files on Box.
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | iOS        | [Browse SDK][iosbrowsesdk], [Share SDK][iossharesdk], [Preview SDK][iospreviewsdk]                                                                                                    |
 | Android    | [Browse SDK](https://github.com/box/box-android-browse-sdk), [Share SDK](https://github.com/box/box-android-share-sdk), [Preview SDK](https://github.com/box/box-android-preview-sdk) |
-| Javascript | [Box UI Elements](guide://embed/ui-elements/)                                                                                                                                         |
+| Javascript | [Box UI Elements](g://embed/ui-elements)                                                                                                                                         |
 
 ## Unofficial & Community Tools
 

@@ -18,7 +18,7 @@ long as the original file is stored in Box.
 
 ## Uploading a File
 
-To upload a file using the [Box SDKs](pages://sdks-and-tools/) or directly with
+To upload a file using the [Box SDKs](pages://sdks-and-tools) or directly with
 the APIs, you need to use the client ID and App Token that are generated
 during [application setup](guide://embed/box-view/setup) to authenticate your
 application.

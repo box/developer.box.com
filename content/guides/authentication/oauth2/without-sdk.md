@@ -318,11 +318,11 @@ To learn how to use an Access Token visit our guide on [Making API calls][apic].
 
 <!-- i18n-disable localize-links -->
 
-[auth]: e://get-authorize/
+[auth]: e://get-authorize
 [ci]: e://get-authorize/#param-client_id
 [re]: e://get-authorize/#param-redirect_uri
 [co]: e://get-authorize/#param-response_type
 [st]: e://get-authorize/#param-state
 [thirty]: g://api-calls/permissions-and-errors/expiration
-[at]: e://post-oauth2-token/
-[apic]: g://api-calls/
+[at]: e://post-oauth2-token
+[apic]: g://api-calls
