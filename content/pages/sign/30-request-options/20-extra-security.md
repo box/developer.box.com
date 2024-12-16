@@ -109,7 +109,7 @@ Then the signer is prompted to enter the code sent in an SMS:
 
 You can require the signer to use a password to open the signature request
 by passing the `password` parameter in the `signer` object. For example:
-y
+
 <Tabs>
 <Tab title='cURL'>
 
