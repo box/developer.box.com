@@ -11,7 +11,7 @@ const LOCAL_REFERENCE_REGEX = new RegExp(/\[.*\]\[([\w\-_]+)\]/, 'mg')
 // checks for convenience links, e.g. guide://foo/bar
 const GUIDE_OR_PAGE_LINKS = new RegExp(/(guide|guides|g|page|pages|[^a-z]p):\/\/([a-z-_0-9.\/]*)/, 'ig')
 
-const PAGE_LINKS_INGORE = ['page://reference', 'pages://reference', 'p://reference']
+const PAGE_LINKS_INGORE = ['page://reference', 'pages://reference', 'p://reference', 'page://sample-code']
 
 class LinkValidator {
   constructor(source, allFiles) {

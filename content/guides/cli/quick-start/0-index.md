@@ -36,9 +36,9 @@ This guide will take you through the following steps.
 </Next>
 
 [commands]: https://github.com/box/boxcli#command-topics
-[one]: g://cli/quick-start/create-oauth-app/
-[two]: g://cli/quick-start/install-and-configure/
-[three]: g://cli/quick-start/build-commands-help/
-[four]: g://cli/quick-start/options-and-bulk-commands/
-[five]: g://cli/quick-start/powershell-script-templates/
-[six]: g://cli/quick-start/next-steps/
+[one]: g://cli/quick-start/create-oauth-app
+[two]: g://cli/quick-start/install-and-configure
+[three]: g://cli/quick-start/build-commands-help
+[four]: g://cli/quick-start/options-and-bulk-commands
+[five]: g://cli/quick-start/powershell-script-templates
+[six]: g://cli/quick-start/next-steps

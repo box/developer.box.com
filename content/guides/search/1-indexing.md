@@ -132,7 +132,7 @@ Searching the trash is available via the API by using the
 </CTA>
 <!-- i18n-disable localize-links -->
 
-[support]: p://support
+[support]: page://support
 <!-- i18n-enable localize-links -->
 [keysafe]: https://www.box.com/security/keysafe
 <!-- i18n-disable localize-links -->

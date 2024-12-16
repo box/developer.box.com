@@ -67,8 +67,8 @@ sections in the Integrations, and they can also be unpublished if necessary.
   Next step
 </Next>
 
-[custom_app]: g://applications/app-types/custom-apps/
-[limited_app]: g://applications/app-types/limited-access-apps/
-[skills]: g://applications/app-types/custom-skills/
-[web_app]: g://applications/web-app-integrations/
+[custom_app]: g://applications/app-types/custom-apps
+[limited_app]: g://applications/app-types/limited-access-apps
+[skills]: g://applications/app-types/custom-skills
+[web_app]: g://applications/web-app-integrations
 [integrations]: g://applications/integrations/

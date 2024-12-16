@@ -16,7 +16,7 @@ alias_paths: []
 # Create App User
 
 App Users are programmatic user accounts that may only be created by apps that
-are using [JWT authentication](g://authentication/jwt/jwt-setup/).
+are using [JWT authentication](g://authentication/jwt/jwt-setup).
 They are designed to allow for users, groups, or processes to be represented
 behind the scenes in an application without the need for the user to have a Box
 account to log in.

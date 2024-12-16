@@ -12,8 +12,8 @@ first step that should be taken is to see if that user already exists from a
 previous login attempt where a Box user record was already created.
 
 If a Box user is found you should
-[create a user access token](guide://authentication/jwt/user-access-tokens/),
-or make [as user calls](guide://authentication/jwt/as-user/), to access Box
+[create a user access token](guide://authentication/jwt/user-access-tokens),
+or make [as user calls](guide://authentication/jwt/as-user), to access Box
 APIs as that user.
 
 If a Box user is not found you should create a new user with an association to

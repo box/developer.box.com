@@ -11,7 +11,7 @@ created that you would like to use you can skip to the next step.
 
 ## Admin Console
 
-To create a template via the Admin Console, navigate to: 
+To create a template via the Admin Console, navigate to:
 
 **Admin Console** > **Content** Tab > **Metadata** > **Create New**
 
@@ -21,11 +21,11 @@ To create a template via the Admin Console, navigate to:
 
 <Message warning>
   The metadata feature is reserved for Business Plus accounts and above. To
-  upgrade your account, please contact your Box account team. 
+  upgrade your account, please contact your Box account team.
 </Message>
 
 Once you select **Create New**, you are brought to a form used to create a new
-template, which is shown below. Select a **Dropdown-Single Select** format. 
+template, which is shown below. Select a **Dropdown-Single Select** format.
 
 <Message warning>
 Selecting a Dropdown-Multi Select format will change the structure of you query
@@ -39,19 +39,19 @@ later on in this quick-start.
 ## API
 
 Creating a metadata template via the API requires an [Access Token][at]
-associated with a Box Admin or Co-Admin with permission to 
+associated with a Box Admin or Co-Admin with permission to
 **create and edit metadata templates for your company**. If you are not sure
-who your token is associated with, make an API call to the 
+who your token is associated with, make an API call to the
 [get current user endpoint][current-user]. The easiest way to obtain a token
 meeting these requirements is to log in as an Admin or Co-Admin, pull up the
-application in the [Developer Console][dc], and click 
-**Generate Developer Token** under the **Configuration** tab. 
+application in the [Developer Console][dc], and click
+**Generate Developer Token** under the **Configuration** tab.
 [Developer tokens][dt] are always be associated with the user logged into the
 Developer Console when the button is clicked.
 
 Using [Postman][postman] and the [Box Postman Collection][post-collab], below is
 an example of what an API call looks like to create the same metadata template
-created above using the Admin Console. 
+created above using the Admin Console.
 
 <ImageFrame center>
     ![Create Template API Call](./images/create-call.png)
@@ -69,9 +69,9 @@ information in the next step.
 
 <Next>I created a metadata template</Next>
 
-[at]: g://authentication/tokens/
-[current-user]: e://get-users-me/
+[at]: g://authentication/tokens
+[current-user]: e://get-users-me
 [dc]: https://account.box.com/developers/console
-[dt]: g://authentication/tokens/developer-tokens/
+[dt]: g://authentication/tokens/developer-tokens
 [postman]: https://postman.com/
-[post-collab]: g://tooling/postman/
+[post-collab]: g://tooling/postman

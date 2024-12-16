@@ -57,9 +57,9 @@ stating `Hello {{USERNAME}}` will now be output to the browser.
 
 [okta]: https://www.okta.com/
 [okta-dev]: https://developer.okta.com/
-[step1]: g://sso-identities-and-app-users/connect-okta-to-app-users/scaffold-application-code/
-[step2]: g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/
-[step3]: g://sso-identities-and-app-users/connect-okta-to-app-users/configure-box/
-[step4]: g://sso-identities-and-app-users/connect-okta-to-app-users/logging-into-app/
-[step5]: g://sso-identities-and-app-users/connect-okta-to-app-users/find-or-create-box-users/
-[step6]: g://sso-identities-and-app-users/connect-okta-to-app-users/run-the-app/
+[step1]: g://sso-identities-and-app-users/connect-okta-to-app-users/scaffold-application-code
+[step2]: g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta
+[step3]: g://sso-identities-and-app-users/connect-okta-to-app-users/configure-box
+[step4]: g://sso-identities-and-app-users/connect-okta-to-app-users/logging-into-app
+[step5]: g://sso-identities-and-app-users/connect-okta-to-app-users/find-or-create-box-users
+[step6]: g://sso-identities-and-app-users/connect-okta-to-app-users/run-the-app
