@@ -24,7 +24,19 @@ API versioning empowers Box to continually enhance its platform, while also offe
 
 <Message type='tip'>
 
-To stay informed about the forthcoming API modifications, monitor the [Changelog](https://developer.box.com/changelog/) and maintain a current email address in the Developer Console's App Info section.
+To stay informed about the forthcoming API modifications, monitor the [Changelog](page://changelog) and maintain a current email address in the Developer Console's App Info section.
+
+</Message>
+
+<Message type='notice'>
+
+In 2024, Box introduced year-based API versioning.
+
+All endpoints available at the end of 2024 were assigned the version `2024.0`.
+
+**No action is required for API users to continue using Box APIs.**
+
+To make version-aware API calls, include the `box-version` header with the value `2024.0` in your requests.
 
 </Message>
 
@@ -32,27 +44,36 @@ To stay informed about the forthcoming API modifications, monitor the [Changelog
 
 <Message type='notice'>
 
-Box API supports versioning in URL `path` and `header`. To determine which version to use, look at the API reference and included sample requests.
+Box API supports versioning in `header`. To determine which version to use, look at the API reference and included sample requests.
 
 </Message>
 
-### Versioning in `path`
-
-The default version of the API used in any requests is specified in the URL of the endpoint you call.
-For example, when calling the `https://upload.box.com/api/2.0/files/content` endpoint without any version header specified, you reach the `2.0` version defined in the URL.
-
-If there is a significant change to API behavior, the new endpoint will be exposed under the new URL.
-For example, `https://upload.box.com/api/2.0/files/content` supports a multipart content type when uploading files to Box. If the new version of this API stops supporting this content type, it will be released under a new URL `https://upload.box.com/api/3.0/files/content`.
-
 ### Versioning in `header`
 
-Box API processes the `box-version` header which should contain a valid version name, that is `box-version: 2025.0` and be directed at `https://api.box.com/2.0/files/:file_id/metadata`.
+Box API processes the `box-version` header which should contain a valid version name. For example, when a client wants
+to get a list of all sign requests using version `2025.0`, the request should look like this:
 
-If the provided version is correct, a response is sent back to the client. The response also contains the `box-version` header if it was provided in the request. By default, this header is not present in the response. If the version is wrong, an error with the HTTP code `400` is returned to the client.
+```curl
+curl --location 'https://api.box.com/2.0/sign_requests' \
+     --header 'box-version: 2025.0' \
+     --header 'Authorization: Bearer …
+```
+
+If the provided version is correct and supported by the endpoint, a response is sent to the client.
+If the endpoint is available in multiple versions, the response will include the `box-version` header,
+which indicates the version used to handle the request.
+Endpoints introduced after 2024 may return a `400` error code if the version is incorrect.
+More information about versioning errors can be found [here](g://api-calls/permissions-and-errors/versioning-errors).
+
+If your request doesn't include a version, the API defaults to the initial Box API version - `2024.0` - the version of endpoints available before
+year-based versioning was introduced. However, relying on this behavior is not recommended when adopting deprecated
+changes. To ensure consistency, always specify the API version, with each request. By making your application
+version-aware, you anchor it to a specific set of features, ensuring consistent behavior throughout the supported
+timeframe.
 
 ## Release schedule and naming convention
 
-Box can introduce a new breaking change to certain endpoints **once per year**.
+Box can introduce a new breaking change to certain endpoints **once per year**, which results in a new API version.
 Introducing a new version of the Sign Request endpoint means that **all paths and HTTP methods** of an endpoint will support it.
 
 For example, if Sign Request endpoints receive a new version it will apply to all endpoints listed in the table:
@@ -80,12 +101,6 @@ It also means, that a new version cannot be released sooner than every 12 months
 
 We strongly recommend updating your apps to make requests to the latest stable API version. However, if your app uses a stable version that is no longer supported, then you will get a response with an HTTP error code `400 - Bad Request`. For details, see [Versioning Errors](g://api-calls/permissions-and-errors/versioning-errors).
 
-If your request doesn't include a version, the API defaults to the initial Box API version—the version available before
-year-based versioning was introduced. However, relying on this behavior is not recommended when adopting deprecated
-changes. To ensure consistency, always specify the API version, with each request. By making your application
-version-aware, you anchor it to a specific set of features, ensuring consistent behavior throughout the supported
-timeframe.
-
 ### Endpoint versioning indication
 
 To keep you informed about the current API state, and improve the readability of the versioned API reference, the affected endpoints are marked with a pill based on the `x-stability-level` tag or `deprecated` attribute.
@@ -94,21 +109,9 @@ To keep you informed about the current API state, and improve the readability of
 
 |    Schema element   | Pill name | Description|
 |---------------------|-----------|------------|
-| `x-stability-level: beta` | Beta | Endpoints marked with **beta**, are offered subject to Box’s Main Beta Agreement, meaning the available capabilities may change at any time. Although beta endpoints not the same as versioned endpoints, they are a part of API lifecycle. |
-|`x-stability-level: stable` or no `x-stability-level` tag  | Latest version | The latest version applies to APIs that are already versioned. **Latest version** marks the most recent stable API version of an endpoint.|
+| `x-stability-level: beta` | Beta | Endpoints marked with **beta**, are offered subject to Box’s Main Beta Agreement, meaning the available capabilities may change at any time. When the beta endpoint becomes stable, the **beta** indication is removed. |
+|`x-stability-level: stable` or no `x-stability-level` tag  | Latest version | **Latest version** marks the most recent stable API version of an endpoint.|
 | `deprecated: true` | Deprecated |  An endpoint is deprecated, which means it is still available for use, but no new features are added. Such an endpoint is annotated with the `deprecated` attribute set to `true`.|
-
-## Calling an API version
-
-Box API versions are explicitly declared in the `box-version` header that your app makes requests to. For example:
-
-```curl
-curl --location 'https://api.box.com/2.0/sign_requests' \
-    --header 'box-version: 2025.0' \
-    --header 'Authorization: Bearer …
-```
-
-The client gets a list of all created sign requests and asks for version `2025.0`. There are several supported versions of the APIs available, and you specify the version that you want to use with the `box-version` header. There are three types of API versions: **stable**, **deprecated**, and **unstable**.
 
 ## Versioning errors
 
@@ -118,7 +121,7 @@ For details on possible errors, see [versioning errors](g://api-calls/permission
 
 ## How Box SDK versioning works
 
-The versioning strategy applies only to [next generation generated SDKs](https://developer.box.com/sdks-and-tools/#next-generation-sdks).
+The versioning strategy applies only to [next generation generated SDKs](page://sdks-and-tools/#next-generation-sdks).
 
 Box SDKs support the **All Versions In** SDK approach.
 This means that every release of SDK provides access to all endpoints in any version which is currently live. All generated SDKs use manager's approach - they group all endpoints with the same domain in one manager.
@@ -220,14 +223,14 @@ When new versions of the Box APIs and Box SDKs are released, earlier versions wi
 sooner than after 24 months.
 Similarly, for individual APIs that are generally available (GA), Box declares an API as `deprecated` at least 24 months in advance of removing it from the GA version.
 
-When we increment the major version of the API (for example, from `2024.0` to `2025.0`), we're announcing that the current version (in this example, `2024.0`) is immediately deprecated and we'll no longer support it 24 months after the announcement. We might make exceptions to this policy for service security or health reliability issues.
+When we increment the major version of the API (for example, from `2025.0` to `2026.0`), we're announcing that the current version (in this example, `2025.0`) is immediately deprecated and we'll no longer support it 24 months after the announcement. We might make exceptions to this policy for service security or health reliability issues.
 
 When an API is marked as deprecated, we strongly recommend that you migrate to the latest version as soon as possible. In some cases, we'll announce that new applications will have to start using the new APIs a short time after the original APIs are deprecated.
 
 When customer calls deprecated API endpoint, the response will contain a header:
 
 ```sh
-Deprecation: date="Fri, 11 Nov 2023 23:59:59 GMT"
+Deprecation: date="Fri, 11 Nov 2026 23:59:59 GMT"
 Box-API-Deprecated-Reason: https://developer.box.com/reference/deprecated
 ```
 
@@ -237,8 +240,8 @@ The date tells clients when this version was marked as deprecated.
 
 When building your request, consider the following:
 
-* If you do not specify a version, the service will return the initial version that existed before year-based versioning was introduced. If the initial version does not exist, the response will return an HTTP error code `400 - Bad Request`.
-* If the version header is specified but the requested version is unavailable, the response will return an HTTP error code `400 - Bad Request`.
+* Endpoints in version `2024.0` can be called without specifying the version in the `box-version` header. If no version is specified and the `2024.0` version of the called endpoint does not exist, the response will return an HTTP error code `400 - Bad Request`.
+* If the `box-version` version header is specified but the requested version does not exist, the response will return an HTTP error code `400 - Bad Request`.
 
 For details, see [versioning errors](g://api-calls/permissions-and-errors/versioning-errors).
 
@@ -247,7 +250,7 @@ When Box deprecates a resource or a property of a resource in the API, the chang
 * Calls that include the deprecated behavior return the response header `Box-API-Deprecated-Reason` and a link to get more information:
 
     ```sh
-    box-version: 2023.0
+    box-version: 2025.0
     Deprecation: version="version", date="date"
     Box-API-Deprecated-Reason: https://developer.box.com/reference/deprecated
     ```
@@ -258,4 +261,4 @@ When Box deprecates a resource or a property of a resource in the API, the chang
 
 ## Additional resources
 
-* [API reference](https://developer.box.com/reference/)
+* [API reference](page://reference)
