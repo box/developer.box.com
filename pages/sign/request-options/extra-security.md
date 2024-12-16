@@ -17,7 +17,7 @@ source_url: >-
 # Extra security (2FA)
 
 Imagine you want an [additional layer of security][2FA] for your signature
-requests, by requesting the signer to use a password or a  phone verification
+requests, by requesting the signer to use a password or a phone verification
 in the document signing step.
 
 ![2FA Signature request](images/sign-flow-2fa.png)
@@ -25,8 +25,7 @@ in the document signing step.
 ## Phone verification
 
 You can require the signer to use 2FA through their mobile phone to complete
-the signature request by passing the `is_phone_verification_required_to_view`
-parameter.
+the signature request by passing the `verification_phone_number` parameter on the signer along with their phone number.
 
 For example:
 
@@ -112,21 +111,13 @@ def main():
 
 </Tabs>
 
-When the signer tries to complete the signature request a phone verification
-pops up:
+When the signer tries to access the signature request a phone verification dialog pops up:
 
 ![Phone verification](images/sign-simple-phone-verification.png)
 
-Then the signer is prompted to enter the code sent in a SMS:
+Then the signer is prompted to enter the code sent in an SMS:
 
 ![Entering the SMS code](images/sign-simple-phone-verification-enter-code.png)
-
-<Message  size='small'>
-
-This check is done as the last step, so it does not prevent the signer from
-accessing the document.
-
-</Message>
 
 ## Password verification
 
