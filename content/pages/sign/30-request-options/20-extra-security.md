@@ -99,17 +99,17 @@ def main():
 
 When the signer tries to access the signature request a phone verification dialog pops up:
 
-![Phone verification](images/sign-simple-phone-verification.png)
+![Phone verification](images/sign-phone-verification.png)
 
 Then the signer is prompted to enter the code sent in an SMS:
 
-![Entering the SMS code](images/sign-simple-phone-verification-enter-code.png)
+![Entering the SMS code](images/sign-phone-verification-enter-code.png)
 
 ## Password verification
 
 You can require the signer to use a password to open the signature request
 by passing the `password` parameter in the `signer` object. For example:
-
+y
 <Tabs>
 <Tab title='cURL'>
 
