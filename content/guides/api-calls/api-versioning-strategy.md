@@ -17,6 +17,7 @@ To stay informed about the forthcoming API modifications, monitor the [Changelog
 
 </Message>
 
+<!-- Commenting this until we enable base version support in Public API Service
 <Message type='notice'>
 
 In 2024, Box introduced year-based API versioning.
@@ -28,6 +29,7 @@ All endpoints available at the end of 2024 were assigned the version `2024.0`.
 To make version-aware API calls, include the `box-version` header with the value `2024.0` in your requests.
 
 </Message>
+-->
 
 ## How Box API versioning works
 
