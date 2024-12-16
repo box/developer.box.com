@@ -650,5 +650,5 @@ signature tags that can be used by the Box Sign engine. Take a look at our
 [Structured Docs][structured-docs] section for more information.
 
 [template]: https://support.box.com/hc/en-us/sections/21356768117651-Templates
-[request-options]:page://sign/request-options
-[structured-docs]:page://sign/technical-use-cases/sign-structured-docs
+[request-options]: page://sign/request-options
+[structured-docs]: page://sign/technical-use-cases/sign-structured-docs

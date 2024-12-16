@@ -96,9 +96,9 @@ I created a metadata template
 
 </Next>
 
-[at]: g://authentication/tokens/
-[current-user]: e://get-users-me/
+[at]: g://authentication/tokens
+[current-user]: e://get-users-me
 [dc]: https://account.box.com/developers/console
-[dt]: g://authentication/tokens/developer-tokens/
+[dt]: g://authentication/tokens/developer-tokens
 [postman]: https://postman.com/
-[post-collab]: g://tooling/postman/
+[post-collab]: g://tooling/postman

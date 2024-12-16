@@ -63,7 +63,7 @@ Next step
 
 </Next>
 
-[samples]: g://cli/scripts/
+[samples]: g://cli/scripts
 <!-- i18n-enable localize-links -->
 
 [forum]: https://community.box.com/

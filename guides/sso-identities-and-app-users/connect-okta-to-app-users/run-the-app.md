@@ -36,7 +36,7 @@ we'll be testing out the user sign in flow, you'll see the Okta login.
 </ImageFrame>
 
 Sign in with the credentials for the Okta user you created in the last section
-of [step 2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/).
+of [step 2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta).
 
 Once signed in, you will see a message stating
 `New user created: {{USERNAME}}` output to the browser.
@@ -62,7 +62,7 @@ we'll be testing out the user sign in flow, you'll see the Okta login.
 </ImageFrame>
 
 Sign in with the credentials for the Okta user you created in the last section
-of [step 2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/).
+of [step 2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta).
 
 Once signed in, you will see a message stating `New User Created: {{USERNAME}}`
 output to the browser.
@@ -88,7 +88,7 @@ we'll be testing out the user sign in flow, you'll see the Okta login.
 </ImageFrame>
 
 Sign in with the credentials for the Okta user you created in the last section
-of [step 2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/).
+of [step 2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta).
 
 Once signed in, you will see a message stating
 `New user created: {{USERNAME}}` output to the browser.
@@ -115,7 +115,7 @@ displayed. Once clicked, the Okta login will be automatically loaded.
 </ImageFrame>
 
 Sign in with the credentials for the Okta user you created in the last section
-of [step 2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/).
+of [step 2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta).
 
 Once signed in, you will see a message in the debug console stating
 `New user created: {{USERNAME}}` output to the browser.
@@ -154,13 +154,13 @@ We recommend the following resource for anyone who wants to learn more about
 more advanced capabilities that may be attached into the user creation and
 access process.
 
-* [User provisioning](g://users/provision/) best practices for advanced user folder architecture setup.
-* [User deprovisioning](g://users/deprovision/) best practices cleaning up inactive users and transferring user content to another account.
-* [Uploading content](g://uploads/) into Box, including running preflight checks and large file (chunked) uploading.
+* [User provisioning](g://users/provision) best practices for advanced user folder architecture setup.
+* [User deprovisioning](g://users/deprovision) best practices cleaning up inactive users and transferring user content to another account.
+* [Uploading content](g://uploads) into Box, including running preflight checks and large file (chunked) uploading.
 
-[step1]: g://sso-identities-and-app-users/connect-okta-to-app-users/scaffold-application-code/
-[step2]: g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/
-[step3]: g://sso-identities-and-app-users/connect-okta-to-app-users/configure-box/
-[step4]: g://sso-identities-and-app-users/connect-okta-to-app-users/logging-into-app/
-[step5]: g://sso-identities-and-app-users/connect-okta-to-app-users/find-or-create-box-users/
-[step6]: g://sso-identities-and-app-users/connect-okta-to-app-users/run-the-app/
+[step1]: g://sso-identities-and-app-users/connect-okta-to-app-users/scaffold-application-code
+[step2]: g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta
+[step3]: g://sso-identities-and-app-users/connect-okta-to-app-users/configure-box
+[step4]: g://sso-identities-and-app-users/connect-okta-to-app-users/logging-into-app
+[step5]: g://sso-identities-and-app-users/connect-okta-to-app-users/find-or-create-box-users
+[step6]: g://sso-identities-and-app-users/connect-okta-to-app-users/run-the-app

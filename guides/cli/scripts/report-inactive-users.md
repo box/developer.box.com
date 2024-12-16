@@ -143,8 +143,8 @@ You have access to these log files:
 
 [scripts]: https://github.com/box/boxcli/tree/main/examples
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2
-[quickstart]: g://cli/quick-start/create-oauth-app/
-[boxevents]: https://developer.box.com/reference/resources/event/
+[quickstart]: g://cli/quick-start/create-oauth-app
+[boxevents]: resource://event
 [deprovisionscript]: g://cli/scripts/deprovision-users
 [console]: https://app.box.com/developers/console
 [auth]: g://authentication/oauth2/oauth2-setup

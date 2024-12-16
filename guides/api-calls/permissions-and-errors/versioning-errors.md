@@ -22,7 +22,7 @@ Box provides versioning capabilities for selected API endpoints. The version con
 
 API versioning empowers Box to continually enhance its platform, while also offering third-party developers a reliable avenue for feature updates and deprecations.
 
-To stay informed about the API modifications, monitor the [Changelog](https://developer.box.com/changelog/) and maintain a current email address in the **App Info** section of the Developer Console.
+To stay informed about the API modifications, monitor the [Changelog](page://changelog) and maintain a current email address in the **App Info** section of the Developer Console.
 
 ## Error examples
 

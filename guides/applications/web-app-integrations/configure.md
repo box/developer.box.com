@@ -159,8 +159,8 @@ Center. Follow the [Integrations][integrations] guide for more details.
 
 [ca]: g://applications/app-types/custom-apps
 [pu]: g://applications/web-app-integrations/types
-[uid]:page://platform/appendix/locating-values/#user-ids
-[fid]:page://platform/appendix/locating-values/#content-ids
+[uid]: page://platform/appendix/locating-values/#user-ids
+[fid]: page://platform/appendix/locating-values/#content-ids
 [code]: g://authentication/oauth2/without-sdk/#3-user-grants-application-access
 [custom-oauth2]: g://authentication/oauth2/oauth2-setup
 [devconsole]: https://app.box.com/developers/console

@@ -81,6 +81,6 @@ Learn how to approve Custom Apps
 
 [oauth2]: g://authentication/oauth2
 [jwt]: g://authentication/jwt
-[cc]: g://authentication/client-credentials/
-[uie]: g://embed/ui-elements/
+[cc]: g://authentication/client-credentials
+[uie]: g://embed/ui-elements
 [users]: g;//getting-started/user-types/#managed-users/

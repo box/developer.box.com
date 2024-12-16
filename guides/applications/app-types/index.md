@@ -48,6 +48,6 @@ Learn how to select an application type
 [devtoken]: g://authentication/tokens/developer-tokens
 [custom-apps]: g://applications/app-types/custom-apps
 [custom-skills]: g://applications/app-types/custom-skills
-[ccg]: g://authentication/client-credentials/
-[laa]: g://applications/app-types/limited-access-apps/
+[ccg]: g://authentication/client-credentials
+[laa]: g://applications/app-types/limited-access-apps
 [insights]: https://support.box.com/hc/en-us/articles/20738406915219-Platform-Insights

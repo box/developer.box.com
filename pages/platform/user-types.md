@@ -321,13 +321,13 @@ Next step
 </Next>
 
 [dc]: https://app.box.com/developers/console
-[auth]: g://authorization/custom-app-approval/
-[scopes]: g://api-calls/permissions-and-errors/scopes/
-[collabapi]: e://post-collaborations/
-[getuser]: e://get-users-me/
-[updateuser]: e://put-users-id/
+[auth]: g://authorization/custom-app-approval
+[scopes]: g://api-calls/permissions-and-errors/scopes
+[collabapi]: e://post-collaborations
+[getuser]: e://get-users-me
+[updateuser]: e://put-users-id
 [createuser]: e://post-users
-[events]: e://get-events/
+[events]: e://get-events
 <!-- i18n-enable localize-links -->
 
 [cm]: https://support.box.com/hc/en-us/articles/360044197333-Using-the-Content-Manager

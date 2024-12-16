@@ -59,5 +59,5 @@ The following table lists the operations that you can perform on this endpoint.
 For a full details on the request and response parameters, see the [Sign
 template request API reference][sign-api-template-ref].
 
-[sign-api-reference]:https://developer.box.com/reference/resources/sign-request/
-[sign-api-template-ref]:https://developer.box.com/reference/resources/sign-template/
+[sign-api-reference]: resource://sign-request
+[sign-api-template-ref]: resource://sign-template

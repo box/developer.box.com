@@ -34,12 +34,12 @@ To take the next step, the following resources are recommended:
 3. Review [autocomplete][ac] settings.
 4. Review all of the [CLI sample scripts][sample-scripts].
 
-[one]: g://cli/quick-start/create-oauth-app/
-[two]: g://cli/quick-start/install-and-configure/
-[three]: g://cli/quick-start/build-commands-help/
-[four]: g://cli/quick-start/options-and-bulk-commands/
-[five]: g://cli/quick-start/powershell-script-templates/
+[one]: g://cli/quick-start/create-oauth-app
+[two]: g://cli/quick-start/install-and-configure
+[three]: g://cli/quick-start/build-commands-help
+[four]: g://cli/quick-start/options-and-bulk-commands
+[five]: g://cli/quick-start/powershell-script-templates
 [cache]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsupdate-name
 [ac]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
 [commands]: https://github.com/box/boxcli#command-topics
-[sample-scripts]: https://developer.box.com/guides/cli/scripts/
+[sample-scripts]: g://cli/scripts

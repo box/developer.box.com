@@ -183,6 +183,6 @@ You have access to these log files:
 
 [examples]: https://github.com/box/boxcli/tree/main/examples
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2
-[quickstart]: g://cli/quick-start/create-oauth-app/
+[quickstart]: g://cli/quick-start/create-oauth-app
 [console]: https://app.box.com/developers/console
 [auth]: g://authentication/oauth2/oauth2-setup

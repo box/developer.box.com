@@ -234,5 +234,5 @@ The response lists the fields included in the metadata template and their values
 [templates-console]: https://support.box.com/hc/en-us/articles/360044194033-Customizing-Metadata-Templates
 [templates-api]: g://metadata/templates/create
 [overrides]: g://box-ai/ai-agents/ai-agent-overrides
-[changelog]: https://developer.box.com/changelog/
+[changelog]: page://changelog
 [blog]: https://medium.com/box-developer-blog

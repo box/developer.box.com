@@ -146,12 +146,12 @@ Next step
 
 [box]: https://www.box.com
 [platform]: https://www.box.com/platform
-[apptypes]: g://applications/app-types/select/
-[authmethods]: g://authentication/select/
-[api]: https://developer.box.com/reference/
+[apptypes]: g://applications/app-types/select
+[authmethods]: g://authentication/select
+[api]: page://reference
 [change]: page://changelog
 [dc]: https://app.box.com/developers/console
-[at]: g://authentication/tokens/
+[at]: g://authentication/tokens
 <!-- i18n-enable localize-links -->
 
 [ut]: https://support.box.com/hc/en-us/articles/4636533822483-Box-User-Types

@@ -152,4 +152,4 @@ I have configured a Box app
 
 [devconsole]: https://cloud.app.box.com/developers/console
 [signup]: https://account.box.com/signup/n/developer
-[scopes]: https://developer.box.com/guides/api-calls/permissions-and-errors/scopes/
+[scopes]: g://api-calls/permissions-and-errors/scopes

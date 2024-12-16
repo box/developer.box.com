@@ -49,10 +49,10 @@ Get Started
 
 </Next>
 
-[platform101]:page://platform/box-platform-101
-[usecases]:page://platform/use-cases
-[usertypes]:page://platform/user-types
-[apptypes]:page://platform/application-types
-[authtypes]:page://platform/authentication-methods
-[support]:page://platform/support
-[tools]:page://platform/tools
+[platform101]: page://platform/box-platform-101
+[usecases]: page://platform/use-cases
+[usertypes]: page://platform/user-types
+[apptypes]: page://platform/application-types
+[authtypes]: page://platform/authentication-methods
+[support]: page://platform/support
+[tools]: page://platform/tools

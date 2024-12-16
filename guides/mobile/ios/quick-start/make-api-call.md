@@ -105,7 +105,7 @@ Build and run your sample application in the iOS emulator.
 If you run this code an hour or more after you created the developer
 token in the last step, you will need to revoke and generate a new developer
 token using the same method in the
-[previous step](g://mobile/ios/quick-start/configure-box-app/) as the
+[previous step](g://mobile/ios/quick-start/configure-box-app) as the
 developer token will only persist for 60 minutes.
 
 </Message>
@@ -118,7 +118,7 @@ with the last line showing the user print statement that we specified.
 
 ```bash
 ◁ Status code: 200: no error
-◁ Headers: 
+◁ Headers:
     ◁ Cache-Control, Value: no-cache, no-store
     ◁ BOX-REQUEST-ID, Value: 1c55151238444132eca16b4c2346d005
     ◁ Transfer-Encoding, Value: Identity

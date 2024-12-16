@@ -44,7 +44,7 @@ Setup and authorize App Token app
 
 App Token apps need to be authorized by the Box admin, otherwise you will
 receive permission errors when making API requests. To go through app
-authorization, follow [this guide](guide://authorization/custom-app-approval/).
+authorization, follow [this guide](guide://authorization/custom-app-approval).
 
 </Message>
 

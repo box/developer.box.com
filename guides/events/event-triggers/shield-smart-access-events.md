@@ -483,4 +483,4 @@ The `additional_details` payload will provide the following details:
 [monitoringmode]: https://support.box.com/hc/en-us/articles/14596333776403-Shield-Access-Policy-Settings
 <!-- i18n-disable localize-links -->
 
-[events]: g://events/enterprise-events/for-enterprise/
+[events]: g://events/enterprise-events/for-enterprise

@@ -358,4 +358,4 @@ The `additional_details` payload will provide the following details:
 [monitoringmode]: https://support.box.com/hc/en-us/articles/360044196353
 <!-- i18n-disable localize-links -->
 
-[events]: g://events/enterprise-events/for-enterprise/
+[events]: g://events/enterprise-events/for-enterprise
