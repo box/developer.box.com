@@ -44,7 +44,7 @@ to get a list of all sign requests using version `2025.0`, the request should lo
 
 ```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
-     --header 'box-version: 2024.0' \
+     --header 'box-version: 2025.0' \
      --header 'Authorization: Bearer …
 ```
 
@@ -53,6 +53,12 @@ If the endpoint is available in multiple versions, the response will include the
 which indicates the version used to handle the request.
 Endpoints introduced after 2024 may return a `400` error code if the version is incorrect.
 More information about versioning errors can be found [here](g://api-calls/permissions-and-errors/versioning-errors).
+
+If your request doesn't include a version, the API defaults to the initial Box API version - `2024.0` - the version of endpoints available before
+year-based versioning was introduced. However, relying on this behavior is not recommended when adopting deprecated
+changes. To ensure consistency, always specify the API version, with each request. By making your application
+version-aware, you anchor it to a specific set of features, ensuring consistent behavior throughout the supported
+timeframe.
 
 ## Release schedule and naming convention
 
@@ -83,12 +89,6 @@ Each stable version is supported for a minimum of 12 months. This means that whe
 It also means, that a new version cannot be released sooner than every 12 months.
 
 We strongly recommend updating your apps to make requests to the latest stable API version. However, if your app uses a stable version that is no longer supported, then you will get a response with an HTTP error code `400 - Bad Request`. For details, see [Versioning Errors](g://api-calls/permissions-and-errors/versioning-errors).
-
-If your request doesn't include a version, the API defaults to the initial Box API version—the version available before
-year-based versioning was introduced. However, relying on this behavior is not recommended when adopting deprecated
-changes. To ensure consistency, always specify the API version, with each request. By making your application
-version-aware, you anchor it to a specific set of features, ensuring consistent behavior throughout the supported
-timeframe.
 
 ### Endpoint versioning indication
 
