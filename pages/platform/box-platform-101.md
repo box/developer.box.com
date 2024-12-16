@@ -105,17 +105,17 @@ Box Platformで開発を行う際に注意すべき[ユーザータイプ][ut]�
 
 [platform]: https://www.box.com/platform
 
-[apptypes]: g://applications/app-types/select/
+[apptypes]: g://applications/app-types/select
 
-[authmethods]: g://authentication/select/
+[authmethods]: g://authentication/select
 
-[api]: https://developer.box.com/reference/
+[api]: page://reference
 
 [change]: page://changelog
 
 [dc]: https://app.box.com/developers/console
 
-[at]: g://authentication/tokens/
+[at]: g://authentication/tokens
 
 <!-- i18n-enable localize-links -->
 

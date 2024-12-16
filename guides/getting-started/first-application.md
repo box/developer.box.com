@@ -86,6 +86,6 @@ APIコールを行ってアプリをテストし、Boxでのレスポンス形�
 
 [postman-collection]: g://tooling/postman
 
-[api-ref]: https://developer.box.com/reference/
+[api-ref]: page://reference
 
 [box-cli]: https://github.com/box/boxcli

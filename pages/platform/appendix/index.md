@@ -24,10 +24,10 @@ fullyTranslated: true
 * [一般的な値の確認][common_values]: このページでは、ユーザーIDなどの情報を確認する方法について説明します。
 * [ブランディングガイドライン][branding]: このページでは、プロジェクトにBoxブランドを使用する予定の場合のさまざまな注意事項を示しています。
 
-[arch_patterns]: page://platform/appendix/architecture-patterns/
+[arch_patterns]: page://platform/appendix/architecture-patterns
 
-[user_models]: page://platform/appendix//user-models/
+[user_models]: page://platform/appendix//user-models
 
-[common_values]: page://platform/appendix/locating-values/
+[common_values]: page://platform/appendix/locating-values
 
 [branding]: page://platform/appendix/branding-guidelines/

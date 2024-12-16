@@ -83,6 +83,6 @@ ScopedToken downscopedToken =
 
 開発者トークンは、開発またはテストのためだけに使用し、実稼働環境では使用しないでください。
 
-[downscope]: g://authentication/tokens/downscope/
+[downscope]: g://authentication/tokens/downscope
 
-[revoke]: g://authentication/tokens/revoke/
+[revoke]: g://authentication/tokens/revoke

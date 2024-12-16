@@ -376,7 +376,7 @@ BoxClient userClient = sdk.UserClient(userToken, userId);
 
 ## 認証済みのBoxユーザーの呼び出し
 
-Oktaユーザーの関連付けられたBoxユーザーが検出されたら、明確に[そのユーザーのスコープに設定された](g://authentication/jwt/user-access-tokens/)アクセストークンを生成してBox APIコールを実行します。その後、現在のユーザーを取得するための呼び出しを実行して、すべてが機能していることと有効なユーザーアクセストークンがあることを確認します。
+Oktaユーザーの関連付けられたBoxユーザーが検出されたら、明確に[そのユーザーのスコープに設定された](g://authentication/jwt/user-access-tokens)アクセストークンを生成してBox APIコールを実行します。その後、現在のユーザーを取得するための呼び出しを実行して、すべてが機能していることと有効なユーザーアクセストークンがあることを確認します。
 
 <Choice option="programming.platform" value="node" color="none">
 

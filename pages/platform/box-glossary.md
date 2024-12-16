@@ -93,7 +93,7 @@ fullyTranslated: true
 
 [embed]: g://embed/box-embed
 
-[ui-elements]: g://embed/ui-elements/
+[ui-elements]: g://embed/ui-elements
 
 [cascade-policy]: https://support.box.com/hc/en-us/articles/360044195873-Cascading-metadata-in-folders
 
@@ -103,7 +103,7 @@ fullyTranslated: true
 
 [info-barriers]: https://support.box.com/hc/en-us/articles/9920431507603-Understanding-Information-Barriers
 
-[event]: r://event/
+[event]: r://event
 
 [event-stream]: https://support.box.com/hc/en-us/articles/8391393127955-Using-the-Enterprise-Event-Stream
 
@@ -113,9 +113,9 @@ fullyTranslated: true
 
 [shared-link]: https://support.box.com/hc/en-us/articles/360043697094-Creating-Shared-Links
 
-[sdk]: https://developer.box.com/sdks-and-tools/
+[sdk]: page://sdks-and-tools
 
-[code-catalog]: https://developer.box.com/sample-code/
+[code-catalog]: page://sample-code
 
 [relay]: https://support.box.com/hc/en-us/articles/360044196213
 

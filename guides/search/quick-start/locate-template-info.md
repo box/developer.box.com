@@ -39,7 +39,7 @@ APIを使用してメタデータテンプレートを作成し、成功を示�
 
 </Next>
 
-[at]: g://authentication/tokens/
+[at]: g://authentication/tokens
 
 [dc]: https://account.box.com/developers/console
 

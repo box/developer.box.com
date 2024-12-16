@@ -135,7 +135,7 @@ Ctqqx6XlN6QrqbhfJc0UeJF9qwMv3-O8q5fWn0qr8OTY4lkeYidtTs3Ux...
 
 ## カスタマイズされたプレビューアー (UI Element)
 
-高度なプレビューのカスタマイズ機能やイベント処理機能を活用するには、Box [UI Preview Element](guide://embed/ui-elements/preview/)を使用します。
+高度なプレビューのカスタマイズ機能やイベント処理機能を活用するには、Box [UI Preview Element](guide://embed/ui-elements/preview)を使用します。
 
 このプレビューElementを設定するには、まず、必須コンポーネントをインストールします。
 

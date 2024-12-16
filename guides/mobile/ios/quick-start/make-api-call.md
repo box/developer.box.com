@@ -89,7 +89,7 @@ iOSエミュレータでサンプルアプリケーションをビルドして�
 
 <Message warning>
 
-最後の手順で開発者トークンを作成してから1時間以上後にこのコードを実行する場合、開発者トークンは60分間しか保持されないため、[前の手順](g://mobile/ios/quick-start/configure-box-app/)と同じ方法を使用して、開発者トークンを取り消して新たに生成する必要があります。
+最後の手順で開発者トークンを作成してから1時間以上後にこのコードを実行する場合、開発者トークンは60分間しか保持されないため、[前の手順](g://mobile/ios/quick-start/configure-box-app)と同じ方法を使用して、開発者トークンを取り消して新たに生成する必要があります。
 
 </Message>
 
@@ -99,7 +99,7 @@ Xcodeの開発者コンソール内にAPIリクエストとレスポンスが表
 
 ```bash
 ◁ Status code: 200: no error
-◁ Headers: 
+◁ Headers:
     ◁ Cache-Control, Value: no-cache, no-store
     ◁ BOX-REQUEST-ID, Value: 1c55151238444132eca16b4c2346d005
     ◁ Transfer-Encoding, Value: Identity

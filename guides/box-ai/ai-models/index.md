@@ -56,6 +56,12 @@ APIコールで`model`パラメータを使用する際は、各タイルおよ�
 
 <strong style="background-color: #e8e8e8">
 
+Box AI for Hubsのデフォルト
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
 Box AI for Documentsのデフォルト
 
 </strong>
@@ -63,28 +69,6 @@ Box AI for Documentsのデフォルト
 <strong style="background-color: #e8e8e8">
 
 Box AI for NotesのQ&Aのデフォルト
-
-</strong>
-
-<strong style="background-color: #e1ffe7">
-
-利用可能
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="gpt" title="azure_openai__gpt_4o_2024_05_13" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card">
-
-複雑なマルチステップタスクの処理で非常に効率的なマルチモーダルモデル。
-
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-Box AI for Hubsのデフォルト
 
 </strong>
 
@@ -113,6 +97,28 @@ Box AI Extractのデフォルト
 <strong style="background-color: #fffbf3">
 
 プレビュー
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="gpt" title="azure_openai__gpt_4o_2024_05_13" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card">
+
+複雑なマルチステップタスクの処理で非常に効率的なマルチモーダルモデル。
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+利用可能
 
 </strong>
 

@@ -448,4 +448,4 @@ FTPプロトコルを介したファイルまたはフォルダのダウンロ�
 
 <!-- i18n-disable localize-links -->
 
-[events]: g://events/enterprise-events/for-enterprise/
+[events]: g://events/enterprise-events/for-enterprise

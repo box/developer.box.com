@@ -62,7 +62,7 @@ fullyTranslated: true
 
 **プレビューに表示されるBoxのロゴを置き換えるにはどうすればよいですか?**
 
-[プレビューUI Element](g://embed/ui-elements/logo/)内でのロゴのカスタマイズについては、このガイドを参照してください。
+[プレビューUI Element](g://embed/ui-elements/logo)内でのロゴのカスタマイズについては、このガイドを参照してください。
 
 <!-- i18n-enable localize-links -->
 

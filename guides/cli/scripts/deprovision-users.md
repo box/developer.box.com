@@ -187,7 +187,7 @@ PS /Users/user/repos/boxcli/examples>
 
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2
 
-[quickstart]: g://cli/quick-start/create-oauth-app/
+[quickstart]: g://cli/quick-start/create-oauth-app
 
 [console]: https://app.box.com/developers/console
 

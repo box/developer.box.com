@@ -29,6 +29,6 @@ fullyTranslated: true
 
 現在、この機能では[SlackのコンテンツレイヤーとしてBoxを使用する][2]場合のみサポートします。
 
-[1]: r://integration-mappings/
+[1]: r://integration-mappings
 
 [2]: https://support.box.com/hc/en-us/articles/4415585987859-Box-as-the-Content-Layer-for-Slack

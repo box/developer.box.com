@@ -53,6 +53,6 @@ fullyTranslated: true
 
 </CTA>
 
-[bv]: g://embed/box-view/
+[bv]: g://embed/box-view
 
 [limited]: g://authentication/app-token/endpoints

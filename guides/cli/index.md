@@ -68,7 +68,7 @@ Box CLIの使用自体が役に立ちますが、PowerShellスクリプトと組
 
 [cli-add-config]: https://github.com/box/boxcli/blob/main/docs/configure.md#box-configureenvironmentsadd-path
 
-[qs]: g://cli/quick-start/
+[qs]: g://cli/quick-start
 
 [cache]: https://github.com/box/boxcli/blob/main/docs/configure.md#box-configureenvironmentsupdate-name
 

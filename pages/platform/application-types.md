@@ -45,12 +45,12 @@ Boxには、アプリケーション開発におけるさまざまなニーズ�
 
 </Next>
 
-[custom_app]: g://applications/app-types/custom-apps/
+[custom_app]: g://applications/app-types/custom-apps
 
-[limited_app]: g://applications/app-types/limited-access-apps/
+[limited_app]: g://applications/app-types/limited-access-apps
 
-[skills]: g://applications/app-types/custom-skills/
+[skills]: g://applications/app-types/custom-skills
 
-[web_app]: g://applications/web-app-integrations/
+[web_app]: g://applications/web-app-integrations
 
 [integrations]: g://applications/integrations/

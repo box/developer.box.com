@@ -34,10 +34,10 @@ fullyTranslated: true
 
 [devconsole]: https://cloud.app.box.com/developers/console
 
-[arch_patterns]: page://platform/appendix/architecture-patterns/
+[arch_patterns]: page://platform/appendix/architecture-patterns
 
-[user_models]: page://platform/appendix//user-models/
+[user_models]: page://platform/appendix//user-models
 
-[common_values]: page://platform/appendix/locating-values/
+[common_values]: page://platform/appendix/locating-values
 
-[errors]: g://api-calls/permissions-and-errors/common-errors/
+[errors]: g://api-calls/permissions-and-errors/common-errors

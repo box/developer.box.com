@@ -81,7 +81,7 @@ SSOサービス内の一意のユーザーとBoxユーザーの関連付けを�
 
 ユーザーオブジェクトの`login`フィールドを使用してアカウントの関連付けを作成する方法は、以下の限られた状況において使用可能です。
 
-* [App User](page://platform/user-types/#app-user)ではなく[管理対象ユーザー](getting-started://authentication/user-types/#managed-users/)タイプのみが使用されている。
+* [App User](page://platform/user-types/#app-user)ではなく[管理対象ユーザー](page://platform/user-types/#managed-users)タイプのみが使用されている。
 * メールアドレスとBoxアカウントの作成リクエストがすべて会社によって管理されている。つまり、ユーザーは自身のメールアドレスで独自にBoxアカウントを作成することができません。
 
 <Message warning>

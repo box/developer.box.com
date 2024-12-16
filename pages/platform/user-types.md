@@ -205,19 +205,19 @@ App Userには、管理コンソールの [\[ユーザーとグループ\] タ�
 
 [dc]: https://app.box.com/developers/console
 
-[auth]: g://authorization/custom-app-approval/
+[auth]: g://authorization/custom-app-approval
 
-[scopes]: g://api-calls/permissions-and-errors/scopes/
+[scopes]: g://api-calls/permissions-and-errors/scopes
 
-[collabapi]: e://post-collaborations/
+[collabapi]: e://post-collaborations
 
-[getuser]: e://get-users-me/
+[getuser]: e://get-users-me
 
-[updateuser]: e://put-users-id/
+[updateuser]: e://put-users-id
 
 [createuser]: e://post-users
 
-[events]: e://get-events/
+[events]: e://get-events
 
 <!-- i18n-enable localize-links -->
 

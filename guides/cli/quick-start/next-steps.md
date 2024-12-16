@@ -34,15 +34,15 @@ fullyTranslated: true
 3. [オートコンプリート][ac]の設定を確認する。
 4. すべての[CLIサンプルスクリプト][sample-scripts]を確認する。
 
-[one]: g://cli/quick-start/create-oauth-app/
+[one]: g://cli/quick-start/create-oauth-app
 
-[two]: g://cli/quick-start/install-and-configure/
+[two]: g://cli/quick-start/install-and-configure
 
-[three]: g://cli/quick-start/build-commands-help/
+[three]: g://cli/quick-start/build-commands-help
 
-[four]: g://cli/quick-start/options-and-bulk-commands/
+[four]: g://cli/quick-start/options-and-bulk-commands
 
-[five]: g://cli/quick-start/powershell-script-templates/
+[five]: g://cli/quick-start/powershell-script-templates
 
 [cache]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsupdate-name
 
@@ -50,4 +50,4 @@ fullyTranslated: true
 
 [commands]: https://github.com/box/boxcli#command-topics
 
-[sample-scripts]: https://developer.box.com/guides/cli/scripts/
+[sample-scripts]: g://cli/scripts

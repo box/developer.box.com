@@ -52,7 +52,7 @@ Box CLIのスクリプトは、タスクの自動化に役立つよう設計さ�
 
 [6]: g://cli/scripts/user-zones-mass-update
 
-[quickstart]: g://cli/quick-start/create-oauth-app/
+[quickstart]: g://cli/quick-start/create-oauth-app
 
 [7]: https://support.box.com/hc/en-us/articles/360043694174-Understanding-Administrator-and-Co-Administrator-Permissions
 

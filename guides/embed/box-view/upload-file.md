@@ -25,7 +25,7 @@ fullyTranslated: true
 
 ## ファイルのアップロード
 
-[Box SDK](pages://sdks-and-tools/)を使用してファイルをアップロードするか、またはAPIを使用して直接ファイルをアップロードするには、[アプリケーションの設定](guide://embed/box-view/setup)中に生成されたクライアントIDとアプリトークンを使用してアプリケーションを認証する必要があります。
+[Box SDK](pages://sdks-and-tools)を使用してファイルをアップロードするか、またはAPIを使用して直接ファイルをアップロードするには、[アプリケーションの設定](guide://embed/box-view/setup)中に生成されたクライアントIDとアプリトークンを使用してアプリケーションを認証する必要があります。
 
 <CTA to="guide://authentication/app-token">
 

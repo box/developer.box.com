@@ -140,7 +140,7 @@ curl -X GET \
 
 有効なApp Userにアプリ統合を追加するには、以下の3つの情報が必要です。
 
-* 有効な[サービスアカウント](page://platform/user-types/#service-account/)アクセストークン
+* 有効な[サービスアカウント](page://platform/user-types/#service-account)アクセストークン
 * 統合を割り当てるApp UserのID
 * ユーザーに割り当てるアプリ統合のID
 
@@ -384,4 +384,4 @@ contentOpenWith.removeAllListeners();
 
 <!-- i18n-disable localize-links -->
 
-[service-account]: page://platform/user-types/#service-account/
+[service-account]: page://platform/user-types/#service-account

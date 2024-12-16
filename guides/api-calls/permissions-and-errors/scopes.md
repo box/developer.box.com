@@ -284,7 +284,7 @@ APIコールが行われるときに、一部の種類の[メール通知][suppr
 
 [pricing]: https://www.box.com/ja-jp/pricing
 
-[reference]: https://ja.developer.box.com/reference
+[reference]: page://reference
 
 <!-- i18n-disable localize-links -->
 

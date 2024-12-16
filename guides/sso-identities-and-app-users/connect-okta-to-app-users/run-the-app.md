@@ -32,7 +32,7 @@ fullyTranslated: true
 
 </ImageFrame>
 
-[手順2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/)の最後のセクションで作成したOktaユーザーの資格情報を使用してサインインします。
+[手順2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta)の最後のセクションで作成したOktaユーザーの資格情報を使用してサインインします。
 
 サインインしたら、`New user created: {{USERNAME}}`というメッセージがブラウザに出力されます。
 
@@ -52,7 +52,7 @@ Eclipse (またはお好みのエディタ) で、クリックしてアプリケ
 
 </ImageFrame>
 
-[手順2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/)の最後のセクションで作成したOktaユーザーの資格情報を使用してサインインします。
+[手順2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta)の最後のセクションで作成したOktaユーザーの資格情報を使用してサインインします。
 
 サインインしたら、`New User Created: {{USERNAME}}`というメッセージがブラウザに出力されます。
 
@@ -72,7 +72,7 @@ Eclipse (またはお好みのエディタ) で、クリックしてアプリケ
 
 </ImageFrame>
 
-[手順2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/)の最後のセクションで作成したOktaユーザーの資格情報を使用してサインインします。
+[手順2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta)の最後のセクションで作成したOktaユーザーの資格情報を使用してサインインします。
 
 サインインしたら、`New user created: {{USERNAME}}`というメッセージがブラウザに出力されます。
 
@@ -92,7 +92,7 @@ Visual Studio Code (またはお好みのエディタ) で、メニューから 
 
 </ImageFrame>
 
-[手順2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/)の最後のセクションで作成したOktaユーザーの資格情報を使用してサインインします。
+[手順2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta)の最後のセクションで作成したOktaユーザーの資格情報を使用してサインインします。
 
 サインインしたら、デバッグコンソールの`New user created: {{USERNAME}}`というメッセージがブラウザに出力されます。
 
@@ -127,18 +127,18 @@ Visual Studio Code (またはお好みのエディタ) で、メニューから 
 
 ユーザーの作成とアクセスのプロセスに関連したより高度な機能について詳しく知りたい方には、以下のリソースをお勧めします。
 
-* ユーザーフォルダのアーキテクチャの詳細な設定に関する、[ユーザープロビジョニング](g://users/provision/)のベストプラクティス。
-* 非アクティブなユーザーの削除と別のアカウントへのユーザーコンテンツの転送に関する、[ユーザーのプロビジョニング解除](g://users/deprovision/)のベストプラクティス。
-* 事前チェックや大容量ファイルの (分割) アップロードなど、Boxへの[コンテンツのアップロード](g://uploads/)。
+* ユーザーフォルダのアーキテクチャの詳細な設定に関する、[ユーザープロビジョニング](g://users/provision)のベストプラクティス。
+* 非アクティブなユーザーの削除と別のアカウントへのユーザーコンテンツの転送に関する、[ユーザーのプロビジョニング解除](g://users/deprovision)のベストプラクティス。
+* 事前チェックや大容量ファイルの (分割) アップロードなど、Boxへの[コンテンツのアップロード](g://uploads)。
 
-[step1]: g://sso-identities-and-app-users/connect-okta-to-app-users/scaffold-application-code/
+[step1]: g://sso-identities-and-app-users/connect-okta-to-app-users/scaffold-application-code
 
-[step2]: g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/
+[step2]: g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta
 
-[step3]: g://sso-identities-and-app-users/connect-okta-to-app-users/configure-box/
+[step3]: g://sso-identities-and-app-users/connect-okta-to-app-users/configure-box
 
-[step4]: g://sso-identities-and-app-users/connect-okta-to-app-users/logging-into-app/
+[step4]: g://sso-identities-and-app-users/connect-okta-to-app-users/logging-into-app
 
-[step5]: g://sso-identities-and-app-users/connect-okta-to-app-users/find-or-create-box-users/
+[step5]: g://sso-identities-and-app-users/connect-okta-to-app-users/find-or-create-box-users
 
-[step6]: g://sso-identities-and-app-users/connect-okta-to-app-users/run-the-app/
+[step6]: g://sso-identities-and-app-users/connect-okta-to-app-users/run-the-app

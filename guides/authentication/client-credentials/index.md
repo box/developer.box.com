@@ -91,7 +91,7 @@ Grant credentials are invalid [400 Bad Request] invalid_grant - Grant credential
 
 * 渡されたクライアントIDとクライアントシークレットが正しくないか、同じアプリケーションのものではない。
 
-* 選択した[アプリケーションアクセス][aa]に基づいて`box_subject_id`を使用できない。 
+* 選択した[アプリケーションアクセス][aa]に基づいて`box_subject_id`を使用できない。
 
 <Message warning>
 
@@ -119,9 +119,9 @@ Grant credentials are invalid [400 Bad Request] invalid_grant - Grant credential
 
 [devconsole]: https://app.box.com/developers/console
 
-[accesstoken]: e://post-oauth2-token/
+[accesstoken]: e://post-oauth2-token
 
-[sa]: page://platform/user-types/#service-account/
+[sa]: page://platform/user-types/#service-account
 
 [auth]: g://authorization
 

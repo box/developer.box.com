@@ -152,7 +152,7 @@ Box Signは、リクエストで指定された署名者のメールアドレス
 
 </ImageFrame>
 
-[upload]: e://post-files-content/
+[upload]: e://post-files-content
 
 [documents]: g://representations/supported-file-types/#documents
 

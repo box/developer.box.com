@@ -76,8 +76,8 @@ fullyTranslated: true
 
 [jwt]: g://authentication/jwt
 
-[cc]: g://authentication/client-credentials/
+[cc]: g://authentication/client-credentials
 
-[uie]: g://embed/ui-elements/
+[uie]: g://embed/ui-elements
 
 [users]: g;//getting-started/user-types/#managed-users/

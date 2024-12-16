@@ -22,7 +22,7 @@ fullyTranslated: true
 
 ユーザーがSSOプロバイダを使用してBoxカスタムアプリケーションにログインする際、まず必要なのは、Boxユーザーレコードが作成された前回のログイン試行から、そのユーザーがすでに存在するかどうかを確認することです。
 
-Boxユーザーが検出されたら、そのユーザーとしてBox APIにアクセスするために、[ユーザーアクセストークンを作成](guide://authentication/jwt/user-access-tokens/)するか[as-user呼び出し](guide://authentication/jwt/as-user/)を実行する必要があります。
+Boxユーザーが検出されたら、そのユーザーとしてBox APIにアクセスするために、[ユーザーアクセストークンを作成](guide://authentication/jwt/user-access-tokens)するか[as-user呼び出し](guide://authentication/jwt/as-user)を実行する必要があります。
 
 Boxユーザーが検出されない場合は、そのSSOユーザーレコードに関連付けられた新しいユーザーを作成する必要があります。
 

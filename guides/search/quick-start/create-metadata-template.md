@@ -77,14 +77,14 @@ APIを使用してメタデータテンプレートを作成するには、**会
 
 </Next>
 
-[at]: g://authentication/tokens/
+[at]: g://authentication/tokens
 
-[current-user]: e://get-users-me/
+[current-user]: e://get-users-me
 
 [dc]: https://account.box.com/developers/console
 
-[dt]: g://authentication/tokens/developer-tokens/
+[dt]: g://authentication/tokens/developer-tokens
 
 [postman]: https://postman.com/
 
-[post-collab]: g://tooling/postman/
+[post-collab]: g://tooling/postman

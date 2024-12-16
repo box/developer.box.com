@@ -55,7 +55,7 @@ Developerドキュメントの変更ログと同様に、Box Platformの更新�
 
 </Next>
 
-[samples]: g://cli/scripts/
+[samples]: g://cli/scripts
 
 <!-- i18n-enable localize-links -->
 

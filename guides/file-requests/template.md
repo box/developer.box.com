@@ -33,7 +33,7 @@ fullyTranslated: true
 
 <Message notice>
 
-サーバー側JWT認証を使用する場合は、アプリケーションの[サービスアカウント](page://platform/user-types/#service-account/)が所有するフォルダを作成することをお勧めします。こうすることで、通常のBoxユーザーが誤ってこのフォルダを削除することはなくなります。
+サーバー側JWT認証を使用する場合は、アプリケーションの[サービスアカウント](page://platform/user-types/#service-account)が所有するフォルダを作成することをお勧めします。こうすることで、通常のBoxユーザーが誤ってこのフォルダを削除することはなくなります。
 
 </Message>
 

@@ -342,7 +342,7 @@ let accessToken = await axios
 
 <!-- i18n-disable localize-links -->
 
-[auth]: e://get-authorize/
+[auth]: e://get-authorize
 
 [ci]: e://get-authorize/#param-client_id
 
@@ -354,6 +354,6 @@ let accessToken = await axios
 
 [thirty]: g://api-calls/permissions-and-errors/expiration
 
-[at]: e://post-oauth2-token/
+[at]: e://post-oauth2-token
 
-[apic]: g://api-calls/
+[apic]: g://api-calls

@@ -61,13 +61,13 @@ Boxは、[SDKライブラリ][sdk]で複数のプログラミング言語をサ�
 
 </Next>
 
-[samples]: g://cli/scripts/
+[samples]: g://cli/scripts
 
-[sdk]: page://sdks-and-tools/
+[sdk]: page://sdks-and-tools
 
-[file]: e://get-files-id/
+[file]: e://get-files-id
 
-[tooling]: g://tooling/
+[tooling]: g://tooling
 
 <!-- i18n-enable localize-links -->
 

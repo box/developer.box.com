@@ -139,19 +139,19 @@ Box Skillsに関する有用なチュートリアル (英語) については、
 
 </Next>
 
-[oauth]: g://authentication/oauth2/
+[oauth]: g://authentication/oauth2
 
-[jwt]: g://authentication/jwt/
+[jwt]: g://authentication/jwt
 
-[ata]: g://authentication/app-token/
+[ata]: g://authentication/app-token
 
-[ccg]: g://authentication/client-credentials/
+[ccg]: g://authentication/client-credentials
 
 [skill]: g://skills/handle/payload/#access-tokens
 
-[app_ep]: g://authentication/app-token/endpoints/
+[app_ep]: g://authentication/app-token/endpoints
 
-[scopes]: g://api-calls/permissions-and-errors/scopes/
+[scopes]: g://api-calls/permissions-and-errors/scopes
 
 [at]: g://authentication/tokens
 
@@ -159,7 +159,7 @@ Box Skillsに関する有用なチュートリアル (英語) については、
 
 <!-- i18n-enable localize-links -->
 
-[reference]: https://ja.developer.box.com/reference
+[reference]: page://reference
 
 [python_oauth]: https://github.com/box-community/box-python-oauth-template
 

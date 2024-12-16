@@ -31,11 +31,11 @@ fullyTranslated: true
 
 このガイドでは、以下の手順を説明します。
 
-1. デバイスに[Postmanをインストール](g://tooling/postman/quick-start/install-postman/)する。
-2. PostmanからBox APIにアクセスできるように[Boxアプリを設定](g://tooling/postman/quick-start/configure-box-app/)する。
-3. Boxアプリに[ログイン](g://tooling/postman/quick-start/log-in-to-box/)して適切なAPI資格情報を取得する。
-4. Postmanに[BoxのPostmanコレクションをフォーク](g://tooling/postman/quick-start/load-postman-collection/)する。
-5. Postmanを使用してBox APIへの[最初のAPIコールを実行](g://tooling/postman/quick-start/make-api-call/)する。
+1. デバイスに[Postmanをインストール](g://tooling/postman/quick-start/install-postman)する。
+2. PostmanからBox APIにアクセスできるように[Boxアプリを設定](g://tooling/postman/quick-start/configure-box-app)する。
+3. Boxアプリに[ログイン](g://tooling/postman/quick-start/log-in-to-box)して適切なAPI資格情報を取得する。
+4. Postmanに[BoxのPostmanコレクションをフォーク](g://tooling/postman/quick-start/load-postman-collection)する。
+5. Postmanを使用してBox APIへの[最初のAPIコールを実行](g://tooling/postman/quick-start/make-api-call)する。
 
 <Next>
 

@@ -23,7 +23,7 @@ Boxでは、特定のAPIエンドポイントに対してバージョン管理�
 
 APIのバージョン管理により、Boxは、自社のプラットフォームを継続的に強化できると同時に、機能の更新や廃止のための信頼できる手段をサードパーティの開発者に提供することもできます。
 
-APIの変更について常に最新情報を把握できるように、[変更ログ](https://developer.box.com/changelog/)を注視し、開発者コンソールの \[**アプリ情報**] セクションで最新のメールアドレスを指定しておいてください。
+APIの変更について常に最新情報を把握できるように、[変更ログ](page://changelog)を注視し、開発者コンソールの \[**アプリ情報**] セクションで最新のメールアドレスを指定しておいてください。
 
 ## エラーの例
 
@@ -66,7 +66,7 @@ Boxのドキュメントでは、APIのURLが示されています。たとえ�
 Boxで非推奨としてマークされたAPIバージョンを使用した場合、APIは通常どおり応答します。また、非推奨になった日付を示す`Deprecation`ヘッダーが追加されます。次に例を示します。
 
 ```sh
-Deprecation: date="Fri, 11 Nov 2023 23:59:59 GMT"
+Deprecation: date="Fri, 11 Nov 2026 23:59:59 GMT"
 Box-API-Deprecated-Reason: https://developer.box.com/reference/deprecated
 
 ```
@@ -75,4 +75,4 @@ APIレスポンスを監視して`Deprecation`ヘッダーが存在するかど�
 
 ## 存在しないバージョンの呼び出し
 
-公式サポートが終了した古いAPIバージョン (`2023.0`など) を使用しようとすると、レスポンスでは`HTTP error code 404 - Not Found`が返されます。詳細については、[URLでの正しくないAPIバージョンの呼び出し](#calling-an-incorrect-api-version-in-the-url)を参照してください。
+公式サポートが終了した古いAPIバージョン (`2025.0`など) を使用しようとすると、レスポンスでは`HTTP error code 404 - Not Found`が返されます。詳細については、[URLでの正しくないAPIバージョンの呼び出し](#calling-an-incorrect-api-version-in-the-url)を参照してください。

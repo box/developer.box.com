@@ -107,7 +107,7 @@ Boxコミュニティの記事で、Boxでの検索に関する最新情報を�
 
 <!-- i18n-disable localize-links -->
 
-[support]: p://support
+[support]: page://support
 
 <!-- i18n-enable localize-links -->
 

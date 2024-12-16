@@ -101,6 +101,6 @@ Boxの検索インデックスの詳細を確認する
 
 [search]: e://get_search
 
-[support]: p://support
+[support]: page://support
 
 [keysafe]: https://www.box.com/security/keysafe

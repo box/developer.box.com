@@ -19,12 +19,12 @@ fullyTranslated: true
 
 このクイックスタートガイドが完了しました。ここまで、以下の手順を実行しました。
 
-1. 使用できる[すべてのテンプレートのリストを取得](g://metadata/quick-start/list-all/)しました。
-2. 会社固有のデータを保持する[カスタムメタデータテンプレートを作成](g://metadata/quick-start/create-template/)しました。
-3. ファイルに[カスタムメタデータテンプレートを適用](g://metadata/quick-start/create-instance/)し、カスタムデータをファイルに割り当てられるようにしました。
-4. ファイルの[メタデータインスタンスを更新](g://metadata/quick-start/update-instance/)し、ファイルに割り当てられたデータを変更できるようにしました。
-5. [メタデータテンプレートを更新](g://metadata/quick-start/update-template/)し、このテンプレートのすべてのインスタンスに適用されたデータを変更しました。
-6. [ファイルやフォルダに対してクエリを実行](g://metadata/quick-start/create-query/)し、ファイルとフォルダに適用されているメタデータインスタンスの値と照合しました。
+1. 使用できる[すべてのテンプレートのリストを取得](g://metadata/quick-start/list-all)しました。
+2. 会社固有のデータを保持する[カスタムメタデータテンプレートを作成](g://metadata/quick-start/create-template)しました。
+3. ファイルに[カスタムメタデータテンプレートを適用](g://metadata/quick-start/create-instance)し、カスタムデータをファイルに割り当てられるようにしました。
+4. ファイルの[メタデータインスタンスを更新](g://metadata/quick-start/update-instance)し、ファイルに割り当てられたデータを変更できるようにしました。
+5. [メタデータテンプレートを更新](g://metadata/quick-start/update-template)し、このテンプレートのすべてのインスタンスに適用されたデータを変更しました。
+6. [ファイルやフォルダに対してクエリを実行](g://metadata/quick-start/create-query)し、ファイルとフォルダに適用されているメタデータインスタンスの値と照合しました。
 
 ## 次の手順
 

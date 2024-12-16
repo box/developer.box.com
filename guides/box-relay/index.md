@@ -68,7 +68,7 @@ Box Relayのエンドポイントを使用する前に、アプリケーショ�
 
 [boxrelay]: https://support.box.com/hc/ja/articles/360044196213-Box-Relayの概要
 
-[workflow]: https://ja.developer.box.com/reference/resources/workflow/
+[workflow]: resource://workflow
 
 [manualstart]: https://support.box.com/hc/ja/articles/360044628853-手動で開始するワークフローの作成と実行
 

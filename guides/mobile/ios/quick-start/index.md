@@ -38,10 +38,10 @@ Box iOS SDKとこのクイックスタートの使用を開始するには、以
 
 このガイドでは、以下の手順を説明します。
 
-1. Xcodeで[新しいiOSアプリを作成](g://mobile/ios/quick-start/create-ios-app/)します。
-2. プロジェクトに[iOS SDKをインストール](g://mobile/ios/quick-start/install-ios-sdk/)します。
-3. iOS SDKからBox APIにアクセスできるように[Boxアプリを設定](g://mobile/ios/quick-start/configure-box-app/)します。
-4. iOS SDKを使用してBox APIに対する[APIコールを実行](g://mobile/ios/quick-start/make-api-call/)します。
+1. Xcodeで[新しいiOSアプリを作成](g://mobile/ios/quick-start/create-ios-app)します。
+2. プロジェクトに[iOS SDKをインストール](g://mobile/ios/quick-start/install-ios-sdk)します。
+3. iOS SDKからBox APIにアクセスできるように[Boxアプリを設定](g://mobile/ios/quick-start/configure-box-app)します。
+4. iOS SDKを使用してBox APIに対する[APIコールを実行](g://mobile/ios/quick-start/make-api-call)します。
 
 <Next>
 

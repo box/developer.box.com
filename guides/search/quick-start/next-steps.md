@@ -40,21 +40,21 @@ fullyTranslated: true
 * [Java SDK][java]
 * [Node][node]
 
-[stepone]: g://search/quick-start/create-metadata-template/
+[stepone]: g://search/quick-start/create-metadata-template
 
-[steptwo]: g://search/quick-start/apply-template-to-file/
+[steptwo]: g://search/quick-start/apply-template-to-file
 
-[stepthree]: g://search/quick-start/locate-template-info/
+[stepthree]: g://search/quick-start/locate-template-info
 
-[stepfour]: g://search/quick-start/metadata-query-api/
+[stepfour]: g://search/quick-start/metadata-query-api
 
-[mq]: e://post-metadata-queries-execute-read/
+[mq]: e://post-metadata-queries-execute-read
 
-[mqg]: g://metadata/queries/
+[mqg]: g://metadata/queries
 
-[ce]: g://metadata/queries/errors/
+[ce]: g://metadata/queries/errors
 
-[lims]: g://metadata/queries/limitations/
+[lims]: g://metadata/queries/limitations
 
 [node]: https://github.com/box/box-node-sdk/blob/3fcc0d8bbd1ca11f1a3a78d741e4572718af53f0/docs/metadata.md#query
 

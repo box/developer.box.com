@@ -147,9 +147,9 @@ Deleted employee Managed User 1
 
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2
 
-[quickstart]: g://cli/quick-start/create-oauth-app/
+[quickstart]: g://cli/quick-start/create-oauth-app
 
-[boxevents]: https://developer.box.com/reference/resources/event/
+[boxevents]: resource://event
 
 [deprovisionscript]: g://cli/scripts/deprovision-users
 

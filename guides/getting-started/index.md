@@ -53,25 +53,25 @@ Box APIを使用する開発が初めての方は、まずは[Box Platformにつ
 
 <!-- i18n-enable localize-links -->
 
-[box-platform-101]: p://platform/box-platform-101
+[box-platform-101]: page://platform/box-platform-101
 
-[use-case]: p://platform/use-cases
+[use-case]: page://platform/use-cases
 
-[user-types]: p://platform/user-types
+[user-types]: page://platform/user-types
 
-[application-types]: p://platform/application-types
+[application-types]: page://platform/application-types
 
-[authentication]: p://platform/authentication-methods
+[authentication]: page://platform/authentication-methods
 
-[support]: p://platform/support
+[support]: page://platform/support
 
-[tooling]: p://platform/tools
+[tooling]: page://platform/tools
 
 [box-app]: g://getting-started/first-application
 
-[endpoints]: https://ja.developer.box.com/reference/
+[endpoints]: page://reference
 
-[cv]: p://platform/appendix/locating-values
+[cv]: page://platform/appendix/locating-values
 
 [publish-app]: g://getting-started/publish-app
 

@@ -137,13 +137,13 @@ Box APIに関して言えば、注意すべきEnterprise設定がいくつかあ
 
 [gettoken]: e://post-oauth2-token
 
-[exchange]: e://reference/post-oauth2-token--refresh/
+[exchange]: e://post-oauth2-token--refresh
 
 <!-- i18n-enable localize-links -->
 
 [coadminperm]: https://support.box.com/hc/ja/articles/360044194393-共同管理者権限の付与と変更
 
-[reference]: https://ja.developer.box.com/reference/
+[reference]: page://reference
 
 [dc]: https://app.box.com/developers/console
 

@@ -58,6 +58,7 @@ fullyTranslated: true
 | 2024 | 8月  | [Preview][download-2024-aug] |
 | 2024 | 9月  | [Preview][download-2024-sep] |
 | 2024 | 10月 | [Preview][download-2024-oct] |
+| 2024 | 11月 | [Preview][download-2024-nov] |
 
 [dc]: https://cloud.app.box.com/developers/console
 
@@ -118,3 +119,5 @@ fullyTranslated: true
 [download-2024-sep]: https://cloud.box.com/s/00xnegyvme78z3ii95iehnl1grvm9qp0
 
 [download-2024-oct]: https://cloud.box.com/s/etv2k77icxmt4jsfmb86g4tlubcohm2y
+
+[download-2024-nov]: https://cloud.box.com/s/2lxixeatcg6tdmc5rchheit6mpw3r582

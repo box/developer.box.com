@@ -31,12 +31,12 @@ fullyTranslated: true
 
 このガイドでは、以下の手順を説明します。
 
-1. 使用できる[すべてのテンプレートのリストを取得](g://metadata/quick-start/list-all/)します。
-2. 会社固有のデータを保持する[カスタムメタデータテンプレートを作成](g://metadata/quick-start/create-template/)します。
-3. ファイルに[カスタムメタデータテンプレートを適用](g://metadata/quick-start/create-instance/)し、カスタムデータをファイルに割り当てられるようにします。
-4. ファイルの[メタデータインスタンスを更新](g://metadata/quick-start/update-instance/)し、ファイルに割り当てられたデータを変更できるようにします。
-5. [メタデータテンプレートを更新](g://metadata/quick-start/update-template/)し、このテンプレートのすべてのインスタンスに適用されたデータを変更します。
-6. [メタデータを使用してファイルを検索するクエリを作成](g://metadata/quick-start/create-query/)し、このテンプレートのすべてのインスタンスに適用されたデータを変更します。
+1. 使用できる[すべてのテンプレートのリストを取得](g://metadata/quick-start/list-all)します。
+2. 会社固有のデータを保持する[カスタムメタデータテンプレートを作成](g://metadata/quick-start/create-template)します。
+3. ファイルに[カスタムメタデータテンプレートを適用](g://metadata/quick-start/create-instance)し、カスタムデータをファイルに割り当てられるようにします。
+4. ファイルの[メタデータインスタンスを更新](g://metadata/quick-start/update-instance)し、ファイルに割り当てられたデータを変更できるようにします。
+5. [メタデータテンプレートを更新](g://metadata/quick-start/update-template)し、このテンプレートのすべてのインスタンスに適用されたデータを変更します。
+6. [メタデータを使用してファイルを検索するクエリを作成](g://metadata/quick-start/create-query)し、このテンプレートのすべてのインスタンスに適用されたデータを変更します。
 
 <Next>
 

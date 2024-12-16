@@ -25,33 +25,50 @@ APIのバージョン管理により、Boxは、自社のプラットフォー�
 
 <Message type="tip">
 
-今後予定されているAPIの変更について常に最新情報を把握できるように、[変更ログ](https://developer.box.com/changelog/)を注視し、開発者コンソールの \[アプリ情報] セクションで最新のメールアドレスを指定しておいてください。
+今後予定されているAPIの変更について常に最新情報を把握できるように、[変更ログ](page://changelog)を注視し、開発者コンソールの \[アプリ情報] セクションで最新のメールアドレスを指定しておいてください。
 
 </Message>
+
+<!-- Commenting this until we enable base version support in Public API Service <Message type='notice'>
+
+In 2024, Box introduced year-based API versioning.
+
+All endpoints available at the end of 2024 were assigned the version `2024.0`.
+
+**No action is required for API users to continue using Box APIs.**
+
+To make version-aware API calls, include the `box-version` header with the value `2024.0` in your requests.
+
+</Message>
+
+-->
 
 ## Box APIのバージョン管理の仕組み
 
 <Message type="notice">
 
-Box APIは、URLの`path`と`header`でバージョン管理をサポートしています。どのバージョンを使用するかを決定するには、APIリファレンスとそこに記載されているサンプルリクエストを参照してください。
+Box API supports versioning in `header`. To determine which version to use, look at the API reference and included sample requests.
 
 </Message>
 
-### `path`におけるバージョン管理
-
-リクエストで使用されるAPIのデフォルトのバージョンは、呼び出すエンドポイントのURLで指定します。たとえば、バージョンヘッダーを指定せずに`https://upload.box.com/api/2.0/files/content`エンドポイントを呼び出すと、URLで定義されている`2.0`バージョンが使用されることになります。
-
-APIの動作に大きな変更があると、新しいエンドポイントは新しいURLで公開されます。たとえば、`https://upload.box.com/api/2.0/files/content`では、Boxにファイルをアップロードする際にマルチパートのコンテンツタイプをサポートしています。このAPIの新しいバージョンでこのコンテンツタイプがサポートされなくなると、新しいバージョンは新しいURL`https://upload.box.com/api/3.0/files/content`でリリースされます。
-
 ### `header`におけるバージョン管理
 
-Box APIでは、有効なバージョン名を含む`box-version`ヘッダーを処理します。このヘッダーは`box-version: 2025.0`であり、`https://api.box.com/2.0/files/:file_id/metadata`に送信されます。
+Box API processes the `box-version` header which should contain a valid version name. For example, when a client wants to get a list of all sign requests using version `2025.0`, the request should look like this:
 
-指定したバージョンが正しい場合は、クライアントにレスポンスが返されます。リクエストで`box-version`ヘッダーを指定した場合、レスポンスにはこのヘッダーも含まれます。デフォルトでは、このヘッダーはレスポンスに存在しません。バージョンが正しくない場合は、HTTPコード`400`のエラーがクライアントに返されます。
+```curl
+curl --location 'https://api.box.com/2.0/sign_requests' \
+     --header 'box-version: 2025.0' \
+     --header 'Authorization: Bearer …
+
+```
+
+If the provided version is correct and supported by the endpoint, a response is sent to the client. If the endpoint is available in multiple versions, the response will include the `box-version` header, which indicates the version used to handle the request. Endpoints introduced after 2024 may return a `400` error code if the version is incorrect. More information about versioning errors can be found [here](g://api-calls/permissions-and-errors/versioning-errors).
+
+If your request doesn't include a version, the API defaults to the initial Box API version - `2024.0` - the version of endpoints available before year-based versioning was introduced. However, relying on this behavior is not recommended when adopting deprecated changes. To ensure consistency, always specify the API version, with each request. By making your application version-aware, you anchor it to a specific set of features, ensuring consistent behavior throughout the supported timeframe.
 
 ## リリーススケジュールと命名規則
 
-Boxでは、**1年に1回**、特定のエンドポイントに新しく重大な変更を行う場合があります。署名リクエストエンドポイントの新しいバージョンを導入すると、エンドポイントの**すべてのパスとHTTPメソッド**でそのバージョンがサポートされるようになります。
+Box can introduce a new breaking change to certain endpoints **once per year**, which results in a new API version. Introducing a new version of the Sign Request endpoint means that **all paths and HTTP methods** of an endpoint will support it.
 
 たとえば、署名リクエストのエンドポイントが新しいバージョンを受け取ると、そのバージョンは、次の表に示すすべてのエンドポイントに適用されます。
 
@@ -77,32 +94,17 @@ Boxは、1年に**1回**、APIエンドポイントに新しく重大な変更�
 
 アプリを更新して最新の安定したAPIバージョンにリクエストを実行することを強くお勧めします。ただし、アプリで使用している安定したバージョンがサポートされなくなると、HTTPエラーコード`400 - Bad Request`を含むレスポンスが返されます。詳細については、[バージョン管理のエラー](g://api-calls/permissions-and-errors/versioning-errors)を参照してください。
 
-リクエストにバージョンが含まれていない場合、APIはデフォルトで、最初のBox APIバージョン (年ベースのバージョン管理が導入される前のバージョン) になります。ただし、非推奨の変更を適用する際にこの動作を利用することはお勧めしません。一貫性を確保するために、リクエストごとに必ずAPIバージョンを指定してください。アプリケーションにバージョンを認識させることで、アプリケーションを特定の機能セットに固定し、サポートされている期間中は一貫した動作が保証されます。
-
 ### エンドポイントのバージョン管理に関する表示
 
 APIの現在の状態が常にわかるようにし、バージョン管理されているAPIリファレンスが読みやすくなるよう、影響を受けるエンドポイントには`x-stability-level`タグまたは`deprecated`属性に基づいた長円形アイコンが表示されます。
 
 ![APIリファレンスのエンドポイントで使用されている、ベータを示す長円形アイコンの例](./images/api-versioning-pills.png)
 
-| スキーマ要素                                                 | 長円形アイコンの名前 | 説明                                                                                                                                              |
-| ------------------------------------------------------ | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `x-stability-level: beta`                              | ベータ        | **ベータ**と表示されているエンドポイントは、BoxのMain Beta Agreementに従い提供されているため、利用可能な機能が変更される可能性があります。ベータ版のエンドポイントは、バージョン管理されたエンドポイントと同じではありませんが、APIのライフサイクルに含まれます。 |
-| `x-stability-level: stable`、または`x-stability-level`タグなし | 最新バージョン    | 最新バージョンは、すでにバージョン管理されているAPIに適用されます。**最新バージョン**とは、エンドポイントの最新の安定したバージョンを示します。                                                                     |
-| `deprecated: true`                                     | 非推奨        | エンドポイントは非推奨です。つまり、このエンドポイントは引き続き使用できますが、新機能が追加されなくなります。このようなエンドポイントには、`deprecated`属性を`true`に設定した状態で注釈が付けられています。                                 |
-
-## APIバージョンの呼び出し
-
-Box APIのバージョンは、アプリでリクエストする`box-version`ヘッダーで明示的に宣言します。次に例を示します。
-
-```curl
-curl --location 'https://api.box.com/2.0/sign_requests' \
-    --header 'box-version: 2025.0' \
-    --header 'Authorization: Bearer …
-
-```
-
-クライアントは、作成されたすべての署名リクエストのリストを取得し、バージョン`2025.0`を要求します。使用可能なAPIにはサポートされているバージョンがいくつかあるため、使用するバージョンを`box-version`ヘッダーで指定します。APIのバージョンには、**安定**、**非推奨**、**不安定**の3種類があります。
+| スキーマ要素                                                 | 長円形アイコンの名前 | 説明                                                                                                                                                                                                                      |
+| ------------------------------------------------------ | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `x-stability-level: beta`                              | ベータ        | Endpoints marked with **beta**, are offered subject to Box’s Main Beta Agreement, meaning the available capabilities may change at any time. When the beta endpoint becomes stable, the **beta** indication is removed. |
+| `x-stability-level: stable`、または`x-stability-level`タグなし | 最新バージョン    | **Latest version** marks the most recent stable API version of an endpoint.                                                                                                                                             |
+| `deprecated: true`                                     | 非推奨        | エンドポイントは非推奨です。つまり、このエンドポイントは引き続き使用できますが、新機能が追加されなくなります。このようなエンドポイントには、`deprecated`属性を`true`に設定した状態で注釈が付けられています。                                                                                                         |
 
 ## バージョン管理のエラー
 
@@ -112,7 +114,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 
 ## Box SDKのバージョン管理の仕組み
 
-このバージョン戦略は、[次世代のSDK](https://developer.box.com/sdks-and-tools/#next-generation-sdks)にのみ適用されます。
+このバージョン戦略は、[次世代のSDK](page://sdks-and-tools/#next-generation-sdks)にのみ適用されます。
 
 Box SDKは、**すべてのバージョンに対応**というSDKのアプローチをサポートしています。つまり、SDKの各リリースでは、現在サポートされている任意のバージョンのすべてのエンドポイントにアクセスできます。生成されたすべてのSDKはマネージャのアプローチを使用します。このアプローチでは、同じドメインを使用するすべてのエンドポイントを1つのマネージャにグループ化します。
 
@@ -213,14 +215,14 @@ Box APIにおける重大な変更は、バージョン管理されたリリー�
 
 Box APIとBox SDKの新しいバージョンがリリースされると、それより前のバージョンは廃止されます。Boxでは、バージョンを廃止する少なくとも24か月前に、そのバージョンを`deprecated`とマークします。つまり、非推奨バージョンの公式サポートが24か月経たずに終了することはありません。同様に、正式リリース (GA) されている個々のAPIについても、GAバージョンから削除する少なくとも24か月前にそのAPIを`deprecated`として宣言します。
 
-Boxは、APIのメジャーバージョンを上げる際 (`2024.0`から`2025.0`など)、現在のバージョン (この例では`2024.0`) が即座に非推奨となることを発表し、その発表から24か月後にサポートを終了します。サービスのセキュリティや状態の信頼性に問題がある場合は、このポリシーに例外を認めることがあります。
+Boxは、APIのメジャーバージョンを上げる際 (`2025.0`から`2026.0`など)、現在のバージョン (この例では`2025.0`) が即座に非推奨となることを発表し、その発表から24か月後にサポートを終了します。サービスのセキュリティや状態の信頼性に問題がある場合は、このポリシーに例外を認めることがあります。
 
 APIが非推奨としてマークされている場合は、できるだけ早く最新バージョンに移行することを強くお勧めします。場合によっては、元のAPIが非推奨になってしばらくしてから、新しいアプリケーションで新しいAPIの使用を開始する必要があることを案内することもあります。
 
 お客様が非推奨のAPIエンドポイントを呼び出すと、レスポンスには以下のようなヘッダーが含まれます。
 
 ```sh
-Deprecation: date="Fri, 11 Nov 2023 23:59:59 GMT"
+Deprecation: date="Fri, 11 Nov 2026 23:59:59 GMT"
 Box-API-Deprecated-Reason: https://developer.box.com/reference/deprecated
 
 ```
@@ -231,8 +233,8 @@ Box-API-Deprecated-Reason: https://developer.box.com/reference/deprecated
 
 リクエストの作成時には、以下の点を考慮してください。
 
-* バージョンを指定しないと、サービスによって最初のバージョン (年ベースのバージョン管理が導入される前に存在していたバージョン) が返されます。最初のバージョンが存在しない場合、レスポンスでは、HTTPエラーコード`400 - Bad Request`が返されます。
-* バージョンヘッダーが指定されていても、リクエストされたバージョンを利用できない場合、レスポンスではHTTPエラーコード`400 - Bad Request`が返されます。
+* Endpoints in version `2024.0` can be called without specifying the version in the `box-version` header. If no version is specified and the `2024.0` version of the called endpoint does not exist, the response will return an HTTP error code `400 - Bad Request`.
+* If the `box-version` version header is specified but the requested version does not exist, the response will return an HTTP error code `400 - Bad Request`.
 
 詳細については、[バージョン管理のエラー](g://api-calls/permissions-and-errors/versioning-errors)を参照してください。
 
@@ -241,7 +243,7 @@ APIに含まれるリソースまたはリソースのプロパティが非推�
 * 非推奨の動作を伴う呼び出しにより、レスポンスヘッダー`Box-API-Deprecated-Reason`と、詳細を確認するためのリンクが返されます。
 
 ```sh
-    box-version: 2023.0
+    box-version: 2025.0
     Deprecation: version="version", date="date"
     Box-API-Deprecated-Reason: https://developer.box.com/reference/deprecated
 
@@ -253,4 +255,4 @@ APIに含まれるリソースまたはリソースのプロパティが非推�
 
 ## その他のリソース
 
-* [APIリファレンス](https://developer.box.com/reference/)
+* [APIリファレンス](page://reference)

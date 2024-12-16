@@ -348,4 +348,4 @@ Sessions`値によって識別できます。
 
 <!-- i18n-disable localize-links -->
 
-[events]: g://events/enterprise-events/for-enterprise/
+[events]: g://events/enterprise-events/for-enterprise

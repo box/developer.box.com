@@ -64,7 +64,7 @@ Box APIの呼び出しに使用できる新しいBoxアプリケーションを�
 
 アプリケーションの作成後も、Box APIの呼び出しを行うには会社の管理者による承認が必要です。
 
-アプリケーションを社内で承認してもらうには、[このガイド](g://authorization/custom-app-approval/)に従ってください。
+アプリケーションを社内で承認してもらうには、[このガイド](g://authorization/custom-app-approval)に従ってください。
 
 </Message>
 
@@ -89,7 +89,7 @@ Box APIの呼び出しに使用できる新しいBoxアプリケーションを�
 
 アプリケーションは更新後、会社の管理者による再承認が必要になります。再承認後、新しい権限のいずれかを必要とする任意のBox APIを呼び出すことができます。
 
-アプリケーションを社内で承認してもらうには、[このガイド](g://authorization/custom-app-approval/)に従ってください。
+アプリケーションを社内で承認してもらうには、[このガイド](g://authorization/custom-app-approval)に従ってください。
 
 </Message>
 

@@ -299,7 +299,7 @@ Box CLIと共にPowerShellスクリプトを使用した、ユーザーのプロ
 
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2
 
-[step 1]: g://cli/quick-start/create-oauth-app/
+[step 1]: g://cli/quick-start/create-oauth-app
 
 [console]: https://app.box.com/developers/console
 

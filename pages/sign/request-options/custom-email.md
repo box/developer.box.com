@@ -261,4 +261,4 @@ Simple sign request: 22a990ce-4e24-463b-b2f4-124820fe161a-defddc79c946
 
 これで、埋め込みURLを取得して、独自の通知プロセスを使用したり、自分のアプリ内に署名クライアントを埋め込んだりできるようになりました。
 
-[embed]: guide://box-sign/embedded-sign-client
+[embed]: g://box-sign/embedded-sign-client

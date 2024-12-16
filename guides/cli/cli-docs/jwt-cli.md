@@ -189,9 +189,9 @@ Notification Email: []
 
 [cli]: https://github.com/box/boxcli
 
-[auth]: g://authentication/jwt/without-sdk/
+[auth]: g://authentication/jwt/without-sdk
 
-[at]: g://authentication/tokens/
+[at]: g://authentication/tokens
 
 <!-- i18n-enable localize-links -->
 
@@ -201,11 +201,11 @@ Notification Email: []
 
 [keypair]: g://authentication/jwt/jwt-setup/#public-and-private-key-pair
 
-[sa]: page://platform/user-types/#service-account/
+[sa]: page://platform/user-types/#service-account
 
-[scopes]: g://api-calls/permissions-and-errors/scopes/
+[scopes]: g://api-calls/permissions-and-errors/scopes
 
-[ag]: g://authorization/custom-app-approval/
+[ag]: g://authorization/custom-app-approval
 
 <!-- i18n-enable localize-links -->
 
@@ -213,13 +213,13 @@ Notification Email: []
 
 <!-- i18n-disable localize-links -->
 
-[scopes]: g://api-calls/permissions-and-errors/scopes/
+[scopes]: g://api-calls/permissions-and-errors/scopes
 
 [aa]: g://authentication/jwt/jwt-setup/#application-access
 
-[three]: g://cli/quick-start/build-commands-help/
+[three]: g://cli/quick-start/build-commands-help
 
-[four]: g://cli/quick-start/options-and-bulk-commands/
+[four]: g://cli/quick-start/options-and-bulk-commands
 
 [cache]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsupdate-name
 
@@ -227,4 +227,4 @@ Notification Email: []
 
 [commands]: https://github.com/box/boxcli#command-topics
 
-[qs]: g://cli/quick-start/
+[qs]: g://cli/quick-start

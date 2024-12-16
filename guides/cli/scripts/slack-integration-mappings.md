@@ -156,7 +156,7 @@ All bulk input entries processed successfully.
 
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2
 
-[oauth-guide]: https://developer.box.com/guides/cli/quick-start/
+[oauth-guide]: g://cli/quick-start
 
 [install-slack]: https://support.box.com/hc/en-us/articles/360044195313-Installing-and-Using-the-Box-for-Slack-Integration
 

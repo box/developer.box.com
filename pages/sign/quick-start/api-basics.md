@@ -52,6 +52,6 @@ fullyTranslated: true
 
 リクエストとレスポンスのパラメータの詳細については、[SignテンプレートリクエストAPIリファレンス][sign-api-template-ref]を参照してください。
 
-[sign-api-reference]: https://developer.box.com/reference/resources/sign-request/
+[sign-api-reference]: resource://sign-request
 
-[sign-api-template-ref]: https://developer.box.com/reference/resources/sign-template/
+[sign-api-template-ref]: resource://sign-template
