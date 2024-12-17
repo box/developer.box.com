@@ -68,4 +68,4 @@ Custom Apps may require approval before use.
 [jwt]: g://authentication/jwt
 [cc]: g://authentication/client-credentials
 [uie]: g://embed/ui-elements
-[users]: g;//getting-started/user-types/#managed-users/
+[users]: g://getting-started/user-types/#managed-users
