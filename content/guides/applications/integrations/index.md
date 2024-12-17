@@ -23,20 +23,20 @@ quickly find featured, most popular, or recently added apps.
 
   ![Integrations](./images/box-integrations.png)
 
-## Developing and app or becoming a Box Partner
+## Developing a platform app or becoming a Box Partner
 
-If you need more information on developing an application for the Box Integrations or becoming a Box Partner, visit our [Box Partner Resources][bp] guides on our community site.
+If you need more information on developing a platform app for the Box Integrations or becoming a Box Partner, visit our [Box Partner Resources][bp] guides on our community site.
 
-## Publishing an app
+## Publishing a platform app
 
-Use the following steps to publish an application in Box Integrations.
+Use the following steps to publish a platform app in Box Integrations.
 
 ### Prerequisites
 
 Your application must meet the following requirements:
 
-* The application is in a finished state and ready for production usage.
-* The application leverages OAuth 2.0 authentication, as Integrations do not support any other authentication methods.
+* The platform app is in a finished state and ready for production usage.
+* The platform app leverages OAuth 2.0 authentication, as Integrations do not support any other authentication methods.
 * You are a developer with access to the platform app in the **Developer Console**.
 
 ### Steps
@@ -54,16 +54,16 @@ Your application must meet the following requirements:
     * screenshots and an app icon
     * supplementary information that will be used to support the users
 
-5. Use the **Preview** button in the top left corner to see how your application will look when listed.
-6. Finally, submit the application for approval by clicking the **Submit for Approval** button. Once a request for approval is received, the Box Partner team will be notified and review your request as soon as possible. For any questions, email [`integrate@box.com`][email] or submit a support ticket.
+5. Use the **Preview** button in the top right corner to see how your application will look when listed.
+6. Finally, submit the application for approval by clicking the **Submit for Approval** button. Once a request for approval is received, the Box Partner team will be notified and review your request as soon as possible. For any questions, email [`integrate@box.com`][email].
 
-## Unpublishing an application
+## Unpublishing a platform app
 
 Once approved and published, a platform app can be unpublished from the same
 control panel:
 
-1. Navigate to the **Developer Console** and select your app. 
-2. Select the **Integrations** panel from the left-hand sidebar.
+1. Navigate to the **Developer Console** and select your platform app. 
+2. Select the **Publishing** tab.
 3. You can now unpublish the app.
 
 [app-center]: https://app.box.com/services
