@@ -16,7 +16,7 @@ alias_paths:
 
 [Box Integrations][app-center] is the first place for Box users to find out
 about applications they can use in combination with Box. If your
-application can be user by other enterprises, listing your service in
+application can be used by other enterprises, listing your service in
 under **Integrations** can be a great way to find new users.
 Integrations group apps into sections so that you can
 quickly find featured, most popular, or recently added apps.
@@ -25,7 +25,7 @@ quickly find featured, most popular, or recently added apps.
 
 ## Developing and app or becoming a Box Partner
 
-If you would more information on developing an application for the Box Integrations or becoming a Box Partner, visit our [Box Partner Resources][bp] guides on our community site.
+If you need more information on developing an application for the Box Integrations or becoming a Box Partner, visit our [Box Partner Resources][bp] guides on our community site.
 
 ## Publishing an app
 
@@ -37,19 +37,19 @@ Your application must meet the following requirements:
 
 * The application is in a finished state and ready for production usage.
 * The application leverages OAuth 2.0 authentication, as Integrations do not support any other authentication methods.
-* You are a developer with access to the application in the [Developer Console][devconsole].
+* You are a developer with access to the platform app in the **Developer Console**.
 
 ### Steps
 
-1. Navigate to the [Developer Console][devconsole] > **My Platform Apps** and select the application you want to publish.
+1. Navigate to the Developer Console > **My Platform Apps** and select the app you want to publish.
 2. Select the **Publishing** tab from the top menu.
 
     ![Publishing tab for an application](./images/publishing-app.png)
 
-3. Read through the submission checklist and check the confirmation checkbox if your application meets all the requirements.
+3. Read through the submission checklist and check the confirmation checkbox if your app meets all the requirements.
 4. Fill in the form by providing:
 
-    * the categories your application falls under
+    * the categories your app falls under
     * a short and a long description 
     * screenshots and an app icon
     * supplementary information that will be used to support the users
@@ -59,12 +59,13 @@ Your application must meet the following requirements:
 
 ## Unpublishing an application
 
-Once approved and published, an application can be unpublished from the same
-control panel. Navigate to the [Developer Console][devconsole] and select
-your application. Then, select the **Integrations** panel from the left-hand
-sidebar. The app can be unpublished from this page.
+Once approved and published, a platform app can be unpublished from the same
+control panel:
+
+1. Navigate to the **Developer Console** and select your app. 
+2. Select the **Integrations** panel from the left-hand sidebar.
+3. You can now unpublish the app.
 
 [app-center]: https://app.box.com/services
-[devconsole]: https://cloud.app.box.com/developers/console
 [email]: mailto:integrate@box.com
-[bp]: https://support.box.com/hc/en-us/sections/360009473734-Box-Partner-Resources
+[bp]: https://support.box.com/hc/en-us/sections/21356597387539-Box-Partner-Programs

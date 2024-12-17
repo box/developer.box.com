@@ -10,10 +10,7 @@ your application and add it to their Box accounts.
 
 <Message type='warning'>
 
-Only applications that use the OAuth 2.0 authentication have a
-built-in publication option. You can use other user authentication
-types, but such app can only serve as a marketing listing in the
-Integrations and redirect customers to your website.
+Only applications that use the OAuth 2.0 authentication have a built-in publication option. In case you use a different auth type for your integration, you can still create and publish an OAuth 2.0 platform app that will serve as a marketing listing in the **Integrations** and redirect customers to your website.
 
 </Message>
 
