@@ -30,7 +30,7 @@ To publish your platform app:
     - **Support Resources** - A list of links and supplementary information that will help the users to work with your app.
 
 6. Before submitting your app, preview it to see if you included all the necessary information.
-7. Submit your app for approval. Box will review your app and publish it under Integrations.
+7. Submit your app for approval. Box will review your app and publish it under **Integrations**.
 
 If you have any questions or issues, contact the **Partners** team:
 [`integrate@box.com`][email].
