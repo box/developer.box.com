@@ -354,7 +354,7 @@ function App() {
     // Example: enterprise_123456789.metadatatemplate
     const metadataSource = `enterprise_${EID}.${templateName}`;
     const metadataSourceFieldName = `metadata.${metadataSource}`;
-    
+
     const metadataQuery = {
         from: metadataSource,
 
@@ -422,11 +422,11 @@ export default App;
 
 [downscope]: guide://authentication/tokens/downscope
 [scopes]: guide://api-calls/permissions-and-errors/scopes
-[box-app]: g:///applications/app-types
+[box-app]: g://applications/app-types
 [token]: g://authentication/tokens/developer-tokens
 [templates]: g://metadata/templates
 [metadata-project]: https://github.com/box-community/content-explorer-metadata/tree/main
-[creating-templates-api]: g:///metadata/templates/create
+[creating-templates-api]: g://metadata/templates/create
 [creating-templates-ui]: https://support.box.com/hc/en-us/articles/360044194033-Customizing-Metadata-Templates
 [apply-templates]: https://support.box.com/hc/en-us/articles/360044196173-Using-Metadata
 [appjs]: https://github.com/box-community/content-explorer-metadata/blob/main/src/App.js
