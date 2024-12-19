@@ -776,7 +776,7 @@
   // Tooltip text for resource version
   "versions.resource_version_tooltip": "このリソースは、バージョン%sのエンドポイントで使用されています",
   // Notice that the endpoint has a version 2024.0
-  "versions.base_version_notice.__raw__.endpoint": "This endpoint is in the version **2024.0**. No changes are required to\ncontinue using it. For more details, see\n**[Box API versioning](g:\/\/api-calls\/api-versioning-strategy)**.",
+  "versions.base_version_notice.__raw__.endpoint": "このエンドポイントはバージョン**2024.0**です。引き続き使用するために\n変更は必要ありません。詳細については、\n**[Box APIのバージョン管理](g:\/\/api-calls\/api-versioning-strategy)**を参照してください。",
   // Notice that the resource has a version 2024.0
-  "versions.base_version_notice.__raw__.resource": "This resource is used by enpoints in the version **2024.0**.\nFor more details, see\n**[Box API versioning](g:\/\/api-calls\/api-versioning-strategy)**."
+  "versions.base_version_notice.__raw__.resource": "このリソースは、バージョン**2024.0**のエンドポイントで使用されています。\n詳細については、\n**[Box APIのバージョン管理](g:\/\/api-calls\/api-versioning-strategy)**を参照してください。"
 }
