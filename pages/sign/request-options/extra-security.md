@@ -23,7 +23,7 @@ fullyTranslated: true
 
 ## 電話認証
 
-You can require the signer to use 2FA through their mobile phone to complete the signature request by passing the `verification_phone_number` parameter on the signer along with their phone number.
+署名者の`verification_phone_number`パラメータとともに電話番号を渡すことにより、署名リクエストを完了するために携帯電話から2要素認証を使用するよう署名者に要求することができます。
 
 例:
 
@@ -111,11 +111,11 @@ def main():
 
 </Tabs>
 
-When the signer tries to access the signature request a phone verification dialog pops up:
+署名者が署名リクエストにアクセスしようとすると、電話認証のダイアログがポップアップ表示されます。
 
 ![電話認証](images/sign-simple-phone-verification.png)
 
-Then the signer is prompted to enter the code sent in an SMS:
+その後、署名者はSMSで送信されたコードを入力するよう求められます。
 
 ![SMSコードの入力](images/sign-simple-phone-verification-enter-code.png)
 

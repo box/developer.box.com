@@ -47,13 +47,13 @@ To make version-aware API calls, include the `box-version` header with the value
 
 <Message type="notice">
 
-Box API supports versioning in `header`. To determine which version to use, look at the API reference and included sample requests.
+Box APIは、`header`でバージョン管理をサポートしています。どのバージョンを使用するかを決定するには、APIリファレンスとそこに記載されているサンプルリクエストを参照してください。
 
 </Message>
 
 ### `header`におけるバージョン管理
 
-Box API processes the `box-version` header which should contain a valid version name. For example, when a client wants to get a list of all sign requests using version `2025.0`, the request should look like this:
+Box APIでは、有効なバージョン名を含む`box-version`ヘッダーを処理します。たとえば、クライアントがバージョン`2025.0`を使用してすべての署名リクエストのリストを取得する場合、リクエストは次のようになります。
 
 ```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
@@ -62,13 +62,13 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 
 ```
 
-If the provided version is correct and supported by the endpoint, a response is sent to the client. If the endpoint is available in multiple versions, the response will include the `box-version` header, which indicates the version used to handle the request. Endpoints introduced after 2024 may return a `400` error code if the version is incorrect. More information about versioning errors can be found [here](g://api-calls/permissions-and-errors/versioning-errors).
+指定したバージョンが正しく、エンドポイントでサポートされている場合、レスポンスがクライアントに送信されます。エンドポイントが複数のバージョンで使用可能な場合、レスポンスには`box-version`ヘッダーが含まれ、リクエストの処理に使用されるバージョンを示します。2024年以降に導入されたエンドポイントは、バージョンが正しくない場合にエラーコード`400`を返すことがあります。バージョン管理のエラーの詳細については、[こちら](g://api-calls/permissions-and-errors/versioning-errors)を参照してください。
 
-If your request doesn't include a version, the API defaults to the initial Box API version - `2024.0` - the version of endpoints available before year-based versioning was introduced. However, relying on this behavior is not recommended when adopting deprecated changes. To ensure consistency, always specify the API version, with each request. By making your application version-aware, you anchor it to a specific set of features, ensuring consistent behavior throughout the supported timeframe.
+リクエストにバージョンが含まれていない場合、APIはデフォルトで、最初のBox APIバージョン`2024.0` (年ベースのバージョン管理が導入される前のエンドポイントのバージョン) になります。ただし、非推奨の変更を適用する際にこの動作を利用することはお勧めしません。一貫性を確保するために、リクエストごとに必ずAPIバージョンを指定してください。アプリケーションにバージョンを認識させることで、アプリケーションを特定の機能セットに固定し、サポートされている期間中は一貫した動作が保証されます。
 
 ## リリーススケジュールと命名規則
 
-Box can introduce a new breaking change to certain endpoints **once per year**, which results in a new API version. Introducing a new version of the Sign Request endpoint means that **all paths and HTTP methods** of an endpoint will support it.
+Boxでは、**1年に1回**、特定のエンドポイントに新しく重大な変更を行う場合があります。これにより、APIのバージョンが新しくなります。署名リクエストエンドポイントの新しいバージョンを導入すると、エンドポイントの**すべてのパスとHTTPメソッド**でそのバージョンがサポートされるようになります。
 
 たとえば、署名リクエストのエンドポイントが新しいバージョンを受け取ると、そのバージョンは、次の表に示すすべてのエンドポイントに適用されます。
 
@@ -100,11 +100,11 @@ APIの現在の状態が常にわかるようにし、バージョン管理さ�
 
 ![APIリファレンスのエンドポイントで使用されている、ベータを示す長円形アイコンの例](./images/api-versioning-pills.png)
 
-| スキーマ要素                                                 | 長円形アイコンの名前 | 説明                                                                                                                                                                                                                      |
-| ------------------------------------------------------ | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `x-stability-level: beta`                              | ベータ        | Endpoints marked with **beta**, are offered subject to Box’s Main Beta Agreement, meaning the available capabilities may change at any time. When the beta endpoint becomes stable, the **beta** indication is removed. |
-| `x-stability-level: stable`、または`x-stability-level`タグなし | 最新バージョン    | **Latest version** marks the most recent stable API version of an endpoint.                                                                                                                                             |
-| `deprecated: true`                                     | 非推奨        | エンドポイントは非推奨です。つまり、このエンドポイントは引き続き使用できますが、新機能が追加されなくなります。このようなエンドポイントには、`deprecated`属性を`true`に設定した状態で注釈が付けられています。                                                                                                         |
+| スキーマ要素                                                 | 長円形アイコンの名前 | 説明                                                                                                                        |
+| ------------------------------------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `x-stability-level: beta`                              | ベータ        | **ベータ**と表示されているエンドポイントは、BoxのMain Beta Agreementに従い提供されているため、利用可能な機能が変更される可能性があります。ベータ版のエンドポイントが安定すると、**ベータ**という表示が削除されます。 |
+| `x-stability-level: stable`、または`x-stability-level`タグなし | 最新バージョン    | **最新バージョン**とは、エンドポイントの最新の安定したバージョンを示します。                                                                                  |
+| `deprecated: true`                                     | 非推奨        | エンドポイントは非推奨です。つまり、このエンドポイントは引き続き使用できますが、新機能が追加されなくなります。このようなエンドポイントには、`deprecated`属性を`true`に設定した状態で注釈が付けられています。           |
 
 ## バージョン管理のエラー
 
@@ -233,8 +233,8 @@ Box-API-Deprecated-Reason: https://developer.box.com/reference/deprecated
 
 リクエストの作成時には、以下の点を考慮してください。
 
-* Endpoints in version `2024.0` can be called without specifying the version in the `box-version` header. If no version is specified and the `2024.0` version of the called endpoint does not exist, the response will return an HTTP error code `400 - Bad Request`.
-* If the `box-version` version header is specified but the requested version does not exist, the response will return an HTTP error code `400 - Bad Request`.
+* バージョン`2024.0`のエンドポイントは、`box-version`ヘッダーでバージョンを指定しなくても呼び出し可能です。バージョンが指定されておらず、呼び出したエンドポイントの`2024.0`バージョンが存在しない場合、レスポンスではHTTPエラーコード`400 - Bad Request`が返されます。
+* `box-version`バージョンヘッダーが指定されていても、リクエストされたバージョンが存在しない場合、レスポンスではHTTPエラーコード`400 - Bad Request`が返されます。
 
 詳細については、[バージョン管理のエラー](g://api-calls/permissions-and-errors/versioning-errors)を参照してください。
 

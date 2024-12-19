@@ -40,13 +40,13 @@ Box AI APIを使用すると、指定したファイルからメタデータを�
 
 <Message type="notice">
 
-### Upcoming breaking change
+### 今後予定されている重大な変更
 
-We would like to announce a planned breaking change in the Box AI API - Extract Structured endpoint. This change will bring improvements to the response by introducing additional fields and nesting the metadata key-value pairs within the answer object. **This change is planned to be released mid-January**. Be sure to follow our [changelog][changelog] and announcements on our [Box Developer Blog][blog]. See code snippets:
+Box AI APIの抽出 (構造化) エンドポイントに重大な変更を予定しています。この変更は、追加のフィールドを導入し、メタデータのキー/値ペアを回答オブジェクト内にネストすることで、レスポンスを改善するものです。**変更は1月中旬のリリースを予定しています**。弊社の[変更ログ][changelog]および[Box開発者向けブログ][blog]のフォローをお願いいたします。以下のコードスニペットをご確認ください。
 
 <!-- more -->
 
-Current response example:
+現在のレスポンスの例:
 
 ```js
 {
@@ -56,7 +56,7 @@ Current response example:
 
 ```
 
-New response format example:
+新しいレスポンス形式の例:
 
 ```js
 {
