@@ -47,7 +47,7 @@ To make version-aware API calls, include the `box-version` header with the value
 
 <Message type="notice">
 
-Box APIは、`header`でバージョン管理をサポートしています。どのバージョンを使用するかを決定するには、APIリファレンスとそこに記載されているサンプルリクエストを参照してください。
+Box APIは、`header`でのバージョン管理をサポートしています。どのバージョンを使用するかを決定するには、APIリファレンスとそこに記載されているサンプルリクエストを参照してください。
 
 </Message>
 
