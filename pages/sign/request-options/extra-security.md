@@ -113,11 +113,11 @@ def main():
 
 署名者が署名リクエストにアクセスしようとすると、電話認証のダイアログがポップアップ表示されます。
 
-![電話認証](images/sign-simple-phone-verification.png)
+![電話認証](images/sign-phone-verification.png)
 
 その後、署名者はSMSで送信されたコードを入力するよう求められます。
 
-![SMSコードの入力](images/sign-simple-phone-verification-enter-code.png)
+![SMSコードの入力](images/sign-phone-verification-enter-code.png)
 
 ## パスワード認証
 
