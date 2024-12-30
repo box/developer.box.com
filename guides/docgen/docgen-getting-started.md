@@ -24,14 +24,14 @@ source_url: >-
 # Get started with Box Doc Gen
 
 To start generating documents with Box Doc Gen API you will need a custom application and a developer token to
-authenticate your calls. You also need a Doc Gen template that will serve as a input source for your document.
+authenticate your calls. You also need a Doc Gen template that will serve as an input source for your document.
 
 ## Enable Box Doc Gen
 
 To use Box Doc Gen, make sure it is enabled by an
 admin in the Admin Console.
 If you are a Box Admin, you will find the necessary information in
-[Enterprise Settings: Content & Sharing Tab][settings] documentation
+[Enterprise Settings: Content & Sharing Tab][settings] documentation.
 
 ## Create and upload a Box Doc Gen template
 

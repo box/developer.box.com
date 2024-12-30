@@ -27,8 +27,7 @@ Box Doc Gen API allows you to retrieve information related to Box Doc Gen templa
 
 ## Prerequisites
 
-Make sure you followed the steps listed in [getting started Box Doc Gen][docgen-prerequisites] to create a custom app and a Box Doc Gen template.
-You can then proceed to use the Box Doc Gen API.
+Before you start using Box Doc Gen API, follow the steps listed in [getting started Box Doc Gen][docgen-prerequisites] to create a custom app and a Box Doc Gen template.
 
 ## List Box Doc Gen templates
 
