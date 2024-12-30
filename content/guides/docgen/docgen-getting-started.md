@@ -47,7 +47,7 @@ To generate a token:
 2. Click the **Options menu** button (…) on the right.
 3. Select **Generate Developer Token**. The token will be automatically generated and saved to clipboard.
 
-![generate token](../images/developer-token.png)
+![generate token](./images/developer-token.png)
 
 You can also open your app, go to
 **Configuration** > **Developer Token**

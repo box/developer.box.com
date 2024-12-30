@@ -9,7 +9,7 @@ related_endpoints:
   - post_docgen_templates
 ---
 
-# Mark file as Doc Gen template
+# Mark file as Box Doc Gen template
 
 You can mark an existing document as a Box Doc Gen template and use it to generate documents.
 

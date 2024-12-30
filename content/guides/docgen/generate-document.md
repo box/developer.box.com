@@ -31,7 +31,7 @@ Mandatory parameters are in **bold**.
 | ------------ | ------ | --- |
 | **`file.id`** | ID of the file to be marked as Box Doc Gen template. | `12345678` |
 | **`file.type`** | The type of provided input. The value is always **`file`**. | `file` |
-| `file_version` | The file version of a template. |  |
+| `file_version` | The file version of a template. | `12345` |
 | **`input_source`** | The input source for generated document. The value has to be `api` for all the API-based document generation requests. | `api` |
 | **`output_type`** | The output file type. | `docx` |
 | **`destination_folder.id`** | The ID of the folder where the generated document will be stored. | `12345678` |
@@ -51,4 +51,4 @@ When the request is being processed, each entry into `document_generation_data` 
 
 Generated documents will be saved in the designated folder.
 
-[docgen-prerequisites]: g://docgen/docgen-getting-started/
+[docgen-prerequisites]: g://docgen/docgen-getting-started
