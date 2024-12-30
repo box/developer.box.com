@@ -51,7 +51,7 @@ The response will contain an array listing the tags that were used for a particu
 To get a list of all created Box Doc Gen templates,
 use the `GET /2.0/docgen_template_jobs_id` endpoint and provide the `template_id`.
 
-<Samples id='get_docgen_templates' />
+<Samples id='get_docgen_template_jobs_id' />
 
 The response will contain a list of Box Doc Gen jobs that were run to generate 
 documents.
