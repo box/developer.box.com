@@ -15,8 +15,7 @@ You can mark an existing document as a Box Doc Gen template and use it to genera
 
 ## Before you start
 
-Make sure you followed the steps listed in [getting started Box Doc Gen][docgen-prerequisites] to create a custom app and a Box Doc Gen template.
-You can then proceed to use the Box Doc Gen API.
+Before you start using Box Doc Gen API, follow the steps listed in [getting started Box Doc Gen][docgen-prerequisites] to create a custom app and a Box Doc Gen template.
 
 ## Send a request
 
@@ -26,7 +25,7 @@ provide the mandatory parameters.
 
 ### Parameters
 
-To make a call, you need to pass the following parameters.
+To make a call you need to pass the following parameters.
 Mandatory parameters are in **bold**.
 
 | Parameter    |Description         | Example                     |
