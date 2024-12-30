@@ -29,7 +29,7 @@ the Box AI Platform APIs in your sandbox, request access
 from the Box AI team using [this form][form].
 </Message>
 
-## Create an application
+## Create a custom application
 
 First you need to create a custom application
 you will use to make calls. To create
