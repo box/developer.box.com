@@ -51,17 +51,6 @@ use the `GET /2.0/docgen_templates_id` endpoint and provide the `template_id`.
 
 The response will contain details of a file that was used as a Box Doc Gen template.
 
-## List all Box Doc Gen tags in a template
-
-To get a list of all tags used in a specific Box Doc Gen template,
-use the `GET /2.0/docgen_templates_id_tags` endpoint and provide the `template_id`.
-
-<Samples id='get_docgen_templates_id_tags' >
-
-</Samples>
-
-The response will contain an array listing the tags that were used for a particular template.
-
 ## List all document generation jobs for a template
 
 To get a list of all created Box Doc Gen templates,

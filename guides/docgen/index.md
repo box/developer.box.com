@@ -46,16 +46,20 @@ Box Doc Gen API allows you to:
 
 ## Box Doc Gen workflow
 
-![A flow diagram representing Box Doc Gen workflow](./images/docgenprocess.png)
+![A flow diagram representing Box Doc Gen workflow](./images/docgen-workflow.png)
 
-1. Install the [Box Doc Gen Template Creator add-in for Microsoft Word][template-addin]. Once the installation is complete, proceed to create a template, either using a [JSON schema][json-template] or [manually creating the tags][template-tags].
+1. Author your Doc Gen Template
+* Use [Doc Gen Add-in for Microsoft Word][template-addin] to create a template without any code.
+* You can also leverage [Doc Gen's tagging script][tagging-script] to author the template.
+
 2. [Add the template to Box][upload-template] using the Box Doc Gen UI. At this point, you can:
-    * Create and upload the template directly in Box.
-    * Upload an existing document and mark it as a Box Doc Gen template.
-3. [Generate the document][generate-document] using Box Doc Gen API.
+* Mark an existing file In Box as Doc Gen template.
+* Create or Upload a document and mark it as a Box Doc Gen template.
+* [Generate the document][generate-document] using Box Doc Gen API.
 
 [template-addin]: https://support.box.com/hc/en-us/articles/36587535449747-Installing-Box-Doc-Gen-Add-in
 [template-tags]: https://support.box.com/hc/en-us/articles/36151895655059-Creating-A-Box-Doc-Gen-Template-Manually
 [json-template]: https://support.box.com/hc/en-us/articles/36148012877843-Creating-a-Box-Doc-Gen-Template-using-JSON-data
+[tagging-script]: https://support.box.com/hc/en-us/articles/36149723736723-Template-tags-reference
 [upload-template]: https://support.box.com/hc/en-us/articles/36587432368275-Managing-Box-Doc-Gen-Templates-in-Relay
 [generate-document]: g://docgen/generate-document
