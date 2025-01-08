@@ -16,11 +16,11 @@ notes: |-
 
 <Foobar id='no1' data-type="type" disabled>
   Hello
-  
-  Extra whitespace around here  
-  
+
+  Extra whitespace around here
+
   <Message data-disabled='true' warning>
-    # Title 
+    # Title
 
     This is a paragraph
   </Message>
@@ -33,8 +33,8 @@ notes: |-
       [1,2,3].map(i => (
         i+1
       ))
-      
-      # whitespace above and after: 
+
+      # whitespace above and after:
       \`\`\`
     </Tab>
   </Tabs>
@@ -56,7 +56,7 @@ sibling_id: guides
 parent_id: guides
 next_page_id: guides
 previous_page_id: ''
-source_url: 'https://github.com/box/developer.box.com/blob/main/content/guides/foo.md'
+source_url: https://github.com/box/developer.box.com/blob/main/content/guides/foo.md
 ---
 <Foobar id='no1' data-type="type" disabled>
 
@@ -87,7 +87,7 @@ This is a paragraph
   i+1
 ))
 
-# whitespace above and after: 
+# whitespace above and after:
 \`\`\`
 
 </Tab>
@@ -100,7 +100,7 @@ test('should inline tags', () => {
   const contents = `
 ---
 ---
-<Header 
+<Header
   to='/guides'
   centered
 >
@@ -123,7 +123,7 @@ sibling_id: guides
 parent_id: guides
 next_page_id: guides
 previous_page_id: ''
-source_url: 'https://github.com/box/developer.box.com/blob/main/content/guides/foo.md'
+source_url: https://github.com/box/developer.box.com/blob/main/content/guides/foo.md
 ---
 <Header to='/guides' centered >
 

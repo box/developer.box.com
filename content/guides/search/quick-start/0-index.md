@@ -38,7 +38,7 @@ This guide will take you through the following steps.
   I am ready to get started
 </Next>
 
-[stepone]: g://search/quick-start/create-metadata-template/
-[steptwo]: g://search/quick-start/locate-template-info/
-[stepthree]: g://search/quick-start/apply-template-to-file/
-[stepfour]: g://search/quick-start/metadata-query-api/
+[stepone]: g://search/quick-start/create-metadata-template
+[steptwo]: g://search/quick-start/locate-template-info
+[stepthree]: g://search/quick-start/apply-template-to-file
+[stepfour]: g://search/quick-start/metadata-query-api

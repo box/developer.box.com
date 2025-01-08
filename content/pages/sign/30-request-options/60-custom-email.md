@@ -251,4 +251,4 @@ Simple sign request: 22a990ce-4e24-463b-b2f4-124820fe161a-defddc79c946
 You can now take the embedded URLs and use your own notification process or
 embed the signature client within your own app.
 
-[embed]:guide://box-sign/embedded-sign-client
+[embed]: g://box-sign/embedded-sign-client

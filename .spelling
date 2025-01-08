@@ -306,6 +306,7 @@ lifecycle
 Fallbacks
 deprecations
 oasdiff
+CrowdStrike
 FIPS
 OpenAI
 XCode

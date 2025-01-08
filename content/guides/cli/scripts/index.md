@@ -39,6 +39,6 @@ get that done.
 [4]: g://cli/scripts/report-inactive-users
 [5]: g://cli/scripts/metadata-extraction
 [6]: g://cli/scripts/user-zones-mass-update
-[quickstart]: g://cli/quick-start/create-oauth-app/
+[quickstart]: g://cli/quick-start/create-oauth-app
 [7]: https://support.box.com/hc/en-us/articles/360043694174-Understanding-Administrator-and-Co-Administrator-Permissions
 [8]: g://cli/scripts/slack-integration-mappings
