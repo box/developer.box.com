@@ -8,12 +8,12 @@ hide_step_number: true
 You've reached the end of this Quick Start guide. By now you should have taken
 the following steps.
 
-1. [Listed all templates](g://metadata/quick-start/list-all/) available to you.
-2. [Created a custom metadata template](g://metadata/quick-start/create-template/) to hold data specific to your enterprise.
-3. [Applied a custom metadata template](g://metadata/quick-start/create-instance/) to a file, allowing you to assign custom data to a file.
-4. [Updated a metadata instance](g://metadata/quick-start/update-instance/) on a file, allowing you to change the data assigned to a file.
-5. [Updated a metadata template](g://metadata/quick-start/update-template/) and changed the data applied to all instances of this template.
-6. [Queried for files and folders](g://metadata/quick-start/create-query/) by matching the values in the metadata instances attached to them.
+1. [Listed all templates](g://metadata/quick-start/list-all) available to you.
+2. [Created a custom metadata template](g://metadata/quick-start/create-template) to hold data specific to your enterprise.
+3. [Applied a custom metadata template](g://metadata/quick-start/create-instance) to a file, allowing you to assign custom data to a file.
+4. [Updated a metadata instance](g://metadata/quick-start/update-instance) on a file, allowing you to change the data assigned to a file.
+5. [Updated a metadata template](g://metadata/quick-start/update-template) and changed the data applied to all instances of this template.
+6. [Queried for files and folders](g://metadata/quick-start/create-query) by matching the values in the metadata instances attached to them.
 
 ## Next Steps
 

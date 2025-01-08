@@ -12,7 +12,7 @@ with a [limited number of endpoints][limited].
 
 ## Authentication methods
 
-Limited Access Apps only support App Token authentication. 
+Limited Access Apps only support App Token authentication.
 
 <CTA to='g://authentication/app-token'>
   Learn more about App Tokens
@@ -20,7 +20,7 @@ Limited Access Apps only support App Token authentication.
 
 ## When to use
 
-A Limited Access App is best used when the application: 
+A Limited Access App is best used when the application:
 
 - wants to use Box View or only Box's preview services
 - only needs to access a [limited number of endpoints][limited]
@@ -33,11 +33,11 @@ A Limited Access App is best used when the application:
 
 ## Approval
 
-Limited Access Apps may require approval before use. 
+Limited Access Apps may require approval before use.
 
 <CTA to='g://authorization/limited-access-approval'>
   Learn how to approve Limited Access Apps
 </CTA>
 
-[bv]: g://embed/box-view/
+[bv]: g://embed/box-view
 [limited]: g://authentication/app-token/endpoints
