@@ -12,7 +12,7 @@ related_guides:
 # Box Doc Gen jobs
 
 A Box Doc Gen job runs when you make a request to generate a document.
-The `document_generation_data` parameter in the the `POST` request is an array of entries that represent Box Doc Gen jobs run to generate a document.
+The `document_generation_data` parameter in the `POST` request is an array of entries that represent Box Doc Gen jobs run to generate a document.
 
 <Samples id='post_docgen_batches' />
 
