@@ -1,3 +1,22 @@
 ---
 // label: The prefix for the selected API version
 label: API version
+
+// about: Label of a link to the page about API versioning
+about: About Box API versioning
+
+// resource_version_tooltip: Tooltip text for resource version
+resource_version_tooltip: This resource is used by endpoints in version %s
+
+base_version_notice:
+  __raw__:
+    // endpoint: Notice that the endpoint has a version 2024.0
+    endpoint: |-
+      This endpoint is in the version **2024.0**. No changes are required to
+      continue using it. For more details, see
+      **[Box API versioning](g://api-calls/api-versioning-strategy)**.
+    // resource: Notice that the resource has a version 2024.0
+    resource: |-
+      This resource is used by enpoints in the version **2024.0**.
+      For more details, see
+      **[Box API versioning](g://api-calls/api-versioning-strategy)**.

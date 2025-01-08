@@ -79,9 +79,7 @@ The following events are available in all feeds.
 | `LOCK_DESTROY`               | A file was unlocked. If a locked file is deleted, the source file will be null. |
 | `ITEM_TRASH`                 | A file or folder was marked as deleted                                          |
 | `ITEM_UNDELETE_VIA_TRASH`    | A file or folder was recovered out of the trash                                 |
-| `COLLAB_ADD_COLLABORATOR`    | A collaborator was added to a folder
-
-                                            |
+| `COLLAB_ADD_COLLABORATOR`    | A collaborator was added to a folder|
 | `COLLAB_ROLE_CHANGE`         | A collaborator had their role changed                                           |
 | `COLLAB_INVITE_COLLABORATOR` | A collaborator was invited on a folder                                          |
 | `COLLAB_REMOVE_COLLABORATOR` | A collaborator was removed from a folder                                    |

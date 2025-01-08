@@ -36,16 +36,17 @@ returns a standard client error JSON object.
 }
 ```
 
-Please see the [Client Error resource](resource://client_error) for more details.
+See the [Client Error resource](resource://client_error) for more details.
 
 ## Common error codes
 
-Please check our [Developer Troubleshooting Articles][articles]
+Check our [Developer Troubleshooting Articles][articles]
 for solution to common errors encountered when working with the Box APIs.
 
 ### 400 Bad Request
 
 <!-- i18n-enable localize-links -->
+<!-- markdownlint-disable no-space-in-code -->
 
 | | |
 | --- | -- |
@@ -107,7 +108,7 @@ for solution to common errors encountered when working with the Box APIs.
 | | |
 | **Error**  | `item_name_invalid`  |
 | **Message**| Item name invalid |
-| **Solution** | Verify that the file's name is valid. Box only supports file or folder names that are 255 characters or less. File names containing non-printable characters, names containing the characters `/`, `\`, `<`, `>`, `:`, `|`, `?`, `*`, `—` , names with leading or trailing spaces, and the special names “.” and “..” are also unsupported.   |
+| **Solution** | Verify that the file's name is valid. Box only supports file or folder names that are 255 characters or less. File names containing non-printable characters, names containing the characters `/`, `\`, `<`, `>`, `:`, `|`, `?`, `*`, `-`, names with leading or trailing spaces, and the special names “.” and “..” are also unsupported.   |
 | | |
 | **Error**    | `item_name_too_long` |
 | **Message**  | Item name too long |
@@ -145,6 +146,7 @@ for solution to common errors encountered when working with the Box APIs.
 | **Solution** | The user that you are attempting to collaborate in on an item is already collaborated on that item. This request is not needed.|
 | |  |
 
+<!-- markdownlint-enable no-space-in-code -->
 <!-- i18n-disable localize-links -->
 
 ### 401 Unauthorized
@@ -174,7 +176,7 @@ for solution to common errors encountered when working with the Box APIs.
 | |  |
 | **Error**    | `access_from_location_blocked`  |
 | **Message**  |  |
-| **Solution** | You’re attempting to log in to Box from a location that has not been approved by your admin. Please talk to your admin to resolve this issue.  |
+| **Solution** | You’re attempting to log in to Box from a location that has not been approved by your admin. Talk to your admin to resolve this issue.  |
 |   | |
 | **Error**    | `file_size_limit_exceeded`    |
 | **Message**  | File size exceeds the folder owner’s file size limit    |
@@ -232,9 +234,9 @@ for solution to common errors encountered when working with the Box APIs.
 
 ### 405 Method Not Allowed
 
-|  |     |
+|  |  |
 | ------- | ------ |
-| **Error**    | `method_not_allowed`        |
+| **Error**    | `method_not_allowed` |
 | **Message**  | Method Not Allowed     |
 | **Solution** | The HTTP method used for the API operation is not allowed. Check the API reference documentation for the HTTP verb needed for the API operation. |
 
@@ -242,7 +244,7 @@ for solution to common errors encountered when working with the Box APIs.
 
 |  |   |
 | ------- | --------------- |
-| **Error**    | `conflict`    |
+| **Error**    | `conflict` |
 | **Message**  | A resource with this value already exists           |
 | **Solution** | This error may be produced when the resource to be created already exists. Check the extended error message in the response body for more details.  |
 |  |   |
@@ -292,11 +294,11 @@ for solution to common errors encountered when working with the Box APIs.
 |  |   |
 | ------- | ------- |
 | **Error**    | `precondition_failed`        |
-| **Message**  | The resource has been modified. Please retrieve the resource again and retry |
+| **Message**  | The resource has been modified. Retrieve the resource again and retry |
 | **Solution** | Check the extended error message in the response body for more details.      |
 |  |    |
 | **Error**    | `sync_state_precondition_failed`         |
-| **Message**  | The resource has been modified. Please retrieve the resource again and retry |
+| **Message**  | The resource has been modified. Retrieve the resource again and retry |
 | **Solution** | Check the extended error message in the response body for more details.      |
 
 ### 413 Request Entity Too Large
@@ -320,7 +322,7 @@ for solution to common errors encountered when working with the Box APIs.
 |  |   |
 | ---- | ---- |
 | **Error**    | `rate_limit_exceeded`    |
-| **Message**  | Request rate limit exceeded, please try again later           |
+| **Message**  | Request rate limit exceeded, try again later.           |
 | **Solution** | The client is performing operations too quickly and has been rate limited. Client is advised to retry their request after the amount of time specified by the `retry-after` header. There are [four rate limits](g://api-calls/permissions-and-errors/rate-limits) to be aware of. |
 
 ### 500 Internal Service Error
@@ -355,7 +357,7 @@ for solution to common errors encountered when working with the Box APIs.
 | ------- | ------- |
 | **Error**    | `unavailable`  |
 | **Message**  | Unavailable    |
-| **Solution** | If a Retry-After header is provided in the response, the client should retry the request according to the header value. In rare situations, a write operation may eventually persist its changes after the 503 response is received by the client, so the client should handle this case upon retry. If the issue persists, please check our [Status Site](https://status.box.com/) for any known outage information. |
+| **Solution** | If a Retry-After header is provided in the response, the client should retry the request according to the header value. In rare situations, a write operation may eventually persist its changes after the 503 response is received by the client, so the client should handle this case upon retry. If the issue persists, check our [Status Site](https://status.box.com/) for any known outage information. |
 
 <!-- i18n-disable localize-links -->
 

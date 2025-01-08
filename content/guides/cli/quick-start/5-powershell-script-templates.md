@@ -308,7 +308,7 @@ Make sure to explore our other [sample scripts][samples] for more use cases.
 [script-1]: https://github.com/box/boxcli/tree/main/examples/User%20Creation%20&%20Provisioning
 [jwt-cli]: g://cli/cli-docs/jwt-cli
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2
-[step 1]: g://cli/quick-start/create-oauth-app/
+[step 1]: g://cli/quick-start/create-oauth-app
 [console]: https://app.box.com/developers/console
 [auth]: g://authentication/oauth2/oauth2-setup
 [samples]: g://cli/scripts

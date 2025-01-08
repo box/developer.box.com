@@ -24,10 +24,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
 
-    # We use node 14.X
+    # We use node 18.X
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [18.x]
 
     # The following steps are performed for each lint job
     steps:
@@ -56,10 +56,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
 
-    # We use node 14.X
+    # We use node 18.X
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [18.x]
 
     # The following steps are performed for each lint job
     steps:
@@ -95,10 +95,10 @@ jobs:
     # Only run for the main branch
     if: github.ref == 'refs/heads/main'
 
-    # We use node 14.X
+    # We use node 18.X
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [18.x]
 
     # Requires the lint and test jobs to pass first
     needs:
@@ -162,10 +162,10 @@ jobs:
     # Only run for the staging branch
     if: github.ref == 'refs/heads/staging'
 
-    # We use node 14.X
+    # We use node 18.X
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [18.x]
 
     # Requires the lint and test jobs to pass first
     needs:
@@ -214,7 +214,7 @@ jobs:
           SLACK_AVATAR: "https://avatars3.githubusercontent.com/u/8659759?s=200&v=4"
         with:
           args: "Error running `deploy-staging` job in OpenAPI CI"
-  
+
   # The deploy task actually deploys any changes to the en-staging branch
   push-to-en-abtest:
     # We run this on the latest ubuntu
@@ -223,10 +223,10 @@ jobs:
     # Only run for the staging branch
     if: github.ref == 'refs/heads/abtest'
 
-    # We use node 14.X
+    # We use node 18.X
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [18.x]
 
     # Requires the lint and test jobs to pass first
     needs:
