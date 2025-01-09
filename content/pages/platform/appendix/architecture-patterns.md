@@ -60,7 +60,7 @@ be processed by any machine learning service. Once it is processed, information
 is [saved back to the file as metadata][metadata]. This metadata can then be
 used in another process or for future reference.
 
-[usermodel]:page://platform/appendix/user-models
+[usermodel]: page://platform/appendix/user-models
 [auth]: g://authentication
 [apptype]: g://applications/app-types/select
 [events]: e://resources/event

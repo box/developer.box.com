@@ -20,13 +20,43 @@ Endpoints related to metadata extraction are currently a beta feature offered su
 </Message>
 
 With Box AI API, you can extract metadata from the provided file
-and get the result in the form of key-value pairs. 
+and get the result in the form of key-value pairs.
 As input, you can either create a structure using the `fields` parameter, or use an already defined metadata template.
 To learn more about creating templates, see [Creating metadata templates in the Admin Console][templates-console] or use the [metadata template API][templates-api].
 
 ## Before you start
 
 Make sure you followed the steps listed in [getting started with Box AI][prereq] to create a custom app and authenticate.
+
+<Message type="notice">
+### Upcoming breaking change
+
+We would like to announce a planned breaking change in the Box AI API - Extract Structured endpoint. This change will bring improvements to the response by introducing additional fields and nesting the metadata key-value pairs within the answer object. **This change is planned to be released mid-January**. Be sure to follow our [changelog][changelog] and announcements on our [Box Developer Blog][blog]. See code snippets:
+
+<!-- more -->
+Current response example:
+
+```js
+{
+  "name": "Marie",
+  "date": "10/2/23"
+}
+```
+
+New response format example:
+
+```js
+{
+  "answer": {
+    "name": "Marie",
+    "date": "10/2/23"
+  },
+  "completion_reason": "done",
+  "created_at": "2012-12-12T10:53:43-08:00"
+}
+```
+
+</Message>
 
 ## Send a request
 
@@ -84,7 +114,7 @@ You can use either `fields` or `metadata_template` to specify your structure, bu
 
 ### Use `fields` parameter
 
-The `fields` parameter allows you to specify the data you want to extract. Each `fields` object has a subset of parameters you can use to add more information about the searched data. 
+The `fields` parameter allows you to specify the data you want to extract. Each `fields` object has a subset of parameters you can use to add more information about the searched data.
 For example, you can add the field type, description, or even a prompt with some additional context.
 
 ```bash
@@ -186,3 +216,5 @@ The response lists the fields included in the metadata template and their values
 [templates-console]: https://support.box.com/hc/en-us/articles/360044194033-Customizing-Metadata-Templates
 [templates-api]: g://metadata/templates/create
 [overrides]: g://box-ai/ai-agents/ai-agent-overrides
+[changelog]: page://changelog
+[blog]: https://medium.com/box-developer-blog

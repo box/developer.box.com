@@ -57,7 +57,7 @@ advanced CLI user.
 [cli-autocomplete]: https://github.com/box/boxcli/blob/main/docs/autocomplete.md
 [cli-switch]: https://github.com/box/boxcli/blob/main/docs/configure.md#box-configureenvironmentsswitch-user-userid
 [cli-add-config]: https://github.com/box/boxcli/blob/main/docs/configure.md#box-configureenvironmentsadd-path
-[qs]: g://cli/quick-start/
+[qs]: g://cli/quick-start
 [cache]: https://github.com/box/boxcli/blob/main/docs/configure.md#box-configureenvironmentsupdate-name
 [jwt]: g://authentication/jwt
 [jwt-page]: g://cli/cli-docs/jwt-cli

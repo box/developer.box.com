@@ -17,7 +17,7 @@ a request to Box to fetch the name of the currently authenticated user.
   delegation and non-blocking actions.
 </Message>
 
-## Create a button 
+## Create a button
 
 Within your Swift application in Xcode, load `ContentView.swift`. At the top of
 the file you will see a `struct` for `ContentView`, within which is a basic
@@ -56,7 +56,7 @@ details from Box.
 
 When a user clicks the button, we want to fetch the user's details. To achieve
 this we need to do two things, add the import for the **Box iOS SDK** and add
-the button action to make the call. 
+the button action to make the call.
 
 At the top of the `ContentView.swift` file, add `import BoxSDK` with the other
 import statement.
@@ -85,13 +85,13 @@ client.users.getCurrent(fields:["name", "login"]) { (result: Result<User,
 sleep(5)
 ```
 
-Build and run your sample application in the iOS emulator. 
+Build and run your sample application in the iOS emulator.
 
 <Message warning>
   If you run this code an hour or more after you created the developer
   token in the last step, you will need to revoke and generate a new developer
   token using the same method in the
-  [previous step](g://mobile/ios/quick-start/configure-box-app/) as the
+  [previous step](g://mobile/ios/quick-start/configure-box-app) as the
   developer token will only persist for 60 minutes.
 </Message>
 
@@ -103,7 +103,7 @@ with the last line showing the user print statement that we specified.
 
 ```bash
 ◁ Status code: 200: no error
-◁ Headers: 
+◁ Headers:
     ◁ Cache-Control, Value: no-cache, no-store
     ◁ BOX-REQUEST-ID, Value: 1c55151238444132eca16b4c2346d005
     ◁ Transfer-Encoding, Value: Identity

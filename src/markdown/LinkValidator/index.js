@@ -11,6 +11,8 @@ const LOCAL_REFERENCE_REGEX = new RegExp(/\[.*\]\[([\w\-_]+)\]/, 'mg')
 // checks for convenience links, e.g. guide://foo/bar
 const GUIDE_OR_PAGE_LINKS = new RegExp(/(guide|guides|g|page|pages|[^a-z]p):\/\/([a-z-_0-9.\/]*)/, 'ig')
 
+const PAGE_LINKS_INGORE = ['page://reference', 'pages://reference', 'p://reference', 'page://sample-code']
+
 class LinkValidator {
   constructor(source, allFiles) {
     this.source = source
@@ -28,7 +30,7 @@ class LinkValidator {
       .map(link => link[1])
       // get the full name for that file
       .map(link => ({
-        original: link, 
+        original: link,
         resolved: path.join(this.dirname, link)
       }))
   }
@@ -42,7 +44,7 @@ class LinkValidator {
       .map(link => link[1])
       // get the full name for that file
       .map(link => ({
-        original: link, 
+        original: link,
         resolved: path.join(this.dirname, link)
       }))
   }
@@ -55,7 +57,7 @@ class LinkValidator {
       .map(match => {
         const type = match[1].startsWith('g') ? 'guide' : 'page'
         return ({
-          original: match[0], 
+          original: match[0],
           resolved: path.join('content', `${type}s`, match[2])
         })
       })
@@ -77,16 +79,16 @@ class LinkValidator {
 
   frontmatterGuidesAndPages() {
     return [
-      ...(this.frontmatter.related_guides || []).map(guide => ({ 
-        original: guide, 
+      ...(this.frontmatter.related_guides || []).map(guide => ({
+        original: guide,
         resolved: path.join('content', 'guides', guide)
       })),
-      ...(this.frontmatter.required_guides || []).map(guide => ({ 
-        original: guide, 
+      ...(this.frontmatter.required_guides || []).map(guide => ({
+        original: guide,
         resolved: path.join('content', 'guides', guide)
       })),
-      ...(this.frontmatter.related_pages || []).map(page => ({ 
-        original: page, 
+      ...(this.frontmatter.related_pages || []).map(page => ({
+        original: page,
         resolved: path.join('content', 'pages', page)
       }))
     ]
@@ -102,9 +104,10 @@ class LinkValidator {
 
       // check of any of the variations exists
       if (
-        !this.allFiles.includes(filename) && 
-        !this.allFiles.includes(markdownFilename) && 
-        !this.allFiles.includes(indexFilename) 
+        !PAGE_LINKS_INGORE.includes(link.original) &&
+        !this.allFiles.includes(filename) &&
+        !this.allFiles.includes(markdownFilename) &&
+        !this.allFiles.includes(indexFilename)
       ) {
         return {
           source: this.source,
