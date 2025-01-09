@@ -55,7 +55,7 @@ Box Doc Gen API allows you to:
 2. [Add the template to Box][upload-template] using the Box Doc Gen UI. At this point, you can:
 * Mark an existing file In Box as Doc Gen template.
 * Create or Upload a document and mark it as a Box Doc Gen template.
-* [Generate the document][generate-document] using Box Doc Gen API.
+3. [Generate the document][generate-document] using Box Doc Gen API.
 
 [template-addin]: https://support.box.com/hc/en-us/articles/36587535449747-Installing-Box-Doc-Gen-Add-in
 [template-tags]: https://support.box.com/hc/en-us/articles/36151895655059-Creating-A-Box-Doc-Gen-Template-Manually
