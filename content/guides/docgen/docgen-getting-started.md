@@ -1,8 +1,8 @@
 ---
 rank: 1
 related_endpoints:
-  - post_docgen_templates
-  - post_docgen_batches
+  - post_docgen_templates_v2025.0
+  - post_docgen_batches_v2025.0
 related_guides:
   - docgen/generate-document
   - docgen/mark-template
@@ -18,9 +18,9 @@ authenticate your calls. You also need a Doc Gen template that will serve as an 
 ## Enable Box Doc Gen
 
 To use Box Doc Gen, make sure it is enabled by an
-admin in the Admin Console. 
+admin in the Admin Console.
 If you are a Box Admin, you will find the necessary information in
-[Enterprise Settings: Content & Sharing Tab][settings] documentation. 
+[Enterprise Settings: Content & Sharing Tab][settings] documentation.
 
 ## Create and upload a Box Doc Gen template
 

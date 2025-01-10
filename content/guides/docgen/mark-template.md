@@ -5,8 +5,8 @@ related_guides:
   - docgen/docgen-templates
   - docgen/generate-document
 related_endpoints:
-  - post_docgen_batches
-  - post_docgen_templates
+  - post_docgen_batches_v2025.0
+  - post_docgen_templates_v2025.0
 ---
 
 # Mark file as Box Doc Gen template
@@ -37,19 +37,19 @@ Mandatory parameters are in **bold**.
 
 ### Mark a file as Box Doc Gen template
 
-The following sample show you how to mark a file to ensure it is recognized as a Box Doc Gen template. 
+The following sample show you how to mark a file to ensure it is recognized as a Box Doc Gen template.
 
 <Message type='notice'>
 The file must be in `.docx` format.
 </Message>
 
-<Samples id='post_docgen_templates' />
+<Samples id='post_docgen_templates_v2025.0' />
 
 ### Remove Box Doc Gen template marking from a file
 
-To make sure a file is no longer marked as a Box Doc Gen template, 
+To make sure a file is no longer marked as a Box Doc Gen template,
 use the `DELETE 2.0/docgen_templates/:template_id` request.
 
-<Samples id='delete_docgen_templates_id' />
+<Samples id='delete_docgen_templates_id_v2025.0' />
 
 [docgen-prerequisites]: g://docgen/docgen-getting-started
