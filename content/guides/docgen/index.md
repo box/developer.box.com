@@ -20,7 +20,8 @@ Box Doc Gen allows you to generate business documents such as offer letters, sal
 You can generate documents based on Box Doc Gen templates uploaded to Box, with data fields that can be dynamically filled using Box Doc Gen API. 
 
 <Message type='notice'>
-Box has limited support for non-English content merged into Box Doc Gen templates. It is  the  responsibility of the customers to test and review that Box Doc Gen supports their language requirements.
+Box Doc Gen only supports the ability to leverage English template tags when
+using Box Doc Gen templates. We recommend that customers test and review that Box Doc Gen supports their desired language requirements.
 
 </Message>
 
