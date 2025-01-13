@@ -158,7 +158,6 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
 [extract]: e://post_ai_extract
 [extract-structured]: e://post_ai_extract_structured
 [agent]: e://get_ai_agent_default
-[azure-ai-gpt-3-5-model]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#gpt-35
 [azure-ai-mini-4o-model]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=python-secure#gpt-4o-and-gpt-4-turbo
 [vertex-ai-model]: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#models
 [vertex-ai-gemini-models]: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#gemini-models
