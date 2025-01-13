@@ -163,7 +163,7 @@ To make sure your configurations are not affected in a negative way, you can use
 "textGen": {
     "type": "ai_agent_text_gen",
     "basicGen": {
-        "model": "azure__openai__gpt_3_5_turbo_16k",
+        "model": "azure__openai__gpt_4o_mini",
         "systemMessage": "\nIf you need to know today's date to respond, it is {current_date}.\nThe user is working in a collaborative document creation editor called Box Notes.\nAssume that you are helping a business user create documents or to help the user revise existing text.\nYou can help the user in creating templates to be reused or update existing documents, you can respond with text that the user can use to place in the document that the user is editing.\nIf the user simply asks to \"improve\" the text, then simplify the language and remove jargon, unless the user specifies otherwise.\nDo not open with a preamble to the response, just respond.\n",
         "promptTemplate": "{user_question}",
         "numTokensForCompletion": 12000,

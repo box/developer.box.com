@@ -24,7 +24,7 @@ source_url: >-
 
 <Message type="notice">
 
-Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
+Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus and Enterprise Advanced customers.
 
 </Message>
 
@@ -166,132 +166,6 @@ Available
 
 </Tile>
 
-<Tile type="model" title="google__textembedding_gecko" href="/guides/box-ai/ai-models/google-textembedding-gecko-model-card">
-
-A text embedding model, converting textual data into numerical vectors that machine learning algorithms can process.
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-Embeddings
-
-</strong>
-
-<strong style="background-color: #e1ffe7">
-
-Available
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="model" title="google__textembedding_gecko_002" href="/guides/box-ai/ai-models/google-textembedding-gecko-002-model-card">
-
-A text embedding model converting textual data into numerical vectors that machine learning algorithms can process.
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-Embeddings
-
-</strong>
-
-<strong style="background-color: #e1ffe7">
-
-Available
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="model" title="google__textembedding_gecko_003" href="/guides/box-ai/ai-models/google-textembedding-gecko-003-model-card">
-
-A text embedding model converting textual data into numerical vectors that machine learning algorithms can process.
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-Embeddings
-
-</strong>
-
-<strong style="background-color: #e1ffe7">
-
-Available
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="palm" title="google__text_unicorn" href="/guides/box-ai/ai-models/google-text-unicorn-model-card">
-
-A model that can handle complex tasks, such as coding, due to the extensive embedded knowledge.
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-Chat
-
-</strong>
-
-<strong style="background-color: #e1ffe7">
-
-Available
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="palm" title="google__text_bison" href="/guides/box-ai/ai-models/google-text-bison-model-card">
-
-A model capable of creating document summaries, answers to questions, and content classification labels.
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-Chat
-
-</strong>
-
-<strong style="background-color: #e1ffe7">
-
-Available
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="palm" title="google__text_bison_32k" href="/guides/box-ai/ai-models/google-text-bison-32-model-card">
-
-An enhanced **text-bison** model capable of creating document summaries, answers to questions, and content classification labels.
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-Chat
-
-</strong>
-
-<strong style="background-color: #e1ffe7">
-
-Available
-
-</strong>
-
-</div>
-
-</Tile>
-
 <Tile type="model" title="aws__claude_3_haiku" href="/guides/box-ai/ai-models/aws-claude-3-haiku-model-card">
 
 A model tailored for various language tasks, including creative writing and conversational AI.
@@ -378,12 +252,107 @@ Preview
 
 </TileGrid>
 
+### Deprecated models
+
+<TileGrid rows="2">
+
+<Tile type="model" title="google__textembedding_gecko" href="/guides/box-ai/ai-models/google-textembedding-gecko-model-card">
+
+A text embedding model, converting textual data into numerical vectors that machine learning algorithms can process.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Deprecated on 2025-01-09
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="google__textembedding_gecko_002" href="/guides/box-ai/ai-models/google-textembedding-gecko-002-model-card">
+
+A text embedding model converting textual data into numerical vectors that machine learning algorithms can process.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Deprecated on 2025-01-09
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="google__textembedding_gecko_003" href="/guides/box-ai/ai-models/google-textembedding-gecko-003-model-card">
+
+A text embedding model converting textual data into numerical vectors that machine learning algorithms can process.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Deprecated on 2025-01-09
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="palm" title="google__text_unicorn" href="/guides/box-ai/ai-models/google-text-unicorn-model-card">
+
+A model that can handle complex tasks, such as coding, due to the extensive embedded knowledge.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Deprecated on 2025-01-09
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="palm" title="google__text_bison" href="/guides/box-ai/ai-models/google-text-bison-model-card">
+
+A model capable of creating document summaries, answers to questions, and content classification labels.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Deprecated on 2025-01-09
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="palm" title="google__text_bison_32k" href="/guides/box-ai/ai-models/google-text-bison-32-model-card">
+
+An enhanced **text-bison** model capable of creating document summaries, answers to questions, and content classification labels.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Deprecated on 2025-01-09
+
+</strong>
+
+</div>
+
+</Tile>
+
+</TileGrid>
+
 [ask]: e://post_ai_ask
 [text-gen]: e://post_ai_text_gen
 [extract]: e://post_ai_extract
 [extract-structured]: e://post_ai_extract_structured
 [agent]: e://get_ai_agent_default
-[azure-ai-gpt-3-5-model]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#gpt-35
 [azure-ai-mini-4o-model]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=python-secure#gpt-4o-and-gpt-4-turbo
 [vertex-ai-model]: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#models
 [vertex-ai-gemini-models]: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#gemini-models

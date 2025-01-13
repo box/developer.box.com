@@ -22,7 +22,8 @@ cancel sign requests.
 ## Enablement
 
 The following account types support requests through the Box Sign API:
-Business, Business Plus, Enterprise, Enterprise Suites, and Enterprise Plus.
+Business, Business Plus, Enterprise, Enterprise Suites, Enterprise Plus, and
+Enterprise Advanced.
 To locate your account type, navigate to **Account Settings** and scroll down
 to the **Account Details** section of the **Account** tab. For Admin details on
 restricting access, please see our [support article][restrict].

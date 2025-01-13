@@ -27,7 +27,7 @@ source_url: >-
 
 <Message type="notice">
 
-Box AI API is available to all Enterprise Plus customers.
+Box AI API is available to all Enterprise Plus and Enterprise Advanced customers.
 
 </Message>
 
