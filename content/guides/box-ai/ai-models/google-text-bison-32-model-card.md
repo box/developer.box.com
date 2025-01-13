@@ -10,7 +10,11 @@ related_guides:
 
 # Google Text Bison 32k
 
-**Google Text Bison 32k** is a multimodal model designed to handle lightweight tasks. This model supports a long context window, making it highly suitable for tasks involving large text input, such as summarization or code analysis. 
+**Google Text Bison 32k** is a multimodal model designed to handle lightweight tasks. This model supports a long context window, making it highly suitable for tasks involving large text input, such as summarization or code analysis.
+
+<Message type='warning'>
+  This model has been deprecated on 2025-01-09.
+</Message>
 
 ## Model details
 
