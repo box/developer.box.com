@@ -26,58 +26,57 @@ fullyTranslated: true
 ---
 # 統合
 
-[Box統合][app-center]は、BoxユーザーがBoxと組み合わせて使用できるアプリケーションについて最初に確認できる場所です。アプリケーションが他の企業での使用にも適している場合は、統合にサービスを登録すると、新しいユーザーを見つけるのに役立ちます。統合では、ユーザーが見つけやすいように、アプリが \[おすすめ]、\[人気]、\[新着] セクションに分類されています。
+[Box Integrations][app-center] is the first place for Box users to find out about applications they can use in combination with Box. If your application can be used by other enterprises, listing your service in under **Integrations** can be a great way to find new users. Integrations group apps into sections so that you can quickly find featured, most popular, or recently added apps.
 
 ![統合](./images/box-integrations.png)
 
-## アプリの開発またはBoxパートナーへの参加
+## Developing a platform app or becoming a Box Partner
 
-Box統合用のアプリケーションの開発またはBoxパートナーへの参加の詳細については、Box Supportサイトの[Box Partner Resources][bp]のガイド (英語) を参照してください。
+If you need more information on developing a platform app for the Box Integrations or becoming a Box Partner, visit our [Box Partner Resources][bp] guides on our community site.
 
-## アプリを公開する
+## Publishing a platform app
 
-Box統合でアプリケーションを公開するには、以下の手順に従います。
+Use the following steps to publish a platform app in Box Integrations.
 
 ### 前提条件
 
 アプリケーションは、以下の要件を満たす必要があります。
 
-* アプリケーションは完成した状態で、実稼働環境での使用準備ができていること。
-* 統合ではOAuth 2.0以外の認証方法がサポートされていないため、アプリケーションではOAuth 2.0認証を利用すること。
-* 開発者として、[開発者コンソール][devconsole]でそのアプリケーションにアクセスできること。
+* The platform app is in a finished state and ready for production usage.
+* The platform app leverages OAuth 2.0 authentication, as Integrations do not support any other authentication methods.
+* You are a developer with access to the platform app in the **Developer Console**.
 
 ### 手順
 
-1. [開発者コンソール][devconsole]に移動して、送信するアプリケーションを選択します。
+1. Navigate to the Developer Console > **My Platform Apps** and select the app you want to publish.
 
 2. 上部のメニューで \[**公開**] タブを選択します。
 
-   ![\[統合\] パネル](./images/publishing-app.png)
+   ![Publishing tab for an application](./images/publishing-app.png)
 
-3. フォームで、アプリケーションのカテゴリ、簡単な説明と詳しい説明、スクリーンショット、アプリアイコンを指定します。
+3. Read through the submission checklist and check the confirmation checkbox if your app meets all the requirements.
 
-4. \[**プレビュー**] をクリックして、アプリケーションの掲載内容のプレビューを表示します。
+4. Fill in the form by providing:
 
-5. 最後に、\[**承認用に送信**] ボタンをクリックして、アプリケーションを承認用に送信します。
+   * the categories your app falls under
+   * a short and a long description 
+   * screenshots and an app icon
+   * supplementary information that will be used to support the users
 
-<Message>
+5. Use the **Preview** button in the top right corner to see how your application will look when listed.
 
-# 承認の完了
+6. Finally, submit the application for approval by clicking the **Submit for Approval** button. Once a request for approval is received, the Box Partner team will be notified and review your request as soon as possible. For any questions, email [`integrate@box.com`][email].
 
-承認のリクエストが届くと、Boxパートナーチームは通知を受け取り、リクエストをできるだけ早く確認します。
+## Unpublishing a platform app
 
-質問がある場合は、[`integrate@box.com`][email]までメールをお送りいただくか、サポートチケットを送信してください。
+Once approved and published, a platform app can be unpublished from the same control panel:
 
-</Message>
-
-## アプリケーションを未公開にする
-
-承認されて公開されたアプリケーションは、同じコントロールパネルから未公開にすることができます。[開発者コンソール][devconsole]に移動して、アプリケーションを選択した後、左側のサイドバーから \[**統合**] パネルを選択します。このページからアプリを未公開にすることができます。
+1. Navigate to the **Developer Console** and select your platform app. 
+2. Select the **Publishing** tab.
+3. You can now unpublish the app.
 
 [app-center]: https://app.box.com/services
 
-[devconsole]: https://cloud.app.box.com/developers/console
-
 [email]: mailto:integrate@box.com
 
-[bp]: https://support.box.com/hc/en-us/sections/360009473734-Box-Partner-Resources
+[bp]: https://support.box.com/hc/en-us/sections/21356597387539-Box-Partner-Programs

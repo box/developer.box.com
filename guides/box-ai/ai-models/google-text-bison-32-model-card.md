@@ -24,6 +24,12 @@ fullyTranslated: true
 
 **Google Text Bison 32k**は、軽量のタスクを処理するように設計されたマルチモーダルモデルです。このモデルは、長いコンテキストウィンドウをサポートしており、要約やコード分析など、大量のテキスト入力を伴うタスクに非常に適しています。
 
+<Message type="warning">
+
+This model has been deprecated on 2025-01-09.
+
+</Message>
+
 ## モデルの詳細
 
 | 項目            | 値                         | 説明                                                                                 |

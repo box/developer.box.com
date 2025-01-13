@@ -48,11 +48,11 @@ fullyTranslated: true
 
 コールを実行するには、以下のパラメータを渡す必要があります。必須のパラメータは**太字**で示されています。
 
-| パラメータ      | 説明                                                                                              | 例                                  |
-| ---------- | ----------------------------------------------------------------------------------------------- | ---------------------------------- |
-| `language` | 返されるエージェントの構成の言語コード。その言語がサポートされていない場合は、デフォルト構成が返されます。                                           | `ja-JP`                            |
-| **`mode`** | エージェントの構成にフィルタをかけるためのモード。値は、取得したい結果に応じて、`ask`、`text_gen`、`extract`、または`extract_structured`にします。 | `ask`                              |
-| `model`    | 構成を取得する対象となるモデル。選択したモデルがサポートされていることを確認するには、[モデルのリスト][models]を参照してください。                          | `azure__openai__gpt_3_5_turbo_16k` |
+| パラメータ      | 説明                                                                                              | 例                            |
+| ---------- | ----------------------------------------------------------------------------------------------- | ---------------------------- |
+| `language` | 返されるエージェントの構成の言語コード。その言語がサポートされていない場合は、デフォルト構成が返されます。                                           | `ja-JP`                      |
+| **`mode`** | エージェントの構成にフィルタをかけるためのモード。値は、取得したい結果に応じて、`ask`、`text_gen`、`extract`、または`extract_structured`にします。 | `ask`                        |
+| `model`    | 構成を取得する対象となるモデル。選択したモデルがサポートされていることを確認するには、[モデルのリスト][models]を参照してください。                          | `azure__openai__gpt_4o_mini` |
 
 ## レスポンス
 
@@ -153,7 +153,7 @@ fullyTranslated: true
 {
      "type": "ai_agent_text_gen",
      "basic_gen": {
-          "model": "azure__openai__gpt_3_5_turbo_16k",
+          "model": "azure__openai__gpt_4o_mini",
           "system_message": "\nIf you need to know today's date to respond, it is {current_date}.\nThe user is working in a collaborative document creation editor called Box Notes.\nAssume that you are helping a business user create documents or to help the user revise existing text.\nYou can help the user in creating templates to be reused or update existing documents, you can respond with text that the user can use to place in the document that the user is editing.\nIf the user simply asks to \"improve\" the text, then simplify the language and remove jargon, unless the user specifies otherwise.\nDo not open with a preamble to the response, just respond.\n",
           "prompt_template": "{user_question}",
           "num_tokens_for_completion": 12000,

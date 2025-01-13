@@ -24,6 +24,12 @@ fullyTranslated: true
 
 テキスト埋め込みモデルでは、テキストデータを、機械学習アルゴリズムで処理できる数値ベクトルに変換します。**Google textembedding-gecko@002**モデルは、AI品質の向上を特長としており、埋め込みタスク向けに最適化され、テキストをベクトル表現に変換するため、さまざまなAIアプリケーションで役立ちます。
 
+<Message type="warning">
+
+This model has been deprecated on 2025-01-09.
+
+</Message>
+
 ## モデルの詳細
 
 | 項目            | 値                                  | 説明                                                                                 |

@@ -24,6 +24,12 @@ fullyTranslated: true
 
 **Google Text Bison**は、軽量のタスクを処理するように設計されたマルチモーダルモデルです。
 
+<Message type="warning">
+
+This model has been deprecated on 2025-01-09.
+
+</Message>
+
 ## モデルの詳細
 
 | 項目            | 値                     | 説明                                                                                 |

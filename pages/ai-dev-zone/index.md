@@ -233,25 +233,25 @@ Box AI APIの主要な機能を1分程で確認できます。
 
 </Tile>
 
-<Tile image="API-text-gen" title="エンドポイントの概要" href="https://www.youtube.com/watch?v=xxR8aF4r3g8&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
+<Tile image="API-text-gen" title="Endpoint overview" href="https://www.youtube.com/watch?v=xxR8aF4r3g8&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
 
 Box AI APIのテキスト生成エンドポイントのデモをご確認ください。
 
 </Tile>
 
-<Tile image="API-q&a" title="エンドポイントの概要" href="https://www.youtube.com/watch?v=UyKfacz6G9g&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
+<Tile image="API-q&a" title="Endpoint overview" href="https://www.youtube.com/watch?v=UyKfacz6G9g&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
 
 Box AI APIのドキュメントのQ&Aエンドポイントのデモをご確認ください。
 
 </Tile>
 
-<Tile image="API-extract" title="エンドポイントの概要" href="https://www.youtube.com/watch?v=fijj0CX67c4&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
+<Tile image="API-extract" title="Endpoint overview" href="https://www.youtube.com/watch?v=fijj0CX67c4&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
 
 Box AI APIを使用して、さまざまなプロンプトの形式でメタデータを抽出します。
 
 </Tile>
 
-<Tile image="API-extract-structured" title="エンドポイントの概要" href="https://www.youtube.com/watch?v=dU3oo4sHZt0&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
+<Tile image="API-extract-structured" title="Endpoint overview" href="https://www.youtube.com/watch?v=dU3oo4sHZt0&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
 
 Box AI APIを使用して、あらかじめ定義された構造でメタデータを抽出します。
 

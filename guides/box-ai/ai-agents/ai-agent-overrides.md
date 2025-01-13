@@ -66,7 +66,7 @@ fullyTranslated: true
       "temperature": 0,
       "top_p": 1
     },
-    "model": "azure__openai__gpt_3_5_turbo_16k",
+    "model": "azure__openai__gpt_4o_mini",
     "num_tokens_for_completion": 8400,
     "prompt_template": "It is `{current_date}`, consider these travel options `{content}` and answer the `{user_question}`.",
     "system_message": "You are a helpful travel assistant specialized in budget travel"
@@ -80,7 +80,7 @@ fullyTranslated: true
       "temperature": 0,
       "top_p": 1
     },
-    "model": "azure__openai__gpt_3_5_turbo_16k",
+    "model": "azure__openai__gpt_4o_mini",
     "num_tokens_for_completion": 8400,
     "prompt_template": "It is `{current_date}`, consider these travel options `{content}` and answer the `{user_question}`.",
     "system_message": "You are a helpful travel assistant specialized in budget travel"
@@ -101,7 +101,7 @@ fullyTranslated: true
       "temperature": 0,
       "top_p": 1
     },
-    "model": "azure__openai__gpt_3_5_turbo_16k",
+    "model": "azure__openai__gpt_4o_mini",
     "num_tokens_for_completion": 8400,
     "prompt_template": "It is `{current_date}`, consider these travel options `{content}` and answer the `{user_question}`.",
     "system_message": "You are a helpful travel assistant specialized in budget travel"
@@ -122,7 +122,7 @@ fullyTranslated: true
       "temperature": 0,
       "top_p": 1
     },
-    "model": "azure__openai__gpt_3_5_turbo_16k",
+    "model": "azure__openai__gpt_4o_mini",
     "num_tokens_for_completion": 8400,
     "prompt_template": "It is `{current_date}`, consider these travel options `{content}` and answer the `{user_question}`.",
     "system_message": "You are a helpful travel assistant specialized in budget travel"
