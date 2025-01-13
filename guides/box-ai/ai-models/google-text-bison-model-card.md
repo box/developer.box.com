@@ -23,6 +23,12 @@ source_url: >-
 
 **Google Text Bison** is a multimodal model designed to handle lightweight tasks.
 
+<Message type='warning'>
+
+This model has been deprecated on 2025-01-09.
+
+</Message>
+
 ## Model details
 
 | Item  | Value | Description |
