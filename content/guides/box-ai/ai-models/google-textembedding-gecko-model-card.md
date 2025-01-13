@@ -11,6 +11,10 @@ related_guides:
 
 Text embedding models convert textual data into numerical vectors that can be processed by machine learning algorithms. The **Google textembedding-gecko** model features enhanced AI quality, excels in text embeddings, offering strong retrieval performance while being compact.
 
+<Message type='warning'>
+  This model has been deprecated on 2025-01-09.
+</Message>
+
 ## Model details
 
 | Item  | Value | Description |
