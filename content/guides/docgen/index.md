@@ -26,6 +26,7 @@ using Box Doc Gen templates. We recommend that customers test and review that Bo
 </Message>
 
 ## Prerequisites
+
 * access to Microsoft Word
 
 To use Box Doc Gen, you must have access to Microsoft Word, as it is required
