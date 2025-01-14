@@ -25,6 +25,23 @@ using Box Doc Gen templates. We recommend that customers test and review that Bo
 
 </Message>
 
+## Prerequisites
+* access to Microsoft Word
+
+To use Box Doc Gen, you must have access to Microsoft Word, as it is required
+for creating and authoring your document templates. You can utilize the Box Doc
+Gen Add-in for a code-free experience or apply tagging scripts within Word to
+prepare your documents.  
+
+<Message type='warn'>
+Box Doc Gen is designed to facilitate the dynamic generation of business
+documents, but it is important to note that Box does not have control over
+users’ access to Microsoft Word. Users must ensure they have the necessary
+permissions and access to Microsoft Word to create and author document
+templates effectively.
+
+</Message>
+
 ## Box Doc Gen API capabilities
 
 Box Doc Gen API allows you to:
