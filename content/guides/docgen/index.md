@@ -34,7 +34,7 @@ for creating and authoring your document templates. You can utilize the Box Doc
 Gen Add-in for a code-free experience or apply tagging scripts within Word to
 prepare your documents.  
 
-<Message type='warn'>
+<Message type='notice'>
 Box Doc Gen is designed to facilitate the dynamic generation of business
 documents, but it is important to note that Box does not have control over
 users’ access to Microsoft Word. Users must ensure they have the necessary
