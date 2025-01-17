@@ -26,7 +26,7 @@ fullyTranslated: true
 
 <Message type="warning">
 
-This model has been deprecated on 2025-01-09.
+このモデルは、日本時間2025年1月10日をもって廃止されました。
 
 </Message>
 

@@ -260,7 +260,7 @@ Box AI Extractのデフォルト
 
 </TileGrid>
 
-### Deprecated models
+### 廃止されたモデル
 
 <TileGrid rows="2">
 
@@ -272,7 +272,7 @@ Box AI Extractのデフォルト
 
 <strong style="background-color: #e8e8e8">
 
-Deprecated on 2025-01-09
+日本時間2025年1月9日に廃止
 
 </strong>
 
@@ -288,7 +288,7 @@ Deprecated on 2025-01-09
 
 <strong style="background-color: #e8e8e8">
 
-Deprecated on 2025-01-09
+日本時間2025年1月9日に廃止
 
 </strong>
 
@@ -304,7 +304,7 @@ Deprecated on 2025-01-09
 
 <strong style="background-color: #e8e8e8">
 
-Deprecated on 2025-01-09
+日本時間2025年1月9日に廃止
 
 </strong>
 
@@ -320,7 +320,7 @@ Deprecated on 2025-01-09
 
 <strong style="background-color: #e8e8e8">
 
-Deprecated on 2025-01-09
+日本時間2025年1月9日に廃止
 
 </strong>
 
@@ -336,7 +336,7 @@ Deprecated on 2025-01-09
 
 <strong style="background-color: #e8e8e8">
 
-Deprecated on 2025-01-09
+日本時間2025年1月9日に廃止
 
 </strong>
 
@@ -352,7 +352,7 @@ Deprecated on 2025-01-09
 
 <strong style="background-color: #e8e8e8">
 
-Deprecated on 2025-01-09
+日本時間2025年1月9日に廃止
 
 </strong>
 

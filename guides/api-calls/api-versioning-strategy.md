@@ -31,13 +31,13 @@ APIのバージョン管理により、Boxは、自社のプラットフォー�
 
 <Message type="notice">
 
-In 2024, Box introduced year-based API versioning.
+2024年に、BoxではAPIの年ベースのバージョン管理を導入しました。
 
-All endpoints available at the end of 2024 were assigned the version `2024.0`.
+2024年の年末に利用できたすべてのエンドポイントには、バージョン`2024.0`が割り当てられました。
 
-**No action is required for API users to continue using Box APIs.**
+**APIユーザーが引き続きBox APIを使用するために必要な操作はありません。**
 
-To make version-aware API calls, include the `box-version` header with the value `2024.0` in your requests.
+バージョンを指定してAPIコールを行うには、値`2024.0`を設定した`box-version`ヘッダーをリクエストに含めてください。
 
 </Message>
 

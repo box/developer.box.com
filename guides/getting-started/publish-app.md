@@ -14,40 +14,40 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/publish-app.md
 fullyTranslated: true
 ---
-# Publish your app
+# アプリの公開
 
-When you finish the platform app configuration and testing, you can publish it in the [Box Integrations][integrations]. It allows customers to find your app and add it to their Box accounts.
+Platformアプリの構成とテストが完了したら、[Box統合][integrations]でアプリを公開できます。公開すると、お客様がアプリを見つけて、自分のBoxアカウントに追加できるようになります。
 
 <Message type="warning">
 
-Only apps that use the OAuth 2.0 authentication have a built-in publication option. In case you use a different auth type for your integration, you can still create and publish an OAuth 2.0 platform app that will serve as a marketing listing in the **Integrations** and redirect customers to your website.
+公開オプションが組み込まれるのは、OAuth 2.0認証を使用するアプリのみです。統合に別の種類の認証を使用する場合も、\[**統合**] でマーケティングリストとして機能し、お客様を開発元のウェブサイトにリダイレクトするOAuth 2.0のPlatformアプリを作成して公開できます。
 
 </Message>
 
-To publish your platform app:
+Platformアプリを公開するには、以下の手順に従います。
 
 1. **開発者コンソール**を開きます。
 
-2. Select the platform app you want to publish.
+2. 公開するPlatformアプリを選択します。
 
-3. Go to the **Publishing** tab.
+3. \[**公開**] タブに移動します。
 
-4. Read through the submission checklist and check the confirmation checkbox if your app meets all the requirements.
+4. 送信チェックリストをひととおり読み、アプリがすべての要件を満たしているかどうかを確認するチェックボックスをオンにします。
 
-5. The next step is the marketing section of the app, where you need to add the following app information:
+5. 次の手順として、アプリのマーケティングセクションで、アプリに関する以下の情報を追加する必要があります。
 
-   * **General Info** - choose correct categories and platforms for your app to make it easier to find in the Integrations,
-   * **Description** - make sure it contains all information about your app that the customers may find useful,
+   * \[**一般情報**] - 統合で見つけやすくするために、アプリに適したカテゴリとプラットフォームを選択します。
+   * \[**説明**] - お客様の役に立つと思われる、アプリに関するすべての情報を必ず含めます。
      * \[**簡単な説明**] は、アプリのロゴの横にアプリ名と一緒に表示されます。
      * \[**詳しい説明**] は、ユーザーがアプリを選択してその詳細を表示すると表示される内容です。詳しい説明へのクリック可能なリンクを追加できます。
-   * **Screenshots** and **Icon** - provide the screenshots to allow the users see how the app looks like and how it integrates with Box. The icon is needed to represent your app in the list of Integrations.
-   * **Support Resources** - A list of links and supplementary information that will help the users to work with your app.
+   * \[**スクリーンショット**] および \[**アイコン**] - ユーザーがアプリの外観やBoxとの統合方法を確認できるようにスクリーンショットを指定します。アイコンは、統合のリストでアプリを表すために必要になります。
+   * \[**サポートリソース**] - ユーザーがアプリを操作するのに役立つリンクと補足情報のリスト。
 
-6. Before submitting your app, preview it to see if you included all the necessary information.
+6. アプリを送信する前に、アプリをプレビューして、必要な情報がすべて含まれているかどうかを確認します。
 
-7. Submit your app for approval. Box will review your app and publish it under **Integrations**.
+7. 承認を得るためにアプリを送信します。Boxがアプリをレビューし、\[**統合**] で公開します。
 
-If you have any questions or issues, contact the **Partners** team: [`integrate@box.com`][email].
+ご不明な点や問題がある場合は、**パートナー**チーム ([`integrate@box.com`][email]) まで英語でお問い合わせください。
 
 [integrations]: https://cloud.app.box.com/integrations
 
