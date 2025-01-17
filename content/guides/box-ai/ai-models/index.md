@@ -100,59 +100,6 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
     </Tile>
 </TileGrid>
 
-### Deprecated models
-
-<TileGrid rows="2">
-  <Tile type="model" title="google__textembedding_gecko" href="/guides/box-ai/ai-models/google-textembedding-gecko-model-card">
-    A text embedding model, converting textual data into numerical vectors that machine learning algorithms can process.
-    <div>
-      <strong style="background-color: #e8e8e8">
-        Deprecated on 2025-01-09
-      </strong>
-    </div>
-  </Tile>
-  <Tile type="model" title="google__textembedding_gecko_002" href="/guides/box-ai/ai-models/google-textembedding-gecko-002-model-card">
-      A text embedding model converting textual data into numerical vectors that machine learning algorithms can process.
-    <div>
-      <strong style="background-color: #e8e8e8">
-        Deprecated on 2025-01-09
-      </strong>
-    </div>
-  </Tile>
-  <Tile type="model" title="google__textembedding_gecko_003" href="/guides/box-ai/ai-models/google-textembedding-gecko-003-model-card">
-    A text embedding model converting textual data into numerical vectors that machine learning algorithms can process.
-    <div>
-      <strong style="background-color: #e8e8e8">
-        Deprecated on 2025-01-09
-      </strong>
-    </div>
-  </Tile>
-  <Tile type="palm" title="google__text_unicorn" href="/guides/box-ai/ai-models/google-text-unicorn-model-card">
-      A model that can handle complex tasks, such as coding, due to the extensive embedded knowledge.
-    <div>
-      <strong style="background-color: #e8e8e8">
-        Deprecated on 2025-01-09
-      </strong>
-    </div>
-  </Tile>
-  <Tile type="palm" title="google__text_bison" href="/guides/box-ai/ai-models/google-text-bison-model-card">
-    A model capable of creating document summaries, answers to questions, and content classification labels.
-    <div>
-      <strong style="background-color: #e8e8e8">
-        Deprecated on 2025-01-09
-      </strong>
-    </div>
-  </Tile>
-  <Tile type="palm" title="google__text_bison_32k" href="/guides/box-ai/ai-models/google-text-bison-32-model-card">
-    An enhanced **text-bison** model capable of creating document summaries, answers to questions, and content classification labels.
-    <div>
-      <strong style="background-color: #e8e8e8">
-        Deprecated on 2025-01-09
-      </strong>
-    </div>
-  </Tile>
-</TileGrid>
-
 [ask]: e://post_ai_ask
 [text-gen]: e://post_ai_text_gen
 [extract]: e://post_ai_extract
