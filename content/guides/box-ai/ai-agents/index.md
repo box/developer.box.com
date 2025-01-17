@@ -14,7 +14,7 @@ related_guides:
 # AI model overrides
 
 <Message type="notice">
-Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
+Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus and Enterprise Advanced customers.
 </Message>
 
 Box updates the default models across the endpoints on a regular basis to stay up to date with the most advanced options. 
