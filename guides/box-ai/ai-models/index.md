@@ -12,7 +12,7 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 15
+total_steps: 9
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card
@@ -25,7 +25,7 @@ fullyTranslated: true
 
 <Message type="notice">
 
-メタデータ抽出に関連するエンドポイントは、現在、BoxのMain Beta Agreementに従い提供されるベータ機能のため、利用可能な機能が変更される可能性があります。Box AI APIは、Enterprise Plusをご利用のすべてのお客様が利用できます。
+Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus and Enterprise Advanced customers.
 
 </Message>
 
@@ -251,108 +251,6 @@ Box AI Extractのデフォルト
 <strong style="background-color: #e1ffe7">
 
 プレビュー
-
-</strong>
-
-</div>
-
-</Tile>
-
-</TileGrid>
-
-### 廃止されたモデル
-
-<TileGrid rows="2">
-
-<Tile type="model" title="google__textembedding_gecko" href="/guides/box-ai/ai-models/google-textembedding-gecko-model-card">
-
-テキスト埋め込みモデル。テキストデータを、機械学習アルゴリズムで処理できる数値ベクトルに変換します。
-
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-日本時間2025年1月9日に廃止
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="model" title="google__textembedding_gecko_002" href="/guides/box-ai/ai-models/google-textembedding-gecko-002-model-card">
-
-テキスト埋め込みモデル。テキストデータを、機械学習アルゴリズムで処理できる数値ベクトルに変換します。
-
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-日本時間2025年1月9日に廃止
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="model" title="google__textembedding_gecko_003" href="/guides/box-ai/ai-models/google-textembedding-gecko-003-model-card">
-
-テキスト埋め込みモデル。テキストデータを、機械学習アルゴリズムで処理できる数値ベクトルに変換します。
-
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-日本時間2025年1月9日に廃止
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="palm" title="google__text_unicorn" href="/guides/box-ai/ai-models/google-text-unicorn-model-card">
-
-広範な埋め込み知により、コーディングなどの複雑なタスクを処理できるモデル。
-
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-日本時間2025年1月9日に廃止
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="palm" title="google__text_bison" href="/guides/box-ai/ai-models/google-text-bison-model-card">
-
-ドキュメントの要約、質問への回答、コンテンツ分類ラベルの作成が可能なモデル。
-
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-日本時間2025年1月9日に廃止
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="palm" title="google__text_bison_32k" href="/guides/box-ai/ai-models/google-text-bison-32-model-card">
-
-ドキュメントの要約、質問への回答、コンテンツ分類ラベルの作成が可能な、強化された**text-bison**モデル。
-
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-日本時間2025年1月9日に廃止
 
 </strong>
 

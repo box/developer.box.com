@@ -31,6 +31,7 @@ Boxにアップロードできるファイルサイズの上限は、アカウ�
 * Digital Business Suite: 50 GB
 * Digital Business Global Suite: 50 GB
 * Enterprise Plus: 150 GB
+* Enterprise Advanced: 500 GB
 
 自分のアカウントのファイルサイズの上限を確認するには、Boxにログインします。右上隅の円をクリックし、ドロップダウンメニューから \[**アカウント設定**] を選択します。表示されたページで、\[**アカウントの詳細**] セクションまで下にスクロールすると、\[**最大ファイルサイズ**] が表示されています。
 

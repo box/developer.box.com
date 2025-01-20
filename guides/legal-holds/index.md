@@ -23,7 +23,7 @@ fullyTranslated: true
 
 <Message>
 
-リーガルホールドは、Business PlusアカウントまたはEnterpriseアカウントに追加できる、[Box Governance][governance]パッケージの機能です。
+Legal Holds are a feature of the [Box Governance][governance] package, which can be added on to any Business Plus, Enterprise Advanced or Enterprise account.
 
 </Message>
 
