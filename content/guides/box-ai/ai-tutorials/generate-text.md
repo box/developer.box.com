@@ -14,7 +14,7 @@ alias_paths:
 # Generate text with Box AI
 
 <Message type="notice">
-Box AI API is available to all Enterprise Plus customers.
+Box AI API is available to all Enterprise Plus and Enterprise Advanced customers.
 
 </Message>
 
