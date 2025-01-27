@@ -20,7 +20,7 @@ fullyTranslated: true
 
 ## 有効化
 
-The following account types support requests through the Box Sign API: Business, Business Plus, Enterprise, Enterprise Suites, Enterprise Plus, and Enterprise Advanced. To locate your account type, navigate to **Account Settings** and scroll down to the **Account Details** section of the **Account** tab. For Admin details on restricting access, please see our [support article][restrict].
+Box Sign APIを使用したリクエストは、Business、Business Plus、Enterprise、Enterprise Suites、Enterprise Plus、Enterprise Advancedのアカウントでサポートされています。アカウントの種類を確認するには、\[**アカウント設定**] に移動し、\[**アカウント**] タブの \[**アカウントの詳細**] セクションまで下にスクロールします。管理者向けのアクセス制限の詳細については、[サポート記事][restrict]を参照してください。
 
 ## 必須のスコープ
 

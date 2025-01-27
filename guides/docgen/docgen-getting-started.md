@@ -22,22 +22,22 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/docgen/docgen-getting-started.md
 fullyTranslated: true
 ---
-# Get started with Box Doc Gen
+# Box Doc Genの使い方
 
-To start generating documents with Box Doc Gen API you will need a custom application and a developer token to authenticate your calls. You also need a Doc Gen template that will serve as an input source for your document.
+Box Doc Gen APIを使用したドキュメントの生成を開始するには、カスタムアプリケーションと、コールを認証するための開発者トークンが必要です。また、ドキュメントの入力ソースとして機能するDoc Genテンプレートも必要です。
 
-## Enable Box Doc Gen
+## Box Doc Genの有効化
 
-To use Box Doc Gen, make sure it is enabled by an admin in the Admin Console. If you are a Box Admin, you will find the necessary information in [Enterprise Settings: Content & Sharing Tab][settings] documentation.
+Box Doc Genを使用するには、管理者が管理コンソールで有効にしていることを確認してください。Box管理者の場合、[Enterprise設定: \[コンテンツと共有\] タブ][settings]のドキュメントで必要な情報を確認できます。
 
-## Create and upload a Box Doc Gen template
+## Box Doc Genテンプレートの作成とアップロード
 
-To use Box Doc Gen API to generate documents, a Box Doc Gen template must already exist in Box. You have the following options to create a template:
+Box Doc Gen APIを使用してドキュメントを生成するには、Box Doc GenテンプレートがすでにBox内に存在する必要があります。テンプレートを作成するには、以下のオプションがあります。
 
-* Install the [Box Doc Gen Template Creator add-in for Microsoft Word][template-addin].
-* Create a Box Doc Gen template [using a JSON file][json-template] or manually create [template tags][template-tags].
+* [Microsoft Word用Box Doc Gen Template Creatorアドイン][template-addin]をインストールする。
+* [JSONファイルを使用][json-template]してBox Doc Genテンプレートを作成するか、手動で[テンプレートタグ][template-tags]を作成する。
 
-## Create a custom application
+## カスタムアプリケーションの作成
 
 まず、コールの実行に使用するカスタムアプリケーションを作成する必要があります。アプリケーションを作成するには、[カスタムアプリの作成][createapps]に関するガイドに従ってください。
 

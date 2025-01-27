@@ -47,7 +47,7 @@ Box AI Developer Zoneでは、Box AI APIを実際に体験できる対話型の�
 
 </Header>
 
-Box AI API is available to all Enterprise Plus and Enterprise Advanced customers. Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change.
+Box AI APIは、Enterprise PlusおよびEnterprise Advancedをご利用のすべてのお客様が利用できます。メタデータ抽出に関連したエンドポイントは、現在、BoxのMain Beta Agreementに従い提供されるベータ機能のため、利用可能な機能が変更される可能性があります。
 
 <TileGrid rows="4">
 

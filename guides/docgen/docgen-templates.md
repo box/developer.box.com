@@ -22,42 +22,42 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/docgen/docgen-templates.md
 fullyTranslated: true
 ---
-# Box Doc Gen templates
+# Box Doc Genテンプレート
 
-Box Doc Gen API allows you to retrieve information related to Box Doc Gen templates.
+Box Doc Gen APIを使用すると、Box Doc Genテンプレートに関連した情報を取得できます。
 
 ## 前提条件
 
-Before you start using Box Doc Gen API, follow the steps listed in the [get started with Box Doc Gen][docgen-prerequisites] guide to create a custom app and a Box Doc Gen template.
+Box Doc Gen APIの使用を開始する前に、[Box Doc Genの使い方][docgen-prerequisites]ガイドに記載されている手順に従って、カスタムアプリとBox Doc Genテンプレートを作成してください。
 
-## List Box Doc Gen templates
+## Box Doc Genテンプレートのリストを取得
 
-To get a list of all created Box Doc Gen templates, use the `GET /2.0/docgen_templates` endpoint. You don't have to provide any additional parameters.
+作成されたすべてのBox Doc Genテンプレートのリストを取得するには、`GET /2.0/docgen_templates`エンドポイントを使用します。追加のパラメータを指定する必要はありません。
 
 <Samples id="get_docgen_templates_v2025.0">
 
 </Samples>
 
-The response will contain an `entries` array listing the already created Box Doc Gen templates.
+レスポンスには、すでに作成済みのBox Doc Genテンプレートを列挙する`entries`配列が含まれます。
 
-## Get a Box Doc Gen template by ID
+## IDを指定してBox Doc Genテンプレートを取得
 
-To get a specific Box Doc Gen template, use the `GET /2.0/docgen_templates_id` endpoint and provide the `template_id`.
+特定のBox Doc Genテンプレートを取得するには、`GET /2.0/docgen_templates_id`エンドポイントを使用し、`template_id`を指定します。
 
 <Samples id="get_docgen_templates_id_v2025.0">
 
 </Samples>
 
-The response will contain details of a file that was used as a Box Doc Gen template.
+レスポンスには、Box Doc Genテンプレートとして使用されたファイルの詳細が含まれます。
 
-## List all document generation jobs for a template
+## テンプレートのすべてのドキュメント生成ジョブのリストを取得
 
-To get a list of all created Box Doc Gen templates, use the `GET /2.0/docgen_template_jobs_id` endpoint and provide the `template_id`.
+作成済みのすべてのBox Doc Genテンプレートのリストを取得するには、`GET /2.0/docgen_template_jobs_id`エンドポイントを使用し、`template_id`を指定します。
 
 <Samples id="get_docgen_template_jobs_id_v2025.0">
 
 </Samples>
 
-The response will contain a list of Box Doc Gen jobs that were run to generate documents.
+レスポンスには、ドキュメントを生成するために実行されたBox Doc Genジョブのリストが含まれます。
 
 [docgen-prerequisites]: g://docgen/docgen-getting-started

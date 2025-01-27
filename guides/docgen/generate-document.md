@@ -20,46 +20,46 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/docgen/generate-document.md
 fullyTranslated: true
 ---
-# Generate documents
+# ドキュメントの生成
 
-The `POST /2.0/docgen_batches` endpoint allows you to generate a document using Box Doc Gen template as input.
+`POST /2.0/docgen_batches`エンドポイントを使用すると、Box Doc Genテンプレートを入力データとして使用してドキュメントを生成できます。
 
 ## 前提条件
 
-Before you start using Box Doc Gen API, follow the steps listed in the [get started with Box Doc Gen][docgen-prerequisites] guide to create a custom app and a Box Doc Gen template.
+Box Doc Gen APIの使用を開始する前に、[Box Doc Genの使い方][docgen-prerequisites]ガイドに記載されている手順に従って、カスタムアプリとBox Doc Genテンプレートを作成してください。
 
 ## リクエストの送信
 
-To generate a document or a set of documents, use the `POST /2.0/docgen_batches` endpoint.
+ドキュメント (複数可) を生成するには、`POST /2.0/docgen_batches`エンドポイントを使用します。
 
 ### パラメータ
 
 コールを実行するには、以下のパラメータを渡す必要があります。必須のパラメータは**太字**で示されています。
 
-| パラメータ                                              | 説明                                                                                                                     | 例                                                            |
-| -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| **`file.id`**                                      | ID of the file to be marked as Box Doc Gen template.                                                                   | `12345678`                                                   |
-| **`file.type`**                                    | The type of provided input. The value is always **`file`**.                                                            | `file`                                                       |
-| `file_version`                                     | The file version of a template.                                                                                        | `12345`                                                      |
-| **`input_source`**                                 | The input source for generated document. The value has to be `api` for all the API-based document generation requests. | `api`                                                        |
-| **`output_type`**                                  | The output file type.                                                                                                  | `docx`                                                       |
-| **`destination_folder.id`**                        | The ID of the folder where the generated document will be stored.                                                      | `12345678`                                                   |
-| **`destination_folder.type`**                      | The type of the destination item. Since the generated files are stored in folders, the value is always **`folder`**.   | `file`                                                       |
-| **`document_generation_data.generated_file_name`** | The name of the generated file.                                                                                        | `New_Template`                                               |
-| **`document_generation_data.user_input`**          | The JSON data to be used to generate document.                                                                         | `{"id": 2, "name": "Ink  Cartridge", "type": "non-fragile"}` |
+| パラメータ                                              | 説明                                                               | 例                                                            |
+| -------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------ |
+| **`file.id`**                                      | Box Doc Genテンプレートとして設定するファイルのID。                                 | `12345678`                                                   |
+| **`file.type`**                                    | 指定した入力データの種類。値は常に**`file`**になります。                                | `file`                                                       |
+| `file_version`                                     | テンプレートのファイルバージョン。                                                | `12345`                                                      |
+| **`input_source`**                                 | 生成されるドキュメントの入力ソース。この値は、APIベースのすべてのドキュメント生成リクエストで`api`にする必要があります。 | `api`                                                        |
+| **`output_type`**                                  | 出力ファイルの種類。                                                       | `docx`                                                       |
+| **`destination_folder.id`**                        | 生成されたドキュメントが保存されるフォルダのID。                                        | `12345678`                                                   |
+| **`destination_folder.type`**                      | 保存先の項目の種類。生成されたファイルはフォルダに保存されるため、値は常に**`folder`**になります。          | `file`                                                       |
+| **`document_generation_data.generated_file_name`** | 生成されるファイルの名前。                                                    | `New_Template`                                               |
+| **`document_generation_data.user_input`**          | ドキュメントの生成に使用するJSONデータ。                                           | `{"id": 2, "name": "Ink  Cartridge", "type": "non-fragile"}` |
 
 ## ユースケース
 
-When your Box Doc Gen template and JSON data is ready, you can make a request to Box Doc Gen API to generate documents.
+Box Doc GenテンプレートとJSONデータを準備できたら、Box Doc Gen APIにドキュメント生成のリクエストを行うことができます。
 
-A sample call looks as follows:
+コールのサンプルは次のようになります。
 
 <Samples id="post_docgen_batches_v2025.0">
 
 </Samples>
 
-When the request is being processed, each entry in the `document_generation_data` array is treated as a separate document generation job that Box Doc Gen adds to the document generation queue.
+リクエストが処理されている間、`document_generation_data`配列の各エントリは個別のドキュメント生成ジョブとして処理され、そのジョブは、Box Doc Genによってドキュメント生成キューに追加されます。
 
-Generated documents will be saved in the designated folder.
+生成されたドキュメントは、指定したフォルダに保存されます。
 
 [docgen-prerequisites]: g://docgen/docgen-getting-started

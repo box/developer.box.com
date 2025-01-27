@@ -26,7 +26,7 @@ fullyTranslated: true
 
 <Message type="notice">
 
-Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus and Enterprise Advanced customers.
+メタデータ抽出に関連するエンドポイントは、現在、BoxのMain Beta Agreementに従い提供されるベータ機能のため、利用可能な機能が変更される可能性があります。Box AI APIは、Enterprise PlusおよびEnterprise Advancedをご利用のすべてのお客様が利用できます。
 
 </Message>
 
@@ -38,7 +38,7 @@ Box AI APIを使用するには、管理者が管理コンソールでこのAPI�
 
 </Message>
 
-## Create a custom application
+## カスタムアプリケーションの作成
 
 まず、コールの実行に使用するカスタムアプリケーションを作成する必要があります。アプリケーションを作成するには、[カスタムアプリの作成][createapps]に関するガイドに従ってください。
 

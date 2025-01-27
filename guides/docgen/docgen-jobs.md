@@ -21,39 +21,39 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/docgen/docgen-jobs.md
 fullyTranslated: true
 ---
-# Box Doc Gen jobs
+# Box Doc Genジョブ
 
-A Box Doc Gen job runs when you make a request to generate a document. The `document_generation_data` parameter in the `POST` request is an array of entries that represent Box Doc Gen jobs run to generate a document.
+Box Doc Genジョブは、ドキュメントを生成するリクエストを行うと実行されます。`POST`リクエスト内の`document_generation_data`パラメータは、ドキュメントを生成するためのBox Doc Genジョブの実行を表すエントリの配列です。
 
 <Samples id="post_docgen_batches_v2025.0">
 
 </Samples>
 
-Box Doc Gen API allows you to get information about the Box Doc Gen jobs.
+Box Doc Gen APIを使用すると、Box Doc Genジョブに関する情報を取得できます。
 
 ## 前提条件
 
-Before you start using Box Doc Gen API, follow the steps listed in the [get started with Box Doc Gen][docgen-prerequisites] guide to create a custom app and a Box Doc Gen template.
+Box Doc Gen APIの使用を開始する前に、[Box Doc Genの使い方][docgen-prerequisites]ガイドに記載されている手順に従って、カスタムアプリとBox Doc Genテンプレートを作成してください。
 
-## List all Box Doc Gen jobs
+## すべてのBox Doc Genジョブのリストを取得
 
-To get a list of all Box Doc Gen jobs that were run, use the `GET /2.0/docgen_jobs` endpoint. You don't have to provide any additional parameters.
+実行されたすべてのBox Doc Genジョブのリストを取得するには、`GET /2.0/docgen_jobs`エンドポイントを使用します。追加のパラメータを指定する必要はありません。
 
 <Samples id="get_docgen_jobs_v2025.0">
 
 </Samples>
 
-## Get a Box Doc Gen job by ID
+## IDを指定してBox Doc Genジョブを取得
 
-To get a specific Box Doc Gen job, use the `GET /2.0/docgen_jobs_id` endpoint and provide the `job_id`.
+特定のBox Doc Genジョブを取得するには、`GET /2.0/docgen_jobs_id`エンドポイントを使用して、`job_id`を指定します。
 
 <Samples id="get_docgen_jobs_id_v2025.0">
 
 </Samples>
 
-## Get Box Doc Gen jobs in batch with a specific ID
+## 特定のIDを使用してバッチ内のGet Box Doc Genジョブを取得
 
-A single request can generate several documents. In such a case, a separate generation job is run for each document and all these jobs are included in one "batch" meaning a request. To get all jobs performed within one request, use the `GET /2.0/docgen_batch_jobs_id` endpoint and provide the `batch_id`.
+単一のリクエストで複数のドキュメントを生成できます。このような場合、個別の生成ジョブが各ドキュメントに対して実行され、これらすべてのジョブが1つの「バッチ」(つまり、1つのリクエスト) に含まれます。1つのリクエスト内で実行されたすべてのジョブを取得するには、`GET /2.0/docgen_batch_jobs_id`エンドポイントを使用し、`batch_id`を指定します。
 
 <Samples id="get_docgen_jobs_id_v2025.0">
 

@@ -28,55 +28,55 @@ fullyTranslated: true
 ---
 # Box Doc Gen
 
-Box Doc Gen allows you to generate business documents such as offer letters, sales contracts, invoices or agreements. You can generate documents based on Box Doc Gen templates uploaded to Box, with data fields that can be dynamically filled using Box Doc Gen API.
+Box Doc Genを使用すると、採用通知書、売買契約書、請求書、契約書などのビジネスドキュメントを生成できます。BoxにアップロードされたBox Doc Genテンプレートに基づいた、Box Doc Gen APIを使用して動的に入力できるデータフィールドを含むドキュメントを生成できます。
 
 <Message type="notice">
 
-Box Doc Gen only supports the ability to leverage English template tags when using Box Doc Gen templates. We recommend that customers test and review that Box Doc Gen supports their desired language requirements.
+Box Doc Genでは、Box Doc Genテンプレートの使用時に英語のテンプレートタグを利用する機能のみがサポートされています。お客様には、Box Doc Genがご希望の言語の要件をサポートしているかどうかをテストおよび確認することをお勧めします。
 
 </Message>
 
 ## 前提条件
 
-* access to Microsoft Word
+* Microsoft Wordへのアクセス権限
 
-To use Box Doc Gen, you must have access to Microsoft Word, as it is required for creating and authoring your document templates. You can utilize the Box Doc Gen Add-in for a code-free experience or apply tagging scripts within Word to prepare your documents.
+Box Doc Genを使用するには、ドキュメントテンプレートの作成に必要になるため、Microsoft Wordへのアクセス権限が必要です。Box Doc Genアドインを利用してコード不要のエクスペリエンスを実現するか、Word内でタグ付きスクリプトを適用してドキュメントを準備することができます。
 
 <Message type="notice">
 
-Box Doc Gen is designed to facilitate the dynamic generation of business documents, but it is important to note that Box does not have control over users’ access to Microsoft Word. Users must ensure they have the necessary permissions and access to Microsoft Word to create and author document templates effectively.
+Box Doc Genは、ビジネスドキュメントの動的な生成を容易にすることを目的としていますが、Boxでは、ユーザーのMicrosoft Wordに対するアクセス権限を制御していないことに注意してください。ユーザーは、ドキュメントテンプレートを効果的に作成するために必要なMicrosoft Wordに対する権限やアクセス権限があることを確認する必要があります。
 
 </Message>
 
-## Box Doc Gen API capabilities
+## Box Doc Gen APIの機能
 
-Box Doc Gen API allows you to:
+Box Doc Gen APIを使用すると、以下のことが可能です。
 
-* mark documents as Box Doc Gen templates,
-* generate documents based on Box Doc Gen templates you store in Box,
-* examine the details of Box Doc Gen templates and document generation jobs.
+* ドキュメントをBox Doc Genテンプレートとして設定する。
+* Boxに保存したBox Doc Genテンプレートに基づいてドキュメントを生成する。
+* Box Doc Genテンプレートやドキュメント生成ジョブの詳細を調査する。
 
-## Box Doc Gen API version
+## Box Doc Gen APIバージョン
 
-Box Doc Gen API was released in Box API version `2025.0`. All API requests to Box Doc Gen API endpoints must specify a valid API version by setting the `box-version` header to `2025.0`.
+Box Doc Gen APIはBox APIバージョン`2025.0`でリリースされました。Box Doc Gen APIのエンドポイントに対するすべてのAPIリクエストでは、`box-version`ヘッダーを`2025.0`に設定して、有効なAPIバージョンを指定する必要があります。
 
-For more details, see [Box API versioning][api-versioning].
+詳細については、[APIのバージョン戦略][api-versioning]を参照してください。
 
-## Box Doc Gen workflow
+## Box Doc Genのワークフロー
 
-![A flow diagram representing Box Doc Gen workflow](./images/docgen-workflow.png)
+![Box Doc Genのワークフローを表すフロー図](./images/docgen-workflow.png)
 
-1. Author your Doc Gen Template
+1. Box Doc Genテンプレートを作成します。
 
-* Use [Doc Gen Add-in for Microsoft Word][template-addin] to create a template without any code.
-* You can also leverage [Doc Gen's tagging script][tagging-script] to author the template.
+* [Microsoft Word用Doc Genアドイン][template-addin]を使用して、コードを使用せずにテンプレートを作成する。
+* [Doc Genのタグ付きスクリプト][tagging-script]を利用してテンプレートを作成することも可能。
 
-2. [Add the template to Box][upload-template] using the Box Doc Gen UI. At this point, you can:
+2. Box Doc Gen UIを使用して[Boxにテンプレートを追加][upload-template]します。この時点では、以下のことが可能です。
 
-* Mark an existing file In Box as Doc Gen template.
-* Create or Upload a document and mark it as a Box Doc Gen template.
+* Box内の既存のファイルをDoc Genテンプレートとして設定する。
+* ドキュメントを作成またはアップロードして、Box Doc Genテンプレートとして設定する。
 
-3. [Generate the document][generate-document] using Box Doc Gen API.
+3. Box Doc Gen APIを使用して[ドキュメントを生成][generate-document]する。
 
 [template-addin]: https://support.box.com/hc/en-us/articles/36587535449747-Installing-Box-Doc-Gen-Add-in
 

@@ -406,7 +406,7 @@ Box UI Elementsは、V4の注釈が十分に機能している、使用可能な
 
 <Message type="notice">
 
-Box AI for UI Elements is a beta feature and it is available to **Enterprise Plus** and **Enterprise Advanced** customers.
+Box AI for UI Elementsはベータ機能であり、**Enterprise Plus**および**Enterprise Advanced**をご利用のお客様が利用できます。
 
 </Message>
 

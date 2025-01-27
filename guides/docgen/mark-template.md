@@ -21,13 +21,13 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/docgen/mark-template.md
 fullyTranslated: true
 ---
-# Mark file as Box Doc Gen template
+# ファイルをBox Doc Genテンプレートとして設定
 
-You can mark an existing document as a Box Doc Gen template and use it to generate documents.
+既存のドキュメントをBox Doc Genテンプレートとして設定し、それを使用してドキュメントを生成できます。
 
 ## 開始する前に
 
-Before you start using Box Doc Gen API, follow the steps listed in the [get started with Box Doc Gen][docgen-prerequisites] guide to create a custom app and a Box Doc Gen template.
+Box Doc Gen APIの使用を開始する前に、[Box Doc Genの使い方][docgen-prerequisites]ガイドに記載されている手順に従って、カスタムアプリとBox Doc Genテンプレートを作成してください。
 
 ## リクエストの送信
 
@@ -35,22 +35,22 @@ Before you start using Box Doc Gen API, follow the steps listed in the [get star
 
 ### パラメータ
 
-To make a call you need to pass the following parameters. Mandatory parameters are in **bold**.
+コールを実行するには、以下のパラメータを渡す必要があります。必須のパラメータは**太字**で示されています。
 
-| パラメータ           | 説明                                                          | 例          |
-| --------------- | ----------------------------------------------------------- | ---------- |
-| **`file.id`**   | ID of the file to be marked as the Box Doc Gen template.    | `12345678` |
-| **`file.type`** | The type of provided input. The value is always **`file`**. | `file`     |
+| パラメータ           | 説明                                | 例          |
+| --------------- | --------------------------------- | ---------- |
+| **`file.id`**   | Box Doc Genテンプレートとして設定するファイルのID。  | `12345678` |
+| **`file.type`** | 指定した入力データの種類。値は常に**`file`**になります。 | `file`     |
 
 ## ユースケース
 
-### Mark a file as Box Doc Gen template
+### ファイルをBox Doc Genテンプレートとして設定する
 
-The following sample show you how to mark a file to ensure it is recognized as a Box Doc Gen template.
+次のサンプルでは、ファイルがBox Doc Genテンプレートとして認識されるように設定する方法を示します。
 
 <Message type="notice">
 
-The file must be in `.docx` format.
+ファイルは`.docx`形式である必要があります。
 
 </Message>
 
@@ -58,9 +58,9 @@ The file must be in `.docx` format.
 
 </Samples>
 
-### Remove Box Doc Gen template marking from a file
+### ファイルからBox Doc Genテンプレートの設定を削除する
 
-To make sure a file is no longer marked as a Box Doc Gen template, use the `DELETE 2.0/docgen_templates/:template_id` request.
+ファイルのBox Doc Genテンプレートの設定が解除されるようにするには、`DELETE 2.0/docgen_templates/:template_id`リクエストを使用します。
 
 <Samples id="delete_docgen_templates_id_v2025.0">
 
