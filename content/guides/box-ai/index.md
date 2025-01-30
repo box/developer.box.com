@@ -14,10 +14,6 @@ related_guides:
 
 # Box AI
 
-<Message type="notice">
-Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus and Enterprise Advanced customers.
-</Message>
-
 Box AI API allows you to use Box AI
 functionality
 in your custom applications. For example, you can
