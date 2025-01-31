@@ -14,6 +14,11 @@ related_guides:
 
 # AI agent configuration versioning
 
+<Message type='notice'>
+Box updates the default models across the endpoints on a regular basis in order to stay up to date with the most advanced options. If a default model is updated, it will be posted in the developer changelog.
+
+</Message>
+
 AI agent configuration versioning gives the developers more control over AI agent versioning and ensures consistent responses.
 
 AI agent configuration versioning adopts the following principles:
