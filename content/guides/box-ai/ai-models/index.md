@@ -56,14 +56,14 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
-    <Tile type="gemini" title="google__gemini_2.0_flash_001" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-001-model-card">
+    <Tile type="gemini" title="google__gemini_2_0_flash_001" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-001-model-card">
       Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
-    <Tile type="gemini" title="google__gemini_2_0_flash_lite_preview" href="/guides/box-ai/ai-models/gemini-2-0-flash-lite-preview-02-05">
+    <Tile type="gemini" title="google__gemini_2_0_flash_lite_preview" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-lite-preview-02-05">
       Gemini multimodal model designed to handle lightweight tasks.
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>

@@ -17,7 +17,7 @@ related_guides:
 | Item  | Value | Description |
 |-----------|----------|----------|
 |Model name|**Google Gemini 2.0 Flash**| The name of the model. | 
-|API model name|`google__gemini_2.0_flash_001`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
+|API model name|`google__gemini_2_0_flash_001`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer| **Google** | The trusted organization that securely hosts LLM. |
 |Model provider|**Google**| The organization that provides this model. |
 |Release date|**February 5th 2025** | The release date for the model.|
