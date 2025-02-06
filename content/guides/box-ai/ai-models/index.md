@@ -63,7 +63,7 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
-    <Tile type="gemini" title="gemini-2.0-flash-lite-preview-02-05" href="/guides/box-ai/ai-models/gemini-2-0-flash-lite-preview-02-05">
+    <Tile type="gemini" title="google__gemini_2_0_flash_lite_preview" href="/guides/box-ai/ai-models/gemini-2-0-flash-lite-preview-02-05">
       Gemini multimodal model designed to handle lightweight tasks.
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
