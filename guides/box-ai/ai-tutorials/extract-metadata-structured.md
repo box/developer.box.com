@@ -25,12 +25,6 @@ source_url: >-
 ---
 # Extract metadata from file (structured)
 
-<Message type="notice">
-
-Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus and Enterprise Advanced customers.
-
-</Message>
-
 With Box AI API, you can extract metadata from the provided file
 and get the result in the form of key-value pairs.
 As input, you can either create a structure using the `fields` parameter, or use an already defined metadata template.

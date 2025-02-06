@@ -12,7 +12,7 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 9
+total_steps: 11
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card
@@ -81,27 +81,6 @@ Available
 
 </Tile>
 
-<Tile type="gemini" title="google__gemini_1_5_flash_001" href="/guides/box-ai/ai-models/google-gemini-1-5-flash-001-model-card">
-
-The fastest Gemini multimodal model, built for high volume tasks and latency-sensitive applications.
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-Default for Box AI Extract
-
-</strong>
-
-<strong style="background-color: #fffbf3">
-
-Preview
-
-</strong>
-
-</div>
-
-</Tile>
-
 <Tile type="gpt" title="azure_openai__gpt_4o_2024_05_13" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card">
 
 A multimodal model, highly efficient in handling complex, multi-step tasks.
@@ -116,27 +95,6 @@ Chat
 <strong style="background-color: #e1ffe7">
 
 Available
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="gemini" title="google__gemini_1_5_pro_001" href="/guides/box-ai/ai-models/google-gemini-1-5-pro-001-model-card">
-
-A foundation model that performs well at a variety of multimodal tasks.
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-Chat
-
-</strong>
-
-<strong style="background-color: #fffbf3">
-
-Preview
 
 </strong>
 
@@ -166,6 +124,90 @@ Available
 
 </Tile>
 
+<Tile type="gemini" title="google__gemini_2_0_flash_001" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-001-model-card">
+
+Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Chat
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+Available
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="gemini" title="google__gemini_2_0_flash_lite_preview" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-lite-preview-02-05">
+
+Gemini multimodal model designed to handle lightweight tasks.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Chat
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+Available
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="gemini" title="google__gemini_1_5_flash_001" href="/guides/box-ai/ai-models/google-gemini-1-5-flash-001-model-card">
+
+Gemini multimodal model, built for high volume tasks and latency-sensitive applications.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Default for Box AI Extract
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+Available
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="gemini" title="google__gemini_1_5_pro_001" href="/guides/box-ai/ai-models/google-gemini-1-5-pro-001-model-card">
+
+A foundation model that performs well at a variety of multimodal tasks.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Chat
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+Available
+
+</strong>
+
+</div>
+
+</Tile>
+
 <Tile type="model" title="aws__claude_3_haiku" href="/guides/box-ai/ai-models/aws-claude-3-haiku-model-card">
 
 A model tailored for various language tasks, including creative writing and conversational AI.
@@ -177,7 +219,7 @@ Chat
 
 </strong>
 
-<strong style="background-color: #e1ffe7">
+<strong style="background-color: #fffbf3">
 
 Preview
 
@@ -198,7 +240,7 @@ Chat
 
 </strong>
 
-<strong style="background-color: #e1ffe7">
+<strong style="background-color: #fffbf3">
 
 Preview
 
@@ -219,7 +261,7 @@ Chat
 
 </strong>
 
-<strong style="background-color: #e1ffe7">
+<strong style="background-color: #fffbf3">
 
 Preview
 
@@ -240,7 +282,7 @@ Chat
 
 </strong>
 
-<strong style="background-color: #e1ffe7">
+<strong style="background-color: #fffbf3">
 
 Preview
 

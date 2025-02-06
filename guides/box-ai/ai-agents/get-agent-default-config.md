@@ -25,12 +25,6 @@ source_url: >-
 ---
 # Get default AI agent configuration
 
-<Message type="notice">
-
-Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus and Enterprise Advanced customers.
-
-</Message>
-
 The `GET /2.0/ai_agent_default` endpoint allows you to fetch the default configuration for AI services.
 Once you get the configuration details you can override them using the [`ai_agent`][ai-agent-config] parameter.
 
