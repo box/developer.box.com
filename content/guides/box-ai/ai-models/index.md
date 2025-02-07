@@ -12,7 +12,7 @@ alias_paths:
 # Supported AI models
 
 <Message type="notice">
-Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
+Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus and Enterprise Advanced customers.
 </Message>
 
 ## Using models
@@ -41,13 +41,6 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
-    <Tile type="gemini" title="google__gemini_1_5_flash_001" href="/guides/box-ai/ai-models/google-gemini-1-5-flash-001-model-card">
-      The fastest Gemini multimodal model, built for high volume tasks and latency-sensitive applications.
-      <div>
-        <strong style="background-color: #e8e8e8">Default for Box AI Extract</strong>
-        <strong style="background-color: #fffbf3">Preview</strong>
-      </div>
-    </Tile>
     <Tile type="gpt" title="azure_openai__gpt_4o_2024_05_13" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card">
       A multimodal model, highly efficient in handling complex, multi-step tasks.
       <div>
@@ -55,58 +48,37 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
-        <Tile type="gemini" title="google__gemini_1_5_pro_001" href="/guides/box-ai/ai-models/google-gemini-1-5-pro-001-model-card">
-      A foundation model that performs well at a variety of multimodal tasks.
-      <div>
-      <strong style="background-color: #e8e8e8">Chat</strong>
-        <strong style="background-color: #fffbf3">Preview</strong>
-      </div>
-    </Tile>
     <Tile type="gpt" title="azure__openai__text_embedding_ada_002" href="/guides/box-ai/ai-models/azure-text-embedding-ada-002-model-card">
       A most capable 2nd generation text embedding model. Skilled in
       text search, code search, and sentence similarity.
-      <div>
-       <strong style="background-color: #e8e8e8">Embeddings</strong>
-        <strong style="background-color: #e1ffe7">Available</strong>
-      </div>
-    </Tile>
-    <Tile type="model" title="google__textembedding_gecko" href="/guides/box-ai/ai-models/google-textembedding-gecko-model-card">
-      A text embedding model, converting textual data into numerical vectors that machine learning algorithms can process.
       <div>
         <strong style="background-color: #e8e8e8">Embeddings</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
-    <Tile type="model" title="google__textembedding_gecko_002" href="/guides/box-ai/ai-models/google-textembedding-gecko-002-model-card">
-       A text embedding model converting textual data into numerical vectors that machine learning algorithms can process.
-      <div>
-      <strong style="background-color: #e8e8e8">Embeddings</strong>
-        <strong style="background-color: #e1ffe7">Available</strong>
-      </div>
-    </Tile>
-    <Tile type="model" title="google__textembedding_gecko_003" href="/guides/box-ai/ai-models/google-textembedding-gecko-003-model-card">
-      A text embedding model converting textual data into numerical vectors that machine learning algorithms can process.
-      <div>
-      <strong style="background-color: #e8e8e8">Embeddings</strong>
-        <strong style="background-color: #e1ffe7">Available</strong>
-      </div>
-    </Tile>
-    <Tile type="palm" title="google__text_unicorn" href="/guides/box-ai/ai-models/google-text-unicorn-model-card">
-       A model that can handle complex tasks, such as coding, due to the extensive embedded knowledge.
-      <div>
-      <strong style="background-color: #e8e8e8">Chat</strong>
-        <strong style="background-color: #e1ffe7">Available</strong>
-      </div>
-    </Tile>
-    <Tile type="palm" title="google__text_bison" href="/guides/box-ai/ai-models/google-text-bison-model-card">
-      A model capable of creating document summaries, answers to questions, and content classification labels.
+    <Tile type="gemini" title="google__gemini_2_0_flash_001" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-001-model-card">
+      Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
-    <Tile type="palm" title="google__text_bison_32k" href="/guides/box-ai/ai-models/google-text-bison-32-model-card">
-      An enhanced **text-bison** model capable of creating document summaries, answers to questions, and content classification labels.
+    <Tile type="gemini" title="google__gemini_2_0_flash_lite_preview" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-lite-preview-02-05">
+      Gemini multimodal model designed to handle lightweight tasks.
+      <div>
+        <strong style="background-color: #e8e8e8">Chat</strong>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="gemini" title="google__gemini_1_5_flash_001" href="/guides/box-ai/ai-models/google-gemini-1-5-flash-001-model-card">
+      Gemini multimodal model, built for high volume tasks and latency-sensitive applications.
+      <div>
+        <strong style="background-color: #e8e8e8">Default for Box AI Extract</strong>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="gemini" title="google__gemini_1_5_pro_001" href="/guides/box-ai/ai-models/google-gemini-1-5-pro-001-model-card">
+        A foundation model that performs well at a variety of multimodal tasks.
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
@@ -116,28 +88,28 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
       A model tailored for various language tasks, including creative writing and conversational AI.
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
-        <strong style="background-color: #e1ffe7">Preview</strong>
+        <strong style="background-color: #fffbf3">Preview</strong>
       </div>
     </Tile>
     <Tile type="model" title="aws__claude_3_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-sonnet-model-card">
        A model designed for advanced language tasks, focusing on comprehension and context handling.
       <div>
-         <strong style="background-color: #e8e8e8">Chat</strong>
-        <strong style="background-color: #e1ffe7">Preview</strong>
+        <strong style="background-color: #e8e8e8">Chat</strong>
+        <strong style="background-color: #fffbf3">Preview</strong>
       </div>
     </Tile>
      <Tile type="model" title="aws__claude_3_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-5-sonnet-model-card">
       A model designed to enhance language understanding and generation tasks.
       <div>
-         <strong style="background-color: #e8e8e8">Chat</strong>
-        <strong style="background-color: #e1ffe7">Preview</strong>
+        <strong style="background-color: #e8e8e8">Chat</strong>
+        <strong style="background-color: #fffbf3">Preview</strong>
       </div>
     </Tile>
      <Tile type="model" title="aws__titan_text_lite" href="/guides/box-ai/ai-models/aws-titan-text-lite-model-card">
       A model capable of advanced language processing, handling extensive contexts, making it suitable for complex tasks.
       <div>
-         <strong style="background-color: #e8e8e8">Chat</strong>
-        <strong style="background-color: #e1ffe7">Preview</strong>
+        <strong style="background-color: #e8e8e8">Chat</strong>
+        <strong style="background-color: #fffbf3">Preview</strong>
       </div>
     </Tile>
 </TileGrid>
@@ -147,7 +119,6 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
 [extract]: e://post_ai_extract
 [extract-structured]: e://post_ai_extract_structured
 [agent]: e://get_ai_agent_default
-[azure-ai-gpt-3-5-model]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#gpt-35
 [azure-ai-mini-4o-model]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=python-secure#gpt-4o-and-gpt-4-turbo
 [vertex-ai-model]: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#models
 [vertex-ai-gemini-models]: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#gemini-models

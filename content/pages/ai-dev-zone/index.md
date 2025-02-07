@@ -23,7 +23,7 @@ view sample code, explore Box AI use cases, and more!
   <Header centered>
     Try out interactive demos
   </Header>
-    Box AI API is available to all Enterprise Plus customers. Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change.
+    Box AI API is available to all Enterprise Plus and Enterprise Advanced customers. Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change.
 
   <TileGrid rows="4">
     <Tile type="ai" title="Get a summary" href="/ai-dev-zone-summary">
@@ -123,22 +123,22 @@ view sample code, explore Box AI use cases, and more!
         Check out the high-level features of the Box AI API in one minute.
 
     </Tile>
-    <Tile image="API-text-gen" title="Endpoint overivew"
+    <Tile image="API-text-gen" title="Endpoint overview"
       href="https://www.youtube.com/watch?v=xxR8aF4r3g8&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
         See a demo of the Box AI API text generation endpoint. 
 
     </Tile>
-    <Tile image="API-q&a" title="Endpoint overivew"
+    <Tile image="API-q&a" title="Endpoint overview"
       href="https://www.youtube.com/watch?v=UyKfacz6G9g&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
         See a demo of the Box AI API document Q&A endpoint.
 
     </Tile>
-    <Tile image="API-extract" title="Endpoint overivew"
+    <Tile image="API-extract" title="Endpoint overview"
       href="https://www.youtube.com/watch?v=fijj0CX67c4&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
         Extract metadata with various prompt formats with Box AI API.
 
     </Tile>
-    <Tile image="API-extract-structured" title="Endpoint overivew"
+    <Tile image="API-extract-structured" title="Endpoint overview"
       href="https://www.youtube.com/watch?v=dU3oo4sHZt0&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
         Extract metadata with predefined structure with Box AI API.
 

@@ -13,10 +13,6 @@ related_guides:
 
 # Override AI model configuration
 
-<Message type="notice">
-Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
-</Message>
-
 The `ai_agent` configuration allows you to override the default AI model configuration. It is available for the following endpoints:
 
 * [`POST ai/ask`][ask]
@@ -52,7 +48,7 @@ A complete configuration for `ai/ask` is as follows:
       "temperature": 0,
       "top_p": 1
     },
-    "model": "azure__openai__gpt_3_5_turbo_16k",
+    "model": "azure__openai__gpt_4o_mini",
     "num_tokens_for_completion": 8400,
     "prompt_template": "It is `{current_date}`, consider these travel options `{content}` and answer the `{user_question}`.",
     "system_message": "You are a helpful travel assistant specialized in budget travel"
@@ -66,7 +62,7 @@ A complete configuration for `ai/ask` is as follows:
       "temperature": 0,
       "top_p": 1
     },
-    "model": "azure__openai__gpt_3_5_turbo_16k",
+    "model": "azure__openai__gpt_4o_mini",
     "num_tokens_for_completion": 8400,
     "prompt_template": "It is `{current_date}`, consider these travel options `{content}` and answer the `{user_question}`.",
     "system_message": "You are a helpful travel assistant specialized in budget travel"
@@ -87,7 +83,7 @@ A complete configuration for `ai/ask` is as follows:
       "temperature": 0,
       "top_p": 1
     },
-    "model": "azure__openai__gpt_3_5_turbo_16k",
+    "model": "azure__openai__gpt_4o_mini",
     "num_tokens_for_completion": 8400,
     "prompt_template": "It is `{current_date}`, consider these travel options `{content}` and answer the `{user_question}`.",
     "system_message": "You are a helpful travel assistant specialized in budget travel"
@@ -108,7 +104,7 @@ A complete configuration for `ai/ask` is as follows:
       "temperature": 0,
       "top_p": 1
     },
-    "model": "azure__openai__gpt_3_5_turbo_16k",
+    "model": "azure__openai__gpt_4o_mini",
     "num_tokens_for_completion": 8400,
     "prompt_template": "It is `{current_date}`, consider these travel options `{content}` and answer the `{user_question}`.",
     "system_message": "You are a helpful travel assistant specialized in budget travel"
