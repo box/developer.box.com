@@ -26,12 +26,6 @@ fullyTranslated: true
 ---
 # AIエージェントのデフォルト構成を取得する
 
-<Message type="notice">
-
-メタデータ抽出に関連するエンドポイントは、現在、BoxのMain Beta Agreementに従い提供されるベータ機能のため、利用可能な機能が変更される可能性があります。Box AI APIは、Enterprise PlusおよびEnterprise Advancedをご利用のすべてのお客様が利用できます。
-
-</Message>
-
 `GET /2.0/ai_agent_default`エンドポイントを使用すると、AIサービスのデフォルト構成を取得できます。構成の詳細を取得したら、[`ai_agent`][ai-agent-config]パラメータを使用して構成を上書きできます。
 
 ## リクエストの送信

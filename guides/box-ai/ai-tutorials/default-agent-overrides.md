@@ -29,12 +29,6 @@ fullyTranslated: true
 ---
 # AIモデルの構成の上書き
 
-<Message type="notice">
-
-メタデータ抽出に関連するエンドポイントは、現在、BoxのMain Beta Agreementに従い提供されるベータ機能のため、利用可能な機能が変更される可能性があります。Box AI APIは、Enterprise PlusおよびEnterprise Advancedをご利用のすべてのお客様が利用できます。
-
-</Message>
-
 ## 開始する前に
 
 カスタムアプリを作成して認証するには、[Box AIの使い方][prereq]に記載されている手順に従っていることを確認してください。さらにコンテキストを取得するには、[エージェントの上書き][agent-overrides]を参照してください。

@@ -24,12 +24,6 @@ fullyTranslated: true
 ---
 # Box AIの使い方
 
-<Message type="notice">
-
-メタデータ抽出に関連するエンドポイントは、現在、BoxのMain Beta Agreementに従い提供されるベータ機能のため、利用可能な機能が変更される可能性があります。Box AI APIは、Enterprise PlusおよびEnterprise Advancedをご利用のすべてのお客様が利用できます。
-
-</Message>
-
 ソリューションにBox AI APIを実装するには、その機能にアクセスできることを確認する必要があります。また、Box AIスコープが有効になっているカスタムアプリケーションと、コールを認証するための開発者トークンも必要です。
 
 <Message type="notice">
