@@ -7,17 +7,29 @@ related_guides:
   - docgen/mark-template
   - docgen/generate-document
 related_endpoints:
+<<<<<<< HEAD
   - get_docgen_batch_jobs_id
   - get_docgen_jobs_id
   - get_docgen_jobs
   - get_docgen_templates
   - post_docgen_templates
+=======
+  - get_docgen_batch_jobs_id_v2025.0
+  - get_docgen_jobs_id_v2025.0
+  - get_docgen_jobs_v2025.0
+  - get_docgen_templates_v2025.0
+  - post_docgen_templates_v2025.0
+>>>>>>> 01ddeb2b22e1f38b16259cc6f2219596057ef27b
 ---
 
 # Box Doc Gen
 
 Box Doc Gen allows you to generate business documents such as offer letters, sales contracts, invoices or agreements.
+<<<<<<< HEAD
 You can generate documents based on Box Doc Gen templates uploaded to Box, with data fields that can be dynamically filled using Box Doc Gen API. 
+=======
+You can generate documents based on Box Doc Gen templates uploaded to Box, with data fields that can be dynamically filled using Box Doc Gen API.
+>>>>>>> 01ddeb2b22e1f38b16259cc6f2219596057ef27b
 
 <Message type='notice'>
 Box Doc Gen only supports the ability to leverage English template tags when
@@ -25,6 +37,27 @@ using Box Doc Gen templates. We recommend that customers test and review that Bo
 
 </Message>
 
+<<<<<<< HEAD
+=======
+## Prerequisites
+
+* access to Microsoft Word
+
+To use Box Doc Gen, you must have access to Microsoft Word, as it is required
+for creating and authoring your document templates. You can utilize the Box Doc
+Gen Add-in for a code-free experience or apply tagging scripts within Word to
+prepare your documents.  
+
+<Message type='notice'>
+Box Doc Gen is designed to facilitate the dynamic generation of business
+documents, but it is important to note that Box does not have control over
+users’ access to Microsoft Word. Users must ensure they have the necessary
+permissions and access to Microsoft Word to create and author document
+templates effectively.
+
+</Message>
+
+>>>>>>> 01ddeb2b22e1f38b16259cc6f2219596057ef27b
 ## Box Doc Gen API capabilities
 
 Box Doc Gen API allows you to:
@@ -33,13 +66,26 @@ Box Doc Gen API allows you to:
 * generate documents based on Box Doc Gen templates you store in Box,
 * examine the details of Box Doc Gen templates and document generation jobs.
 
+<<<<<<< HEAD
+=======
+## Box Doc Gen API version
+
+Box Doc Gen API was released in Box API version `2025.0`. All API requests to Box Doc Gen API endpoints must specify a valid API version by setting the `box-version` header to `2025.0`.
+
+For more details, see [Box API versioning][api-versioning].
+
+>>>>>>> 01ddeb2b22e1f38b16259cc6f2219596057ef27b
 ## Box Doc Gen workflow
 
 ![A flow diagram representing Box Doc Gen workflow](./images/docgen-workflow.png)
 
 1. Author your Doc Gen Template
 	* Use [Doc Gen Add-in for Microsoft Word][template-addin] to create a template without any code.
+<<<<<<< HEAD
 	* You can also leverage [Doc Gen's tagging script][tagging-script] to author the template. 
+=======
+	* You can also leverage [Doc Gen's tagging script][tagging-script] to author the template.
+>>>>>>> 01ddeb2b22e1f38b16259cc6f2219596057ef27b
 
 2. [Add the template to Box][upload-template] using the Box Doc Gen UI. At this point, you can:
 	* Mark an existing file In Box as Doc Gen template.
@@ -51,4 +97,9 @@ Box Doc Gen API allows you to:
 [json-template]: https://support.box.com/hc/en-us/articles/36148012877843-Creating-a-Box-Doc-Gen-Template-using-JSON-data
 [tagging-script]: https://support.box.com/hc/en-us/articles/36149723736723-Template-tags-reference
 [upload-template]: https://support.box.com/hc/en-us/articles/36587432368275-Managing-Box-Doc-Gen-Templates-in-Relay
+<<<<<<< HEAD
 [generate-document]: g://docgen/generate-document
+=======
+[generate-document]: g://docgen/generate-document
+[api-versioning]:g://api-calls/api-versioning-strategy
+>>>>>>> 01ddeb2b22e1f38b16259cc6f2219596057ef27b

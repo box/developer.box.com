@@ -17,10 +17,13 @@ alias_paths:
 
 # Override AI model configuration
 
+<<<<<<< HEAD
 <Message type="notice">
 Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus and Enterprise Advanced  customers.
 </Message>
 
+=======
+>>>>>>> 01ddeb2b22e1f38b16259cc6f2219596057ef27b
 ## Before you start
 
 Make sure you followed the steps listed in [getting started with Box AI][prereq] to create a custom app and authenticate.
