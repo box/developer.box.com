@@ -128,7 +128,7 @@ Box AI for NotesのQ&Aのデフォルト
 
 <Tile type="gemini" title="google__gemini_2_0_flash_001" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-001-model-card">
 
-Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
+大規模で大量かつ高頻度のタスクに最適になるよう設計されたGeminiマルチモーダルモデル。
 
 <div>
 
@@ -150,7 +150,7 @@ Gemini multimodal model designed for optimal for high-volume, high-frequency tas
 
 <Tile type="gemini" title="google__gemini_2_0_flash_lite_preview" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-lite-preview-02-05">
 
-Gemini multimodal model designed to handle lightweight tasks.
+軽量のタスクを処理するように設計されたGeminiマルチモーダルモデル。
 
 <div>
 
@@ -172,7 +172,7 @@ Gemini multimodal model designed to handle lightweight tasks.
 
 <Tile type="gemini" title="google__gemini_1_5_flash_001" href="/guides/box-ai/ai-models/google-gemini-1-5-flash-001-model-card">
 
-Gemini multimodal model, built for high volume tasks and latency-sensitive applications.
+大量のタスクやレイテンシの影響を受けやすいアプリケーション向けに構築されたGeminiマルチモーダルモデル。
 
 <div>
 
