@@ -4,32 +4,19 @@ related_guides:
   - docgen/docgen-getting-started
   - docgen/mark-template
 related_endpoints:
-<<<<<<< HEAD
-  - post_docgen_batches
-  - post_docgen_templates
-=======
   - post_docgen_batches_v2025.0
   - post_docgen_templates_v2025.0
->>>>>>> 01ddeb2b22e1f38b16259cc6f2219596057ef27b
 ---
 
 # Generate documents
 
-<<<<<<< HEAD
-The `POST /2.0/docgen_batches` endpoint allows you to generate a document using Box Doc Gen template as input. 
-=======
 The `POST /2.0/docgen_batches` endpoint allows you to generate a document using Box Doc Gen template as input.
->>>>>>> 01ddeb2b22e1f38b16259cc6f2219596057ef27b
 
 ## Prerequisites
 
 Before you start using Box Doc Gen API, follow the steps listed in the [get started with Box Doc Gen][docgen-prerequisites] guide to create a custom app and a Box Doc Gen template.
 
-<<<<<<< HEAD
-## Send a request 
-=======
 ## Send a request
->>>>>>> 01ddeb2b22e1f38b16259cc6f2219596057ef27b
 
 To generate a document or a set of documents,
 use the `POST /2.0/docgen_batches` endpoint.
@@ -57,15 +44,9 @@ When your Box Doc Gen template and JSON data is ready, you can make a request to
 
 A sample call looks as follows:
 
-<<<<<<< HEAD
-<Samples id='post_docgen_batches' />
-
-When the request is being processed, each entry in the `document_generation_data` array is treated as a separate document generation job that Box Doc Gen adds to the document generation queue. 
-=======
 <Samples id='post_docgen_batches_v2025.0' />
 
 When the request is being processed, each entry in the `document_generation_data` array is treated as a separate document generation job that Box Doc Gen adds to the document generation queue.
->>>>>>> 01ddeb2b22e1f38b16259cc6f2219596057ef27b
 
 Generated documents will be saved in the designated folder.
 
