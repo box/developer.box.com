@@ -2,11 +2,8 @@
 rank: 0
 related_guides:
 	- box-ai/ai-studio/create-agents
-  - box-ai/ai-tutorials/ask-questions
-  - box-ai/ai-tutorials/default-agent-overrides
-  - box-ai/ai-tutorials/generate-text
-  - box-ai/ai-tutorials/extract-metadata-structured
-  - box-ai/ai-tutorials/extract-metadata
+	- box-ai/ai-tutorials/ask-questions
+	- box-ai/ai-tutorials/generate-text
 ---
 
 # Box AI Studio
@@ -17,12 +14,15 @@ Box AI Studio is available only for Enterprise Advance accounts.
 
 [Box AI Studio][ai-studio] allows you to build and manage custom AI agents to
 best suit your business needs. For example, you can create an AI agent
-that acts as a governance consultant, answering questions on your
-customer's retention policies. 
+that acts as a compliance consultant, answering questions regarding customer
+documentation with the FedRAMP Moderate compliance in mind. 
 
-## 
+## Box AI Studio capabilities
 
+Currently, you can configure Box AI agent to answer user questions or generate
+text you can use in your documents.
 
+![ai agent capabilities](./images/ai-agent-capabilities.png)
 
 ## Supported languages
 
