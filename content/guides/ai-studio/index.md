@@ -15,8 +15,8 @@ related_guides:
 Box AI Studio is available only for Enterprise Advance accounts.
 </Message>
 
-[Box AI Studio][ai-studio] allows you to build and manage custom AI agents to best
-suit your business needs. For example, you can create an AI agent
+[Box AI Studio][ai-studio] allows you to build and manage custom AI agents to
+best suit your business needs. For example, you can create an AI agent
 that acts as a governance consultant, answering questions on your
 customer's retention policies. 
 
