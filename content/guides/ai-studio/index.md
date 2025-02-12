@@ -24,6 +24,8 @@ text you can use in your documents.
 
 ![ai agent capabilities](./images/ai-agent-capabilities.png)
 
+<!--alex ignore-->
+
 ## Supported languages
 
 Box AI studio works in a number of languages including
