@@ -1,8 +1,8 @@
 ---
 rank: 1
 related_endpoints:
-  - post_docgen_templates
-  - post_docgen_batches
+  - post_docgen_templates_v2025.0
+  - post_docgen_batches_v2025.0
 related_guides:
   - docgen/generate-document
   - docgen/mark-template

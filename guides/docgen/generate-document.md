@@ -4,8 +4,8 @@ related_guides:
   - docgen/docgen-getting-started
   - docgen/mark-template
 related_endpoints:
-  - post_docgen_batches
-  - post_docgen_templates
+  - post_docgen_batches_v2025.0
+  - post_docgen_templates_v2025.0
 category_id: docgen
 subcategory_id: null
 is_index: false
@@ -55,7 +55,7 @@ When your Box Doc Gen template and JSON data is ready, you can make a request to
 
 A sample call looks as follows:
 
-<Samples id='post_docgen_batches' >
+<Samples id='post_docgen_batches_v2025.0' >
 
 </Samples>
 

@@ -11,7 +11,7 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/aws-claude-3-sonnet-model-card
 type: guide
-total_steps: 15
+total_steps: 17
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
 next_page_id: box-ai/ai-models/aws-titan-text-lite-model-card

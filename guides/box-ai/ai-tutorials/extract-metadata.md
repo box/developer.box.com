@@ -25,12 +25,6 @@ source_url: >-
 ---
 # Extract metadata from file (freeform)
 
-<Message type="notice">
-
-Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus and Enterprise Advanced  customers.
-
-</Message>
-
 Box AI API allows you to query a document and extract metadata based on a provided prompt.
 **Freeform** means that the prompt can include a stringified version of formats such as JSON or XML, or even plain text.
 
