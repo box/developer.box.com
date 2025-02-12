@@ -40,7 +40,7 @@ All the developer resources to help you get the most from Box products
     I'm new to Box Platform. How do I start?
   </Header>
     We got you covered! Follow these steps to build
-    new applications and discover Box Platform capabilities. Test
+    new applications and discover Box Platform capabilities.
 
   <TileGrid rows="3">
     <Tile type="users" title="1. Explore user types"
