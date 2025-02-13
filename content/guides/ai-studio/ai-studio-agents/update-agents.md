@@ -9,17 +9,17 @@ related_guides:
   - box-ai/ai-tutorials/extract-metadata
 ---
 
-## Update AI agent
+# Update AI agent
 
 The `POST /2.0/put_ai_agents_id` endpoint allows you to update a custom AI agent based on its ID. 
 
-### Send a request
+## Send a request
 
 To send a request, use the `POST /2.0/put_ai_agents_id` endpoint.
 
 <Samples id='put-ai-agents_id' />
 
-#### Parameters
+### Parameters
 
 To make a call, you must pass the following parameters. Mandatory parameters are in **bold**.
 
