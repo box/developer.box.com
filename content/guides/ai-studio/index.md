@@ -1,7 +1,7 @@
 ---
 rank: 0
 related_guides:
-  - ai-studio/create-agents
+  - ai-studio/ai-studio-agents/create-agents
   - box-ai/ai-tutorials/ask-questions
   - box-ai/ai-tutorials/generate-text
 ---

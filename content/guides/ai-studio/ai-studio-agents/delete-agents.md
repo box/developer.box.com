@@ -8,6 +8,7 @@ related_guides:
   - box-ai/ai-tutorials/extract-metadata-structured
   - box-ai/ai-tutorials/extract-metadata
 ---
+
 # Delete AI agent
 
 The `POST /2.0/delete_ai_agents_id` endpoint allows you to delete a custom AI agent based on its ID. 

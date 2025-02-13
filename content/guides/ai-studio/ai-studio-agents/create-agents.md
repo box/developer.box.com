@@ -8,6 +8,7 @@ related_guides:
   - box-ai/ai-tutorials/extract-metadata-structured
   - box-ai/ai-tutorials/extract-metadata
 ---
+
 # Create agents
 
 <Messsage type='caution'>

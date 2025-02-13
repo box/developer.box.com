@@ -1,17 +1,9 @@
 ---
 rank: 0
 related_guides:
-  - authentication/tokens/developer-tokens/
+  - ai-studio/ai-studio-agents/create-agents
   - box-ai/ai-tutorials/ask-questions
-  - box-ai/ai-tutorials/default-agent-overrides
   - box-ai/ai-tutorials/generate-text
-  - box-ai/ai-tutorials/extract-metadata-structured
-  - box-ai/ai-tutorials/extract-metadata
-related_endpoints:
-  - post_ai_agents
-	- get-ai-agents
-	- put_ai_agents_id
-	- delete_ai_agents_id
 ---
 
 # AI studio agents
