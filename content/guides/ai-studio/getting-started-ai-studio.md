@@ -43,7 +43,7 @@ To add a scope:
 2. Go to **Configuration** > **Required Access Scopes** > **Content Actions**
 3. Select the **Manage AI** scope. Box Platform will automatically include the scope when making the call. If you are added as an collaborator for a given app, but do not have Box AI API access, you will see the **Manage AI** scope checked and grayed out. This means the app owner has the AI scope enabled but you cannot change this setting.
 
-    ![box ai scopes](../images/box-ai-app-scopes.png)
+    ![box ai scopes](./images/box-ai-app-scopes.png)
 
 4. Submit your app for [authorization or enablement][authorization]. If you want to enable Box AI API for an existing application, you must [re-authorize][reauthorization] it.
 
