@@ -10,6 +10,12 @@ related_guides:
 ---
 # Create agents
 
+<Messsage type='caution'>
+
+Box AI Studio is available only for Enterprise Advanced accounts.
+
+</Message>
+
 The `POST /2.0/post_ai_agents` endpoint allows you to create a new, custom [AI agent][agents]. 
 
 ## Send a request
@@ -32,9 +38,9 @@ To make a call, you must pass the following parameters. Mandatory parameters are
 | **`access_state`** | The state of the AI Agent. Value is one of `enabled` `disabled`. | `enabled` |
 | `ask` | The AI Agent to be used for ask. | `ask` |
 | `extract` | The AI Agent to be used for extraction. | |
+| `text_gen` | The AI agent used for generating text. | |
 | **`is_enterprise_default`** | If the agent is default for enterprise. | `false` |
 | **`name`** | The name of the AI Agent. | `My AI Agent` |
-| `text_gen` | The AI agent used for generating text. | |
 
 ## Update AI agent
 
@@ -56,9 +62,9 @@ To make a call, you must pass the following parameters. Mandatory parameters are
 | **`access_state`** | The state of the AI Agent. Value is one of `enabled` `disabled`. | `enabled` |
 | `ask` | The AI Agent to be used for ask. | `ask` |
 | `extract` | The AI Agent to be used for extraction. | |
+| `text_gen` | The AI agent used for generating text. | |
 | **`is_enterprise_default`** | If the agent is default for enterprise. | `false` |
 | **`name`** | The name of the AI Agent. | `My AI Agent` |
-| `text_gen` | The AI agent used for generating text. | |
 
 ## Delete AI agent
 

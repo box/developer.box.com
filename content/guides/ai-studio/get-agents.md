@@ -11,6 +11,12 @@ related_guides:
 
 # Get agents
 
+<Messsage type='caution'>
+
+Box AI Studio is available only for Enterprise Advanced accounts.
+
+</Message>
+
 ## List all AI agents
 
 The `POST /2.0/get-ai-agents` endpoint allows you to list all AI agents based on the provided parameters.

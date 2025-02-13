@@ -11,6 +11,12 @@ related_guides:
 
 # Get started with AI studio
 
+<Messsage type='caution'>
+
+Box AI Studio is available only for Enterprise Advanced accounts.
+
+</Message>
+
 To start creating custom AI agents with AI studio you need a custom application
 with enabled Box AI scope and a developer token to authenticate your calls.
 
@@ -66,11 +72,6 @@ For additional details, see [developer token][token].
 After you generate the token, you can use it in cURL
 or other clients, such as [Postman][postman], to make
 calls.
-
-<!-- This doc should include information on how to enable AI studio and what is needed to start working with the API. Similar doc is already created for Box AI:
-- Enable AI Studio for users (admin has to do this)
-- See if there are any additional scopes needed
-- Create an app and use the developer token to start working -->
 
 [enable]: https://support.box.com/hc/en-us/articles/37228079461267-Enabling-Box-AI-Studio-and-Managing-Agents/#h_01JH9HAMP43YYN6VWM51QCK413
 [token]: g://authentication/tokens/developer-tokens
