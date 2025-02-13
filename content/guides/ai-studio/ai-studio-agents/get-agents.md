@@ -43,23 +43,4 @@ To make a call, you must pass the following parameters. Mandatory parameters are
 | `marker` | Defines the position marker at which to begin returning results. | `JV9IRGZmieiBasejOG9yDCRNgd2ymoZIbjsxbJMjIs3kioVii` |
 | `mode` | The mode to filter the agent configuration to return. Value is one of `ask`, `text_gen`, `extract`. | `ask` |
 
-## Get AI agent by ID
-
-The `POST /2.0/get-ai-agents-id` endpoint allows you to list a specific AI
-agent by the `agent_id` parameter.
-
-### Send a request
-
-To send a request, use the `POST /2.0/get-ai-agents-id` endpoint.
-
-<Samples id='get-ai-agents-id' />
-
-#### Parameters
-
-To make a call, you must pass the following parameters. Mandatory parameters are in **bold**.
-
-| Parameter| Description| Example|
-|--------|--------|-------|
-| `agent_id` | The agent id to get. | `1234` |
-
 [getting-started]: g://ai-studio/getting-started-ai-studio
