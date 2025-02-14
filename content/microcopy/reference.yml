@@ -205,6 +205,10 @@ environments:
     A label for Swift code sample from
     auto-generated SDK - DO NOT TRANSLATE
   swift_gen: Swift Gen (Beta)
+  // java_gen: |-
+    A label for Java code sample from
+    auto-generated SDK - DO NOT TRANSLATE
+  java_gen: Java Gen (Beta)
 
 resource_variants:
   // base: |-
