@@ -9,10 +9,10 @@ subcategory_id: null
 is_index: true
 id: internal-documentation
 type: guide
-total_steps: 0
+total_steps: 1
 sibling_id: guides
 parent_id: guides
-next_page_id: ''
+next_page_id: internal-documentation/test
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/internal-documentation/index.md
