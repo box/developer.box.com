@@ -37,10 +37,12 @@ To make a call, you must pass the following parameters. Mandatory parameters are
 
 | Parameter| Description| Example|
 |--------|--------|-------|
+| `mode` | The mode to filter the agent configuration to return. Possible values are: `ask`, `text_gen`, and `extract`. | `ask` |
+| `fields` | The fields to return in the response. | `ask` |
 | `agent_state` | The state of the agent to return. Value is one of `enabled`,`disabled`. | `enabled` |
 | `fields` | The fields to return in the response. Value is one of `ask`, `text_gen`, `extract`. | `ask` |
-| `limit` | The maximum number of items to return per page. | `1000` |
+| `include_box_default` | Whether to include the Box default agents in the response. | `true` |
 | `marker` | Defines the position marker at which to begin returning results. | `JV9IRGZmieiBasejOG9yDCRNgd2ymoZIbjsxbJMjIs3kioVii` |
-| `mode` | The mode to filter the agent configuration to return. Value is one of `ask`, `text_gen`, `extract`. | `ask` |
+
 
 [getting-started]: g://ai-studio/getting-started-ai-studio

@@ -25,10 +25,4 @@ To make a call, you must pass the following parameters. Mandatory parameters are
 
 | Parameter| Description| Example|
 |--------|--------|-------|
-| **`type`** | The type of agent used to handle queries. | `ai_agent` |
-| **`access_state`** | The state of the AI Agent. Value is one of `enabled` `disabled`. | `enabled` |
-| `ask` | The AI Agent to be used for ask. | `ask` |
-| `extract` | The AI Agent to be used for extraction. | |
-| `text_gen` | The AI agent used for generating text. | |
-| **`is_enterprise_default`** | If the agent is default for enterprise. | `false` |
-| **`name`** | The name of the AI Agent. | `My AI Agent` |
+| **`agent_id`** | The ID of the agent to update. | `1234` |

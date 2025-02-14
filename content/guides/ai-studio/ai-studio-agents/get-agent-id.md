@@ -26,4 +26,5 @@ To make a call, you must pass the following parameters. Mandatory parameters are
 
 | Parameter| Description| Example|
 |--------|--------|-------|
-| `agent_id` | The agent id to get. | `1234` |
+| **`agent_id`** | The agent id to get. | `1234` |
+| `fields` | The fields to return in the response. | `ask` |
