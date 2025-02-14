@@ -74,12 +74,13 @@ Here's what you can expect from the new SDKs:
 - **Embedded Documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
 - **Enhanced Convenience Methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers which help to ensure that you’re using variables correctly, and much more.
 
-| Platform                        | Maintained? | API Parity |
-| ------------------------------- | --------- | -------- |
-| [Python Gen SDK][pythongensdk]  |     Yes     |    Full    |
-| [Typescript Gen SDK][tsgensdk]  |     Yes     |    Full    |
-| [.NET SDK][dotnetgensdk]        |     Yes     |    Full    |
-| [Swift SDK][swiftgensdk] (Beta) |     Yes     |    Full    |
+| Platform                            | Maintained? | API Parity |
+| ----------------------------------- | ----------- | ---------- |
+| [Python Gen SDK][pythongensdk]      |     Yes     |    Full    |
+| [Typescript Gen SDK][tsgensdk]      |     Yes     |    Full    |
+| [.NET SDK][dotnetgensdk]            |     Yes     |    Full    |
+| [Swift SDK][swiftgensdk] (Beta)     |     Yes     |    Full    |
+| [Java Gen SDK][javagensdk] (Beta)   |     Yes     |    Full    |
 
 ### SDKs
 
@@ -227,6 +228,7 @@ for these tools.
 [tsgensdk]: https://github.com/box/box-typescript-sdk-gen
 [dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen
 [swiftgensdk]: https://github.com/box/box-swift-sdk-gen
+[javagensdk]: https://github.com/box/box-java-sdk-gen
 [postman]: https://postman.com
 
 <!-- i18n-enable localize-links -->
