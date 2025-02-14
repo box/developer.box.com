@@ -90,6 +90,12 @@ categories:
         // url: link to the Swift SDK (Generated)
         url: https://github.com/box/box-swift-sdk-gen
 
+      java_gen_sdk:
+        // text: Text for link to the Java SDK (Generated)
+        text: Java SDK (Generated)
+        // url: link to the Java SDK (Generated)
+        url: https://github.com/box/box-java-sdk-gen
+
       dotnet_gen_sdk:
         // text: Text for link to the .NET (Generated) SDK
         text: .NET SDK (Generated)
