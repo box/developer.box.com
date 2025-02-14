@@ -1,9 +1,9 @@
 ---
 rank: 1
 hide: true
-alias_paths: 
+alias_paths:
   - /en/internal
   - /guides/internal
 ---
 
-Testing if staging works properly.
+# Testing if staging works properly
