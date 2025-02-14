@@ -410,12 +410,6 @@ The property `features: { activityFeed: { annotations: { enabled: true  } } } }
 
 ## Box AI for UI Elements
 
-<Message type='notice'>
-
-Box AI for UI Elements is a beta feature and
-it is available to **Enterprise Plus** and **Enterprise Advanced** customers.
-</Message>
-
 Box AI for UI Elements enhances the Content Preview UI Element
 with additional features, allowing the developers
 to add the Box Q&A AI functionality to their custom app.
