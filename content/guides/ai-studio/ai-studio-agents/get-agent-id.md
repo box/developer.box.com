@@ -11,12 +11,12 @@ related_guides:
 
 # Get AI agent by ID
 
-The `POST /2.0/get-ai-agents-id` endpoint allows you to list a specific AI
+The `GET/2.0/ai_agents/{id}` endpoint allows you to list a specific AI
 agent by the `agent_id` parameter.
 
 ## Send a request
 
-To send a request, use the `POST /2.0/get-ai-agents-id` endpoint.
+To send a request, use the `GET/2.0/ai_agents/{id}` endpoint.
 
 <Samples id='get-ai-agents-id' />
 

@@ -19,11 +19,11 @@ Box AI Studio is available only for Enterprise Advanced accounts.
 
 ## List all AI agents
 
-The `POST /2.0/get-ai-agents` endpoint allows you to list all AI agents based on the provided parameters.
+The `GET/2.0/ai-agents` endpoint allows you to list all AI agents based on the provided parameters.
 
 ### Send a request
 
-To send a request, use the `POST /2.0/get-ai-agents` endpoint.
+To send a request, use the `GET/2.0/ai-agents` endpoint.
 
 Make sure you have generated the developer token
 to authorize your app. See [getting started with Box AI Studio][getting-started]
@@ -42,6 +42,7 @@ To make a call, you must pass the following parameters. Mandatory parameters are
 | `agent_state` | The state of the agent to return. Value is one of `enabled`,`disabled`. | `enabled` |
 | `fields` | The fields to return in the response. Value is one of `ask`, `text_gen`, `extract`. | `ask` |
 | `include_box_default` | Whether to include the Box default agents in the response. | `true` |
+| `limit` | The maximum number of items to return per page. | `1000` |
 | `marker` | Defines the position marker at which to begin returning results. | `JV9IRGZmieiBasejOG9yDCRNgd2ymoZIbjsxbJMjIs3kioVii` |
 
 
