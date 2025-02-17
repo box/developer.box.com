@@ -13,10 +13,6 @@ related_guides:
 
 # Override AI model configuration
 
-<Message type="notice">
-Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
-</Message>
-
 The `ai_agent` configuration allows you to override the default AI model configuration. It is available for the following endpoints:
 
 * [`POST ai/ask`][ask]
