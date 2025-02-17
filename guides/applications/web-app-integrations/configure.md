@@ -25,7 +25,7 @@ fullyTranslated: true
 ---
 # ウェブアプリ統合の作成
 
-このガイドでは、カスタムアプリとのウェブアプリ統合を設定する方法について説明します。
+This guide explains how to set up a Web App Integration with a Platform App.
 
 <message type="warning">
 
@@ -35,7 +35,7 @@ fullyTranslated: true
 
 ## OAuth 2.0アプリケーションの作成
 
-[開発者コンソール][devconsole]に移動し、[OAuth 2.0認証][custom-oauth2]を利用する[カスタムアプリ][ca]を作成します。
+Navigate to the [Developer Console][devconsole] and create a [Platform App][ca] that leverages [OAuth 2.0 authentication][custom-oauth2].
 
 ## 新しい統合の作成
 
@@ -136,7 +136,7 @@ BoxからクライアントコールバックのURLに送信されるPOSTリク�
 
 Box統合を一般公開するには、統合をApp Centerに掲載する必要があります。詳細については、[統合][integrations]ガイドに従ってください。
 
-[ca]: g://applications/app-types/custom-apps
+[ca]: g://applications/app-types/platform-apps
 
 [pu]: g://applications/web-app-integrations/types
 

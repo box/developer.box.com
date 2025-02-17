@@ -24,7 +24,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authorization/custom-app-approval.md
 fullyTranslated: true
 ---
-# カスタムアプリの承認
+# Platformアプリの承認
 
 [JWT][jwt]または[クライアント資格情報許可][ccg]を使用するサーバー認証アプリケーションは、使用前にBox管理者が承認する必要があります。
 
@@ -40,7 +40,7 @@ Box管理者は、管理コンソールでアプリケーションを適切に�
 
 ## 承認の通知
 
-アプリの承認を送信するための半自動プロセスは、開発者コンソールですべての種類のカスタムアプリケーションに使用できます。
+A semi-automated process to submit an app approval is available in the Developer Console for all platform application types.
 
 ### サーバー認証アプリ
 

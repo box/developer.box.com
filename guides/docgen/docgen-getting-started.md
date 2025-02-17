@@ -65,7 +65,7 @@ Box Doc Gen APIを使用してドキュメントを生成するには、Box Doc 
 
 [token]: g://authentication/tokens/developer-tokens
 
-[createapps]: g://applications/app-types/custom-apps
+[createapps]: g://applications/app-types/platform-apps
 
 [postman]: g://tooling/postman
 

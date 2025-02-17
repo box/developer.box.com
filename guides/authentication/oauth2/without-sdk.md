@@ -51,7 +51,7 @@ OAuth 2.0フローを介して取得したアクセストークンは、もと�
 
 続行する前に、以下の手順を完了しておく必要があります。
 
-* Box開発者コンソールで、OAuth 2.0認証方法を利用するカスタムアプリを作成する。
+* Create a Platform App within the Box Developer Console, which leverages the OAuth 2.0 authentication method.
 * アプリケーションの \[構成] タブに移動して、`client_id`と`client_secret`の値をコピーする。
 * アプリケーションの \[構成] タブで、少なくとも1つのリダイレクトURIが構成されていることを確認する。
 

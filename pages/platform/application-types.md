@@ -19,9 +19,9 @@ fullyTranslated: true
 
 Boxには、アプリケーション開発におけるさまざまなニーズやユースケースに対応するために各種アプリケーションが用意されています。アプリケーションの種類ごとに機能や認証方法のオプションは異なります。
 
-## カスタムアプリ
+## Platform App
 
-[カスタムアプリ][custom_app]は汎用性があるため、ほとんどのユースケースに対応可能です。開発者はカスタムアプリを使用することで、Boxの機能をカスタムインターフェース内に表示できます。Boxでは、コンテンツの閲覧、検索、プレビューなどのタスク向けにカスタマイズ可能なUI Elementsを提供しています。このようなアプリでは、認証用にOAuth 2.0、JWT、クライアント資格情報許可をサポートしています。カスタムアプリは、自分のファイルと他のユーザーのファイル両方へのアクセス、ファイルのアップロードとダウンロード、Box統合への掲載が必要なアプリケーションに最適です。
+[Platform Apps][custom_app] are versatile and can accommodate most use cases. They allow developers to present Box functionalities within a custom interface. Box provides customizable UI Elements for tasks like browsing, searching, and previewing content. These apps support OAuth 2.0, JWT, and Client Credentials Grant for authentication. Platform Apps are ideal for applications that need to access both their own and others' files, upload and download files, and potentially be listed in the Box Integrations.
 
 ## アクセス制限付きアプリ
 
@@ -45,7 +45,7 @@ Boxには、アプリケーション開発におけるさまざまなニーズ�
 
 </Next>
 
-[custom_app]: g://applications/app-types/custom-apps
+[custom_app]: g://applications/app-types/platform-apps
 
 [limited_app]: g://applications/app-types/limited-access-apps
 

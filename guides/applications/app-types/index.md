@@ -7,7 +7,7 @@ alias_paths:
   - /docs/get-started-with-the-box-api
   - /docs/app-management
   - /docs/configuring-box-platform
-  - /guides/applications/custom-apps/
+  - /guides/applications/platform-apps
   - /guides/applications/limited-access-apps/
   - /guides/applications/custom-skills/
 category_id: applications
@@ -18,7 +18,7 @@ type: guide
 total_steps: 4
 sibling_id: applications
 parent_id: applications
-next_page_id: applications/app-types/custom-apps
+next_page_id: applications/app-types/platform-apps
 previous_page_id: applications/app-types/select
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/app-types/index.md
@@ -50,7 +50,7 @@ fullyTranslated: true
 
 [devtoken]: g://authentication/tokens/developer-tokens
 
-[custom-apps]: g://applications/app-types/custom-apps
+[custom-apps]: g://applications/app-types/platform-apps
 
 [custom-skills]: g://applications/app-types/custom-skills
 

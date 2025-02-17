@@ -84,6 +84,6 @@ Authorization: Bearer {developer_token}
 
 [6]: e://get-integration-mappings-slack
 
-[7]: g://applications/app-types/custom-apps
+[7]: g://applications/app-types/platform-apps
 
 [8]: g://authentication/tokens/developer-tokens

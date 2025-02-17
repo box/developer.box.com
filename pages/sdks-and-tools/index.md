@@ -58,12 +58,13 @@ Swift SDKはパブリックベータ段階です。
 * **ドキュメントへの埋め込み**: 必要な情報すべてが1か所に保存されるように、すべてのオブジェクトおよびパラメータはSDKのソースコードに直接記述されます。
 * **便利なメソッドの強化**: 新しく導入された便利なメソッドは、認証、分割アップロード、指数バックオフ、自動再試行、型チェック (変数を正しく使用しているかどうかの確認に役立ちます) など、さまざまな側面をカバーします。
 
-| プラットフォーム                       | メンテナンスの有無 | APIパリティ |
-| ------------------------------ | --------- | ------- |
-| [Pythonの次世代SDK][pythongensdk]  | はい        | Full    |
-| [TypeScriptの次世代SDK][tsgensdk]  | はい        | Full    |
-| [.NET SDK][dotnetgensdk]       | はい        | Full    |
-| [Swift SDK][swiftgensdk] (ベータ) | はい        | Full    |
+| プラットフォーム                          | メンテナンスの有無 | APIパリティ |
+| --------------------------------- | --------- | ------- |
+| [Pythonの次世代SDK][pythongensdk]     | はい        | Full    |
+| [TypeScriptの次世代SDK][tsgensdk]     | はい        | Full    |
+| [.NET SDK][dotnetgensdk]          | はい        | Full    |
+| [Swift SDK][swiftgensdk] (ベータ)    | はい        | Full    |
+| [Java Gen SDK][javagensdk] (Beta) | はい        | Full    |
 
 ### SDK
 
@@ -201,6 +202,8 @@ Salesforce Developer Toolkitを使用すると、Box for Salesforce統合の動�
 [dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen
 
 [swiftgensdk]: https://github.com/box/box-swift-sdk-gen
+
+[javagensdk]: https://github.com/box/box-java-sdk-gen
 
 [postman]: https://postman.com
 

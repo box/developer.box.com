@@ -34,7 +34,7 @@ JSONウェブトークン (JWT) を使用するサーバー側の認証は、Box
 
 </ImageFrame>
 
-JWTを使用するサーバー側の認証は、[アプリの種類][app-type]がカスタムアプリケーションの場合のみ使用できます。この認証方法ではエンドユーザーによる操作が必要ありません。また、適切な権限が付与されていれば、この認証方法を使用して、社内の任意のユーザーの代理で操作することができます。
+Server-side authentication using JWT is only available to the Platform Application [app type][app-type]. This authentication method does not require end-user interaction and, if granted the proper privileges, can be used to act on behalf of any user in an enterprise.
 
 アプリケーションの権限を確認する方法は2つあります。
 

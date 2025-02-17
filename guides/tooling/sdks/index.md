@@ -59,6 +59,7 @@ Swift SDKはパブリックベータ段階です。
 | [TypeScriptの次世代SDK][tsgensdk]     | はい        | Full    |
 | [.NETの次世代SDK][dotnetgensdk]       | はい        | Full    |
 | [Swiftの次世代SDK][swiftgensdk] (ベータ) | はい        | Full    |
+| [Java Gen SDK][javagensdk] (Beta) | はい        | Full    |
 
 ## SDK
 
@@ -102,6 +103,8 @@ Swift SDKはパブリックベータ段階です。
 [dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen
 
 [swiftgensdk]: https://github.com/box/box-swift-sdk-gen
+
+[javagensdk]: https://github.com/box/box-java-sdk-gen
 
 [android-docs]: https://github.com/box/box-java-sdk/blob/main/doc/android.md
 

@@ -5,7 +5,7 @@ related_guides:
   - authentication/jwt
 required_guides:
   - authentication/select
-  - applications/app-types/custom-apps
+  - applications/app-types/platform-apps
   - authorization/custom-app-approval
 related_resources: []
 alias_paths:

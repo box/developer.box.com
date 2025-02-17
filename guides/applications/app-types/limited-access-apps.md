@@ -11,7 +11,7 @@ total_steps: 4
 sibling_id: applications/app-types
 parent_id: applications/app-types
 next_page_id: applications/app-types/custom-skills
-previous_page_id: applications/app-types/custom-apps
+previous_page_id: applications/app-types/platform-apps
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/app-types/limited-access-apps.md
 fullyTranslated: true

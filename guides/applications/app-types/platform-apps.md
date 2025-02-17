@@ -13,7 +13,7 @@ related_guides:
 category_id: applications
 subcategory_id: applications/app-types
 is_index: false
-id: applications/app-types/custom-apps
+id: applications/app-types/platform-apps
 type: guide
 total_steps: 4
 sibling_id: applications/app-types
@@ -21,18 +21,18 @@ parent_id: applications/app-types
 next_page_id: applications/app-types/limited-access-apps
 previous_page_id: applications/app-types
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/applications/app-types/custom-apps.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/applications/app-types/platform-apps.md
 fullyTranslated: true
 ---
-# カスタムアプリ
+# Platform App
 
-カスタムアプリはほとんどのユースケースに対応しており、最も柔軟なアプリケーションの種類です。
+Platform Apps encompass most use cases and is the most flexible application type.
 
-カスタムアプリケーションは、通常、カスタムインターフェース内でBox機能をユーザーに表示します。Boxには、コンテンツの閲覧、検索、プレビューなどの機能のために、[UI Elements][uie]と呼ばれる、組み込みのカスタマイズ可能なユーザーインターフェースコンポーネントが用意されています。
+A platform application typically presents Box functionality to a user within a custom interface. Box offers pre-built, customizable user interface components, known as [UI Elements][uie], for functionality like browsing, searching, and previewing content.
 
 ## 認証方法
 
-カスタムアプリでは、[OAuth 2.0][oauth2]、[JWT][jwt]、および[クライアント資格情報許可][cc]がサポートされています。
+Platform Apps support [OAuth 2.0][oauth2], [JWT][jwt], and [Client Credentials Grant][cc].
 
 <CTA to="g://authentication/select">
 
@@ -42,7 +42,7 @@ fullyTranslated: true
 
 ## 使用するタイミング
 
-アプリケーションが以下のような場合に、カスタムアプリを使用すると最も効果的です。
+A Platform App is best used when the application:
 
 * 認証に[OAuth 2.0][oauth2]、[JWT][jwt]、または[クライアント資格情報許可][cc]を使用する
 * ファイルをアップロードおよびダウンロードする
@@ -52,11 +52,11 @@ fullyTranslated: true
 
 ## ユースケース
 
-以下は、カスタムアプリのユースケースの例です。
+Example use cases for a Platform App include:
 
 * アプリケーション内のファイル保存場所。これにより、エンドユーザーが自分と共有されているファイルにアクセスできると同時に、従業員にもBoxウェブアプリを介して同じファイルへのアクセス権限が提供されます。
 
-  この一例として、ファイナンシャルアドバイザは、カスタムアプリケーション内で閲覧またはコメントが可能な取引明細書や投資目論見書を投資家と共有します。
+  An example of this is financial advisor sharing statements and investment prospectuses with investors that can be viewed and commented on within a platform application.
 
 * アプリケーションのファイルアップロード機能。これにより、エンドユーザーは、独自に構築したアプリケーション内からBoxにファイルを送信したりアップロードしたりできます。その後、これらのアップロードにより、Boxウェブアプリを使用したビジネスプロセスが開始されます。
 
@@ -64,11 +64,11 @@ fullyTranslated: true
 
 ## 承認
 
-カスタムアプリは、使用前に承認が必要になる場合があります。
+Platform Apps may require approval before use.
 
 <CTA to="g://authorization/custom-app-approval">
 
-カスタムアプリの承認方法を確認する
+Learn how to approve Platform Apps
 
 </CTA>
 

@@ -24,11 +24,11 @@ fullyTranslated: true
 
 ## アプリケーションの種類の選択
 
-まず、作成するアプリケーションの種類を選択します。このガイドでは、\[**カスタムアプリ**] オプションを使用します。ほとんどのパートナーが統合にこの種類を使用しているからです。
+The first step is to select the application type you want to create. In this guide we use the **Platform App** option, as most of our partners use this type for their integrations.
 
 ## 認証方法の選択
 
-\[**カスタムアプリ**] を選択したら、アプリで使用する[認証方法を選択][auth]する必要があります。このガイドでは、\[[**ユーザー認証 (OAuth 2.0)**][oauth2]] オプションを使用します。ほとんどのパートナーが統合にこの種類を使用しているからです。
+After you choose the **Platform App**, you need to [select an authentication method][auth] that your app will use. In this guide we use the [**User Authentication (OAuth 2.0)**][oauth2] option, as most of our partners use this type for their integrations.
 
 ## アプリの命名
 

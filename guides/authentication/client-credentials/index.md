@@ -31,7 +31,7 @@ fullyTranslated: true
 
 ## 前提条件
 
-* Box[開発者コンソール][devconsole]でサーバー認証 (クライアント資格情報許可使用) を使用するカスタムアプリケーション
+* A Platform Application using Server Authentication (with Client Credentials Grant) authentication in the Box [Developer Console][devconsole]
 * \[構成] タブからアプリケーションのクライアントシークレットを表示およびコピーするために、Boxアカウントで[2要素認証][2fa]が有効になっていること
 * Box管理コンソールでアプリケーションが[承認][auth]されていること
 

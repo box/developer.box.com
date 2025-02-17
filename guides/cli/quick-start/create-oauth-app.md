@@ -115,7 +115,7 @@ API資格情報は、ブラウザキャッシュに保存されています。�
 
 * 新しい**Boxアプリ**の作成を選択しました。
   * Developerアカウントにサインアップ (必要な場合)
-  * **OAuth 2.0**認証を使用する**カスタムアプリ**を作成
+  * Had us create a **Platform App** for you that uses **OAuth 2.0** authentication
   * アプリケーションの**リダイレクトURL**を設定
 * または、**既存のBoxアプリ**の使用を選択しました。
 

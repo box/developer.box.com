@@ -5,7 +5,7 @@ related_guides:
   - authentication/oauth2
   - authentication/jwt
   - authentication/app-token
-  - applications/app-types/custom-apps
+  - applications/app-types/platform-apps
   - applications/app-types/custom-skills
 required_guides: []
 related_resources: []
@@ -28,9 +28,9 @@ fullyTranslated: true
 
 多くのBox Enterpriseでは、**シングルサインオン** (SSO) を使用して、Boxにログインしている[管理対象ユーザー][mu]を認証します。Box Platformに作成されたアプリケーションとSSOプロバイダの対話方法は、作成されるアプリケーションの種類によって異なります。
 
-## クライアント側認証を使用するカスタムアプリ
+## Platform Apps with Client-side Authentication
 
-[OAuth 2.0][oauth2]を使用するよう構成された[カスタムアプリ][custom_app]でユーザーが認証されると、Boxは、企業がSSOを使用するよう構成されているかどうかを検出します。SSOを使用するよう構成されている場合、ユーザーはブラウザにリダイレクトされ、企業の構成済みのSSOログイン画面が表示されます。
+When users authenticate with a [Platform App][custom_app] configured to use [OAuth 2.0][oauth2] Box will detect if the enterprise is configured to use SSO. If it is, Box will redirect the user to their browser and display the enterprise's configured SSO log-in screen.
 
 ### SSOの有効化とSSO必須モード
 
@@ -49,11 +49,11 @@ SSOが必須モードに設定されている企業では、SSOからユーザ�
 
 </Message>
 
-## サーバー側認証を使用するカスタムアプリ
+## Platform Apps with Server-side Authentication
 
-[JWT][jwt]または[クライアント資格情報許可][ccg]を使用する[カスタムアプリ][custom_app]および[アプリトークン][app_token]認証を使用する[アクセス制限付きアプリ][la-app]では、Boxでの認証にSSOは使用されません。
+For [Platform Apps][custom_app] that use [JWT][jwt] or [Client Credentials Grant][ccg] and [Limited Access Apps][la-app] that use [App Token][app_token] authentication, SSO is not used to authenticate with Box.
 
-サーバー側認証を使用するカスタムアプリは、Boxとの通信にサーバー間のAPIコールのみを使用します。このシナリオでのエンドユーザーの認証方法は、Boxではなくアプリケーションが決定します。
+Platform Apps using server-side authentication only use server-to-server API calls to communicate with Box. In this scenario, the way in which an end user is authenticated is determined by the application and not by Box.
 
 つまり、アプリケーションによるエンドユーザーの認証はそのアプリケーションによって決まりますが、アプリケーションによるBoxの承認とはまったく異なります。
 
@@ -85,7 +85,7 @@ Skillsを使用した場合でも、スキルイベントをトリガーする�
 
 [app_token]: g://authentication/app-token
 
-[custom_app]: g://applications/app-types/custom-apps
+[custom_app]: g://applications/app-types/platform-apps
 
 [custom_skills]: g://applications/app-types/custom-skills
 

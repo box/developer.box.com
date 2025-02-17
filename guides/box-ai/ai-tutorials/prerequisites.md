@@ -80,7 +80,7 @@ Box AI APIを操作するには、アプリケーションに`ai.readwrite`[ス�
 
 [oauthscopes]: g://api-calls/permissions-and-errors/scopes#scopes-oauth-2-authorization
 
-[createapps]: g://applications/app-types/custom-apps
+[createapps]: g://applications/app-types/platform-apps
 
 [postman]: g://tooling/postman
 

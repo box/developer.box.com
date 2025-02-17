@@ -6,7 +6,7 @@ related_guides:
   - authentication/oauth2/oauth2-setup
 required_guides:
   - authentication/select
-  - applications/app-types/custom-apps
+  - applications/app-types/platform-apps
 related_resources: []
 alias_paths:
   - /docs/setting-up-an-oauth-app
@@ -27,7 +27,7 @@ fullyTranslated: true
 ---
 # OAuth 2.0を使用した設定
 
-カスタムアプリは、クライアント側の[OAuth 2.0][oauth2]認証を使用するよう設定できます。
+A Platform App can be set up to use client-side [OAuth 2.0][oauth2] authentication.
 
 <CTA to="g://authentication/oauth2">
 
@@ -37,7 +37,7 @@ OAuth 2.0認証のしくみを確認する
 
 ## 前提条件
 
-OAuth 2.0認証を使用してカスタムアプリを設定するには、Box Enterpriseアカウントから[開発者コンソール][devconsole]にアクセスできることを確認する必要があります。または、[Developerアカウント][devaccount]にサインアップすることもできます。
+OAuth 2.0認証を使用してPlatformアプリを設定するには、Box Enterpriseアカウントから[開発者コンソール][devconsole]にアクセスできることを確認する必要があります。または、[Developerアカウント][devaccount]にサインアップすることもできます。
 
 ## アプリの作成手順
 
@@ -47,7 +47,7 @@ Boxにログインし、[開発者コンソール][devconsole]に移動して、
 
 ### アプリケーションの種類の選択
 
-アプリケーションの種類のリストから \[**カスタムアプリ**] を選択します。次の手順を促すウィンドウが表示されます。
+アプリケーションの種類のリストから \[**Platformアプリ**] を選択します。次の手順を促すウィンドウが表示されます。
 
 <ImageFrame border>
 

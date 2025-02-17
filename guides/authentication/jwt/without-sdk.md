@@ -45,7 +45,7 @@ fullyTranslated: true
 
 ### 前提条件
 
-* [開発者コンソール][devconsole]でJWT認証を使用するカスタムアプリケーション
+* A Platform Application using JWT authentication within the [Developer Console][devconsole]
 * `config.json`という名前の秘密キー構成ファイル ([開発者コンソール][devconsole]の \[構成] タブからダウンロード可能)
 * Box管理コンソールでアプリケーションが[承認][auth]されていること
 

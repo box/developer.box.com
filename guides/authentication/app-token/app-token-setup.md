@@ -9,7 +9,7 @@ related_guides:
   - authorization/custom-app-approval
 required_guides:
   - authentication/select
-  - applications/app-types/custom-apps
+  - applications/app-types/platform-apps
 related_resources: []
 alias_paths:
   - /guides/applications/app-types/custom-apps/app-token-setup
