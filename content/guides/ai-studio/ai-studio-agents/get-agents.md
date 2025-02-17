@@ -45,5 +45,4 @@ To make a call, you must pass the following parameters. Mandatory parameters are
 | `limit` | The maximum number of items to return per page. | `1000` |
 | `marker` | Defines the position marker at which to begin returning results. | `JV9IRGZmieiBasejOG9yDCRNgd2ymoZIbjsxbJMjIs3kioVii` |
 
-
 [getting-started]: g://ai-studio/getting-started-ai-studio
