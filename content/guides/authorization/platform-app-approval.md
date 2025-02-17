@@ -81,9 +81,9 @@ copy it using the `copy` button.
 ### As an Admin
 
 1. Navigate to the [Admin Console][adminconsole] and select the **Apps** tab (1) from the left navigation panel.
-2. Click the **Custom Apps Manager** tab (2) at the top of your screen.
+2. Click the **Platform Apps Manager** tab (2) at the top of your screen.
 3. For both Server and User Authentication Apps screens, click the **Add App** (3) button in the top right corner to add a new app.
-4. Alternatively, you can use the Custom Apps Manager table menu (4) to authorize and enable apps.
+4. Alternatively, you can use the Platform Apps Manager table menu (4) to authorize and enable apps.
 
 #### Server Authentication Apps
 

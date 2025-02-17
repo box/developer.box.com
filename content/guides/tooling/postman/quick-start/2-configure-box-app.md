@@ -2,7 +2,7 @@
 type: quick-start
 hide_in_page_nav: true
 related_guides:
-  - applications/app-types/custom-apps
+  - applications/app-types/platform-apps
 ---
 
 # Configure a Box App
@@ -108,7 +108,7 @@ extra steps to set up.
 
 * You either selected to create a new **Box App**
     * Signed up for a developer account (Optional)
-    * Had us create **Custom App** for you that uses **OAuth 2.0** authentication
+    * Had us create **Platform App** for you that uses **OAuth 2.0** authentication
     * Had us set up the **redirect URL** for the application
 * Or you selected to use an **existing Box App**
 
