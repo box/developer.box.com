@@ -12,10 +12,6 @@ alias_paths:
 
 # Get started with Box AI
 
-<Message type="notice">
-Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
-</Message>
-
 To implement Box AI API in your solutions, you need
 to make sure you have access to the functionality.
 You will also need a custom application with
@@ -29,7 +25,7 @@ the Box AI APIs in your sandbox, request access
 from the Box AI team using [this form][form].
 </Message>
 
-## Create an application
+## Create a custom application
 
 First you need to create a custom application
 you will use to make calls. To create
