@@ -79,5 +79,5 @@ to generate it again.
 [4]: g://authentication/oauth2/oauth2-setup
 [5]: https://app.box.com/developers/console
 [6]: e://get-integration-mappings-slack
-[7]: g://applications/app-types/custom-apps
+[7]: g://applications/app-types/platform-apps
 [8]: g://authentication/tokens/developer-tokens

@@ -41,7 +41,7 @@ capacity.
 
 <Message>
 
-# Box Custom Application Requirements
+# Box Platform Application Requirements
 
 When creating your JWT-based custom Box application for this recipe, you'll
 need to enable the following scopes: **Manage users**, **Manage groups**,

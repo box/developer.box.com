@@ -35,7 +35,7 @@ designed to allow powerful server-to-server authentication.
 
 </ImageFrame>
 
-Server-side authentication using JWT is only available to the Custom Application
+Server-side authentication using JWT is only available to the Platform Application
 [app type][app-type]. This authentication method does not require end-user
 interaction and, if granted the proper privileges, can be used
 to act on behalf of any user in an enterprise.

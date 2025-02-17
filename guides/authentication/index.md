@@ -26,7 +26,7 @@ console.
 
 | Box Application Type         | Authentication methods                                              |
 | ---------------------------- | ------------------------------------------------------------------- |
-| [Custom App][custom-app]     | [OAuth 2.0][oauth2], [JWT][jwt], or [Client Credentials Grant][ccg] |
+| [Platform App][custom-app]     | [OAuth 2.0][oauth2], [JWT][jwt], or [Client Credentials Grant][ccg] |
 | [Limited Access App][la]     | [App token][apptoken]                                               |
 | [Custom Skill][custom-skill] | No authentication method selection needed                           |
 
@@ -57,7 +57,7 @@ Learn more about Access Tokens
 [jwt]: g://authentication/jwt
 [apptoken]: g://authentication/app-token
 [devtoken]: g://authentication/tokens/developer-tokens
-[custom-app]: g://applications/app-types/custom-apps
+[custom-app]: g://applications/app-types/platform-apps
 [custom-skill]: g://applications/app-types/custom-skills
 [la]: g://applications/app-types/select/#limited-access-app
 [ccg]: g://authentication/client-credentials
