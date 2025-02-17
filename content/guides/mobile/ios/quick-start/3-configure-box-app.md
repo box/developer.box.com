@@ -37,7 +37,7 @@ valid for one hour before having to be manually refreshed.
 
   1. Go to the [Developer Console][devconsole] > **My Platform Apps**.
   2. Select **Create Platform App**.
-  3. Select **Custom App** as the type of application to create, and click **Next**.
+  3. Select **Platform App** as the type of application to create, and click **Next**.
   4. Enter the **App Name**, an optional **Description** and **Purpose** of the App. Confirm with **Next**.
   5. Select **User Authentication (OAuth 2.0)** as the authentication method, and click **Create App**
   8. Optionally, scroll to the **Application Scopes** section of the same screen and select any additional permissions you want to enable for this application.
