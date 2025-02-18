@@ -23,7 +23,7 @@ view sample code, explore Box AI use cases, and more!
   <Header centered>
     Try out interactive demos
   </Header>
-    Box AI API is available to all Enterprise Plus and Enterprise Advanced customers. Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change.
+    Box AI API is available to all Enterprise Plus and Enterprise Advanced customers.
 
   <TileGrid rows="4">
     <Tile type="ai" title="Get a summary" href="/ai-dev-zone-summary">
@@ -35,12 +35,12 @@ view sample code, explore Box AI use cases, and more!
       href="/ai-dev-zone-metadata">
         Extract document metadata suggestions in the freeform mode.
 
-        <strong style="background-color: #e8e8e8">Public beta</strong>
+        <strong style="background-color: #92e0c0">New</strong>
     </Tile>
     <Tile type="ai" title="Extract structured metadata" href="/ai-dev-zone-metadata-structured">
         Extract document metadata suggestions in the structured mode.
 
-        <strong style="background-color: #e8e8e8">Public beta</strong>
+        <strong style="background-color: #92e0c0">New</strong>
     </Tile>
   </TileGrid>
 </Centered>
@@ -94,19 +94,19 @@ view sample code, explore Box AI use cases, and more!
       href="https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/readers/llama-index-readers-box#readme">
         Enable access to Box content within LLM workflows with Box reader suite for LlamaIndex.
 
-        <strong style="background-color: #e8e8e8">New</strong>
+        <strong style="background-color: #e8e8e8">Integration</strong>
     </Tile>
     <Tile type="box-brown" title="LangChain"
-      href="https://python.langchain.com/v0.2/docs/integrations/providers/box/">
+      href="https://python.langchain.com/docs/integrations/providers/box/">
         Include Box content in your LLM workflows with Box loader for LangChain.
 
-        <strong style="background-color: #e8e8e8">New</strong>
+        <strong style="background-color: #e8e8e8">Integration</strong>
     </Tile>
     <Tile type="box-brown" title="Pinecone"
       href="https://medium.com/box-developer-blog/demo-box-pinecone-f03783c412bb">
         Connect Box and Pinecone to customize vector embeddings and get more relevant answers from LLM.
 
-        <strong style="background-color: #e8e8e8">New</strong>
+        <strong style="background-color: #e8e8e8">Integration</strong>
     </Tile>
   </TileGrid>
 </Centered>
