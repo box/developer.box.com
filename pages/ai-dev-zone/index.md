@@ -49,7 +49,7 @@ Try out interactive demos
 
 </Header>
 
-Box AI API is available to all Enterprise Plus and Enterprise Advanced customers. Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change.
+Box AI API is available to all Enterprise Plus and Enterprise Advanced customers.
 
 <TileGrid rows="4">
 
@@ -69,9 +69,9 @@ New
 
 Extract document metadata suggestions in the freeform mode.
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #92e0c0">
 
-Public beta
+New
 
 </strong>
 
@@ -81,9 +81,9 @@ Public beta
 
 Extract document metadata suggestions in the structured mode.
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #92e0c0">
 
-Public beta
+New
 
 </strong>
 
@@ -183,19 +183,19 @@ Enable access to Box content within LLM workflows with Box reader suite for Llam
 
 <strong style="background-color: #e8e8e8">
 
-New
+Integration
 
 </strong>
 
 </Tile>
 
-<Tile type="box-brown" title="LangChain" href="https://python.langchain.com/v0.2/docs/integrations/providers/box/">
+<Tile type="box-brown" title="LangChain" href="https://python.langchain.com/docs/integrations/providers/box/">
 
 Include Box content in your LLM workflows with Box loader for LangChain.
 
 <strong style="background-color: #e8e8e8">
 
-New
+Integration
 
 </strong>
 
@@ -207,7 +207,7 @@ Connect Box and Pinecone to customize vector embeddings and get more relevant an
 
 <strong style="background-color: #e8e8e8">
 
-New
+Integration
 
 </strong>
 
