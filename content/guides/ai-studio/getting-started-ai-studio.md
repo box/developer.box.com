@@ -17,13 +17,14 @@ Box AI Studio is available only for Enterprise Advanced accounts.
 
 </Message>
 
-To start creating custom AI agents with AI studio you need a custom application
-with enabled Box AI scope and a developer token to authenticate your calls.
+To start creating custom AI agents with AI studio you need a platform
+application with enabled Box AI scope and a developer token to
+authenticate your calls.
 
 ## Create a custom application
 
-First you need to create a custom application you will use to make calls. To
-create an application, follow the guide on [creating custom apps][createapps].
+First you need to create a platform application you will use to make calls. To
+create an application, follow the guide on [creating platform apps][createapps].
 
 ## Enable Box AI studio
 
