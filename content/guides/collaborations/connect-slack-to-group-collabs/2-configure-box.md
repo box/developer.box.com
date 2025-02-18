@@ -33,7 +33,7 @@ collaborators to files and folders in Box.
 
   1. Go to the [Developer Console][devconsole]
   2. Select **Create New App**
-  3. Select **Custom App** as the type of application to create, and click **Next**
+  3. Select **Platform App** as the type of application to create, and click **Next**
   4. Select **OAuth 2.0 with JWT** as the authentication method, and click **Next**
   5. Give your Box app a unique name and click **Create App**
   6. Go to the app's configuration by clicking **View Your App**.

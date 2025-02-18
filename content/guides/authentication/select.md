@@ -21,7 +21,7 @@ The following authorization methods are available to each Box application type.
 
 | Box Application Type         | Supports OAuth 2.0? | JWT? | Client Credentials? | App Token? |
 | ---------------------------- | ------------------- | ---- | ------------------- | ---------- |
-| [Custom App][custom-app]     | Yes                 | Yes  | Yes                 | No         | 
+| [Platform App][custom-app]     | Yes                 | Yes  | Yes                 | No         | 
 | [Limited Access App][la-app] | No                  | No  | No                  | Yes        |
 | [Custom Skill][custom-skill] | No                  | No   | No                  | No         |
 
@@ -157,6 +157,6 @@ authentication the token defaults to the application's Service Account.
 
 </Message>
 
-[custom-app]: g://applications/app-types/custom-apps
+[custom-app]: g://applications/app-types/platform-apps
 [custom-skill]: g://applications/app-types/custom-skills
 [la-app]: g://applications/app-types/limited-access-apps
