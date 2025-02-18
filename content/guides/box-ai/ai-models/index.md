@@ -11,10 +11,6 @@ alias_paths:
 
 # Supported AI models
 
-<Message type="notice">
-Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus and Enterprise Advanced customers.
-</Message>
-
 ## Using models
 
 You can use the supported AI models:
