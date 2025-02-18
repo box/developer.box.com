@@ -76,7 +76,7 @@ calls.
 [enable]: https://support.box.com/hc/en-us/articles/37228079461267-Enabling-Box-AI-Studio-and-Managing-Agents/#h_01JH9HAMP43YYN6VWM51QCK413
 [token]: g://authentication/tokens/developer-tokens
 [scope]: g://api-calls/permissions-and-errors/scopes
-[createapps]: g://applications/app-types/custom-apps
+[createapps]: g://applications/app-types/platform-apps
 [postman]: g://tooling/postman
 [authorization]: g://authorization
 [reauthorization]: g://authorization/custom-app-approval#re-authorization-on-changes

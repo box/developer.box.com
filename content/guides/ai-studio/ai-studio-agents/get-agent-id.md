@@ -1,5 +1,5 @@
 ---
-rank: 5
+rank: 3
 related_guides:
   - authentication/tokens/developer-tokens/
   - box-ai/ai-tutorials/ask-questions
@@ -9,15 +9,16 @@ related_guides:
   - box-ai/ai-tutorials/extract-metadata
 ---
 
-# Delete AI agent
+# Get AI agent by ID
 
-The `DELETE/2.0/ai_agents/{id}` endpoint allows you to delete a custom AI agent based on its ID. 
+The `GET/2.0/ai_agents/{id}` endpoint allows you to list a specific AI
+agent by the `agent_id` parameter.
 
 ## Send a request
 
-To send a request, use the `DELETE/2.0/ai_agents/{id}` endpoint.
+To send a request, use the `GET/2.0/ai_agents/{id}` endpoint.
 
-<Samples id='delete-ai-agents-id' />
+<Samples id='get-ai-agents-id' />
 
 ### Parameters
 
@@ -25,4 +26,5 @@ To make a call, you must pass the following parameters. Mandatory parameters are
 
 | Parameter| Description| Example|
 |--------|--------|-------|
-| **`agent_id`** | The ID of the agent to delete. | `1234` |
+| **`agent_id`** | The agent id to get. | `1234` |
+| `fields` | The fields to return in the response. | `ask` |
