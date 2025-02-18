@@ -14,7 +14,7 @@ alias_paths:
 
 # Extract metadata from file (freeform)
 
-Box AI API allows you to query a document and extract metadata based on a provided prompt.
+Box AI API allows you to query a document or image and extract metadata based on a provided prompt.
 **Freeform** means that the prompt can include a stringified version of formats such as JSON or XML, or even plain text.
 
 ## Before you start
