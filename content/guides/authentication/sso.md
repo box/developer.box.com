@@ -5,7 +5,7 @@ related_guides:
   - authentication/oauth2
   - authentication/jwt
   - authentication/app-token
-  - applications/app-types/custom-apps
+  - applications/app-types/platform-apps
   - applications/app-types/custom-skills
 required_guides: []
 related_resources: []
@@ -19,9 +19,9 @@ Many Box Enterprises use **Single Sign On** (SSO) to authenticate
 Box Platform interact with an SSO provider depends on the type of application
 being built.
 
-## Custom Apps with Client-side Authentication
+## Platform Apps with Client-side Authentication
 
-When users authenticate with a [Custom App][custom_app] configured to use
+When users authenticate with a [Platform App][custom_app] configured to use
 [OAuth 2.0][oauth2] Box will detect if the enterprise is configured to use SSO.
 If it is, Box will redirect the user to their browser and display the
 enterprise's configured SSO log-in screen.
@@ -47,14 +47,14 @@ having a Box account matching the email address passed via SAML.
   set to required, even if it is only used for platform use cases.
 </Message>
 
-## Custom Apps with Server-side Authentication
+## Platform Apps with Server-side Authentication
 
-For [Custom Apps][custom_app] that use [JWT][jwt] or
+For [Platform Apps][custom_app] that use [JWT][jwt] or
 [Client Credentials Grant][ccg] and
 [Limited Access Apps][la-app] that use [App Token][app_token] authentication,
 SSO is not used to authenticate with Box.
 
-Custom Apps using server-side authentication only use server-to-server API
+Platform Apps using server-side authentication only use server-to-server API
 calls to communicate with Box. In this scenario, the way in which an end user
 is authenticated is determined by the application and not by Box.
 
@@ -89,6 +89,6 @@ therefore SSO is not involved.
 [ccg]: g:///authentication/client-credentials
 [la-app]: guide://applications/web-app-integrations
 [app_token]: g://authentication/app-token
-[custom_app]: g://applications/app-types/custom-apps
+[custom_app]: g://applications/app-types/platform-apps
 [custom_skills]: g://applications/app-types/custom-skills
 [jwt]: g://authentication/jwt/jwt-setup
