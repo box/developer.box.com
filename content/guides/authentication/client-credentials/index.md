@@ -20,7 +20,7 @@ verify your application's identity using a client ID and client secret.
 
 ## Prerequisites
 
-- A Custom Application using Server Authentication (with Client Credentials Grant) authentication in the Box [Developer Console][devconsole]
+- A Platform Application using Server Authentication (with Client Credentials Grant) authentication in the Box [Developer Console][devconsole]
 - [2FA][2fa] enabled on your Box account for viewing and copying the application's client secret from the configuration tab
 - The application is [authorized][auth] in the Box Admin Console
 

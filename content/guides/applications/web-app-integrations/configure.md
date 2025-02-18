@@ -14,7 +14,7 @@ notes: |-
 
 # Create Web App Integration
 
-This guide explains how to set up a Web App Integration with a Custom App.
+This guide explains how to set up a Web App Integration with a Platform App.
 
 <message type='warning'>
 Server-side integration is no longer supported.
@@ -26,7 +26,7 @@ You will be able to deactivate them and change the implementation to a new one.
 
 ## Create an OAuth 2.0 Application
 
-Navigate to the [Developer Console][devconsole] and create a [Custom App][ca]
+Navigate to the [Developer Console][devconsole] and create a [Platform App][ca]
 that leverages [OAuth 2.0 authentication][custom-oauth2].
 
 ## Create a New Integration
@@ -141,7 +141,7 @@ note that the URL must be publicly accessible on the internet.
 To make a Box integration publicly available it needs to be listed in the App
 Center. Follow the [Integrations][integrations] guide for more details.
 
-[ca]: g://applications/app-types/custom-apps
+[ca]: g://applications/app-types/platform-apps
 [pu]: g://applications/web-app-integrations/types
 [uid]: page://platform/appendix/locating-values/#user-ids
 [fid]: page://platform/appendix/locating-values/#content-ids

@@ -63,7 +63,7 @@ or other clients, such as [Postman][postman], to make
 calls.
 
 [token]: g://authentication/tokens/developer-tokens
-[createapps]: g://applications/app-types/custom-apps
+[createapps]: g://applications/app-types/platform-apps
 [postman]: g://tooling/postman
 [settings]: https://support.box.com/hc/en-us/articles/4404822772755-Enterprise-Settings-Content-Sharing-Tab#h_01FYQGK5RW42T07GV985MQ9E9A
 [template-addin]: https://support.box.com/hc/en-us/articles/36587535449747-Installing-Box-Doc-Gen-Add-in
