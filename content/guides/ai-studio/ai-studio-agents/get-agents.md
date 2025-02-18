@@ -19,11 +19,11 @@ Box AI Studio is available only for Enterprise Advanced accounts.
 
 ## List all AI agents
 
-The `GET/2.0/ai-agents` endpoint allows you to list all AI agents based on the provided parameters.
+The `GET/2.0/ai_agents` endpoint allows you to list all AI agents based on the provided parameters.
 
 ### Send a request
 
-To send a request, use the `GET/2.0/ai-agents` endpoint.
+To send a request, use the `GET/2.0/ai_agents` endpoint.
 
 Make sure you have generated the developer token
 to authorize your app. See [getting started with Box AI Studio][getting-started]
