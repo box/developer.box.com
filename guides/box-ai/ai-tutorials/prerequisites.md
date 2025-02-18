@@ -97,7 +97,7 @@ calls.
 [token]: g://authentication/tokens/developer-tokens
 [scope]: g://api-calls/permissions-and-errors/scopes
 [oauthscopes]: g://api-calls/permissions-and-errors/scopes#scopes-oauth-2-authorization
-[createapps]: g://applications/app-types/custom-apps
+[createapps]: g://applications/app-types/platform-apps
 [postman]: g://tooling/postman
 [form]: https://forms.gle/Nsh3TwM3W8qg4U35A
 [authorization]: g://authorization

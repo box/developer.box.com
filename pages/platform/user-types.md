@@ -218,7 +218,7 @@ easier to remember when adding collaborations.
 
 A Service Account is also automatically generated when a Limited Access App is
 created in the [Developer Console][dc]. This Service Account has some additional
-restrictions that a Service Account associated with a Custom App does not.
+restrictions that a Service Account associated with a Platform App does not.
 
 - All content used within the Limited Access App must be uploaded and owned by the Service Account
 - The Service Account can not access any other user's information or content

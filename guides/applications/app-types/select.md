@@ -35,20 +35,20 @@ You cannot change this selection later on.
 
 </ImageFrame>
 
-## Custom App
+## Platform App
 
 |                            |                                                                              |
 | -------------------------- | ---------------------------------------------------------------------------- |
 | **Authentication methods** | [OAuth 2.0][oauth2], [JWT][jwt], or [Client Credentials Authentication][ccg] |
 | **Notable Features**        | Webhooks, Integrations, and Web App Integrations                             |
 
-Custom App encompasses most use cases and is the most flexible option.
+Platform App encompasses most use cases and is the most flexible option.
 This application type allows for interaction with our 150+ endpoints.
 For example, downloading/uploading, searching, applying metadata and more.
 
-<CTA to="g://applications/app-types/custom-apps">
+<CTA to="g://applications/app-types/platform-apps">
 
-Learn more about Custom Apps
+Learn more about Platform Apps
 
 </CTA>
 
@@ -90,7 +90,7 @@ Learn more about Custom Skills
 [oauth2]: g://authentication/oauth2
 [jwt]: g://authentication/jwt
 [app-token]: g://authentication/app-token
-[custom-apps]: g://applications/app-types/custom-apps
+[custom-apps]: g://applications/app-types/platform-apps
 [dev-console]: https://app.box.com/developers/console
 [view-app]: g://embed/box-view
 [ccg]: g://authentication/client-credentials

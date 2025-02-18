@@ -9,7 +9,7 @@ subcategory_id: ai-studio/ai-studio-agents
 is_index: true
 id: ai-studio/ai-studio-agents
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: ai-studio
 parent_id: ai-studio
 next_page_id: ai-studio/ai-studio-agents/create-agents

@@ -23,7 +23,7 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authorization/custom-app-approval.md
 ---
-# Custom App Approval
+# Platform App Approval
 
 Server authentication applications using [JWT][jwt] or
 [Client Credentials Grant][ccg] must be authorized by a Box Admin before use.
@@ -44,7 +44,7 @@ the authorization and enablement status of your application.
 ## Approval Notifications
 
 A semi-automated process to submit an app approval is available in the Developer
-Console for all custom application types.
+Console for all platform application types.
 
 ### Server authentication apps
 

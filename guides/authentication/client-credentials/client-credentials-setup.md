@@ -29,7 +29,7 @@ source_url: >-
 
 ## Prerequisites
 
-To set up a Custom App using server-side authentication, you will need to ensure
+To set up a Platform App using server-side authentication, you will need to ensure
 you have access to the [Developer Console][devconsole] from your Box enterprise
 account. Alternatively, you may sign up for a [developer account][devaccount].
 
@@ -42,7 +42,7 @@ Select **Create Platform App**.
 
 ### Select application type
 
-Select **Custom App** from the list of application types. A modal will appear to
+Select **Platform App** from the list of application types. A modal will appear to
 prompt a selection for the next step.
 
 <ImageFrame border>
@@ -112,7 +112,7 @@ approval. More information on this process is available in our
 
 <CTA to='g://authorization/custom-app-approval'>
 
-Learn how to authorize a Custom Application
+Learn how to authorize a Platform Application
 
 </CTA>
 

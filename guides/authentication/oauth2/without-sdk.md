@@ -55,7 +55,7 @@ using the `as-user` header.
 
 Before continuing you will need to complete the following steps:
 
-- Create a Custom App within the Box Developer Console, which leverages the OAuth 2.0 authentication method.
+- Create a Platform App within the Box Developer Console, which leverages the OAuth 2.0 authentication method.
 - Navigate to the configuration tab for the application to copy the `client_id` and `client_secret` values.
 - Ensure at least one redirect URI is configured in the configuration tab for the application.
 
