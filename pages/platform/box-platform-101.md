@@ -77,7 +77,7 @@ Box Platformで開発を行う際に注意すべき[ユーザータイプ][ut]�
 
 ### アプリケーションの種類
 
-There are three main types of applications that can be created in the developer console. They include Platform App, Limited Access App, and Box Custom Skills. You can also create third party and web app integrations.
+開発者コンソールで作成できるアプリケーションには、主に、Platformアプリ、アクセス制限付きアプリ、Box Custom Skillの3種類があります。また、サードパーティの統合やウェブアプリ統合も作成できます。
 
 <ImageFrame center>
 

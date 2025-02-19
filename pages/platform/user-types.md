@@ -138,7 +138,7 @@ Box管理者とは、主要なBoxアカウント管理者です。管理者は�
 
 ### Box View
 
-A Service Account is also automatically generated when a Limited Access App is created in the [Developer Console][dc]. This Service Account has some additional restrictions that a Service Account associated with a Platform App does not.
+サービスアカウントは、[開発者コンソール][dc]でアクセス制限付きアプリを作成したときにも自動的に生成されます。このサービスアカウントには、Platformアプリに関連付けられたサービスアカウントにはない追加の制限がいくつかあります。
 
 * アクセス制限付きアプリ内で使用されるコンテンツはすべて、このサービスアカウントがアップロードおよび所有する必要がある
 * このサービスアカウントは、他のユーザーの情報やコンテンツにアクセスできない

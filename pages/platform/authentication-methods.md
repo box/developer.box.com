@@ -23,7 +23,7 @@ Boxには、アプリケーション開発のためのさまざまな認証方�
 
 | Boxアプリケーションの種類 | OAuth 2.0をサポートしますか? | JWTは? | クライアント資格情報は? | アプリトークンは? |
 | -------------- | ------------------- | ----- | ------------ | --------- |
-| Platform App   | はい                  | はい    | はい           | いいえ       |
+| Platformアプリ    | はい                  | はい    | はい           | いいえ       |
 | アクセス制限付きアプリ    | いいえ                 | はい    | いいえ          | はい        |
 | カスタムスキル        | いいえ                 | いいえ   | いいえ          | いいえ       |
 
@@ -47,7 +47,7 @@ Python OAuth 2.0に関する有用なチュートリアルについては、[Git
 
 ## JSONウェブトークン (JWT)
 
-JSON Web Tokens (JWT) is the most common server-side authentication method for the Box API. [JWT][jwt], an open standard, enables robust server-to-server authentication. This method, exclusive to Platform Apps, does not involve end-user interaction. It allows an app, if granted appropriate privileges, to act on behalf of any user in an enterprise, thus facilitating powerful and seamless integrations. Upon approval by an administrator, a JWT application will get assigned a service account to make API calls as by default.
+JSONウェブトークン (JWT) は、Box APIの最も一般的なサーバー側認証方法です。[JWT][jwt]はオープンスタンダードであり、堅牢なサーバー間認証を実現します。この方法は、Platformアプリのみに限定されており、エンドユーザーによる操作は必要ありません。適切な権限が付与されているアプリは、企業内の任意のユーザーの代理として操作できるため、強力でシームレスな統合が促進されます。管理者が承認すると、JWTアプリケーションには、デフォルトで、APIコールを行うサービスアカウントが割り当てられます。
 
 <Message>
 

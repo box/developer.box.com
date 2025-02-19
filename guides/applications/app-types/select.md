@@ -32,18 +32,18 @@ fullyTranslated: true
 
 </ImageFrame>
 
-## Platform App
+## Platformアプリ
 
 |             |                                                       |
 | ----------- | ----------------------------------------------------- |
 | **認証方法**    | [OAuth 2.0][oauth2]、[JWT][jwt]、または[クライアント資格情報認証][ccg] |
 | **注目すべき機能** | Webhook、統合、ウェブアプリ統合                                   |
 
-Platform App encompasses most use cases and is the most flexible option. This application type allows for interaction with our 150+ endpoints. For example, downloading/uploading, searching, applying metadata and more.
+Platformアプリはほとんどのユースケースに対応しており、最も柔軟なオプションです。このアプリケーションの種類では、Boxの150を超えるエンドポイントを操作できます。たとえば、メタデータのダウンロード/アップロード、検索、適用などが可能です。
 
 <CTA to="g://applications/app-types/platform-apps">
 
-Learn more about Platform Apps
+Platformアプリの詳細を確認する
 
 </CTA>
 

@@ -24,15 +24,15 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/app-types/platform-apps.md
 fullyTranslated: true
 ---
-# Platform App
+# Platformアプリ
 
-Platform Apps encompass most use cases and is the most flexible application type.
+Platformアプリはほとんどのユースケースに対応しており、最も柔軟なアプリケーションの種類です。
 
-A platform application typically presents Box functionality to a user within a custom interface. Box offers pre-built, customizable user interface components, known as [UI Elements][uie], for functionality like browsing, searching, and previewing content.
+Platformアプリケーションは、通常、カスタムインターフェース内でBox機能をユーザーに表示します。Boxには、コンテンツの閲覧、検索、プレビューなどの機能のために、[UI Elements][uie]と呼ばれる、組み込みのカスタマイズ可能なユーザーインターフェースコンポーネントが用意されています。
 
 ## 認証方法
 
-Platform Apps support [OAuth 2.0][oauth2], [JWT][jwt], and [Client Credentials Grant][cc].
+Platformアプリでは、[OAuth 2.0][oauth2]、[JWT][jwt]、および[クライアント資格情報許可][cc]がサポートされています。
 
 <CTA to="g://authentication/select">
 
@@ -42,7 +42,7 @@ Platform Apps support [OAuth 2.0][oauth2], [JWT][jwt], and [Client Credentials G
 
 ## 使用するタイミング
 
-A Platform App is best used when the application:
+アプリケーションが以下のような場合に、Platformアプリを使用すると最も効果的です。
 
 * 認証に[OAuth 2.0][oauth2]、[JWT][jwt]、または[クライアント資格情報許可][cc]を使用する
 * ファイルをアップロードおよびダウンロードする
@@ -52,11 +52,11 @@ A Platform App is best used when the application:
 
 ## ユースケース
 
-Example use cases for a Platform App include:
+以下は、Platformアプリのユースケースの例です。
 
 * アプリケーション内のファイル保存場所。これにより、エンドユーザーが自分と共有されているファイルにアクセスできると同時に、従業員にもBoxウェブアプリを介して同じファイルへのアクセス権限が提供されます。
 
-  An example of this is financial advisor sharing statements and investment prospectuses with investors that can be viewed and commented on within a platform application.
+  この一例として、ファイナンシャルアドバイザは、Platformアプリケーション内で閲覧またはコメントが可能な取引明細書や投資目論見書を投資家と共有します。
 
 * アプリケーションのファイルアップロード機能。これにより、エンドユーザーは、独自に構築したアプリケーション内からBoxにファイルを送信したりアップロードしたりできます。その後、これらのアップロードにより、Boxウェブアプリを使用したビジネスプロセスが開始されます。
 
@@ -64,11 +64,11 @@ Example use cases for a Platform App include:
 
 ## 承認
 
-Platform Apps may require approval before use.
+Platformアプリは、使用前に承認が必要になる場合があります。
 
 <CTA to="g://authorization/custom-app-approval">
 
-Learn how to approve Platform Apps
+Platformアプリの承認方法を確認する
 
 </CTA>
 

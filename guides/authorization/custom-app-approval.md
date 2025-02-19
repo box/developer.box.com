@@ -40,7 +40,7 @@ Box管理者は、管理コンソールでアプリケーションを適切に�
 
 ## 承認の通知
 
-A semi-automated process to submit an app approval is available in the Developer Console for all platform application types.
+アプリの承認を送信するための半自動プロセスは、開発者コンソールですべての種類のPlatformアプリケーションに使用できます。
 
 ### サーバー認証アプリ
 

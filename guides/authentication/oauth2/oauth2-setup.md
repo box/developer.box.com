@@ -27,7 +27,7 @@ fullyTranslated: true
 ---
 # OAuth 2.0を使用した設定
 
-A Platform App can be set up to use client-side [OAuth 2.0][oauth2] authentication.
+Platformアプリは、クライアント側の[OAuth 2.0][oauth2]認証を使用するよう設定できます。
 
 <CTA to="g://authentication/oauth2">
 

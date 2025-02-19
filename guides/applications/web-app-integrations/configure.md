@@ -25,7 +25,7 @@ fullyTranslated: true
 ---
 # ウェブアプリ統合の作成
 
-This guide explains how to set up a Web App Integration with a Platform App.
+このガイドでは、Platformアプリとのウェブアプリ統合を設定する方法について説明します。
 
 <message type="warning">
 
@@ -35,7 +35,7 @@ This guide explains how to set up a Web App Integration with a Platform App.
 
 ## OAuth 2.0アプリケーションの作成
 
-Navigate to the [Developer Console][devconsole] and create a [Platform App][ca] that leverages [OAuth 2.0 authentication][custom-oauth2].
+[開発者コンソール][devconsole]に移動し、[OAuth 2.0認証][custom-oauth2]を利用する[Platformアプリ][ca]を作成します。
 
 ## 新しい統合の作成
 

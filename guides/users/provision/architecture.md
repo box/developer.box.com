@@ -29,7 +29,7 @@ fullyTranslated: true
 
 <Message>
 
-# Box Platform Application Requirements
+# Box Platformアプリケーションの要件
 
 この手順のためにJWTベースのカスタムBoxアプリケーションを作成する場合、**ユーザーを管理する**、**グループを管理する**、**ユーザーとして操作を実行**、および**ユーザーアクセストークンを生成**スコープを有効にする必要があります。
 

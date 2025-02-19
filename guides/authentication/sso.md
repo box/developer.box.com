@@ -28,9 +28,9 @@ fullyTranslated: true
 
 多くのBox Enterpriseでは、**シングルサインオン** (SSO) を使用して、Boxにログインしている[管理対象ユーザー][mu]を認証します。Box Platformに作成されたアプリケーションとSSOプロバイダの対話方法は、作成されるアプリケーションの種類によって異なります。
 
-## Platform Apps with Client-side Authentication
+## クライアント側認証を使用するPlatformアプリ
 
-When users authenticate with a [Platform App][custom_app] configured to use [OAuth 2.0][oauth2] Box will detect if the enterprise is configured to use SSO. If it is, Box will redirect the user to their browser and display the enterprise's configured SSO log-in screen.
+[OAuth 2.0][oauth2]を使用するよう構成された[Platformアプリ][custom_app]でユーザーが認証されると、Boxは、企業でSSOを使用するよう構成されているかどうかを検出します。SSOを使用するよう構成されている場合、ユーザーはブラウザにリダイレクトされ、企業の構成済みのSSOログイン画面が表示されます。
 
 ### SSOの有効化とSSO必須モード
 
@@ -49,11 +49,11 @@ SSOが必須モードに設定されている企業では、SSOからユーザ�
 
 </Message>
 
-## Platform Apps with Server-side Authentication
+## サーバー側認証を使用するPlatformアプリ
 
-For [Platform Apps][custom_app] that use [JWT][jwt] or [Client Credentials Grant][ccg] and [Limited Access Apps][la-app] that use [App Token][app_token] authentication, SSO is not used to authenticate with Box.
+[JWT][jwt]または[クライアント資格情報許可][ccg]を使用する[Platformアプリ][custom_app]および[アプリトークン][app_token]認証を使用する[アクセス制限付きアプリ][la-app]では、Boxでの認証にSSOは使用されません。
 
-Platform Apps using server-side authentication only use server-to-server API calls to communicate with Box. In this scenario, the way in which an end user is authenticated is determined by the application and not by Box.
+サーバー側認証を使用するPlatformアプリは、Boxとの通信にサーバー間のAPIコールのみを使用します。このシナリオでのエンドユーザーの認証方法は、Boxではなくアプリケーションが決定します。
 
 つまり、アプリケーションによるエンドユーザーの認証はそのアプリケーションによって決まりますが、アプリケーションによるBoxの承認とはまったく異なります。
 
