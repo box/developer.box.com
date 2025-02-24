@@ -47,7 +47,7 @@ Box AI Developer Zoneでは、Box AI APIを実際に体験できる対話型の�
 
 </Header>
 
-Box AI APIは、Enterprise PlusおよびEnterprise Advancedをご利用のすべてのお客様が利用できます。メタデータ抽出に関連したエンドポイントは、現在、BoxのMain Beta Agreementに従い提供されるベータ機能のため、利用可能な機能が変更される可能性があります。
+Box AI APIは、Enterprise PlusおよびEnterprise Advancedをご利用のすべてのお客様が利用できます。
 
 <TileGrid rows="4">
 
@@ -67,9 +67,9 @@ Box AI APIは、Enterprise PlusおよびEnterprise Advancedをご利用のすべ
 
 ドキュメントのメタデータの候補を自由形式モードで抽出します。
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #92e0c0">
 
-パブリックベータ
+新着情報
 
 </strong>
 
@@ -79,9 +79,9 @@ Box AI APIは、Enterprise PlusおよびEnterprise Advancedをご利用のすべ
 
 ドキュメントのメタデータの候補を構造化モードで抽出します。
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #92e0c0">
 
-パブリックベータ
+新着情報
 
 </strong>
 
@@ -181,19 +181,19 @@ LlamaIndex用のBox reader一式を使用して、LLMワークフロー内での
 
 <strong style="background-color: #e8e8e8">
 
-新着情報
+\[統合]
 
 </strong>
 
 </Tile>
 
-<Tile type="box-brown" title="LangChain" href="https://python.langchain.com/v0.2/docs/integrations/providers/box/">
+<Tile type="box-brown" title="LangChain" href="https://python.langchain.com/docs/integrations/providers/box/">
 
 LangChain向けのBox loaderを使用して、BoxコンテンツをLLMワークフローに含めます。
 
 <strong style="background-color: #e8e8e8">
 
-新着情報
+\[統合]
 
 </strong>
 
@@ -205,7 +205,7 @@ BoxとPineconeを関連付けることで、ベクトル埋め込みをカスタ
 
 <strong style="background-color: #e8e8e8">
 
-新着情報
+\[統合]
 
 </strong>
 

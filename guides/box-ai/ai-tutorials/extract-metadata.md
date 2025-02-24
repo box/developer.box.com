@@ -26,7 +26,7 @@ fullyTranslated: true
 ---
 # ファイルからメタデータを抽出する (自由形式)
 
-Box AI APIを使用すると、ドキュメントを照会し、指定したプロンプトに基づいてメタデータを抽出できます。**自由形式**とは、JSONやXMLなどの形式の文字列化バージョン、またはプレーンテキストをプロンプトに含めることができるという意味です。
+Box AI API allows you to query a document or image and extract metadata based on a provided prompt. **Freeform** means that the prompt can include a stringified version of formats such as JSON or XML, or even plain text.
 
 ## 開始する前に
 

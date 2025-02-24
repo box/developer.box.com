@@ -404,12 +404,6 @@ Box UI Elementsは、V4の注釈が十分に機能している、使用可能な
 
 ## Box AI for UI Elements
 
-<Message type="notice">
-
-Box AI for UI Elementsはベータ機能であり、**Enterprise Plus**および**Enterprise Advanced**をご利用のお客様が利用できます。
-
-</Message>
-
 Box AI for UI Elementsは、追加機能によってコンテンツプレビューUI Elementを強化するため、開発者はカスタムアプリにBox Q&A AI機能を追加できるようになります。Box AIの機能で強化されたプレビューUI Elementでは、以下の機能を提供します。
 
 * Q&Aとドキュメントの要約。

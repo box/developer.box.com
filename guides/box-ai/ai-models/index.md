@@ -23,12 +23,6 @@ fullyTranslated: true
 ---
 # サポートされているAIモデル
 
-<Message type="notice">
-
-メタデータ抽出に関連するエンドポイントは、現在、BoxのMain Beta Agreementに従い提供されるベータ機能のため、利用可能な機能が変更される可能性があります。Box AI APIは、Enterprise PlusおよびEnterprise Advancedをご利用のすべてのお客様が利用できます。
-
-</Message>
-
 ## モデルの使用
 
 サポートされているAIモデルを使用できます。
