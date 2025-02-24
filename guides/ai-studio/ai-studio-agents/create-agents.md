@@ -28,11 +28,11 @@ Box AI Studio is available only for Enterprise Advanced accounts.
 
 </Message>
 
-The `POST/2.0/ai_agents` endpoint allows you to create a new, custom [AI agent][agents].
+The `POST /2.0/ai_agents` endpoint allows you to create a new, custom [AI agent][agents].
 
 ## Send a request
 
-To send a request, use the `POST/2.0/ai_agents` endpoint.
+To send a request, use the `POST /2.0/ai_agents` endpoint.
 
 Make sure you have generated the developer token
 to authorize your app. See [getting started with Box AI][prereq]
