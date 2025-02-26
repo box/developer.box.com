@@ -101,6 +101,13 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
         <strong style="background-color: #fffbf3">Preview</strong>
       </div>
     </Tile>
+		<Tile type="model" title="aws__claude_3_7_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-7-sonnet-model-card">
+      A model designed to enhance language understanding and generation tasks.
+      <div>
+        <strong style="background-color: #e8e8e8">Chat</strong>
+        <strong style="background-color: #fffbf3">Preview</strong>
+      </div>
+    </Tile>
      <Tile type="model" title="aws__titan_text_lite" href="/guides/box-ai/ai-models/aws-titan-text-lite-model-card">
       A model capable of advanced language processing, handling extensive contexts, making it suitable for complex tasks.
       <div>
