@@ -24,11 +24,10 @@ source_url: >-
 ---
 # Metadata view with Content Explorer
 
-With Content Explorer you can also display files
-and folders based on their metadata.
-This view is called the metadata view and uses
-metadata template and metadata query to find the data you
-want to display.
+With Content Explorer you can also display files and folders
+based on their metadata.
+The metadata view uses metadata template and metadata query to
+find the data you want to display.
 
 ## Create and configure an app
 
