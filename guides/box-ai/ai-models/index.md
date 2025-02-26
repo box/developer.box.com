@@ -12,7 +12,7 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 11
+total_steps: 12
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card
@@ -245,6 +245,27 @@ Preview
 </Tile>
 
 <Tile type="model" title="aws__claude_3_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-5-sonnet-model-card">
+
+A model designed to enhance language understanding and generation tasks.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Chat
+
+</strong>
+
+<strong style="background-color: #fffbf3">
+
+Preview
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="aws__claude_3_7_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-7-sonnet-model-card">
 
 A model designed to enhance language understanding and generation tasks.
 <div>
