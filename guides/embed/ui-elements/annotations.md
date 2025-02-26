@@ -1,5 +1,5 @@
 ---
-rank: 9
+rank: 10
 related_endpoints: []
 related_guides:
   - embed/ui-elements
@@ -14,7 +14,7 @@ subcategory_id: embed/ui-elements
 is_index: false
 id: embed/ui-elements/annotations
 type: guide
-total_steps: 14
+total_steps: 15
 sibling_id: embed/ui-elements
 parent_id: embed/ui-elements
 next_page_id: embed/ui-elements/logo
