@@ -11,10 +11,6 @@ alias_paths:
 
 # Supported AI models
 
-<Message type="notice">
-Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus and Enterprise Advanced customers.
-</Message>
-
 ## Using models
 
 You can use the supported AI models:
@@ -99,6 +95,13 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
       </div>
     </Tile>
      <Tile type="model" title="aws__claude_3_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-5-sonnet-model-card">
+      A model designed to enhance language understanding and generation tasks.
+      <div>
+        <strong style="background-color: #e8e8e8">Chat</strong>
+        <strong style="background-color: #fffbf3">Preview</strong>
+      </div>
+    </Tile>
+		<Tile type="model" title="aws__claude_3_7_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-7-sonnet-model-card">
       A model designed to enhance language understanding and generation tasks.
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
