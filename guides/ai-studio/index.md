@@ -22,23 +22,23 @@ fullyTranslated: true
 
 <Messsage type="caution">
 
-Box AI Studio is available only for Enterprise Advanced accounts.
+Box AI Studioは、Enterprise Advancedアカウントでのみ使用できます。
 
 </Message>
 
-[Box AI Studio][ai-studio] allows you to build and manage custom AI agents to best suit your business needs. For example, you can create an AI agent that acts as a compliance consultant, answering questions regarding customer documentation with the FedRAMP Moderate compliance in mind.
+[Box AI Studio][ai-studio]を使用すると、ビジネスニーズに最適なカスタムAIエージェントを作成して管理できます。たとえば、コンプライアンスコンサルタントとして機能し、FedRAMP Moderateへの準拠を念頭に置いて顧客のドキュメントに関する質問に回答するAIエージェントを作成できます。
 
-## Box AI Studio capabilities
+## Box AI Studioの機能
 
-Currently, you can configure Box AI agent to answer user questions or generate text you can use in your documents.
+現在、Box AIエージェントは、ユーザーの質問に回答したり、ドキュメントで使用できるテキストを生成したりするよう構成できます。
 
-![ai agent capabilities](./images/ai-agent-capabilities.png)
+![AIエージェントの機能](./images/ai-agent-capabilities.png)
 
 ## サポートされている言語
 
 <!--alex ignore-->
 
-Box AI studio works in a number of languages including English, Japanese, French, Spanish, and many more. However, the underlying models are primarily trained on English language documents. This means that prompts in other languages may return answers of lower quality than in English. Tests have shown satisfactory results for summarizing, checking grammar and spelling, and answering questions, but bear in mind that the results may be different than in English.
+Box AI Studioは、英語、日本語、フランス語、スペイン語など、多くの言語で使用できます。ただし、基になるモデルは、主に英語のドキュメントでトレーニングされています。つまり、他の言語のプロンプトで返される回答は、英語の場合よりも低品質になる可能性があります。テストでは、要約、文法やつづりの確認、質問への回答について満足のいく結果が示されていますが、結果は英語の場合と異なる可能性があることに留意してください。
 
 <!--alex enable-->
 

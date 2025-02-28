@@ -21,23 +21,23 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/ai-studio/ai-studio-agents/get-agents.md
 fullyTranslated: true
 ---
-# Get agents
+# エージェントの取得
 
 <Messsage type="caution">
 
-Box AI Studio is available only for Enterprise Advanced accounts.
+Box AI Studioは、Enterprise Advancedアカウントでのみ使用できます。
 
 </Message>
 
-## List all AI agents
+## すべてのAIエージェントのリストの取得
 
-The `GET/2.0/ai_agents` endpoint allows you to list all AI agents based on the provided parameters.
+`GET/2.0/ai_agents`エンドポイントを使用すると、指定されたパラメータに基づいてすべてのAIエージェントのリストを取得できます。
 
 ### リクエストの送信
 
 リクエストを送信するには、`GET/2.0/ai_agents`エンドポイントを使用します。
 
-Make sure you have generated the developer token to authorize your app. See [getting started with Box AI Studio][getting-started] for details.
+アプリを承認するための開発者トークンを生成済みであることを確認します。詳細については、[Box AI Studioの使い方][getting-started]を参照してください。
 
 <Samples id="get-ai-agents">
 
@@ -47,14 +47,14 @@ Make sure you have generated the developer token to authorize your app. See [get
 
 コールを実行するには、以下のパラメータを渡す必要があります。必須のパラメータは**太字**で示されています。
 
-| パラメータ                 | 説明                                                                                                           | 例                                                   |
-| --------------------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------- |
-| `mode`                | The mode to filter the agent configuration to return. Possible values are: `ask`, `text_gen`, and `extract`. | `ask`                                               |
-| `fields`              | The fields to return in the response.                                                                        | `ask`                                               |
-| `agent_state`         | The state of the agent to return. Value is one of `enabled`,`disabled`.                                      | `enabled`                                           |
-| `fields`              | The fields to return in the response. Value is one of `ask`, `text_gen`, `extract`.                          | `ask`                                               |
-| `include_box_default` | Whether to include the Box default agents in the response.                                                   | `true`                                              |
-| `limit`               | The maximum number of items to return per page.                                                              | `1000`                                              |
-| `marker`              | Defines the position marker at which to begin returning results.                                             | `JV9IRGZmieiBasejOG9yDCRNgd2ymoZIbjsxbJMjIs3kioVii` |
+| パラメータ                 | 説明                                                               | 例                                                   |
+| --------------------- | ---------------------------------------------------------------- | --------------------------------------------------- |
+| `mode`                | 返されるエージェント構成にフィルタをかけるためのモード。使用可能な値は`ask`、`text_gen`、`extract`です。 | `ask`                                               |
+| `fields`              | レスポンスで返されるフィールド。                                                 | `ask`                                               |
+| `agent_state`         | 返されるエージェントの状態。値は`enabled`、`disabled`のいずれかです。                     | `enabled`                                           |
+| `fields`              | レスポンスで返されるフィールド。値は`ask`、`text_gen`、`extract`のいずれかです。             | `ask`                                               |
+| `include_box_default` | レスポンスにBoxのデフォルトのエージェントを含めるかどうか。                                  | `true`                                              |
+| `limit`               | 返す項目の1ページあたりの最大数。                                                | `1000`                                              |
+| `marker`              | 結果が返される開始位置のマーカー。                                                | `JV9IRGZmieiBasejOG9yDCRNgd2ymoZIbjsxbJMjIs3kioVii` |
 
 [getting-started]: g://ai-studio/getting-started-ai-studio

@@ -21,15 +21,15 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/ai-studio/ai-studio-agents/create-agents.md
 fullyTranslated: true
 ---
-# Create agents
+# エージェントの作成
 
 <Messsage type="caution">
 
-Box AI Studio is available only for Enterprise Advanced accounts.
+Box AI Studioは、Enterprise Advancedアカウントでのみ使用できます。
 
 </Message>
 
-The `POST/2.0/ai_agents` endpoint allows you to create a new, custom [AI agent][agents].
+`POST/2.0/ai_agents`エンドポイントを使用すると、新しいカスタム[AIエージェント][agents]を作成できます。
 
 ## リクエストの送信
 
@@ -47,16 +47,16 @@ The `POST/2.0/ai_agents` endpoint allows you to create a new, custom [AI agent][
 
 <!--alex ignore-->
 
-| パラメータ              | 説明                                                                                                                                                                                                                                                                                                                                                    | 例                                                                         |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| **`type`**         | The type of agent used to handle queries.                                                                                                                                                                                                                                                                                                             | `ai_agent`                                                                |
-| **`name`**         | The name of the AI Agent.                                                                                                                                                                                                                                                                                                                             | `My AI Agent`                                                             |
-| **`access_state`** | The state of the AI Agent. Value is one of `enabled` `disabled`.                                                                                                                                                                                                                                                                                      | `enabled`                                                                 |
-| `icon_reference`   | The icon reference of the AI Agent. It should have format of the URL `https://cdn01.boxcdn.net/app-assets/aistudio/avatars/<file_name>` , where the possible values of `file_name` are: `logo_boxAi.png`,`logo_stamp.png`, `logo_legal.png`,`logo_finance.png`,`logo_config.png`,`logo_handshake.png` `logo_analytics.png`,`logo_classification.png`. | `https://cdn01.boxcdn.net/app-assets/aistudio/avatars/logo_analytics.svg` |
-| `allowed_entities` | List of allowed users or groups.                                                                                                                                                                                                                                                                                                                      |                                                                           |
-| `ask`              | The AI Agent to be used for ask.                                                                                                                                                                                                                                                                                                                      | `ask`                                                                     |
-| `extract`          | The AI Agent to be used for extraction.                                                                                                                                                                                                                                                                                                               |                                                                           |
-| `text_gen`         | The AI agent used for generating text.                                                                                                                                                                                                                                                                                                                |                                                                           |
+| パラメータ              | 説明                                                                                                                                                                                                                                                                                               | 例                                                                         |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
+| **`type`**         | クエリの処理に使用されるエージェントのタイプ。                                                                                                                                                                                                                                                                          | `ai_agent`                                                                |
+| **`name`**         | AIエージェントの名前。                                                                                                                                                                                                                                                                                     | `My AI Agent`                                                             |
+| **`access_state`** | AIエージェントの状態。値は`enabled`、`disabled`のいずれかです。                                                                                                                                                                                                                                                       | `enabled`                                                                 |
+| `icon_reference`   | AIエージェントのアイコン参照。これは、URL `https://cdn01.boxcdn.net/app-assets/aistudio/avatars/<file_name>`の形式で指定する必要があります。この場合、`file_name`に使用可能な値は`logo_boxAi.png`、`logo_stamp.png`、`logo_legal.png`、`logo_finance.png`、`logo_config.png`、`logo_handshake.png`、`logo_analytics.png`、`logo_classification.png`です。 | `https://cdn01.boxcdn.net/app-assets/aistudio/avatars/logo_analytics.svg` |
+| `allowed_entities` | 許可するユーザーまたはグループのリスト。                                                                                                                                                                                                                                                                             |                                                                           |
+| `ask`              | 質問に使用されるAIエージェント。                                                                                                                                                                                                                                                                                | `ask`                                                                     |
+| `extract`          | 抽出に使用されるAIエージェント。                                                                                                                                                                                                                                                                                |                                                                           |
+| `text_gen`         | テキストの生成に使用されるAIエージェント。                                                                                                                                                                                                                                                                           |                                                                           |
 
 <!--alex enable-->
 

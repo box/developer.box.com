@@ -18,12 +18,12 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/ai-studio/ai-studio-agents/index.md
 fullyTranslated: true
 ---
-# AI studio agents
+# AI Studioエージェント
 
 <Messsage type="caution">
 
-Box AI Studio is available only for Enterprise Advanced accounts.
+Box AI Studioは、Enterprise Advancedアカウントでのみ使用できます。
 
 </Message>
 
-Create, list, update, and delete custom AI agents.
+カスタムAIエージェントの作成、リスト取得、更新、削除を行います。

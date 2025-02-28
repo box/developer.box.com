@@ -21,23 +21,23 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/ai-studio/getting-started-ai-studio.md
 fullyTranslated: true
 ---
-# Get started with AI studio
+# AI Studioの使い方
 
 <Messsage type="caution">
 
-Box AI Studio is available only for Enterprise Advanced accounts.
+Box AI Studioは、Enterprise Advancedアカウントでのみ使用できます。
 
 </Message>
 
-To start creating custom AI agents with AI studio you need a platform application with enabled Box AI scope and a developer token to authenticate your calls.
+AI StudioでカスタムAIエージェントの作成を開始するには、Box AIスコープが有効になっているPlatformアプリケーションと、コールを認証するための開発者トークンが必要です。
 
 ## カスタムアプリケーションの作成
 
-First you need to create a platform application you will use to make calls. To create an application, follow the guide on [creating platform apps][createapps].
+まず、コールの実行に使用するPlatformアプリケーションを作成する必要があります。アプリケーションを作成するには、[Platformアプリの作成][createapps]に関するガイドに従ってください。
 
-## Enable Box AI studio
+## Box AI Studioの有効化
 
-To use Box AI studio, make sure it is enabled by a Box admin in the Admin Console. If you are a Box Admin, you will find the necessary information in [Enabling Box AI Studio and Managing Agents][enable].
+Box AI Studioを使用するには、Box管理者が管理コンソールで有効にしていることを確認してください。Box管理者は、[Box AI Studioの有効化とエージェントの管理][enable]で必要な情報を確認できます。
 
 Box AI APIを操作するには、アプリケーションに`ai.readwrite`[スコープ][scope]を追加する必要があります。このスコープを追加する前に、Box管理者からBox AI APIへのアクセス権限が付与されていることを確認してください。アプリの構成設定で \[**AIを管理する**] オプションが表示されていない場合は、管理者までお問い合わせください。
 

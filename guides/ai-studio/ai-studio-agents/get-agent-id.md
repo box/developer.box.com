@@ -21,9 +21,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/ai-studio/ai-studio-agents/get-agent-id.md
 fullyTranslated: true
 ---
-# Get AI agent by ID
+# IDを指定してAIエージェントを取得
 
-The `GET/2.0/ai_agents/{id}` endpoint allows you to list a specific AI agent by the `agent_id` parameter.
+`GET/2.0/ai_agents/{id}`エンドポイントを使用すると、`agent_id`パラメータを使用して特定のAIエージェントのリストを取得できます。
 
 ## リクエストの送信
 
@@ -37,7 +37,7 @@ The `GET/2.0/ai_agents/{id}` endpoint allows you to list a specific AI agent by 
 
 コールを実行するには、以下のパラメータを渡す必要があります。必須のパラメータは**太字**で示されています。
 
-| パラメータ          | 説明                                    | 例      |
-| -------------- | ------------------------------------- | ------ |
-| **`agent_id`** | The agent id to get.                  | `1234` |
-| `fields`       | The fields to return in the response. | `ask`  |
+| パラメータ          | 説明               | 例      |
+| -------------- | ---------------- | ------ |
+| **`agent_id`** | 取得するエージェントID。    | `1234` |
+| `fields`       | レスポンスで返されるフィールド。 | `ask`  |

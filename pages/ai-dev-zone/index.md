@@ -57,7 +57,7 @@ Box AI APIは、Enterprise PlusおよびEnterprise Advancedをご利用のすべ
 
 <strong style="background-color: #92e0c0">
 
-新着情報
+新着
 
 </strong>
 
@@ -69,7 +69,7 @@ Box AI APIは、Enterprise PlusおよびEnterprise Advancedをご利用のすべ
 
 <strong style="background-color: #92e0c0">
 
-新着情報
+新着
 
 </strong>
 
@@ -81,7 +81,7 @@ Box AI APIは、Enterprise PlusおよびEnterprise Advancedをご利用のすべ
 
 <strong style="background-color: #92e0c0">
 
-新着情報
+新着
 
 </strong>
 
@@ -181,7 +181,7 @@ LlamaIndex用のBox reader一式を使用して、LLMワークフロー内での
 
 <strong style="background-color: #e8e8e8">
 
-\[統合]
+統合
 
 </strong>
 
@@ -193,7 +193,7 @@ LangChain向けのBox loaderを使用して、BoxコンテンツをLLMワーク�
 
 <strong style="background-color: #e8e8e8">
 
-\[統合]
+統合
 
 </strong>
 
@@ -205,7 +205,7 @@ BoxとPineconeを関連付けることで、ベクトル埋め込みをカスタ
 
 <strong style="background-color: #e8e8e8">
 
-\[統合]
+統合
 
 </strong>
 

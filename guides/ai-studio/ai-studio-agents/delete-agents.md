@@ -21,9 +21,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/ai-studio/ai-studio-agents/delete-agents.md
 fullyTranslated: true
 ---
-# Delete AI agent
+# AIエージェントの削除
 
-The `DELETE/2.0/ai_agents/{id}` endpoint allows you to delete a custom AI agent based on its ID.
+`DELETE/2.0/ai_agents/{id}`エンドポイントを使用すると、IDに基づいてカスタムAIエージェントを削除できます。
 
 ## リクエストの送信
 
@@ -37,6 +37,6 @@ The `DELETE/2.0/ai_agents/{id}` endpoint allows you to delete a custom AI agent 
 
 コールを実行するには、以下のパラメータを渡す必要があります。必須のパラメータは**太字**で示されています。
 
-| パラメータ          | 説明                             | 例      |
-| -------------- | ------------------------------ | ------ |
-| **`agent_id`** | The ID of the agent to delete. | `1234` |
+| パラメータ          | 説明             | 例      |
+| -------------- | -------------- | ------ |
+| **`agent_id`** | 削除するエージェントのID。 | `1234` |
