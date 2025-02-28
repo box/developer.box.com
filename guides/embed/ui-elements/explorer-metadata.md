@@ -64,8 +64,8 @@ defined in the sample project, as in the example below.
 
 <Message type='notice'>
 
-The `fieldsToShow` parameter is responsible for showing
-the metadata columns in the UI.
+You can add or hide specific metadata columns using the `fieldsToShow` parameter
+(for example **Last modified by**) to display in the Content Explorer.
 
 </Message>
 
