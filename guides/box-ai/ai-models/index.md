@@ -12,7 +12,7 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 11
+total_steps: 12
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card
@@ -253,6 +253,28 @@ Box AI Extractのデフォルト
 </Tile>
 
 <Tile type="model" title="aws__claude_3_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-5-sonnet-model-card">
+
+言語の理解と生成のタスクを強化するよう設計されたモデル。
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
+<strong style="background-color: #fffbf3">
+
+プレビュー
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="aws__claude_3_7_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-7-sonnet-model-card">
 
 言語の理解と生成のタスクを強化するよう設計されたモデル。
 

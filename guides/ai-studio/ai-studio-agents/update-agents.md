@@ -23,11 +23,11 @@ fullyTranslated: true
 ---
 # AIエージェントの更新
 
-`PUT/2.0/ai_agents/{id}`エンドポイントを使用すると、IDに基づいてカスタムAIエージェントを更新できます。
+`PUT /2.0/ai_agents/{id}`エンドポイントを使用すると、IDに基づいてカスタムAIエージェントを更新できます。
 
 ## リクエストの送信
 
-リクエストを送信するには、`PUT/2.0/ai_agents/{id}`エンドポイントを使用します。
+リクエストを送信するには、`PUT /2.0/ai_agents/{id}`エンドポイントを使用します。
 
 <Samples id="put-ai-agents_id">
 

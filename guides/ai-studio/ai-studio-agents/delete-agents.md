@@ -23,11 +23,11 @@ fullyTranslated: true
 ---
 # AIエージェントの削除
 
-`DELETE/2.0/ai_agents/{id}`エンドポイントを使用すると、IDに基づいてカスタムAIエージェントを削除できます。
+`DELETE /2.0/ai_agents/{id}`エンドポイントを使用すると、IDに基づいてカスタムAIエージェントを削除できます。
 
 ## リクエストの送信
 
-リクエストを送信するには、`DELETE/2.0/ai_agents/{id}`エンドポイントを使用します。
+リクエストを送信するには、`DELETE /2.0/ai_agents/{id}`エンドポイントを使用します。
 
 <Samples id="delete-ai-agents-id">
 

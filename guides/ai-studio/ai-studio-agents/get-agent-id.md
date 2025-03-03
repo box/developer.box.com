@@ -23,11 +23,11 @@ fullyTranslated: true
 ---
 # IDを指定してAIエージェントを取得
 
-`GET/2.0/ai_agents/{id}`エンドポイントを使用すると、`agent_id`パラメータを使用して特定のAIエージェントのリストを取得できます。
+`GET /2.0/ai_agents/{id}`エンドポイントを使用すると、`agent_id`パラメータを使用して特定のAIエージェントのリストを取得できます。
 
 ## リクエストの送信
 
-リクエストを送信するには、`GET/2.0/ai_agents/{id}`エンドポイントを使用します。
+リクエストを送信するには、`GET /2.0/ai_agents/{id}`エンドポイントを使用します。
 
 <Samples id="get-ai-agents-id">
 

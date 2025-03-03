@@ -11,7 +11,7 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/azure-openai-gpt-4o-mini-model-card
 type: guide
-total_steps: 11
+total_steps: 12
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
 next_page_id: box-ai/ai-models/azure-text-embedding-ada-002-model-card
