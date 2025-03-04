@@ -24,7 +24,7 @@ fullyTranslated: true
 
 ## 概要
 
-**AWS Claude 3.7 Sonnet** model is designed to enhance language understanding and generation tasks.
+**AWS Claude 3.7 Sonnet**モデルは、言語の理解と生成のタスクを強化するよう設計されています。
 
 ## モデルの詳細
 
@@ -34,8 +34,8 @@ fullyTranslated: true
 | APIモデル名       | `aws__claude_3_7_sonnet`      | [Box AI APIでのモデルの上書き][overrides]に使用されるモデルの名前。APIを動作させるには、ユーザーがこの名前を正確に指定する必要があります。 |
 | ホスティングレイヤー    | **Amazon Web Services (AWS)** | LLMを安全にホストする、信頼できる組織。                                                              |
 | モデルプロバイダ      | **Anthropic**                 | このモデルを提供する組織。                                                                      |
-| リリース日         | **February 24, 2025**         | モデルのリリース日。                                                                         |
-| ナレッジカットオフ日    | **October 2024**              | モデルが情報の更新を取得しなくなった日付。                                                              |
+| リリース日         | **2025年2月24日**                | モデルのリリース日。                                                                         |
+| ナレッジカットオフ日    | **2024年10月**                  | モデルが情報の更新を取得しなくなった日付。                                                              |
 | 入力コンテキストウィンドウ | **200,000トークン**               | 入力コンテキストウィンドウでサポートされるトークン数。                                                        |
 | 出力トークンの最大数    | **8,000トークン**                 | 1回のリクエストでモデルが生成できるトークン数。                                                           |
 | 経験に基づいたスループット | **42**                        | モデルが1秒あたりに生成できるトークン数。                                                              |
@@ -43,7 +43,7 @@ fullyTranslated: true
 
 ## その他のドキュメント
 
-For additional information, see [official AWS Claude documentation][aws-claude].
+詳細については、[AWS Claudeの公式ドキュメント][aws-claude]を参照してください。
 
 [aws-claude]: https://aws.amazon.com/bedrock/claude/
 
