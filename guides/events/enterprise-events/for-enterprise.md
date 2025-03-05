@@ -140,6 +140,9 @@ exhaustive, so it is possible events appear that are not listed.
 | `COMMENT_CREATE`                               | A comment is created on a file                                                                  |
 | `COMMENT_DELETE`                               | A comment is deleted on a file                                                                  |
 | `CONTENT_ACCESS`                               | A file is accessed by an authorized end user or programmatically by a Box application           |
+| `CONTENT_RECOVERY_REPORT_CREATE` | A Content Recovery report is created |
+| `CONTENT_RECOVERY_REPORT_DELETE` | A Content Recovery report is deleted  |
+| `CONTENT_RECOVERY_REPORT_INITIATE` | A Content Recovery report is initiated |
 | `CONTENT_WORKFLOW_ABNORMAL_DOWNLOAD_ACTIVITY`  | A policy set in the Admin console is triggered                                                  |
 | `CONTENT_WORKFLOW_AUTOMATION_ADD`              | An automation is added                                                                          |
 | `CONTENT_WORKFLOW_AUTOMATION_DELETE`           | An automation is deleted                                                                        |
