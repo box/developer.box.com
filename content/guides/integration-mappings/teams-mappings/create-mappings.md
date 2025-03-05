@@ -1,0 +1,18 @@
+---
+rank: 3
+related_endpoints:
+ - post_integration_mappings_teams
+related_guides:
+ - integration-mappings/teams-mappings/list-mappings
+ - integration-mappings/teams-mappings/update-mapping
+ - integration-mappings/teams-mappings/delete-mapping
+required_guides:
+ - integration-mappings/teams-mappings/index
+related_resources: []
+alias_paths: []
+---
+# Create Teams integration mappings
+
+Use the `POST integration_mappings_teams` call to create a mapping.
+To make it work, you need `box_item` and `partner_item` parameters,
+which refer to a Box folder and a Teams channel, respectively.
