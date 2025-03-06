@@ -30,7 +30,7 @@ related_guides:
 
 ## Additional documentation
 
-For additional information, see [official AWS Claude 3.5 Sonnet documentation][aws-claude].
+For additional information, see [official AWS Claude documentation][aws-claude].
 
 [aws-claude]: https://aws.amazon.com/bedrock/claude/
 [overrides]: g://box-ai/ai-agents/ai-agent-overrides
