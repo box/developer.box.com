@@ -115,6 +115,9 @@ Enterpriseに対して、以下のイベントがトリガーされます。こ�
 | `COMMENT_CREATE`                                              | ファイル上でのコメントの作成                                                                                                |
 | `COMMENT_DELETE`                                              | ファイル上のコメントの削除                                                                                                 |
 | `CONTENT_ACCESS`                                              | 承認されたエンドユーザーまたはBoxアプリケーションでのプログラムによるファイルへのアクセス                                                                |
+| `CONTENT_RECOVERY_REPORT_CREATE`                              | A Content Recovery report is created                                                                          |
+| `CONTENT_RECOVERY_REPORT_DELETE`                              | A Content Recovery report is deleted                                                                          |
+| `CONTENT_RECOVERY_REPORT_INITIATE`                            | A Content Recovery report is initiated                                                                        |
 | `CONTENT_WORKFLOW_ABNORMAL_DOWNLOAD_ACTIVITY`                 | 管理コンソールで設定されたポリシーのトリガー                                                                                        |
 | `CONTENT_WORKFLOW_AUTOMATION_ADD`                             | 自動化の追加                                                                                                        |
 | `CONTENT_WORKFLOW_AUTOMATION_DELETE`                          | 自動化の削除                                                                                                        |

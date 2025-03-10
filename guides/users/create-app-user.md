@@ -49,4 +49,10 @@ App Userは、BoxアプリケーションがAPIを介してのみアクセスで
 
 App Userの作成時に設定できるすべての使用可能なオプションパラメータを確認するには、[ユーザーを作成](endpoint://post-users)エンドポイントを参照してください。
 
+<Message type="notice">
+
+Before you can make any changes to the newly created account, you need to click the link you receive in the confirmation email.
+
+</Message>
+
 App Userが作成されると、ユーザーオブジェクトが返されます。ユーザーオブジェクト内には、App UserのIDがあります。これは、ユーザーを変更するAPIリクエストを実行するために今後使用される可能性があります。

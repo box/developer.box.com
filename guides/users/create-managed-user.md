@@ -40,6 +40,12 @@ fullyTranslated: true
 
 App Userの作成時に設定できるすべての使用可能なオプションパラメータを確認するには、[ユーザーを作成](endpoint://post-users)エンドポイントを参照してください。
 
+<Message type="notice">
+
+Before you can make any changes to the newly created account, you need to click the link you receive in the confirmation email.
+
+</Message>
+
 ユーザー作成リクエストから、ユーザーオブジェクトが返されます。このユーザーオブジェクトには管理対象ユーザーのIDが含まれています。これは、今後ユーザーを変更するAPIリクエストを実行するために使用できます。
 
 新しい管理対象ユーザーが作成されると、使用されているメールアドレス宛てに、アカウントのパスワードの作成を求めるメールがBoxから届きます。このアクションが実行されるまで、アカウントは`pending`状態になります。
