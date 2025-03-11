@@ -44,11 +44,10 @@ user, see the [create user endpoint](endpoint://post-users).
 
 <Message type='notice'>
 
- Before you make any changes to the newly created
-account, you need to confirm the account creation through the link you
-receive in the confirmation email.
+Before you can make any changes to the newly created account, you need to
+click the link you receive in the confirmation email.
 
- </Message>
+</Message>
 
 A user object will be returned from the create user request. Within the user
 object is an ID for the managed user, which may be used to make API requests to

@@ -68,6 +68,8 @@ Here's what you can expect from the new SDKs:
 - **Embedded Documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
 - **Enhanced Convenience Methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers which help to ensure that you’re using variables correctly, and much more.
 
+Find the Box Platform SDK in a programming language of your choice and get started:
+
 | Platform                            | Maintained? | API Parity |
 | ----------------------------------- | ----------- | ---------- |
 | [Python Gen SDK][pythongensdk]      |     Yes     |    Full    |
