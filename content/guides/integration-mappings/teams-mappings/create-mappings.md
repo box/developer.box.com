@@ -4,8 +4,8 @@ related_endpoints:
  - post_integration_mappings_teams
 related_guides:
  - integration-mappings/teams-mappings/list-mappings
- - integration-mappings/teams-mappings/update-mapping
- - integration-mappings/teams-mappings/delete-mapping
+ - integration-mappings/teams-mappings/update-mappings
+ - integration-mappings/teams-mappings/delete-mappings
 required_guides:
  - integration-mappings/teams-mappings/index
 related_resources: []
