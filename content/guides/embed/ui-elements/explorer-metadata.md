@@ -11,13 +11,18 @@ alias_paths:
   - /docs/content-explorer
 ---
 
-# Metadata view with Content Explorer
+# Content Explorer - Metadata view
 
 With Content Explorer you can also display files and folders
 based on their metadata.
-The metadata view uses metadata template and metadata query to
+The metadata view uses [metadata template][template] and [metadata query][metadata-query] to
 find the data you want to display.
 
+## Prerequisites
+
+* Read the [Content Explorer][explorer] guide.
+* Check the [metadata terminology][terminology].
+* Check the information on [metadata queries][metadata-query].
 ## Create and configure an app
 
 1. [Create a Box app][box-app].
@@ -217,6 +222,9 @@ Chinese, etc.) they are automatically renamed to generic identifiers:
 **TIP**: For a detailed flow, see [Metadata view blog post][blogpost].
 </Message>
 
+[terminology]: g://metadata/#metadata-terminology
+[template]: g:///metadata/2-templates/0-index
+[explorer]: g:///embed/ui-elements/explorer
 [blogpost]: https://medium.com/box-developer-blog/metadata-view-in-box-content-explorer-4978e47e97e9
 [creating-templates-api]: g:///metadata/templates/create
 [creating-templates-ui]: https://support.box.com/hc/en-us/articles/360044194033-Customizing-Metadata-Templates
