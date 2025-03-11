@@ -23,6 +23,7 @@ find the data you want to display.
 * Read the [Content Explorer][explorer] guide.
 * Check the [metadata terminology][terminology].
 * Check the information on [metadata queries][metadata-query].
+
 ## Create and configure an app
 
 1. [Create a Box app][box-app].
@@ -227,7 +228,7 @@ characters, the key will be renamed.
 </Message>
 
 [terminology]: g://metadata/#metadata-terminology
-[template]: g://metadata/2-templates/0-index
+[template]: g://metadata/templates
 [explorer]: g:///embed/ui-elements/explorer
 [blogpost]: https://medium.com/box-developer-blog/metadata-view-in-box-content-explorer-4978e47e97e9
 [creating-templates-api]: g:///metadata/templates/create
