@@ -223,7 +223,7 @@ Chinese, etc.) they are automatically renamed to generic identifiers:
 </Message>
 
 [terminology]: g://metadata/#metadata-terminology
-[template]: g:///metadata/2-templates/0-index
+[template]: g://metadata/2-templates/0-index
 [explorer]: g:///embed/ui-elements/explorer
 [blogpost]: https://medium.com/box-developer-blog/metadata-view-in-box-content-explorer-4978e47e97e9
 [creating-templates-api]: g:///metadata/templates/create
