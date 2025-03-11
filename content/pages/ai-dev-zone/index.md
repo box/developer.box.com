@@ -119,7 +119,7 @@ view sample code, explore Box AI use cases, and more!
     </Tile>
     <Tile type="box-brown" title="Airbyte"
       href="https://github.com/box-community/airbyte/blob/barduinor/source-box-devrel/docs/integrations/sources/box-data-extract.md">
-        Transform unstructured documents into structured, queryable data with  Airbyte source connector called “Box data extract”.
+        Transform unstructured documents into structured, queryable data by using the “Box data extract”, an Airbyte source connector.
         
         <div>
           <strong style="background-color: #92e0c0">Beta</strong>
