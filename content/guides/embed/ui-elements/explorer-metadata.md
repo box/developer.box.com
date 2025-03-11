@@ -11,7 +11,7 @@ alias_paths:
   - /docs/content-explorer
 ---
 
-# Content Explorer - Metadata view
+# Content Explorer - metadata view
 
 With Content Explorer you can also display files and folders
 based on their metadata.
@@ -37,6 +37,20 @@ The next step is to create a metadata template you will use to populate the Cont
 2. Apply an already created template to a Box folder. Make sure you enable the
 cascade policy. For detailed instructions, see
 [instructions on customizing and applying templates][apply-templates].
+
+### Display name and key parameters
+
+* The `displayName` parameter is the display name of the template visible
+in the Admin Console.
+* The `templateKey` parameter is a unique identifier of the template. It needs 
+to be unique across the enterprise for which you create the metadata template.
+If you don't provide the `templateKey` parameter, API creates a unique one
+based on the value in `displayName`.
+* The `[fields].displayName` parameter is the display name of the field as it
+is shown to the user in the web and mobile apps.
+* The `[fields].key` parameter is a unique identifier for a specific field in
+the template. The identifier must be unique within the template to which it
+belongs.
 
 ## Display metadata view
 
@@ -179,19 +193,6 @@ function App() {
 export default App;
 ```
 
-## Display name and key parameters
-
-* The `displayName` parameter is the display name of the template.
-* The `templateKey` parameter is a unique identifier of the template. It needs 
-to be unique across the enterprise for which you create the metadata template.
-If you don't provide the `templateKey` parameter, API creates a unique one
-based on the value in `displayName`.
-* The `[fields].displayName` parameter is the display name of the field as it
-is shown to the user in the web and mobile apps.
-* The `[fields].key` parameter is a unique identifier for a specific field in
-the template. The identifier must be unique within the template to which it
-belongs.
-
 ## Key
 
 To decide which fields to show, the metadata Content Explorer uses metadata
@@ -217,6 +218,9 @@ Chinese, etc.) they are automatically renamed to generic identifiers:
 
 * `field` for the first occurrence
 * `field1`, `field2`, and so on for subsequent occurrences
+
+Key names are based on the display names. If a display name contains non-Latin
+characters, the key will be renamed.
 
 <Message type='notice'>
 **TIP**: For a detailed flow, see [Metadata view blog post][blogpost].
