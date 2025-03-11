@@ -7,9 +7,9 @@ related_endpoints:
  - put_integration_mappings_teams_id
 related_guides:
  - integration-mappings/teams-mappings/list-mappings
- - integration-mappings/teams-mappings/create-mapping
- - integration-mappings/teams-mappings/update-mapping
- - integration-mappings/teams-mappings/delete-mapping
+ - integration-mappings/teams-mappings/create-mappings
+ - integration-mappings/teams-mappings/update-mappings
+ - integration-mappings/teams-mappings/delete-mappings
 required_guides: []
 related_resources: []
 alias_paths: []
