@@ -6,7 +6,7 @@ centered: false
 # Box AI Developer Zone
 
 <Centered wide id="ai-developer-zone" >
-  <HeroImage type="AiDevZone" imageWidth="600" imageHeight="400">
+  <HeroImage type="HeroAiDevZone" imageWidth="600" imageHeight="400">
     <Header>
       Box AI</br>
       Developer Zone
