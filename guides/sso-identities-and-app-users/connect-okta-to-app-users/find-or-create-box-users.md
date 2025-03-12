@@ -23,10 +23,10 @@ fullyTranslated: true
 このセクションでは、以下のようにBoxの最終的なコンポーネントを取り上げます。
 
 * Oktaユーザーに、関連付けられたBox App Userアカウントがあるかどうかを検証します。
-* (関連付けられているアカウントがない場合は) 関連付けられているOktaレコードに新しいアプリユーザーを作成します。
+* (関連付けられているアカウントがない場合は) 関連付けられているOktaレコードに新しいApp Userを作成します。
 * Boxユーザーのトークンを取得してユーザー固有のAPIコールを実行します。
 
-## Platformアプリユーザーの作成
+## Platform App Userの作成
 
 ユーザーを検証する前に、関連付けられたBoxユーザーアカウントがOktaユーザーにない場合のために、そのアカウントを作成する方法が必要です。
 
@@ -470,7 +470,7 @@ System.Diagnostics.Debug.WriteLine("Current user name: " + currentUser.Name);
 ## まとめ
 
 * OktaユーザーがBoxユーザーとして存在するかどうかを検証しました。
-* 存在しない場合は新しいアプリユーザーを作成しました。
+* 存在しない場合は新しいApp Userを作成しました。
 * 既存のBoxユーザーに対してBox APIコールを実行しました。
 
 <Observe option="box.app_type" value="use_own,create_new_">

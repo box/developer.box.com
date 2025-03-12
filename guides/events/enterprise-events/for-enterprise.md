@@ -31,7 +31,7 @@ Enterprise Eventを取得するには、`stream_type`を`admin_logs`または`ad
 
 <Message>
 
-このAPIを使用するには、ユーザーは**新規レポートの実行および既存レポートへのアクセスを行う**のための権限を持つ、会社の管理者または共同管理者である必要があります。
+このAPIを使用するには、ユーザーが企業の管理者または**新規レポートの実行および既存レポートへのアクセスを行う**のための権限を持つ共同管理者である必要があります。
 
 </Message>
 
@@ -115,9 +115,9 @@ Enterpriseに対して、以下のイベントがトリガーされます。こ�
 | `COMMENT_CREATE`                                              | ファイル上でのコメントの作成                                                                                                |
 | `COMMENT_DELETE`                                              | ファイル上のコメントの削除                                                                                                 |
 | `CONTENT_ACCESS`                                              | 承認されたエンドユーザーまたはBoxアプリケーションでのプログラムによるファイルへのアクセス                                                                |
-| `CONTENT_RECOVERY_REPORT_CREATE`                              | A Content Recovery report is created                                                                          |
-| `CONTENT_RECOVERY_REPORT_DELETE`                              | A Content Recovery report is deleted                                                                          |
-| `CONTENT_RECOVERY_REPORT_INITIATE`                            | A Content Recovery report is initiated                                                                        |
+| `CONTENT_RECOVERY_REPORT_CREATE`                              | コンテンツリカバリレポートの作成                                                                                              |
+| `CONTENT_RECOVERY_REPORT_DELETE`                              | コンテンツリカバリレポートの削除                                                                                              |
+| `CONTENT_RECOVERY_REPORT_INITIATE`                            | コンテンツリカバリレポートの実行                                                                                              |
 | `CONTENT_WORKFLOW_ABNORMAL_DOWNLOAD_ACTIVITY`                 | 管理コンソールで設定されたポリシーのトリガー                                                                                        |
 | `CONTENT_WORKFLOW_AUTOMATION_ADD`                             | 自動化の追加                                                                                                        |
 | `CONTENT_WORKFLOW_AUTOMATION_DELETE`                          | 自動化の削除                                                                                                        |

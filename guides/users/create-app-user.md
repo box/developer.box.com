@@ -51,7 +51,7 @@ App Userの作成時に設定できるすべての使用可能なオプション
 
 <Message type="notice">
 
-Before you can make any changes to the newly created account, you need to click the link you receive in the confirmation email.
+新しく作成したアカウントを変更できるようにするには、受信した確認メールにあるリンクをクリックする必要があります。
 
 </Message>
 
