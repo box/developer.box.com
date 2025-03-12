@@ -168,18 +168,18 @@ primary:
 
   connect_featured:
     tag:
-      text: Community
+      text: Event
 
     title:
-      text: Box Developer Community forum
+      text: How to Accelerate Development with Generated Box SDKs
 
     details:
       text: |-
-        Meet other Box Platform developers and admins!
+        Join us for a webinar and explore the generated Box SDKs.
 
     cta:
       text: |-
-        Join now
+        Register now
 
 secondary:
   images:
