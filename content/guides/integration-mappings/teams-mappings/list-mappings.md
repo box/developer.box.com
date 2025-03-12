@@ -11,5 +11,5 @@ alias_paths: []
 # List Teams integration mappings
 
 Use the `GET /integration_mappings/teams` call to fetch and filter the mappings,
-both the ones created manually by the admin those created automatically by the
+both the ones created manually by the admin and those created automatically by the
 integration.
