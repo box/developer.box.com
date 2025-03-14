@@ -15,4 +15,4 @@ alias_paths: []
 Use the `PUT integration_mappings_teams_id` call to update the
 existing mapping of the target Box folder.
 
-<!-- sample put-integration-mappings-teams-id -->
+<Samples id='put-integration-mappings-teams-id' />
