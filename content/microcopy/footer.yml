@@ -153,23 +153,15 @@ categories:
     links:
       support:
         // text: Text for link to go to our support page
-        text: Support & Community
+        text: Support
         // url: Link to go to our status page
         url: /support
 
       ticket:
         // text: Text for link to create a support ticket
-        text: Create a ticket
+        text: Community & Developer Forum
         // url: Link to create a support ticket
-        url: "https://community.box.com/t5/custom/page/page-id\
-          /BoxSearchLithiumTKB"
-
-      forum:
-        // text: Text for link to go to our support forum
-        text: Platform Forum
-        // url: Link to go to our support forum
-        url: |-
-          https://support.box.com/hc/en-us/community/topics/360001932973-Platform-and-Developer-Forum
+        url: "https://community.box.com"
 
       feedback:
         // text: Text for link to go to our feedback site
