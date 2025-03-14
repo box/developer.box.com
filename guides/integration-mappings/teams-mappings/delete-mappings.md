@@ -30,4 +30,6 @@ A new mapping and a new folder in the default folder structure will be created
 when the next file is uploaded to the channel.
 Deleting the mapping does not delete the Box folder or the Teams channel.
 
-<!-- sample delete-integration-mappings-teams-id -->
+<Samples id='delete-integration-mappings-teams-id' >
+
+</Samples>
