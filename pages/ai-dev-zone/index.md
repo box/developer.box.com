@@ -175,6 +175,28 @@ BoxのAI統合を使用して、LLMモデルの既存のナレッジベースを
 
 <TileGrid rows="4">
 
+<Tile type="box-brown" title="Box MCP server" href="https://github.com/box-community/mcp-server-box?tab=readme-ov-file#mcp-server-box">
+
+Allow AI assistants to access enterprise content management capabilities with minimal friction, opening up new possibilities for intelligent document handling and analysis.
+
+<div>
+
+<strong style="background-color: #92e0c0">
+
+新着
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
+MCP
+
+</strong>
+
+</div>
+
+</Tile>
+
 <Tile type="box-brown" title="LlamaIndex" href="https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/readers/llama-index-readers-box#readme">
 
 LlamaIndex用のBox reader一式を使用して、LLMワークフロー内でのBoxコンテンツへのアクセスを可能にします。
@@ -208,6 +230,28 @@ BoxとPineconeを関連付けることで、ベクトル埋め込みをカスタ
 統合
 
 </strong>
+
+</Tile>
+
+<Tile type="box-brown" title="Airbyte" href="https://github.com/box-community/airbyte/blob/barduinor/source-box-devrel/docs/integrations/sources/box-data-extract.md">
+
+Transform unstructured documents into structured, queryable data by using the “Box data extract”, an Airbyte source connector.
+
+<div>
+
+<strong style="background-color: #92e0c0">
+
+ベータ
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
+統合
+
+</strong>
+
+</div>
 
 </Tile>
 

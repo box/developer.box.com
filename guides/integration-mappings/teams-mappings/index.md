@@ -1,0 +1,70 @@
+---
+rank: 1
+related_endpoints:
+  - delete_teams_integration_mappings_id
+  - get_integration_mappings_teams
+  - post_integration_mappings_teams
+  - put_integration_mappings_teams_id
+related_guides:
+  - integration-mappings/teams-mappings/list-mappings
+  - integration-mappings/teams-mappings/create-mappings
+  - integration-mappings/teams-mappings/update-mappings
+  - integration-mappings/teams-mappings/delete-mappings
+required_guides: []
+related_resources: []
+alias_paths: []
+category_id: integration-mappings
+subcategory_id: integration-mappings/teams-mappings
+is_index: true
+id: integration-mappings/teams-mappings
+type: guide
+total_steps: 4
+sibling_id: integration-mappings
+parent_id: integration-mappings
+next_page_id: integration-mappings/teams-mappings/list-mappings
+previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/main/content/guides/integration-mappings/teams-mappings/index.md
+fullyTranslated: true
+---
+# Teams integration mappings
+
+Before you can start working with [Teams][2] integration mapping API, perform the steps below.
+
+## 前提条件
+
+* Admin or Co-Admin role
+* [Box for Microsoft Teams][1] integration installed
+
+## Create a Box application
+
+1. Create a [platform app with OAuth authentication][3] in the [Box developer console][4].
+2. アプリケーションを開き、\[**構成**] > \[**必須のアクセススコープ**] で \[**Enterpriseのプロパティを管理する**] アプリケーションスコープを有効にします。
+
+## Authorize integration mappings requests
+
+1. Navigate to the [platform app][5] that you have created as one of the prerequisites.
+2. [開発者トークン][6]を生成し、次のように各リクエストのHTTPヘッダーに追加します。
+
+```bash
+Authorization: Bearer {developer_token}
+
+```
+
+<Message info>
+
+The developer token is valid for 60 minutes. After that time, you need to generate it again.
+
+</Message>
+
+[1]: https://support.box.com/hc/en-us/articles/360050737154-Assigning-a-Default-Box-Folder-to-a-Teams-Channel-or-Chat
+
+[2]: https://support.box.com/hc/en-us/articles/360044667034-Introducing-Box-for-Microsoft-Teams
+
+[3]: g://authentication/oauth2/oauth2-setup
+
+[4]: https://app.box.com/developers/console
+
+[5]: g://applications/app-types/platform-apps
+
+[6]: g://authentication/tokens/developer-tokens
