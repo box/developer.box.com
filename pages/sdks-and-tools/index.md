@@ -84,10 +84,11 @@ Download the **Box Platform** SDK in a programming language of your choice and g
 | [Swift SDK][swiftgensdk] (Beta)     |     Yes     |    Full    |
 | [Java Gen SDK][javagensdk] (Beta)   |     Yes     |    Full    |
 
-### SDKs
+### Legacy SDKs
 
-The table lists Box SDKs that you can use
-when building your applications.
+The table lists legacy Box SDKs that you can use when building your
+applications. For latest API support and features, use the next
+generation SDKs.
 
 | Platform                          |                                     Maintained?                                      | API Parity |
 | --------------------------------- | ------------------------------------------------------------------------------------ | ---------- |
