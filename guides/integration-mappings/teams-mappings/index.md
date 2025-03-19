@@ -27,23 +27,23 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/integration-mappings/teams-mappings/index.md
 fullyTranslated: true
 ---
-# Teams integration mappings
+# Teams統合マッピング
 
-Before you can start working with [Teams][2] integration mapping API, perform the steps below.
+[Teams][2]統合マッピングAPIの使用を開始する前に、以下の手順を実行してください。
 
 ## 前提条件
 
-* Admin or Co-Admin role
-* [Box for Microsoft Teams][1] integration installed
+* 管理者または共同管理者のロール
+* [Box for Microsoft Teams][1]統合がインストールされていること
 
-## Create a Box application
+## Boxアプリケーションの作成
 
-1. Create a [platform app with OAuth authentication][3] in the [Box developer console][4].
+1. [Box開発者コンソール][4]で、[OAuth認証を使用するPlatformアプリ][3]を作成します。
 2. アプリケーションを開き、\[**構成**] > \[**必須のアクセススコープ**] で \[**Enterpriseのプロパティを管理する**] アプリケーションスコープを有効にします。
 
-## Authorize integration mappings requests
+## 統合マッピングリクエストの承認
 
-1. Navigate to the [platform app][5] that you have created as one of the prerequisites.
+1. 前提条件の1つとして作成した[Platformアプリ][5]に移動します。
 2. [開発者トークン][6]を生成し、次のように各リクエストのHTTPヘッダーに追加します。
 
 ```bash
@@ -53,7 +53,7 @@ Authorization: Bearer {developer_token}
 
 <Message info>
 
-The developer token is valid for 60 minutes. After that time, you need to generate it again.
+開発者トークンの有効期限は60分です。その時間が経過した後は、再度生成する必要があります。
 
 </Message>
 

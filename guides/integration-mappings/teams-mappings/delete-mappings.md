@@ -23,9 +23,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/integration-mappings/teams-mappings/delete-mappings.md
 fullyTranslated: true
 ---
-# Delete Teams integration mappings
+# Teams統合マッピングの削除
 
-The `DELETE integration_mappings_teams_id` call removes the mapping between the channel and the folder. A new mapping and a new folder in the default folder structure will be created when the next file is uploaded to the channel. Deleting the mapping does not delete the Box folder or the Teams channel.
+`DELETE integration_mappings_teams_id`呼び出しを使用して、チャネルとフォルダ間のマッピングを削除します。次のファイルがチャネルにアップロードされると、デフォルトのフォルダ構造で新しいマッピングと新しいフォルダが作成されます。マッピングを削除しても、BoxフォルダもTeamsチャネルも削除されません。
 
 <Samples id="delete-integration-mappings-teams-id">
 

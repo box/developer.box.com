@@ -23,9 +23,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/integration-mappings/teams-mappings/update-mappings.md
 fullyTranslated: true
 ---
-# Update Teams integration mappings
+# Teams統合マッピングの更新
 
-Use the `PUT integration_mappings_teams_id` call to update the existing mapping of the target Box folder.
+`PUT integration_mappings_teams_id`呼び出しを使用して、ターゲットのBoxフォルダの既存のマッピングを更新します。
 
 <Samples id="put-integration-mappings-teams-id">
 

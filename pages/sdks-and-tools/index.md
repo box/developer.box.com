@@ -58,7 +58,7 @@ Swift SDKはパブリックベータ段階です。
 * **ドキュメントへの埋め込み**: 必要な情報すべてが1か所に保存されるように、すべてのオブジェクトおよびパラメータはSDKのソースコードに直接記述されます。
 * **便利なメソッドの強化**: 新しく導入された便利なメソッドは、認証、分割アップロード、指数バックオフ、自動再試行、型チェック (変数を正しく使用しているかどうかの確認に役立ちます) など、さまざまな側面をカバーします。
 
-Download the **Box Platform** SDK in a programming language of your choice and get started:
+任意のプログラミング言語の**Box Platform** SDKをダウンロードして開始します。
 
 | プラットフォーム                        | メンテナンスの有無 | APIパリティ |
 | ------------------------------- | --------- | ------- |
@@ -68,9 +68,9 @@ Download the **Box Platform** SDK in a programming language of your choice and g
 | [Swift SDK][swiftgensdk] (ベータ)  | はい        | Full    |
 | [Javaの次世代SDK][javagensdk] (ベータ) | はい        | Full    |
 
-### Legacy SDKs
+### 従来のSDK
 
-The table lists legacy Box SDKs that you can use when building your applications. For latest API support and features, use the next generation SDKs.
+次の表に、アプリケーションの作成時に使用できる従来のBox SDKを示します。最新のAPIサポートや機能には、次世代のSDKを使用してください。
 
 | プラットフォーム                          | メンテナンスの有無                               | APIパリティ |
 | --------------------------------- | --------------------------------------- | ------- |

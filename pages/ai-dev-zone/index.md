@@ -175,9 +175,9 @@ BoxのAI統合を使用して、LLMモデルの既存のナレッジベースを
 
 <TileGrid rows="4">
 
-<Tile type="box-brown" title="Box MCP server" href="https://github.com/box-community/mcp-server-box?tab=readme-ov-file#mcp-server-box">
+<Tile type="box-brown" title="Box MCPサーバー" href="https://github.com/box-community/mcp-server-box?tab=readme-ov-file#mcp-server-box">
 
-Allow AI assistants to access enterprise content management capabilities with minimal friction, opening up new possibilities for intelligent document handling and analysis.
+AIアシスタントが最小限の負荷で企業のコンテンツ管理機能にアクセスできるようにし、インテリジェントなドキュメント処理および分析の新たな可能性を切り開きます。
 
 <div>
 
@@ -235,7 +235,7 @@ BoxとPineconeを関連付けることで、ベクトル埋め込みをカスタ
 
 <Tile type="box-brown" title="Airbyte" href="https://github.com/box-community/airbyte/blob/barduinor/source-box-devrel/docs/integrations/sources/box-data-extract.md">
 
-Transform unstructured documents into structured, queryable data by using the “Box data extract”, an Airbyte source connector.
+Airbyteソースコネクタ「Box Data Extract」を使用して、非構造化ドキュメントを照会可能な構造化データに変換します。
 
 <div>
 
