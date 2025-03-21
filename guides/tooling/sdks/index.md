@@ -73,7 +73,7 @@ Download the **Box Platform** SDK in a programming language of your choice and g
 | Platform                            | Maintained? | API Parity |
 | ----------------------------------- | ----------- | ---------- |
 | [Python Gen SDK][pythongensdk]      |     Yes     |    Full    |
-| [Typescript Gen SDK][tsgensdk]      |     Yes     |    Full    |
+| [TypeScript Gen SDK][tsgensdk]      |     Yes     |    Full    |
 | [.NET Gen SDK][dotnetgensdk]        |     Yes     |    Full    |
 | [Swift Gen SDK][swiftgensdk] (Beta) |     Yes     |    Full    |
 | [Java Gen SDK][javagensdk] (Beta)   |     Yes     |    Full    |
