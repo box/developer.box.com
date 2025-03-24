@@ -267,7 +267,7 @@
   // The URL to the developer console
   "headers.primary.buttons.dashboard.url": "https:\/\/cloud.app.box.com\/developers\/console",
   // The text for the link to the developer console
-  "headers.primary.buttons.console.text": "マイPlatformアプリ",
+  "headers.primary.buttons.console.text": "Platformアプリ",
   // The URL to the developer console
   "headers.primary.buttons.console.url": "https:\/\/cloud.app.box.com\/developers\/console",
   // The text for the link to the developer signup
