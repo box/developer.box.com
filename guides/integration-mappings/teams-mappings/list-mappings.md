@@ -25,6 +25,6 @@ fullyTranslated: true
 
 `GET /integration_mappings/teams`呼び出しを使用すると、マッピングを取得してフィルタをかけることができます。管理者が手動で作成したマッピングも、統合によって自動的に作成されたマッピングも対象になります。
 
-<Samples id="get-integration-mappings-teams">
+<Samples id="get_integration_mappings_teams">
 
 </Samples>

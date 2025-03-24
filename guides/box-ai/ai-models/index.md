@@ -44,7 +44,7 @@ APIコールで`model`パラメータを使用する際は、各タイルおよ�
 
 <Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card">
 
-軽量のタスクを処理するように設計されたマルチモーダルモデル。
+軽量のタスクを処理するように設計された複数モードモデル。
 
 <div>
 
@@ -78,7 +78,7 @@ Box AI for NotesのQ&Aのデフォルト
 
 <Tile type="gpt" title="azure_openai__gpt_4o_2024_05_13" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card">
 
-複雑なマルチステップタスクの処理で非常に効率的なマルチモーダルモデル。
+複雑なマルチステップタスクの処理で非常に効率的な複数モードモデル。
 
 <div>
 
@@ -122,7 +122,7 @@ Box AI for NotesのQ&Aのデフォルト
 
 <Tile type="gemini" title="google__gemini_2_0_flash_001" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-001-model-card">
 
-大規模で大量かつ高頻度のタスクに最適になるよう設計されたGeminiマルチモーダルモデル。
+大規模で大量かつ高頻度のタスクに最適になるよう設計されたGemini複数モードモデル。
 
 <div>
 
@@ -144,7 +144,7 @@ Box AI for NotesのQ&Aのデフォルト
 
 <Tile type="gemini" title="google__gemini_2_0_flash_lite_preview" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-lite-preview-02-05">
 
-軽量のタスクを処理するように設計されたGeminiマルチモーダルモデル。
+軽量のタスクを処理するように設計されたGemini複数モードモデル。
 
 <div>
 
@@ -166,7 +166,7 @@ Box AI for NotesのQ&Aのデフォルト
 
 <Tile type="gemini" title="google__gemini_1_5_flash_001" href="/guides/box-ai/ai-models/google-gemini-1-5-flash-001-model-card">
 
-大量のタスクやレイテンシの影響を受けやすいアプリケーション向けに構築されたGeminiマルチモーダルモデル。
+大量のタスクやレイテンシの影響を受けやすいアプリケーション向けに構築されたGemini複数モードモデル。
 
 <div>
 
@@ -188,7 +188,7 @@ Box AI Extractのデフォルト
 
 <Tile type="gemini" title="google__gemini_1_5_pro_001" href="/guides/box-ai/ai-models/google-gemini-1-5-pro-001-model-card">
 
-さまざまなマルチモーダルタスクで優れたパフォーマンスを発揮する基本モデル。
+さまざまな複数モードタスクで優れたパフォーマンスを発揮する基本モデル。
 
 <div>
 

@@ -28,6 +28,6 @@ fullyTranslated: true
 
 `POST integration_mappings_teams`呼び出しを使用してマッピングを作成します。この呼び出しを動作させるには、`box_item`パラメータと`partner_item`パラメータが必要です。これらのパラメータはそれぞれ、BoxフォルダとTeamsチャネルを示します。
 
-<Samples id="post-integration-mappings-teams">
+<Samples id="post_integration_mappings_teams">
 
 </Samples>

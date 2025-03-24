@@ -27,6 +27,6 @@ fullyTranslated: true
 
 `PUT integration_mappings_teams_id`呼び出しを使用して、ターゲットのBoxフォルダの既存のマッピングを更新します。
 
-<Samples id="put-integration-mappings-teams-id">
+<Samples id="put_integration_mappings_teams_id">
 
 </Samples>

@@ -22,7 +22,7 @@ fullyTranslated: true
 ---
 # Azure text-embedding-ada-002
 
-**Azure text-embedding-ada-002**は、軽量のタスクを処理するように設計されたマルチモーダルモデルです。
+**Azure text-embedding-ada-002**は、軽量のタスクを処理するように設計された複数モードモデルです。
 
 ## モデルの詳細
 

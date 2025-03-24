@@ -27,6 +27,6 @@ fullyTranslated: true
 
 `DELETE integration_mappings_teams_id`呼び出しを使用して、チャネルとフォルダ間のマッピングを削除します。次のファイルがチャネルにアップロードされると、デフォルトのフォルダ構造で新しいマッピングと新しいフォルダが作成されます。マッピングを削除しても、BoxフォルダもTeamsチャネルも削除されません。
 
-<Samples id="delete-integration-mappings-teams-id">
+<Samples id="delete_integration_mappings_teams_id">
 
 </Samples>
