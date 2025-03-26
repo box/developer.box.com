@@ -13,6 +13,11 @@ The [chunked upload APIs][chunked] support files from 20MB in size and allow an
 application to upload the file in parts, allowing for more control to catch any
 errors and retry parts individually.
 
+<Message type='tip'>
+To upload files to the Archive folder, you need to first enable the [Global
+Content Manager][GCM] (GCM) scope in the Developer Console.
+</Message>
+
 ## Upload limits
 
 Upload limits are dictated by the type of account of the authenticated user.
@@ -36,6 +41,7 @@ the Box SDKs will take care of choosing the right domain for the right API call.
 
 [direct]: g://uploads/direct
 [chunked]: g://uploads/chunked
+[GCM]: g://api-calls/permissions-and-errors/scopes
 <!-- i18n-enable localize-links -->
 [fsizes]: https://support.box.com/hc/en-us/articles/360043697314-Understand-the-Maximum-File-Size-You-Can-Upload-to-Box
 <!-- i18n-disable localize-links -->
