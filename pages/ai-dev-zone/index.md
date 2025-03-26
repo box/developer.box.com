@@ -221,7 +221,7 @@ Airbyteソースコネクタ「Box Data Extract」を使用して、非構造化
 
 <Tile type="box-brown" title="OpenAI" href="https://github.com/box-community/box-openai-responses-ai-agent">
 
-Use OpenAI Responses API and a Box Agent to add unstructured data from your Box instance into your agentic workflows.
+OpenAI Responses APIとBoxエージェントを使用して、Boxインスタンスからエージェント型ワークフローに非構造化データを追加します。
 
 <div>
 
@@ -243,7 +243,7 @@ Use OpenAI Responses API and a Box Agent to add unstructured data from your Box 
 
 <Tile type="box-brown" title="Weaviate" href="https://medium.com/box-developer-blog/weaviate-box-rag-recipe-with-weaviate-query-agent-1cb41cf9e68b">
 
-Build RAG workflows by embedding Box content into a Weaviate vector database and leveraging Weaviate's new Query Agent.
+WeaviateのベクトルデータベースにBoxコンテンツを埋め込み、Weaviateの新しいQuery Agentを利用して、RAGワークフローを作成します。
 
 <div>
 
