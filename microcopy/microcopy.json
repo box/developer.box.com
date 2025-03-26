@@ -465,17 +465,13 @@
   // A title for a footer section on our support channels
   "footer.categories.support.title": "Support",
   // Text for link to go to our support page
-  "footer.categories.support.links.support.text": "Support & Community",
+  "footer.categories.support.links.support.text": "Support",
   // Link to go to our status page
   "footer.categories.support.links.support.url": "/support",
   // Text for link to create a support ticket
-  "footer.categories.support.links.ticket.text": "Create a ticket",
+  "footer.categories.support.links.ticket.text": "Community & Developer Forum",
   // Link to create a support ticket
-  "footer.categories.support.links.ticket.url": "https://community.box.com/t5/custom/page/page-id/BoxSearchLithiumTKB",
-  // Text for link to go to our support forum
-  "footer.categories.support.links.forum.text": "Platform Forum",
-  // Link to go to our support forum
-  "footer.categories.support.links.forum.url": "https://support.box.com/hc/en-us/community/topics/360001932973-Platform-and-Developer-Forum",
+  "footer.categories.support.links.ticket.url": "https://community.box.com",
   // Text for link to go to our feedback site
   "footer.categories.support.links.feedback.text": "Product Feedback",
   // Link to go to our feedback site

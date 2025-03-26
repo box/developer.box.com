@@ -26,5 +26,9 @@ source_url: >-
 # Create Teams integration mappings
 
 Use the `POST integration_mappings_teams` call to create a mapping.
-To make it work, you need `box_item` and `partner_item` parameters,
+To make it work, you need the `box_item` and the `partner_item` parameters,
 which refer to a Box folder and a Teams channel, respectively.
+
+<Samples id='post_integration_mappings_teams' >
+
+</Samples>

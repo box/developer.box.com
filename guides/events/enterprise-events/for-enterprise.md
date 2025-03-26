@@ -124,6 +124,8 @@ exhaustive, so it is possible events appear that are not listed.
 | `APPLICATION_CREATED`                          | A new application is created in the Box Developer Console                                       |
 | `APPLICATION_PUBLIC_KEY_ADDED`                 | An application public key is added.                                                             |
 | `APPLICATION_PUBLIC_KEY_DELETED`               | An application public key is deleted.                                                           |
+| `BOX_AI_USER_REQUEST` | User asks Box AI a question or makes a request |
+| `BOX_AI_USER_FAILED_REQUEST` | The question or request returns an error |
 | `CHANGE_ADMIN_ROLE`                            | When an admin role changes for a user                                                           |
 | `CHANGE_FOLDER_PERMISSION`                     | Edit the permissions on a folder                                                                |
 | `COLLABORATION_ACCEPT`                         | Accepted invites                                                                                |

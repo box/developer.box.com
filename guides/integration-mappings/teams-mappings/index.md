@@ -29,7 +29,7 @@ source_url: >-
 # Teams integration mappings
 
 Before you can start working with [Teams][2] integration mapping API,
-perform the below steps.
+perform the steps below.
 
 ## Prerequisites
 
@@ -41,9 +41,7 @@ perform the below steps.
 1. Create a [platform app with OAuth authentication][3] in the [Box developer console][4].
 2. Open the application and enable the **Manage enterprise properties** application scope under **Configuration** > **Required Access Scopes**.
 
-## Authorization
-
-To authorize your integration mappings requests:
+## Authorize integration mappings requests
 
 1. Navigate to the [platform app][5] that you have created as one of the prerequisites.
 2. Generate a [developer token][6] and add it to the HTTP header of each request:
@@ -54,7 +52,7 @@ Authorization: Bearer {developer_token}
 
 <Message info>
 
-The developer token is valid for 60 minutes. After that time you need
+The developer token is valid for 60 minutes. After that time, you need
 to generate it again.
 
 </Message>
