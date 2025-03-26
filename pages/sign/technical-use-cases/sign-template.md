@@ -60,6 +60,15 @@ like so:
 
 Save the template.
 
+<Message type='notice'>
+
+You can add an [extra layer of security][additional-sec] for a recipient.
+It works for both a defined recipient with pre-defined email address, and a
+placeholder recipient, where the template user has to provide their email
+address.
+
+</Message>
+
 ## Identify the template
 
 In order to work with templates in the Box Sign API we are going to need the
@@ -652,3 +661,4 @@ signature tags that can be used by the Box Sign engine. Take a look at our
 [template]: https://support.box.com/hc/en-us/sections/21356768117651-Templates
 [request-options]: page://sign/request-options
 [structured-docs]: page://sign/technical-use-cases/sign-structured-docs
+[additional-sec]: page://sign/request-options/extra-security
