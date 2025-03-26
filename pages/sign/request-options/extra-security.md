@@ -22,7 +22,12 @@ in the document signing step.
 
 ![2FA Signature request](images/sign-flow-2fa.png)
 
-<Message type='notice'  You can add the additional layer of security in a template or when you create a signature request.  </Message>
+<Message type='notice'>
+
+You can add the additional layer of security in a template or when
+you create a signature request.
+
+</Message>
 
 ## Phone verification
 
