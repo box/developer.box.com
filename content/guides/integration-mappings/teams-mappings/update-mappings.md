@@ -13,4 +13,6 @@ alias_paths: []
 # Update Teams integration mappings
 
 Use the `PUT integration_mappings_teams_id` call to update the
-existing mapping or the target Box folder.
+existing mapping of the target Box folder.
+
+<Samples id='put_integration_mappings_teams_id' />
