@@ -199,6 +199,24 @@ MCP
 
 </Tile>
 
+<Tile type="box-brown" title="Pydantic AI and Box MCP" href="https://github.com/box-community/box-mcp-pydantic-ai">
+
+Use the Box MCP server to augment Pydantic AI agents with secure content in Box.
+
+<strong style="background-color: #92e0c0">
+
+New
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
+Demo
+
+</strong>
+
+</Tile>
+
 <Tile type="box-brown" title="Airbyte" href="https://github.com/box-community/airbyte/blob/barduinor/source-box-devrel/docs/integrations/sources/box-data-extract.md">
 
 Transform unstructured documents into structured, queryable data by using the “Box data extract”, an Airbyte source connector.
@@ -207,7 +225,7 @@ Transform unstructured documents into structured, queryable data by using the �
 
 <strong style="background-color: #92e0c0">
 
-Beta
+New
 
 </strong>
 
