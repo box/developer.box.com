@@ -103,8 +103,10 @@ view sample code, explore Box AI use cases, and more!
       href="https://github.com/box-community/box-mcp-pydantic-ai">
         Use the Box MCP server to augment Pydantic AI agents with secure content in Box.
 
-        <strong style="background-color: #92e0c0">New</strong>
-        <strong style="background-color: #e8e8e8">Demo</strong>
+        <div>
+          <strong style="background-color: #92e0c0">New</strong>
+          <strong style="background-color: #e8e8e8">Demo</strong>
+        </div>
     </Tile>
     <Tile type="box-brown" title="Airbyte"
       href="https://github.com/box-community/airbyte/blob/barduinor/source-box-devrel/docs/integrations/sources/box-data-extract.md">
