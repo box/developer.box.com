@@ -21,7 +21,7 @@ and High.
 
 The higher the security level the more restrictions are in place.
 
-Box is currently certified as [FedRAMP Moderate][FedRAMPCert].
+Box is currently certified as [FedRAMP High][FedRAMPCert].
 
 ## Considerations
 
@@ -36,7 +36,7 @@ might affect the usage of the API.
 
 For FedRAMP compliance, you may use the below URLs for API entry points.
 
-|FedRAMP Moderate |
+|FedRAMP |
 |-----------------|
 |account.box.com  |
 |api.box.com      |
@@ -134,4 +134,4 @@ and resources without hard-coding the locale.
 
 -->
 
-[FedRAMPCert]:https://marketplace.fedramp.gov/products/F1212191840
+[FedRAMPCert]: https://marketplace.fedramp.gov/products/F1212191840A
