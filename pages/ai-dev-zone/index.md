@@ -203,6 +203,8 @@ MCP
 
 Use the Box MCP server to augment Pydantic AI agents with secure content in Box.
 
+<div>
+
 <strong style="background-color: #92e0c0">
 
 New
@@ -214,6 +216,8 @@ New
 Demo
 
 </strong>
+
+</div>
 
 </Tile>
 
