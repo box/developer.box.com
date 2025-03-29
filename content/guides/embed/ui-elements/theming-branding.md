@@ -2,12 +2,12 @@
 rank: 15
 related_endpoints: []
 related_guides:
-	- embed/ui-elements
-	- embed/ui-elements/explorer
-	- embed/ui-elements/picker
-	- embed/ui-elements/uploader
+  - embed/ui-elements
+  - embed/ui-elements/explorer
+  - embed/ui-elements/picker
+  - embed/ui-elements/uploader
 required_guides:
-	- embed/ui-elements/installation
+  - embed/ui-elements/installation
 related_resources: []
 ---
 
@@ -28,7 +28,7 @@ You can change these elements in your embedded Box component.
 
 ### Styles
 
-**Colors**
+#### Colors
 
 Customize:
 
@@ -41,7 +41,7 @@ Customize:
  components
 * opacity - adjust the opacity of the overlay effects for Box Modals and side  panels
 
-**Typography**
+#### Typography
 
 Customize: 
 
@@ -49,14 +49,14 @@ Customize:
 * text decoration - underline, strikethroughs, letter spacing
 * line heights and paragraph spacing 
 
-**Border, radius**
+#### Border, radius
 
 Choose:
 
 * border styling - width, styles, and colours
 * border radius
 
-**Spacing**
+#### Spacing
 
 Choose:
 
@@ -64,14 +64,14 @@ Choose:
 * component-specific spacing
 * component-specific alignment and distribution, for example justify-content
 
-**Shadows and elevation**
+#### Shadows and elevation
 
 Define:
 
 * shadow presets
 * custom shadows
 
-**Interactive states**
+#### Interactive states
 
 Customize:
 
@@ -79,17 +79,14 @@ Customize:
 changedt background color
 * transitions and animations
 
-**Component-level overrides**
+#### Component-level overrides
 
 Customize  text inputs, dropdowns, and checckboxes with inividual color
 
-**Miscellaneous**
+#### Miscellaneous
 
 Define:
 
 * help text and labels
 * tooltips
 * progress indicators
-
-
-
