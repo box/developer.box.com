@@ -90,6 +90,51 @@ view sample code, explore Box AI use cases, and more!
   </p>
 
   <TileGrid rows="4">
+    <Tile type="box-brown" title="Box MCP server"
+      href="https://github.com/box-community/mcp-server-box?tab=readme-ov-file#mcp-server-box">
+        Allow AI assistants to access enterprise content management capabilities with minimal friction, opening up new possibilities for intelligent document handling and analysis.
+
+        <div>
+          <strong style="background-color: #92e0c0">New</strong>
+          <strong style="background-color: #e8e8e8">MCP</strong>
+        </div>
+    </Tile>
+    <Tile type="box-brown" title="Pydantic AI and Box MCP"
+      href="https://github.com/box-community/box-mcp-pydantic-ai">
+        Use the Box MCP server to augment Pydantic AI agents with secure content in Box.
+
+        <div>
+          <strong style="background-color: #92e0c0">New</strong>
+          <strong style="background-color: #e8e8e8">Demo</strong>
+        </div>
+    </Tile>
+    <Tile type="box-brown" title="Airbyte"
+      href="https://github.com/box-community/airbyte/blob/barduinor/source-box-devrel/docs/integrations/sources/box-data-extract.md">
+        Transform unstructured documents into structured, queryable data by using the “Box data extract”, an Airbyte source connector.
+        
+        <div>
+          <strong style="background-color: #92e0c0">New</strong>
+          <strong style="background-color: #e8e8e8">Integration</strong>
+        </div>
+    </Tile>
+    <Tile type="box-brown" title="OpenAI"
+      href="https://github.com/box-community/box-openai-responses-ai-agent">
+        Use OpenAI Responses API and a Box Agent to add unstructured data from your Box instance into your agentic workflows.
+        
+        <div>
+          <strong style="background-color: #92e0c0">New</strong>
+          <strong style="background-color: #e8e8e8">Integration</strong>
+        </div>
+    </Tile>
+    <Tile type="box-brown" title="Weaviate"
+      href="https://medium.com/box-developer-blog/weaviate-box-rag-recipe-with-weaviate-query-agent-1cb41cf9e68b">
+        Build RAG workflows by embedding Box content into a Weaviate vector database and leveraging Weaviate's new Query Agent.
+        
+        <div>
+          <strong style="background-color: #92e0c0">New</strong>
+          <strong style="background-color: #e8e8e8">Integration</strong>
+        </div>
+    </Tile>
     <Tile type="box-brown" title="LlamaIndex"
       href="https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/readers/llama-index-readers-box#readme">
         Enable access to Box content within LLM workflows with Box reader suite for LlamaIndex.
