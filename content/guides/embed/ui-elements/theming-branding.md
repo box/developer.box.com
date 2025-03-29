@@ -11,9 +11,9 @@ required_guides:
 related_resources: []
 ---
 
-# Theming & Branding for Box UI Elements
+# Themes & Branding for Box UI Elements
 
-With branding & theming for Box UI Elements you can customize the look and
+With branding & themes for Box UI Elements you can customize the look and
 behavior of your embedded Box component to your enterprise's requirements.
 The tool provides a real-time live preview for an easy adjustment of the theme.
 
@@ -46,14 +46,14 @@ Customize:
 Customize: 
 
 * global typography settings - choose the font family, size, and weights
-* text decoration - underline, strikethroughs, letter spacing
+* text decoration - underline, strikethrough, letter spacing
 * line heights and paragraph spacing 
 
 #### Border, radius
 
 Choose:
 
-* border styling - width, styles, and colours
+* border styling - width, styles, and colors
 * border radius
 
 #### Spacing
@@ -76,17 +76,17 @@ Define:
 Customize:
 
 * hover, active, focus, and disabled states - visual effect such as
-changedt background color
+changed background color
 * transitions and animations
 
 #### Component-level overrides
 
-Customize  text inputs, dropdowns, and checckboxes with inividual color
+Customize  text inputs, drop-downs, and checkboxes with individual color
 
 #### Miscellaneous
 
 Define:
 
 * help text and labels
-* tooltips
+* tool tips
 * progress indicators
