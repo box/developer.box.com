@@ -29,7 +29,7 @@ fullyTranslated: true
 
 リクエストを送信するには、`DELETE /2.0/ai_agents/{id}`エンドポイントを使用します。
 
-<Samples id="delete-ai-agents-id">
+<Samples id="delete_ai_agents_id">
 
 </Samples>
 

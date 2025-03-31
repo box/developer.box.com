@@ -39,7 +39,7 @@ Box AI Studioは、Enterprise Advancedアカウントでのみ使用できます
 
 アプリを承認するための開発者トークンを生成済みであることを確認します。詳細については、[Box AI Studioの使い方][getting-started]を参照してください。
 
-<Samples id="get-ai-agents">
+<Samples id="get_ai_agents">
 
 </Samples>
 

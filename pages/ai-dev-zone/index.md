@@ -197,6 +197,28 @@ MCP
 
 </Tile>
 
+<Tile type="box-brown" title="Pydantic AI and Box MCP" href="https://github.com/box-community/box-mcp-pydantic-ai">
+
+Use the Box MCP server to augment Pydantic AI agents with secure content in Box.
+
+<div>
+
+<strong style="background-color: #92e0c0">
+
+新着
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
+デモ
+
+</strong>
+
+</div>
+
+</Tile>
+
 <Tile type="box-brown" title="Airbyte" href="https://github.com/box-community/airbyte/blob/barduinor/source-box-devrel/docs/integrations/sources/box-data-extract.md">
 
 Airbyteソースコネクタ「Box Data Extract」を使用して、非構造化ドキュメントを照会可能な構造化データに変換します。
@@ -205,7 +227,7 @@ Airbyteソースコネクタ「Box Data Extract」を使用して、非構造化
 
 <strong style="background-color: #92e0c0">
 
-ベータ
+新着
 
 </strong>
 

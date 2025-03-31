@@ -30,7 +30,7 @@ FedRAMPでは、セキュリティのレベルについて、Low (低)、Moderat
 
 セキュリティレベルが高いほど、適用される制限が多くなります。
 
-Boxは、現在[FedRAMP Moderate][FedRAMPCert]として認定されています。
+Box is currently certified as [FedRAMP High][FedRAMPCert].
 
 ## 留意事項
 
@@ -42,7 +42,7 @@ APIの使用に影響する可能性があるセキュリティの制限を特�
 
 FedRAMPに準拠するには、APIエントリポイントに以下のURLを使用できます。
 
-| FedRAMP Moderate          |
+| FedRAMP                   |
 | ------------------------- |
 | account.box.com           |
 | api.box.com               |
@@ -143,4 +143,4 @@ and resources without hard-coding the locale.
 
 -->
 
-[FedRAMPCert]: https://marketplace.fedramp.gov/products/F1212191840
+[FedRAMPCert]: https://marketplace.fedramp.gov/products/F1212191840A

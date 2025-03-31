@@ -29,7 +29,7 @@ fullyTranslated: true
 
 リクエストを送信するには、`PUT /2.0/ai_agents/{id}`エンドポイントを使用します。
 
-<Samples id="put-ai-agents_id">
+<Samples id="put_ai_agents_id">
 
 </Samples>
 

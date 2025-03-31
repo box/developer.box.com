@@ -99,6 +99,8 @@ Enterpriseに対して、以下のイベントがトリガーされます。こ�
 | `APPLICATION_CREATED`                                         | 開発者コンソールでの新しいアプリケーションの作成                                                                                      |
 | `APPLICATION_PUBLIC_KEY_ADDED`                                | アプリケーションへの公開キーの追加                                                                                             |
 | `APPLICATION_PUBLIC_KEY_DELETED`                              | アプリケーションからの公開キーの削除                                                                                            |
+| `BOX_AI_USER_REQUEST`                                         | User asks Box AI a question or makes a request                                                                |
+| `BOX_AI_USER_FAILED_REQUEST`                                  | The question or request returns an error                                                                      |
 | `CHANGE_ADMIN_ROLE`                                           | 管理者の役割の変更                                                                                                     |
 | `CHANGE_FOLDER_PERMISSION`                                    | フォルダの権限の変更                                                                                                    |
 | `COLLABORATION_ACCEPT`                                        | 招待の承諾                                                                                                         |

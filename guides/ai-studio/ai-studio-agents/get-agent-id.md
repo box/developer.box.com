@@ -29,7 +29,7 @@ fullyTranslated: true
 
 リクエストを送信するには、`GET /2.0/ai_agents/{id}`エンドポイントを使用します。
 
-<Samples id="get-ai-agents-id">
+<Samples id="get_ai_agents_id">
 
 </Samples>
 
