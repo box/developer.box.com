@@ -40,7 +40,7 @@ Make sure you have generated the developer token
 to authorize your app. See [getting started with Box AI Studio][getting-started]
 for details.
 
-<Samples id='get-ai-agents' >
+<Samples id='get_ai_agents' >
 
 </Samples>
 

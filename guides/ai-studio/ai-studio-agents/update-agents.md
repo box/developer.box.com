@@ -28,7 +28,7 @@ The `PUT /2.0/ai_agents/{id}` endpoint allows you to update a custom AI agent ba
 
 To send a request, use the `PUT /2.0/ai_agents/{id}` endpoint.
 
-<Samples id='put-ai-agents_id' >
+<Samples id='put_ai_agents_id' >
 
 </Samples>
 

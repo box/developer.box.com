@@ -38,7 +38,7 @@ Make sure you have generated the developer token
 to authorize your app. See [getting started with Box AI][prereq]
 for details.
 
-<Samples id='post-ai-agents' >
+<Samples id='post_ai_agents' >
 
 </Samples>
 
