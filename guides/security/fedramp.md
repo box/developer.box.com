@@ -30,7 +30,7 @@ FedRAMPでは、セキュリティのレベルについて、Low (低)、Moderat
 
 セキュリティレベルが高いほど、適用される制限が多くなります。
 
-Box is currently certified as [FedRAMP High][FedRAMPCert].
+現在、Boxは[FedRAMP High][FedRAMPCert]として認定されています。
 
 ## 留意事項
 

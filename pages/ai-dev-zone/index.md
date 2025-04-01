@@ -197,9 +197,9 @@ MCP
 
 </Tile>
 
-<Tile type="box-brown" title="Pydantic AI and Box MCP" href="https://github.com/box-community/box-mcp-pydantic-ai">
+<Tile type="box-brown" title="Pydantic AIとBox MCP" href="https://github.com/box-community/box-mcp-pydantic-ai">
 
-Use the Box MCP server to augment Pydantic AI agents with secure content in Box.
+Box MCPサーバーを使用して、BoxのセキュアなコンテンツでPydantic AIエージェントを拡張します。
 
 <div>
 
