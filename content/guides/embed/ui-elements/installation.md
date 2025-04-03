@@ -39,7 +39,7 @@ yarn add box-ui-elements
 This should result in updated version in the `package.json` file:
 
 ```json
-"box-ui-elements": "^21.0.0"
+"box-ui-elements": "^23.0.0"
 ```
 
 No additional changes related to Box UI elements are required in your code. 
@@ -76,23 +76,23 @@ All the UI elements are also available directly from the Box CDN.
 
 | Element                                              | Version  | File                                                                                                                                                                            |
 | ---------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Content Explorer](g://embed/ui-elements/explorer)   | `21.0.0` | CSS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/explorer.css`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/explorer.css)                              |
-|                                                      |          | JS with React [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/explorer.js`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/explorer.js)                      |
-|                                                      |          | JS without React [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/explorer.no.react.js`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/explorer.no.react.js) |
-| [Content Open With](g://embed/ui-elements/open-with) | `21.0.0` | CSS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/openwith.css`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/openwith.css)                              |
-|                                                      |          | JS with React [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/openwith.js`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/openwith.js)                      |
-|                                                      |          | JS without React [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/openwith.no.react.js`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/openwith.no.react.js) |
-| [Content Picker](g://embed/ui-elements/picker)       | `21.0.0` | CSS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/picker.css`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/picker.css)                                  |
-|                                                      |          | JS with React [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/picker.js`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/picker.js)                          |
-|                                                      |          | JS without React [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/picker.no.react.js`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/picker.no.react.js)     |
-| [Content Sidebar](g://embed/ui-elements/sidebar)     | `21.0.0` | CSS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/sidebar.css`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/sidebar.css)                                |
-|                                                      |          | JS with React [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/sidebar.js`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/sidebar.js)                        |
-|                                                      |          | JS without React [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/sidebar.no.react.js`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/sidebar.no.react.js)   |
-| [Content Uploader](g://embed/ui-elements/uploader)   | `21.0.0` | CSS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/uploader.css`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/uploader.css)                              |
-|                                                      |          | JS with React [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/uploader.js`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/uploader.js)                      |
-|                                                      |          | JS without React [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/uploader.no.react.js`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/uploader.no.react.js) |
-| [Content Preview UI Element](https://github.com/box/box-content-preview)     | `21.0.0` | CSS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/preview.css`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/preview.css)                                  |
-|                                                      |    `21.0.0`       | JS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/preview.js`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/preview.js)                                     |
+| [Content Explorer](g://embed/ui-elements/explorer)   | `23.0.0` | CSS [`https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/explorer.css`](https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/explorer.css)                              |
+|                                                      |          | JS with React [`https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/explorer.js`](https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/explorer.js)                      |
+|                                                      |          | JS without React [`https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/explorer.no.react.js`](https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/explorer.no.react.js) |
+| [Content Open With](g://embed/ui-elements/open-with) | `23.0.0` | CSS [`https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/openwith.css`](https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/openwith.css)                              |
+|                                                      |          | JS with React [`https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/openwith.js`](https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/openwith.js)                      |
+|                                                      |          | JS without React [`https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/openwith.no.react.js`](https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/openwith.no.react.js) |
+| [Content Picker](g://embed/ui-elements/picker)       | `23.0.0` | CSS [`https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/picker.css`](https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/picker.css)                                  |
+|                                                      |          | JS with React [`https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/picker.js`](https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/picker.js)                          |
+|                                                      |          | JS without React [`https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/picker.no.react.js`](https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/picker.no.react.js)     |
+| [Content Sidebar](g://embed/ui-elements/sidebar)     | `23.0.0` | CSS [`https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/sidebar.css`](https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/sidebar.css)                                |
+|                                                      |          | JS with React [`https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/sidebar.js`](https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/sidebar.js)                        |
+|                                                      |          | JS without React [`https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/sidebar.no.react.js`](https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/sidebar.no.react.js)   |
+| [Content Uploader](g://embed/ui-elements/uploader)   | `23.0.0` | CSS [`https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/uploader.css`](https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/uploader.css)                              |
+|                                                      |          | JS with React [`https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/uploader.js`](https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/uploader.js)                      |
+|                                                      |          | JS without React [`https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/uploader.no.react.js`](https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/uploader.no.react.js) |
+| [Content Preview UI Element](https://github.com/box/box-content-preview)     | `23.0.0` | CSS [`https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/preview.css`](https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/preview.css)                                  |
+|                                                      |    `23.0.0`       | JS [`https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/preview.js`](https://cdn01.boxcdn.net/platform/elements/23.0.0/en-US/preview.js)                                     |
 | [Content Preview SDK](g://embed/ui-elements/preview)     | `2.106.0` | CSS [`https://cdn01.boxcdn.net/platform/preview/2.106.0/en-US/preview.css`](https://cdn01.boxcdn.net/platform/preview/2.106.0/en-US/preview.css)                                  |
 |                                                      |       | JS [`https://cdn01.boxcdn.net/platform/preview/2.106.0/en-US/preview.js`](https://cdn01.boxcdn.net/platform/preview/2.106.0/en-US/preview.js)                                     |
 
