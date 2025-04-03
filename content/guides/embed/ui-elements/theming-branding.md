@@ -20,7 +20,7 @@ The tool provides a real-time live preview for an easy adjustment of the theme.
 
 ## How to start
 
-Add the selected BUIE to your application and choose one of the default Box
+Add the selected BUIE to your application and choose the default Box
 theme template.
 
 ## Customization
