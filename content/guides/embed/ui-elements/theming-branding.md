@@ -16,13 +16,12 @@ related_resources: []
 With branding & themes for Box UI Elements you can customize the look of the
 embedded Content Explorer and Uploader to your enterprise's requirements.
 The tool provides a real-time live preview for an easy adjustment of the theme.
-
 <!--alex enable -->
 
 ## How to start
 
 Add the selected BUIE to your application and choose one of the default Box
-themes templates.
+theme template.
 
 ## Customization
 
@@ -43,19 +42,13 @@ You can change the following elements in your embedded Box component.
 Customize:
 
 <!--alex ignore -->
-
 * global color palette - select the primary, secondary, and access colors
-* state colors - select color for states such as hover, focus, active,
-disabled
-* component-specific colors - for example, you can select different colors
-for your buttons depending on their type
-
+* state colors - select color for states such as hover, focus, active, disabled
+* component-specific colors - for example, you can select different colors for your buttons depending on their type
 <!--alex enable -->
 
-* gradients - choose and adjust a gradient as your background or other
-components
-* opacity - adjust the opacity of the overlay effects for Box Modals and side
-panels
+* gradients - choose and adjust a gradient as your background or other components
+* opacity - adjust the opacity of the overlay effects for Box Modals and side panels
 
 ### Typography
 
@@ -70,10 +63,8 @@ Customize:
 Choose:
 
 <!--alex ignore -->
-
 * border styling - width, styles, and colors
 * border radius
-
 <!--alex enable -->
 
 ### Spacing
@@ -95,25 +86,30 @@ Define:
 
 Customize:
 <!--alex ignore -->
-
-* hover, active, focus, and disabled states - visual effect such as
-changed background color
+* hover, active, focus, and disabled states - visual effect such as changed background color
 * transitions and animations
-
 <!--alex enable -->
 
 ### Component-level overrides
 
 <!--alex ignore -->
-
 Customize text inputs, drop-downs, and checkboxes with individual color
-
 <!--alex enable -->
 
 ### Miscellaneous
 
-Define:
+Style:
 
 * help text and labels
 * tool tips
-* progress indicators
+
+## Demo
+
+<iframe height="560"
+scrolling="no" 
+title="Box theming branding" 
+src="https://codepen.io/box-platform/embed/KwKbrPw?default-tab=html%2Cresult" frameborder="no"
+allowtransparency="true"
+allowfullscreen="true"
+style="width: 100%;"
+></iframe>
