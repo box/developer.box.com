@@ -4,7 +4,6 @@ related_endpoints: []
 related_guides:
   - embed/ui-elements
   - embed/ui-elements/explorer
-  - embed/ui-elements/picker
   - embed/ui-elements/uploader
 required_guides:
   - embed/ui-elements/installation
@@ -47,20 +46,16 @@ Customize:
 
 * global color palette - select the primary, secondary, and access colors
 * state colors - select color for states such as hover, focus, active,
- disabled
-
-<!--alex enable -->
-
-<!--alex ignore -->
-
+disabled
 * component-specific colors - for example, you can select different colors
- for your buttons depending on their type
+for your buttons depending on their type
 
 <!--alex enable -->
 
-* gradients - choose and adjust a gradient as your background or other 
- components
-* opacity - adjust the opacity of the overlay effects for Box Modals and side  panels
+* gradients - choose and adjust a gradient as your background or other
+components
+* opacity - adjust the opacity of the overlay effects for Box Modals and side
+panels
 
 ### Typography
 
