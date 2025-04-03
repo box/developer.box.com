@@ -29,7 +29,7 @@ agent by the `agent_id` parameter.
 
 To send a request, use the `GET /2.0/ai_agents/{id}` endpoint.
 
-<Samples id='get-ai-agents-id' >
+<Samples id='get_ai_agents_id' >
 
 </Samples>
 
