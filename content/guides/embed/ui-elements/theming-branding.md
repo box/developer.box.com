@@ -15,7 +15,7 @@ related_resources: []
 
 <!--alex ignore -->
 With branding & themes for Box UI Elements you can customize the look of the
-embedded content explorer and uploader to your enterprise's requirements.
+embedded Content Explorer and Uploader to your enterprise's requirements.
 The tool provides a real-time live preview for an easy adjustment of the theme.
 
 <!--alex enable -->
