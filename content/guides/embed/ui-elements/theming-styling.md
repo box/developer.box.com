@@ -23,7 +23,7 @@ Explorer and Content Uploader.
 
 ## How to start
 
-Add the selected Box component to your application. The default Box is applied.
+Add the selected Box component to your application. The default Box theme is applied.
 
 ## Customization
 
