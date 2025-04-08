@@ -9,18 +9,20 @@ required_guides:
   - embed/ui-elements/installation
 related_resources: []
 ---
-
+<!--alex ignore -->
 # Theming & styling for Box UI Elements
 
-<!--alex ignore -->
 With theming & styling for Box UI Elements you can customize the look of the
 embedded Box component to your enterprise's requirements.
+<!--alex ignore -->
 The tool provides a real-time live preview for an easy adjustment of the theme.
 <!--alex enable -->
 
+<!--alex ignore -->
 <Message type='notice'>As of now, theming & styling is available for Content
 Explorer and Content Uploader.
 </Message>
+<!--alex enable -->
 
 ## How to start
 
