@@ -14,9 +14,6 @@ related_resources: []
 
 With theming & styling for Box UI Elements you can customize the look of the
 embedded Box component to your enterprise's requirements.
-<!--alex ignore -->
-The tool provides a real-time live preview for an easy adjustment of the theme.
-<!--alex enable -->
 
 <!--alex ignore -->
 <Message type='notice'>As of now, theming & styling is available for Content
@@ -26,7 +23,7 @@ Explorer and Content Uploader.
 
 ## How to start
 
-Add the selected BUIE to your application. The default theme template will be applied.
+Add the selected Box component to your application. The default Box is applied.
 
 ## Customization
 
@@ -58,7 +55,6 @@ Customize:
 
 Customize: 
 
-* global typography settings - choose the font family, size, and weights
 * text decoration - underline, strikethrough, letter spacing
 * line heights and paragraph spacing 
 
@@ -90,7 +86,7 @@ Define:
 
 Customize:
 <!--alex ignore -->
-* hover, active, focus, and disabled states - visual effect such as changed background color
+* hover, active, focus, disabled, and error states - visual effect such as changed background color
 * transitions and animations
 <!--alex enable -->
 
