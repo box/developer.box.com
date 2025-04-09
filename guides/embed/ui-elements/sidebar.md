@@ -13,7 +13,7 @@ subcategory_id: embed/ui-elements
 is_index: false
 id: embed/ui-elements/sidebar
 type: guide
-total_steps: 14
+total_steps: 15
 sibling_id: embed/ui-elements
 parent_id: embed/ui-elements
 next_page_id: embed/ui-elements/uploader
