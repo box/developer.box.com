@@ -43,12 +43,12 @@ cascade policy. For detailed instructions, see
 
 ### Display name and key parameters
 
-* The `displayName` parameter is the display name of the template visible
-in the Admin Console.
 * The `templateKey` parameter is a unique identifier of the template. It needs 
 to be unique across the enterprise for which you create the metadata template.
 If you don't provide the `templateKey` parameter, API creates a unique one
 based on the value in `displayName`.
+* The `displayName` parameter is the display name of the template visible
+in the Admin Console.
 * The `[fields].displayName` parameter is the display name of the field as it
 is shown to the user in the web and mobile apps.
 * The `[fields].key` parameter is a unique identifier for a specific field in
@@ -57,8 +57,8 @@ belongs.
 
 ## Display metadata view
 
-To make things easier, you can use a [sample project][metadata-project] to
-launch metadata view.
+Proceed to fill in the necessary properties passed to the Content Explorer.
+To make things easier, you can use a [sample project][metadata-project] based on a basic React app to launch metadata view.
 
 1. Clone the metadata sample project.
 2. Update the placeholders in [`App.js`][appjs] with actual values:
@@ -67,136 +67,80 @@ launch metadata view.
 | --- | --- |
 | `DEVELOPER_TOKEN` | [Developer token][token] generated in the the Developer Console. |
 | `ENTERPRISE_ID` | Enterprise ID copied from the **General Settings** tab of your application. |
-| `METADATA_TEMPLATE_NAME`| Name of your already created metadata template. **Note**: To make sure you provided the proper name, use the [metadata API][get-template] to retrieve the name, or copy it from the URL in the Admin Console. ![Metadata name in Admin Console](./images/metadata-template-name.png) If you decide to change the template name in the UI, you change the label only. The name to use in the component is always the you provided at the beginning. |
+| `METADATA_TEMPLATE_NAME`| Name of your already created metadata template. **Note**: To make sure you provided the proper name, use the [metadata API][get-template] to retrieve the name, or copy it from the URL in the Admin Console. ![Metadata name in Admin Console](./images/metadata-template-name.png) If you decide to change the template name in the UI, you change the display name only. The name to use in the component is always the you provided at the beginning. |
+| `METADATA_SOURCE` | Source of your [metadata][source]. |
 | `ROOTFOLDER_ID` | ID of Box folder to which you applied the metadata template. |
 
 The `defaultView`, `fieldsToShow`, and `metadataQuery` parameters are already
 defined in the sample project, as in the example below.
 
-<Message type='notice'>
-You can add or hide specific metadata columns using the `fieldsToShow` parameter
-(for example **Last modified by**) to display in the Content Explorer.
-</Message>
-
-For additional information on metadata queries, see [this guide][metadata-query].
+| Parameter | Description |
+| --- | --- |
+| `defaultView` | A required prop to paint the metadata view. If it's not provided, you get the regular folder view. |
+| `fieldsToShow` | Add or hide specific metadata columns to display in the Content Explorer. |
+|`metadataQuery` | Provides a way to find files and folders by searching for the metadata attached to them. For additional information on metadata queries, see [this guide][metadata-query]. |
 
 3. Pass the required parameters to the Content Explorer component.
-
-    ```js
-    [...]
-
-      function App() {
-          [...]
-
-          return (
-              <IntlProvider locale="en">
-                <div className="App">
-                  <header className="App-header">
-                    <h2>Metadata view in Content Explorer</h2>
-                  </header>
-                  <section>
-                    <div className="metadata-based-view">
-                      <ContentExplorer
-                        rootFolderId={rootFolderID}
-                        token={token}
-                        metadataQuery={metadataQuery}
-                        fieldsToShow={fieldsToShow}
-                        defaultView={defaultView}
-                      />
-                    </div>
-                  </section>
-                </div>
-              </IntlProvider>
-          );
-      }
-
-      export default App;
-    ```
 
 A sample code for a React component including the Content Explorer metadata view would look as follows:
 
 ```js
 function App() {
-    // Get the token from Developer Console (app's configuration tab)
     const token = "<DEVELOPER_TOKEN>";
-
-    // Folder ID with a metadata template applied
-    // The metadataQuery will apply to this folder
     const rootFolderID = "<ROOTFOLDER_ID>";
-
-    // Get ENTERPRISE_ID from Developer Console (app's general settings)
     const EID = "<ENTERPRISE_ID>";
-
-    // Get templatekey from Admin Console (Content -> Metadata -> check url for ID)
     const templateName = "<METADATA_TEMPLATE_NAME>";
-
-    // Define metadata source
-    // Example: enterprise_123456789.metadatatemplate
     const metadataSource = `enterprise_${EID}.${templateName}`;
     const metadataSourceFieldName = `metadata.${metadataSource}`;
-    
     const metadataQuery = {
-        from: metadataSource,
-
-        // Filter items in the folder by existing metadata key
-        query: "key = :arg1",
-
-        // Display items with value
-        query_params: { arg1: "value" },
-
-        // Define the ancestor folder ID
-        ancestor_folder_id: 0,
-
-        // Define which other metadata fields you'd like to display
-        fields: [
-            `${metadataSourceFieldName}.name`,
-            `${metadataSourceFieldName}.last_contacted_at`,
-            `${metadataSourceFieldName}.industry`,
-            `${metadataSourceFieldName}.role`,
+    	from: metadataSource,
+    	query: "key = :arg1",
+    	query_params: { arg1: "value" },
+    	ancestor_folder_id: 0,
+    	fields: [
+        `${metadataSourceFieldName}.name`,
+        `${metadataSourceFieldName}.last_contacted_at`,
+        `${metadataSourceFieldName}.industry`,
+        `${metadataSourceFieldName}.role`,
         ],
     };
 
-    // The metadata fields/columns to view - must be valid field names from the metadata template
     const fieldsToShow = [
-        // Determine if the user can edit the metadata directly from Content Explorer component
-        { key: `${metadataSourceFieldName}.name`, canEdit: false },
-
-        // Determine label alias on metadata column with displayName prop
-        { key: `${metadataSourceFieldName}.industry`, canEdit: false, displayName: "alias" },
-        { key: `${metadataSourceFieldName}.last_contacted_at`, canEdit: true },
-        { key: `${metadataSourceFieldName}.role`, canEdit: true },
+    // canEdit propetry determines if the user can edit the metadata directly from Content Explorer component
+    { key: `${metadataSourceFieldName}.name`, canEdit: false },
+    // displayName alows to change the label on metadata column
+    { key: `${metadataSourceFieldName}.industry`, canEdit: false, displayName: "alias" },
+    { key: `${metadataSourceFieldName}.last_contacted_at`, canEdit: true },
+    { key: `${metadataSourceFieldName}.role`, canEdit: true },
     ];
 
-    // defaultView - a required prop to paint the metadata view.
-    // If not provided, you'll get regular folder view.
-    const defaultView = "metadata";
-
-    return (
-        <IntlProvider locale="en">
-            <div className="App">
-                <header className="App-header">
-                    <h2>Metadata view in Content Explorer</h2>
-                </header>
-                <section>
-                    <div className="metadata-based-view">
-                        <ContentExplorer
-                            rootFolderId={rootFolderID}
-                            token={token}
-                            metadataQuery={metadataQuery}
-                            fieldsToShow={fieldsToShow}
-                            defaultView={defaultView}
-                        />
-                    </div>
-                </section>
-            </div>
-        </IntlProvider>
-    );
+const defaultView = "metadata";
+return (
+    <IntlProvider locale="en">
+        <div className="App">
+            <header className="App-header">
+                <h2>Metadata view in Content Explorer</h2>
+            </header>
+            <section>
+                <div className="metadata-based-view">
+                    <ContentExplorer
+                        rootFolderId={rootFolderID}
+                        token={token}
+                        metadataQuery={metadataQuery}
+                        fieldsToShow={fieldsToShow}
+                        defaultView={defaultView}
+                    />
+                </div>
+            </section>
+        </div>
+    </IntlProvider>
+);
 }
 
 export default App;
 ```
 
-## Key
+## Metadata keys
 
 To decide which fields to show, the metadata Content Explorer uses metadata
 [field keys][field-key], not the [display names][display-name]. You can see the
@@ -207,7 +151,7 @@ The field keys are not changing, even if you change the metadata display name.
 This ensures that the functionality works properly, despite any changes to the
 metadata in UI view.
 
-### Key sanitization
+### Metadata keys sanitization
 
 [Keys][field-key] are restricted to alphanumeric characters only:
 
@@ -230,7 +174,7 @@ characters, the key will be renamed.
 </Message>
 
 [terminology]: g://metadata/#metadata-terminology
-[template]: g://metadata/templates
+[template]: r://get-metadata-templates-id
 [explorer]: g:///embed/ui-elements/explorer
 [blogpost]: https://medium.com/box-developer-blog/metadata-view-in-box-content-explorer-4978e47e97e9
 [creating-templates-api]: g:///metadata/templates/create
@@ -245,3 +189,4 @@ characters, the key will be renamed.
 [get-id]: e://get-metadata-templates-id-id-schema/
 [field-key]: e://post-metadata-templates-schema/#param-fields-key
 [display-name]: e://post-metadata-templates-schema/#param-fields-displayName
+[source]: g://metadata/scopes
