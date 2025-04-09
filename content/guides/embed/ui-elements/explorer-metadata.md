@@ -1,6 +1,7 @@
 ---
 rank: 4
-related_endpoints: []
+related_endpoints:
+	- get-metadata-templates-id
 related_guides:
   - embed/ui-elements
 required_guides:
