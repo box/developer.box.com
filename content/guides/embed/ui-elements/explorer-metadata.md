@@ -18,6 +18,8 @@ based on their metadata.
 The metadata view uses [metadata template][template] and [metadata query][metadata-query] to
 find the data you want to display.
 
+![Metadata view](./images/explorer-view.png)
+
 ## Prerequisites
 
 * Read the [Content Explorer][explorer] guide.
@@ -220,7 +222,7 @@ Chinese, etc.) they are automatically renamed to generic identifiers:
 * `field` for the first occurrence
 * `field1`, `field2`, and so on for subsequent occurrences
 
-Key names are based on the display names. If a display name contains non-Latin
+Keys are based on the display names. If a display name contains non-Latin
 characters, the key will be renamed.
 
 <Message type='notice'>
