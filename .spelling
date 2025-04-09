@@ -337,3 +337,6 @@ params
 GPT-4o-mini
 unpublish
 sanitization
+checkboxes
+strikethrough
+theming
