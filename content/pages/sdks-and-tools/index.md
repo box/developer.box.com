@@ -30,7 +30,7 @@ The tables below list SDKs along with additional information
 telling you if the project is maintained and has API
 parity.
 
-**Status:** Describes the current project status. To learn more about statuses visit [Box opensource website][badges].
+**Status:** Describes the current project status. To learn more about statuses visit [Box Open Source website][badges].
 Active projects are actively developed by Box. They receive the latest security updates and new features. For
 support with these projects please visit GitHub or [our Platform support forum][forum].
 
