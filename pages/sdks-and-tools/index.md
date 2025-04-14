@@ -35,7 +35,7 @@ Boxで開発およびサポートされているSDKおよびツールは以下�
 
 下の表には、SDKが、プロジェクトがメンテナンスされるかどうかとAPIパリティが備わっているかどうかを示す追加情報とともに記載されています。
 
-**メンテナンス**: Boxでは、完全にメンテナンスされるプロジェクトを積極的に開発しています。このようなプロジェクトには最新のセキュリティ更新プログラムや新機能が提供されます。このようなプロジェクトのサポートについては、GitHubまたは[Developer Forum][forum]を参照してください。
+**Status:** Describes the current project status. To learn more about statuses visit [Box Open Source website][badges]. Active projects are actively developed by Box. They receive the latest security updates and new features. For support with these projects please visit GitHub or [our Platform support forum][forum].
 
 **APIパリティ**: 完全なAPIパリティを持つプロジェクトは、Box Platformで利用可能になった時点で、すべてのプラットフォーム機能が積極的に更新されます。部分的なAPIパリティを持つプロジェクトには一部の機能が欠けていますが、Boxではそのようなプロジェクトを完全なパリティに移行する取り組みを進めています。
 
@@ -60,26 +60,26 @@ Swift SDKはパブリックベータ段階です。
 
 任意のプログラミング言語の**Box Platform** SDKをダウンロードして開始します。
 
-| プラットフォーム                        | メンテナンスの有無 | APIパリティ |
-| ------------------------------- | --------- | ------- |
-| [Pythonの次世代SDK][pythongensdk]   | はい        | Full    |
-| [TypeScriptの次世代SDK][tsgensdk]   | はい        | Full    |
-| [.NET SDK][dotnetgensdk]        | はい        | Full    |
-| [Swift SDK][swiftgensdk] (ベータ)  | はい        | Full    |
-| [Javaの次世代SDK][javagensdk] (ベータ) | はい        | Full    |
+| プラットフォーム                        | ステータス  | APIパリティ |
+| ------------------------------- | ------ | ------- |
+| [Pythonの次世代SDK][pythongensdk]   | Active | Full    |
+| [TypeScriptの次世代SDK][tsgensdk]   | Active | Full    |
+| [.NET SDK][dotnetgensdk]        | Active | Full    |
+| [Swift SDK][swiftgensdk] (ベータ)  | Active | Full    |
+| [Javaの次世代SDK][javagensdk] (ベータ) | Active | Full    |
 
 ### 従来のSDK
 
 次の表に、アプリケーションの作成時に使用できる従来のBox SDKを示します。最新のAPIサポートや機能には、次世代のSDKを使用してください。
 
-| プラットフォーム                          | メンテナンスの有無                               | APIパリティ |
-| --------------------------------- | --------------------------------------- | ------- |
-| [Java SDK][javasdk]               | はい                                      | Full    |
-| [iOS Content SDK][iossdk]         | はい                                      | Full    |
-| [Android Content SDK][androidsdk] | いいえ                                     | 部分的     |
-| [.NET SDK][dotnetsdk]             | 公式サポート終了。重要なセキュリティ更新プログラムとバグ修正のみ実装されます。 | Full    |
-| [Python SDK][pythonsdk]           | 公式サポート終了。重要なセキュリティ更新プログラムとバグ修正のみ実装されます。 | Full    |
-| [Node SDK][nodesdk]               | 公式サポート終了。重要なセキュリティ更新プログラムとバグ修正のみ実装されます。 | Full    |
+| プラットフォーム                          | ステータス  | APIパリティ |
+| --------------------------------- | ------ | ------- |
+| [Java SDK][javasdk]               | Active | Full    |
+| [iOS Content SDK][iossdk]         | Active | Full    |
+| [Android Content SDK][androidsdk] | 非推奨    | 部分的     |
+| [.NET SDK][dotnetsdk]             | Stable | Full    |
+| [Python SDK][pythonsdk]           | Stable | Full    |
+| [Node SDK][nodesdk]               | Stable | Full    |
 
 <Message type="warning">
 
@@ -93,9 +93,9 @@ Swift SDKはパブリックベータ段階です。
 
 Box CLIは、使い勝手の良いコマンドラインツールです。これにより、開発者でも開発者以外のユーザーでもBox APIを利用してルーチンや一括操作を実行できるようになります。
 
-| プラットフォーム   | メンテナンスの有無 | APIパリティ |
-| ---------- | --------- | ------- |
-| [CLI][cli] | はい        | Full    |
+| プラットフォーム   | ステータス  | APIパリティ |
+| ---------- | ------ | ------- |
+| [CLI][cli] | Active | Full    |
 
 ## Postmanコレクション
 
@@ -208,6 +208,8 @@ Salesforce Developer Toolkitを使用すると、Box for Salesforce統合の動�
 [javagensdk]: https://github.com/box/box-java-sdk-gen
 
 [postman]: https://postman.com
+
+[badges]: https://opensource.box.com/badges/
 
 <!-- i18n-enable localize-links -->
 

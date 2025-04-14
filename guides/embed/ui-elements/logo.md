@@ -13,10 +13,10 @@ subcategory_id: embed/ui-elements
 is_index: false
 id: embed/ui-elements/logo
 type: guide
-total_steps: 14
+total_steps: 15
 sibling_id: embed/ui-elements
 parent_id: embed/ui-elements
-next_page_id: embed/ui-elements/access
+next_page_id: embed/ui-elements/theming-styling
 previous_page_id: embed/ui-elements/annotations
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/logo.md

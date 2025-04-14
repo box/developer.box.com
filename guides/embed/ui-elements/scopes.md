@@ -13,11 +13,11 @@ subcategory_id: embed/ui-elements
 is_index: false
 id: embed/ui-elements/scopes
 type: guide
-total_steps: 14
+total_steps: 15
 sibling_id: embed/ui-elements
 parent_id: embed/ui-elements
 next_page_id: embed/ui-elements/viewers-and-events
-previous_page_id: embed/ui-elements/access
+previous_page_id: embed/ui-elements/theming-styling
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/scopes.md
 fullyTranslated: true
