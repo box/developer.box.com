@@ -7,9 +7,9 @@ related_guides:
   - box-ai/ai-tutorials/extract-metadata-structured
   - box-ai/ai-agents/get-agent-default-config
 ---
-# Azure OpenAI GPT-4o-2024-05-13
+# Azure OpenAI GPT-4o
 
-**Azure OpenAI GPT-4o-2024-05-13** is a multimodal model designed to handle lightweight tasks.
+**Azure OpenAI GPT-4o** is a multimodal model designed to handle lightweight tasks.
 
 ## Model details
 
