@@ -9,7 +9,7 @@ related_guides:
 category_id: box-ai
 subcategory_id: box-ai/ai-models
 is_index: false
-id: box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card
+id: box-ai/ai-models/azure-openai-gpt-4o-model-card
 type: guide
 total_steps: 12
 sibling_id: box-ai/ai-models
@@ -17,11 +17,11 @@ parent_id: box-ai/ai-models
 next_page_id: box-ai/ai-models/azure-openai-gpt-4o-mini-model-card
 previous_page_id: box-ai/ai-models
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/azure-openai-gpt-4o-model-card.md
 ---
-# Azure OpenAI GPT-4o-2024-05-13
+# Azure OpenAI GPT-4o
 
-**Azure OpenAI GPT-4o-2024-05-13** is a multimodal model designed to handle lightweight tasks.
+**Azure OpenAI GPT-4o** is a multimodal model designed to handle lightweight tasks.
 
 ## Model details
 
