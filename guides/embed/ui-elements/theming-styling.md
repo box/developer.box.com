@@ -24,115 +24,115 @@ fullyTranslated: true
 ---
 <!--alex ignore -->
 
-# Theming & styling for Box UI Elements
+# Box UI Elementsのテーマとスタイルの設定
 
-With theming & styling for Box UI Elements you can customize the look of the embedded Box component to your enterprise's requirements.
+Box UI Elementsのテーマとスタイルの設定により、企業の要件に合わせて、埋め込まれたBoxコンポーネントの外観をカスタマイズできます。
 
 <!--alex ignore -->
 
 <Message type="notice">
 
-As of now, theming & styling is available for Content Explorer and Content Uploader.
+現時点では、テーマとスタイルの設定は、コンテンツエクスプローラとコンテンツアップローダーで使用可能です。
 
 </Message>
 
 <!--alex enable -->
 
-## How to start
+## 開始方法
 
-Add the selected Box component to your application. The default Box theme is applied.
+選択したBoxコンポーネントをアプリケーションに追加します。デフォルトのBoxのテーマが適用されます。
 
-## Customization
+## カスタマイズ
 
-Box uses design tokens for the customization purposes.
+Boxでは、カスタマイズの目的でデザイントークンを使用します。
 
 <Message type="notice">
 
-Design tokens are named entities that store specific visual attributes, such as colors, spacing, typography, scale, and many more. They are used instead of hard-coded values to simplify sharing design properties across platforms, tools, and components.
+デザイントークンとは、色、間隔、タイポグラフィ、スケールなど、特定の視覚的な属性を格納する名前付きのエンティティです。これは、プラットフォーム、ツール、コンポーネント間でのデザインプロパティの共有を容易にするために、ハードコードされた値の代わりに使用されます。
 
 </Message>
 
-You can change the following elements in your embedded Box component.
+埋め込まれたBoxコンポーネントでは、以下の要素を変更できます。
 
 <!--alex ignore -->
 
-### Colors
+### 色
 
-Customize:
+以下をカスタマイズできます。
 
 <!--alex ignore -->
 
-* global color palette - select the primary, secondary, and access colors
+* グローバルカラーパレット - プライマリカラー、セカンダリカラー、アクセントカラーを選択します。
 
-* state colors - select color for states such as hover, focus, active, disabled
+* 状態の色 - カーソルを合わせたとき、フォーカスしたとき、アクティブな場合、無効な場合など、状態を表す色を選択します。
 
-* component-specific colors - for example, you can select different colors for your buttons depending on their type
+* コンポーネント固有の色 - たとえば、ボタンには、種類に応じて異なる色を選択できます。
   <!--alex enable -->
 
-* gradients - choose and adjust a gradient as your background or other components
+* グラデーション - 背景やその他のコンポーネントとしてグラデーションを選択して調整します。
 
-* opacity - adjust the opacity of the overlay effects for Box Modals and side panels
+* 不透明度 - Boxのウィンドウやサイドパネルのオーバーレイ効果の不透明度を調整します。
 
-### Typography
+### タイポグラフィ
 
-Customize:
+以下をカスタマイズできます。
 
-* text decoration - underline, strikethrough, letter spacing
-* line heights and paragraph spacing 
+* テキストの装飾 - 下線、取り消し線、文字間隔
+* 行の高さ、段落の間隔 
 
-### Border, radius
+### 境界線、半径
 
-Choose:
+以下を選択できます。
 
 <!--alex ignore -->
 
-* border styling - width, styles, and colors
-* border radius
+* 境界線のスタイル - 幅、スタイル、色
+* 角丸
   <!--alex enable -->
 
-### Spacing
+### 間隔
 
-Choose:
+以下を選択できます。
 
-* global spacing
-* component-specific spacing
-* component-specific alignment and distribution, for example justify-content
+* 全体的な間隔
+* コンポーネント固有の間隔
+* コンポーネント固有の位置と分布 (例: justify-content)
 
-### Shadows and elevation
+### 影と高さ
 
-Define:
+以下を定義できます。
 
-* shadow presets
-* custom shadows
+* 影のプリセット
+* カスタマイズした影
 
-### Interactive states
+### インタラクティブな状態
 
-Customize:
+以下をカスタマイズできます。
 
 <!--alex ignore -->
 
-* hover, active, focus, disabled, and error states - visual effect such as changed background color
-* transitions and animations
+* カーソルを合わせた状態、アクティブな状態、フォーカスした状態、無効な状態、エラー状態 - 背景色の変更などの視覚効果
+* 遷移およびアニメーション
   <!--alex enable -->
 
-### Component-level overrides
+### コンポーネントレベルの上書き
 
 <!--alex ignore -->
 
-Customize text inputs, drop-downs, and checkboxes with individual color
+テキスト入力、ドロップダウン、チェックボックスを独自の色でカスタマイズできます。
 
 <!--alex enable -->
 
-### Miscellaneous
+### その他
 
-Style:
+スタイル:
 
-* help text and labels
-* tool tips
+* ヘルプテストとラベル
+* ツールチップ
 
 ## デモ
 
-<iframe height="560" scrolling="no" title="Box theming branding" src="https://codepen.io/box-platform/embed/KwKbrPw?default-tab=html%2Cresult" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
+<iframe height="560" scrolling="no" title="Boxのテーマを使用したブランド設定" src="https://codepen.io/box-platform/embed/KwKbrPw?default-tab=html%2Cresult" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
 
 </iframe>
 
