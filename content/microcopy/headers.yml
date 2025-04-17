@@ -170,11 +170,13 @@ primary:
       text: Event
 
     title:
-      text: How to Accelerate Development with Generated Box SDKs
+      text: Box Virtual Summit Content + AI
 
     details:
       text: |-
-        Join us for a webinar and explore the generated Box SDKs.
+        Learn how to create context-aware agents with the OpenAI Agents SDK,
+        start using Model Context Protocol, and discover metadata
+        extraction with agents.
 
     cta:
       text: |-
