@@ -170,11 +170,13 @@ primary:
       text: Event
 
     title:
-      text: Box Virtual Summit Content + AI 
+      text: Box Virtual Summit Content + AI
 
     details:
       text: |-
-        Learn how to create context-aware agents with the OpenAI Agents SDK, start using Model Context Protocol, and discover metadata extraction with agents.
+        Learn how to create context-aware agents with the OpenAI Agents SDK,
+        start using Model Context Protocol, and discover metadata
+        extraction with agents.
 
     cta:
       text: |-
