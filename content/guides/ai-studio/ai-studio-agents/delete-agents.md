@@ -17,7 +17,7 @@ The `DELETE /2.0/ai_agents/{id}` endpoint allows you to delete a custom AI agent
 
 To send a request, use the `DELETE /2.0/ai_agents/{id}` endpoint.
 
-<Samples id='delete-ai-agents-id' />
+<Samples id='delete_ai_agents_id' />
 
 ### Parameters
 
