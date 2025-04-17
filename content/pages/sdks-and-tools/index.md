@@ -30,9 +30,9 @@ The tables below list SDKs along with additional information
 telling you if the project is maintained and has API
 parity.
 
-**Maintained:** Fully maintained projects are actively developed by Box. They
-receive the latest security updates and new features. For support with these
-projects please visit GitHub or [our Platform support forum][forum].
+**Status:** Describes the current project status. To learn more about statuses visit [Box Open Source website][badges].
+Active projects are actively developed by Box. They receive the latest security updates and new features. For
+support with these projects please visit GitHub or [our Platform support forum][forum].
 
 **API Parity**: Projects with full API parity are actively updated with all
 platform functionality as this becomes available on the Box Platform. Projects
@@ -60,13 +60,13 @@ Here's what you can expect from the new SDKs:
 
 Download the **Box Platform** SDK in a programming language of your choice and get started:
 
-| Platform                            | Maintained? | API Parity |
-| ----------------------------------- | ----------- | ---------- |
-| [Python Gen SDK][pythongensdk]      |     Yes     |    Full    |
-| [TypeScript Gen SDK][tsgensdk]      |     Yes     |    Full    |
-| [.NET SDK][dotnetgensdk]            |     Yes     |    Full    |
-| [Swift SDK][swiftgensdk] (Beta)     |     Yes     |    Full    |
-| [Java Gen SDK][javagensdk] (Beta)   |     Yes     |    Full    |
+| Platform                          | Status | API Parity |
+| --------------------------------- | ------ | ---------- |
+| [Python Gen SDK][pythongensdk]    | Active | Full       |
+| [TypeScript Gen SDK][tsgensdk]    | Active | Full       |
+| [.NET SDK][dotnetgensdk]          | Active | Full       |
+| [Swift SDK][swiftgensdk] (Beta)   | Active | Full       |
+| [Java Gen SDK][javagensdk] (Beta) | Active | Full       |
 
 ### Legacy SDKs
 
@@ -74,14 +74,14 @@ The table lists legacy Box SDKs that you can use when building your
 applications. For latest API support and features, use the next
 generation SDKs.
 
-| Platform                          |                                     Maintained?                                      | API Parity |
-| --------------------------------- | ------------------------------------------------------------------------------------ | ---------- |
-| [Java SDK][javasdk]               |                                         Yes                                          |    Full    |
-| [iOS Content SDK][iossdk]         |                                         Yes                                          |    Full    |
-| [Android Content SDK][androidsdk] |                                          No                                          |  Partial   |
-| [.NET SDK][dotnetsdk]             | Deprecated. Only critical security updates and bug fixes are implemented.            |    Full    |
-| [Python SDK][pythonsdk]           | Deprecated. Only critical security updates and bug fixes are implemented.            |    Full    |
-| [Node SDK][nodesdk]               | Deprecated. Only critical security updates and bug fixes are implemented.            |    Full    |
+| Platform                          | Status     | API Parity |
+| --------------------------------- | ---------- | ---------- |
+| [Java SDK][javasdk]               | Active     | Full       |
+| [iOS Content SDK][iossdk]         | Active     | Full       |
+| [Android Content SDK][androidsdk] | Deprecated | Partial    |
+| [.NET SDK][dotnetsdk]             | Stable     | Full       |
+| [Python SDK][pythonsdk]           | Stable     | Full       |
+| [Node SDK][nodesdk]               | Stable     | Full       |
 
 <Message type='warning'>
 As of May 31, 2023 Android SDK is no
@@ -102,9 +102,9 @@ Box CLI is a user-friendly command line tool which
 allows both technical and non-technical users to
 leverage Box API to perform routine or bulk actions.
 
-| Platform   | Maintained? | API Parity |
-| ---------- | ----------- | ---------- |
-| [CLI][cli] | Yes         | Full       |
+| Platform   | Status | API Parity |
+| ---------- | ------ | ---------- |
+| [CLI][cli] | Active | Full       |
 
 ## Postman Collection
 
@@ -166,7 +166,7 @@ preview files on Box.
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | iOS        | [Browse SDK][iosbrowsesdk], [Share SDK][iossharesdk], [Preview SDK][iospreviewsdk]                                                                                                    |
 | Android    | [Browse SDK](https://github.com/box/box-android-browse-sdk), [Share SDK](https://github.com/box/box-android-share-sdk), [Preview SDK](https://github.com/box/box-android-preview-sdk) |
-| Javascript | [Box UI Elements](g://embed/ui-elements)                                                                                                                                         |
+| Javascript | [Box UI Elements](g://embed/ui-elements)                                                                                                                                              |
 
 ## Unofficial & Community Tools
 
@@ -217,6 +217,7 @@ for these tools.
 [swiftgensdk]: https://github.com/box/box-swift-sdk-gen
 [javagensdk]: https://github.com/box/box-java-sdk-gen
 [postman]: https://postman.com
+[badges]: https://opensource.box.com/badges/
 
 <!-- i18n-enable localize-links -->
 
