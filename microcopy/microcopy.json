@@ -283,8 +283,8 @@
   "headers.primary.develop_featured.details.text": "Browse 90+ open-source repositories\nin various programming languages to find useful scripts,\napp examples, and inspiring use cases!",
   "headers.primary.develop_featured.cta.text": "Browse sample code",
   "headers.primary.connect_featured.tag.text": "Event",
-  "headers.primary.connect_featured.title.text": "How to Accelerate Development with Generated Box SDKs",
-  "headers.primary.connect_featured.details.text": "Join us for a webinar and explore the generated Box SDKs.",
+  "headers.primary.connect_featured.title.text": "Box Virtual Summit Content + AI",
+  "headers.primary.connect_featured.details.text": "Learn how to create context-aware agents with the OpenAI Agents SDK,\nstart using Model Context Protocol, and discover metadata\nextraction with agents.",
   "headers.primary.connect_featured.cta.text": "Register now",
   // The HTML alt-text for the site logo
   "headers.secondary.images.logo.alt_text": "Box Developer Documentation",
