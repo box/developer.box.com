@@ -9,7 +9,7 @@ alias_paths: []
 ---
 # Box Agents Package
 
-The Box Agents Package is an extension of the Box for Salesforce managed
+The [Box Agents Package][agentforce] is an extension of the Box for Salesforce managed
 package. This extension provides reusable Agentforce [actions][actions] that
 help automate workflows and enhance intelligent agent—based processes within
 Salesforce.
@@ -67,5 +67,6 @@ Agentforce.
 * Set Slack Channel Access Management Disabled
 <!--alex enable -->
 
+[agentforce]: https://support.box.com/hc/en-us/articles/40370228349331-Installing-Box-for-Agentforce
 [methods]: g://tooling/salesforce-toolkit/methods
 [actions]: g://tooling/salesforce-toolkit/flow-actions
