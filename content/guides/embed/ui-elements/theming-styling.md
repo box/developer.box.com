@@ -44,7 +44,7 @@ You can change the following elements in your embedded Box component.
 Customize:
 
 <!--alex ignore -->
-* global color palette - select the primary, secondary, and access colors
+* global color palette - select the primary, secondary, and accent colors
 * state colors - select color for states such as hover, focus, active, disabled
 * component-specific colors - for example, you can select different colors for your buttons depending on their type
 <!--alex enable -->

@@ -15,7 +15,7 @@ help automate workflows and enhance intelligent agent—based processes within
 Salesforce.
 It builds on the core features of the Box for Salesforce package and uses
 global, invocable Apex methods to improve functionality. The Box Agents Package 
-references the methods by using the (box) names pace in Agentforce Actions.
+references the methods by using the Box name space in Agentforce Actions.
 
 ## Methods in Agentforce Flows
 
