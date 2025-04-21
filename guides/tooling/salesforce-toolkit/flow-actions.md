@@ -11,7 +11,7 @@ subcategory_id: tooling/salesforce-toolkit
 is_index: false
 id: tooling/salesforce-toolkit/flow-actions
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: tooling/salesforce-toolkit
 parent_id: tooling/salesforce-toolkit
 next_page_id: tooling/salesforce-toolkit/ui-elements

@@ -11,10 +11,10 @@ subcategory_id: tooling/salesforce-toolkit
 is_index: false
 id: tooling/salesforce-toolkit/ui-elements
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: tooling/salesforce-toolkit
 parent_id: tooling/salesforce-toolkit
-next_page_id: ''
+next_page_id: tooling/salesforce-toolkit/box-agents-package
 previous_page_id: tooling/salesforce-toolkit/flow-actions
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/salesforce-toolkit/ui-elements.md

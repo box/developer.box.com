@@ -62,7 +62,7 @@ Boxでは、カスタマイズの目的でデザイントークンを使用し�
 
 <!--alex ignore -->
 
-* グローバルカラーパレット - プライマリカラー、セカンダリカラー、アクセントカラーを選択します。
+* global color palette - select the primary, secondary, and accent colors
 
 * 状態の色 - カーソルを合わせたとき、フォーカスしたとき、アクティブな場合、無効な場合など、状態を表す色を選択します。
 

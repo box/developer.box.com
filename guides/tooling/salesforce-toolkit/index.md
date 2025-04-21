@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 0
 related_endpoints: []
 related_guides:
   - tooling/sdks/salesforce
@@ -12,10 +12,10 @@ subcategory_id: tooling/salesforce-toolkit
 is_index: true
 id: tooling/salesforce-toolkit
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: tooling
 parent_id: tooling
-next_page_id: tooling/salesforce-toolkit/samples
+next_page_id: tooling/salesforce-toolkit/methods
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/salesforce-toolkit/index.md

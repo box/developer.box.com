@@ -129,10 +129,13 @@ pwsh
 スクリプトの実行が完了すると、以下のような出力が表示されます。
 
 ```bash
-Transfered employee content Managed User 1
-with User ID: 19927131476 to Employee Archive Folder
-Deleted user 19927131476
-Deleted employee Managed User 1
+Looking for users inactive for more than 3 days.
+Found 6 users.
+Found 7 events in last 3 days
+Enterprise has: 0 App user, 6 regular users. With 1 admin role, 5 user roles.
+Need to check 5 users (regular user, with user role) for inactive.
+Found 5 users inactive for more than 3 days.
+Report is available at InactiveUsers.csv
 
 ```
 

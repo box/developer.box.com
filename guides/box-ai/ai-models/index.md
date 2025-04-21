@@ -15,7 +15,7 @@ type: guide
 total_steps: 12
 sibling_id: box-ai
 parent_id: box-ai
-next_page_id: box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card
+next_page_id: box-ai/ai-models/azure-openai-gpt-4o-model-card
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/index.md
@@ -36,7 +36,7 @@ APIコールで`model`パラメータを使用する際は、各タイルおよ�
 
 <Message type="notice">
 
-このリストはモデルの提供状況により変更される可能性があります。**プレビュー**モードで提供されているモデルはパフォーマンスが大規模にテストされておらず、現状のままの利用となるため、モデル/出力の品質、可用性、精度には変動がある可能性があります。
+このリストはモデルの提供状況により変更される可能性があります。**プレビュー**モードで提供されているモデルはパフォーマンスが大規模にテストされておらず、現状のままの利用となるため、モデル/出力の品質、可用性、精度にはばらつきがある可能性があります。
 
 </Message>
 
