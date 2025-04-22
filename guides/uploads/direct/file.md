@@ -28,6 +28,13 @@ To upload a file to Box via direct upload, make an API call to the
 [`POST /files/content`][upload] API with the content of the file, the desired
 file name, and the folder ID.
 
+<Message type='tip'>
+
+To upload files to the Archive folder, you need to first enable the [Global
+Content Manager][GCM] (GCM) scope in the Developer Console.
+
+</Message>
+
 <Samples id='post_files_content' >
 
 </Samples>
@@ -106,3 +113,5 @@ More information can be found [in our community article on this topic][fsizes].
 
 [fsizes]: https://community.box.com/t5/Upload-and-Download-Files-and/Understand-the-Maximum-File-Size-You-Can-Upload-to-Box/ta-p/50590
 <!-- i18n-disable localize-links -->
+
+[GCM]: g://api-calls/permissions-and-errors/scopes
