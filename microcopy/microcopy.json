@@ -564,6 +564,8 @@
   "changelog.labels.ui-elements": "UI Elements",
   // The label for all things Postman (app)
   "changelog.labels.postman": "Postman",
+  // The label for all things AI
+  "changelog.labels.ai": "AI",
   // The label for all things Salesforce (app)
   "changelog.labels.salesforce": "Salesforce",
   // The label for all things Reports
