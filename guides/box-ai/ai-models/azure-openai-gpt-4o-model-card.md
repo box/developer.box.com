@@ -9,7 +9,7 @@ related_guides:
 category_id: box-ai
 subcategory_id: box-ai/ai-models
 is_index: false
-id: box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card
+id: box-ai/ai-models/azure-openai-gpt-4o-model-card
 type: guide
 total_steps: 18
 sibling_id: box-ai/ai-models
@@ -17,18 +17,18 @@ parent_id: box-ai/ai-models
 next_page_id: box-ai/ai-models/azure-openai-gpt-4o-mini-model-card
 previous_page_id: box-ai/ai-models
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/azure-openai-gpt-4o-model-card.md
 ---
-# Azure OpenAI GPT-4o-2024-05-13
+# Azure OpenAI GPT-4o
 
-**Azure OpenAI GPT-4o-2024-05-13** is a multimodal model designed to handle lightweight tasks.
+**Azure OpenAI GPT-4o** is a multimodal model designed to handle lightweight tasks.
 
 ## Model details
 
 | Item  | Value | Description |
 |-----------|----------|----------|
-|Model name|**GPT-4o 2024-05-13**| The name of the model. |
-|API model name|`azure__openai__gpt_4o_2024-05-13`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
+|Model name|**GPT-4o**| The name of the model. |
+|API model name|`azure__openai__gpt_4o`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer| **Microsoft Azure** | The trusted organization that securely hosts LLM. |
 |Model provider|**Microsoft Azure**| The organization that provides this model. |
 |Release date|**May 13th, 2024** | The release date for the model.|
@@ -40,7 +40,7 @@ source_url: >-
 
 ## Additional documentation
 
-For additional information, see [official Azure OpenAI GPT-4o-2024-05-13 documentation][azure-ai-mini-4o-model].
+For additional information, see [official Azure OpenAI GPT-4o documentation][azure-ai-mini-4o-model].
 
 [azure-ai-mini-4o-model]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=python-secure#gpt-4o-and-gpt-4-turbo
 [overrides]: g://box-ai/ai-agents/ai-agent-overrides

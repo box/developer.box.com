@@ -165,7 +165,8 @@ Run the script.
 ### Optional flags
 
 To run the script in a simulation mode,
-add the `simulate` boolean flag.
+add the `DryRun` boolean flag.
+Dry run doesn't mean that API calls won't be made, but that any create/update/delete calls will be skipped.
 
 ```bash
 ./Mass_Update_User_Zones.ps1 -DryRun

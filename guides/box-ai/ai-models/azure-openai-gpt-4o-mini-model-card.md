@@ -15,7 +15,7 @@ total_steps: 18
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
 next_page_id: box-ai/ai-models/azure-text-embedding-ada-002-model-card
-previous_page_id: box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card
+previous_page_id: box-ai/ai-models/azure-openai-gpt-4o-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card.md
 ---

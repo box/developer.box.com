@@ -15,7 +15,7 @@ type: guide
 total_steps: 18
 sibling_id: box-ai
 parent_id: box-ai
-next_page_id: box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card
+next_page_id: box-ai/ai-models/azure-openai-gpt-4o-model-card
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/index.md
