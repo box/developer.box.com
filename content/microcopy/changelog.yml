@@ -39,6 +39,9 @@ labels:
   // postman: The label for all things Postman (app)
   postman: Postman
 
+  // ai: The label for all things AI
+  ai: AI
+
   // salesforce: The label for all things Salesforce (app)
   salesforce: Salesforce
 
