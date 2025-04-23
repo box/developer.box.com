@@ -20,58 +20,58 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/salesforce-toolkit/box-agents-package.md
 fullyTranslated: true
 ---
-# Box Agents Package
+# Box for Agentforce拡張パッケージ
 
-The [Box Agents Package][agentforce] is an extension of the Box for Salesforce managed package. This extension provides reusable Agentforce [actions][actions] that help automate workflows and enhance intelligent agent—based processes within Salesforce. It builds on the core features of the Box for Salesforce package and uses global, invocable Apex methods to improve functionality. The Box Agents Package references the methods by using the Box name space in Agentforce Actions.
+[Box for Agentforce拡張パッケージ][agentforce]は、Box for Salesforce管理パッケージの拡張機能です。この拡張機能は、Salesforce内でワークフローを自動化したり、インテリジェントなエージェントベースのプロセスを強化したりするのに役立つ、再利用可能なAgentforce[アクション][actions]を提供します。これは、Box for Salesforceパッケージのコア機能を基に作成されており、グローバルで呼び出し可能なApexメソッドを使用して機能性を高めます。Box for Agentforce拡張パッケージでは、Agentforceアクション内でBoxの名前空間を使用することでメソッドを参照します。
 
-## Methods in Agentforce Flows
+## Agentforceフローのメソッド
 
-The list below contains example [methods][methods] that can be invoked in Agentforce.
+以下のリストには、Agentforceで呼び出し可能な[メソッド][methods]の例を示しています。
 
-### Folder & File Management
+### フォルダとファイルの管理
 
 * フォルダの作成
-* Create Folder Association
-* Create Folder for Record ID
-* Create Folder for Record ID from Template
-* Get Folder Contents by Folder ID
-* Get Folder ID by Record ID
-* Get Folder URL
+* フォルダの関連付けを作成する
+* レコードID用のフォルダを作成する
+* テンプレートからレコードID用のフォルダを作成する
+* フォルダIDでフォルダのコンテンツを取得する
+* レコードIDでフォルダIDを取得する
+* フォルダURLを取得する
 * フォルダの移動
-* Get Object Folder by Record ID
-* Get Record ID by Folder ID
-* Get URL for Folder
+* レコードIDでオブジェクトフォルダを取得する
+* フォルダIDでレコードIDを取得する
+* フォルダ用URLを取得する
 
-### Metadata Management
+### メタデータの管理
 
-* Create Box Metadata by File ID
-* Create Box Metadata by Folder ID
-* Delete Box Metadata by File ID
-* Delete Box Metadata by Folder ID
-* Update Box Metadata by Folder ID
-* Get Box Metadata by File ID
-* Get Box Metadata by Folder ID
+* ファイルIDでBoxメタデータを作成する
+* フォルダIDでBoxメタデータを作成する
+* ファイルIDでBoxメタデータを削除する
+* フォルダIDでBoxメタデータを削除する
+* フォルダIDでBoxメタデータを更新する
+* ファイルIDでBoxメタデータを取得する
+* フォルダIDでBoxメタデータを取得する
 
 ### コラボレーション
 
-* Create Collaboration
-* Create Collaboration on Record
-* Edit Collaboration
-* Delete Collaboration
+* コラボレーションを作成する
+* レコードにコラボレーションを作成する
+* コラボレーションを編集する
+* コラボレーションを削除する
 
-### Additional Actions
+### その他のアクション
 
 <!--alex ignore -->
 
-* Create File from Attachment
-* Get DocGen Batch
-* Get Folder Associations by Salesforce Record ID
-* Get Metadata Cascade Policies by Folder ID
-* Get Metadata Cascade Policy by ID
-* Create Metadata Cascade Policy
-* Delete Metadata Cascade Policy
-* Create Slack Channel Mapping
-* Set Slack Channel Access Management Disabled
+* 添付ファイルからファイルを作成する
+* Doc Genのバッチを取得する
+* SalesforceレコードIDでフォルダの関連付けを取得する
+* フォルダIDでメタデータカスケードポリシーを取得する
+* IDでメタデータカスケードポリシーを取得する
+* メタデータカスケードポリシーを作成する
+* メタデータカスケードポリシーを削除する
+* Slackチャンネルマッピングを作成する
+* Slackチャンネルアクセス管理を無効に設定する
   <!--alex enable -->
 
 [agentforce]: https://support.box.com/hc/en-us/articles/40370228349331-Installing-Box-for-Agentforce

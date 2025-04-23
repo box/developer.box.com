@@ -22,7 +22,7 @@ fullyTranslated: true
 ---
 # Azure OpenAI GPT-4o
 
-**Azure OpenAI GPT-4o** is a multimodal model designed to handle lightweight tasks.
+**Azure OpenAI GPT-4o**は、軽量のタスクを処理するように設計された複数モードモデルです。
 
 ## モデルの詳細
 
@@ -41,7 +41,7 @@ fullyTranslated: true
 
 ## その他のドキュメント
 
-For additional information, see [official Azure OpenAI GPT-4o documentation][azure-ai-mini-4o-model].
+詳細については、[Azure OpenAI GPT-4oの公式ドキュメント][azure-ai-mini-4o-model]を参照してください。
 
 [azure-ai-mini-4o-model]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=python-secure#gpt-4o-and-gpt-4-turbo
 
