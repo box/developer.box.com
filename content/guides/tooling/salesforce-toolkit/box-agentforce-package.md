@@ -7,15 +7,16 @@ required_guides: []
 related_resources: []
 alias_paths: []
 ---
-# Box Agents Package
+# Box for Agentforce Extension package
 
-The [Box Agents Package][agentforce] is an extension of the Box for Salesforce managed
+The [Box for Agentforce Extension package][agentforce] is an extension of the Box for Salesforce managed
 package. This extension provides reusable Agentforce [actions][actions] that
 help automate workflows and enhance intelligent agent—based processes within
 Salesforce.
 It builds on the core features of the Box for Salesforce package and uses
-global, invocable Apex methods to improve functionality. The Box Agents Package 
-references the methods by using the Box name space in Agentforce Actions.
+global, invocable Apex methods to improve functionality. The Box for Agentforce
+Extension package  references the methods by using the Box name space in
+Agentforce Actions.
 
 ## Methods in Agentforce Flows
 
