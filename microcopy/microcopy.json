@@ -284,7 +284,7 @@
   "headers.primary.develop_featured.cta.text": "サンプルコードを参照",
   "headers.primary.connect_featured.tag.text": "イベント",
   "headers.primary.connect_featured.title.text": "Box Virtual Summit: コンテンツ + AI",
-  "headers.primary.connect_featured.details.text": "OpenAI Agents SDKを使用してコンテキストに対応したエージェントを作成する方法を学び、Model Context Protocolの使用を開始し、エージェントを使用してメタデータ抽出を実行してみましょう。",
+  "headers.primary.connect_featured.details.text": "OpenAI Agents SDKを使用してコンテキストに対応したエージェントを作成する方法、Model Context Protocolの使用の開始、エージェントを使用したメタデータ抽出についてご紹介します。",
   "headers.primary.connect_featured.cta.text": "今すぐ登録",
   // The HTML alt-text for the site logo
   "headers.secondary.images.logo.alt_text": "Box Developerドキュメント",
