@@ -9,7 +9,7 @@ alias_paths: []
 category_id: tooling
 subcategory_id: tooling/salesforce-toolkit
 is_index: false
-id: tooling/salesforce-toolkit/box-agents-package
+id: tooling/salesforce-toolkit/box-agentforce-package
 type: guide
 total_steps: 5
 sibling_id: tooling/salesforce-toolkit
@@ -17,12 +17,12 @@ parent_id: tooling/salesforce-toolkit
 next_page_id: ''
 previous_page_id: tooling/salesforce-toolkit/ui-elements
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/salesforce-toolkit/box-agents-package.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/salesforce-toolkit/box-agentforce-package.md
 fullyTranslated: true
 ---
-# Box for Agentforce拡張パッケージ
+# Box for Agentforce Extension package
 
-[Box for Agentforce拡張パッケージ][agentforce]は、Box for Salesforce管理パッケージの拡張機能です。この拡張機能は、Salesforce内でワークフローを自動化したり、インテリジェントなエージェントベースのプロセスを強化したりするのに役立つ、再利用可能なAgentforce[アクション][actions]を提供します。これは、Box for Salesforceパッケージのコア機能を基に作成されており、グローバルで呼び出し可能なApexメソッドを使用して機能性を高めます。Box for Agentforce拡張パッケージでは、Agentforceアクション内でBoxの名前空間を使用することでメソッドを参照します。
+The [Box for Agentforce Extension package][agentforce] is an extension of the Box for Salesforce managed package. This extension provides reusable Agentforce [actions][actions] that help automate workflows and enhance intelligent agent—based processes within Salesforce. It builds on the core features of the Box for Salesforce package and uses global, invocable Apex methods to improve functionality. The Box for Agentforce Extension package references the methods by using the Box name space in Agentforce Actions.
 
 ## Agentforceフローのメソッド
 

@@ -197,6 +197,28 @@ MCP
 
 </Tile>
 
+<Tile type="box-brown" title="Box AI Agents Toolkit" href="https://pypi.org/project/box-ai-agents-toolkit/">
+
+Get started with a Python library for building AI agents for Box.
+
+<div>
+
+<strong style="background-color: #92e0c0">
+
+新着
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
+beta
+
+</strong>
+
+</div>
+
+</Tile>
+
 <Tile type="box-brown" title="Pydantic AIとBox MCP" href="https://github.com/box-community/box-mcp-pydantic-ai">
 
 Box MCPサーバーを使用して、BoxのセキュアなコンテンツでPydantic AIエージェントを拡張します。

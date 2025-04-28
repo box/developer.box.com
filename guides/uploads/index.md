@@ -21,6 +21,12 @@ Box APIは、2つのファイルアップロード方法をサポートしてい
 
 [分割アップロードAPI][chunked]は20 MB以上のファイルをサポートしており、アプリケーションではファイルを複数のパーツに分割してアップロードすることで、エラーのキャッチと個別のパーツの再送信を詳細に制御できます。
 
+<Message type="tip">
+
+To upload files to the Archive folder, you need to first enable the [Global Content Manager][GCM] (GCM) scope in the Developer Console.
+
+</Message>
+
 ## アップロードの制限
 
 アップロードの上限は、認証済みユーザーのアカウントの種類によって決まります。詳細については、このトピックに関する[Boxコミュニティの記事][fsizes]を参照してください。
@@ -42,6 +48,8 @@ Boxへのアップロードは、通常のAPIコールとは異なるドメイ�
 [direct]: g://uploads/direct
 
 [chunked]: g://uploads/chunked
+
+[GCM]: g://api-calls/permissions-and-errors/scopes
 
 <!-- i18n-enable localize-links -->
 

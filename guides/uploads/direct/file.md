@@ -27,6 +27,12 @@ fullyTranslated: true
 
 直接アップロードによってBoxにファイルをアップロードするには、ファイルのコンテンツ、目的のファイル名、フォルダIDを使用して、[`POST /files/content`][upload] APIにAPIコールを実行します。
 
+<Message type="tip">
+
+To upload files to the Archive folder, you need to first enable the [Global Content Manager][GCM] (GCM) scope in the Developer Console.
+
+</Message>
+
 <Samples id="post_files_content">
 
 </Samples>
@@ -93,3 +99,5 @@ Test file text.
 [fsizes]: https://support.box.com/hc/ja/articles/360043697314-Boxにアップロードできる最大ファイルサイズ
 
 <!-- i18n-disable localize-links -->
+
+[GCM]: g://api-calls/permissions-and-errors/scopes

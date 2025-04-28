@@ -53,7 +53,7 @@ Box AI Studioは、Enterprise Advancedアカウントでのみ使用できます
 | `fields`              | レスポンスで返されるフィールド。                                                 | `ask`                                               |
 | `agent_state`         | 返されるエージェントの状態。値は`enabled`、`disabled`のいずれかです。                     | `enabled`                                           |
 | `fields`              | レスポンスで返されるフィールド。値は`ask`、`text_gen`、`extract`のいずれかです。             | `ask`                                               |
-| `include_box_default` | レスポンスにBoxのデフォルトのエージェントを含めるかどうか。                                  | `true`                                              |
+| `include_box_default` | レスポンスにBoxのデフォルトエージェントを含めるかどうか。                                   | `true`                                              |
 | `limit`               | 返す項目の1ページあたりの最大数。                                                | `1000`                                              |
 | `marker`              | 結果が返される開始位置のマーカー。                                                | `JV9IRGZmieiBasejOG9yDCRNgd2ymoZIbjsxbJMjIs3kioVii` |
 
