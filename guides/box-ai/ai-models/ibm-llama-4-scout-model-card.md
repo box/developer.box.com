@@ -19,9 +19,9 @@ previous_page_id: box-ai/ai-models/aws-titan-text-lite-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/ibm-llama-4-scout-model-card.md
 ---
-# IBM Llama 3.2 Instruct
+# IBM Llama 4 Scout
 
-**IBM Llama 3.2 Instruct** is a, auto-regressive language model that uses a mixture-of-experts (MoE) architecture and incorporates early fusion for native multimodality.
+**IBM Llama 4 Scout** is an auto-regressive language model that uses a mixture-of-experts (MoE) architecture and incorporates early fusion for native multimodality.
 
 ## Model details
 
