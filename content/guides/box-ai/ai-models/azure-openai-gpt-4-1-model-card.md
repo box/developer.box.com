@@ -9,7 +9,7 @@ related_guides:
 ---
 # Azure OpenAI GPT-4.1
 
-**Azure OpenAI GPT-4.1** is a multimodal model designed to handle lightweight tasks.
+**Azure OpenAI GPT-4.1** is a multimodal model, highly efficient in handling complex, multi-step tasks.
 
 ## Model details
 
