@@ -25,12 +25,11 @@ related_guides:
 | Context length | **10m** | The maximum number of tokens that an LLM can process in a single input sequence. |
 | Empirical throughput | N/A | The number of tokens the model can generate per second.|
 | Open source | **Yes** | Specifies if the model's code is available for public use.|
-| IP Infringement Protection | **No** | [Legal note][subprocessors]
+| IP Infringement Protection | **No** | Use of this model does not come with any intellectual property rights assurances or protections from Box. Please consider any potential IP issues that might arise from using the model’s outputs. |
 
 ## Additional documentation
 
 For additional information, see [official IBM Llama 4 Scout documentation][IBM].
 
 [overrides]: g://box-ai/ai-agents/ai-agent-overrides
-[subprocessors]: https://www.box.com/legal/subprocessors
 [IBM]: https://www.ibm.com/docs/en/watsonx/w-and-w/2.1.0?topic=models-third-party-foundation
