@@ -12,10 +12,10 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 14
+total_steps: 18
 sibling_id: box-ai
 parent_id: box-ai
-next_page_id: box-ai/ai-models/azure-openai-gpt-4o-model-card
+next_page_id: box-ai/ai-models/azure-openai-gpt-4-1-model-card
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/index.md
@@ -42,9 +42,9 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
 
 <TileGrid rows="2">
 
-<Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card">
+<Tile type="gpt" title="azure__openai__gpt_4_1" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-model-card">
 
-A multimodal model designed to handle lightweight tasks.
+A multimodal model, highly efficient in handling complex, multi-step tasks.
 <div>
 
 <strong style="background-color: #e8e8e8">
@@ -75,7 +75,37 @@ Available
 
 </Tile>
 
-<Tile type="gpt" title="azure__openai__gpt_4o_2024_05_13" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card">
+<Tile type="gpt" title="azure__openai__gpt_4_1_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card">
+
+A multimodal model designed to handle lightweight tasks.
+<div>
+
+<strong style="background-color: #e1ffe7">
+
+Available
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card">
+
+A multimodal model designed to handle lightweight tasks.
+<div>
+
+<strong style="background-color: #e1ffe7">
+
+Available
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="gpt" title="azure__openai__gpt_4o" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-model-card">
 
 A multimodal model, highly efficient in handling complex, multi-step tasks.
 <div>
@@ -105,6 +135,48 @@ text search, code search, and sentence similarity.
 <strong style="background-color: #e8e8e8">
 
 Embeddings
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+Available
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="gemini" title="google__gemini_2_5_pro_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-preview-model-card">
+
+Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Chat
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+Available
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="gemini" title="google__gemini_2_5_flash_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-flash-preview-model-card">
+
+Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Chat
 
 </strong>
 
