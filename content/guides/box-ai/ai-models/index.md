@@ -115,6 +115,18 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
         <strong style="background-color: #fffbf3">Preview</strong>
       </div>
     </Tile>
+		<Tile type="model" title="ibm__llama_3_2_instruct" href="/guides/box-ai/ai-models/ibm-llama-3-2-instruct-model-card">
+      An instruction-tuned text only model optimized for multilingual dialogue use cases, including agentic retrieval and summarization tasks.
+      <div>
+        <strong style="background-color: #e8e8e8">Chat</strong>
+      </div>
+    </Tile>
+		<Tile type="model" title="ibm__llama_4_scout" href="/guides/box-ai/ai-models/ibm-llama-4-scout-model-card">
+      A natively multimodal AI model that enables text and multimodal experiences.
+      <div>
+        <strong style="background-color: #e8e8e8">Chat</strong>
+      </div>
+    </Tile>
 </TileGrid>
 
 [ask]: e://post_ai_ask
