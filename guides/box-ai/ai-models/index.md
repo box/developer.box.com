@@ -12,7 +12,7 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 12
+total_steps: 14
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/ai-models/azure-openai-gpt-4o-model-card
@@ -300,6 +300,36 @@ Chat
 <strong style="background-color: #fffbf3">
 
 Preview
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="ibm__llama_3_2_instruct" href="/guides/box-ai/ai-models/ibm-llama-3-2-instruct-model-card">
+
+An instruction-tuned text only model optimized for multilingual dialogue use cases, including agentic retrieval and summarization tasks.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Chat
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="ibm__llama_4_scout" href="/guides/box-ai/ai-models/ibm-llama-4-scout-model-card">
+
+A natively multimodal AI model that enables text and multimodal experiences.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Chat
 
 </strong>
 
