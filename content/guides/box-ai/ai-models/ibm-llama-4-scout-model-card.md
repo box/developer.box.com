@@ -10,7 +10,7 @@ related_guides:
 
 # IBM Llama 4 Scout
 
-**IBM Llama 4 Scoutt** is an auto-regressive language model that uses a mixture-of-experts (MoE) architecture and incorporates early fusion for native multimodality.
+**IBM Llama 4 Scout** is an auto-regressive language model that uses a mixture-of-experts (MoE) architecture and incorporates early fusion for native multimodality.
 
 ## Model details
 
