@@ -1,5 +1,5 @@
 ---
-rank: 15
+rank: 32
 related_guides:
   - box-ai/ai-tutorials/ask-questions
   - box-ai/ai-tutorials/generate-text
@@ -11,7 +11,7 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/aws-claude-3-haiku-model-card
 type: guide
-total_steps: 18
+total_steps: 22
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
 next_page_id: box-ai/ai-models/aws-claude-3-sonnet-model-card
