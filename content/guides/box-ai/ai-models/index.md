@@ -28,19 +28,19 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
 </Message>
 
 <TileGrid rows="2">
-		<Tile type="gpt" title="azure__openai__gpt_4_1" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-model-card">
-      A multimodal model, highly efficient in handling complex, multi-step tasks.
-      <div>
-        <strong style="background-color: #e8e8e8">Default for Box AI for Box Hubs</strong>
-        <strong style="background-color: #e8e8e8">Default for Box AI for Docs</strong>
-        <strong style="background-color: #e8e8e8">Default for Box AI for Box Notes Q&A</strong>
-        <strong style="background-color: #e1ffe7">Available</strong>
-      </div>
-    </Tile>
 		<Tile type="gpt" title="azure__openai__gpt_4_1_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card">
       A multimodal model designed to handle lightweight tasks.
 			<div>
+			<strong style="background-color: #e8e8e8">Default for Box AI for Box Hubs</strong>
+      <strong style="background-color: #e8e8e8">Default for Box AI for Docs</strong>
+      <strong style="background-color: #e8e8e8">Default for Box AI for Box Notes Q&A</strong>
 			<strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+		<Tile type="gpt" title="azure__openai__gpt_4_1" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-model-card">
+    	A multimodal model, highly efficient in handling complex, multi-step tasks.
+      <div>
+      <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
     <Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card">
@@ -88,6 +88,7 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
     <Tile type="gemini" title="google__gemini_2_0_flash_lite_preview" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-lite-preview-02-05">
       Gemini multimodal model designed to handle lightweight tasks.
       <div>
+			<strong style="background-color: #e8e8e8">Default for Box AI Extract</strong>
         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
@@ -95,7 +96,6 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
     <Tile type="gemini" title="google__gemini_1_5_flash_001" href="/guides/box-ai/ai-models/google-gemini-1-5-flash-001-model-card">
       Gemini multimodal model, built for high volume tasks and latency-sensitive applications.
       <div>
-        <strong style="background-color: #e8e8e8">Default for Box AI Extract</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
