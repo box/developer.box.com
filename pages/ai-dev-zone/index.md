@@ -199,7 +199,7 @@ MCP
 
 <Tile type="box-brown" title="Box AI Agents Toolkit" href="https://pypi.org/project/box-ai-agents-toolkit/">
 
-Get started with a Python library for building AI agents for Box.
+BoxのAIエージェントを作成するためのPythonライブラリの利用を開始します。
 
 <div>
 
@@ -211,7 +211,7 @@ Get started with a Python library for building AI agents for Box.
 
 <strong style="background-color: #e8e8e8">
 
-beta
+ベータ
 
 </strong>
 

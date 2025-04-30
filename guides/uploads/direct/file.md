@@ -29,7 +29,7 @@ fullyTranslated: true
 
 <Message type="tip">
 
-To upload files to the Archive folder, you need to first enable the [Global Content Manager][GCM] (GCM) scope in the Developer Console.
+アーカイブフォルダにファイルをアップロードするには、最初に、開発者コンソールで[グローバルコンテンツマネージャ][GCM] (GCM) スコープを有効にする必要があります。
 
 </Message>
 
