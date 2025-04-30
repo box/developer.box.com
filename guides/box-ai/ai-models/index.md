@@ -42,9 +42,9 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
 
 <TileGrid rows="2">
 
-<Tile type="gpt" title="azure__openai__gpt_4_1" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-model-card">
+<Tile type="gpt" title="azure__openai__gpt_4_1_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card">
 
-A multimodal model, highly efficient in handling complex, multi-step tasks.
+A multimodal model designed to handle lightweight tasks.
 <div>
 
 <strong style="background-color: #e8e8e8">
@@ -75,9 +75,9 @@ Available
 
 </Tile>
 
-<Tile type="gpt" title="azure__openai__gpt_4_1_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card">
+<Tile type="gpt" title="azure__openai__gpt_4_1" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-model-card">
 
-A multimodal model designed to handle lightweight tasks.
+A multimodal model, highly efficient in handling complex, multi-step tasks.
 <div>
 
 <strong style="background-color: #e1ffe7">
@@ -218,6 +218,12 @@ Gemini multimodal model designed to handle lightweight tasks.
 
 <strong style="background-color: #e8e8e8">
 
+Default for Box AI Extract
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
 Chat
 
 </strong>
@@ -236,12 +242,6 @@ Available
 
 Gemini multimodal model, built for high volume tasks and latency-sensitive applications.
 <div>
-
-<strong style="background-color: #e8e8e8">
-
-Default for Box AI Extract
-
-</strong>
 
 <strong style="background-color: #e1ffe7">
 
