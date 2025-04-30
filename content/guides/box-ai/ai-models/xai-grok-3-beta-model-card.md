@@ -29,7 +29,6 @@ related_guides:
 
 ## Additional documentation
 
-
 For additional information, see [official xAI Grok 3 Mini Beta documentation][xai-grok-models].
 
 [xai-grok-models]: https://docs.x.ai/docs/models
