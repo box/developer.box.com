@@ -34,30 +34,34 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
 			<strong style="background-color: #e8e8e8">Default for Box AI for Box Hubs</strong>
       <strong style="background-color: #e8e8e8">Default for Box AI for Docs</strong>
       <strong style="background-color: #e8e8e8">Default for Box AI for Box Notes Q&A</strong>
+			<strong style="background-color: #e8e8e8">Chat</strong>
 			<strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
 		<Tile type="gpt" title="azure__openai__gpt_o3" href="/guides/box-ai/ai-models/azure-openai-gpt-o3-model-card">
     	A multimodal model, highly efficient in handling complex, multi-step tasks.
       <div>
-      <strong style="background-color: #e1ffe7">Available</strong>
+      <strong style="background-color: #fffbf3">Preview</strong>
       </div>
     </Tile>
-		<Tile type="gpt" title="azure__openai__gpt_04-mini" href="/guides/box-ai/ai-models/azure-openai-gpt-o4-mini-model-card">
+		<Tile type="gpt" title="azure__openai__gpt_o4-mini" href="/guides/box-ai/ai-models/azure-openai-gpt-o4-mini-model-card">
     	A multimodal model, highly efficient in handling complex, multi-step tasks.
       <div>
-      <strong style="background-color: #e1ffe7">Preview</strong>
+			<strong style="background-color: #e8e8e8">Chat</strong>
+      <strong style="background-color: #fffbf3">Preview</strong>
       </div>
     </Tile>
 		<Tile type="gpt" title="azure__openai__gpt_4_1" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-model-card">
     	A multimodal model, highly efficient in handling complex, multi-step tasks.
       <div>
+			<strong style="background-color: #e8e8e8">Chat</strong>
       <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
     <Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card">
       A multimodal model designed to handle lightweight tasks.
 			<div>
+			<strong style="background-color: #e8e8e8">Chat</strong>
 			<strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
@@ -169,12 +173,14 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
       A model that excels at enterprise use cases like data extraction, coding, and text summarization.
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
+				<strong style="background-color: #fffbf3">Preview</strong>
       </div>
     </Tile>
 		<Tile type="model" title="xai__grok_3_mini_beta" href="/guides/box-ai/ai-models/xai-grok-3-mini-beta-model-card">
       A lightweight model that is great for logic-based tasks that do not require deep domain knowledge.
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
+				<strong style="background-color: #fffbf3">Preview</strong>
       </div>
     </Tile>
 </TileGrid>
