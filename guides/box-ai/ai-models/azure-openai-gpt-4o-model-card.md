@@ -1,5 +1,5 @@
 ---
-rank: 3
+rank: 6
 related_guides:
   - box-ai/ai-tutorials/ask-questions
   - box-ai/ai-tutorials/generate-text
@@ -11,11 +11,11 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/azure-openai-gpt-4o-model-card
 type: guide
-total_steps: 12
+total_steps: 22
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
 next_page_id: box-ai/ai-models/azure-openai-gpt-4o-mini-model-card
-previous_page_id: box-ai/ai-models
+previous_page_id: box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/azure-openai-gpt-4o-model-card.md
 fullyTranslated: true

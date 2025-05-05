@@ -12,10 +12,10 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 12
+total_steps: 22
 sibling_id: box-ai
 parent_id: box-ai
-next_page_id: box-ai/ai-models/azure-openai-gpt-4o-model-card
+next_page_id: box-ai/ai-models/azure-openai-gpt-o4-mini-model-card
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/index.md
@@ -42,7 +42,7 @@ APIコールで`model`パラメータを使用する際は、各タイルおよ�
 
 <TileGrid rows="2">
 
-<Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card">
+<Tile type="gpt" title="azure__openai__gpt_4_1_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card">
 
 軽量のタスクを処理するように設計された複数モードモデル。
 
@@ -66,6 +66,12 @@ Box AI for NotesのQ&Aのデフォルト
 
 </strong>
 
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
 <strong style="background-color: #e1ffe7">
 
 利用可能
@@ -76,7 +82,89 @@ Box AI for NotesのQ&Aのデフォルト
 
 </Tile>
 
-<Tile type="gpt" title="azure__openai__gpt_4o_2024_05_13" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card">
+<Tile type="gpt" title="azure__openai__gpt_o3" href="/guides/box-ai/ai-models/azure-openai-gpt-o3-model-card">
+
+複雑なマルチステップタスクの処理で非常に効率的な複数モードモデル。
+
+<div>
+
+<strong style="background-color: #fffbf3">
+
+プレビュー
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="gpt" title="azure__openai__gpt_o4-mini" href="/guides/box-ai/ai-models/azure-openai-gpt-o4-mini-model-card">
+
+複雑なマルチステップタスクの処理で非常に効率的な複数モードモデル。
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
+<strong style="background-color: #fffbf3">
+
+プレビュー
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="gpt" title="azure__openai__gpt_4_1" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-model-card">
+
+複雑なマルチステップタスクの処理で非常に効率的な複数モードモデル。
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+利用可能
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card">
+
+軽量のタスクを処理するように設計された複数モードモデル。
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+利用可能
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="gpt" title="azure__openai__gpt_4o" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-model-card">
 
 複雑なマルチステップタスクの処理で非常に効率的な複数モードモデル。
 
@@ -120,6 +208,50 @@ Box AI for NotesのQ&Aのデフォルト
 
 </Tile>
 
+<Tile type="gemini" title="google__gemini_2_5_pro_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-preview-model-card">
+
+大規模で大量かつ高頻度のタスクに最適になるよう設計されたGemini複数モードモデル。
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+利用可能
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="gemini" title="google__gemini_2_5_flash_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-flash-preview-model-card">
+
+大規模で大量かつ高頻度のタスクに最適になるよう設計されたGemini複数モードモデル。
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+利用可能
+
+</strong>
+
+</div>
+
+</Tile>
+
 <Tile type="gemini" title="google__gemini_2_0_flash_001" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-001-model-card">
 
 大規模で大量かつ高頻度のタスクに最適になるよう設計されたGemini複数モードモデル。
@@ -150,6 +282,12 @@ Box AI for NotesのQ&Aのデフォルト
 
 <strong style="background-color: #e8e8e8">
 
+Box AI Extractのデフォルト
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
 チャット
 
 </strong>
@@ -169,12 +307,6 @@ Box AI for NotesのQ&Aのデフォルト
 大量のタスクやレイテンシの影響を受けやすいアプリケーション向けに構築されたGemini複数モードモデル。
 
 <div>
-
-<strong style="background-color: #e8e8e8">
-
-Box AI Extractのデフォルト
-
-</strong>
 
 <strong style="background-color: #e1ffe7">
 
@@ -220,9 +352,9 @@ Box AI Extractのデフォルト
 
 </strong>
 
-<strong style="background-color: #fffbf3">
+<strong style="background-color: #e1ffe7">
 
-プレビュー
+利用可能
 
 </strong>
 
@@ -242,9 +374,9 @@ Box AI Extractのデフォルト
 
 </strong>
 
-<strong style="background-color: #fffbf3">
+<strong style="background-color: #e1ffe7">
 
-プレビュー
+利用可能
 
 </strong>
 
@@ -264,9 +396,9 @@ Box AI Extractのデフォルト
 
 </strong>
 
-<strong style="background-color: #fffbf3">
+<strong style="background-color: #e1ffe7">
 
-プレビュー
+利用可能
 
 </strong>
 
@@ -286,9 +418,9 @@ Box AI Extractのデフォルト
 
 </strong>
 
-<strong style="background-color: #fffbf3">
+<strong style="background-color: #e1ffe7">
 
-プレビュー
+利用可能
 
 </strong>
 
@@ -299,6 +431,82 @@ Box AI Extractのデフォルト
 <Tile type="model" title="aws__titan_text_lite" href="/guides/box-ai/ai-models/aws-titan-text-lite-model-card">
 
 高度な言語処理が可能なモデル。幅広いコンテキストを処理できるため、複雑なタスクに適しています。
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+利用可能
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="ibm__llama_3_2_instruct" href="/guides/box-ai/ai-models/ibm-llama-3-2-instruct-model-card">
+
+An instruction-tuned text only model optimized for multilingual dialogue use cases, including agentic retrieval and summarization tasks.
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="ibm__llama_4_scout" href="/guides/box-ai/ai-models/ibm-llama-4-scout-model-card">
+
+A natively multimodal AI model that enables text and multimodal experiences.
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="xai__grok_3_beta" href="/guides/box-ai/ai-models/xai-grok-3-beta-model-card">
+
+A model that excels at enterprise use cases like data extraction, coding, and text summarization.
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
+<strong style="background-color: #fffbf3">
+
+プレビュー
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="xai__grok_3_mini_beta" href="/guides/box-ai/ai-models/xai-grok-3-mini-beta-model-card">
+
+A lightweight model that is great for logic-based tasks that do not require deep domain knowledge.
 
 <div>
 

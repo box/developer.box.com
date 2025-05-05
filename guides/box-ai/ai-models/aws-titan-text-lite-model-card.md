@@ -1,5 +1,5 @@
 ---
-rank: 18
+rank: 34
 related_guides:
   - box-ai/ai-tutorials/ask-questions
   - box-ai/ai-tutorials/generate-text
@@ -11,10 +11,10 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/aws-titan-text-lite-model-card
 type: guide
-total_steps: 12
+total_steps: 22
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
-next_page_id: ''
+next_page_id: box-ai/ai-models/ibm-llama-4-scout-model-card
 previous_page_id: box-ai/ai-models/aws-claude-3-sonnet-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/aws-titan-text-lite-model-card.md
