@@ -170,16 +170,18 @@ Box AI is powered by the following AI models. These models are integrated with B
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
-		<Tile type="model" title="ibm__llama_3_2_instruct" href="/guides/box-ai/ai-models/ibm-llama-3-2-instruct-model-card">
-      An instruction-tuned text only model optimized for multilingual dialogue use cases, including agentic retrieval and summarization tasks.
+		<Tile type="model" title="ibm__llama_3_2_90b_vision_instruct" href="/guides/box-ai/ai-models/ibm-llama-3-2-90b-vision-instruct-model-card">
+      A model built for document-level understanding, interpretation of charts and graphs, and captioning of images.
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
+				<strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
 		<Tile type="model" title="ibm__llama_4_scout" href="/guides/box-ai/ai-models/ibm-llama-4-scout-model-card">
       A natively multimodal AI model that enables text and multimodal experiences.
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
+				<strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
 </TileGrid>

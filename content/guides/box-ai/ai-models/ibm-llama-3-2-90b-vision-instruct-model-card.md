@@ -10,7 +10,7 @@ related_guides:
 
 # IBM Llama 3.2 Vision Instruct
 
-**IBM Llama 3.2 Vision Instruct** is a instruction-tuned text only model optimized for multilingual dialogue use cases, including agentic retrieval and summarization tasks.
+**IBM Llama 3.2 Vision Instruct** is a model built for image-in, text-out use cases such as document-level understanding, interpretation of charts and graphs, and captioning of images.
 
 ## Model details
 
