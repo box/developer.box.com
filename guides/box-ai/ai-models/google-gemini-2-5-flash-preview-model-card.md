@@ -22,7 +22,7 @@ fullyTranslated: true
 ---
 # Google Gemini 2.5 Flash Preview
 
-**Google Gemini 2.5 Flash Preview** is a multimodal model designed to handle lightweight tasks. It is designed for high-volume, low-latency tasks, making it highly efficient for large-scale use cases like summarization, multimodal processing, and categorization but with higher quality than Gemini 2.0 Flash.
+**Google Gemini 2.5 Flash Preview**は、軽量のタスクを処理するように設計された複数モードモデルです。大量の低レイテンシタスク向けに設計されており、要約、複数モード処理、分類のような大規模なユースケースに非常に効果的で、品質はGemini 2.0 Flashよりも高くなります。
 
 ## モデルの詳細
 
@@ -32,8 +32,8 @@ fullyTranslated: true
 | APIモデル名       | `google__gemini_2_5_flash_preview`  | [Box AI APIでのモデルの上書き][overrides]に使用されるモデルの名前。APIを動作させるには、ユーザーがこの名前を正確に指定する必要があります。 |
 | ホスティングレイヤー    | **Google**                          | LLMを安全にホストする、信頼できる組織。                                                              |
 | モデルプロバイダ      | **Google**                          | このモデルを提供する組織。                                                                      |
-| リリース日         | **March 25th 2025**                 | モデルのリリース日。                                                                         |
-| ナレッジカットオフ日    | **January 2025**                    | モデルが情報の更新を取得しなくなった日付。                                                              |
+| リリース日         | **2025年3月25日**                      | モデルのリリース日。                                                                         |
+| ナレッジカットオフ日    | **2025年1月**                         | モデルが情報の更新を取得しなくなった日付。                                                              |
 | 入力コンテキストウィンドウ | **100万トークン**                        | 入力コンテキストウィンドウでサポートされるトークン数。                                                        |
 | 出力トークンの最大数    | **8,000トークン**                       | 1回のリクエストでモデルが生成できるトークン数。                                                           |
 | 経験に基づいたスループット | **214**                             | モデルが1秒あたりに生成できるトークン数。                                                              |
@@ -41,7 +41,7 @@ fullyTranslated: true
 
 ## その他のドキュメント
 
-For additional information, see [official Google Gemini 2.5 Flash Preview documentation][vertex-ai-gemini-models].
+詳細については、[Google Gemini 2.5 Flash Previewの公式ドキュメント][vertex-ai-gemini-models]を参照してください。
 
 [vertex-ai-gemini-models]: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#gemini-models
 

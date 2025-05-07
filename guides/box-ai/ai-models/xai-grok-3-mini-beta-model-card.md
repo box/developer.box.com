@@ -22,7 +22,7 @@ fullyTranslated: true
 ---
 # xAI Grok 3 Mini Beta
 
-**xAI Grok 3 Mini Beta** is a lightweight model that thinks before responding. Fast, smart, and great for logic-based tasks that do not require deep domain knowledge. The raw thinking traces are accessible.
+**xAI Grok 3 Mini Beta**は、応答する前に思考する軽量モデルです。処理が速くスマートで、深い専門知識を必要としない、ロジックベースのタスクに適しています。未加工の思考トレースにアクセスできます。
 
 ## モデルの詳細
 
@@ -32,16 +32,16 @@ fullyTranslated: true
 | APIモデル名       | `xai__grok_3_mini`  | [Box AI APIでのモデルの上書き][overrides]に使用されるモデルの名前。APIを動作させるには、ユーザーがこの名前を正確に指定する必要があります。 |
 | ホスティングレイヤー    | **xAI**             | LLMを安全にホストする、信頼できる組織。                                                              |
 | モデルプロバイダ      | **xAI**             | このモデルを提供する組織。                                                                      |
-| リリース日         | **April 9th 2025**  | モデルのリリース日。                                                                         |
-| ナレッジカットオフ日    | **unknown**         | モデルが情報の更新を取得しなくなった日付。                                                              |
-| 入力コンテキストウィンドウ | **131k tokens**     | 入力コンテキストウィンドウでサポートされるトークン数。                                                        |
-| 出力トークンの最大数    | **131k tokens**     | 1回のリクエストでモデルが生成できるトークン数。                                                           |
+| リリース日         | **2025年4月9日**       | モデルのリリース日。                                                                         |
+| ナレッジカットオフ日    | **不明**              | モデルが情報の更新を取得しなくなった日付。                                                              |
+| 入力コンテキストウィンドウ | **131,000トークン**     | 入力コンテキストウィンドウでサポートされるトークン数。                                                        |
+| 出力トークンの最大数    | **131,000トークン**     | 1回のリクエストでモデルが生成できるトークン数。                                                           |
 | 経験に基づいたスループット | **指定なし**            | モデルが1秒あたりに生成できるトークン数。                                                              |
 | オープンソース       | **いいえ**             | モデルのコードを一般公開するかどうかを指定します。                                                          |
 
 ## その他のドキュメント
 
-For additional information, see [official xAI Grok 3 Mini Beta documentation][xai-grok-models].
+詳細については、[xAI Grok 3 Mini Betaの公式ドキュメント][xai-grok-models]を参照してください。
 
 [xai-grok-models]: https://docs.x.ai/docs/models
 

@@ -22,7 +22,7 @@ fullyTranslated: true
 ---
 # Azure OpenAI GPT o4 Mini
 
-**Azure OpenAI GPT o4 Mini** is specifically designed to tackle reasoning and problem-solving tasks with increased focus and capability. It spends more time processing and understanding the user's request, making it exceptionally strong in areas like science, coding, and math compared to previous iterations.
+**Azure OpenAI GPT o4 Mini**は、推論や問題解決のタスクに集中力や能力を高めて取り組むよう特別に設計されています。ユーザーのリクエストの処理と理解により多くの時間を費やすため、科学、コーディング、数学などの分野では、以前の反復処理に比べて非常に強力になっています。
 
 ## モデルの詳細
 
@@ -32,16 +32,16 @@ fullyTranslated: true
 | APIモデル名       | `azure__openai__gpt_o4_mini` | [Box AI APIでのモデルの上書き][overrides]に使用されるモデルの名前。APIを動作させるには、ユーザーがこの名前を正確に指定する必要があります。 |
 | ホスティングレイヤー    | **Microsoft Azure**          | LLMを安全にホストする、信頼できる組織。                                                              |
 | モデルプロバイダ      | **Microsoft Azure**          | このモデルを提供する組織。                                                                      |
-| リリース日         | **April 16th, 2025**         | モデルのリリース日。                                                                         |
-| ナレッジカットオフ日    | **May 2024**                 | モデルが情報の更新を取得しなくなった日付。                                                              |
+| リリース日         | **2025年4月16日**               | モデルのリリース日。                                                                         |
+| ナレッジカットオフ日    | **2024年5月**                  | モデルが情報の更新を取得しなくなった日付。                                                              |
 | 入力コンテキストウィンドウ | **200,000トークン**              | 入力コンテキストウィンドウでサポートされるトークン数。                                                        |
-| 出力トークンの最大数    | **100k tokens**              | 1回のリクエストでモデルが生成できるトークン数。                                                           |
+| 出力トークンの最大数    | **100,000トークン**              | 1回のリクエストでモデルが生成できるトークン数。                                                           |
 | 経験に基づいたスループット | **指定なし**                     | モデルが1秒あたりに生成できるトークン数。                                                              |
 | オープンソース       | **いいえ**                      | モデルのコードを一般公開するかどうかを指定します。                                                          |
 
 ## その他のドキュメント
 
-For additional information, see [official Azure OpenAI GPT o4 Mini documentation][azure-ai-o4-mini-model].
+詳細については、[Azure OpenAI GPT o4の公式ドキュメント][azure-ai-o4-mini-model]を参照してください。
 
 [azure-ai-o4-mini-model]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#o-series-models
 

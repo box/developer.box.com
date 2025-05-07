@@ -452,7 +452,7 @@ Box AI Extractのデフォルト
 
 <Tile type="model" title="ibm__llama_3_2_instruct" href="/guides/box-ai/ai-models/ibm-llama-3-2-instruct-model-card">
 
-An instruction-tuned text only model optimized for multilingual dialogue use cases, including agentic retrieval and summarization tasks.
+エージェントによる検索タスクや要約タスクなど、多言語対話のユースケース向けに最適化された、指示チューニング済みのテキスト専用モデル。
 
 <div>
 
@@ -468,7 +468,7 @@ An instruction-tuned text only model optimized for multilingual dialogue use cas
 
 <Tile type="model" title="ibm__llama_4_scout" href="/guides/box-ai/ai-models/ibm-llama-4-scout-model-card">
 
-A natively multimodal AI model that enables text and multimodal experiences.
+テキストと複数モードのエクスペリエンスを可能にする、ネイティブで複数モードのAIモデル。
 
 <div>
 
@@ -484,7 +484,7 @@ A natively multimodal AI model that enables text and multimodal experiences.
 
 <Tile type="model" title="xai__grok_3_beta" href="/guides/box-ai/ai-models/xai-grok-3-beta-model-card">
 
-A model that excels at enterprise use cases like data extraction, coding, and text summarization.
+データの抽出、コーディング、テキストの要約など、企業のユースケースに優れているモデル。
 
 <div>
 
@@ -506,7 +506,7 @@ A model that excels at enterprise use cases like data extraction, coding, and te
 
 <Tile type="model" title="xai__grok_3_mini_beta" href="/guides/box-ai/ai-models/xai-grok-3-mini-beta-model-card">
 
-A lightweight model that is great for logic-based tasks that do not require deep domain knowledge.
+深い専門知識を必要としない、ロジックベースのタスクに適している軽量のモデル。
 
 <div>
 
