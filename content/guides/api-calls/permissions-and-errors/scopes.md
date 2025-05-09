@@ -199,7 +199,7 @@ enabled.
 
 |                       |                            |
 | --------------------- | -------------------------- |
-| **OAuth Scope**       | `AI.readwrite`  |
+| **OAuth Scope**       | `ai.readwrite`  |
 | **Application Scope** | Manage AI  |
 
 Gives an application permission to send requests to

@@ -11,9 +11,18 @@ alias_paths:
 
 # Supported AI models
 
+There are two types of AI models supported by Box: core and customer-enabled.
+
+The core Box AI models are default in the Box AI service and are available to
+all customers.
+
+The customer-enabled models are available for Box admins to enable in the Admin
+Console, or to request to have them available. In some instances, these models
+can be subject to additional terms.
+
 ## Using models
 
-You can use the supported AI models:
+How to use the supported AI models:
 
 - get the [default AI agent configuration][agent],
 - override the AI agent configuration used in [`POST 2.0/ai/ask`][ask], [`POST 2.0/ai/text_gen`][text-gen], [`POST 2.0/ai/extract`][extract], [`POST 2.0/ai/extract_structured`][extract-structured] endpoints.
@@ -24,20 +33,52 @@ For example, to get the AI agent configuration for a specific model, use the [mo
 
 <Message type='notice'>
 The list may change depending on the model availability.
-Models offered in **Preview** mode have not been fully performance-tested at scale and are made available on an as-is basis. You may experience variability in model/output quality, availability, and accuracy.
+Models offered in **Beta** mode have not been fully performance-tested at scale and are made available on an as-is basis. You may experience variability in model/output quality, availability, and accuracy.
 </Message>
 
+## Core Box AI Models
+
+Box AI is powered by the following AI models. These models are integrated with Box AI to facilitate various use cases while adhering to enterprise grade standards. Below, you’ll find information about each model, including its capabilities, intended applications, and applicable usage guidelines.
+
 <TileGrid rows="2">
-    <Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card">
+		<Tile type="gpt" title="azure__openai__gpt_4_1_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card">
       A multimodal model designed to handle lightweight tasks.
-      <div>
-        <strong style="background-color: #e8e8e8">Default for Box AI for Box Hubs</strong>
-        <strong style="background-color: #e8e8e8">Default for Box AI for Docs</strong>
-        <strong style="background-color: #e8e8e8">Default for Box AI for Box Notes Q&A</strong>
-        <strong style="background-color: #e1ffe7">Available</strong>
+			<div>
+			<strong style="background-color: #e8e8e8">Default for Box AI for Box Hubs</strong>
+      <strong style="background-color: #e8e8e8">Default for Box AI for Docs</strong>
+      <strong style="background-color: #e8e8e8">Default for Box AI for Box Notes Q&A</strong>
+			<strong style="background-color: #e8e8e8">Chat</strong>
+			<strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
-    <Tile type="gpt" title="azure__openai__gpt_4o_2024_05_13" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card">
+		<Tile type="gpt" title="azure__openai__gpt_o3" href="/guides/box-ai/ai-models/azure-openai-gpt-o3-model-card">
+    	A multimodal model, highly efficient in handling complex, multi-step tasks.
+      <div>
+      <strong style="background-color: #fffbf3">Beta</strong>
+      </div>
+    </Tile>
+		<Tile type="gpt" title="azure__openai__gpt_o4-mini" href="/guides/box-ai/ai-models/azure-openai-gpt-o4-mini-model-card">
+    	A multimodal model, highly efficient in handling complex, multi-step tasks.
+      <div>
+			<strong style="background-color: #e8e8e8">Chat</strong>
+      <strong style="background-color: #fffbf3">Beta</strong>
+      </div>
+    </Tile>
+		<Tile type="gpt" title="azure__openai__gpt_4_1" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-model-card">
+    	A multimodal model, highly efficient in handling complex, multi-step tasks.
+      <div>
+			<strong style="background-color: #e8e8e8">Chat</strong>
+      <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card">
+      A multimodal model designed to handle lightweight tasks.
+			<div>
+			<strong style="background-color: #e8e8e8">Chat</strong>
+			<strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="gpt" title="azure__openai__gpt_4o" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-model-card">
       A multimodal model, highly efficient in handling complex, multi-step tasks.
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
@@ -52,6 +93,20 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
+		<Tile type="gemini" title="google__gemini_2_5_pro_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-review-model-card">
+      Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
+      <div>
+        <strong style="background-color: #e8e8e8">Chat</strong>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+		<Tile type="gemini" title="google__gemini_2_5_flash_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-flash-preview-model-card">
+      Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
+      <div>
+        <strong style="background-color: #e8e8e8">Chat</strong>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
     <Tile type="gemini" title="google__gemini_2_0_flash_001" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-001-model-card">
       Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
       <div>
@@ -62,6 +117,7 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
     <Tile type="gemini" title="google__gemini_2_0_flash_lite_preview" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-lite-preview-02-05">
       Gemini multimodal model designed to handle lightweight tasks.
       <div>
+			<strong style="background-color: #e8e8e8">Default for Box AI Extract</strong>
         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
@@ -69,7 +125,6 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
     <Tile type="gemini" title="google__gemini_1_5_flash_001" href="/guides/box-ai/ai-models/google-gemini-1-5-flash-001-model-card">
       Gemini multimodal model, built for high volume tasks and latency-sensitive applications.
       <div>
-        <strong style="background-color: #e8e8e8">Default for Box AI Extract</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
@@ -84,35 +139,70 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
       A model tailored for various language tasks, including creative writing and conversational AI.
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
-        <strong style="background-color: #fffbf3">Preview</strong>
+        <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
     <Tile type="model" title="aws__claude_3_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-sonnet-model-card">
        A model designed for advanced language tasks, focusing on comprehension and context handling.
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
-        <strong style="background-color: #fffbf3">Preview</strong>
+        <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
      <Tile type="model" title="aws__claude_3_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-5-sonnet-model-card">
       A model designed to enhance language understanding and generation tasks.
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
-        <strong style="background-color: #fffbf3">Preview</strong>
+        <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
 		<Tile type="model" title="aws__claude_3_7_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-7-sonnet-model-card">
       A model designed to enhance language understanding and generation tasks.
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
-        <strong style="background-color: #fffbf3">Preview</strong>
+        <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
      <Tile type="model" title="aws__titan_text_lite" href="/guides/box-ai/ai-models/aws-titan-text-lite-model-card">
       A model capable of advanced language processing, handling extensive contexts, making it suitable for complex tasks.
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
-        <strong style="background-color: #fffbf3">Preview</strong>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+		<Tile type="model" title="ibm__llama_3_2_90b_vision_instruct" href="/guides/box-ai/ai-models/ibm-llama-3-2-90b-vision-instruct-model-card">
+      A model built for document-level understanding, interpretation of charts and graphs, and captioning of images.
+      <div>
+        <strong style="background-color: #e8e8e8">Chat</strong>
+				<strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+		<Tile type="model" title="ibm__llama_4_scout" href="/guides/box-ai/ai-models/ibm-llama-4-scout-model-card">
+      A natively multimodal AI model that enables text and multimodal experiences.
+      <div>
+        <strong style="background-color: #e8e8e8">Chat</strong>
+				<strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+</TileGrid>
+
+## Customer-enabled models
+
+Certain Box AI customers may enable additional AI models upon their request and/or otherwise made available to them through their admin console. Use of these models may be subject to additional terms. By selecting a customer-enabled model, customer acknowledges that their data may be processed by additional [subprocessors][subprocessors] of their choice.
+
+<TileGrid rows="2">
+		<Tile type="model" title="xai__grok_3_beta" href="/guides/box-ai/ai-models/xai-grok-3-beta-model-card">
+      A model that excels at enterprise use cases like data extraction, coding, and text summarization.
+      <div>
+        <strong style="background-color: #e8e8e8">Chat</strong>
+				<strong style="background-color: #fffbf3">Beta</strong>
+      </div>
+    </Tile>
+		<Tile type="model" title="xai__grok_3_mini_beta" href="/guides/box-ai/ai-models/xai-grok-3-mini-beta-model-card">
+      A lightweight model that is great for logic-based tasks that do not require deep domain knowledge.
+      <div>
+        <strong style="background-color: #e8e8e8">Chat</strong>
+				<strong style="background-color: #fffbf3">Beta</strong>
       </div>
     </Tile>
 </TileGrid>
@@ -130,3 +220,4 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
 [ai-model]: e://get-ai-agent-default#param-model
 [aws-claude]: https://aws.amazon.com/bedrock/claude/
 [aws-titan]: https://aws.amazon.com/bedrock/titan/
+[subprocessors]: https://www.box.com/legal/subprocessors
