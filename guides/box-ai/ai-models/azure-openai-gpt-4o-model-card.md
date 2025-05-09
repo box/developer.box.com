@@ -22,7 +22,7 @@ fullyTranslated: true
 ---
 # Azure OpenAI GPT-4o
 
-**Azure OpenAI GPT-4o**は、軽量のタスクを処理するように設計された複数モードモデルです。
+**Azure OpenAI GPT-4o**は、軽量のタスクを処理するように設計されたマルチモーダルモデルです。
 
 ## モデルの詳細
 

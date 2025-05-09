@@ -22,7 +22,7 @@ fullyTranslated: true
 ---
 # Azure OpenAI GPT-4.1
 
-**Azure OpenAI GPT-4.1**は、複雑なマルチステップタスクの処理で非常に効率的な複数モードモデルです。
+**Azure OpenAI GPT-4.1**は、複雑なマルチステップタスクの処理で非常に効率的なマルチモーダルモデルです。
 
 ## モデルの詳細
 

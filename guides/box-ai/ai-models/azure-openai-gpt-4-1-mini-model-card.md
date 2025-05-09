@@ -22,7 +22,7 @@ fullyTranslated: true
 ---
 # Azure OpenAI GPT-4.1 Mini
 
-**Azure OpenAI GPT-4.1 Mini**は、軽量のタスクを処理するように設計された複数モードモデルです。
+**Azure OpenAI GPT-4.1 Mini**は、軽量のタスクを処理するように設計されたマルチモーダルモデルです。
 
 ## モデルの詳細
 
