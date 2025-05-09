@@ -14,8 +14,7 @@ alias_paths:
 
 # Content Explorer - metadata view
 
-With Content Explorer you can also display files and folders
-based on their metadata.
+With Content Explorer you can also display files based on their metadata.
 The metadata view uses [metadata template][template] and [metadata query][metadata-query] to
 find the data you want to display.
 
@@ -42,14 +41,18 @@ The next step is to create a metadata template you will use to populate the Cont
 cascade policy. For detailed instructions, see
 [instructions on customizing and applying templates][apply-templates].
 
+<Message type='notice'>
+You can also apply a metadata template to a file.
+</Message>
+
 ### Display name and key parameters
 
+* The `displayName` parameter is the display name of the template visible
+in the Admin Console.
 * The `templateKey` parameter is a unique identifier of the template. It needs 
 to be unique across the enterprise for which you create the metadata template.
 If you don't provide the `templateKey` parameter, API creates a unique one
 based on the value in `displayName`.
-* The `displayName` parameter is the display name of the template visible
-in the Admin Console.
 * The `[fields].displayName` parameter is the display name of the field as it
 is shown to the user in the web and mobile apps.
 * The `[fields].key` parameter is a unique identifier for a specific field in
@@ -67,13 +70,13 @@ To make things easier, you can use a [sample project][metadata-project] based on
 | Parameter | Description |
 | --- | --- |
 | `DEVELOPER_TOKEN` | [Developer token][token] generated in the the Developer Console. |
-| `ENTERPRISE_ID` | Enterprise ID copied from the **General Settings** tab of your application. |
-| `METADATA_TEMPLATE_NAME`| Name of your already created metadata template. **Note**: To make sure you provided the proper name, use the [metadata API][get-template] to retrieve the name, or copy it from the URL in the Admin Console. ![Metadata name in Admin Console](./images/metadata-template-name.png) If you decide to change the template name in the UI, you change the display name only. The name to use in the component is always the you provided at the beginning. |
+| `ENTERPRISE_ID` | Enterprise ID copied from the **General Settings** tab of your Box application. |
+| `METADATA_TEMPLATE_NAME`| `templateKey` of your already created metadata template. **Note**: To make sure you provided the proper name, use the [metadata API][get-template] to retrieve the name, or copy it from the URL in the Admin Console. ![Metadata name in Admin Console](./images/metadata-template-name.png) If you decide to change the template name in the UI, you change the display name only. The name to use in the component is always the one you provided at the beginning. |
 | `METADATA_SOURCE` | Source of your [metadata][source]. |
-| `ROOTFOLDER_ID` | ID of Box folder to which you applied the metadata template. |
+| `ROOTFOLDER_ID` | ID of a Box folder to which you want to apply the metadata query and display filtered files. |
 
 The `defaultView`, `fieldsToShow`, and `metadataQuery` parameters are already
-defined in the sample project, as in the example below.
+defined in the sample project. Examples of these parameters are available in the sample project.
 
 | Parameter | Description |
 | --- | --- |
