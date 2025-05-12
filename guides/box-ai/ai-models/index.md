@@ -23,9 +23,15 @@ fullyTranslated: true
 ---
 # サポートされているAIモデル
 
+There are two types of AI models supported by Box: core and customer-enabled.
+
+The core Box AI models are default in the Box AI service and are available to all customers.
+
+The customer-enabled models are available for Box admins to enable in the Admin Console, or to request to have them available. In some instances, these models can be subject to additional terms.
+
 ## モデルの使用
 
-サポートされているAIモデルを使用できます。
+How to use the supported AI models:
 
 * [AIエージェントのデフォルト構成][agent]を取得する
 * [`POST 2.0/ai/ask`][ask]、[`POST 2.0/ai/text_gen`][text-gen]、[`POST 2.0/ai/extract`][extract]、[`POST 2.0/ai/extract_structured`][extract-structured]の各エンドポイントで使用されるAIエージェントの構成を上書きする
@@ -36,9 +42,13 @@ APIコールで`model`パラメータを使用する際は、各タイルおよ�
 
 <Message type="notice">
 
-このリストはモデルの提供状況により変更される可能性があります。**プレビュー**モードで提供されているモデルはパフォーマンスが大規模にテストされておらず、現状のままの利用となるため、モデル/出力の品質、可用性、精度にはばらつきがある可能性があります。
+The list may change depending on the model availability. Models offered in **Beta** mode have not been fully performance-tested at scale and are made available on an as-is basis. You may experience variability in model/output quality, availability, and accuracy.
 
 </Message>
+
+## Core Box AI Models
+
+Box AI is powered by the following AI models. These models are integrated with Box AI to facilitate various use cases while adhering to enterprise grade standards. Below, you’ll find information about each model, including its capabilities, intended applications, and applicable usage guidelines.
 
 <TileGrid rows="2">
 
@@ -90,7 +100,7 @@ Box AI for NotesのQ&Aのデフォルト
 
 <strong style="background-color: #fffbf3">
 
-プレビュー
+ベータ
 
 </strong>
 
@@ -112,7 +122,7 @@ Box AI for NotesのQ&Aのデフォルト
 
 <strong style="background-color: #fffbf3">
 
-プレビュー
+ベータ
 
 </strong>
 
@@ -208,7 +218,7 @@ Box AI for NotesのQ&Aのデフォルト
 
 </Tile>
 
-<Tile type="gemini" title="google__gemini_2_5_pro_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-preview-model-card">
+<Tile type="gemini" title="google__gemini_2_5_pro_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-review-model-card">
 
 大規模で大量かつ高頻度のタスクに最適になるよう設計されたGeminiマルチモーダルモデル。
 
@@ -450,15 +460,21 @@ Box AI Extractのデフォルト
 
 </Tile>
 
-<Tile type="model" title="ibm__llama_3_2_instruct" href="/guides/box-ai/ai-models/ibm-llama-3-2-instruct-model-card">
+<Tile type="model" title="ibm__llama_3_2_90b_vision_instruct" href="/guides/box-ai/ai-models/ibm-llama-3-2-90b-vision-instruct-model-card">
 
-エージェントによる検索タスクや要約タスクなど、多言語対話のユースケース向けに最適化された、指示チューニング済みのテキスト専用モデル。
+A model built for document-level understanding, interpretation of charts and graphs, and captioning of images.
 
 <div>
 
 <strong style="background-color: #e8e8e8">
 
 チャット
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+利用可能
 
 </strong>
 
@@ -478,9 +494,23 @@ Box AI Extractのデフォルト
 
 </strong>
 
+<strong style="background-color: #e1ffe7">
+
+利用可能
+
+</strong>
+
 </div>
 
 </Tile>
+
+</TileGrid>
+
+## Customer-enabled models
+
+Certain Box AI customers may enable additional AI models upon their request and/or otherwise made available to them through their admin console. Use of these models may be subject to additional terms. By selecting a customer-enabled model, customer acknowledges that their data may be processed by additional [subprocessors][subprocessors] of their choice.
+
+<TileGrid rows="2">
 
 <Tile type="model" title="xai__grok_3_beta" href="/guides/box-ai/ai-models/xai-grok-3-beta-model-card">
 
@@ -496,7 +526,7 @@ Box AI Extractのデフォルト
 
 <strong style="background-color: #fffbf3">
 
-プレビュー
+ベータ
 
 </strong>
 
@@ -518,7 +548,7 @@ Box AI Extractのデフォルト
 
 <strong style="background-color: #fffbf3">
 
-プレビュー
+ベータ
 
 </strong>
 
@@ -553,3 +583,5 @@ Box AI Extractのデフォルト
 [aws-claude]: https://aws.amazon.com/bedrock/claude/
 
 [aws-titan]: https://aws.amazon.com/bedrock/titan/
+
+[subprocessors]: https://www.box.com/legal/subprocessors

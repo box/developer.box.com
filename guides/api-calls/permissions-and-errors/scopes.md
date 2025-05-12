@@ -170,7 +170,7 @@ GET https://account.box.com/api/oauth2/authorize?scope=root_readonly&client_id=.
 
 |                  |                |
 | ---------------- | -------------- |
-| **OAuthスコープ**    | `AI.readwrite` |
+| **OAuthスコープ**    | `ai.readwrite` |
 | **アプリケーションスコープ** | AIを管理する        |
 
 アプリケーションには、Box AI APIにリクエストを送信するための権限が付与されます。
