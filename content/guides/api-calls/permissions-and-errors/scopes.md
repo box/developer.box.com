@@ -263,8 +263,9 @@ calls are made.
 | **OAuth Scope**       | `enterprise_content`   |
 | **Application Scope** | Global Content Manager |
 
-Allows Admins and [Service Accounts][sa] to retrieve any content within their
-enterprise without having explicit ownership or collaboration permission.
+Allows Admin, Co-Admins, and [Service Accounts][sa] with the **Manage User** or
+**View/Edit User Content** permissions to retrieve any content not owned by them within their enterprise.
+
 This scope is also required to manage retention policies and legal holds.
 
 <Message type='danger'>
