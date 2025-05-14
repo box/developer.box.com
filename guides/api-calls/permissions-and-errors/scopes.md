@@ -218,7 +218,7 @@ enabled.
 
 |                       |                            |
 | --------------------- | -------------------------- |
-| **OAuth Scope**       | `AI.readwrite`  |
+| **OAuth Scope**       | `ai.readwrite`  |
 | **Application Scope** | Manage AI  |
 
 Gives an application permission to send requests to
@@ -286,9 +286,11 @@ calls are made.
 | **OAuth Scope**       | `enterprise_content`   |
 | **Application Scope** | Global Content Manager |
 
-Allows Admins and [Service Accounts][sa] to retrieve any content within their
-enterprise without having explicit ownership or collaboration permission.
-This scope is also required to manage retention policies and legal holds.
+Allows Admin, Co-Admins, and [Service Accounts][sa] to retrieve any content
+they do not own or are not collaborators on within their enterprise, based on
+their enterprise settings.
+
+This scope is required to manage the retention policies and legal holds.
 
 <Message type='danger'>
 
