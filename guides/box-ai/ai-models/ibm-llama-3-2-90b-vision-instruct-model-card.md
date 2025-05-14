@@ -22,7 +22,7 @@ fullyTranslated: true
 ---
 # IBM Llama 3.2 Vision Instruct
 
-**IBM Llama 3.2 Vision Instruct** is a model built for image-in, text-out use cases such as document-level understanding, interpretation of charts and graphs, and captioning of images.
+**IBM Llama 3.2 Vision Instruct**は、ドキュメントレベルの理解、図表やグラフの解釈、画像の見出し作成など、画像入力とテキスト出力のユースケース向けに構築されたモデルです。
 
 ## モデルの詳細
 
@@ -42,7 +42,7 @@ fullyTranslated: true
 
 ## その他のドキュメント
 
-For additional information, see [official IBM Llama 3.2 Vision Instruct documentation][IBM].
+詳細については、[IBM Llama 3.2 Vision Instructの公式ドキュメント][IBM]を参照してください。
 
 [overrides]: g://box-ai/ai-agents/ai-agent-overrides
 

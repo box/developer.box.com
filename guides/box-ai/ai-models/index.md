@@ -23,15 +23,15 @@ fullyTranslated: true
 ---
 # サポートされているAIモデル
 
-There are two types of AI models supported by Box: core and customer-enabled.
+BoxでサポートされているAIモデルには、コアモデルと顧客が有効化を希望したモデルの2種類があります。
 
-The core Box AI models are default in the Box AI service and are available to all customers.
+Box AIのコアモデルは、Box AIサービスのデフォルトで、すべてのお客様が利用できます。
 
-The customer-enabled models are available for Box admins to enable in the Admin Console, or to request to have them available. In some instances, these models can be subject to additional terms.
+顧客が有効化を希望したモデルは、Box管理者が管理コンソールで有効にするか、利用可能になるようにリクエストします。これらのモデルは追加の条件の対象になる場合があります。
 
 ## モデルの使用
 
-How to use the supported AI models:
+サポートされているAIモデルの使用方法を以下に示します。
 
 * [AIエージェントのデフォルト構成][agent]を取得する
 * [`POST 2.0/ai/ask`][ask]、[`POST 2.0/ai/text_gen`][text-gen]、[`POST 2.0/ai/extract`][extract]、[`POST 2.0/ai/extract_structured`][extract-structured]の各エンドポイントで使用されるAIエージェントの構成を上書きする
@@ -46,9 +46,9 @@ The list may change depending on the model availability. Models offered in **Bet
 
 </Message>
 
-## Core Box AI Models
+## Box AIのコアモデル
 
-Box AI is powered by the following AI models. These models are integrated with Box AI to facilitate various use cases while adhering to enterprise grade standards. Below, you’ll find information about each model, including its capabilities, intended applications, and applicable usage guidelines.
+Box AIには以下のモデルが搭載されています。Box AIと統合されているこれらのモデルは、エンタープライズグレードの標準に準拠しながら、さまざまなユースケースを支援します。各モデルの機能、対象のアプリケーション、利用に関して該当するガイドラインなどの情報については、以下をご確認ください。
 
 <TileGrid rows="2">
 
@@ -462,7 +462,7 @@ Box AI Extractのデフォルト
 
 <Tile type="model" title="ibm__llama_3_2_90b_vision_instruct" href="/guides/box-ai/ai-models/ibm-llama-3-2-90b-vision-instruct-model-card">
 
-A model built for document-level understanding, interpretation of charts and graphs, and captioning of images.
+ドキュメントレベルの理解、図表やグラフの解釈、画像の見出し作成向けに構築されたモデルです。
 
 <div>
 
@@ -506,7 +506,7 @@ A model built for document-level understanding, interpretation of charts and gra
 
 </TileGrid>
 
-## Customer-enabled models
+## 顧客が有効化を希望したモデル
 
 Certain Box AI customers may enable additional AI models upon their request and/or otherwise made available to them through their admin console. Use of these models may be subject to additional terms. By selecting a customer-enabled model, customer acknowledges that their data may be processed by additional [subprocessors][subprocessors] of their choice.
 
