@@ -263,10 +263,11 @@ calls are made.
 | **OAuth Scope**       | `enterprise_content`   |
 | **Application Scope** | Global Content Manager |
 
-Allows Admin, Co-Admins, and [Service Accounts][sa] with the **Manage User** or
-**View/Edit User Content** permissions to retrieve any content not owned by them within their enterprise.
+Allows Admin, Co-Admins, and [Service Accounts][sa] to retrieve any content
+they do not own or are not collaborators on within their enterprise, based on
+their enterprise settings. 
 
-This scope is also required to manage retention policies and legal holds.
+This scope is required to manage the retention policies and legal holds.
 
 <Message type='danger'>
   # Side effects
