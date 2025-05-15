@@ -263,10 +263,11 @@ calls are made.
 | **OAuth Scope**       | `enterprise_content`   |
 | **Application Scope** | Global Content Manager |
 
-Allows Admin, Co-Admins, and [Service Accounts][sa] with the **Manage User** or
-**View/Edit User Content** permissions to retrieve any content not owned by them within their enterprise.
+Allows Admins, [Co-Admins][ca], and [Service Accounts][sa] to retrieve any content
+they do not own or are not collaborators on within their enterprise, based on
+their enterprise settings. 
 
-This scope is also required to manage retention policies and legal holds.
+This scope is required to manage the retention policies and legal holds.
 
 <Message type='danger'>
   # Side effects
@@ -342,3 +343,4 @@ The standard OAuth scopes are also supported when downscoping.
 [suppress]: g://api-calls/suppress-notifications
 [ds]: g://authentication/tokens/downscope
 [sa]: page://platform/user-types/#service-account
+[ca]: [https://support.box.com/hc/en-us/articles/1500005433721-Users-Groups-Settings#h_01GSE1DYJKTY9EXEWJEDKFHCNV]
