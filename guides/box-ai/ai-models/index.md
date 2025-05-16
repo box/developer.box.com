@@ -42,7 +42,7 @@ APIコールで`model`パラメータを使用する際は、各タイルおよ�
 
 <Message type="notice">
 
-The list may change depending on the model availability. Models offered in **Beta** mode have not been fully performance-tested at scale and are made available on an as-is basis. You may experience variability in model/output quality, availability, and accuracy.
+このリストはモデルの提供状況により変更される可能性があります。**ベータ**モードで提供されているモデルはパフォーマンスが大規模にテストされておらず、現状のままでの利用となるため、モデル/出力の品質、可用性、精度にはばらつきがある可能性があります。
 
 </Message>
 
@@ -508,7 +508,7 @@ Box AI Extractのデフォルト
 
 ## 顧客が有効化を希望したモデル
 
-Certain Box AI customers may enable additional AI models upon their request and/or otherwise made available to them through their admin console. Use of these models may be subject to additional terms. By selecting a customer-enabled model, customer acknowledges that their data may be processed by additional [subprocessors][subprocessors] of their choice.
+Box AIの一部の顧客は、リクエストに応じて追加のAIモデルを有効にしたり、管理コンソールから利用できる追加のAIモデルを有効にしたりすることができます。これらのモデルの使用は、追加の条件の対象になる場合があります。顧客が有効化を希望したモデルを選択すると、顧客は、選択した追加の[サブプロセッサ][subprocessors]によって自身のデータが処理される可能性があることに同意したことになります。
 
 <TileGrid rows="2">
 
