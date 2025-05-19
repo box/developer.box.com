@@ -170,11 +170,13 @@ primary:
       text: Event
 
     title:
-      text: How to Accelerate Development with Generated Box SDKs
+      text: BoxWorks London Developer Summit
 
     details:
       text: |-
-        Join us for a webinar and explore the generated Box SDKs.
+        Join us June 4 at the stunning 180 Studios for an afternoon
+        dedicated to exploring innovative solutions in AI and
+        content management.
 
     cta:
       text: |-
