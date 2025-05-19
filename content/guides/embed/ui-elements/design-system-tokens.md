@@ -3,7 +3,7 @@ rank: 12
 related_endpoints: []
 related_guides:
   - embed/ui-elements
-	- embed/ui-elements/theming-styling
+  - embed/ui-elements/theming-styling
 required_guides:
   - embed/ui-elements/installation
 related_resources: []
