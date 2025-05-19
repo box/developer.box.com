@@ -227,7 +227,9 @@ APIコールが行われるときに、一部の種類の[メール通知][suppr
 | **OAuthスコープ**    | `enterprise_content` |
 | **アプリケーションスコープ** | グローバルコンテンツマネージャ      |
 
-管理者と[サービスアカウント][sa]は、明示的な所有権やコラボレーション権限がなくても、社内のすべてのコンテンツを取得できます。このスコープは、リテンションポリシーとリーガルホールドを管理する場合にも必要です。
+Allows Admins, [Co-Admins][ca], and [Service Accounts][sa] to retrieve any content they do not own or are not collaborators on within their enterprise, based on their enterprise settings.
+
+This scope is required to manage the retention policies and legal holds.
 
 <Message type="danger">
 
@@ -315,3 +317,5 @@ APIコールが行われるときに、一部の種類の[メール通知][suppr
 [ds]: g://authentication/tokens/downscope
 
 [sa]: page://platform/user-types/#service-account
+
+[ca][ca]: [https://support.box.com/hc/en-us/articles/1500005433721-Users-Groups-Settings#h_01GSE1DYJKTY9EXEWJEDKFHCNV][https://support.box.com/hc/en-us/articles/1500005433721-Users-Groups-Settings#h_01GSE1DYJKTY9EXEWJEDKFHCNV]
