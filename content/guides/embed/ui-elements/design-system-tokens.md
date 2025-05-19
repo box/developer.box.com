@@ -70,7 +70,7 @@ This table shows all the design tokens you can use theming and styling purposes.
 | Token | Example value | Description |
 | --- | --- | --- |
 | `checkbox-surface` | `#ffffff` | Background color for checkboxes. |
-| `checkbox-surface-hover` | `#ffffff `| Background color for checkboxes on hover. |
+| `checkbox-surface-hover` | `#ffffff` | Background color for checkboxes on hover. |
 | `checkbox-surface-selected` | `#0061d5` | Background color for selected checkboxes. |
 | `checkbox-surface-selected-hover` | `#2079e3` | Background color for selected checkboxes on hover. |
 | `cta-surface-icon` | `rgba(0, 0, 0, 0)` | Background for icon buttons. |

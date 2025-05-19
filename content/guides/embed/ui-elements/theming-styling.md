@@ -93,7 +93,7 @@ Customize:
 ### Component-level overrides
 
 <!--alex ignore -->
-Customize text inputs, drop-downs, and checkboxes with individual color
+Customize text inputs, drop downs, and checkboxes with individual color
 <!--alex enable -->
 
 ### Icons
