@@ -301,5 +301,18 @@ more, see [Dedicated Scopes for Box UI Elements][scopes].
 | User wants to navigate a folder structure, pick a file / folder and also upload a file / folder                                                  | `base_picker` + `item_upload`                |
 | User should be able to navigate a folder structure and pick a file / folder, upload a file / folder, and also set access level for a file/folder | `base_picker` + `item_share` + `item_upload` |
 
+## Custom actions
+
+You can expand the actions in the **More Options** menu for files and folders in content explorer and picker. Your custom options show when user clicks the ellipsis button.
+
+<iframe height="560"
+scrolling="no" 
+title="Box custom icons" 
+src="https://codepen.io/box-platform/embed/EaaMMKQ?default-tab=html%2Cresult" frameborder="no"
+allowtransparency="true"
+allowfullscreen="true"
+style="width: 100%;"
+></iframe>
+
 [downscope]: guide://authentication/tokens/downscope
 [scopes]: guide://api-calls/permissions-and-errors/scopes

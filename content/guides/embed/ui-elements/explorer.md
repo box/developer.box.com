@@ -420,6 +420,19 @@ export default App;
 **TIP**: For a detailed flow, see [Metadata view blog post][blogpost].
 </Message>
 
+## Custom actions
+
+You can expand the actions in the **More Options** menu for files and folders in content explorer and picker. Your custom options show when user clicks the ellipsis button.
+
+<iframe height="560"
+scrolling="no" 
+title="Box custom icons" 
+src="https://codepen.io/box-platform/embed/EaaMMKQ?default-tab=html%2Cresult" frameborder="no"
+allowtransparency="true"
+allowfullscreen="true"
+style="width: 100%;"
+></iframe>
+
 [downscope]: guide://authentication/tokens/downscope
 [scopes]: guide://api-calls/permissions-and-errors/scopes
 [box-app]: g:///applications/app-types
