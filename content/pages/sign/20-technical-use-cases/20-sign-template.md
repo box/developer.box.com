@@ -52,7 +52,7 @@ Save the template.
 <Message type='notice'>
 
 You can add an [extra layer of security][additional-sec] for a recipient.
-It works for both a defined recipient with pre-defined email address, and a
+It works for both a defined recipient with a pre-defined email address, and a
 placeholder recipient, where the template user has to provide their email
 address.
 
