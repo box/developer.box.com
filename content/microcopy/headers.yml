@@ -170,13 +170,13 @@ primary:
       text: Event
 
     title:
-      text: Box Virtual Summit Content + AI
+      text: BoxWorks London Developer Summit
 
     details:
       text: |-
-        Learn how to create context-aware agents with the OpenAI Agents SDK,
-        start using Model Context Protocol, and discover metadata
-        extraction with agents.
+        Join us June 4 at the stunning 180 Studios for an afternoon
+        dedicated to exploring innovative solutions in AI and
+        content management.
 
     cta:
       text: |-
