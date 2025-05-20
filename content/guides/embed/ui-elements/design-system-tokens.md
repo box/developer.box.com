@@ -19,30 +19,30 @@ This table shows all the design tokens you can use theming and styling purposes.
 
 | Token | Example value | Description |
 | --- | --- | --- |
-| `checkbox-border` | `#6f6f6f` | Default border color for checkboxes. |
-| `checkbox-border-hover` | `#4e4e4e` | Border color when hovering over checkboxes. |
-| `checkbox-border-selected` | `#0061d5` | Border color for selected checkboxes. |
-| `checkbox-border-selected-hover` | `#2079e3` | Border color when hovering over selected checkboxes. |
-| `cta-border-outline` | `#000000` | Border for secondary buttons with transparent background. |
-| `cta-border-outline-disabled` | `#646464` | Border for disabled outline buttons. |
-| `cta-border-outline-hover` | `#000000` | Border for outline buttons on hover. |
-| `cta-border-outline-pressed` | `#000000` | Border for outline buttons when pressed. |
-| `cta-border-secondary` | `#bcbcbc` | Border for secondary buttons. |
-| `cta-border-secondary-disabled` | `#e8e8e8` | Border for disabled secondary buttons. |
-| `cta-border-secondary-hover` | `#bcbcbc` | Border for secondary buttons on hover. |
-| `cta-border-secondary-pressed` | `#bcbcbc` | Border for secondary buttons when pressed.|
-| `divider-border` | `#e8e8e8` | Horizontal line separators.|
-| `dropdown-border` | `#bcbcbc` | Border for drop down components.|
-| `gridthumbnail-border` | `#e8e8e8` | Border for item (file/folder) thumbnails in grid view. |
-| `input-border` | `#909090` | Border for text inputs. |
-| `input-border-error` | `#ed3757` | Border for text inputs with errors. |
-| `input-border-focus` | `#2486fc` | Border for focused text inputs. |
-| `input-border-hover` | `#6f6f6f` | Border for text inputs on hover. |
-| `search-border` | `#f4f4f4` | Border for search inputs. |
-| `search-border-hover` | `#6f6f6f` | Border for search inputs on hover. |
-| `switch-border` | `#bcbcbc` | Border for toggle switches. |
-| `switch-border-hover` | `#bcbcbc` | Border for toggle switches on hover. |
-| `tooltip-border-error` | `#f69bab` | Border for error tool tips. |
+| `border-checkbox-border` | `#6f6f6f` | Default border color for checkboxes. |
+| `border-checkbox-border-hover` | `#4e4e4e` | Border color when hovering over checkboxes. |
+| `border-checkbox-border-selected` | `#0061d5` | Border color for selected checkboxes. |
+| `border-checkbox-border-selected-hover` | `#2079e3` | Border color when hovering over selected checkboxes. |
+| `border-cta-border-outline` | `#000000` | Border for secondary buttons with transparent background. |
+| `border-cta-border-outline-disabled` | `#646464` | Border for disabled outline buttons. |
+| `border-cta-border-outline-hover` | `#000000` | Border for outline buttons on hover. |
+| `border-cta-border-outline-pressed` | `#000000` | Border for outline buttons when pressed. |
+| `border-cta-border-secondary` | `#bcbcbc` | Border for secondary buttons. |
+| `border-cta-border-secondary-disabled` | `#e8e8e8` | Border for disabled secondary buttons. |
+| `border-cta-border-secondary-hover` | `#bcbcbc` | Border for secondary buttons on hover. |
+| `border-cta-border-secondary-pressed` | `#bcbcbc` | Border for secondary buttons when pressed.|
+| `border-divider-border` | `#e8e8e8` | Horizontal line separators.|
+| `border-dropdown-border` | `#bcbcbc` | Border for dropdown menus.|
+| `border-gridthumbnail-border` | `#e8e8e8` | Border for item (file/folder) thumbnails in grid view. |
+| `border-input-border` | `#909090` | Border for text inputs. |
+| `border-input-border-error` | `#ed3757` | Border for text inputs with errors. |
+| `border-input-border-focus` | `#2486fc` | Border for focused text inputs. |
+| `border-input-border-hover` | `#6f6f6f` | Border for text inputs on hover. |
+| `border-search-border` | `#f4f4f4` | Border for search inputs. |
+| `border-search-border-hover` | `#6f6f6f` | Border for search inputs on hover. |
+| `border-switch-border` | `#bcbcbc` | Border for toggle switches. |
+| `border-switch-border-hover` | `#bcbcbc` | Border for toggle switches on hover. |
+| `border-tooltip-border-error` | `#f69bab` | Border for error tool tips. |
 
 <!--alex ignore -->
 ## Icon colors
@@ -50,9 +50,9 @@ This table shows all the design tokens you can use theming and styling purposes.
 
 | Token | Example value | Description |
 | --- | --- | --- |
-| `cta-icon` | `#6f6f6f` | Default color for icons in buttons. |
-| `cta-icon-hover` | `#222222` | Color for icons in buttons on hover. |
-| `cta-icon-pressed` | `#222222` | Color for icons in buttons when pressed. |
+| `icon-cta-icon` | `#6f6f6f` | Default color for icons in buttons. |
+| `icon-cta-icon-hover` | `#222222` | Color for icons in buttons on hover. |
+| `icon-cta-icon-pressed` | `#222222` | Color for icons in buttons when pressed. |
 
 <!--alex ignore -->
 ## Outline colors
@@ -60,8 +60,8 @@ This table shows all the design tokens you can use theming and styling purposes.
 
 | Token | Example value | Description |
 | --- | --- | --- |
-| `focus-on-dark` | `#ffffff` | Focus outline color on dark backgrounds. |
-| `focus-on-light` | `#2486fc` | Focus outline color on light backgrounds. |
+| `outline-focus-on-dark` | `#ffffff` | Focus outline color on dark backgrounds. |
+| `outline-focus-on-light` | `#2486fc` | Focus outline color on light backgrounds. |
 
 <!--alex ignore -->
 ## Surface colors
@@ -69,51 +69,51 @@ This table shows all the design tokens you can use theming and styling purposes.
 
 | Token | Example value | Description |
 | --- | --- | --- |
-| `checkbox-surface` | `#ffffff` | Background color for checkboxes. |
-| `checkbox-surface-hover` | `#ffffff` | Background color for checkboxes on hover. |
-| `checkbox-surface-selected` | `#0061d5` | Background color for selected checkboxes. |
-| `checkbox-surface-selected-hover` | `#2079e3` | Background color for selected checkboxes on hover. |
-| `cta-surface-icon` | `rgba(0, 0, 0, 0)` | Background for icon buttons. |
-| `cta-surface-icon-disabled` | `rgba(0, 0, 0, 0)` | Background for disabled icon buttons. |
-| `cta-surface-icon-hover` | `rgba(0, 0, 0, 0.04)` | Background for icon buttons on hover. |
-| `cta-surface-icon-pressed` | `rgba(0, 0, 0, 0.08)` | Background for icon buttons when pressed. |
-| `cta-surface-outline` | `rgba(0, 0, 0, 0)` | Background for secondary buttons with transparent background. |
-| `cta-surface-outline-hover` | `rgba(0, 0, 0, 0.04)` | Background for outline buttons on hover. |
-| `cta-surface-outline-pressed` | `rgba(0, 0, 0, 0.08)` | Background for outline buttons when pressed. |
-| `cta-surface-secondary` | `#ffffff` | Background for secondary buttons. |
-| `cta-surface-secondary-hover` | `#f4f4f4` | Background for secondary buttons on hover. |
-| `cta-surface-secondary-pressed` | `#e8e8e8` | Background for secondary buttons when pressed. |
-| `cta-surface-tertiary` | `#ffffff` | Background for link styled buttons. |
-| `cta-surface-tertiary-hover` | `#f4f4f4` | Background for link styled buttons on hover. |
-| `cta-surface-tertiary-pressed` | `#e8e8e8` | Background for link styled buttons when pressed. |
-| `dropdown-surface` | `#ffffff` | Background for drop own components. |
-| `dropdown-surface-error` | `#ffffff` | Background for drop downs with errors. |
-| `dropdown-surface-focus` | `#ffffff` | Background for focused drop downs. |
-| `dropdown-surface-hover` | `#ffffff` | Background for drop downs on hover. |
-| `illustration-surface-box-neutral` | `#0061d5` | Color for illustrations (detailed icons). |
-| `input-surface` | `#ffffff` | Background for text inputs. |
-| `input-surface-error` | `#ffffff` | Background for text inputs with errors. |
-| `input-surface-focus` | `#ffffff` | Background for focused text inputs. |
-| `input-surface-hover` | `#ffffff` | Background for text inputs on hover. |
-| `menu-surface` | `#ffffff` | Background for drop down menu options. |
-| `menu-surface-focus` | `#f4f4f4` | Background for focused menu items. |
-| `menu-surface-hover` | `#f4f4f4` | Background for menu items on hover. |
-| `search-surface` | `#f4f4f4` | Background for search inputs. |
-| `search-surface-focused` | `#ffffff` |Background for focused search inputs. |
-| `search-surface-hover` | `#fbfbfb` | Background for search inputs on hover. |
-| `sliderthumb-surface` | `#0061d5` | Color for range slider thumbs. |
-| `sliderthumb-surface-hover` | `#2486fc` | Color for range slider thumbs on hover. |
+| `surface-checkbox-surface` | `#ffffff` | Background color for checkboxes. |
+| `surface-checkbox-surface-hover` | `#ffffff` | Background color for checkboxes on hover. |
+| `surface-checkbox-surface-selected` | `#0061d5` | Background color for selected checkboxes. |
+| `surface-checkbox-surface-selected-hover` | `#2079e3` | Background color for selected checkboxes on hover. |
+| `surface-cta-surface-icon` | `rgba(0, 0, 0, 0)` | Background for icon buttons. |
+| `surface-cta-surface-icon-disabled` | `rgba(0, 0, 0, 0)` | Background for disabled icon buttons. |
+| `surface-cta-surface-icon-hover` | `rgba(0, 0, 0, 0.04)` | Background for icon buttons on hover. |
+| `surface-cta-surface-icon-pressed` | `rgba(0, 0, 0, 0.08)` | Background for icon buttons when pressed. |
+| `surface-cta-surface-outline` | `rgba(0, 0, 0, 0)` | Background for secondary buttons with transparent background. |
+| `surface-cta-surface-outline-hover` | `rgba(0, 0, 0, 0.04)` | Background for outline buttons on hover. |
+| `surface-cta-surface-outline-pressed` | `rgba(0, 0, 0, 0.08)` | Background for outline buttons when pressed. |
+| `surface-cta-surface-secondary` | `#ffffff` | Background for secondary buttons. |
+| `surface-cta-surface-secondary-hover` | `#f4f4f4` | Background for secondary buttons on hover. |
+| `surface-cta-surface-secondary-pressed` | `#e8e8e8` | Background for secondary buttons when pressed. |
+| `surface-cta-surface-tertiary` | `#ffffff` | Background for link styled buttons. |
+| `surface-cta-surface-tertiary-hover` | `#f4f4f4` | Background for link styled buttons on hover. |
+| `surface-cta-surface-tertiary-pressed` | `#e8e8e8` | Background for link styled buttons when pressed. |
+| `surface-dropdown-surface` | `#ffffff` | Background for dropdown menus. |
+| `surface-dropdown-surface-error` | `#ffffff` | Background for dropdown menus with errors. |
+| `surface-dropdown-surface-focus` | `#ffffff` | Background for focused dropdown menus. |
+| `surface-dropdown-surface-hover` | `#ffffff` | Background for dropdown menus on hover. |
+| `surface-illustration-surface-box-neutral` | `#0061d5` | Color for illustrations (detailed icons). |
+| `surface-input-surface` | `#ffffff` | Background for text inputs. |
+| `surface-input-surface-error` | `#ffffff` | Background for text inputs with errors. |
+| `surface-input-surface-focus` | `#ffffff` | Background for focused text inputs. |
+| `surface-input-surface-hover` | `#ffffff` | Background for text inputs on hover. |
+| `surface-menu-surface` | `#ffffff` | Background for dropdown menu options. |
+| `surface-menu-surface-focus` | `#f4f4f4` | Background for focused menu items. |
+| `surface-menu-surface-hover` | `#f4f4f4` | Background for menu items on hover. |
+| `surface-search-surface` | `#f4f4f4` | Background for search inputs. |
+| `surface-search-surface-focused` | `#ffffff` |Background for focused search inputs. |
+| `surface-search-surface-hover` | `#fbfbfb` | Background for search inputs on hover. |
+| `surface-sliderthumb-surface` | `#0061d5` | Color for range slider thumbs. |
+| `surface-sliderthumb-surface-hover` | `#2486fc` | Color for range slider thumbs on hover. |
 | `slidertrack-surface` | `#6f6f6f` | Color for range slider tracks. |
-| `surface` | `#ffffff` | General background color. |
-| `surface-brand` | `#0061d5` | Background for primary buttons. |
-| `surface-brand-disabled` | `#0061d5` | Background for disabled primary buttons. |
-| `surface-brand-hover` | `#006ae9` | Background for primary buttons on hover. |
-| `surface-brand-pressed` | `#004eac` | Background for primary buttons when pressed. |
-| `switch-surface` | `#ffffff` | Background for toggle switches. |
-| `switch-surface-off` | `#d3d3d3` | Background for toggle switches in off state. |
-| `switch-surface-on` | `#0061d5` | Background for toggle switches in on state. |
-| `tooltip-surface` | `#4e4e4e` | Background for tool tips. |
-| `tooltip-surface-error` | `#fdebee` | Background for error tool tips. |
+| `surface-surface` | `#ffffff` | General background color. |
+| `surface-surface-brand` | `#0061d5` | Background for primary buttons. |
+| `surface-surface-brand-disabled` | `#0061d5` | Background for disabled primary buttons. |
+| `surface-surface-brand-hover` | `#006ae9` | Background for primary buttons on hover. |
+| `surface-surface-brand-pressed` | `#004eac` | Background for primary buttons when pressed. |
+| `surface-switch-surface` | `#ffffff` | Background for toggle switches. |
+| `surface-switch-surface-off` | `#d3d3d3` | Background for toggle switches in off state. |
+| `surface-switch-surface-on` | `#0061d5` | Background for toggle switches in on state. |
+| `surface-tooltip-surface` | `#4e4e4e` | Background for tool tips. |
+| `surface-tooltip-surface-error` | `#fdebee` | Background for error tool tips. |
 
 <!--alex ignore -->
 ## Text colors
@@ -121,15 +121,116 @@ This table shows all the design tokens you can use theming and styling purposes.
 
 | Token | Example value | Description |
 | --- | --- | --- |
-| `cta-link` | `#0061d5` | Color for hyperlinks. |
-| `cta-link-disabled` | `#b2cff2` | Color for disabled hyperlinks. |
-| `cta-link-hover` | `#1d6bca` | Color for hyperlinks on hover. |
-| `cta-link-pressed` | `#2486fc` | Color for hyperlinks when pressed. |
-| `text-error-on-light` | `#d5324e` | Error text color on light backgrounds. |
-| `text-on-dark` | `#ffffff` | Text color on dark backgrounds. |
-| `text-on-light` | `#222222` | Primary text color on light backgrounds. |
-| `text-on-light-secondary` | `#6f6f6f` | Secondary text color on light backgrounds. |
-| `text-on-light-secondary-hover` | `#4e4e4e` | Secondary text color on hover. |
+| `text-cta-link` | `#0061d5` | Color for hyperlinks. |
+| `text-cta-link-disabled` | `#b2cff2` | Color for disabled hyperlinks. |
+| `text-cta-link-hover` | `#1d6bca` | Color for hyperlinks on hover. |
+| `text-cta-link-pressed` | `#2486fc` | Color for hyperlinks when pressed. |
+| `text-text-error-on-light` | `#d5324e` | Error text color on light backgrounds. |
+| `text-text-on-dark` | `#ffffff` | Text color on dark backgrounds. |
+| `text-text-on-light` | `#222222` | Primary text color on light backgrounds. |
+| `text-text-on-light-secondary` | `#6f6f6f` | Secondary text color on light backgrounds. |
+| `text-text-on-light-secondary-hover` | `#4e4e4e` | Secondary text color on hover. |
+
+## Typography tokens
+
+| Token | Example value | Description |
+| --- | --- | --- |
+| `body-default-font-family` | `Lato, "Helvetica Neue", sans-serif` | Font family for body text. |
+| `body-default-font-size` | `0.875rem` | Font size for body text. |
+| `body-default-font-weight` | `400` | Font weight for body text. |
+| `body-default-letter-spacing` | `0.01875rem` | Letter spacing for body text. |
+| `body-default-line-height` | `1.25rem` | Line height for body text. |
+| `body-default-text-decoration` | `none` | Text decoration for body text. |
+| `body-default-bold-font-family` | `Lato, "Helvetica Neue", sans-serif` | Font family for bold body text. |
+| `body-default-bold-font-size` | `0.875rem` | Font size for bold body text. |
+| `body-default-bold-font-weight` | `700` | Font weight for bold body text. |
+| `body-default-bold-letter-spacing` | `0.01875rem` | Letter spacing for bold body text. |
+| `body-default-bold-line-height` | `1.25rem` | Line height for bold body text. |
+| `body-default-bold-text-decoration` | `none` | Text decoration for bold body text. |
+| `body-default-semibold-font-family` | `Lato, "Helvetica Neue", sans-serif` | Font family for semibold body text. |
+| `body-default-semibold-font-size` | `0.875rem` | Font size for semibold body text. |
+| `body-default-semibold-font-weight` | `600` | Font weight for semibold body text. |
+| `body-default-semibold-letter-spacing` | `0.01875rem` | Letter spacing for semibold body text. |
+| `body-default-semibold-line-height` | `1.25rem` | Line height for semibold body text. |
+| `body-default-semibold-text-decoration` | `none` | Text decoration for semibold body text. |
+| `body-large-font-family` | `Lato, "Helvetica Neue", sans-serif` | Font family for large body text. |
+| `body-large-font-size` | `1rem` | Font size for large body text. |
+| `body-large-font-weight` | `400` | Font weight for large body text. |
+| `body-large-letter-spacing` | `0.01875rem` | Letter spacing for large body text. |
+| `body-large-line-height` | `1.5rem` | Line height for large body text. |
+| `body-large-text-decoration` | `none` | Text decoration for large body text. |
+| `body-large-bold-font-family` | `Lato, "Helvetica Neue", sans-serif` | Font family for large bold body text. |
+| `body-large-bold-font-size` | `1rem` | Font size for large bold body text. |
+| `body-large-bold-font-weight` | `700` | Font weight for large bold body text. |
+| `body-large-bold-letter-spacing` | `0.01875rem` | Letter spacing for large bold body text. |
+| `body-large-bold-line-height` | `1.5rem` | Line height for large bold body text. |
+| `body-large-bold-text-decoration` | `none` | Text decoration for large bold body text. |
+| `caption-bold-font-family` | `Lato, "Helvetica Neue", sans-serif` | Font family for bold captions. |
+| `caption-bold-font-size` | `0.75rem` | Font size for bold captions. |
+| `caption-bold-font-weight` | `700` | Font weight for bold captions. |
+| `caption-bold-letter-spacing` | `0.01875rem` | Letter spacing for bold captions. |
+| `caption-bold-line-height` | `0.875rem` | Line height for bold captions. |
+| `caption-bold-text-decoration` | `none` | Text decoration for bold captions. |
+| `caption-default-font-family` | `Lato, "Helvetica Neue", sans-serif` | Font family for captions. |
+| `caption-default-font-size` | `0.75rem` | Font size for captions. |
+| `caption-default-font-weight` | `400` | Font weight for captions. |
+| `caption-default-letter-spacing` | `0.01875rem` | Letter spacing for captions. |
+| `caption-default-line-height` | `0.875rem` | Line height for captions. |
+| `caption-default-text-decoration` | `none` | Text decoration for captions. |
+| `label-bold-font-family` | `Lato, "Helvetica Neue", sans-serif` | Font family for bold labels. |
+| `label-bold-font-size` | `0.625rem` | Font size for bold labels. |
+| `label-bold-font-weight` | `700` | Font weight for bold labels. |
+| `label-bold-letter-spacing` | `0.0375rem` | Letter spacing for bold labels. |
+| `label-bold-line-height` | `1rem` | Line height for bold labels. |
+| `label-bold-text-decoration` | `none` | Text decoration for bold labels. |
+| `label-default-font-family` | `Lato, "Helvetica Neue", sans-serif` | Font family for labels. |
+| `label-default-font-size` | `0.625rem` | Font size for labels. |
+| `label-default-font-weight` | `400` | Font weight for labels. |
+| `label-default-letter-spacing` | `0.0375rem` | Letter spacing for labels. |
+| `label-default-line-height` | `1rem` | Line height for labels. |
+| `label-default-text-decoration` | `none` | Text decoration for labels. |
+| `link-default-font-family` | `Lato, "Helvetica Neue", sans-serif` | Font family for hyperlinks. |
+| `link-default-font-size` | `0.875rem` | Font size for hyperlinks. |
+| `link-default-font-weight` | `400` | Font weight for hyperlinks. |
+| `link-default-letter-spacing` | `0.01875rem` | Letter spacing for hyperlinks. |
+| `link-default-line-height` | `1.25rem` | Line height for hyperlinks. |
+| `link-default-text-decoration` | `underline` | Text decoration for hyperlinks. |
+| `notification-default-font-family` | `Lato, "Helvetica Neue", sans-serif` | Font family for notifications. |
+| `notification-default-font-size` | `0.5625rem` | Font size for notifications. |
+| `notification-default-font-weight` | `700` | Font weight for notifications. |
+| `notification-default-letter-spacing` | `0.01875rem` | Letter spacing for notifications. |
+| `notification-default-line-height` | `0.75rem` | Line height for notifications. |
+| `notification-default-text-decoration` | `none` | Text decoration for notifications. |
+| `title-large-font-family` | `Lato, "Helvetica Neue", sans-serif` | Font family for large titles. |
+| `title-large-font-size` | `1.125rem` | Font size for large titles. |
+| `title-large-font-weight` | `700` | Font weight for large titles. |
+| `title-large-letter-spacing` | `0.01875rem` | Letter spacing for large titles. |
+| `title-large-line-height` | `1.5rem` | Line height for large titles. |
+| `title-large-text-decoration` | `none` | Text decoration for large titles. |
+| `title-medium-font-family` | `Lato, "Helvetica Neue", sans-serif` | Font family for medium titles. |
+| `title-medium-font-size` | `1rem` | Font size for medium titles. |
+| `title-medium-font-weight` | `700` | Font weight for medium titles. |
+| `title-medium-letter-spacing` | `0.01875rem` | Letter spacing for medium titles. |
+| `title-medium-line-height` | `1.5rem` | Line height for medium titles. |
+| `title-medium-text-decoration` | `none` | Text decoration for medium titles. |
+| `title-small-font-family` | `Lato, "Helvetica Neue", sans-serif` | Font family for small titles. |
+| `title-small-font-size` | `0.9375rem` | Font size for small titles. |
+| `title-small-font-weight` | `700` | Font weight for small titles. |
+| `title-small-letter-spacing` | `0.01875rem` | Letter spacing for small titles. |
+| `title-small-line-height` | `1.25rem` | Line height for small titles. |
+| `title-small-text-decoration` | `none` | Text decoration for small titles. |
+| `title-subtitle-font-family` | `Lato, "Helvetica Neue", sans-serif` | Font family for subtitles. |
+| `title-subtitle-font-size` | `0.875rem` | Font size for subtitles. |
+| `title-subtitle-font-weight` | `700` | Font weight for subtitles. |
+| `title-subtitle-letter-spacing` | `0.01875rem` | Letter spacing for subtitles. |
+| `title-subtitle-line-height` | `1.25rem` | Line height for subtitles. |
+| `title-subtitle-text-decoration` | `none` | Text decoration for subtitles. |
+| `title-x-large-font-family` | `Lato, "Helvetica Neue", sans-serif` | Font family for extra-large titles. |
+| `title-x-large-font-size` | `1.3125rem` | Font size for extra-large titles. |
+| `title-x-large-font-weight` | `700` | Font weight for extra-large titles. |
+| `title-x-large-letter-spacing` | `0.01875rem` | Letter spacing for extra-large titles. |
+| `title-x-large-line-height` | `2rem` | Line height for extra-large titles. |
+| `title-x-large-text-decoration` | `none` | Text decoration for extra-large titles. |
 
 ## Spacing, sizing, and shape tokens
 
