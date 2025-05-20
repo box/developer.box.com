@@ -147,12 +147,12 @@ This table shows all the design tokens you can use theming and styling purposes.
 | `body-default-bold-letter-spacing` | `0.01875rem` | Letter spacing for bold body text. |
 | `body-default-bold-line-height` | `1.25rem` | Line height for bold body text. |
 | `body-default-bold-text-decoration` | `none` | Text decoration for bold body text. |
-| `body-default-semibold-font-family` | `Lato, "Helvetica Neue", sans-serif` | Font family for semibold body text. |
-| `body-default-semibold-font-size` | `0.875rem` | Font size for semibold body text. |
-| `body-default-semibold-font-weight` | `600` | Font weight for semibold body text. |
-| `body-default-semibold-letter-spacing` | `0.01875rem` | Letter spacing for semibold body text. |
-| `body-default-semibold-line-height` | `1.25rem` | Line height for semibold body text. |
-| `body-default-semibold-text-decoration` | `none` | Text decoration for semibold body text. |
+| `body-default-semibold-font-family` | `Lato, "Helvetica Neue", sans-serif` | Font family for semi-bold body text. |
+| `body-default-semibold-font-size` | `0.875rem` | Font size for semi-bold body text. |
+| `body-default-semibold-font-weight` | `600` | Font weight for semi-bold body text. |
+| `body-default-semibold-letter-spacing` | `0.01875rem` | Letter spacing for semi-bold body text. |
+| `body-default-semibold-line-height` | `1.25rem` | Line height for semi-bold body text. |
+| `body-default-semibold-text-decoration` | `none` | Text decoration for semi-bold body text. |
 | `body-large-font-family` | `Lato, "Helvetica Neue", sans-serif` | Font family for large body text. |
 | `body-large-font-size` | `1rem` | Font size for large body text. |
 | `body-large-font-weight` | `400` | Font weight for large body text. |
