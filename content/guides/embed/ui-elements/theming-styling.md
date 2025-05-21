@@ -12,11 +12,11 @@ related_resources: []
 <!--alex ignore -->
 # Theming & styling for Box UI Elements
 
-With [theming & styling for Box UI Elements][blog] you can customize the look
+With theming & styling for Box UI Elements you can customize the look
 of the embedded Box component to your enterprise's requirements.
 
 <!--alex ignore -->
-<Message type='notice'>As of now, theming & styling is available for Content
+<Message type='notice'>As of now, [theming & styling][blog] is available for Content
 Explorer and Content Uploader.
 </Message>
 <!--alex enable -->
