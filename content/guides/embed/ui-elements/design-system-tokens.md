@@ -11,7 +11,7 @@ related_resources: []
 
 # Design system tokens
 
-This table shows all the design tokens you can use theming and styling purposes. Provided examples and descriptions give clarity and guidance for implementation.
+This table shows all the design tokens you can use for [theming and styling][ts] purposes. Provided examples and descriptions give clarity and guidance for implementation.
 
 <!--alex ignore -->
 
@@ -291,3 +291,46 @@ This table shows all the design tokens you can use theming and styling purposes.
 | `space-16` | `4rem` | Spacing measurement (64 px equivalent). |
 | `space-18` | `4.5rem` | Spacing measurement (72 px equivalent). |
 | `space-20` | `5rem` | Spacing measurement (80 px equivalent). |
+
+## Token structure
+
+There are two ways to provide tokens to the theme object in Content Explorer:
+flatten structure using full token names and nested structure using shortened
+names. 
+The latter allows you to group tokens, which might improve the readability of your customization, but both produce the same results.
+
+### Examples
+
+Flatten structure:
+
+```js
+const theme = {
+    tokens: {
+        "body-default-font-size": "14px",
+        "body-default-font-weight": "400"
+        "body-default-text-decoration": "none",
+        "body-default-bold-line-height": "20px",
+    }
+};
+```
+
+Nested structure:
+
+```js
+const theme = {
+    tokens: {
+        Body: {
+            Default: {
+                "font-size": "14px",
+                "font-weight": "400",
+                "text-decoration": "none",
+            }
+            "Default Bold": {
+                "line-height": "20px",
+            }
+        }
+    }
+};
+```
+
+[ts]: g://embed/ui-elements/theming-styling
