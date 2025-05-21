@@ -9,15 +9,15 @@ required_guides:
 related_resources: []
 ---
 
-# Design system tokens
+# UI Elements design tokens
 
-This table shows all the design tokens you can use for [theming and styling][ts] purposes. Provided examples and descriptions give clarity and guidance for implementation.
+This table shows all the design tokens you can use for [theming and styling][ts] purposes. Provided default values and descriptions give clarity and guidance for implementation.
 
 <!--alex ignore -->
 
 ## Border colors
 
-| Token | Example value | Description |
+| Token | Default value | Description |
 | --- | --- | --- |
 | `border-checkbox-border` | `#6f6f6f` | Default border color for checkboxes. |
 | `border-checkbox-border-hover` | `#4e4e4e` | Border color when hovering over checkboxes. |
@@ -48,7 +48,11 @@ This table shows all the design tokens you can use for [theming and styling][ts]
 ## Icon colors
 <!--alex ignore -->
 
-| Token | Example value | Description |
+<Message type='notice'>
+You can only style interactive icons such as buttons or drop down.
+</Message>
+
+| Token | Default value | Description |
 | --- | --- | --- |
 | `icon-cta-icon` | `#6f6f6f` | Default color for icons in buttons. |
 | `icon-cta-icon-hover` | `#222222` | Color for icons in buttons on hover. |
@@ -58,7 +62,7 @@ This table shows all the design tokens you can use for [theming and styling][ts]
 ## Outline colors
 <!--alex ignore -->
 
-| Token | Example value | Description |
+| Token | Default value | Description |
 | --- | --- | --- |
 | `outline-focus-on-dark` | `#ffffff` | Focus outline color on dark backgrounds. |
 | `outline-focus-on-light` | `#2486fc` | Focus outline color on light backgrounds. |
@@ -67,7 +71,7 @@ This table shows all the design tokens you can use for [theming and styling][ts]
 ## Surface colors
 <!--alex ignore -->
 
-| Token | Example value | Description |
+| Token | Default value | Description |
 | --- | --- | --- |
 | `surface-checkbox-surface` | `#ffffff` | Background color for checkboxes. |
 | `surface-checkbox-surface-hover` | `#ffffff` | Background color for checkboxes on hover. |
@@ -119,7 +123,7 @@ This table shows all the design tokens you can use for [theming and styling][ts]
 ## Text colors
 <!--alex ignore -->
 
-| Token | Example value | Description |
+| Token | Default value | Description |
 | --- | --- | --- |
 | `text-cta-link` | `#0061d5` | Color for hyperlinks. |
 | `text-cta-link-disabled` | `#b2cff2` | Color for disabled hyperlinks. |
@@ -133,7 +137,11 @@ This table shows all the design tokens you can use for [theming and styling][ts]
 
 ## Typography tokens
 
-| Token | Example value | Description |
+<Message type='notice'>
+The comment in the table refers to pixels in calculation based on a root font-size of 16 px.
+</Message>
+
+| Token | Default value | Description |
 | --- | --- | --- |
 | `body-default-font-family` | `Lato, "Helvetica Neue", sans-serif` | Font family for body text. |
 | `body-default-font-size` | `0.875rem` | Font size for body text. |
@@ -234,7 +242,11 @@ This table shows all the design tokens you can use for [theming and styling][ts]
 
 ## Spacing, sizing, and shape tokens
 
-| Token | Example value | Description |
+<Message type='notice'>
+The comment in the table refers to pixels in calculation based on a root font-size of 16 px.
+</Message>
+
+| Token | Default value | Description |
 | --- | --- | --- |
 | `border-1` | `0.0625rem` | Border width (1 px equivalent). |
 | `border-2` | `0.125rem` | Border width (2 px equivalent). |
@@ -299,7 +311,7 @@ flatten structure using full token names and nested structure using shortened
 names. 
 The latter allows you to group tokens, which might improve the readability of your customization, but both produce the same results.
 
-### Examples
+### Example
 
 Flatten structure:
 

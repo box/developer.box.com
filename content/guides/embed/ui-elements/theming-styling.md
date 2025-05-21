@@ -98,9 +98,7 @@ Customize text input, drop down, and checkboxes with individual color
 
 ### Icons
 
-Style:
-
-* interactive icons such as buttons, drop down
+Style interactive icons such as buttons, drop down.
 
 <Message type='notice'>
 To replace non-interactive icons such as file or folder icons with your custom ones, use inline SVGs in CSS.
@@ -136,5 +134,5 @@ style="width: 100%;"
 
 [explorer]: g://embed/ui-elements/explorer
 [uploader]: g://embed/ui-elements/uploader
-[dt]: g://embed/ui-elements/design-system-tokens
+[dt]: g://embed/ui-elements/ui-elements-design-tokens
 [blog]: https://medium.com/@stefaniuk.olga/b4a86518d5ca

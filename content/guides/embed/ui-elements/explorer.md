@@ -422,7 +422,7 @@ export default App;
 
 ## Custom actions
 
-You can expand the actions in the **More Options** menu for files and folders in content explorer and picker. Your custom options show when user clicks the ellipsis button.
+You can expand the actions in the **More Options** menu for files and folders in Content Explorer and Content Picker. Your custom options show when user clicks the ellipsis button.
 
 <iframe height="560"
 scrolling="no" 
