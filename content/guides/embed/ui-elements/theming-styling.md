@@ -98,12 +98,14 @@ Customize text input, drop down, and checkboxes with individual color
 
 ### Icons
 
-Style interactive icons such as buttons, drop down.
+Style interactive icons such as buttons or drop downs.
 
 <Message type='notice'>
 To replace non-interactive icons such as file or folder icons with your custom ones, use inline SVGs in CSS.
 To change non-interactive icons color, height, and width, use CSS.
 </Message>
+
+See the implemented examples of custom icons in CodePen:
 
 <iframe height="560"
 scrolling="no" 

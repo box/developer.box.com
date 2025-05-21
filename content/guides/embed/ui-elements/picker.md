@@ -314,7 +314,7 @@ contentExplorer.show(configData.FOLDER_ID, configData.ACCESS_TOKEN, {
 });
 ```
 
-The array can include multiple actions. The action object should include the `label` and `onAction` callback functions. You can filter the options to appear only on a specific item type, by passing the `file` or `folder` value. The `filter` value is used for advanced filtering, for example by a specific file extension:
+The array can include multiple actions. The action object should include the `label`, and the `onAction` callback function. You can filter the custom actions to appear only on a specific item `type`, by passing the `file` or `folder` value. The `filter` value is used for advanced filtering, for example by a specific file extension:
 
 ```js
 const customActions = [
