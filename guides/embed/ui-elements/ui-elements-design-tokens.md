@@ -73,6 +73,8 @@ const theme = {
 
 You can pass any CSS color value, like hexadecimal colors, RGB, cross-browser color names, and so on.
 
+</Message>
+
 | Token | Default value | Description |
 | --- | --- | --- |
 | `border-checkbox-border` | `#6f6f6f` | Default border color for checkboxes. |
