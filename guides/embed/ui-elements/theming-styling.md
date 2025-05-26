@@ -13,10 +13,10 @@ subcategory_id: embed/ui-elements
 is_index: false
 id: embed/ui-elements/theming-styling
 type: guide
-total_steps: 15
+total_steps: 16
 sibling_id: embed/ui-elements
 parent_id: embed/ui-elements
-next_page_id: embed/ui-elements/access
+next_page_id: embed/ui-elements/ui-elements-design-tokens
 previous_page_id: embed/ui-elements/logo
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/theming-styling.md
@@ -32,7 +32,7 @@ Box UI Elementsのテーマとスタイルの設定により、企業の要件�
 
 <Message type="notice">
 
-現時点では、テーマとスタイルの設定は、コンテンツエクスプローラとコンテンツアップローダーで使用可能です。
+As of now, [theming & styling][blog] is available for Content Explorer and Content Uploader.
 
 </Message>
 
@@ -44,7 +44,7 @@ Box UI Elementsのテーマとスタイルの設定により、企業の要件�
 
 ## カスタマイズ
 
-Boxでは、カスタマイズの目的でデザイントークンを使用します。
+Box uses [design tokens][dt] for the customization purposes.
 
 <Message type="notice">
 
@@ -119,9 +119,25 @@ Boxでは、カスタマイズの目的でデザイントークンを使用し�
 
 <!--alex ignore -->
 
-テキスト入力、ドロップダウン、チェックボックスを独自の色でカスタマイズできます。
+Customize text input, drop down, and checkboxes with individual color
 
 <!--alex enable -->
+
+### Icons
+
+Style interactive icons such as buttons or drop downs.
+
+<Message type="notice">
+
+To replace non-interactive icons such as file or folder icons with your custom ones, use inline SVGs in CSS. To change non-interactive icons color, height, and width, use CSS.
+
+</Message>
+
+See the implemented examples of custom icons in CodePen:
+
+<iframe height="560" scrolling="no" title="Box custom icons" src="https://codepen.io/box-platform/embed/raaRqye?default-tab=html%2Cresult" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
+
+</iframe>
 
 ### その他
 
@@ -139,3 +155,7 @@ Boxでは、カスタマイズの目的でデザイントークンを使用し�
 [explorer]: g://embed/ui-elements/explorer
 
 [uploader]: g://embed/ui-elements/uploader
+
+[dt]: g://embed/ui-elements/ui-elements-design-tokens
+
+[blog]: https://medium.com/@stefaniuk.olga/b4a86518d5ca

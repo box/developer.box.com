@@ -14,7 +14,7 @@ subcategory_id: embed/ui-elements
 is_index: false
 id: embed/ui-elements/picker
 type: guide
-total_steps: 15
+total_steps: 16
 sibling_id: embed/ui-elements
 parent_id: embed/ui-elements
 next_page_id: embed/ui-elements/preview
@@ -267,6 +267,48 @@ filePicker.removeAllListeners();
 | ユーザーがフォルダ構造内を移動して、ファイル/フォルダを選択し、アクセスレベルも設定する                              | `base_picker` + `item_share`                 |
 | ユーザーがフォルダ構造内を移動して、ファイル/フォルダを選択し、ファイル/フォルダもアップロードする                        | `base_picker` + `item_upload`                |
 | ユーザーがフォルダ構造内を移動して、ファイル/フォルダを選択し、ファイル/フォルダをアップロードして、ファイル/フォルダのアクセスレベルも設定する | `base_picker` + `item_share` + `item_upload` |
+
+## Custom actions
+
+You can expand the actions in the **More Options** menu for files and folders in Content Explorer and Content Picker. Your custom options show when user clicks the ellipsis button.
+
+To customize the **More Options** menu, pass an array of custom actions to `itemActions`.
+
+```js
+contentExplorer.show(configData.FOLDER_ID, configData.ACCESS_TOKEN, {
+    container: ".container",
+    itemActions: customActions,
+});
+
+```
+
+The array can include multiple actions. The action object should include the `label`, and the `onAction` callback function. You can filter the custom actions to appear only on a specific item `type`, by passing the `file` or `folder` value. The `filter` value is used for advanced filtering, for example by a specific file extension:
+
+```js
+const customActions = [
+    {
+        label: "Preview in New Window",
+        onAction: (item) => alert('action ' + item),
+        type: 'file',
+    },
+    {
+        label: "Open in Box.com",
+        onAction: (item) => window.open("https://app.box.com"),
+    },
+    {
+        label: "Export",
+        onAction: (item) => console.log('action ' + item),
+        filter: (item) => item.extension?.toLowerCase() === 'pdf',
+    },
+];
+
+```
+
+See the implemented examples in CodePen:
+
+<iframe height="560" scrolling="no" title="Box custom icons" src="https://codepen.io/box-platform/embed/EaaMMKQ?default-tab=html%2Cresult" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
+
+</iframe>
 
 [downscope]: guide://authentication/tokens/downscope
 
