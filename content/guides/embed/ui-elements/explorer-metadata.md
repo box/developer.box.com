@@ -72,7 +72,7 @@ To make things easier, you can use a [sample project][metadata-project] based on
 | `DEVELOPER_TOKEN` | [Developer token][token] generated in the the Developer Console. |
 | `ENTERPRISE_ID` | Enterprise ID copied from the **General Settings** tab of your Box application. |
 | `METADATA_TEMPLATE_NAME`| `templateKey` of your already created metadata template. **Note**: To make sure you provided the proper name, use the [metadata API][get-template] to retrieve the name, or copy it from the URL in the Admin Console. ![Metadata name in Admin Console](./images/metadata-template-name.png) If you decide to change the template name in the UI, you change the display name only. The name to use in the component is always the one you provided at the beginning. |
-| `METADATA_SOURCE` | Source of your [metadata][source]. |
+| `METADATA_SOURCE` | Source of your [metadata][source]. It's a string that combines the scope, enterprise ID, and metadata key. |
 | `ROOTFOLDER_ID` | ID of a Box folder to which you want to apply the metadata query and display filtered files. |
 
 The `defaultView`, `fieldsToShow`, and `metadataQuery` parameters are already
