@@ -34,9 +34,9 @@ find the data you want to display.
 
 ## Create a metadata template
 
-The next step is to create a metadata template you will use to populate the Content Explorer.
+The next step is to create a metadata template.
 
-1. Create a metadata template. You can use [Metadata API][creating-templates-api] or [Admin Console][creating-templates-ui] to do so.
+1. Use [Metadata API][creating-templates-api] or [Admin Console][creating-templates-ui] to create the template.
 2. Apply an already created template to a Box folder. Make sure you enable the
 cascade policy. For detailed instructions, see
 [instructions on customizing and applying templates][apply-templates].
@@ -80,9 +80,9 @@ defined in the sample project. Examples of these parameters are available in the
 
 | Parameter | Description |
 | --- | --- |
-| `defaultView` | A required prop to paint the metadata view. If it's not provided, you get the regular folder view. |
+| `defaultView` | A required prop to paint the metadata view. If it's not provided, you get the regular file view. |
 | `fieldsToShow` | Add or hide specific metadata columns to display in the Content Explorer. |
-|`metadataQuery` | Provides a way to find files and folders by searching for the metadata attached to them. For additional information on metadata queries, see [this guide][metadata-query]. |
+|`metadataQuery` | Provides a way to find files by searching for the metadata attached to them. For additional information on metadata queries, see [this guide][metadata-query]. |
 
 3. Pass the required parameters to the Content Explorer component.
 
@@ -170,8 +170,7 @@ Chinese, etc.) they are automatically renamed to generic identifiers:
 * `field` for the first occurrence
 * `field1`, `field2`, and so on for subsequent occurrences
 
-Keys are based on the display names. If a display name contains non-Latin
-characters, the key will be renamed.
+Keys are based on the display names.
 
 <Message type='notice'>
 **TIP**: For a detailed flow, see [Metadata view blog post][blogpost].
