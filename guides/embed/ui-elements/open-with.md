@@ -1,5 +1,5 @@
 ---
-rank: 4
+rank: 5
 related_endpoints: []
 related_guides:
   - embed/ui-elements
@@ -13,11 +13,11 @@ subcategory_id: embed/ui-elements
 is_index: false
 id: embed/ui-elements/open-with
 type: guide
-total_steps: 16
+total_steps: 17
 sibling_id: embed/ui-elements
 parent_id: embed/ui-elements
 next_page_id: embed/ui-elements/picker
-previous_page_id: embed/ui-elements/explorer
+previous_page_id: embed/ui-elements/explorer-metadata
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/open-with.md
 ---
