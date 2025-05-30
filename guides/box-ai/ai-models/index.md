@@ -12,10 +12,10 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 22
+total_steps: 23
 sibling_id: box-ai
 parent_id: box-ai
-next_page_id: box-ai/ai-models/azure-openai-gpt-o4-mini-model-card
+next_page_id: box-ai/ai-models/azure-openai-gpt-o3-model-card
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/index.md
@@ -87,42 +87,6 @@ Chat
 <strong style="background-color: #e1ffe7">
 
 Available
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="gpt" title="azure__openai__gpt_o3" href="/guides/box-ai/ai-models/azure-openai-gpt-o3-model-card">
-
-A multimodal model, highly efficient in handling complex, multi-step tasks.
-<div>
-
-<strong style="background-color: #fffbf3">
-
-Beta
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="gpt" title="azure__openai__gpt_o4-mini" href="/guides/box-ai/ai-models/azure-openai-gpt-o4-mini-model-card">
-
-A multimodal model, highly efficient in handling complex, multi-step tasks.
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-Chat
-
-</strong>
-
-<strong style="background-color: #fffbf3">
-
-Beta
 
 </strong>
 
@@ -310,9 +274,9 @@ Available
 Gemini multimodal model, built for high volume tasks and latency-sensitive applications.
 <div>
 
-<strong style="background-color: #e1ffe7">
+<strong style="background-color: #999999">
 
-Available
+Deprecated
 
 </strong>
 
@@ -331,9 +295,9 @@ Chat
 
 </strong>
 
-<strong style="background-color: #e1ffe7">
+<strong style="background-color: #999999">
 
-Available
+Deprecated
 
 </strong>
 
@@ -407,6 +371,48 @@ Available
 <Tile type="model" title="aws__claude_3_7_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-7-sonnet-model-card">
 
 A model designed to enhance language understanding and generation tasks.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Chat
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+Available
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="aws__claude_4_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-sonnet-model-card">
+
+A model that brings frontier performance to everyday use cases.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Chat
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+Available
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="aws__claude_4_opus" href="/guides/box-ai/ai-models/aws-claude-4-opus-model-card">
+
+A model that excels at coding and complex problem-solving, powering frontier agent products.
 <div>
 
 <strong style="background-color: #e8e8e8">
@@ -517,7 +523,7 @@ Beta
 
 </Tile>
 
-<Tile type="model" title="xai__grok_3_mini_beta" href="/guides/box-ai/ai-models/xai-grok-3-mini-beta-model-card">
+<Tile type="model" title="xai__grok_3_mini_reasoning_beta" href="/guides/box-ai/ai-models/xai-grok-3-mini-beta-model-card">
 
 A lightweight model that is great for logic-based tasks that do not require deep domain knowledge.
 <div>
@@ -527,6 +533,21 @@ A lightweight model that is great for logic-based tasks that do not require deep
 Chat
 
 </strong>
+
+<strong style="background-color: #fffbf3">
+
+Beta
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="gpt" title="azure__openai__gpt_o3" href="/guides/box-ai/ai-models/azure-openai-gpt-o3-model-card">
+
+A multimodal model, highly efficient in handling complex, multi-step tasks.
+<div>
 
 <strong style="background-color: #fffbf3">
 
