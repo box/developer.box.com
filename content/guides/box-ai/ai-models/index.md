@@ -51,13 +51,6 @@ Box AI is powered by the following AI models. These models are integrated with B
 			<strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
-		<Tile type="gpt" title="azure__openai__gpt_o4-mini" href="/guides/box-ai/ai-models/azure-openai-gpt-o4-mini-model-card">
-    	A multimodal model, highly efficient in handling complex, multi-step tasks.
-      <div>
-			<strong style="background-color: #e8e8e8">Chat</strong>
-      <strong style="background-color: #fffbf3">Beta</strong>
-      </div>
-    </Tile>
 		<Tile type="gpt" title="azure__openai__gpt_4_1" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-model-card">
     	A multimodal model, highly efficient in handling complex, multi-step tasks.
       <div>
