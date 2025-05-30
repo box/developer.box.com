@@ -8,16 +8,16 @@ related_guides:
   - box-ai/ai-agents/get-agent-default-config
 ---
 
-# xAI Grok 3 Mini Beta
+# xAI Grok 3 Mini Reasoning Beta
 
-**xAI Grok 3 Mini Beta** is a lightweight model that thinks before responding. Fast, smart, and great for logic-based tasks that do not require deep domain knowledge. The raw thinking traces are accessible.
+**xAI Grok 3 Mini Reasoning Beta** is a lightweight model that thinks before responding. Fast, smart, and great for logic-based tasks that do not require deep domain knowledge. The raw thinking traces are accessible.
 
 ## Model details
 
 | Item  | Value | Description |
 |-----------|----------|----------|
-|Model name|**xAI Grok 3 Mini**| The name of the model. | 
-|API model name|`xai__grok_3_mini`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
+|Model name|**xAI Grok 3 Mini Reasoning Beta**| The name of the model. | 
+|API model name|`xai__grok_3_mini_reasoning_beta`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer| **xAI** | The trusted organization that securely hosts LLM. |
 |Model provider|**xAI**| The organization that provides this model. |
 |Release date|**April 9th 2025** | The release date for the model.|

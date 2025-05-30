@@ -51,12 +51,6 @@ Box AI is powered by the following AI models. These models are integrated with B
 			<strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
-		<Tile type="gpt" title="azure__openai__gpt_o3" href="/guides/box-ai/ai-models/azure-openai-gpt-o3-model-card">
-    	A multimodal model, highly efficient in handling complex, multi-step tasks.
-      <div>
-      <strong style="background-color: #fffbf3">Beta</strong>
-      </div>
-    </Tile>
 		<Tile type="gpt" title="azure__openai__gpt_o4-mini" href="/guides/box-ai/ai-models/azure-openai-gpt-o4-mini-model-card">
     	A multimodal model, highly efficient in handling complex, multi-step tasks.
       <div>
@@ -212,11 +206,17 @@ Certain Box AI customers may enable additional AI models upon their request and/
 				<strong style="background-color: #fffbf3">Beta</strong>
       </div>
     </Tile>
-		<Tile type="model" title="xai__grok_3_mini_beta" href="/guides/box-ai/ai-models/xai-grok-3-mini-beta-model-card">
+		<Tile type="model" title="xai__grok_3_mini_reasoning_beta" href="/guides/box-ai/ai-models/xai-grok-3-mini-beta-model-card">
       A lightweight model that is great for logic-based tasks that do not require deep domain knowledge.
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #fffbf3">Beta</strong>
+      </div>
+    </Tile>
+		<Tile type="gpt" title="azure__openai__gpt_o3" href="/guides/box-ai/ai-models/azure-openai-gpt-o3-model-card">
+    	A multimodal model, highly efficient in handling complex, multi-step tasks.
+      <div>
+      <strong style="background-color: #fffbf3">Beta</strong>
       </div>
     </Tile>
 </TileGrid>
