@@ -268,11 +268,11 @@ filePicker.removeAllListeners();
 | ユーザーがフォルダ構造内を移動して、ファイル/フォルダを選択し、ファイル/フォルダもアップロードする                        | `base_picker` + `item_upload`                |
 | ユーザーがフォルダ構造内を移動して、ファイル/フォルダを選択し、ファイル/フォルダをアップロードして、ファイル/フォルダのアクセスレベルも設定する | `base_picker` + `item_share` + `item_upload` |
 
-## Custom actions
+## カスタム操作
 
-You can expand the actions in the **More Options** menu for files and folders in Content Explorer and Content Picker. Your custom options show when user clicks the ellipsis button.
+コンテンツエクスプローラとContent Pickerでは、ファイルやフォルダの \[**その他のオプション**] メニューの操作を拡張できます。カスタムオプションは、ユーザーが省略記号ボタンをクリックすると表示されます。
 
-To customize the **More Options** menu, pass an array of custom actions to `itemActions`.
+\[**その他のオプション**] メニューをカスタマイズするには、カスタム操作の配列を`itemActions`に渡します。
 
 ```js
 contentExplorer.show(configData.FOLDER_ID, configData.ACCESS_TOKEN, {
@@ -282,7 +282,7 @@ contentExplorer.show(configData.FOLDER_ID, configData.ACCESS_TOKEN, {
 
 ```
 
-The array can include multiple actions. The action object should include the `label`, and the `onAction` callback function. You can filter the custom actions to appear only on a specific item `type`, by passing the `file` or `folder` value. The `filter` value is used for advanced filtering, for example by a specific file extension:
+この配列には、複数の操作を含めることができます。操作オブジェクトには、`label`、`onAction`コールバック関数を含める必要があります。`file`または`folder`の値を渡すことで、特定の項目の`type`のみに表示されるようカスタム操作にフィルタをかけることができます。`filter`値は、特定のファイル拡張子など、高度なフィルタに使用します。
 
 ```js
 const customActions = [
@@ -304,9 +304,9 @@ const customActions = [
 
 ```
 
-See the implemented examples in CodePen:
+CodePenで実装例を確認してください。
 
-<iframe height="560" scrolling="no" title="Box custom icons" src="https://codepen.io/box-platform/embed/EaaMMKQ?default-tab=html%2Cresult" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
+<iframe height="560" scrolling="no" title="Boxのカスタムアイコン" src="https://codepen.io/box-platform/embed/EaaMMKQ?default-tab=html%2Cresult" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
 
 </iframe>
 

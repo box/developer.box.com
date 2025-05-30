@@ -21,17 +21,17 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/ui-elements-design-tokens.md
 fullyTranslated: true
 ---
-# UI Elements design tokens
+# UI Elementsのデザイントークン
 
-This table shows all the design tokens you can use for [theming and styling][ts] purposes. Provided default values and descriptions give clarity and guidance for implementation.
+[テーマとスタイルの設定][ts]のために使用できるすべてのデザイントークンを表に示します。実装のためのわかりやすい指針となる、デフォルト値と説明も記載されています。
 
-## Token structure
+## トークンの構造
 
-There are two ways to provide tokens to the theme object in Content Explorer: flatten structure using full token names and nested structure using shortened names. The latter allows you to group tokens, which might improve the readability of your customization, but both produce the same results.
+コンテンツエクスプローラでテーマオブジェクトにトークンを指定する方法として、トークンのフルネームを使用したフラットな構造と、短縮した名前を使用した入れ子構造の2つがあります。後者を使用すると、トークンをグループ化できるため、カスタマイズがわかりやすくなりますが、どちらも結果は同じです。
 
 ### 例
 
-Flatten structure:
+フラットな構造:
 
 ```js
 const theme = {
@@ -45,7 +45,7 @@ const theme = {
 
 ```
 
-Nested structure:
+入れ子構造:
 
 ```js
 const theme = {
@@ -67,313 +67,313 @@ const theme = {
 
 <!--alex ignore -->
 
-## Border colors
+## 境界線の色
 
 <Message type="notice">
 
-You can pass any CSS color value, like hexadecimal colors, RGB, cross-browser color names, and so on.
+16進カラー、RGB、特定のブラウザに依存しないカラー名など、任意のCSSカラー値を渡すことができます。
 
 </Message>
 
-| Token                                   | Default value | 説明                                                        |
-| --------------------------------------- | ------------- | --------------------------------------------------------- |
-| `border-checkbox-border`                | `#6f6f6f`     | Default border color for checkboxes.                      |
-| `border-checkbox-border-hover`          | `#4e4e4e`     | Border color when hovering over checkboxes.               |
-| `border-checkbox-border-selected`       | `#0061d5`     | Border color for selected checkboxes.                     |
-| `border-checkbox-border-selected-hover` | `#2079e3`     | Border color when hovering over selected checkboxes.      |
-| `border-cta-border-outline`             | `#000000`     | Border for secondary buttons with transparent background. |
-| `border-cta-border-outline-disabled`    | `#646464`     | Border for disabled outline buttons.                      |
-| `border-cta-border-outline-hover`       | `#000000`     | Border for outline buttons on hover.                      |
-| `border-cta-border-outline-pressed`     | `#000000`     | Border for outline buttons when pressed.                  |
-| `border-cta-border-secondary`           | `#bcbcbc`     | Border for secondary buttons.                             |
-| `border-cta-border-secondary-disabled`  | `#e8e8e8`     | Border for disabled secondary buttons.                    |
-| `border-cta-border-secondary-hover`     | `#bcbcbc`     | Border for secondary buttons on hover.                    |
-| `border-cta-border-secondary-pressed`   | `#bcbcbc`     | Border for secondary buttons when pressed.                |
-| `border-divider-border`                 | `#e8e8e8`     | Horizontal line separators.                               |
-| `border-dropdown-border`                | `#bcbcbc`     | Border for dropdown menus.                                |
-| `border-gridthumbnail-border`           | `#e8e8e8`     | Border for item (file/folder) thumbnails in grid view.    |
-| `border-input-border`                   | `#909090`     | Border for text inputs.                                   |
-| `border-input-border-error`             | `#ed3757`     | Border for text inputs with errors.                       |
-| `border-input-border-focus`             | `#2486fc`     | Border for focused text inputs.                           |
-| `border-input-border-hover`             | `#6f6f6f`     | Border for text inputs on hover.                          |
-| `border-search-border`                  | `#f4f4f4`     | Border for search inputs.                                 |
-| `border-search-border-hover`            | `#6f6f6f`     | Border for search inputs on hover.                        |
-| `border-switch-border`                  | `#bcbcbc`     | Border for toggle switches.                               |
-| `border-switch-border-hover`            | `#bcbcbc`     | Border for toggle switches on hover.                      |
-| `border-tooltip-border-error`           | `#f69bab`     | Border for error tool tips.                               |
+| トークン                                    | デフォルト値    | 説明                                    |
+| --------------------------------------- | --------- | ------------------------------------- |
+| `border-checkbox-border`                | `#6f6f6f` | チェックボックスのデフォルトの境界線の色。                 |
+| `border-checkbox-border-hover`          | `#4e4e4e` | チェックボックスにカーソルを合わせたときの境界線の色。           |
+| `border-checkbox-border-selected`       | `#0061d5` | オンにしたチェックボックスの境界線の色。                  |
+| `border-checkbox-border-selected-hover` | `#2079e3` | オンにしたチェックボックスにカーソルを合わせたときの境界線の色。      |
+| `border-cta-border-outline`             | `#000000` | 背景が透明のセカンダリボタンの境界線。                   |
+| `border-cta-border-outline-disabled`    | `#646464` | 無効なアウトラインボタンの境界線。                     |
+| `border-cta-border-outline-hover`       | `#000000` | カーソルを合わせたときのアウトラインボタンの境界線。            |
+| `border-cta-border-outline-pressed`     | `#000000` | 押したときのアウトラインボタンの境界線。                  |
+| `border-cta-border-secondary`           | `#bcbcbc` | セカンダリボタンの境界線。                         |
+| `border-cta-border-secondary-disabled`  | `#e8e8e8` | 無効なセカンダリボタンの境界線。                      |
+| `border-cta-border-secondary-hover`     | `#bcbcbc` | カーソルを合わせたときのセカンダリボタンの境界線。             |
+| `border-cta-border-secondary-pressed`   | `#bcbcbc` | 押したときのセカンダリボタンの境界線。                   |
+| `border-divider-border`                 | `#e8e8e8` | 水平方向の行区切り記号。                          |
+| `border-dropdown-border`                | `#bcbcbc` | ドロップダウンメニューの境界線。                      |
+| `border-gridthumbnail-border`           | `#e8e8e8` | グリッドビューにおける項目 (ファイル/フォルダ) のサムネイルの境界線。 |
+| `border-input-border`                   | `#909090` | テキスト入力の境界線。                           |
+| `border-input-border-error`             | `#ed3757` | エラーが発生しているテキスト入力の境界線。                 |
+| `border-input-border-focus`             | `#2486fc` | フォーカスされたテキスト入力の境界線。                   |
+| `border-input-border-hover`             | `#6f6f6f` | カーソルを合わせたときのテキスト入力の境界線。               |
+| `border-search-border`                  | `#f4f4f4` | 検索入力の境界線。                             |
+| `border-search-border-hover`            | `#6f6f6f` | カーソルを合わせたときの検索入力の境界線。                 |
+| `border-switch-border`                  | `#bcbcbc` | 切り替えスイッチの境界線。                         |
+| `border-switch-border-hover`            | `#bcbcbc` | カーソルを合わせたときの切り替えスイッチの境界線。             |
+| `border-tooltip-border-error`           | `#f69bab` | エラーのツールチップの境界線。                       |
 
 <!--alex ignore -->
 
-## Icon colors
+## アイコンの色
 
 <!--alex ignore -->
 
 <Message type="notice">
 
-You can only style interactive icons such as buttons or drop down.
+ボタンやドロップダウンなどのインタラクティブなアイコンのスタイルのみを設定できます。
 
 </Message>
 
-| Token                   | Default value | 説明                                       |
-| ----------------------- | ------------- | ---------------------------------------- |
-| `icon-cta-icon`         | `#6f6f6f`     | Default color for icons in buttons.      |
-| `icon-cta-icon-hover`   | `#222222`     | Color for icons in buttons on hover.     |
-| `icon-cta-icon-pressed` | `#222222`     | Color for icons in buttons when pressed. |
+| トークン                    | デフォルト値    | 説明                      |
+| ----------------------- | --------- | ----------------------- |
+| `icon-cta-icon`         | `#6f6f6f` | ボタンのアイコンのデフォルトの色。       |
+| `icon-cta-icon-hover`   | `#222222` | カーソルを合わせたときのボタンのアイコンの色。 |
+| `icon-cta-icon-pressed` | `#222222` | 押したときのボタンのアイコンの色。       |
 
 <!--alex ignore -->
 
-## Outline colors
+## アウトラインの色
 
 <!--alex ignore -->
 
-| Token                    | Default value | 説明                                        |
-| ------------------------ | ------------- | ----------------------------------------- |
-| `outline-focus-on-dark`  | `#ffffff`     | Focus outline color on dark backgrounds.  |
-| `outline-focus-on-light` | `#2486fc`     | Focus outline color on light backgrounds. |
+| トークン                     | デフォルト値    | 説明                      |
+| ------------------------ | --------- | ----------------------- |
+| `outline-focus-on-dark`  | `#ffffff` | 背景が暗い場合のフォーカスアウトラインの色。  |
+| `outline-focus-on-light` | `#2486fc` | 背景が明るい場合のフォーカスアウトラインの色。 |
 
 <!--alex ignore -->
 
-## Surface colors
+## 表面色
 
 <!--alex ignore -->
 
-| Token                                      | Default value         | 説明                                                            |
-| ------------------------------------------ | --------------------- | ------------------------------------------------------------- |
-| `surface-checkbox-surface`                 | `#ffffff`             | Background color for checkboxes.                              |
-| `surface-checkbox-surface-hover`           | `#ffffff`             | Background color for checkboxes on hover.                     |
-| `surface-checkbox-surface-selected`        | `#0061d5`             | Background color for selected checkboxes.                     |
-| `surface-checkbox-surface-selected-hover`  | `#2079e3`             | Background color for selected checkboxes on hover.            |
-| `surface-cta-surface-icon`                 | `rgba(0, 0, 0, 0)`    | Background for icon buttons.                                  |
-| `surface-cta-surface-icon-disabled`        | `rgba(0, 0, 0, 0)`    | Background for disabled icon buttons.                         |
-| `surface-cta-surface-icon-hover`           | `rgba(0, 0, 0, 0.04)` | Background for icon buttons on hover.                         |
-| `surface-cta-surface-icon-pressed`         | `rgba(0, 0, 0, 0.08)` | Background for icon buttons when pressed.                     |
-| `surface-cta-surface-outline`              | `rgba(0, 0, 0, 0)`    | Background for secondary buttons with transparent background. |
-| `surface-cta-surface-outline-hover`        | `rgba(0, 0, 0, 0.04)` | Background for outline buttons on hover.                      |
-| `surface-cta-surface-outline-pressed`      | `rgba(0, 0, 0, 0.08)` | Background for outline buttons when pressed.                  |
-| `surface-cta-surface-secondary`            | `#ffffff`             | Background for secondary buttons.                             |
-| `surface-cta-surface-secondary-hover`      | `#f4f4f4`             | Background for secondary buttons on hover.                    |
-| `surface-cta-surface-secondary-pressed`    | `#e8e8e8`             | Background for secondary buttons when pressed.                |
-| `surface-cta-surface-tertiary`             | `#ffffff`             | Background for link styled buttons.                           |
-| `surface-cta-surface-tertiary-hover`       | `#f4f4f4`             | Background for link styled buttons on hover.                  |
-| `surface-cta-surface-tertiary-pressed`     | `#e8e8e8`             | Background for link styled buttons when pressed.              |
-| `surface-dropdown-surface`                 | `#ffffff`             | Background for dropdown menus.                                |
-| `surface-dropdown-surface-error`           | `#ffffff`             | Background for dropdown menus with errors.                    |
-| `surface-dropdown-surface-focus`           | `#ffffff`             | Background for focused dropdown menus.                        |
-| `surface-dropdown-surface-hover`           | `#ffffff`             | Background for dropdown menus on hover.                       |
-| `surface-illustration-surface-box-neutral` | `#0061d5`             | Color for illustrations (detailed icons).                     |
-| `surface-input-surface`                    | `#ffffff`             | Background for text inputs.                                   |
-| `surface-input-surface-error`              | `#ffffff`             | Background for text inputs with errors.                       |
-| `surface-input-surface-focus`              | `#ffffff`             | Background for focused text inputs.                           |
-| `surface-input-surface-hover`              | `#ffffff`             | Background for text inputs on hover.                          |
-| `surface-menu-surface`                     | `#ffffff`             | Background for dropdown menu options.                         |
-| `surface-menu-surface-focus`               | `#f4f4f4`             | Background for focused menu items.                            |
-| `surface-menu-surface-hover`               | `#f4f4f4`             | Background for menu items on hover.                           |
-| `surface-search-surface`                   | `#f4f4f4`             | Background for search inputs.                                 |
-| `surface-search-surface-focused`           | `#ffffff`             | Background for focused search inputs.                         |
-| `surface-search-surface-hover`             | `#fbfbfb`             | Background for search inputs on hover.                        |
-| `surface-sliderthumb-surface`              | `#0061d5`             | Color for range slider thumbs.                                |
-| `surface-sliderthumb-surface-hover`        | `#2486fc`             | Color for range slider thumbs on hover.                       |
-| `slidertrack-surface`                      | `#6f6f6f`             | Color for range slider tracks.                                |
-| `surface-surface`                          | `#ffffff`             | General background color.                                     |
-| `surface-surface-brand`                    | `#0061d5`             | Background for primary buttons.                               |
-| `surface-surface-brand-disabled`           | `#0061d5`             | Background for disabled primary buttons.                      |
-| `surface-surface-brand-hover`              | `#006ae9`             | Background for primary buttons on hover.                      |
-| `surface-surface-brand-pressed`            | `#004eac`             | Background for primary buttons when pressed.                  |
-| `surface-switch-surface`                   | `#ffffff`             | Background for toggle switches.                               |
-| `surface-switch-surface-off`               | `#d3d3d3`             | Background for toggle switches in off state.                  |
-| `surface-switch-surface-on`                | `#0061d5`             | Background for toggle switches in on state.                   |
-| `surface-tooltip-surface`                  | `#4e4e4e`             | Background for tool tips.                                     |
-| `surface-tooltip-surface-error`            | `#fdebee`             | Background for error tool tips.                               |
+| トークン                                       | デフォルト値                | 説明                             |
+| ------------------------------------------ | --------------------- | ------------------------------ |
+| `surface-checkbox-surface`                 | `#ffffff`             | チェックボックスの背景色。                  |
+| `surface-checkbox-surface-hover`           | `#ffffff`             | カーソルを合わせたときのチェックボックスの背景色。      |
+| `surface-checkbox-surface-selected`        | `#0061d5`             | オンにしたチェックボックスの背景色。             |
+| `surface-checkbox-surface-selected-hover`  | `#2079e3`             | カーソルを合わせたときのオンにしたチェックボックスの背景色。 |
+| `surface-cta-surface-icon`                 | `rgba(0, 0, 0, 0)`    | アイコンボタンの背景。                    |
+| `surface-cta-surface-icon-disabled`        | `rgba(0, 0, 0, 0)`    | 無効なアイコンボタンの背景。                 |
+| `surface-cta-surface-icon-hover`           | `rgba(0, 0, 0, 0.04)` | カーソルを合わせたときのアイコンボタンの背景。        |
+| `surface-cta-surface-icon-pressed`         | `rgba(0, 0, 0, 0.08)` | 押したときのアイコンボタンの背景。              |
+| `surface-cta-surface-outline`              | `rgba(0, 0, 0, 0)`    | 背景が透明のセカンダリボタンの背景。             |
+| `surface-cta-surface-outline-hover`        | `rgba(0, 0, 0, 0.04)` | カーソルを合わせたときのアウトラインボタンの背景。      |
+| `surface-cta-surface-outline-pressed`      | `rgba(0, 0, 0, 0.08)` | 押したときのアウトラインボタンの背景。            |
+| `surface-cta-surface-secondary`            | `#ffffff`             | セカンダリボタンの背景。                   |
+| `surface-cta-surface-secondary-hover`      | `#f4f4f4`             | カーソルを合わせたときのセカンダリボタンの背景。       |
+| `surface-cta-surface-secondary-pressed`    | `#e8e8e8`             | 押したときのセカンダリボタンの背景。             |
+| `surface-cta-surface-tertiary`             | `#ffffff`             | リンク形式のボタンの背景。                  |
+| `surface-cta-surface-tertiary-hover`       | `#f4f4f4`             | カーソルを合わせたときのリンク形式のボタンの背景。      |
+| `surface-cta-surface-tertiary-pressed`     | `#e8e8e8`             | 押したときのリンク形式のボタンの背景。            |
+| `surface-dropdown-surface`                 | `#ffffff`             | ドロップダウンメニューの背景。                |
+| `surface-dropdown-surface-error`           | `#ffffff`             | エラーが発生しているドロップダウンメニューの背景。      |
+| `surface-dropdown-surface-focus`           | `#ffffff`             | フォーカスされたドロップダウンメニューの背景。        |
+| `surface-dropdown-surface-hover`           | `#ffffff`             | カーソルを合わせたときのドロップダウンメニューの背景。    |
+| `surface-illustration-surface-box-neutral` | `#0061d5`             | イラスト (詳細なアイコン) の色。             |
+| `surface-input-surface`                    | `#ffffff`             | テキスト入力の背景。                     |
+| `surface-input-surface-error`              | `#ffffff`             | エラーが発生しているテキスト入力の背景。           |
+| `surface-input-surface-focus`              | `#ffffff`             | フォーカスされたテキスト入力の背景。             |
+| `surface-input-surface-hover`              | `#ffffff`             | カーソルを合わせたときのテキスト入力の背景。         |
+| `surface-menu-surface`                     | `#ffffff`             | ドロップダウンメニューオプションの背景。           |
+| `surface-menu-surface-focus`               | `#f4f4f4`             | フォーカスしたメニュー項目の背景。              |
+| `surface-menu-surface-hover`               | `#f4f4f4`             | カーソルを合わせたときのメニュー項目の背景。         |
+| `surface-search-surface`                   | `#f4f4f4`             | 検索入力の背景。                       |
+| `surface-search-surface-focused`           | `#ffffff`             | フォーカスされた検索入力の背景。               |
+| `surface-search-surface-hover`             | `#fbfbfb`             | カーソルを合わせたときの検索入力の背景。           |
+| `surface-sliderthumb-surface`              | `#0061d5`             | 範囲スライダのつまみの色。                  |
+| `surface-sliderthumb-surface-hover`        | `#2486fc`             | カーソルを合わせたときの範囲スライダのつまみの色。      |
+| `slidertrack-surface`                      | `#6f6f6f`             | 範囲スライダのトラックの色。                 |
+| `surface-surface`                          | `#ffffff`             | 一般的な背景色。                       |
+| `surface-surface-brand`                    | `#0061d5`             | プライマリボタンの背景。                   |
+| `surface-surface-brand-disabled`           | `#0061d5`             | 無効なプライマリボタンの背景。                |
+| `surface-surface-brand-hover`              | `#006ae9`             | カーソルを合わせたときのプライマリボタンの背景。       |
+| `surface-surface-brand-pressed`            | `#004eac`             | 押したときのプライマリボタンの背景。             |
+| `surface-switch-surface`                   | `#ffffff`             | 切り替えスイッチの背景。                   |
+| `surface-switch-surface-off`               | `#d3d3d3`             | オフの状態の切り替えスイッチの背景。             |
+| `surface-switch-surface-on`                | `#0061d5`             | オンの状態の切り替えスイッチの背景。             |
+| `surface-tooltip-surface`                  | `#4e4e4e`             | ツールチップの背景。                     |
+| `surface-tooltip-surface-error`            | `#fdebee`             | エラーのツールチップの背景。                 |
 
 <!--alex ignore -->
 
-## Text colors
+## テキストの色
 
 <!--alex ignore -->
 
-| Token                                | Default value | 説明                                         |
-| ------------------------------------ | ------------- | ------------------------------------------ |
-| `text-cta-link`                      | `#0061d5`     | Color for hyperlinks.                      |
-| `text-cta-link-disabled`             | `#b2cff2`     | Color for disabled hyperlinks.             |
-| `text-cta-link-hover`                | `#1d6bca`     | Color for hyperlinks on hover.             |
-| `text-cta-link-pressed`              | `#2486fc`     | Color for hyperlinks when pressed.         |
-| `text-text-error-on-light`           | `#d5324e`     | Error text color on light backgrounds.     |
-| `text-text-on-dark`                  | `#ffffff`     | Text color on dark backgrounds.            |
-| `text-text-on-light`                 | `#222222`     | Primary text color on light backgrounds.   |
-| `text-text-on-light-secondary`       | `#6f6f6f`     | Secondary text color on light backgrounds. |
-| `text-text-on-light-secondary-hover` | `#4e4e4e`     | Secondary text color on hover.             |
+| トークン                                 | デフォルト値    | 説明                       |
+| ------------------------------------ | --------- | ------------------------ |
+| `text-cta-link`                      | `#0061d5` | ハイパーリンクの色。               |
+| `text-cta-link-disabled`             | `#b2cff2` | 無効なハイパーリンクの色。            |
+| `text-cta-link-hover`                | `#1d6bca` | カーソルを合わせたときのハイパーリンクの色。   |
+| `text-cta-link-pressed`              | `#2486fc` | 押したときのハイパーリンクの色。         |
+| `text-text-error-on-light`           | `#d5324e` | 背景が明るい場合のエラーテキストの色。      |
+| `text-text-on-dark`                  | `#ffffff` | 背景が暗い場合のテキストの色。          |
+| `text-text-on-light`                 | `#222222` | 背景が明るい場合のプライマリテキストの色。    |
+| `text-text-on-light-secondary`       | `#6f6f6f` | 背景が明るい場合のセカンダリテキストの色。    |
+| `text-text-on-light-secondary-hover` | `#4e4e4e` | カーソルを合わせたときのセカンダリテキストの色。 |
 
-## Typography tokens
+## タイポグラフィのトークン
 
 <Message type="notice">
 
-The comment in the table refers to pixels in calculation based on a root font-size of 16 px.
+表内のコメントは、ルートフォントサイズの16ピクセルに基づいて計算されたピクセル数を示しています。
 
 </Message>
 
-| Token                                   | Default value                        | 説明                                        |
-| --------------------------------------- | ------------------------------------ | ----------------------------------------- |
-| `body-default-font-family`              | `Lato, "Helvetica Neue", sans-serif` | Font family for body text.                |
-| `body-default-font-size`                | `0.875rem`                           | Font size for body text.                  |
-| `body-default-font-weight`              | `400`                                | Font weight for body text.                |
-| `body-default-letter-spacing`           | `0.01875rem`                         | Letter spacing for body text.             |
-| `body-default-line-height`              | `1.25rem`                            | Line height for body text.                |
-| `body-default-text-decoration`          | `none`                               | Text decoration for body text.            |
-| `body-default-bold-font-family`         | `Lato, "Helvetica Neue", sans-serif` | Font family for bold body text.           |
-| `body-default-bold-font-size`           | `0.875rem`                           | Font size for bold body text.             |
-| `body-default-bold-font-weight`         | `700`                                | Font weight for bold body text.           |
-| `body-default-bold-letter-spacing`      | `0.01875rem`                         | Letter spacing for bold body text.        |
-| `body-default-bold-line-height`         | `1.25rem`                            | Line height for bold body text.           |
-| `body-default-bold-text-decoration`     | `none`                               | Text decoration for bold body text.       |
-| `body-default-semibold-font-family`     | `Lato, "Helvetica Neue", sans-serif` | Font family for semi-bold body text.      |
-| `body-default-semibold-font-size`       | `0.875rem`                           | Font size for semi-bold body text.        |
-| `body-default-semibold-font-weight`     | `600`                                | Font weight for semi-bold body text.      |
-| `body-default-semibold-letter-spacing`  | `0.01875rem`                         | Letter spacing for semi-bold body text.   |
-| `body-default-semibold-line-height`     | `1.25rem`                            | Line height for semi-bold body text.      |
-| `body-default-semibold-text-decoration` | `none`                               | Text decoration for semi-bold body text.  |
-| `body-large-font-family`                | `Lato, "Helvetica Neue", sans-serif` | Font family for large body text.          |
-| `body-large-font-size`                  | `1rem`                               | Font size for large body text.            |
-| `body-large-font-weight`                | `400`                                | Font weight for large body text.          |
-| `body-large-letter-spacing`             | `0.01875rem`                         | Letter spacing for large body text.       |
-| `body-large-line-height`                | `1.5rem`                             | Line height for large body text.          |
-| `body-large-text-decoration`            | `none`                               | Text decoration for large body text.      |
-| `body-large-bold-font-family`           | `Lato, "Helvetica Neue", sans-serif` | Font family for large bold body text.     |
-| `body-large-bold-font-size`             | `1rem`                               | Font size for large bold body text.       |
-| `body-large-bold-font-weight`           | `700`                                | Font weight for large bold body text.     |
-| `body-large-bold-letter-spacing`        | `0.01875rem`                         | Letter spacing for large bold body text.  |
-| `body-large-bold-line-height`           | `1.5rem`                             | Line height for large bold body text.     |
-| `body-large-bold-text-decoration`       | `none`                               | Text decoration for large bold body text. |
-| `caption-bold-font-family`              | `Lato, "Helvetica Neue", sans-serif` | Font family for bold captions.            |
-| `caption-bold-font-size`                | `0.75rem`                            | Font size for bold captions.              |
-| `caption-bold-font-weight`              | `700`                                | Font weight for bold captions.            |
-| `caption-bold-letter-spacing`           | `0.01875rem`                         | Letter spacing for bold captions.         |
-| `caption-bold-line-height`              | `0.875rem`                           | Line height for bold captions.            |
-| `caption-bold-text-decoration`          | `none`                               | Text decoration for bold captions.        |
-| `caption-default-font-family`           | `Lato, "Helvetica Neue", sans-serif` | Font family for captions.                 |
-| `caption-default-font-size`             | `0.75rem`                            | Font size for captions.                   |
-| `caption-default-font-weight`           | `400`                                | Font weight for captions.                 |
-| `caption-default-letter-spacing`        | `0.01875rem`                         | Letter spacing for captions.              |
-| `caption-default-line-height`           | `0.875rem`                           | Line height for captions.                 |
-| `caption-default-text-decoration`       | `none`                               | Text decoration for captions.             |
-| `label-bold-font-family`                | `Lato, "Helvetica Neue", sans-serif` | Font family for bold labels.              |
-| `label-bold-font-size`                  | `0.625rem`                           | Font size for bold labels.                |
-| `label-bold-font-weight`                | `700`                                | Font weight for bold labels.              |
-| `label-bold-letter-spacing`             | `0.0375rem`                          | Letter spacing for bold labels.           |
-| `label-bold-line-height`                | `1rem`                               | Line height for bold labels.              |
-| `label-bold-text-decoration`            | `none`                               | Text decoration for bold labels.          |
-| `label-default-font-family`             | `Lato, "Helvetica Neue", sans-serif` | Font family for labels.                   |
-| `label-default-font-size`               | `0.625rem`                           | Font size for labels.                     |
-| `label-default-font-weight`             | `400`                                | Font weight for labels.                   |
-| `label-default-letter-spacing`          | `0.0375rem`                          | Letter spacing for labels.                |
-| `label-default-line-height`             | `1rem`                               | Line height for labels.                   |
-| `label-default-text-decoration`         | `none`                               | Text decoration for labels.               |
-| `link-default-font-family`              | `Lato, "Helvetica Neue", sans-serif` | Font family for hyperlinks.               |
-| `link-default-font-size`                | `0.875rem`                           | Font size for hyperlinks.                 |
-| `link-default-font-weight`              | `400`                                | Font weight for hyperlinks.               |
-| `link-default-letter-spacing`           | `0.01875rem`                         | Letter spacing for hyperlinks.            |
-| `link-default-line-height`              | `1.25rem`                            | Line height for hyperlinks.               |
-| `link-default-text-decoration`          | `underline`                          | Text decoration for hyperlinks.           |
-| `notification-default-font-family`      | `Lato, "Helvetica Neue", sans-serif` | Font family for notifications.            |
-| `notification-default-font-size`        | `0.5625rem`                          | Font size for notifications.              |
-| `notification-default-font-weight`      | `700`                                | Font weight for notifications.            |
-| `notification-default-letter-spacing`   | `0.01875rem`                         | Letter spacing for notifications.         |
-| `notification-default-line-height`      | `0.75rem`                            | Line height for notifications.            |
-| `notification-default-text-decoration`  | `none`                               | Text decoration for notifications.        |
-| `title-large-font-family`               | `Lato, "Helvetica Neue", sans-serif` | Font family for large titles.             |
-| `title-large-font-size`                 | `1.125rem`                           | Font size for large titles.               |
-| `title-large-font-weight`               | `700`                                | Font weight for large titles.             |
-| `title-large-letter-spacing`            | `0.01875rem`                         | Letter spacing for large titles.          |
-| `title-large-line-height`               | `1.5rem`                             | Line height for large titles.             |
-| `title-large-text-decoration`           | `none`                               | Text decoration for large titles.         |
-| `title-medium-font-family`              | `Lato, "Helvetica Neue", sans-serif` | Font family for medium titles.            |
-| `title-medium-font-size`                | `1rem`                               | Font size for medium titles.              |
-| `title-medium-font-weight`              | `700`                                | Font weight for medium titles.            |
-| `title-medium-letter-spacing`           | `0.01875rem`                         | Letter spacing for medium titles.         |
-| `title-medium-line-height`              | `1.5rem`                             | Line height for medium titles.            |
-| `title-medium-text-decoration`          | `none`                               | Text decoration for medium titles.        |
-| `title-small-font-family`               | `Lato, "Helvetica Neue", sans-serif` | Font family for small titles.             |
-| `title-small-font-size`                 | `0.9375rem`                          | Font size for small titles.               |
-| `title-small-font-weight`               | `700`                                | Font weight for small titles.             |
-| `title-small-letter-spacing`            | `0.01875rem`                         | Letter spacing for small titles.          |
-| `title-small-line-height`               | `1.25rem`                            | Line height for small titles.             |
-| `title-small-text-decoration`           | `none`                               | Text decoration for small titles.         |
-| `title-subtitle-font-family`            | `Lato, "Helvetica Neue", sans-serif` | Font family for subtitles.                |
-| `title-subtitle-font-size`              | `0.875rem`                           | Font size for subtitles.                  |
-| `title-subtitle-font-weight`            | `700`                                | Font weight for subtitles.                |
-| `title-subtitle-letter-spacing`         | `0.01875rem`                         | Letter spacing for subtitles.             |
-| `title-subtitle-line-height`            | `1.25rem`                            | Line height for subtitles.                |
-| `title-subtitle-text-decoration`        | `none`                               | Text decoration for subtitles.            |
-| `title-x-large-font-family`             | `Lato, "Helvetica Neue", sans-serif` | Font family for extra-large titles.       |
-| `title-x-large-font-size`               | `1.3125rem`                          | Font size for extra-large titles.         |
-| `title-x-large-font-weight`             | `700`                                | Font weight for extra-large titles.       |
-| `title-x-large-letter-spacing`          | `0.01875rem`                         | Letter spacing for extra-large titles.    |
-| `title-x-large-line-height`             | `2rem`                               | Line height for extra-large titles.       |
-| `title-x-large-text-decoration`         | `none`                               | Text decoration for extra-large titles.   |
+| トークン                                    | デフォルト値                               | 説明                       |
+| --------------------------------------- | ------------------------------------ | ------------------------ |
+| `body-default-font-family`              | `Lato, "Helvetica Neue", sans-serif` | 本文テキストのフォントファミリ。         |
+| `body-default-font-size`                | `0.875rem`                           | 本文テキストのフォントサイズ。          |
+| `body-default-font-weight`              | `400`                                | 本文テキストのフォントの太さ。          |
+| `body-default-letter-spacing`           | `0.01875rem`                         | 本文テキストの文字間隔。             |
+| `body-default-line-height`              | `1.25rem`                            | 本文テキストの行の高さ。             |
+| `body-default-text-decoration`          | `none`                               | 本文テキストの装飾。               |
+| `body-default-bold-font-family`         | `Lato, "Helvetica Neue", sans-serif` | 本文テキスト (太字) のフォントファミリ。   |
+| `body-default-bold-font-size`           | `0.875rem`                           | 本文テキスト (太字) のフォントサイズ。    |
+| `body-default-bold-font-weight`         | `700`                                | 本文テキスト (太字) のフォントの太さ。    |
+| `body-default-bold-letter-spacing`      | `0.01875rem`                         | 本文テキスト (太字) の文字間隔。       |
+| `body-default-bold-line-height`         | `1.25rem`                            | 本文テキスト (太字) の行の高さ。       |
+| `body-default-bold-text-decoration`     | `none`                               | 本文テキスト (太字) の装飾。         |
+| `body-default-semibold-font-family`     | `Lato, "Helvetica Neue", sans-serif` | 本文テキスト (半太字) のフォントファミリ。  |
+| `body-default-semibold-font-size`       | `0.875rem`                           | 本文テキスト (半太字) のフォントサイズ。   |
+| `body-default-semibold-font-weight`     | `600`                                | 本文テキスト (半太字) のフォントの太さ。   |
+| `body-default-semibold-letter-spacing`  | `0.01875rem`                         | 本文テキスト (半太字) の文字間隔。      |
+| `body-default-semibold-line-height`     | `1.25rem`                            | 本文テキスト (半太字) の行の高さ。      |
+| `body-default-semibold-text-decoration` | `none`                               | 本文テキスト (半太字) の装飾。        |
+| `body-large-font-family`                | `Lato, "Helvetica Neue", sans-serif` | 本文テキスト (大) のフォントファミリ。    |
+| `body-large-font-size`                  | `1rem`                               | 本文テキスト (大) のフォントサイズ。     |
+| `body-large-font-weight`                | `400`                                | 本文テキスト (大) のフォントの太さ。     |
+| `body-large-letter-spacing`             | `0.01875rem`                         | 本文テキスト (大) の文字間隔。        |
+| `body-large-line-height`                | `1.5rem`                             | 本文テキスト (大) の行の高さ。        |
+| `body-large-text-decoration`            | `none`                               | 本文テキスト (大) の装飾。          |
+| `body-large-bold-font-family`           | `Lato, "Helvetica Neue", sans-serif` | 本文テキスト (大、太字) のフォントファミリ。 |
+| `body-large-bold-font-size`             | `1rem`                               | 本文テキスト (大、太字) のフォントサイズ。  |
+| `body-large-bold-font-weight`           | `700`                                | 本文テキスト (大、太字) のフォントの太さ。  |
+| `body-large-bold-letter-spacing`        | `0.01875rem`                         | 本文テキスト (大、太字) の文字間隔。     |
+| `body-large-bold-line-height`           | `1.5rem`                             | 本文テキスト (大、太字) の行の高さ。     |
+| `body-large-bold-text-decoration`       | `none`                               | 本文テキスト (大、太字) の装飾。       |
+| `caption-bold-font-family`              | `Lato, "Helvetica Neue", sans-serif` | キャプション (太字) のフォントファミリ。   |
+| `caption-bold-font-size`                | `0.75rem`                            | キャプション (太字) のフォントサイズ。    |
+| `caption-bold-font-weight`              | `700`                                | キャプション (太字) のフォントの太さ。    |
+| `caption-bold-letter-spacing`           | `0.01875rem`                         | キャプション (太字) の文字間隔。       |
+| `caption-bold-line-height`              | `0.875rem`                           | キャプション (太字) の行の高さ。       |
+| `caption-bold-text-decoration`          | `none`                               | キャプション (太字) のテキストの装飾。    |
+| `caption-default-font-family`           | `Lato, "Helvetica Neue", sans-serif` | キャプションのフォントファミリ。         |
+| `caption-default-font-size`             | `0.75rem`                            | キャプションのフォントサイズ。          |
+| `caption-default-font-weight`           | `400`                                | キャプションのフォントの太さ。          |
+| `caption-default-letter-spacing`        | `0.01875rem`                         | キャプションの文字間隔。             |
+| `caption-default-line-height`           | `0.875rem`                           | キャプションの行の高さ。             |
+| `caption-default-text-decoration`       | `none`                               | キャプションのテキストの装飾。          |
+| `label-bold-font-family`                | `Lato, "Helvetica Neue", sans-serif` | ラベル (太字) のフォントファミリ。      |
+| `label-bold-font-size`                  | `0.625rem`                           | ラベル (太字) のフォントサイズ。       |
+| `label-bold-font-weight`                | `700`                                | ラベル (太字) のフォントの太さ。       |
+| `label-bold-letter-spacing`             | `0.0375rem`                          | ラベル (太字) の文字間隔。          |
+| `label-bold-line-height`                | `1rem`                               | ラベル (太字) の行の高さ。          |
+| `label-bold-text-decoration`            | `none`                               | ラベル (太字) のテキストの装飾。       |
+| `label-default-font-family`             | `Lato, "Helvetica Neue", sans-serif` | ラベルのフォントファミリ。            |
+| `label-default-font-size`               | `0.625rem`                           | ラベルのフォントサイズ。             |
+| `label-default-font-weight`             | `400`                                | ラベルのフォントの太さ。             |
+| `label-default-letter-spacing`          | `0.0375rem`                          | ラベルの文字間隔。                |
+| `label-default-line-height`             | `1rem`                               | ラベルの行の高さ。                |
+| `label-default-text-decoration`         | `none`                               | ラベルのテキストの装飾。             |
+| `link-default-font-family`              | `Lato, "Helvetica Neue", sans-serif` | ハイパーリンクのフォントファミリ。        |
+| `link-default-font-size`                | `0.875rem`                           | ハイパーリンクのフォントサイズ。         |
+| `link-default-font-weight`              | `400`                                | ハイパーリンクのフォントの太さ。         |
+| `link-default-letter-spacing`           | `0.01875rem`                         | ハイパーリンクの文字間隔。            |
+| `link-default-line-height`              | `1.25rem`                            | ハイパーリンクの行の高さ。            |
+| `link-default-text-decoration`          | `underline`                          | ハイパーリンクのテキストの装飾。         |
+| `notification-default-font-family`      | `Lato, "Helvetica Neue", sans-serif` | 通知のフォントファミリ。             |
+| `notification-default-font-size`        | `0.5625rem`                          | 通知のフォントサイズ。              |
+| `notification-default-font-weight`      | `700`                                | 通知のフォントの太さ。              |
+| `notification-default-letter-spacing`   | `0.01875rem`                         | 通知の文字間隔。                 |
+| `notification-default-line-height`      | `0.75rem`                            | 通知の行の高さ。                 |
+| `notification-default-text-decoration`  | `none`                               | 通知のテキストの装飾。              |
+| `title-large-font-family`               | `Lato, "Helvetica Neue", sans-serif` | タイトル (大) のフォントファミリ。      |
+| `title-large-font-size`                 | `1.125rem`                           | タイトル (大) のフォントサイズ。       |
+| `title-large-font-weight`               | `700`                                | タイトル (大) のフォントの太さ。       |
+| `title-large-letter-spacing`            | `0.01875rem`                         | タイトル (大) の文字間隔。          |
+| `title-large-line-height`               | `1.5rem`                             | タイトル (大) の行の高さ。          |
+| `title-large-text-decoration`           | `none`                               | タイトル (大) のテキストの装飾。       |
+| `title-medium-font-family`              | `Lato, "Helvetica Neue", sans-serif` | タイトル (中) のフォントファミリ。      |
+| `title-medium-font-size`                | `1rem`                               | タイトル (中) のフォントサイズ。       |
+| `title-medium-font-weight`              | `700`                                | タイトル (中) のフォントの太さ。       |
+| `title-medium-letter-spacing`           | `0.01875rem`                         | タイトル (中) の文字間隔。          |
+| `title-medium-line-height`              | `1.5rem`                             | タイトル (中) の行の高さ。          |
+| `title-medium-text-decoration`          | `none`                               | タイトル (中) のテキストの装飾。       |
+| `title-small-font-family`               | `Lato, "Helvetica Neue", sans-serif` | タイトル (小) のフォントファミリ。      |
+| `title-small-font-size`                 | `0.9375rem`                          | タイトル (小) のフォントサイズ。       |
+| `title-small-font-weight`               | `700`                                | タイトル (小) のフォントの太さ。       |
+| `title-small-letter-spacing`            | `0.01875rem`                         | タイトル (小) の文字間隔。          |
+| `title-small-line-height`               | `1.25rem`                            | タイトル (小) の行の高さ。          |
+| `title-small-text-decoration`           | `none`                               | タイトル (小) のテキストの装飾。       |
+| `title-subtitle-font-family`            | `Lato, "Helvetica Neue", sans-serif` | サブタイトルのフォントファミリ。         |
+| `title-subtitle-font-size`              | `0.875rem`                           | サブタイトルのフォントサイズ。          |
+| `title-subtitle-font-weight`            | `700`                                | サブタイトルのフォントの太さ。          |
+| `title-subtitle-letter-spacing`         | `0.01875rem`                         | サブタイトルの文字間隔。             |
+| `title-subtitle-line-height`            | `1.25rem`                            | サブタイトルの行の高さ。             |
+| `title-subtitle-text-decoration`        | `none`                               | サブタイトルのテキストの装飾。          |
+| `title-x-large-font-family`             | `Lato, "Helvetica Neue", sans-serif` | タイトル (特大) のフォントファミリ。     |
+| `title-x-large-font-size`               | `1.3125rem`                          | タイトル (特大) のフォントサイズ。      |
+| `title-x-large-font-weight`             | `700`                                | タイトル (特大) のフォントの太さ。      |
+| `title-x-large-letter-spacing`          | `0.01875rem`                         | タイトル (特大) の文字間隔。         |
+| `title-x-large-line-height`             | `2rem`                               | タイトル (特大) の行の高さ。         |
+| `title-x-large-text-decoration`         | `none`                               | タイトル (特大) のテキストの装飾。      |
 
-## Spacing, sizing, and shape tokens
+## 間隔、サイズ、形状のトークン
 
 <Message type="notice">
 
-The comment in the table refers to pixels in calculation based on a root font-size of 16 px.
+表内のコメントは、ルートフォントサイズの16ピクセルに基づいて計算されたピクセル数を示しています。
 
 </Message>
 
-| Token          | Default value                              | 説明                                      |
-| -------------- | ------------------------------------------ | --------------------------------------- |
-| `border-1`     | `0.0625rem`                                | Border width (1 px equivalent).         |
-| `border-2`     | `0.125rem`                                 | Border width (2 px equivalent).         |
-| `border-3`     | `0.1875rem`                                | Border width (3 px equivalent).         |
-| `border-4`     | `0.25rem`                                  | Border width (4 px equivalent).         |
-| `border-6`     | `0.375rem`                                 | Border width (6 px equivalent).         |
-| `border-8`     | `0.5rem`                                   | Border width (8 px equivalent).         |
-| `dropshadow-1` | `0 0 0.5rem 0 rgba(0, 0, 0, 0.05)`         | Subtle shadow effect.                   |
-| `dropshadow-2` | `0 0.0625rem 0.25rem 0 rgba(0, 0, 0, 0.1)` | Medium shadow effect.                   |
-| `dropshadow-3` | `0 0.25rem 0.75rem 0 rgba(0, 0, 0, 0.1)`   | Pronounced shadow effect.               |
-| `radius-05`    | `0.125rem`                                 | Border radius (2 px equivalent).        |
-| `radius-1`     | `0.25rem`                                  | Border radius (4 px equivalent).        |
-| `radius-2`     | `0.375rem`                                 | Border radius (6 px equivalent).        |
-| `radius-3`     | `0.5rem`                                   | Border radius (8 px equivalent).        |
-| `radius-4`     | `0.75rem`                                  | Border radius (12 px equivalent).       |
-| `radius-5`     | `1rem`                                     | Border radius (16 px equivalent).       |
-| `radius-6`     | `1.25rem`                                  | Border radius (20 px equivalent).       |
-| `radius-7`     | `1.5rem`                                   | Border radius (24 px equivalent).       |
-| `radius-8`     | `1.75rem`                                  | Border radius (28 px equivalent).       |
-| `radius-half`  | `2rem`                                     | Border radius (32 px equivalent).       |
-| `size-05`      | `0.125rem`                                 | Size measurement (2 px equivalent).     |
-| `size-1`       | `0.25rem`                                  | Size measurement (4 px equivalent).     |
-| `size-2`       | `0.5rem`                                   | Size measurement (8 px equivalent).     |
-| `size-3`       | `0.75rem`                                  | Size measurement (12 px equivalent).    |
-| `size-4`       | `1rem`                                     | Size measurement (16 px equivalent).    |
-| `size-5`       | `1.25rem`                                  | Size measurement (20 px equivalent).    |
-| `size-6`       | `1.5rem`                                   | Size measurement (24 px equivalent).    |
-| `size-7`       | `1.75rem`                                  | Size measurement (28 px equivalent).    |
-| `size-8`       | `2rem`                                     | Size measurement (32 px equivalent).    |
-| `size-9`       | `2.25rem`                                  | Size measurement (36 px equivalent).    |
-| `size-10`      | `2.5rem`                                   | Size measurement (40 px equivalent).    |
-| `size-11`      | `2.75rem`                                  | Size measurement (44 px equivalent).    |
-| `size-12`      | `3rem`                                     | Size measurement (48 px equivalent).    |
-| `size-14`      | `3.5rem`                                   | Size measurement (56 px equivalent).    |
-| `size-15`      | `3.75rem`                                  | Size measurement (60 px equivalent).    |
-| `size-16`      | `4rem`                                     | Size measurement (64 px equivalent).    |
-| `size-18`      | `4.5rem`                                   | Size measurement (72 px equivalent).    |
-| `size-20`      | `5rem`                                     | Size measurement (80 px equivalent).    |
-| `space-05`     | `0.125rem`                                 | Spacing measurement (2 px equivalent).  |
-| `space-1`      | `0.25rem`                                  | Spacing measurement (4 px equivalent).  |
-| `space-2`      | `0.5rem`                                   | Spacing measurement (8 px equivalent).  |
-| `space-3`      | `0.75rem`                                  | Spacing measurement (12 px equivalent). |
-| `space-4`      | `1rem`                                     | Spacing measurement (16 px equivalent). |
-| `space-5`      | `1.25rem`                                  | Spacing measurement (20 px equivalent). |
-| `space-6`      | `1.5rem`                                   | Spacing measurement (24 px equivalent). |
-| `space-7`      | `1.75rem`                                  | Spacing measurement (28 px equivalent). |
-| `space-8`      | `2rem`                                     | Spacing measurement (32 px equivalent). |
-| `space-9`      | `2.25rem`                                  | Spacing measurement (36 px equivalent). |
-| `space-10`     | `2.5rem`                                   | Spacing measurement (40 px equivalent). |
-| `space-11`     | `2.75rem`                                  | Spacing measurement (44 px equivalent). |
-| `space-12`     | `3rem`                                     | Spacing measurement (48 px equivalent). |
-| `space-14`     | `3.5rem`                                   | Spacing measurement (56 px equivalent). |
-| `space-15`     | `3.75rem`                                  | Spacing measurement (60 px equivalent). |
-| `space-16`     | `4rem`                                     | Spacing measurement (64 px equivalent). |
-| `space-18`     | `4.5rem`                                   | Spacing measurement (72 px equivalent). |
-| `space-20`     | `5rem`                                     | Spacing measurement (80 px equivalent). |
+| トークン           | デフォルト値                                     | 説明                  |
+| -------------- | ------------------------------------------ | ------------------- |
+| `border-1`     | `0.0625rem`                                | 境界線の幅 (1ピクセルに相当)。   |
+| `border-2`     | `0.125rem`                                 | 境界線の幅 (2ピクセルに相当)。   |
+| `border-3`     | `0.1875rem`                                | 境界線の幅 (3ピクセルに相当)。   |
+| `border-4`     | `0.25rem`                                  | 境界線の幅 (4ピクセルに相当)。   |
+| `border-6`     | `0.375rem`                                 | 境界線の幅 (6ピクセルに相当)。   |
+| `border-8`     | `0.5rem`                                   | 境界線の幅 (8ピクセルに相当)。   |
+| `dropshadow-1` | `0 0 0.5rem 0 rgba(0, 0, 0, 0.05)`         | 微妙なシャドウ効果。          |
+| `dropshadow-2` | `0 0.0625rem 0.25rem 0 rgba(0, 0, 0, 0.1)` | 中程度のシャドウ効果。         |
+| `dropshadow-3` | `0 0.25rem 0.75rem 0 rgba(0, 0, 0, 0.1)`   | 顕著なシャドウ効果。          |
+| `radius-05`    | `0.125rem`                                 | 境界線の半径 (2ピクセルに相当)。  |
+| `radius-1`     | `0.25rem`                                  | 境界線の半径 (4ピクセルに相当)。  |
+| `radius-2`     | `0.375rem`                                 | 境界線の半径 (6ピクセルに相当)。  |
+| `radius-3`     | `0.5rem`                                   | 境界線の半径 (8ピクセルに相当)。  |
+| `radius-4`     | `0.75rem`                                  | 境界線の半径 (12ピクセルに相当)。 |
+| `radius-5`     | `1rem`                                     | 境界線の半径 (16ピクセルに相当)。 |
+| `radius-6`     | `1.25rem`                                  | 境界線の半径 (20ピクセルに相当)。 |
+| `radius-7`     | `1.5rem`                                   | 境界線の半径 (24ピクセルに相当)。 |
+| `radius-8`     | `1.75rem`                                  | 境界線の半径 (28ピクセルに相当)。 |
+| `radius-half`  | `2rem`                                     | 境界線の半径 (32ピクセルに相当)。 |
+| `size-05`      | `0.125rem`                                 | サイズ指定 (2ピクセルに相当)。   |
+| `size-1`       | `0.25rem`                                  | サイズ指定 (4ピクセルに相当)。   |
+| `size-2`       | `0.5rem`                                   | サイズ指定 (8ピクセルに相当)。   |
+| `size-3`       | `0.75rem`                                  | サイズ指定 (12ピクセルに相当)。  |
+| `size-4`       | `1rem`                                     | サイズ指定 (16ピクセルに相当)。  |
+| `size-5`       | `1.25rem`                                  | サイズ指定 (20ピクセルに相当)。  |
+| `size-6`       | `1.5rem`                                   | サイズ指定 (24ピクセルに相当)。  |
+| `size-7`       | `1.75rem`                                  | サイズ指定 (28ピクセルに相当)。  |
+| `size-8`       | `2rem`                                     | サイズ指定 (32ピクセルに相当)。  |
+| `size-9`       | `2.25rem`                                  | サイズ指定 (36ピクセルに相当)。  |
+| `size-10`      | `2.5rem`                                   | サイズ指定 (40ピクセルに相当)。  |
+| `size-11`      | `2.75rem`                                  | サイズ指定 (44ピクセルに相当)。  |
+| `size-12`      | `3rem`                                     | サイズ指定 (48ピクセルに相当)。  |
+| `size-14`      | `3.5rem`                                   | サイズ指定 (56ピクセルに相当)。  |
+| `size-15`      | `3.75rem`                                  | サイズ指定 (60ピクセルに相当)。  |
+| `size-16`      | `4rem`                                     | サイズ指定 (64ピクセルに相当)。  |
+| `size-18`      | `4.5rem`                                   | サイズ指定 (72ピクセルに相当)。  |
+| `size-20`      | `5rem`                                     | サイズ指定 (80ピクセルに相当)。  |
+| `space-05`     | `0.125rem`                                 | 間隔指定 (2ピクセルに相当)。    |
+| `space-1`      | `0.25rem`                                  | 間隔指定 (4ピクセルに相当)。    |
+| `space-2`      | `0.5rem`                                   | 間隔指定 (8ピクセルに相当)。    |
+| `space-3`      | `0.75rem`                                  | 間隔指定 (12ピクセルに相当)。   |
+| `space-4`      | `1rem`                                     | 間隔指定 (16ピクセルに相当)。   |
+| `space-5`      | `1.25rem`                                  | 間隔指定 (20ピクセルに相当)。   |
+| `space-6`      | `1.5rem`                                   | 間隔指定 (24ピクセルに相当)。   |
+| `space-7`      | `1.75rem`                                  | 間隔指定 (28ピクセルに相当)。   |
+| `space-8`      | `2rem`                                     | 間隔指定 (32ピクセルに相当)。   |
+| `space-9`      | `2.25rem`                                  | 間隔指定 (36ピクセルに相当)。   |
+| `space-10`     | `2.5rem`                                   | 間隔指定 (40ピクセルに相当)。   |
+| `space-11`     | `2.75rem`                                  | 間隔指定 (44ピクセルに相当)。   |
+| `space-12`     | `3rem`                                     | 間隔指定 (48ピクセルに相当)。   |
+| `space-14`     | `3.5rem`                                   | 間隔指定 (56ピクセルに相当)。   |
+| `space-15`     | `3.75rem`                                  | 間隔指定 (60ピクセルに相当)。   |
+| `space-16`     | `4rem`                                     | 間隔指定 (64ピクセルに相当)。   |
+| `space-18`     | `4.5rem`                                   | 間隔指定 (72ピクセルに相当)。   |
+| `space-20`     | `5rem`                                     | 間隔指定 (80ピクセルに相当)。   |
 
 [ts]: g://embed/ui-elements/theming-styling

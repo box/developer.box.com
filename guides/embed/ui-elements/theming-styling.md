@@ -32,7 +32,7 @@ Box UI Elementsのテーマとスタイルの設定により、企業の要件�
 
 <Message type="notice">
 
-As of now, [theming & styling][blog] is available for Content Explorer and Content Uploader.
+現時点では、[テーマとスタイルの設定][blog]は、コンテンツエクスプローラとコンテンツアップローダーで使用可能です。
 
 </Message>
 
@@ -44,7 +44,7 @@ As of now, [theming & styling][blog] is available for Content Explorer and Conte
 
 ## カスタマイズ
 
-Box uses [design tokens][dt] for the customization purposes.
+Boxでは、カスタマイズの目的で[デザイントークン][dt]を使用します。
 
 <Message type="notice">
 
@@ -119,23 +119,23 @@ Box uses [design tokens][dt] for the customization purposes.
 
 <!--alex ignore -->
 
-Customize text input, drop down, and checkboxes with individual color
+テキスト入力、ドロップダウン、チェックボックスを独自の色でカスタマイズできます。
 
 <!--alex enable -->
 
-### Icons
+### アイコン
 
-Style interactive icons such as buttons or drop downs.
+ボタンやドロップダウンなどのインタラクティブなアイコンのスタイルを設定します。
 
 <Message type="notice">
 
-To replace non-interactive icons such as file or folder icons with your custom ones, use inline SVGs in CSS. To change non-interactive icons color, height, and width, use CSS.
+ファイルアイコンやフォルダアイコンなどの非インタラクティブなアイコンをカスタムアイコンに置き換えるには、CSSでインラインSVGを使用します。非インタラクティブなアイコンの色、高さ、幅を変更するには、CSSを使用します。
 
 </Message>
 
-See the implemented examples of custom icons in CodePen:
+CodePenでカスタムアイコンの実装例を確認してください。
 
-<iframe height="560" scrolling="no" title="Box custom icons" src="https://codepen.io/box-platform/embed/raaRqye?default-tab=html%2Cresult" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
+<iframe height="560" scrolling="no" title="Boxのカスタムアイコン" src="https://codepen.io/box-platform/embed/raaRqye?default-tab=html%2Cresult" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
 
 </iframe>
 
