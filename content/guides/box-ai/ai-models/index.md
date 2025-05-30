@@ -125,14 +125,14 @@ Box AI is powered by the following AI models. These models are integrated with B
     <Tile type="gemini" title="google__gemini_1_5_flash_001" href="/guides/box-ai/ai-models/google-gemini-1-5-flash-001-model-card">
       Gemini multimodal model, built for high volume tasks and latency-sensitive applications.
       <div>
-        <strong style="background-color: #e1ffe7">Available</strong>
+        <strong style="background-color: #999999">Deprecated</strong>
       </div>
     </Tile>
     <Tile type="gemini" title="google__gemini_1_5_pro_001" href="/guides/box-ai/ai-models/google-gemini-1-5-pro-001-model-card">
         A foundation model that performs well at a variety of multimodal tasks.
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
-        <strong style="background-color: #e1ffe7">Available</strong>
+        <strong style="background-color: #999999">Deprecated</strong>
       </div>
     </Tile>
     <Tile type="model" title="aws__claude_3_haiku" href="/guides/box-ai/ai-models/aws-claude-3-haiku-model-card">
@@ -158,6 +158,20 @@ Box AI is powered by the following AI models. These models are integrated with B
     </Tile>
 		<Tile type="model" title="aws__claude_3_7_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-7-sonnet-model-card">
       A model designed to enhance language understanding and generation tasks.
+      <div>
+        <strong style="background-color: #e8e8e8">Chat</strong>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+		<Tile type="model" title="aws__claude_4_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-sonnet-model-card">
+      A model that brings frontier performance to everyday use cases.
+      <div>
+        <strong style="background-color: #e8e8e8">Chat</strong>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+		<Tile type="model" title="aws__claude_4_opus" href="/guides/box-ai/ai-models/aws-claude-4-opus-model-card">
+      A model that excels at coding and complex problem-solving, powering frontier agent products.
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
