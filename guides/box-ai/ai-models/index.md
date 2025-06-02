@@ -12,10 +12,10 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 22
+total_steps: 23
 sibling_id: box-ai
 parent_id: box-ai
-next_page_id: box-ai/ai-models/azure-openai-gpt-o4-mini-model-card
+next_page_id: box-ai/ai-models/azure-openai-gpt-o3-model-card
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/index.md
@@ -85,44 +85,6 @@ Box AI for NotesのQ&Aのデフォルト
 <strong style="background-color: #e1ffe7">
 
 利用可能
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="gpt" title="azure__openai__gpt_o3" href="/guides/box-ai/ai-models/azure-openai-gpt-o3-model-card">
-
-複雑なマルチステップタスクの処理で非常に効率的なマルチモーダルモデル。
-
-<div>
-
-<strong style="background-color: #fffbf3">
-
-ベータ
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="gpt" title="azure__openai__gpt_o4-mini" href="/guides/box-ai/ai-models/azure-openai-gpt-o4-mini-model-card">
-
-複雑なマルチステップタスクの処理で非常に効率的なマルチモーダルモデル。
-
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-チャット
-
-</strong>
-
-<strong style="background-color: #fffbf3">
-
-ベータ
 
 </strong>
 
@@ -318,9 +280,9 @@ Box AI Extractのデフォルト
 
 <div>
 
-<strong style="background-color: #e1ffe7">
+<strong style="background-color: #999999">
 
-利用可能
+非推奨
 
 </strong>
 
@@ -340,9 +302,9 @@ Box AI Extractのデフォルト
 
 </strong>
 
-<strong style="background-color: #e1ffe7">
+<strong style="background-color: #999999">
 
-利用可能
+非推奨
 
 </strong>
 
@@ -419,6 +381,50 @@ Box AI Extractのデフォルト
 <Tile type="model" title="aws__claude_3_7_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-7-sonnet-model-card">
 
 言語の理解と生成のタスクを強化するよう設計されたモデル。
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+利用可能
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="aws__claude_4_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-sonnet-model-card">
+
+A model that brings frontier performance to everyday use cases.
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+利用可能
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="aws__claude_4_opus" href="/guides/box-ai/ai-models/aws-claude-4-opus-model-card">
+
+A model that excels at coding and complex problem-solving, powering frontier agent products.
 
 <div>
 
@@ -534,7 +540,7 @@ Box AIの一部の顧客は、リクエストに応じて追加のAIモデルを
 
 </Tile>
 
-<Tile type="model" title="xai__grok_3_mini_beta" href="/guides/box-ai/ai-models/xai-grok-3-mini-beta-model-card">
+<Tile type="model" title="xai__grok_3_mini_reasoning_beta" href="/guides/box-ai/ai-models/xai-grok-3-mini-beta-model-card">
 
 深い専門知識を必要としない、論理ベースのタスクに適している軽量のモデル。
 
@@ -545,6 +551,22 @@ Box AIの一部の顧客は、リクエストに応じて追加のAIモデルを
 チャット
 
 </strong>
+
+<strong style="background-color: #fffbf3">
+
+ベータ
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="gpt" title="azure__openai__gpt_o3" href="/guides/box-ai/ai-models/azure-openai-gpt-o3-model-card">
+
+複雑なマルチステップタスクの処理で非常に効率的なマルチモーダルモデル。
+
+<div>
 
 <strong style="background-color: #fffbf3">
 

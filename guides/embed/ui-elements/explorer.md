@@ -14,10 +14,10 @@ subcategory_id: embed/ui-elements
 is_index: false
 id: embed/ui-elements/explorer
 type: guide
-total_steps: 16
+total_steps: 17
 sibling_id: embed/ui-elements
 parent_id: embed/ui-elements
-next_page_id: embed/ui-elements/open-with
+next_page_id: embed/ui-elements/explorer-metadata
 previous_page_id: embed/ui-elements/browser
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/explorer.md
@@ -247,165 +247,6 @@ contentExplorer.removeAllListeners();
 | ユーザーが基本機能、プレビュー、ダウンロード、およびファイル/フォルダ名の変更を必要とする              | `base_explorer` + `item_preview` + `item_download` + `item_rename`                                                |
 | ユーザーがすべての機能 (基本、プレビュー、ダウンロード、名前の変更、共有、アップロード、および削除) を必要とする | `base_explorer` + `item_preview` + `item_download` + `item_rename` + `item_delete` + `item_share` + `item_upload` |
 
-## メタデータビュー
-
-コンテンツエクスプローラを使用すると、メタデータに基づいてファイルやフォルダを表示することもできます。このビューはメタデータビューと呼ばれ、メタデータテンプレートとメタデータクエリを使用して、表示するデータを探します。
-
-### アプリの作成と構成
-
-1. [Boxアプリを作成します][box-app]。
-2. \[CORSドメイン] にローカルでの開発用のアドレスを追加します。 ![CORSドメイン](./images/box-app-cors.png)
-3. [開発者トークン][token]を生成します。
-
-### メタデータテンプレートの作成
-
-次の手順では、コンテンツエクスプローラにデータを設定するために使用するメタデータテンプレートを作成します。
-
-1. メタデータテンプレートを作成します。これには、[メタデータAPI][creating-templates-api]または[管理コンソール][creating-templates-ui]を使用できます。
-2. すでに作成済みのテンプレートをBoxフォルダに適用します。必ずカスケードポリシーを有効にするようにしてください。詳細な手順については、[テンプレートのカスタマイズと適用の手順][apply-templates]を参照してください。
-
-### メタデータビューの表示
-
-作業を簡単にするために、[サンプルプロジェクト][metadata-project]を使用してメタデータビューを起動できます。
-
-1. メタデータのサンプルプロジェクトを複製します。
-2. [`App.js`][appjs]内のプレースホルダを実際の値で更新します。
-
-   | パラメータ                    | 説明                                                                                                                                                                                                                                         |
-   | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-   | `DEVELOPER_TOKEN`        | 開発者コンソールで生成された[開発者トークン][token]。                                                                                                                                                                                                            |
-   | `ENTERPRISE_ID`          | アプリケーションの \[**一般設定**] タブからコピーしたEnterprise ID。                                                                                                                                                                                              |
-   | `METADATA_TEMPLATE_NAME` | 作成済みのメタデータテンプレートの名前。**注**: 適切な名前を指定済みであることを確認するには、[メタデータAPI][get-template]を使用して名前を取得するか、管理コンソールでURLから名前をコピーします。![管理コンソールにおけるメタデータ名](./images/metadata-template-name.png) UIでテンプレート名を変更しても、変更されるのはラベルのみです。コンポーネントで使用する名前は、常に最初に指定した名前になります。 |
-   | `ROOTFOLDER_ID`          | メタデータテンプレートを適用したBoxフォルダのID。                                                                                                                                                                                                                |
-
-`defaultView`、`fieldsToShow`、`metadataQuery`の各パラメータは、以下の例に示すように、すでにサンプルプロジェクトで定義されています。
-
-メタデータクエリの詳細については、[こちらのガイド][metadata-query]を参照してください。
-
-3. コンテンツエクスプローラコンポーネントに必須パラメータを渡します。
-
-```js
-    [...]
-
-      function App() {
-          [...]
-
-          return (
-              <IntlProvider locale="en">
-                <div className="App">
-                  <header className="App-header">
-                    <h2>Metadata view in Content Explorer</h2>
-                  </header>
-                  <section>
-                    <div className="metadata-based-view">
-                      <ContentExplorer
-                        rootFolderId={rootFolderID}
-                        token={token}
-                        metadataQuery={metadataQuery}
-                        fieldsToShow={fieldsToShow}
-                        defaultView={defaultView}
-                      />
-                    </div>
-                  </section>
-                </div>
-              </IntlProvider>
-          );
-      }
-
-      export default App;
-
-```
-
-コンテンツエクスプローラのメタデータビューを含むReactコンポーネントのサンプルコードは次のようになります。
-
-```js
-function App() {
-    // Get the token from Developer Console (app's configuration tab)
-    const token = "<DEVELOPER_TOKEN>";
-
-    // Folder ID with a metadata template applied
-    // The metadataQuery will apply to this folder
-    const rootFolderID = "<ROOTFOLDER_ID>";
-
-    // Get ENTERPRISE_ID from Developer Console (app's general settings)
-    const EID = "<ENTERPRISE_ID>";
-
-    // Get templatekey from Admin Console (Content -> Metadata -> check url for ID)
-    const templateName = "<METADATA_TEMPLATE_NAME>";
-
-    // Define metadata source
-    // Example: enterprise_123456789.metadatatemplate
-    const metadataSource = `enterprise_${EID}.${templateName}`;
-    const metadataSourceFieldName = `metadata.${metadataSource}`;
-    
-    const metadataQuery = {
-        from: metadataSource,
-
-        // Filter items in the folder by existing metadata key
-        query: "key = :arg1",
-
-        // Display items with value
-        query_params: { arg1: "value" },
-
-        // Define the ancestor folder ID
-        ancestor_folder_id: 0,
-
-        // Define which other metadata fields you'd like to display
-        fields: [
-            `${metadataSourceFieldName}.name`,
-            `${metadataSourceFieldName}.last_contacted_at`,
-            `${metadataSourceFieldName}.industry`,
-            `${metadataSourceFieldName}.role`,
-        ],
-    };
-
-    // The metadata fields/columns to view - must be valid field names from the metadata template
-    const fieldsToShow = [
-        // Determine if the user can edit the metadata directly from Content Explorer component
-        { key: `${metadataSourceFieldName}.name`, canEdit: false },
-
-        // Determine label alias on metadata column with displayName prop
-        { key: `${metadataSourceFieldName}.industry`, canEdit: false, displayName: "alias" },
-        { key: `${metadataSourceFieldName}.last_contacted_at`, canEdit: true },
-        { key: `${metadataSourceFieldName}.role`, canEdit: true },
-    ];
-
-    // defaultView - a required prop to paint the metadata view.
-    // If not provided, you'll get regular folder view.
-    const defaultView = "metadata";
-
-    return (
-        <IntlProvider locale="en">
-            <div className="App">
-                <header className="App-header">
-                    <h2>Metadata view in Content Explorer</h2>
-                </header>
-                <section>
-                    <div className="metadata-based-view">
-                        <ContentExplorer
-                            rootFolderId={rootFolderID}
-                            token={token}
-                            metadataQuery={metadataQuery}
-                            fieldsToShow={fieldsToShow}
-                            defaultView={defaultView}
-                        />
-                    </div>
-                </section>
-            </div>
-        </IntlProvider>
-    );
-}
-
-export default App;
-
-```
-
-<Message type="notice">
-
-**ヒント**: 詳細なフローについては、[メタデータビューに関するブログ記事][blogpost]を参照してください。
-
-</Message>
-
 ## カスタム操作
 
 コンテンツエクスプローラとContent Pickerでは、ファイルやフォルダの \[**その他のオプション**] メニューの操作を拡張できます。カスタムオプションは、ユーザーが省略記号ボタンをクリックすると表示されます。
@@ -460,16 +301,14 @@ CodePenで実装例を確認してください。
 
 [metadata-project]: https://github.com/box-community/content-explorer-metadata/tree/main
 
-[creating-templates-api]: g:///metadata/templates/create
-
-[creating-templates-ui]: https://support.box.com/hc/en-us/articles/360044194033-Customizing-Metadata-Templates
-
 [apply-templates]: https://support.box.com/hc/en-us/articles/360044196173-Using-Metadata
-
-[appjs]: https://github.com/box-community/content-explorer-metadata/blob/main/src/App.js
-
-[blogpost]: https://medium.com/box-developer-blog/metadata-view-in-box-content-explorer-4978e47e97e9
 
 [metadata-query]: g://metadata/queries
 
 [get-template]: g://metadata/templates/get/#get-a-metadata-template-by-name
+
+[creating-templates-api]: g:///metadata/templates/create
+
+[appjs]: https://github.com/box-community/content-explorer-metadata/blob/main/src/App.js
+
+[blogpost]: https://medium.com/box-developer-blog/metadata-view-in-box-content-explorer-4978e47e97e9

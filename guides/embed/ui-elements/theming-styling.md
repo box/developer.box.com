@@ -13,11 +13,11 @@ subcategory_id: embed/ui-elements
 is_index: false
 id: embed/ui-elements/theming-styling
 type: guide
-total_steps: 16
+total_steps: 17
 sibling_id: embed/ui-elements
 parent_id: embed/ui-elements
 next_page_id: embed/ui-elements/ui-elements-design-tokens
-previous_page_id: embed/ui-elements/logo
+previous_page_id: embed/ui-elements/annotations
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/theming-styling.md
 fullyTranslated: true
