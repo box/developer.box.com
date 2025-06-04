@@ -402,7 +402,7 @@ Box AI Extractのデフォルト
 
 <Tile type="model" title="aws__claude_4_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-sonnet-model-card">
 
-A model that brings frontier performance to everyday use cases.
+日常的なユースケースに最先端のパフォーマンスをもたらすモデル。
 
 <div>
 
@@ -424,7 +424,7 @@ A model that brings frontier performance to everyday use cases.
 
 <Tile type="model" title="aws__claude_4_opus" href="/guides/box-ai/ai-models/aws-claude-4-opus-model-card">
 
-A model that excels at coding and complex problem-solving, powering frontier agent products.
+コーディングや複雑な問題解決に優れており、最先端のエージェント製品を支えるモデル。
 
 <div>
 

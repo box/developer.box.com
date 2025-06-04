@@ -24,17 +24,17 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/explorer-metadata.md
 fullyTranslated: true
 ---
-# Content Explorer - metadata view
+# コンテンツエクスプローラ - メタデータビュー
 
-With Content Explorer you can also display files based on their metadata. The metadata view uses [metadata template][template] and [metadata query][metadata-query] to find the data you want to display.
+コンテンツエクスプローラを使用すると、メタデータに基づいてファイルを表示することもできます。メタデータビューでは、[メタデータテンプレート][template]と[メタデータクエリ][metadata-query]を使用して、表示するデータを探します。
 
 ![メタデータビュー](./images/explorer-view.png)
 
 ## 前提条件
 
-* Read the [Content Explorer][explorer] guide.
-* Check the [metadata terminology][terminology].
-* Check the information on [metadata queries][metadata-query].
+* [コンテンツエクスプローラ][explorer]ガイドを読む。
+* [メタデータの用語][terminology]を確認する。
+* [メタデータクエリ][metadata-query]に関する情報を確認する。
 
 ## アプリの作成と構成
 
@@ -44,46 +44,46 @@ With Content Explorer you can also display files based on their metadata. The me
 
 ## メタデータテンプレートの作成
 
-The next step is to create a metadata template.
+次の手順では、メタデータテンプレートを作成します。
 
-1. Use [Metadata API][creating-templates-api] or [Admin Console][creating-templates-ui] to create the template.
+1. [メタデータAPI][creating-templates-api]または[管理コンソール][creating-templates-ui]を使用してテンプレートを作成します。
 2. すでに作成済みのテンプレートをBoxフォルダに適用します。必ずカスケードポリシーを有効にするようにしてください。詳細な手順については、[テンプレートのカスタマイズと適用の手順][apply-templates]を参照してください。
 
 <Message type="notice">
 
-You can also apply a metadata template to a file.
+メタデータテンプレートは、ファイルにも適用できます。
 
 </Message>
 
-### Display name and key parameters
+### 表示名と主なパラメータ
 
-* The `displayName` parameter is the display name of the template visible in the Admin Console.
-* The `templateKey` parameter is a unique identifier of the template. It needs to be unique across the enterprise for which you create the metadata template. If you don't provide the `templateKey` parameter, API creates a unique one based on the value in `displayName`.
-* The `[fields].displayName` parameter is the display name of the field as it is shown to the user in the web and mobile apps.
-* The `[fields].key` parameter is a unique identifier for a specific field in the template. The identifier must be unique within the template to which it belongs.
+* `displayName`パラメータは、管理コンソールに表示されるテンプレートの表示名です。
+* `templateKey`パラメータは、テンプレートの一意の識別子です。これは、メタデータテンプレート作成の対象となる企業全体で一意である必要があります。`templateKey`パラメータを指定しなかった場合は、APIによって、`displayName`の値を基に一意の識別子が作成されます。
+* `[fields].displayName`パラメータは、ウェブアプリおよびモバイルアプリでユーザーに表示されるフィールドの表示名です。
+* `[fields].key`パラメータは、テンプレート内の特定のフィールドの一意の識別子です。この識別子は、そのフィールドが属するテンプレート内で一意である必要があります。
 
 ## メタデータビューの表示
 
-Proceed to fill in the necessary properties passed to the Content Explorer. To make things easier, you can use a [sample project][metadata-project] based on a basic React app to launch metadata view.
+次に、コンテンツエクスプローラに渡される必須のプロパティを入力します。作業を簡単にするために、基本的なReactアプリに基づいた[サンプルプロジェクト][metadata-project]を使用して、メタデータビューを起動できます。
 
 1. メタデータのサンプルプロジェクトを複製します。
 2. [`App.js`][appjs]内のプレースホルダを実際の値で更新します。
 
-| パラメータ                    | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `DEVELOPER_TOKEN`        | 開発者コンソールで生成された[開発者トークン][token]。                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| `ENTERPRISE_ID`          | Enterprise ID copied from the **General Settings** tab of your Box application.                                                                                                                                                                                                                                                                                                                                                                           |
-| `METADATA_TEMPLATE_NAME` | `templateKey` of your already created metadata template. **Note**: To make sure you provided the proper name, use the [metadata API][get-template] to retrieve the name, or copy it from the URL in the Admin Console. ![管理コンソールにおけるメタデータ名](./images/metadata-template-name.png) If you decide to change the template name in the UI, you change the display name only. The name to use in the component is always the one you provided at the beginning. |
-| `METADATA_SOURCE`        | Source of your [metadata][source]. It's a string that combines the scope, enterprise ID, and metadata key.                                                                                                                                                                                                                                                                                                                                                |
-| `ROOTFOLDER_ID`          | ID of a Box folder to which you want to apply the metadata query and display filtered files.                                                                                                                                                                                                                                                                                                                                                              |
+| パラメータ                    | 説明                                                                                                                                                                                                                                                    |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `DEVELOPER_TOKEN`        | 開発者コンソールで生成された[開発者トークン][token]。                                                                                                                                                                                                                       |
+| `ENTERPRISE_ID`          | Boxアプリケーションの \[**一般設定**] タブからコピーしたEnterprise ID。                                                                                                                                                                                                      |
+| `METADATA_TEMPLATE_NAME` | 作成済みのメタデータテンプレートの`templateKey`。**注**: 適切な名前を指定済みであることを確認するには、[メタデータAPI][get-template]を使用して名前を取得するか、管理コンソールでURLから名前をコピーします。![管理コンソールにおけるメタデータ名](./images/metadata-template-name.png) UIでテンプレート名を変更しても、変更されるのは表示名のみです。コンポーネントで使用する名前は、常に最初に指定した名前になります。 |
+| `METADATA_SOURCE`        | [メタデータ][source]のソース。これは、スコープ、Enterprise ID、メタデータキーを組み合わせた文字列です。                                                                                                                                                                                       |
+| `ROOTFOLDER_ID`          | メタデータクエリを適用してフィルタがかけられたファイルを表示するBoxフォルダのID。                                                                                                                                                                                                           |
 
-The `defaultView`, `fieldsToShow`, and `metadataQuery` parameters are already defined in the sample project. Examples of these parameters are available in the sample project.
+`defaultView`、`fieldsToShow`、`metadataQuery`の各パラメータは、すでにサンプルプロジェクトで定義されています。これらのパラメータの例は、サンプルプロジェクトで確認できます。
 
-| パラメータ           | 説明                                                                                                                                                             |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `defaultView`   | A required prop to paint the metadata view. If it's not provided, you get the regular file view.                                                               |
-| `fieldsToShow`  | Add or hide specific metadata columns to display in the Content Explorer.                                                                                      |
-| `metadataQuery` | Provides a way to find files by searching for the metadata attached to them. For additional information on metadata queries, see [this guide][metadata-query]. |
+| パラメータ           | 説明                                                                                           |
+| --------------- | -------------------------------------------------------------------------------------------- |
+| `defaultView`   | メタデータビューを描画するための必須プロパティ。指定されていない場合は、通常のファイルビューが表示されます。                                       |
+| `fieldsToShow`  | コンテンツエクスプローラに表示する特定のメタデータ列を追加または非表示にします。                                                     |
+| `metadataQuery` | ファイルに設定されているメタデータを検索してそのファイルを探す方法を指定します。メタデータクエリの詳細については、[こちらのガイド][metadata-query]を参照してください。 |
 
 3. コンテンツエクスプローラコンポーネントに必須パラメータを渡します。
 
@@ -146,27 +146,27 @@ export default App;
 
 ```
 
-## Metadata keys
+## メタデータキー
 
-To decide which fields to show, the metadata Content Explorer uses metadata [field keys][field-key], not the [display names][display-name]. You can see the display names in the Admin Console and user view, but you can obtain the field keys through the API.
+表示するフィールドを決定するには、メタデータのコンテンツエクスプローラで、[表示名][display-name]ではなく、メタデータの[フィールドキー][field-key]を使用します。表示名は管理コンソールやユーザービューで確認できる一方、フィールドキーはAPIを使用して取得できます。
 
-The field keys are not changing, even if you change the metadata display name. This ensures that the functionality works properly, despite any changes to the metadata in UI view.
+フィールドキーは、メタデータの表示名を変更した場合でも変わりません。これにより、UIビューでメタデータが変更されても、この機能は正常に動作します。
 
-### Metadata keys sanitization
+### メタデータキーのサニタイズ
 
-[Keys][field-key] are restricted to alphanumeric characters only:
+[キー][field-key]は、英数字のみに制限されています。
 
-* No hyphens `-` or underscores `_` are permitted.
-* Only letters (`a-z, A-Z`) and numbers (`0-9`) are allowed.
+* ハイフン`-`とアンダースコア`_`は許可されていません。
+* 許可されているのは文字 (`a-z, A-Z`) と数字 (`0-9`) のみです。
 
 **Non-Latin characters:**
 
-If keys contain characters from non-Latin alphabets (such as Cyrillic, Arabic, Chinese, etc.) they are automatically renamed to generic identifiers:
+キーにラテン語以外のアルファベット (キリル文字、アラビア語、中国語など) が含まれている場合、それらは自動的に共通識別子に変更されます。
 
-* `field` for the first occurrence
-* `field1`, `field2`, and so on for subsequent occurrences
+* 最初に出現した文字は`field`
+* それ以降出現した文字は`field1`、`field2`と続く
 
-Keys are based on the display names.
+キーは、表示名に基づいています。
 
 <Message type="notice">
 

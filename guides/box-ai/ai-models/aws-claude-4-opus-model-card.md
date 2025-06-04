@@ -22,7 +22,7 @@ fullyTranslated: true
 ---
 # AWS Claude 4 Opus
 
-**AWS Claude 4 Opus** model excels at coding and complex problem-solving, powering frontier agent products. It's possible to run Claude Code in the background, enabling developers to assign long-running coding tasks for Opus to handle independently.
+**AWS Claude 4 Opus**モデルは、コーディングや複雑な問題解決に優れており、最先端のエージェント製品を支えています。バックグラウンドでのClaude Codeの実行が可能なため、開発者は、Opusが個別に処理する長時間のコーディングタスクを割り当てることができます。
 
 ## モデルの詳細
 
@@ -41,7 +41,7 @@ fullyTranslated: true
 
 ## その他のドキュメント
 
-For additional information, see [official AWS Claude 4 Opus documentation][aws-claude].
+詳細については、[AWS Claude 4 Opusの公式ドキュメント][aws-claude]を参照してください。
 
 [aws-claude]: https://aws.amazon.com/bedrock/claude/
 

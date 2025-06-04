@@ -22,7 +22,7 @@ fullyTranslated: true
 ---
 # xAI Grok 3 Mini Reasoning Beta
 
-**xAI Grok 3 Mini Reasoning Beta** is a lightweight model that thinks before responding. Fast, smart, and great for logic-based tasks that do not require deep domain knowledge. The raw thinking traces are accessible.
+**xAI Grok 3 Mini Reasoning Beta**は、応答する前に思考する軽量モデルです。処理が速くスマートで、深い専門知識を必要としない、論理ベースのタスクに適しています。未加工の思考トレースにアクセスできます。
 
 ## モデルの詳細
 
