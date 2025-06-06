@@ -12,11 +12,16 @@ related_guides:
 
 **Google Gemini 1.5 Flash** is a multimodal model designed to handle lightweight tasks. It is designed for high-volume, low-latency tasks, making it highly efficient for large-scale use cases like summarization, multimodal processing, and categorization
 
+<Message type='warning'>
+This model is deprecated. For more information, see the [official Microsoft documentation][deprecated].
+</Message>
+
 ## Model details
 
 | Item  | Value | Description |
 |-----------|----------|----------|
-|Model name|**Google Gemini 1.5 Flash**| The name of the model. | 
+|Model name|**Google Gemini 1.5 Flash**| The name of the model. |
+| Model category | Standard | The category of the model - standard or premium. | 
 |API model name|`google__gemini_1_5_flash_001`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer| **Google** | The trusted organization that securely hosts LLM. |
 |Model provider|**Google**| The organization that provides this model. |
@@ -33,3 +38,4 @@ For additional information, see [official Google Gemini 1.5 Flash documentation]
 
 [vertex-ai-gemini-models]: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#gemini-models
 [overrides]: g://box-ai/ai-agents/ai-agent-overrides
+[deprecated]: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions#legacy-stable
