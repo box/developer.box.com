@@ -313,6 +313,7 @@ The standard OAuth scopes are also supported when downscoping.
 
 | OAuth Scope                    | Description                                        |
 | ------------------------------ | -------------------------------------------------- |
+| `ai.readwrite` | Manage AI API|
 | `root_readonly`                | Read all files and folders stored in Box           |
 | `root_readwrite`               | Read and write all files and folders stored in Box |
 | `manage_managed_users`         | Manage managed users                               |

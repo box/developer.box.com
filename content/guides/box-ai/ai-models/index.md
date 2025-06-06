@@ -49,6 +49,7 @@ Box AI is powered by the following AI models. These models are integrated with B
       <strong style="background-color: #e8e8e8">Default for Box AI for Box Notes Q&A</strong>
 			<strong style="background-color: #e8e8e8">Chat</strong>
 			<strong style="background-color: #e1ffe7">Available</strong>
+			<strong style="background-color: #5ddf24 ">Standard</strong>
       </div>
     </Tile>
 		<Tile type="gpt" title="azure__openai__gpt_4_1" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-model-card">
@@ -56,6 +57,7 @@ Box AI is powered by the following AI models. These models are integrated with B
       <div>
 			<strong style="background-color: #e8e8e8">Chat</strong>
       <strong style="background-color: #e1ffe7">Available</strong>
+			<strong style="background-color: #fec30c ">Premium</strong>
       </div>
     </Tile>
     <Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card">
@@ -63,6 +65,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 			<div>
 			<strong style="background-color: #e8e8e8">Chat</strong>
 			<strong style="background-color: #e1ffe7">Available</strong>
+			<strong style="background-color: #5ddf24 ">Standard</strong>
       </div>
     </Tile>
     <Tile type="gpt" title="azure__openai__gpt_4o" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-model-card">
@@ -70,6 +73,7 @@ Box AI is powered by the following AI models. These models are integrated with B
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #fec30c ">Premium</strong>
       </div>
     </Tile>
     <Tile type="gpt" title="azure__openai__text_embedding_ada_002" href="/guides/box-ai/ai-models/azure-text-embedding-ada-002-model-card">
@@ -78,6 +82,7 @@ Box AI is powered by the following AI models. These models are integrated with B
       <div>
         <strong style="background-color: #e8e8e8">Embeddings</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #5ddf24 ">Standard</strong>
       </div>
     </Tile>
 		<Tile type="gemini" title="google__gemini_2_5_pro_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-review-model-card">
@@ -85,6 +90,7 @@ Box AI is powered by the following AI models. These models are integrated with B
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #fec30c ">Premium</strong>
       </div>
     </Tile>
 		<Tile type="gemini" title="google__gemini_2_5_flash_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-flash-preview-model-card">
@@ -92,6 +98,7 @@ Box AI is powered by the following AI models. These models are integrated with B
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #5ddf24 ">Standard</strong>
       </div>
     </Tile>
     <Tile type="gemini" title="google__gemini_2_0_flash_001" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-001-model-card">
@@ -99,6 +106,7 @@ Box AI is powered by the following AI models. These models are integrated with B
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #5ddf24 ">Standard</strong>
       </div>
     </Tile>
     <Tile type="gemini" title="google__gemini_2_0_flash_lite_preview" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-lite-preview-02-05">
@@ -107,6 +115,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 			<strong style="background-color: #e8e8e8">Default for Box AI Extract</strong>
         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #5ddf24 ">Standard</strong>
       </div>
     </Tile>
     <Tile type="gemini" title="google__gemini_1_5_flash_001" href="/guides/box-ai/ai-models/google-gemini-1-5-flash-001-model-card">
@@ -127,6 +136,7 @@ Box AI is powered by the following AI models. These models are integrated with B
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #5ddf24 ">Standard</strong>
       </div>
     </Tile>
     <Tile type="model" title="aws__claude_3_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-sonnet-model-card">
@@ -134,6 +144,7 @@ Box AI is powered by the following AI models. These models are integrated with B
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #fec30c ">Premium</strong>
       </div>
     </Tile>
      <Tile type="model" title="aws__claude_3_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-5-sonnet-model-card">
@@ -141,6 +152,7 @@ Box AI is powered by the following AI models. These models are integrated with B
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #fec30c ">Premium</strong>
       </div>
     </Tile>
 		<Tile type="model" title="aws__claude_3_7_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-7-sonnet-model-card">
@@ -148,6 +160,7 @@ Box AI is powered by the following AI models. These models are integrated with B
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #fec30c ">Premium</strong>
       </div>
     </Tile>
 		<Tile type="model" title="aws__claude_4_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-sonnet-model-card">
@@ -155,6 +168,7 @@ Box AI is powered by the following AI models. These models are integrated with B
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #fec30c ">Premium</strong>
       </div>
     </Tile>
 		<Tile type="model" title="aws__claude_4_opus" href="/guides/box-ai/ai-models/aws-claude-4-opus-model-card">
@@ -162,6 +176,7 @@ Box AI is powered by the following AI models. These models are integrated with B
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #fec30c ">Premium</strong>
       </div>
     </Tile>
      <Tile type="model" title="aws__titan_text_lite" href="/guides/box-ai/ai-models/aws-titan-text-lite-model-card">
@@ -169,6 +184,7 @@ Box AI is powered by the following AI models. These models are integrated with B
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #5ddf24 ">Standard</strong>
       </div>
     </Tile>
 		<Tile type="model" title="ibm__llama_3_2_90b_vision_instruct" href="/guides/box-ai/ai-models/ibm-llama-3-2-90b-vision-instruct-model-card">
@@ -176,6 +192,7 @@ Box AI is powered by the following AI models. These models are integrated with B
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #5ddf24 ">Standard</strong>
       </div>
     </Tile>
 		<Tile type="model" title="ibm__llama_4_scout" href="/guides/box-ai/ai-models/ibm-llama-4-scout-model-card">
@@ -183,6 +200,7 @@ Box AI is powered by the following AI models. These models are integrated with B
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #5ddf24 ">Standard</strong>
       </div>
     </Tile>
 </TileGrid>
@@ -197,6 +215,7 @@ Certain Box AI customers may enable additional AI models upon their request and/
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #fffbf3">Beta</strong>
+				<strong style="background-color: #fec30c ">Premium</strong>
       </div>
     </Tile>
 		<Tile type="model" title="xai__grok_3_mini_reasoning_beta" href="/guides/box-ai/ai-models/xai-grok-3-mini-beta-model-card">
@@ -204,12 +223,14 @@ Certain Box AI customers may enable additional AI models upon their request and/
       <div>
         <strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #fffbf3">Beta</strong>
+				<strong style="background-color: #fec30c ">Premium</strong>
       </div>
     </Tile>
 		<Tile type="gpt" title="azure__openai__gpt_o3" href="/guides/box-ai/ai-models/azure-openai-gpt-o3-model-card">
     	A multimodal model, highly efficient in handling complex, multi-step tasks.
       <div>
       <strong style="background-color: #fffbf3">Beta</strong>
+			<strong style="background-color: #fec30c ">Premium</strong>
       </div>
     </Tile>
 </TileGrid>
