@@ -76,7 +76,7 @@ Swift SDKはパブリックベータ段階です。
 | --------------------------------- | ----- | ------- |
 | [Java SDK][javasdk]               | アクティブ | Full    |
 | [iOS Content SDK][iossdk]         | アクティブ | Full    |
-| [Android Content SDK][androidsdk] | 非推奨   | 部分的     |
+| [Android Content SDK][androidsdk] | 廃止    | 部分的     |
 | [.NET SDK][dotnetsdk]             | 安定    | Full    |
 | [Python SDK][pythonsdk]           | 安定    | Full    |
 | [Node SDK][nodesdk]               | 安定    | Full    |

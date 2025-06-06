@@ -282,7 +282,7 @@ Box AI Extractのデフォルト
 
 <strong style="background-color: #999999">
 
-非推奨
+廃止
 
 </strong>
 
@@ -304,7 +304,7 @@ Box AI Extractのデフォルト
 
 <strong style="background-color: #999999">
 
-非推奨
+廃止
 
 </strong>
 
