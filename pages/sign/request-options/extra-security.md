@@ -21,6 +21,12 @@ fullyTranslated: true
 
 ![2要素認証による署名リクエスト](images/sign-flow-2fa.png)
 
+<Message type="notice">
+
+You can add the additional layer of security in a template or when you create a signature request.
+
+</Message>
+
 ## 電話認証
 
 署名者の`verification_phone_number`パラメータとともに電話番号を渡すことにより、署名リクエストを完了するために携帯電話から2要素認証を使用するよう署名者に要求することができます。

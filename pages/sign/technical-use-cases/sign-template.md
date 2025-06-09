@@ -45,6 +45,12 @@ Boxアプリで、左側の \[Sign] メニューに移動し、\[テンプレー
 
 ![テンプレートに署名、名前、日付を追加する](images/sign-template-signature-props.png)
 
+<Message type="notice">
+
+You can add an [extra layer of security][additional-sec] for a recipient. It works for both a defined recipient with a pre-defined email address, and a placeholder recipient, where the template user has to provide their email address.
+
+</Message>
+
 テンプレートを保存します。
 
 ## テンプレートの識別
@@ -636,3 +642,5 @@ Sign template: 94e3815b-f7f5-4c2c-8a26-e9ba5c486031 - Simple-PDF.pdf
 [request-options]: page://sign/request-options
 
 [structured-docs]: page://sign/technical-use-cases/sign-structured-docs
+
+[additional-sec]: page://sign/request-options/extra-security
