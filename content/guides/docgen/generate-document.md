@@ -32,7 +32,7 @@ Mandatory parameters are in **bold**.
 | **`file.type`** | The type of provided input. The value is always **`file`**. | `file` |
 | `file_version` | The file version of a template. | `12345` |
 | **`input_source`** | The input source for generated document. The value has to be `api` for all the API-based document generation requests. | `api` |
-| **`output_type`** | The output file type. | `docx` |
+| **`output_type`** | The output file type. | `docx`, `pdf` |
 | **`destination_folder.id`** | The ID of the folder where the generated document will be stored. | `12345678` |
 | **`destination_folder.type`** | The type of the destination item. Since the generated files are stored in folders, the value is always **`folder`**. | `file` |
 | **`document_generation_data.generated_file_name`** | The name of the generated file. | `New_Template` |
