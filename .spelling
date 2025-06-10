@@ -336,6 +336,7 @@ text-embedding-ada-002
 params
 GPT-4o-mini
 unpublish
+sanitization
 checkboxes
 strikethrough
 theming
@@ -352,3 +353,6 @@ o4
 131k
 xAI
 subprocessors
+SVG
+SVGs
+px
