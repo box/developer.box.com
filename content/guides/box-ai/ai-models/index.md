@@ -227,7 +227,7 @@ Certain Box AI customers may enable additional AI models upon their request and/
 				<strong style="background-color: #fec30c ">Premium</strong>
       </div>
     </Tile>
-		<Tile type="gpt" title="azure__openai__gpt_o3" href="/guides/box-ai/ai-models/azure-openai-gpt-o3-model-card">
+		<Tile type="gpt" title="openai__gpt_o3" href="/guides/box-ai/ai-models/openai-gpt-o3-model-card">
     	A multimodal model, highly efficient in handling complex, multi-step tasks.
       <div>
       <strong style="background-color: #fffbf3">Beta</strong>
