@@ -47,6 +47,15 @@ like so:
 
 ![Adding the signature, name, and date to the template](images/sign-template-signature-props.png)
 
+<Message type='notice'>
+
+You can add an [extra layer of security][additional-sec] for a recipient.
+It works for both a defined recipient with a pre-defined email address, and a
+placeholder recipient, where the template user has to provide their email
+address.
+
+</Message>
+
 Save the template.
 
 ## Identify the template
@@ -617,3 +626,4 @@ signature tags that can be used by the Box Sign engine. Take a look at our
 [template]: https://support.box.com/hc/en-us/sections/21356768117651-Templates
 [request-options]: page://sign/request-options
 [structured-docs]: page://sign/technical-use-cases/sign-structured-docs
+[additional-sec]: page://sign/request-options/extra-security
