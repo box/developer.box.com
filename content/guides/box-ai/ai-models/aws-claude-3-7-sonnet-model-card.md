@@ -17,7 +17,8 @@ related_guides:
 
 | Item  | Value | Description |
 |-----------|----------|----------|
-|Model name|**AWS Claude 3.7 Sonnet**| The name of the model. | 
+|Model name|**AWS Claude 3.7 Sonnet**| The name of the model. |
+| Model category | Premium | The category of the model - standard or premium. | 
 |API model name|`aws__claude_3_7_sonnet`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer|  **Amazon Web Services (AWS)** | The trusted organization that securely hosts LLM. |
 |Model provider|**Anthropic**| The organization that provides this model. |
