@@ -17,13 +17,13 @@ fullyTranslated: true
 ---
 # セキュリティの強化 (2要素認証)
 
-ドキュメントへの署名手順で署名者に対してパスワードや電話認証を要求することで、署名リクエストの[セキュリティレベルを高める][2FA]ことを想像してみてください。
+ドキュメントへの署名手順で署名者に対してパスワードや電話認証を要求することで、署名リクエストの[セキュリティレベルを高める][2FA]方法について説明します。
 
 ![2要素認証による署名リクエスト](images/sign-flow-2fa.png)
 
 <Message type="notice">
 
-You can add the additional layer of security in a template or when you create a signature request.
+テンプレート内または署名リクエストの作成時にセキュリティレベルを高めることができます。
 
 </Message>
 

@@ -47,7 +47,7 @@ Boxアプリで、左側の \[Sign] メニューに移動し、\[テンプレー
 
 <Message type="notice">
 
-You can add an [extra layer of security][additional-sec] for a recipient. It works for both a defined recipient with a pre-defined email address, and a placeholder recipient, where the template user has to provide their email address.
+受信者の[セキュリティレベルを高める][additional-sec]ことができます。メールアドレスがあらかじめ定義された定義済みの受信者と、テンプレートユーザーがメールアドレスを指定する必要があるプレースホルダの受信者の両方が対象です。
 
 </Message>
 
