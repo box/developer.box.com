@@ -168,7 +168,7 @@ Compare the encoded digest with the value of the
 Compare the value of the `BOX-SIGNATURE-PRIMARY` header
 to the digest created with the primary key, and the value of the
 `BOX-SIGNATURE-SECONDARY` header to the digest created with the secondary key.
-Make sure to use a timing-safe comparison between HMACs to prevent timing attacks.
+Make sure to use a timing-safe comparison between signatures to prevent timing attacks.
 
 <Tabs>
   <Tab title='Node'>
