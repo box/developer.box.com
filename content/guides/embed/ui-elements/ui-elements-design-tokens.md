@@ -60,6 +60,7 @@ const theme = {
 
 <Message type='notice'>
 You can pass any CSS color value, like hexadecimal colors, RGB, cross-browser color names, and so on.
+</Message>
 
 | Token | Default value | Description |
 | --- | --- | --- |
