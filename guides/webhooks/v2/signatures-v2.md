@@ -190,19 +190,33 @@ Compare the encoded digest with the value of the
 Compare the value of the `BOX-SIGNATURE-PRIMARY` header
 to the digest created with the primary key, and the value of the
 `BOX-SIGNATURE-SECONDARY` header to the digest created with the secondary key.
+Make sure to use a timing-safe comparison between signatures to prevent timing attacks.
 
 <Tabs>
 
 <Tab title='Node'>
 
 ```js
-var signature1 = headers['BOX-SIGNATURE-SECONDARY'];
-var signature2 = headers['BOX-SIGNATURE-PRIMARY'];
+const crypto = require('crypto');
 
-var primarySignatureValid = digest1 === signature1
-var secondarySignatureValid = digest2 === signature2
+function compareSignatures(expectedSignature, receivedSignature) {
+    const expectedBuffer = Buffer.from(expectedSignature, 'base64');
+    const receivedBuffer = Buffer.from(receivedSignature, 'base64');
 
-var valid = !expired && (primarySignatureValid || secondarySignatureValid)
+    if (expectedBuffer.length !== receivedBuffer.length) {
+        return false;
+    }
+
+    return crypto.timingSafeEqual(expectedBuffer, receivedBuffer);
+}
+
+const signature1 = headers['BOX-SIGNATURE-SECONDARY'];
+const signature2 = headers['BOX-SIGNATURE-PRIMARY'];
+
+const primarySignatureValid = compareSignatures(digest1, signature1)
+const secondarySignatureValid = compareSignatures(digest2, signature2)
+
+const valid = !expired && (primarySignatureValid || secondarySignatureValid)
 ```
 
 </Tab>
@@ -210,13 +224,22 @@ var valid = !expired && (primarySignatureValid || secondarySignatureValid)
 <Tab title='Python'>
 
 ```python
+import hmac
+
+def compare_signatures(expected_signature: Optional[str], received_signature: Optional[str]) -> bool:
+    if not expected_signature or not received_signature:
+        return False
+    if len(expected_signature) != len(received_signature):
+        return False
+    return hmac.compare_digest(expected_signature, received_signature)
+
 signature1 = headers["BOX-SIGNATURE-SECONDARY"]
 signature2 = headers["BOX-SIGNATURE-PRIMARY"]
 
-primary_sig_valid = digest1 === signature1
-secondary_sig_valid = digest2 === signature2
+primary_sig_valid = compare_signatures(digest1, signature1)
+secondary_sig_valid = compare_signatures(digest2, signature2)
 
-valid = !expired && (primary_sig_valid || secondary_sig_valid)
+valid = not expired and (primary_sig_valid or secondary_sig_valid)
 ```
 
 </Tab>
