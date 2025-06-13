@@ -17,6 +17,8 @@ related_guides:
 | Item  | Value | Description |
 |-----------|----------|----------|
 |Model name|**Google Gemini 2.0 Flash**| The name of the model. | 
+| Model name |**Google Gemini 2.0 Flash** | The name of the model. |
+| Model category | Standard | The category of the model - standard or premium. |
 |API model name|`google__gemini_2_0_flash_001`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer| **Google** | The trusted organization that securely hosts LLM. |
 |Model provider|**Google**| The organization that provides this model. |
