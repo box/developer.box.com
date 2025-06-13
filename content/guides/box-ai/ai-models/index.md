@@ -11,8 +11,6 @@ alias_paths:
 
 # Supported AI models
 
-Test
-
 There are two types of AI models supported by Box: core and customer-enabled.
 
 The core Box AI models are default in the Box AI service and are available to
@@ -119,19 +117,6 @@ Box AI is powered by the following AI models. These models are integrated with B
         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #5ddf24 ">Standard</strong>
-      </div>
-    </Tile>
-    <Tile type="gemini" title="google__gemini_1_5_flash_001" href="/guides/box-ai/ai-models/google-gemini-1-5-flash-001-model-card">
-      Gemini multimodal model, built for high volume tasks and latency-sensitive applications.
-      <div>
-        <strong style="background-color: #999999">Deprecated</strong>
-      </div>
-    </Tile>
-    <Tile type="gemini" title="google__gemini_1_5_pro_001" href="/guides/box-ai/ai-models/google-gemini-1-5-pro-001-model-card">
-        A foundation model that performs well at a variety of multimodal tasks.
-      <div>
-        <strong style="background-color: #e8e8e8">Chat</strong>
-        <strong style="background-color: #999999">Deprecated</strong>
       </div>
     </Tile>
     <Tile type="model" title="aws__claude_3_haiku" href="/guides/box-ai/ai-models/aws-claude-3-haiku-model-card">
