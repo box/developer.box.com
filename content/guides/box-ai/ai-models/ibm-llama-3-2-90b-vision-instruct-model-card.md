@@ -17,7 +17,7 @@ related_guides:
 | Item | Value | Description |
 |-----------|----------|----------|
 |Model name|**IBM Llama 3.2 Vision Instruct**| The name of the model. |
-| Model category | Standard | The category of the model - standard or premium. | 
+| Model category | Standard | The category of the model - standard or premium. |
 |API model name|`ibm__llama__3_2_90b_vision_instruct`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer| **IBM** | The trusted organization that securely hosts LLM. |
 |Model provider|**Meta**| The organization that provides this model. |
