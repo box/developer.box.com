@@ -11,8 +11,6 @@ alias_paths:
 
 # Supported AI models
 
-Test
-
 There are two types of AI models supported by Box: core and customer-enabled.
 
 The core Box AI models are default in the Box AI service and are available to
