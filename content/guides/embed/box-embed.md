@@ -36,6 +36,18 @@ To fetch the Box Embed widget code from the Box web app, perform the following s
 2. Click on the ellipsis menu in the top right corner. 
 3. Click **Embed Hub**.
 
+### Notes
+
+1. Navigate to the chosen Box Note.
+2. Click on the ellipsis menu.
+3. Click **Embed Box Note**.
+
+### Apps
+
+1. Navigate to the chosen Box App.
+2. Click on the ellipsis menu.
+3. Click **Embed**.
+
 <ImageFrame border>
   ![Box Embed](./box-embed-new.png)
 </ImageFrame>
