@@ -155,6 +155,7 @@ The field keys are not changing, even if you change the metadata display name.
 This ensures that the functionality works properly, despite any changes to the
 metadata in UI view.
 
+
 ### Metadata keys sanitization
 
 [Keys][field-key] are restricted to alphanumeric characters only:
