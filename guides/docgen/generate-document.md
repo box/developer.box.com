@@ -42,7 +42,7 @@ Box Doc Gen APIの使用を開始する前に、[Box Doc Genの使い方][docgen
 | **`file.type`**                                    | 指定した入力データの種類。値は常に**`file`**になります。                                | `file`                                                       |
 | `file_version`                                     | テンプレートのファイルバージョン。                                                | `12345`                                                      |
 | **`input_source`**                                 | 生成されるドキュメントの入力ソース。この値は、APIベースのすべてのドキュメント生成リクエストで`api`にする必要があります。 | `api`                                                        |
-| **`output_type`**                                  | 出力ファイルの種類。                                                       | `docx`                                                       |
+| **`output_type`**                                  | 出力ファイルの種類。                                                       | `docx`, `pdf`                                                |
 | **`destination_folder.id`**                        | 生成されたドキュメントが保存されるフォルダのID。                                        | `12345678`                                                   |
 | **`destination_folder.type`**                      | 保存先の項目の種類。生成されたファイルはフォルダに保存されるため、値は常に**`folder`**になります。          | `file`                                                       |
 | **`document_generation_data.generated_file_name`** | 生成されるファイルの名前。                                                    | `New_Template`                                               |
