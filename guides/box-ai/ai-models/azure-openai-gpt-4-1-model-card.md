@@ -11,11 +11,11 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/azure-openai-gpt-4-1-model-card
 type: guide
-total_steps: 28
+total_steps: 27
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
 next_page_id: box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card
-previous_page_id: box-ai/ai-models/azure-openai-gpt-o3-model-card
+previous_page_id: box-ai/ai-models/openai-gpt-o3-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/azure-openai-gpt-4-1-model-card.md
 ---
@@ -28,6 +28,7 @@ source_url: >-
 | Item  | Value | Description |
 |-----------|----------|----------|
 |Model name|**GPT-4.1**| The name of the model. |
+| Model category | Premium | The category of the model - standard or premium. |
 |API model name|`azure__openai__gpt_4_1`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer| **Microsoft Azure** | The trusted organization that securely hosts LLM. |
 |Model provider|**Microsoft Azure**| The organization that provides this model. |

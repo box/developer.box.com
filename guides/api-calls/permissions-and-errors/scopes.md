@@ -338,14 +338,13 @@ The standard OAuth scopes are also supported when downscoping.
 
 | OAuth Scope                    | Description                                        |
 | ------------------------------ | -------------------------------------------------- |
-| `root_readonly`                | Read all files and folders stored in Box           |
-| `root_readwrite`               | Read and write all files and folders stored in Box |
+| `ai.readwrite` | Manage AI API|
 | `manage_managed_users`         | Manage managed users                               |
 | `manage_app_users`             | Manage app users                                   |
+| `manage_data_retention`        | Manage retention policies                          |
+| `manage_enterprise_properties` | Manage enterprise properties                       |
 | `manage_groups`                | Manage groups                                      |
 | `manage_webhook`               | Manage webhooks                                    |
-| `manage_enterprise_properties` | Manage enterprise properties                       |
-| `manage_data_retention`        | Manage retention policies                          |
 | `sign_requests.readwrite`      | Manage sign requests                               |
 
 <!-- i18n-enable localize-links -->

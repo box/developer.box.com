@@ -11,7 +11,7 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/xai-grok-3-beta-model-card
 type: guide
-total_steps: 28
+total_steps: 27
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
 next_page_id: box-ai/ai-models/xai-grok-3-mini-beta-model-card
@@ -28,6 +28,7 @@ source_url: >-
 | Item  | Value | Description |
 |-----------|----------|----------|
 |Model name|**xAI Grok 3 Beta**| The name of the model. |
+| Model category | Premium | The category of the model - standard or premium. |
 |API model name|`xai__grok_3_beta`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer| **xAI** | The trusted organization that securely hosts LLM. |
 |Model provider|**xAI**| The organization that provides this model. |

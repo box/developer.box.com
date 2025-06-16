@@ -11,7 +11,7 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/xai-grok-3-mini-beta-model-card
 type: guide
-total_steps: 28
+total_steps: 27
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
 next_page_id: ''
@@ -19,16 +19,17 @@ previous_page_id: box-ai/ai-models/xai-grok-3-beta-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/xai-grok-3-mini-beta-model-card.md
 ---
-# xAI Grok 3 Mini Beta
+# xAI Grok 3 Mini Reasoning Beta
 
-**xAI Grok 3 Mini Beta** is a lightweight model that thinks before responding. Fast, smart, and great for logic-based tasks that do not require deep domain knowledge. The raw thinking traces are accessible.
+**xAI Grok 3 Mini Reasoning Beta** is a lightweight model that thinks before responding. Fast, smart, and great for logic-based tasks that do not require deep domain knowledge. The raw thinking traces are accessible.
 
 ## Model details
 
 | Item  | Value | Description |
 |-----------|----------|----------|
-|Model name|**xAI Grok 3 Mini**| The name of the model. |
-|API model name|`xai__grok_3_mini`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
+|Model name|**xAI Grok 3 Mini Reasoning Beta**| The name of the model. |
+| Model category | Standard | The category of the model - standard or premium.|
+|API model name|`xai__grok_3_mini_reasoning_beta`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer| **xAI** | The trusted organization that securely hosts LLM. |
 |Model provider|**xAI**| The organization that provides this model. |
 |Release date|**April 9th 2025** | The release date for the model.|

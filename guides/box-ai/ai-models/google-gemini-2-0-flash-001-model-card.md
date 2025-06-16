@@ -11,10 +11,10 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/google-gemini-2-0-flash-001-model-card
 type: guide
-total_steps: 28
+total_steps: 27
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
-next_page_id: box-ai/ai-models/google-gemini-1-5-pro-001-model-card
+next_page_id: box-ai/ai-models/aws-claude-4-sonnet-model-card
 previous_page_id: box-ai/ai-models/google-gemini-2-0-flash-lite-preview-02-05
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/google-gemini-2-0-flash-001-model-card.md
@@ -28,6 +28,8 @@ source_url: >-
 | Item  | Value | Description |
 |-----------|----------|----------|
 |Model name|**Google Gemini 2.0 Flash**| The name of the model. |
+| Model name |**Google Gemini 2.0 Flash** | The name of the model. |
+| Model category | Standard | The category of the model - standard or premium. |
 |API model name|`google__gemini_2_0_flash_001`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer| **Google** | The trusted organization that securely hosts LLM. |
 |Model provider|**Google**| The organization that provides this model. |

@@ -13,11 +13,11 @@ subcategory_id: embed/ui-elements
 is_index: false
 id: embed/ui-elements/theming-branding
 type: guide
-total_steps: 17
+total_steps: 18
 sibling_id: embed/ui-elements
 parent_id: embed/ui-elements
-next_page_id: ''
-previous_page_id: embed/ui-elements/viewers-and-events
+next_page_id: embed/ui-elements/custom-domains
+previous_page_id: embed/ui-elements/scopes
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/theming-branding.md
 ---

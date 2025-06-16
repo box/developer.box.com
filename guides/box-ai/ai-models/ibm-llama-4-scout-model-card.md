@@ -11,11 +11,11 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/ibm-llama-4-scout-model-card
 type: guide
-total_steps: 28
+total_steps: 27
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
 next_page_id: box-ai/ai-models/ibm-llama-3-2-90b-vision-instruct-model-card
-previous_page_id: box-ai/ai-models/aws-titan-text-lite-model-card
+previous_page_id: box-ai/ai-models/aws-claude-3-sonnet-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/ibm-llama-4-scout-model-card.md
 ---
@@ -28,6 +28,7 @@ source_url: >-
 | Item | Value | Description |
 |-----------|----------|----------|
 |Model name|**IBM Llama 4 Scout**| The name of the model. |
+| Model category | Standard | The category of the model - standard or premium. |
 |API model name|`ibm__llama_4_scout`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer| **IBM** | The trusted organization that securely hosts LLM. |
 |Model provider|**Meta**| The organization that provides this model. |

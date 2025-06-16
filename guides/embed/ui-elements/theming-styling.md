@@ -13,10 +13,10 @@ subcategory_id: embed/ui-elements
 is_index: false
 id: embed/ui-elements/theming-styling
 type: guide
-total_steps: 17
+total_steps: 18
 sibling_id: embed/ui-elements
 parent_id: embed/ui-elements
-next_page_id: embed/ui-elements/access
+next_page_id: embed/ui-elements/ui-elements-design-tokens
 previous_page_id: embed/ui-elements/annotations
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/theming-styling.md
@@ -25,14 +25,14 @@ source_url: >-
 
 # Theming & styling for Box UI Elements
 
-With theming & styling for Box UI Elements you can customize the look of the
-embedded Box component to your enterprise's requirements.
+With theming & styling for Box UI Elements you can customize the look
+of the embedded Box component to your enterprise's requirements.
 
 <!--alex ignore -->
 
 <Message type='notice'>
 
-As of now, theming & styling is available for Content
+As of now, [theming & styling][blog] is available for Content
 Explorer and Content Uploader.
 
 </Message>
@@ -45,7 +45,7 @@ Add the selected Box component to your application. The default Box theme is app
 
 ## Customization
 
-Box uses design tokens for the customization purposes.
+Box uses [design tokens][dt] for the customization purposes.
 
 <Message type='notice'>
 
@@ -118,8 +118,25 @@ Customize:
 
 <!--alex ignore -->
 
-Customize text inputs, drop-downs, and checkboxes with individual color
+Customize text input, drop down, and checkboxes with individual color
 <!--alex enable -->
+
+### Icons
+
+Style interactive icons such as buttons or drop downs.
+
+<Message type='notice'>
+
+To replace non-interactive icons such as file or folder icons with your custom ones, use inline SVGs in CSS.
+To change non-interactive icons color, height, and width, use CSS.
+
+</Message>
+
+See the implemented examples of custom icons in CodePen:
+
+<iframe height="560" scrolling="no" title="Box custom icons" src="https://codepen.io/box-platform/embed/raaRqye?default-tab=html%2Cresult" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;" >
+
+</iframe>
 
 ### Miscellaneous
 
@@ -136,3 +153,5 @@ Style:
 
 [explorer]: g://embed/ui-elements/explorer
 [uploader]: g://embed/ui-elements/uploader
+[dt]: g://embed/ui-elements/ui-elements-design-tokens
+[blog]: https://medium.com/@stefaniuk.olga/b4a86518d5ca
