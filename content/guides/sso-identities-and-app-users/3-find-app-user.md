@@ -7,7 +7,7 @@ related_guides:
 
 # Find app user for SSO identity
 
-When a user logs into a Box custom application with their SSO provider, the
+When a user logs into a Box platform application with their SSO provider, the
 first step that should be taken is to see if that user already exists from a
 previous login attempt where a Box user record was already created.
 

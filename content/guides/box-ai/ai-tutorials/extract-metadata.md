@@ -19,7 +19,7 @@ Box AI API allows you to query a document or image and extract metadata based on
 
 ## Before you start
 
-Make sure you followed the steps listed in [getting started with Box AI][prereq] to create a custom app and authenticate.
+Make sure you followed the steps listed in [getting started with Box AI][prereq] to create a platform app and authenticate.
 
 ## Send a request
 
