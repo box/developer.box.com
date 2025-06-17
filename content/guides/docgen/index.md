@@ -1,5 +1,5 @@
 ---
-rank: 0
+rank: 3
 related_guides:
   - docgen/docgen-getting-started
   - docgen/docgen-templates
