@@ -242,7 +242,7 @@ Additional Box Platform concepts
 Want to learn more?
 Use these guides to discover supplementary information on the inner
 workings of Box Platform, broaden your understanding, and improve
-your custom applications.
+your platform applications.
 
 </div>
 

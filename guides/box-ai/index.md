@@ -26,7 +26,7 @@ source_url: >-
 
 Box AI API allows you to use Box AI
 functionality
-in your custom applications. For example, you can
+in your platform applications. For example, you can
 implement Box AI question and answer
 functionality in your third party application,
 or generate content right in
@@ -97,7 +97,7 @@ For details, see [AI agent default configuration][agent-default].
 
 Box AI for UI Elements is available in Content Preview
 allows asking questions about documents directly
-within custom applications.
+within platform applications.
 Check out how to use the [Box AI for UI Elements][boxaielement]
 to embed Box AI functionality in your projects.
 

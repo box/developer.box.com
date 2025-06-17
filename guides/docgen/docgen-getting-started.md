@@ -23,7 +23,7 @@ source_url: >-
 ---
 # Get started with Box Doc Gen
 
-To start generating documents with Box Doc Gen API you will need a custom application and a developer token to
+To start generating documents with Box Doc Gen API you will need a platform application and a developer token to
 authenticate your calls. You also need a Doc Gen template that will serve as an input source for your document.
 
 ## Enable Box Doc Gen
@@ -40,12 +40,12 @@ To use Box Doc Gen API to generate documents, a Box Doc Gen template must alread
 * Install the [Box Doc Gen Template Creator add-in for Microsoft Word][template-addin].
 * Create a Box Doc Gen template [using a JSON file][json-template] or manually create [template tags][template-tags].
 
-## Create a custom application
+## Create a platform application
 
-First you need to create a custom application
+First you need to create a platform application
 you will use to make calls. To create
 an application, follow the guide
-on [creating custom apps][createapps].
+on [creating platform apps][createapps].
 
 ## Generate a developer token
 

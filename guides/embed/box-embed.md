@@ -58,10 +58,6 @@ To fetch the Box Embed widget code from the Box web app, perform the following s
 1. Navigate to the chosen Box App or Box App View.
 2. Click on the ellipsis menu.
 3. Click **Embed**.
- 
-In parameters section could we add comment about custom Apps parameters:
-
-All custom search parameters from the first-party app URL are passed to the Embed Widget modal and Embed Preview.
 
 <ImageFrame border>
 
