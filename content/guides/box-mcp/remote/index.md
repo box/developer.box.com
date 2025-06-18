@@ -15,10 +15,6 @@ The Box MCP Server allows third-party AI systems to securely connect and interac
 
 ## Enable Box MCP Server in Box
 
-Explain how to enable Box MCP:
-
-## Predefined Box MCP Servers
-
 Box MCP Servers are listed in the Box Admin Console within Integrations tab. Choose Box Integrations & Clients from top navigation and search for MCP in the Individual Integration Controls.
 
 ## Create unlisted Box MCP server
@@ -27,7 +23,15 @@ Instruction
 
 ## Add Box MCP Server to MPC clients
 
-List supported MCP clients:
+### Copilot Studio
+
+Adding a Box MCP Server on Copilot Studio side
+To add an MCP server, follow the instructions provided by Copilot Studio side. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp#add-tools-from-an-existing-mcp-connector-to-an-agent).
+
+### Azure API Center
+
+Adding a Box MCP Server on the Azure API Center's Enterprise Registry side
+To add an MCP server in Azure API Center's Enterprise Registry, follow the instructions provided on by Azure’. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Azure API Center's Enterprise Registry](https://learn.microsoft.com/en-us/azure/api-center/register-discover-mcp-server).
 
 ## Available tools
 
