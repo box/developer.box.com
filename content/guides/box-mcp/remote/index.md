@@ -24,7 +24,8 @@ Instruction
 ## Add Box MCP Server to MPC clients
 
 To connect to Box from the AI Agent platform, you need:
-* Endpoint URL: https://mcp.box.com
+
+* Endpoint URL: `https://mcp.box.com`
 * Client ID and Client Secret: Box generates these in the Integration Credentials section of Box Admin Console when configuring the Box MCP Server, above.
 
 Exact steps may vary depending on the AI platform. Please refer to your platform’s documentation for client-side setup instructions.
