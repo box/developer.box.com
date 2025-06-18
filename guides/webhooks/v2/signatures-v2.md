@@ -178,7 +178,7 @@ digest2 = base64.b64encode(hmac2)
 
 エンコードされたダイジェストを`BOX-SIGNATURE-PRIMARY`または`BOX-SIGNATURE-SECONDARY`ヘッダーの値と比較します。
 
-Compare the value of the `BOX-SIGNATURE-PRIMARY` header to the digest created with the primary key, and the value of the `BOX-SIGNATURE-SECONDARY` header to the digest created with the secondary key. Make sure to use a timing-safe comparison between signatures to prevent timing attacks.
+`BOX-SIGNATURE-PRIMARY`ヘッダーの値をプライマリキーで作成されたダイジェストと比較し、`BOX-SIGNATURE-SECONDARY`ヘッダーの値をセカンダリキーで作成されたダイジェストと比較します。タイミング攻撃を防ぐため、署名間でタイミングの影響がない比較方法を使用してください。
 
 <Tabs>
 
