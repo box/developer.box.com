@@ -197,29 +197,29 @@ Box AI is powered by the following AI models. These models are integrated with B
 Certain Box AI customers may enable additional AI models upon their request and/or otherwise made available to them through their admin console. Use of these models may be subject to additional terms. By selecting a customer-enabled model, customer acknowledges that their data may be processed by additional [subprocessors][subprocessors] of their choice.
 
 <TileGrid rows="2">
-<Tile type="model" title="xai__grok_3_beta" href="/guides/box-ai/ai-models/xai-grok-3-beta-model-card">
-A model that excels at enterprise use cases like data extraction, coding, and text summarization.
-<div>
-<strong style="background-color: #dde6ed">Chat</strong>
-<strong style="background-color: #f0e2ff">Beta</strong>
-<strong style="background-color: #f8d59b">Premium</strong>
-</div>
-</Tile>
-<Tile type="model" title="xai__grok_3_mini_reasoning_beta" href="/guides/box-ai/ai-models/xai-grok-3-mini-beta-model-card">
-A lightweight model that is great for logic-based tasks that do not require deep domain knowledge.
-<div>
-<strong style="background-color: #dde6ed">Chat</strong>
-<strong style="background-color: #f0e2ff">Beta</strong>
-<strong style="background-color: #f8d59b">Premium</strong>
-</div>
-</Tile>
-<Tile type="gpt" title="openai__gpt_o3" href="/guides/box-ai/ai-models/openai-gpt-o3-model-card">
-A multimodal model, highly efficient in handling complex, multi-step tasks.
-<div>
-<strong style="background-color: #f0e2ff">Beta</strong>
-<strong style="background-color: #f8d59b">Premium</strong>
-</div>
-</Tile>
+		<Tile type="model" title="xai__grok_3_beta" href="/guides/box-ai/ai-models/xai-grok-3-beta-model-card">
+			A model that excels at enterprise use cases like data extraction, coding, and text summarization.
+			<div>
+				<strong style="background-color: #dde6ed">Chat</strong>
+				<strong style="background-color: #f0e2ff">Beta</strong>
+				<strong style="background-color: #f8d59b">Premium</strong>
+			</div>
+		</Tile>
+		<Tile type="model" title="xai__grok_3_mini_reasoning_beta" href="/guides/box-ai/ai-models/xai-grok-3-mini-beta-model-card">
+			A lightweight model that is great for logic-based tasks that do not require deep domain knowledge.
+			<div>
+				<strong style="background-color: #dde6ed">Chat</strong>
+				<strong style="background-color: #f0e2ff">Beta</strong>
+				<strong style="background-color: #f8d59b">Premium</strong>
+			</div>
+		</Tile>
+		<Tile type="gpt" title="openai__gpt_o3" href="/guides/box-ai/ai-models/openai-gpt-o3-model-card">
+			A multimodal model, highly efficient in handling complex, multi-step tasks.
+			<div>
+				<strong style="background-color: #f0e2ff">Beta</strong>
+				<strong style="background-color: #f8d59b">Premium</strong>
+			</div>
+		</Tile>
 </TileGrid>
 
 [ask]: e://post_ai_ask
