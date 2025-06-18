@@ -240,7 +240,7 @@ store the data in unique Box user accounts.
 App Users cannot see or interact any content in the folder tree of the Service
 Account unless explicitly added as a collaborator. Again, because App Users does
 not have login credentials, they cannot access content outside of the
-Custom Application.
+platform application.
 
 ### UI Access
 
@@ -279,7 +279,7 @@ or as a service account, you can make subsequent calls impersonating another
 user. This is useful in automating administrative tasks like folder
 reorganization or employee provisioning. In order to make `as-user` calls,
 the appropriate scope must be added to the application when creating it
-in the developer console. For example, in an OAuth 2.0 custom app, you
+in the developer console. For example, in an OAuth 2.0 platform app, you
 would need to turn on this switch.
 
 <ImageFrame center>
