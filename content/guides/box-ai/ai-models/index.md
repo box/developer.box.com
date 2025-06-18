@@ -44,9 +44,9 @@ Box AI is powered by the following AI models. These models are integrated with B
 		<Tile type="gpt" title="azure__openai__gpt_4_1_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card">
 			A multimodal model designed to handle lightweight tasks.
 			<div>
-				<strong style="background-color: #BCBCBC">Default for Box AI for Box Hubs</strong>
-				<strong style="background-color: #BCBCBC">Default for Box AI for Docs</strong>
-				<strong style="background-color: #BCBCBC">Default for Box AI for Box Notes Q&A</strong>
+				<strong style="background-color: #dde6ed">Default for Box AI for Box Hubs</strong>
+				<strong style="background-color: #dde6ed">Default for Box AI for Docs</strong>
+				<strong style="background-color: #dde6ed">Default for Box AI for Box Notes Q&A</strong>
 				<strong style="background-color: #dde6ed">Chat</strong>
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #fdfad8">Standard</strong>
@@ -80,7 +80,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 		<Tile type="gpt" title="azure__openai__text_embedding_ada_002" href="/guides/box-ai/ai-models/azure-text-embedding-ada-002-model-card">
 			A most capable 2nd generation text embedding model. Skilled in text search, code search, and sentence similarity.
 			<div>
-				<strong style="background-color: #BCBCBC">Embeddings</strong>
+				<strong style="background-color: #dde6ed">Embeddings</strong>
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #fdfad8">Standard</strong>
 			</div>
@@ -112,7 +112,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 	<Tile type="gemini" title="google__gemini_2_0_flash_lite_preview" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-lite-preview-02-05">
 			Gemini multimodal model designed to handle lightweight tasks.
 			<div>
-				<strong style="background-color: #BCBCBC">Default for Box AI Extract</strong>
+				<strong style="background-color: #dde6ed">Default for Box AI Extract</strong>
 				<strong style="background-color: #dde6ed">Chat</strong>
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #fdfad8">Standard</strong>
