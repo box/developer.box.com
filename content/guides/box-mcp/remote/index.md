@@ -19,7 +19,7 @@ Explain how to enable Box MCP:
 
 ## Predefined Box MCP Servers
 
-Instruction
+Box MCP Servers are listed in the Box Admin Console within Integrations tab. Choose Box Integrations & Clients from top navigation and search for MCP in the Individual Integration Controls.
 
 ## Create unlisted Box MCP server
 
@@ -35,7 +35,7 @@ Box MCP Server includes several tools your can use:
 
 | Tool| Description|
 |--------|--------|
-| Who am I|  |
-| Listing folder content by folder ID| |
+| Who am I| Read data connected to user metadata |
+| Folders| List folder content by ID|
 | Box Search| Includes metadata based querying, extra fields requesting, searching folder by name |
 | Box AI| Includes multi-file query, multi-file, Box Hubs query based on a default Box AI Agent. Supports also metadata extraction|
