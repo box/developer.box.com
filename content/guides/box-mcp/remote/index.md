@@ -13,15 +13,21 @@ The Box MCP Server allows third-party AI systems to securely connect and interac
   Box MCP Server offered subject to Box’s Main Beta Agreement, meaning the available capabilities may change at any time. Box MCP Server is available for customers with Enterprise Plus or Enterprise Advanced plans.
 </Message>
 
-## Enable Box MCP Server in Box
+## Access and manage predefined Box MCP Servers
 
-Box MCP Servers are listed in the Box Admin Console within Integrations tab. Choose Box Integrations & Clients from top navigation and search for MCP in the Individual Integration Controls.
+Instruction
 
-## Create unlisted Box MCP server
+## Create a new, unlisted Box MCP Server
 
 Instruction
 
 ## Add Box MCP Server to MPC clients
+
+To connect to Box from the AI Agent platform, you need:
+* Endpoint URL: https://mcp.box.com
+* Client ID and Client Secret: Box generates these in the Integration Credentials section of Box Admin Console when configuring the Box MCP Server, above.
+
+Exact steps may vary depending on the AI platform. Please refer to your platform’s documentation for client-side setup instructions.
 
 ### Copilot Studio
 
@@ -32,6 +38,10 @@ To add an MCP server, follow the instructions provided by Copilot Studio side. D
 
 Adding a Box MCP Server on the Azure API Center's Enterprise Registry side
 To add an MCP server in Azure API Center's Enterprise Registry, follow the instructions provided on by Azure’. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Azure API Center's Enterprise Registry](https://learn.microsoft.com/en-us/azure/api-center/register-discover-mcp-server).
+
+### Using Box AI Features with the MCP Server
+
+When using Box AI in third party applications, the best experience and highest quality results are achieved by accessing the applications through the Box MCP Server. This ensures full functionality, improved performance, and a seamless user experience.
 
 ## Available tools
 
