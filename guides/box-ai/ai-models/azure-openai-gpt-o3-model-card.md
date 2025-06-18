@@ -19,18 +19,19 @@ previous_page_id: box-ai/ai-models
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/azure-openai-gpt-o3-model-card.md
 ---
-# Azure OpenAI GPT o3
+# OpenAI GPT o3
 
-**Azure OpenAI GPT o3** is specifically designed to tackle reasoning and problem-solving tasks with increased focus and capability. It spends more time processing and understanding the user's request, making it exceptionally strong in areas like science, coding, and math compared to previous iterations.
+**OpenAI GPT o3** is specifically designed to tackle reasoning and problem-solving tasks with increased focus and capability. It spends more time processing and understanding the user's request, making it exceptionally strong in areas like science, coding, and math compared to previous iterations.
 
 ## Model details
 
-| Item  | Value | Description |
+| Item | Value | Description |
 |-----------|----------|----------|
 |Model name|**GPT o3**| The name of the model. |
-|API model name|`azure__openai__gpt_o3`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
-|Hosting layer| **Microsoft Azure** | The trusted organization that securely hosts LLM. |
-|Model provider|**Microsoft Azure**| The organization that provides this model. |
+| Model category | Premium | The category of the model - standard or premium. |
+|API model name|`openai__gpt_o3`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
+|Hosting layer| **OpenAI** | The trusted organization that securely hosts LLM. |
+|Model provider|**OpenAI**| The organization that provides this model. |
 |Release date|**April 16th, 2025** | The release date for the model.|
 |Knowledge cutoff date| **May 2024**| The date after which the model does not get any information updates. |
 |Input context window |**200k tokens**| The number of tokens supported by the input context window.|
@@ -40,7 +41,7 @@ source_url: >-
 
 ## Additional documentation
 
-For additional information, see [official Azure OpenAI GPT o3 documentation][azure-ai-o3-model].
+For additional information, see [official OpenAI GPT o3 documentation][openai-o3-model].
 
-[azure-ai-o3-model]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#o-series-models
+[openai-o3-model]: https://openai.com/index/introducing-o3-and-o4-mini/
 [overrides]: g://box-ai/ai-agents/ai-agent-overrides

@@ -23,7 +23,6 @@ source_url: >-
 # Supported AI models
 
 There are two types of AI models supported by Box: core and customer-enabled.
-
 The core Box AI models are default in the Box AI service and are available to
 all customers.
 
@@ -45,6 +44,7 @@ For example, to get the AI agent configuration for a specific model, use the [mo
 <Message type='notice'>
 
 The list may change depending on the model availability.
+
 Models offered in **Beta** mode have not been fully performance-tested at scale and are made available on an as-is basis. You may experience variability in model/output quality, availability, and accuracy.
 
 </Message>
@@ -60,25 +60,25 @@ Box AI is powered by the following AI models. These models are integrated with B
 A multimodal model designed to handle lightweight tasks.
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Default for Box AI for Box Hubs
 
 </strong>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Default for Box AI for Docs
 
 </strong>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Default for Box AI for Box Notes Q&A
 
 </strong>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Chat
 
@@ -87,6 +87,12 @@ Chat
 <strong style="background-color: #e1ffe7">
 
 Available
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+Standard
 
 </strong>
 
@@ -99,7 +105,7 @@ Available
 A multimodal model, highly efficient in handling complex, multi-step tasks.
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Chat
 
@@ -108,6 +114,12 @@ Chat
 <strong style="background-color: #e1ffe7">
 
 Available
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
 
 </strong>
 
@@ -120,7 +132,7 @@ Available
 A multimodal model designed to handle lightweight tasks.
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Chat
 
@@ -129,6 +141,12 @@ Chat
 <strong style="background-color: #e1ffe7">
 
 Available
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+Standard
 
 </strong>
 
@@ -141,15 +159,27 @@ Available
 A multimodal model, highly efficient in handling complex, multi-step tasks.
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Chat
+
+</strong>
+
+<strong style="background-color: #fffbf3">
+
+Preview
 
 </strong>
 
 <strong style="background-color: #e1ffe7">
 
 Available
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
 
 </strong>
 
@@ -159,11 +189,10 @@ Available
 
 <Tile type="gpt" title="azure__openai__text_embedding_ada_002" href="/guides/box-ai/ai-models/azure-text-embedding-ada-002-model-card">
 
-A most capable 2nd generation text embedding model. Skilled in
-text search, code search, and sentence similarity.
+A most capable 2nd generation text embedding model. Skilled in text search, code search, and sentence similarity.
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Embeddings
 
@@ -172,6 +201,12 @@ Embeddings
 <strong style="background-color: #e1ffe7">
 
 Available
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+Standard
 
 </strong>
 
@@ -184,7 +219,7 @@ Available
 Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Chat
 
@@ -193,6 +228,12 @@ Chat
 <strong style="background-color: #e1ffe7">
 
 Available
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
 
 </strong>
 
@@ -205,7 +246,7 @@ Available
 Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Chat
 
@@ -214,6 +255,12 @@ Chat
 <strong style="background-color: #e1ffe7">
 
 Available
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+Standard
 
 </strong>
 
@@ -226,7 +273,7 @@ Available
 Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Chat
 
@@ -235,6 +282,12 @@ Chat
 <strong style="background-color: #e1ffe7">
 
 Available
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+Standard
 
 </strong>
 
@@ -247,13 +300,13 @@ Available
 Gemini multimodal model designed to handle lightweight tasks.
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Default for Box AI Extract
 
 </strong>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Chat
 
@@ -265,39 +318,9 @@ Available
 
 </strong>
 
-</div>
+<strong style="background-color: #fdfad8">
 
-</Tile>
-
-<Tile type="gemini" title="google__gemini_1_5_flash_001" href="/guides/box-ai/ai-models/google-gemini-1-5-flash-001-model-card">
-
-Gemini multimodal model, built for high volume tasks and latency-sensitive applications.
-<div>
-
-<strong style="background-color: #999999">
-
-Deprecated
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="gemini" title="google__gemini_1_5_pro_001" href="/guides/box-ai/ai-models/google-gemini-1-5-pro-001-model-card">
-
-A foundation model that performs well at a variety of multimodal tasks.
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-Chat
-
-</strong>
-
-<strong style="background-color: #999999">
-
-Deprecated
+Standard
 
 </strong>
 
@@ -310,7 +333,7 @@ Deprecated
 A model tailored for various language tasks, including creative writing and conversational AI.
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Chat
 
@@ -319,6 +342,12 @@ Chat
 <strong style="background-color: #e1ffe7">
 
 Available
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+Standard
 
 </strong>
 
@@ -331,7 +360,7 @@ Available
 A model designed for advanced language tasks, focusing on comprehension and context handling.
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Chat
 
@@ -340,6 +369,12 @@ Chat
 <strong style="background-color: #e1ffe7">
 
 Available
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
 
 </strong>
 
@@ -352,7 +387,7 @@ Available
 A model designed to enhance language understanding and generation tasks.
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Chat
 
@@ -361,6 +396,12 @@ Chat
 <strong style="background-color: #e1ffe7">
 
 Available
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
 
 </strong>
 
@@ -370,10 +411,10 @@ Available
 
 <Tile type="model" title="aws__claude_3_7_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-7-sonnet-model-card">
 
-A model designed to enhance language understanding and generation tasks.
+A model designed to enhance language understanding and generation tasks
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Chat
 
@@ -382,6 +423,12 @@ Chat
 <strong style="background-color: #e1ffe7">
 
 Available
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
 
 </strong>
 
@@ -394,7 +441,7 @@ Available
 A model that brings frontier performance to everyday use cases.
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Chat
 
@@ -403,6 +450,12 @@ Chat
 <strong style="background-color: #e1ffe7">
 
 Available
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
 
 </strong>
 
@@ -415,7 +468,7 @@ Available
 A model that excels at coding and complex problem-solving, powering frontier agent products.
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Chat
 
@@ -424,6 +477,12 @@ Chat
 <strong style="background-color: #e1ffe7">
 
 Available
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
 
 </strong>
 
@@ -436,7 +495,7 @@ Available
 A model capable of advanced language processing, handling extensive contexts, making it suitable for complex tasks.
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Chat
 
@@ -445,6 +504,12 @@ Chat
 <strong style="background-color: #e1ffe7">
 
 Available
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+Standard
 
 </strong>
 
@@ -457,7 +522,7 @@ Available
 A model built for document-level understanding, interpretation of charts and graphs, and captioning of images.
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Chat
 
@@ -466,6 +531,12 @@ Chat
 <strong style="background-color: #e1ffe7">
 
 Available
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+Standard
 
 </strong>
 
@@ -478,7 +549,7 @@ Available
 A natively multimodal AI model that enables text and multimodal experiences.
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Chat
 
@@ -487,6 +558,12 @@ Chat
 <strong style="background-color: #e1ffe7">
 
 Available
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+Standard
 
 </strong>
 
@@ -507,15 +584,21 @@ Certain Box AI customers may enable additional AI models upon their request and/
 A model that excels at enterprise use cases like data extraction, coding, and text summarization.
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Chat
 
 </strong>
 
-<strong style="background-color: #fffbf3">
+<strong style="background-color: #f0e2ff">
 
 Beta
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
 
 </strong>
 
@@ -528,15 +611,21 @@ Beta
 A lightweight model that is great for logic-based tasks that do not require deep domain knowledge.
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Chat
 
 </strong>
 
-<strong style="background-color: #fffbf3">
+<strong style="background-color: #f0e2ff">
 
 Beta
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
 
 </strong>
 
@@ -544,14 +633,20 @@ Beta
 
 </Tile>
 
-<Tile type="gpt" title="azure__openai__gpt_o3" href="/guides/box-ai/ai-models/azure-openai-gpt-o3-model-card">
+<Tile type="gpt" title="openai__gpt_o3" href="/guides/box-ai/ai-models/openai-gpt-o3-model-card">
 
 A multimodal model, highly efficient in handling complex, multi-step tasks.
 <div>
 
-<strong style="background-color: #fffbf3">
+<strong style="background-color: #f0e2ff">
 
 Beta
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
 
 </strong>
 

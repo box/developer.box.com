@@ -28,6 +28,7 @@ source_url: >-
 | Item  | Value | Description |
 |-----------|----------|----------|
 |Model name|**GPT-4.1 mini**| The name of the model. |
+| Model category | Standard | The category of the model - standard or premium. |
 |API model name|`azure__openai__gpt_4.1_mini`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer| **Microsoft Azure** | The trusted organization that securely hosts LLM. |
 |Model provider|**Microsoft Azure**| The organization that provides this model. |
