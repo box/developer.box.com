@@ -201,7 +201,7 @@ Certain Box AI customers may enable additional AI models upon their request and/
 A model that excels at enterprise use cases like data extraction, coding, and text summarization.
 <div>
 <strong style="background-color: #dde6ed">Chat</strong>
-<strong style="background-color: #fffbf3">Beta</strong>
+<strong style="background-color: #f0e2ff">Beta</strong>
 <strong style="background-color: #f8d59b">Premium</strong>
 </div>
 </Tile>
@@ -209,14 +209,14 @@ A model that excels at enterprise use cases like data extraction, coding, and te
 A lightweight model that is great for logic-based tasks that do not require deep domain knowledge.
 <div>
 <strong style="background-color: #dde6ed">Chat</strong>
-<strong style="background-color: #fffbf3">Beta</strong>
+<strong style="background-color: #f0e2ff">Beta</strong>
 <strong style="background-color: #f8d59b">Premium</strong>
 </div>
 </Tile>
 <Tile type="gpt" title="openai__gpt_o3" href="/guides/box-ai/ai-models/openai-gpt-o3-model-card">
 A multimodal model, highly efficient in handling complex, multi-step tasks.
 <div>
-<strong style="background-color: #fffbf3">Beta</strong>
+<strong style="background-color: #f0e2ff">Beta</strong>
 <strong style="background-color: #f8d59b">Premium</strong>
 </div>
 </Tile>
