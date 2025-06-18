@@ -227,7 +227,7 @@ https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
 
 ## Cloud game
 
-The cloud game is a widget created to prevent clickjacking.
+The cloud game is a widget created to prevent [clickjacking][cloud-game].
 It's shown for embedded sites that aren’t partner integrations.
 In cloud game, user must drag a cloud to the correct location before an
 interaction is allowed. It makes clickjacking difficult, as the
@@ -266,3 +266,4 @@ and **print** options might not show in mobile browsers.
 [3]: e://put-files-id--add-shared-link
 [4]: e://put-folders-id--add-shared-link
 [5]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
+[cloud-game]: https://support.box.com/hc/en-us/articles/360043691034-How-Does-Box-Prevent-Clickjacking
