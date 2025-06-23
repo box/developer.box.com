@@ -91,7 +91,7 @@ view sample code, explore Box AI use cases, and more!
 
   <TileGrid rows="4">
     <Tile type="box-brown" title="Box MCP server"
-      href="/guides/box-mcp/box-mcp-server">
+      href="/guides/box-mcp/remote">
         Allow AI assistants to access enterprise content management capabilities with minimal friction, opening up new possibilities for intelligent document handling and analysis.
 
         <div>
