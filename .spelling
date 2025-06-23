@@ -339,6 +339,8 @@ unpublish
 sanitization
 checkboxes
 strikethrough
+differentiators
+sanitization
 theming
 Agentforce
 DocGen
@@ -357,3 +359,4 @@ SVG
 SVGs
 px
 Kus
+natively

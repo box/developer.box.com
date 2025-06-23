@@ -306,6 +306,51 @@ allowfullscreen="true"
 style="width: 100%;"
 ></iframe>
 
+## Custom actions
+
+You can expand the actions in the **More Options** menu for files and folders in Content Explorer and Content Picker. Your custom options show when user clicks the ellipsis button.
+
+To customize the **More Options** menu, pass an array of custom actions to `itemActions`. 
+
+```js
+contentExplorer.show(configData.FOLDER_ID, configData.ACCESS_TOKEN, {
+    container: ".container",
+    itemActions: customActions,
+});
+```
+
+The array can include multiple actions. The action object should include the `label` and `onAction` callback functions. You can filter the custom actions to appear only on a specific item `type`, by passing the `file` or `folder` value. The `filter` value is used for advanced filtering, for example by a specific file extension:
+
+```js
+const customActions = [
+    {
+        label: "Preview in New Window",
+        onAction: (item) => alert('action ' + item),
+        type: 'file',
+    },
+    {
+        label: "Open in Box.com",
+        onAction: (item) => window.open("https://app.box.com"),
+    },
+    {
+        label: "Export",
+        onAction: (item) => console.log('action ' + item),
+        filter: (item) => item.extension?.toLowerCase() === 'pdf',
+    }
+];
+```
+
+See the implemented examples in CodePen:
+
+<iframe height="560"
+scrolling="no" 
+title="Box custom icons" 
+src="https://codepen.io/box-platform/embed/EaaMMKQ?default-tab=html%2Cresult" frameborder="no"
+allowtransparency="true"
+allowfullscreen="true"
+style="width: 100%;"
+></iframe>
+
 [downscope]: guide://authentication/tokens/downscope
 [scopes]: guide://api-calls/permissions-and-errors/scopes
 [box-app]: g:///applications/app-types

@@ -17,7 +17,7 @@ Box Web App experience in a custom-made application. Box Embed provides the abil
 
 To create a widget, you need to:
 
-* Set an embeddable element, such as a **folder**, **file**, or **Hub** for sharing. 
+* Set an embeddable element, such as a **folder**, **file**, **Hub**, **note**, or **app** for sharing. 
 * Have at least **Viewer** [permissions][5].
 
 ## Using web app
@@ -36,15 +36,27 @@ To fetch the Box Embed widget code from the Box web app, perform the following s
 2. Click on the ellipsis menu in the top right corner. 
 3. Click **Embed Hub**.
 
+### Notes
+
+1. Navigate to the chosen Box Note.
+2. Click on the ellipsis menu.
+3. Click **Embed Box Note**.
+
+### Apps
+
+1. Navigate to the chosen Box App or Box App View.
+2. Click on the ellipsis menu.
+3. Click **Embed**.
+
 <ImageFrame border>
   ![Box Embed](./box-embed-new.png)
 </ImageFrame>
 
 In the next step, configure the parameters of an embeddable element.
 
-| Files | Folders  | Hubs  |
-|----------|----------|------------------------|
-|Size of the widget.| Size of the widget, sorting of the files in a folder, hiding the navigation path and sidebar | Size of the widget,  hiding the parent navigation path and sidebar. |
+| Files | Folders  | Hubs  | Notes | Apps | 
+|----------|----------|------------------------| --- | --- |
+| Size of the widget.| Size of the widget, sorting of the files in a folder, hiding the navigation path and sidebar. | Size of the widget,  hiding the parent navigation path and sidebar. | Size of the widget, skipping cloud game (results in note being in read only mode), hiding notes navigation. | Size of the widget. |
 
 <ImageFrame border>
   ![Box Embed Configuration](./embed-configuration.png)
@@ -111,13 +123,20 @@ a list of optional parameters you can configure.
 
 |                       |                                                                                              |
 | --------------------- | -------------------------------------------------------------------------------------------- |
-| `view`                | The view type for your files or folders. Can be `list` (default) or `icon`. For logged-in users the view type from user preferences takes precedence.                  |
+| `hideHubsGallery` | Hide or show navigation chevron button to go back to Hubs gallery. Can be `true` or `false` (default).                         |
+| `hideNavigationControls` | Hide or show navigation controls in Box Notes.| 
+| `showItemFeedActions` | Hide or show file comments or tasks. Can be `true` (default) or `false`.                         |
+| `showParentPath`      | Hide or show the folder path in the header of the frame. Can be `true` or `false` (default). |
 | `sortColumn`          | The order the files or folders are sorted in. Can be `name`, `date` (default), or `size`.    |
 | `sortDirection`       | The sort direction of files or folders. Can be `ASC` (default) or `DESC`.                    |
-| `showParentPath`      | Hide or show the folder path in the header of the frame. Can be `true` or `false` (default). |
-| `showItemFeedActions` | Hide or show file comments or tasks. Can be `true` (default) or `false`.                         |
-| `hideHubsGallery` | Hide or show navigation chevron button to go back to Hubs gallery. Can be `true` or `false` (default).                         |
-| `uxLite` | Show the limited content preview (Preview Light), with no cloud game. Works only for shared files.                     |
+| `view`                | The view type for your files or folders. Can be `list` (default) or `icon`. For logged-in users the view type from user preferences takes precedence.                  |
+| `uxLite` | Show the limited content preview (Preview Light), with no cloud game. Works only for shared files and Box Notes. |
+
+<Message type='notice'>
+When you use `uxLite` with Box Notes, navigation controls are not displayed, regardless of the `hideNavigationControls` setting. 
+</Message>
+
+All custom search parameters from the first-party app URL are passed to the embed widget modal and Content Preview.
 
 ### Full screen capabilities
 
