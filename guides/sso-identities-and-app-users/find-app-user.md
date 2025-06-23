@@ -20,7 +20,7 @@ fullyTranslated: true
 ---
 # SSO IDのApp Userの検索
 
-ユーザーがSSOプロバイダを使用してBoxカスタムアプリケーションにログインする際、まず必要なのは、Boxユーザーレコードが作成された前回のログイン試行から、そのユーザーがすでに存在するかどうかを確認することです。
+When a user logs into a Box platform application with their SSO provider, the first step that should be taken is to see if that user already exists from a previous login attempt where a Box user record was already created.
 
 Boxユーザーが検出されたら、そのユーザーとしてBox APIにアクセスするために、[ユーザーアクセストークンを作成](guide://authentication/jwt/user-access-tokens)するか[as-user呼び出し](guide://authentication/jwt/as-user)を実行する必要があります。
 

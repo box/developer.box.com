@@ -25,7 +25,7 @@ fullyTranslated: true
 
 シングルサインオン (SSO) サービスは、会社の**Identity and Access Management (IAM)** ソリューションの一環として使用されることがよくあります。SSOサービスが展開されると、ユーザーは、1つの資格情報セット (ユーザー名とパスワード) だけを使用して1回ログインすれば、複数のアプリケーションの認証を安全に行うことができます。
 
-Boxは、会社のSSOサービスに接続可能なアプリケーションの1つです。こうしたアプリケーションをカスタムアプリに統合すれば、いずれのエンドユーザーに対しても即座にBoxユーザーがプロビジョニングされます。その際、このエンドユーザーにはBoxアカウントが用意されたことが知らされません。
+Box is one of the applications that can be connected to the SSO service of a company. Integrating these applications into your platform apps will allow you to provision Box users on the fly for any of your end users, without those users knowing they have a Box account.
 
 <Message notice>
 
@@ -39,7 +39,7 @@ Boxは、会社のSSOサービスに接続可能なアプリケーションの1�
 
 1. ユーザーはログアウトした状態でウェブアプリケーションやモバイルアプリケーションにアクセスします。
 2. ユーザーは、通常`OAuth 2`や`OpenID Connect`を介して、ログインのためにSSOプロバイダにリダイレクトされます。
-3. ログイン後、ユーザーはSSO ID資格情報と共にアプリケーションに再度リダイレクトされます。
+3. ログイン後、ユーザーはSSO ID資格情報とともにアプリケーションに再度リダイレクトされます。
 4. アプリケーションでは、このユーザーに関連付けられたBoxアカウントがすでに存在するかどうかを確認します。
 5. このユーザーに既存のBoxアカウントがある場合、アプリケーションはSSO IDを使用して、Boxでそのユーザーに代わってAPIコールを実行します。
 6. このユーザーに関連付けられたBoxアカウントがまだない場合は、SSO IDに基づいて新しいBoxユーザーアカウントが作成されます。SSOサービスの一意のユーザーIDが新しいBoxユーザーにリンクされ、2つのアカウントの間に関連付けが作成されます。その後、この新しいBoxユーザーがBoxでそのユーザーに代わってAPIコールを実行します。

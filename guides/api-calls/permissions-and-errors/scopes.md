@@ -266,17 +266,16 @@ Enterprise設定に基づいて、管理者、[共同管理者][ca]、[サービ
 
 また、ダウンスコープ時には標準OAuthスコープもサポートされます。
 
-| OAuthスコープ                      | 説明                                 |
-| ------------------------------ | ---------------------------------- |
-| `root_readonly`                | Boxに格納されているすべてのファイルとフォルダの読み取り      |
-| `root_readwrite`               | Boxに格納されているすべてのファイルとフォルダの読み取りと書き込み |
-| `manage_managed_users`         | 管理対象ユーザーを管理する                      |
-| `manage_app_users`             | App Userを管理                        |
-| `manage_groups`                | グループを管理する                          |
-| `manage_webhook`               | Webhookを管理する                       |
-| `manage_enterprise_properties` | Enterpriseのプロパティを管理する              |
-| `manage_data_retention`        | リテンションポリシーを管理する                    |
-| `sign_requests.readwrite`      | 署名リクエストを管理する                       |
+| OAuthスコープ                      | 説明                    |
+| ------------------------------ | --------------------- |
+| `ai.readwrite`                 | Manage AI API         |
+| `manage_managed_users`         | 管理対象ユーザーを管理する         |
+| `manage_app_users`             | App Userを管理           |
+| `manage_data_retention`        | リテンションポリシーを管理する       |
+| `manage_enterprise_properties` | Enterpriseのプロパティを管理する |
+| `manage_groups`                | グループを管理する             |
+| `manage_webhook`               | Webhookを管理する          |
+| `sign_requests.readwrite`      | 署名リクエストを管理する          |
 
 <!-- i18n-enable localize-links -->
 

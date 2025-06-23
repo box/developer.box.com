@@ -31,7 +31,7 @@ Box AI Studioは、Enterprise Advancedアカウントでのみ使用できます
 
 AI StudioでカスタムAIエージェントの作成を開始するには、Box AIスコープが有効になっているPlatformアプリケーションと、コールを認証するための開発者トークンが必要です。
 
-## カスタムアプリケーションの作成
+## Create a platform application
 
 まず、コールの実行に使用するPlatformアプリケーションを作成する必要があります。アプリケーションを作成するには、[Platformアプリの作成][createapps]に関するガイドに従ってください。
 

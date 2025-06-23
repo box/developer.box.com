@@ -29,6 +29,7 @@ fullyTranslated: true
 | 項目            | 値                             | 説明                                                                                 |
 | ------------- | ----------------------------- | ---------------------------------------------------------------------------------- |
 | モデル名          | **AWS Claude 4 Sonnet**       | モデルの名前。                                                                            |
+| モデル名          | **AWS Titan Text Lite**       | The name of the model - standard or premium.                                       |
 | APIモデル名       | `aws__claude_4_sonnet`        | [Box AI APIでのモデルの上書き][overrides]に使用されるモデルの名前。APIを動作させるには、ユーザーがこの名前を正確に指定する必要があります。 |
 | ホスティングレイヤー    | **Amazon Web Services (AWS)** | LLMを安全にホストする、信頼できる組織。                                                              |
 | モデルプロバイダ      | **Anthropic**                 | このモデルを提供する組織。                                                                      |

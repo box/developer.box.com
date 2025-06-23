@@ -25,7 +25,7 @@ fullyTranslated: true
 
 最初の要件は、アカウントの作成時に一般的なファイルとフォルダを個々のユーザーのルートフォルダにコピーすることです。この問題は、標準のLinuxディストリビューション内の`/etc/skel`と呼ばれるディレクトリを介して解決されています。このディレクトリは、Box固有のソリューションによってエミュレートされます。Linuxで新しいユーザーを追加すると、`/etc/skel`内のファイルとフォルダが新しいユーザーのホームディレクトリにコピーされます。
 
-[JWTベースのBoxアプリケーション](g://authentication/jwt/jwt-setup)を作成すると、Box Enterprise内に[サービスアカウント][sa]が作成されます。サービスアカウントはBox Enterpriseの共同管理者に似た機能を持っており、このユースケースに最も有用で、ファイルおよびフォルダに対し、所有、コピー、および他のユーザーとのコラボレーションを行うことができます。さらに重要な点は、ユーザー向けのカスタムアプリケーションの開発では厳密にはサービスアカウントを使用する必要がないことです。代わりに、自動化機能でさらにサービスアカウントを活用できます。
+When creating a [JWT-based Box application](g://authentication/jwt/jwt-setup), a [Service Account][sa] is created within the Box Enterprise. A Service Account is similar in functionality to a co-admin within a Box Enterprise, and most useful to this use case, can own, copy, and collaborate other users on files and folders. More importantly, you don't have to use a Service Account strictly for developing platform applications for users, and instead, can use a Service Account in more of an automation capacity.
 
 <Message>
 

@@ -23,9 +23,7 @@ fullyTranslated: true
 ---
 # サポートされているAIモデル
 
-BoxでサポートされているAIモデルには、コアモデルと顧客が有効化を希望したモデルの2種類があります。
-
-Box AIのコアモデルは、Box AIサービスのデフォルトで、すべてのお客様が利用できます。
+There are two types of AI models supported by Box: core and customer-enabled. The core Box AI models are default in the Box AI service and are available to all customers.
 
 顧客が有効化を希望したモデルは、Box管理者が管理コンソールで有効にするか、利用可能になるようにリクエストします。これらのモデルは追加の条件の対象になる場合があります。
 
@@ -42,7 +40,9 @@ APIコールで`model`パラメータを使用する際は、各タイルおよ�
 
 <Message type="notice">
 
-このリストはモデルの提供状況により変更される可能性があります。**ベータ**モードで提供されているモデルはパフォーマンスが大規模にテストされておらず、現状のままでの利用となるため、モデル/出力の品質、可用性、精度にはばらつきがある可能性があります。
+The list may change depending on the model availability.
+
+Models offered in **Beta** mode have not been fully performance-tested at scale and are made available on an as-is basis. You may experience variability in model/output quality, availability, and accuracy.
 
 </Message>
 
@@ -58,25 +58,25 @@ Box AIには以下のモデルが搭載されています。Box AIと統合さ�
 
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Box AI for Hubsのデフォルト
 
 </strong>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Box AI for Documentsのデフォルト
 
 </strong>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Box AI for NotesのQ&Aのデフォルト
 
 </strong>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 チャット
 
@@ -85,6 +85,12 @@ Box AI for NotesのQ&Aのデフォルト
 <strong style="background-color: #e1ffe7">
 
 利用可能
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+Standard
 
 </strong>
 
@@ -98,7 +104,7 @@ Box AI for NotesのQ&Aのデフォルト
 
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 チャット
 
@@ -107,6 +113,12 @@ Box AI for NotesのQ&Aのデフォルト
 <strong style="background-color: #e1ffe7">
 
 利用可能
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
 
 </strong>
 
@@ -120,7 +132,7 @@ Box AI for NotesのQ&Aのデフォルト
 
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 チャット
 
@@ -129,6 +141,12 @@ Box AI for NotesのQ&Aのデフォルト
 <strong style="background-color: #e1ffe7">
 
 利用可能
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+Standard
 
 </strong>
 
@@ -142,15 +160,27 @@ Box AI for NotesのQ&Aのデフォルト
 
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 チャット
+
+</strong>
+
+<strong style="background-color: #fffbf3">
+
+プレビュー
 
 </strong>
 
 <strong style="background-color: #e1ffe7">
 
 利用可能
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
 
 </strong>
 
@@ -164,7 +194,7 @@ Box AI for NotesのQ&Aのデフォルト
 
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 埋め込み
 
@@ -176,17 +206,23 @@ Box AI for NotesのQ&Aのデフォルト
 
 </strong>
 
+<strong style="background-color: #fdfad8">
+
+Standard
+
+</strong>
+
 </div>
 
 </Tile>
 
 <Tile type="gemini" title="google__gemini_2_5_pro_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-review-model-card">
 
-大規模で大量かつ高頻度のタスクに最適になるよう設計されたGeminiマルチモーダルモデル。
+大規模かつ高頻度のタスクに最適になるよう設計されたGeminiマルチモーダルモデル。
 
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 チャット
 
@@ -195,6 +231,12 @@ Box AI for NotesのQ&Aのデフォルト
 <strong style="background-color: #e1ffe7">
 
 利用可能
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
 
 </strong>
 
@@ -204,11 +246,11 @@ Box AI for NotesのQ&Aのデフォルト
 
 <Tile type="gemini" title="google__gemini_2_5_flash_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-flash-preview-model-card">
 
-大規模で大量かつ高頻度のタスクに最適になるよう設計されたGeminiマルチモーダルモデル。
+大規模かつ高頻度のタスクに最適になるよう設計されたGeminiマルチモーダルモデル。
 
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 チャット
 
@@ -217,6 +259,12 @@ Box AI for NotesのQ&Aのデフォルト
 <strong style="background-color: #e1ffe7">
 
 利用可能
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+Standard
 
 </strong>
 
@@ -226,11 +274,11 @@ Box AI for NotesのQ&Aのデフォルト
 
 <Tile type="gemini" title="google__gemini_2_0_flash_001" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-001-model-card">
 
-大規模で大量かつ高頻度のタスクに最適になるよう設計されたGeminiマルチモーダルモデル。
+大規模かつ高頻度のタスクに最適になるよう設計されたGeminiマルチモーダルモデル。
 
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 チャット
 
@@ -239,6 +287,12 @@ Box AI for NotesのQ&Aのデフォルト
 <strong style="background-color: #e1ffe7">
 
 利用可能
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+Standard
 
 </strong>
 
@@ -252,13 +306,13 @@ Box AI for NotesのQ&Aのデフォルト
 
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 Box AI Extractのデフォルト
 
 </strong>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 チャット
 
@@ -270,41 +324,9 @@ Box AI Extractのデフォルト
 
 </strong>
 
-</div>
+<strong style="background-color: #fdfad8">
 
-</Tile>
-
-<Tile type="gemini" title="google__gemini_1_5_flash_001" href="/guides/box-ai/ai-models/google-gemini-1-5-flash-001-model-card">
-
-大量のタスクやレイテンシの影響を受けやすいアプリケーション向けに構築されたGeminiマルチモーダルモデル。
-
-<div>
-
-<strong style="background-color: #999999">
-
-廃止
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="gemini" title="google__gemini_1_5_pro_001" href="/guides/box-ai/ai-models/google-gemini-1-5-pro-001-model-card">
-
-さまざまなマルチモーダルタスクで優れたパフォーマンスを発揮する基本モデル。
-
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-チャット
-
-</strong>
-
-<strong style="background-color: #999999">
-
-廃止
+Standard
 
 </strong>
 
@@ -318,7 +340,7 @@ Box AI Extractのデフォルト
 
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 チャット
 
@@ -327,6 +349,12 @@ Box AI Extractのデフォルト
 <strong style="background-color: #e1ffe7">
 
 利用可能
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+Standard
 
 </strong>
 
@@ -340,7 +368,7 @@ Box AI Extractのデフォルト
 
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 チャット
 
@@ -349,6 +377,12 @@ Box AI Extractのデフォルト
 <strong style="background-color: #e1ffe7">
 
 利用可能
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
 
 </strong>
 
@@ -362,7 +396,7 @@ Box AI Extractのデフォルト
 
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 チャット
 
@@ -371,6 +405,12 @@ Box AI Extractのデフォルト
 <strong style="background-color: #e1ffe7">
 
 利用可能
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
 
 </strong>
 
@@ -380,11 +420,11 @@ Box AI Extractのデフォルト
 
 <Tile type="model" title="aws__claude_3_7_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-7-sonnet-model-card">
 
-言語の理解と生成のタスクを強化するよう設計されたモデル。
+A model designed to enhance language understanding and generation tasks
 
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 チャット
 
@@ -393,6 +433,12 @@ Box AI Extractのデフォルト
 <strong style="background-color: #e1ffe7">
 
 利用可能
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
 
 </strong>
 
@@ -406,7 +452,7 @@ Box AI Extractのデフォルト
 
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 チャット
 
@@ -415,6 +461,12 @@ Box AI Extractのデフォルト
 <strong style="background-color: #e1ffe7">
 
 利用可能
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
 
 </strong>
 
@@ -428,7 +480,7 @@ Box AI Extractのデフォルト
 
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 チャット
 
@@ -437,6 +489,12 @@ Box AI Extractのデフォルト
 <strong style="background-color: #e1ffe7">
 
 利用可能
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
 
 </strong>
 
@@ -450,7 +508,7 @@ Box AI Extractのデフォルト
 
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 チャット
 
@@ -459,6 +517,12 @@ Box AI Extractのデフォルト
 <strong style="background-color: #e1ffe7">
 
 利用可能
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+Standard
 
 </strong>
 
@@ -472,7 +536,7 @@ Box AI Extractのデフォルト
 
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 チャット
 
@@ -481,6 +545,12 @@ Box AI Extractのデフォルト
 <strong style="background-color: #e1ffe7">
 
 利用可能
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+Standard
 
 </strong>
 
@@ -494,7 +564,7 @@ Box AI Extractのデフォルト
 
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 チャット
 
@@ -503,6 +573,12 @@ Box AI Extractのデフォルト
 <strong style="background-color: #e1ffe7">
 
 利用可能
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+Standard
 
 </strong>
 
@@ -524,15 +600,21 @@ Box AIの一部の顧客は、リクエストに応じて追加のAIモデルを
 
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 チャット
 
 </strong>
 
-<strong style="background-color: #fffbf3">
+<strong style="background-color: #f0e2ff">
 
 ベータ
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
 
 </strong>
 
@@ -546,15 +628,21 @@ Box AIの一部の顧客は、リクエストに応じて追加のAIモデルを
 
 <div>
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #dde6ed">
 
 チャット
 
 </strong>
 
-<strong style="background-color: #fffbf3">
+<strong style="background-color: #f0e2ff">
 
 ベータ
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
 
 </strong>
 
@@ -562,15 +650,21 @@ Box AIの一部の顧客は、リクエストに応じて追加のAIモデルを
 
 </Tile>
 
-<Tile type="gpt" title="azure__openai__gpt_o3" href="/guides/box-ai/ai-models/azure-openai-gpt-o3-model-card">
+<Tile type="gpt" title="openai__gpt_o3" href="/guides/box-ai/ai-models/openai-gpt-o3-model-card">
 
 複雑なマルチステップタスクの処理で非常に効率的なマルチモーダルモデル。
 
 <div>
 
-<strong style="background-color: #fffbf3">
+<strong style="background-color: #f0e2ff">
 
 ベータ
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
 
 </strong>
 

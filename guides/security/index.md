@@ -105,7 +105,7 @@ Box APIに関して言えば、注意すべきEnterprise設定がいくつかあ
 
 </ImageFrame>
 
-カスタムアプリケーションは、公開アプリケーションと未公開アプリケーションという2つのカテゴリに分類されます。公開アプリケーションは、[Box統合][appcenter]にあります。Box管理者は、公開アプリケーションと未公開アプリケーションをデフォルトで有効にすることによって、承認なしで使用できるようにするかどうかを決定できます。これらの設定のステータスにより、使用するアプリケーションを問題なく[承認][auth]するために必要な操作が決まります。
+Platform applications fall into two categories: published and unpublished. Published applications are found in the [Box Integrations][appcenter]. Box Admins decide whether published and unpublished application are enabled by default and therefore can be used without approval. The status of these settings determines what actions are necessary to successfully [authorize][auth] an application for use.
 
 <ImageFrame center shadow border>
 

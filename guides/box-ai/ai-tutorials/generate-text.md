@@ -36,7 +36,7 @@ Box AIを使用すると、提供されたコンテンツに基づいてテキ�
 
 ## 開始する前に
 
-カスタムアプリを作成して認証するには、[Box AIの使い方][prereq]に記載されている手順に従っていることを確認してください。
+Make sure you followed the steps listed in [getting started with Box AI][prereq] to create a platform app and authenticate.
 
 ## リクエストの送信
 

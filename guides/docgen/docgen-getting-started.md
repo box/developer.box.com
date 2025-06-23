@@ -24,7 +24,7 @@ fullyTranslated: true
 ---
 # Box Doc Genの使い方
 
-Box Doc Gen APIを使用したドキュメントの生成を開始するには、カスタムアプリケーションと、コールを認証するための開発者トークンが必要です。また、ドキュメントの入力ソースとして機能するDoc Genテンプレートも必要です。
+To start generating documents with Box Doc Gen API you will need a platform application and a developer token to authenticate your calls. You also need a Doc Gen template that will serve as an input source for your document.
 
 ## Box Doc Genの有効化
 
@@ -37,9 +37,9 @@ Box Doc Gen APIを使用してドキュメントを生成するには、Box Doc 
 * [Microsoft Word用Box Doc Gen Template Creatorアドイン][template-addin]をインストールする。
 * [JSONファイルを使用][json-template]してBox Doc Genテンプレートを作成するか、手動で[テンプレートタグ][template-tags]を作成する。
 
-## カスタムアプリケーションの作成
+## Create a platform application
 
-まず、コールの実行に使用するカスタムアプリケーションを作成する必要があります。アプリケーションを作成するには、[カスタムアプリの作成][createapps]に関するガイドに従ってください。
+まず、コールの実行に使用するPlatformアプリケーションを作成する必要があります。アプリケーションを作成するには、[Platformアプリの作成][createapps]に関するガイドに従ってください。
 
 ## 開発者トークンの生成
 
