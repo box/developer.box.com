@@ -101,7 +101,7 @@ view sample code, explore Box AI use cases, and more!
     </Tile>
     <Tile type="box-brown" title="Self-hosted Box MCP server"
       href="/guides/box-mcp/self-hosted">
-        A Python Developer Cummunity open source project. It integrates with the Box API to perform various operations such as file search, text extraction, AI-based querying, and data extraction.
+        A Python Developer Community open source project. It integrates with the Box API to perform various operations such as file search, text extraction, AI-based querying, and data extraction.
 
         <div>
           <strong style="background-color: #92e0c0">New</strong>
