@@ -156,7 +156,7 @@ All the developer resources to help you get the most from Box products
       Want to learn more?
       Use these guides to discover supplementary information on the inner
       workings of Box Platform, broaden your understanding, and improve
-      your custom applications.
+      your platform applications.
   </div>
 
   <TileSlider>

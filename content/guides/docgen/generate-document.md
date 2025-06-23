@@ -14,7 +14,7 @@ The `POST /2.0/docgen_batches` endpoint allows you to generate a document using 
 
 ## Prerequisites
 
-Before you start using Box Doc Gen API, follow the steps listed in the [get started with Box Doc Gen][docgen-prerequisites] guide to create a custom app and a Box Doc Gen template.
+Before you start using Box Doc Gen API, follow the steps listed in the [get started with Box Doc Gen][docgen-prerequisites] guide to create a platform app and a Box Doc Gen template.
 
 ## Send a request
 

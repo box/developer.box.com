@@ -166,7 +166,7 @@ names.
 ## Standards for Box terminology
 
 * Platform App refers to the type of app selected in the create new app flow
-whereas custom application refers to the custom solution built by the customer
+whereas platform application refers to the custom solution built by the customer
 * Access Token
 * Box Admin
 * App Users and Managed Users

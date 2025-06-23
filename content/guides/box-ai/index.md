@@ -16,13 +16,13 @@ related_guides:
 
 Box AI API allows you to use Box AI
 functionality
-in your custom applications. For example, you can
+in your platform applications. For example, you can
 implement Box AI question and answer
 functionality in your third party application,
 or generate content right in
 your product’s content editor.
 
-## Box AI API capabilities
+## Box AI Platform API capabilities
 
 Box AI API provides a number of capabilities
 designed to help you leverage Large Language Models (LLMs)
@@ -39,7 +39,7 @@ allows embedding Box AI in your apps.
 
 ### Ask questions to Box AI
 
-You can use Box AI API to ask questions about
+You can use Box AI Platform API to ask questions about
 the content, for example, while working
 on documents you store in Box.
 
@@ -56,7 +56,7 @@ working with their documents.
 
 ### Generate text with Box AI
 
-You can use Box AI API to generate text
+You can use Box AI Platform API to generate text
 from scratch, from existing text within a Box Note, or
 based on a given document in Preview.
 For example, you can ask Box AI to create a template
@@ -87,7 +87,7 @@ For details, see [AI agent default configuration][agent-default].
 
 Box AI for UI Elements is available in Content Preview
 allows asking questions about documents directly
-within custom applications.
+within platform applications.
 Check out how to use the [Box AI for UI Elements][boxaielement]
 to embed Box AI functionality in your projects.
 
@@ -126,3 +126,4 @@ better results for this language.
 [agent-default]: g://box-ai/ai-agents/get-agent-default-config
 [extract]: e://post_ai_extract
 [extract-structured]: e://post_ai_extract_structured
+[uar]:https://support.box.com/hc/en-us/articles/4415012490387-User-Activity-Report
