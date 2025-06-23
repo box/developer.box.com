@@ -67,4 +67,3 @@ Below is a table with all APIs that support Box Archive.
 [Delete classification label on file]: e://delete-files-id-metadata-enterprise-securityClassification-6VMVochwUWo
 
 [//]: # (TODO: double check the endpoints are supported)
-
