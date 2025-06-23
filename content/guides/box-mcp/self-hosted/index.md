@@ -103,8 +103,8 @@ Follow these instructions to start using Box MCP Sever with Cursor:
 
 1. Open Cursor app.
 2. Click the cog icon located in the right-top corner to open settings.
-3. Within Cursor Settings tab, select `MCP`.
-4. Click `Add new global MCP server` button, this will open the `mcp.json` file.
+3. Within the Cursor Settings tab, select `MCP`.
+4. Click the `Add new global MCP server` button, this will open the `mcp.json` file.
 5. Paste the following JSON with updated values with your local setup:
 
 ```json
@@ -125,7 +125,7 @@ Follow these instructions to start using Box MCP Sever with Cursor:
 
 6. Save and close the `mcp.json` file.
 7. Restart Cursor if necessary.
-8. To start using Box MCP, use `box_authorize_app_tool` tool.
+8. To start using Box MCP, use the `box_authorize_app_tool` tool.
 
 ### Use Claude for Desktop as the Box MCP client
 
@@ -144,7 +144,7 @@ To do so you can run this command in your terminal:
 code ~/Library/Application\ Support/Claude/claude_desktop_config.json
 ```
 
-Alternatively, in main Claude navigation choose `Settings`. Select Developers tab and click `Edit Config`. This will open folder window containing `claude_desktop_config.json`.
+Alternatively, in main Claude navigation choose `Settings`. Select the Developers tab and click `Edit Config`. This will open a folder window containing `claude_desktop_config.json`.
 
 2. Add the configuration:
 

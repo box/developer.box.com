@@ -70,12 +70,12 @@ Connect Remote Box MCP Server with Anthropic's Messages API (beta). Clone [this 
 ### Copilot Studio
 
 Adding a Box MCP Server on Copilot Studio side
-To add an MCP server, follow the instructions provided by Copilot Studio side. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp#add-tools-from-an-existing-mcp-connector-to-an-agent).
+To add an MCP server, follow the instructions provided by the Copilot Studio side. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp#add-tools-from-an-existing-mcp-connector-to-an-agent).
 
 ### Azure API Center
 
 Adding a Box MCP Server on the Azure API Center's Enterprise Registry side
-To add an MCP server in Azure API Center's Enterprise Registry, follow the instructions provided on by Azure’. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Azure API Center's Enterprise Registry](https://learn.microsoft.com/en-us/azure/api-center/register-discover-mcp-server).
+To add an MCP server in Azure API Center's Enterprise Registry, follow the instructions provided by Azure’. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Azure API Center's Enterprise Registry](https://learn.microsoft.com/en-us/azure/api-center/register-discover-mcp-server).
 
 ### Using Box AI Features with the MCP Server
 
