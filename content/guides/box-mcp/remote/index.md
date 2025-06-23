@@ -36,14 +36,36 @@ To create a new, unlisted Box MCP server:
 8. Under Scopes, ensure that Manage AI is selected.
 9. See this article and add Integration credentials for customer-instance integrations.
 
-## Add Box MCP Server to MPC clients
+## Add Box MCP Server to MCP clients
 
 To connect to Box from the AI Agent platform, you need:
 
 * Endpoint URL: `https://mcp.box.com`
-* Client ID and Client Secret: Box generates these in the Integration Credentials section of Box Admin Console when configuring the Box MCP Server, above.
+* Pass MCP name: `box-remote-mcp`
+* Provide `authorization_token`
+
+```python
+  response = await client.beta.messages.create(
+      model="claude-3-opus-20240229",  # Or your preferred model
+      max_tokens=4096,
+      messages=conversation_history,
+      mcp_servers=[
+          {
+              "type": "url",
+              "url": "https://mcp.box.com",
+              "name": "box-remote-mcp",
+              "authorization_token": BEARER_TOKEN,
+          }
+      ],
+      betas=["mcp-client-2025-04-04"]
+  )
+```
 
 Exact steps may vary depending on the AI platform. Please refer to your platform’s documentation for client-side setup instructions.
+
+### Anthropic's Messages API
+
+Connect Remote Box MCP Server with Anthropic's Messages API (beta). Clone [this sample chat bot project](https://github.com/box-community/remote-box-mcp-anthropic) to get started quickly. It allows you to have a conversation with an Anthropic model, which has access to tools provided by the Box remote MCP server. The chatbot runs in a terminal, maintains conversation history for context-aware responses, and uses `asyncio` for asynchronous operation.
 
 ### Copilot Studio
 

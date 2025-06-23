@@ -16,7 +16,7 @@ There are two Box MCP Servers:
 - Remote Box MCP Server can be enabled in Box Admin Console and is hosted directly in Box.
 - Self-hosted Box MCP Server can be cloned and hosted on your local machine, as this version in an open source Box Developer community project. 
 
-Check detailed guides on both Box MCP Servers, as currently the level of the implemented tools differ. Learn how to enable Box MPC Server:
+Check detailed guides on both Box MCP Servers, as currently the level of the implemented tools differ. Learn how to enable Box MCP Server:
 
 <TileGrid rows="2">
   <Tile type="mcp" title="Remote Box MCP server" href="/guides/box-mcp/remote">
