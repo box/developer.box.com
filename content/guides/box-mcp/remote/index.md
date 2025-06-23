@@ -5,9 +5,9 @@ related_guides: []
 required_guides: []
 ---
 
-# Box MCP Server
+# Remote Box MCP Server
 
-The Box MCP Server allows third-party AI systems to securely connect and interact with your content in Box. This allows third-party AI agents from platforms including Copilot Studio, Cursor, Anthropic's Claude, and OpenAI to access Box content seamlessly.
+The Remote Box MCP Server allows third-party AI systems to securely connect and interact with your content in Box.
 
 <Message type='notice'>
   Box MCP Server offered subject to Box’s Main Beta Agreement, meaning the available capabilities may change at any time. Box MCP Server is available for customers with Enterprise Plus or Enterprise Advanced plans.
@@ -46,11 +46,17 @@ When using Box AI in third party applications, the best experience and highest q
 
 ## Available tools
 
-Box MCP Server includes several tools your can use:
+Remote Box MCP Server includes several tools your can use:
 
 | Tool| Description|
 |--------|--------|
-| Who am I| Read data connected to user metadata |
-| Folders| List folder content by ID|
-| Box Search| Includes metadata based querying, extra fields requesting, searching folder by name |
-| Box AI| Includes multi-file query, multi-file, Box Hubs query based on a default Box AI Agent. Supports also metadata extraction|
+| `box-remote-mcp_who_am_i`| Returns detailed information about the currently authenticated Box user.|
+| `box-remote-mcp_search_folders_by_name`| Searches for folders by name within Box using keyword matching.|
+| `box-remote-mcp_list_folder_content_by_folder_id`| Lists files, folders, and web links contained in a folder. |
+| `box-remote-mcp_search_files_keyword`| Searches for files using keywords and supports metadata filters, file extension filtering, and field selection.|
+| `box-remote-mcp_search_files_metadata`| Searches for files using SQL-like metadata queries. Supports complex filtering with parameters, field selection, and folder scoping.|
+| `box-remote-mcp_ai_qa_single_file`| Ask a question to a single file using Box AI.|
+| `box-remote-mcp_ai_qa_multi_file`| Ask a question to multiple files using Box AI.|
+| `box-remote-mcp_ai_qa_hub`| Ask a question to a Box Hub using Box AI.|
+| `box-remote-mcp_ai_extract_freeform`| Extracts metadata from files using Box AI in freeform format without requiring predefined template structures.|
+| `box-remote-mcp_ai_extract_structured`| Extracts structured metadata from files using Box AI based on either custom fields definition or an existing metadata template.|

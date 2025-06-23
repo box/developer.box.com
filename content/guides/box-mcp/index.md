@@ -13,14 +13,14 @@ Box MCP Server allows third-party AI agents from platforms like Copilot Studio, 
 
 There are two Box MCP Servers:
 
-- The Box MCP Server can be enabled in Box Admin Console and is hosted directly in Box.
+- Remote Box MCP Server can be enabled in Box Admin Console and is hosted directly in Box.
 - Self-hosted Box MCP Server can be cloned and hosted on your local machine, as this version in an open source Box Developer community project. 
 
 Check detailed guides on both Box MCP Servers, as currently the level of the implemented tools differ. Learn how to enable Box MPC Server:
 
 <TileGrid rows="2">
   <Tile type="mcp" title="Box MCP server" href="/guides/box-mcp/remote">
-    The Box MCP Server can be enabled in Admin Console and is hosted directly in Box.
+    Remote Box MCP Server can be enabled in Admin Console and is hosted directly in Box.
     <div>
     <strong style="background-color: #e1ffe7">Beta</strong>
     </div>
