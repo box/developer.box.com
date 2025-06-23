@@ -19,7 +19,7 @@ There are two Box MCP Servers:
 Check detailed guides on both Box MCP Servers, as currently the level of the implemented tools differ. Learn how to enable Box MPC Server:
 
 <TileGrid rows="2">
-  <Tile type="mcp" title="Box MCP server" href="/guides/box-mcp/remote">
+  <Tile type="mcp" title="Remote Box MCP server" href="/guides/box-mcp/remote">
     Remote Box MCP Server can be enabled in Admin Console and is hosted directly in Box.
     <div>
     <strong style="background-color: #e1ffe7">Beta</strong>
