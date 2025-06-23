@@ -44,6 +44,8 @@ To connect to Box from the AI Agent platform, you need:
 * Pass MCP name: `box-remote-mcp`
 * Provide `authorization_token`
 
+Exact steps may vary depending on the AI platform. Please refer to your platform’s documentation for client-side setup instructions. Check this sample code for reference:
+
 ```python
   response = await client.beta.messages.create(
       model="claude-3-opus-20240229",  # Or your preferred model
@@ -60,8 +62,6 @@ To connect to Box from the AI Agent platform, you need:
       betas=["mcp-client-2025-04-04"]
   )
 ```
-
-Exact steps may vary depending on the AI platform. Please refer to your platform’s documentation for client-side setup instructions.
 
 ### Anthropic's Messages API
 
