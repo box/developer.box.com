@@ -18,7 +18,7 @@ There are two types of Box MCP Servers:
 - self-hosted Box MCP Server which you can clone and host on your local machine, as this version in an open source Box Developer community project.
 <!--alex enable-->
 
-Check the detailed guides on both Box MCP Servers, as the level of the implemented tools differs. Learn how to enable Box MCP Server:
+Check the detailed guides on both types of Box MCP Servers, as the level of the implemented tools differs. Learn how to enable Box MCP Server:
 
 <TileGrid rows="2">
   <Tile type="mcp" title="Remote Box MCP Server" href="/guides/box-mcp/remote">
