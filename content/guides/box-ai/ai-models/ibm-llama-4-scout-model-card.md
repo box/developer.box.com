@@ -17,6 +17,7 @@ related_guides:
 | Item | Value | Description |
 |-----------|----------|----------|
 |Model name|**IBM Llama 4 Scout**| The name of the model. |
+| Model category | Standard | The category of the model - standard or premium. |
 |API model name|`ibm__llama_4_scout`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer| **IBM** | The trusted organization that securely hosts LLM. |
 |Model provider|**Meta**| The organization that provides this model. |
