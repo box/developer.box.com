@@ -164,7 +164,7 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
 }
 ```
 
-3. Restart Claude for Desktop
+3. Restart Claude for Desktop.
 4. Authenticate the Box MCP Server using `box_authorize_app_tool` tool.
 
 ## Available tools

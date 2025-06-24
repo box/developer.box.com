@@ -29,7 +29,7 @@ To create a new, unlisted Box MCP Server:
 1. Click Integrations in the sidebar of Box Admin Console.
 2. Scroll down to **Individual Integration Controls** in the Box Integrations & Clients tab.
 3. Search for **Box MCP Server**. 
-4. Hover on the **Box MCP Server** application, then click Configure.
+4. Hover on the **Box MCP Server** application, then click **Configure**.
 5. In the **Additional Configuration** section, click on **+ Add Integration Credentials**.
 6. Copy the generated Client ID and Client Secret.
 7. Enter the Redirect URI provided by the external MCP Client.
