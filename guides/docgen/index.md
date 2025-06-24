@@ -1,5 +1,5 @@
 ---
-rank: 0
+rank: 3
 related_guides:
   - docgen/docgen-getting-started
   - docgen/docgen-templates
@@ -20,8 +20,8 @@ type: guide
 total_steps: 5
 sibling_id: guides
 parent_id: guides
-next_page_id: docgen/docgen-getting-started
-previous_page_id: ''
+next_page_id: docgen/docgen-templates
+previous_page_id: docgen/mark-template
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/docgen/index.md
 ---

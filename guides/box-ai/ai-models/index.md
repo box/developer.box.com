@@ -60,25 +60,25 @@ Box AI is powered by the following AI models. These models are integrated with B
 A multimodal model designed to handle lightweight tasks.
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Default for Box AI for Box Hubs
 
 </strong>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Default for Box AI for Docs
 
 </strong>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Default for Box AI for Box Notes Q&A
 
 </strong>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Chat
 
@@ -105,7 +105,7 @@ Standard
 A multimodal model, highly efficient in handling complex, multi-step tasks.
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Chat
 
@@ -132,7 +132,7 @@ Premium
 A multimodal model designed to handle lightweight tasks.
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Chat
 
@@ -159,7 +159,7 @@ Standard
 A multimodal model, highly efficient in handling complex, multi-step tasks.
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Chat
 
@@ -192,7 +192,7 @@ Premium
 A most capable 2nd generation text embedding model. Skilled in text search, code search, and sentence similarity.
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Embeddings
 
@@ -219,7 +219,7 @@ Standard
 Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Chat
 
@@ -246,7 +246,7 @@ Premium
 Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Chat
 
@@ -273,7 +273,7 @@ Standard
 Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Chat
 
@@ -300,13 +300,13 @@ Standard
 Gemini multimodal model designed to handle lightweight tasks.
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Default for Box AI Extract
 
 </strong>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Chat
 
@@ -333,7 +333,7 @@ Standard
 A model tailored for various language tasks, including creative writing and conversational AI.
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Chat
 
@@ -360,7 +360,7 @@ Standard
 A model designed for advanced language tasks, focusing on comprehension and context handling.
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Chat
 
@@ -387,7 +387,7 @@ Premium
 A model designed to enhance language understanding and generation tasks.
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Chat
 
@@ -414,7 +414,7 @@ Premium
 A model designed to enhance language understanding and generation tasks
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Chat
 
@@ -441,7 +441,7 @@ Premium
 A model that brings frontier performance to everyday use cases.
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Chat
 
@@ -468,7 +468,7 @@ Premium
 A model that excels at coding and complex problem-solving, powering frontier agent products.
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Chat
 
@@ -495,7 +495,7 @@ Premium
 A model capable of advanced language processing, handling extensive contexts, making it suitable for complex tasks.
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Chat
 
@@ -522,7 +522,7 @@ Standard
 A model built for document-level understanding, interpretation of charts and graphs, and captioning of images.
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Chat
 
@@ -549,7 +549,7 @@ Standard
 A natively multimodal AI model that enables text and multimodal experiences.
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Chat
 
@@ -584,7 +584,7 @@ Certain Box AI customers may enable additional AI models upon their request and/
 A model that excels at enterprise use cases like data extraction, coding, and text summarization.
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Chat
 
@@ -611,7 +611,7 @@ Premium
 A lightweight model that is great for logic-based tasks that do not require deep domain knowledge.
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Chat
 
