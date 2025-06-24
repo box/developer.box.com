@@ -146,7 +146,7 @@ export default App;
 
 ## Metadata keys
 
-To decide which fields to show, the metadata Content Explorer uses metadata
+To decide which fields to show, the Content Explorer uses metadata
 [field keys][field-key], not the [display names][display-name]. You can see the
 display names in the Admin Console and user view, but you can obtain the field
 keys through the API.
