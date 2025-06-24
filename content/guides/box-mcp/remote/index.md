@@ -24,7 +24,7 @@ The Remote Box MCP Server allows third party AI systems to securely connect and 
 
 ## Create an unlisted Box MCP Server
 
-To create a new, unlisted Box MCP server:
+To create a new, unlisted Box MCP Server:
 
 1. Click Integrations in the sidebar of your Admin Console.
 2. Scroll down to **Individual Integration Controls** in the Box Integrations & Clients tab.

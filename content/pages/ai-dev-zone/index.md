@@ -90,7 +90,7 @@ view sample code, explore Box AI use cases, and more!
   </p>
 
   <TileGrid rows="4">
-    <Tile type="box-brown" title="Box MCP server"
+    <Tile type="box-brown" title="Box MCP Server"
       href="/guides/box-mcp/remote">
         Allow AI assistants to access enterprise content management capabilities with minimal friction, opening up new possibilities for intelligent document handling and analysis.
 
@@ -99,7 +99,7 @@ view sample code, explore Box AI use cases, and more!
           <strong style="background-color: #e8e8e8">MCP</strong>
         </div>
     </Tile>
-    <Tile type="box-brown" title="Self-hosted Box MCP server"
+    <Tile type="box-brown" title="Self-hosted Box MCP Server"
       href="/guides/box-mcp/self-hosted">
         A Python Developer Community open source project. It integrates with the Box API to perform various operations such as file search, text extraction, AI-based querying, and data extraction.
 
