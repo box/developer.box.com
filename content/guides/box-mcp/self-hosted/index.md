@@ -253,8 +253,8 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
       <td>`box_upload_file_from_content_tool`</td>
       <td>Upload content as a file</td>
       <td>
-        - `content (str|bytes):` Content to upload<br>
-        - `file_name (str):` File name<br>
+        - `content (str|bytes):` Content to upload.<br>
+        - `file_name (str):` File name.<br>
         - `folder_id (str, optional):` Destination folder ID.<br>
         - `is_base64 (bool, optional):` If content is base64 encoded.
       </td>
@@ -264,7 +264,7 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
       <td>`box_download_file_tool`</td>
       <td>Download a file from Box</td>
       <td>
-        - `file_id (str):` File ID<br>
+        - `file_id (str):` File ID.<br>
         - `save_file (bool, optional):` Whether to save locally.<br>
         - `save_path (str, optional):` Local save path.
       </td>
@@ -312,8 +312,8 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
       <td>`box_ask_ai_tool`</td>
       <td>Ask Box AI about a file</td>
       <td>
-        - `file_id (str):` File ID<br>
-        - `prompt (str):` Question for the AI
+        - `file_id (str):` File ID.<br>
+        - `prompt (str):` Question for the AI.
       </td>
       <td>AI response</td>
     </tr>
@@ -330,8 +330,8 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
       <td>`box_hubs_ask_ai_tool`</td>
       <td>Ask Box AI about a hub</td>
       <td>
-        - `hubs_id (str):` ID of the hub<br>
-        - `prompt (str):` Question for the AI
+        - `hubs_id (str):` ID of the hub.<br>
+        - `prompt (str):` Question for the AI.
       </td>
       <td>AI response</td>
     </tr>
