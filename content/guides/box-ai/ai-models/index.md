@@ -11,13 +11,31 @@ alias_paths:
   
 # Supported AI models
 
-There are two types of AI models supported by Box: core and customer-enabled.
-The core Box AI models are default in the Box AI service and are available to
-all customers.
+Box supports a variety of AI models, categorized along two dimensions: access level and capability tier.
 
-The customer-enabled models are available for Box admins to enable in the Admin
-Console, or to request to have them available. In some instances, these models
-can be subject to additional terms.
+## Access Levels
+
+### Core Models 
+
+These models are built into Box AI and available by default for all customers. No configuration is required.
+
+### Customer-Enabled Models
+
+These models require activation by Box admins in the Admin Console or a request to Box to enable them. Some models may be subject to additional terms or pricing.
+
+## Capability Tiers
+
+### Standard Models
+
+Designed for high-speed, cost-efficient tasks like basic summarization, Q&A, and structured data extraction from shorter or simpler documents. Ideal for high-volume, low-complexity use cases.
+
+### Premium Models
+
+Offer more advanced reasoning, larger context windows, and better performance on long-form, complex, or domain-specific content. Suitable for sophisticated tasks like multi-step reasoning, understanding large taxonomies, and analyzing lengthy or unstructured documents.
+
+<Message type='notice'>
+A model can be both customer-enabled and premium, or core and standard. In other words, access level and capability tiers are independent categorizations (for example, models can be either capability tier regardless of access level). The two categorizations are complementary.
+</Message>
 
 ## Using models
 
