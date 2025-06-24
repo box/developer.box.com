@@ -1,5 +1,5 @@
 ---
-rank: 0
+rank: 2
 related_guides:
   - ai-studio/ai-studio-agents/create-agents
   - box-ai/ai-tutorials/ask-questions
@@ -12,8 +12,8 @@ type: guide
 total_steps: 1
 sibling_id: guides
 parent_id: guides
-next_page_id: ai-studio/getting-started-ai-studio
-previous_page_id: ''
+next_page_id: ''
+previous_page_id: ai-studio/getting-started-ai-studio
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/ai-studio/index.md
 ---

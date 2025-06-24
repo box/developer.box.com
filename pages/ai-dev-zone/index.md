@@ -177,7 +177,7 @@ Use Box for AI Integrations to extend LLM models' existing knowledge bases.
 
 <TileGrid rows="4">
 
-<Tile type="box-brown" title="Box MCP server" href="https://github.com/box-community/mcp-server-box?tab=readme-ov-file#mcp-server-box">
+<Tile type="box-brown" title="Box MCP Server" href="/guides/box-mcp/remote">
 
 Allow AI assistants to access enterprise content management capabilities with minimal friction, opening up new possibilities for intelligent document handling and analysis.
 
@@ -192,6 +192,50 @@ New
 <strong style="background-color: #e8e8e8">
 
 MCP
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="box-brown" title="Self-hosted Box MCP Server" href="/guides/box-mcp/self-hosted">
+
+A Python Developer Community open source project. It integrates with the Box API to perform various operations such as file search, text extraction, AI-based querying, and data extraction.
+
+<div>
+
+<strong style="background-color: #92e0c0">
+
+New
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
+MCP
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="box-brown" title="Openflow Connector for Box" href="https://docs.snowflake.com/en/user-guide/data-integration/openflow/connectors/box/setup">
+
+Seamlessly connect unstructured content in Box with the powerful analytics capabilities of Snowflake, unlocking new insights and automating data-driven workflows.
+
+<div>
+
+<strong style="background-color: #92e0c0">
+
+New
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
+Connector
 
 </strong>
 

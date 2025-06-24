@@ -15,8 +15,8 @@ type: guide
 total_steps: 1
 sibling_id: ai-studio
 parent_id: ai-studio
-next_page_id: ''
-previous_page_id: ai-studio
+next_page_id: ai-studio
+previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/ai-studio/getting-started-ai-studio.md
 ---
