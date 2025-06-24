@@ -15,10 +15,10 @@ The remote Box MCP Server allows third party AI systems to securely connect and 
 
 ## Access and manage predefined Box MCP Servers
 
-1. Click Integrations in the sidebar of your Admin Console. 
-2. Click Box Integrations & Clients in the Integrations window.
-3. Scroll down to Individual Integration Controls.
-4. Go to the Box MCP Server for Copilot Studio (Beta), or Box MCP Server for Azure API Center (Beta) sections. 
+1. Click **Integrations** in the sidebar of Box Admin Console. 
+2. Click **Box Integrations & Clients** in the Integrations window.
+3. Scroll down to **Individual Integration Controls**.
+4. Go to the **Box MCP Server for Copilot Studio (Beta)**, or **Box MCP Server for Azure API Center (Beta)** sections. 
 5. Click the state icon for the selected MCP server, then choose the state you want to enable.
 6. Click Save.
 
@@ -26,14 +26,14 @@ The remote Box MCP Server allows third party AI systems to securely connect and 
 
 To create a new, unlisted Box MCP Server:
 
-1. Click Integrations in the sidebar of your Admin Console.
+1. Click Integrations in the sidebar of Box Admin Console.
 2. Scroll down to **Individual Integration Controls** in the Box Integrations & Clients tab.
 3. Search for **Box MCP Server**. 
 4. Hover on the **Box MCP Server** application, then click Configure.
-5. In the **Additional Configuration** section, click on *+ Add Integration Credentials*.
+5. In the **Additional Configuration** section, click on **+ Add Integration Credentials**.
 6. Copy the generated Client ID and Client Secret.
 7. Enter the Redirect URI provided by the external MCP Client.
-8. Under Scopes, ensure that Manage AI is selected.
+8. Under Scopes, ensure that *Manage AI* is selected.
 
 ## Add Box MCP Server to MCP clients
 
