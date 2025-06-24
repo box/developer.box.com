@@ -25,7 +25,6 @@ Below is a table with all APIs that support Box Archive.
 | [`DELETE /archives/:id`][Delete archive]                                                                          | Delete an archive.                                               |
 | [`PUT /files/:id`][Update file]                                                                                   | Add a file to an archive or restore a file from an archive.      |
 | [`PUT /folders/:id`][Update folder]                                                                               | Add a folder to an archive or restore a folder from an archive.  |
-| [`PUT /web_links/:id`][Update weblink]                                                                            | Add weblink to an archive or restore a weblink from an archive.  |
 | [`POST /files/content`][Upload file]                                                                              | Upload a file to an archive or to folder within archive.         |
 | [`GET /files/:id/content`][Download file]                                                                         | Download a file from an archive or from folder within archive.   |
 | [`POST /zip_downloads`][Download zip]                                                                             | Download a zip file of an archive or of a folder within archive. |
@@ -48,7 +47,6 @@ Below is a table with all APIs that support Box Archive.
 [Delete archive]: e://delete-archives-id
 [Update file]: e://put-files-id
 [Update folder]: e://put-folders-id
-[Update weblink]: e://put-web-links-id
 [Upload file]: e://post-files-content
 [Download file]: e://get-files-id-content
 [Download zip]: e://post-zip-downloads
@@ -67,3 +65,4 @@ Below is a table with all APIs that support Box Archive.
 [Delete classification label on file]: e://delete-files-id-metadata-enterprise-securityClassification-6VMVochwUWo
 
 [//]: # (TODO: double check the endpoints are supported)
+[//]: # (TODO: check copy API)
