@@ -7,7 +7,7 @@ required_guides: []
 
 # Remote Box MCP Server
 
-The Remote Box MCP Server allows third party AI systems to securely connect and interact with your content in Box.
+The remote Box MCP Server allows third party AI systems to securely connect and interact with your content in Box.
 
 <Message type='notice'>
   Box MCP Server offered subject to Box’s Main Beta Agreement, meaning the available capabilities may change at any time. Box MCP Server is available for customers with Enterprise Plus or Enterprise Advanced plans.
@@ -64,7 +64,7 @@ Exact steps may vary depending on the AI platform. Refer to your platform’s do
 
 ### Anthropic's Messages API
 
-Connect the Remote Box MCP Server with Anthropic's Messages API (beta). Clone [this sample chat bot project](https://github.com/box-community/remote-box-mcp-anthropic) to get started quickly. It allows you to have a conversation with an Anthropic model, which has access to tools provided by the Box remote MCP server. The chatbot runs in a terminal, maintains conversation history for context-aware responses, and uses `asyncio` for asynchronous operation.
+Connect the remote Box MCP Server with Anthropic's Messages API (beta). Clone [this sample chat bot project](https://github.com/box-community/remote-box-mcp-anthropic) to get started quickly. It allows you to have a conversation with an Anthropic model, which has access to tools provided by the Box remote MCP server. The chatbot runs in a terminal, maintains conversation history for context-aware responses, and uses `asyncio` for asynchronous operation.
 
 ### Copilot Studio
 
