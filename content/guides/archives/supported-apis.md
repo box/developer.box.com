@@ -32,6 +32,8 @@ Below is a table with all APIs that support Box Archive.
 | [`GET /files/:id`][Get file details]                                                                              | Get details of a file within an archive.                         |
 | [`GET /folders/:id`][Get folder details]                                                                          | Get details of archive or a folder within an archive.            |
 | [`GET /folders/:id/items`][List folder items]                                                                     | List items within an archive or a folder within an archive.      |
+| [`POST /files/:id/copy`][Copy file]                                                                               | Copy a file within an archive or to another archive.             |
+| [`POST /folders/:id/copy`][Copy folder]                                                                           | Copy a folder within an archive or to another archive.           |
 | [`POST /files/:id/metadata/:scope/:template_key`][Create metadata on file]                                        | Create metadata instance on a file within an archive.            |
 | [`GET /files/:id/metadata/:scope/:template_key`][View metadata on file]                                           | View metadata instance on a file within an archive.              |
 | [`GET /files/:id/metadata`][List metadata on file]                                                                | List all metadata instances on a file within an archive.         |
@@ -54,6 +56,8 @@ Below is a table with all APIs that support Box Archive.
 [Get file details]: e://get-files-id
 [Get folder details]: e://get-folders-id
 [List folder items]: e://get-folders-id-items
+[Copy file]: e://post-files-id-copy
+[Copy folder]: e://post-folders-id-copy
 [Create metadata on file]: e://post-files-id-metadata-id-id
 [View metadata on file]: e://get-files-id-metadata-id-id
 [List metadata on file]: e://get-files-id-metadata
@@ -63,6 +67,3 @@ Below is a table with all APIs that support Box Archive.
 [View classification label on file]: e://get-files-id-metadata-enterprise-securityClassification-6VMVochwUWo
 [Update classification label on file]: e://put-files-id-metadata-enterprise-securityClassification-6VMVochwUWo
 [Delete classification label on file]: e://delete-files-id-metadata-enterprise-securityClassification-6VMVochwUWo
-
-[//]: # (TODO: double check the endpoints are supported)
-[//]: # (TODO: check copy API)
