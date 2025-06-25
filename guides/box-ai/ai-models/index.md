@@ -23,9 +23,9 @@ fullyTranslated: true
 ---
 # サポートされているAIモデル
 
-There are two types of AI models supported by Box: core and customer-enabled. The core Box AI models are default in the Box AI service and are available to all customers.
+BoxでサポートされているAIモデルには、コアモデルと顧客希望で有効化できるモデルの2種類があります。Box AIサービスのデフォルトはBox AIのコアモデルで、すべてのお客様が利用できます。
 
-顧客が有効化を希望したモデルは、Box管理者が管理コンソールで有効にするか、利用可能になるようにリクエストします。これらのモデルは追加の条件の対象になる場合があります。
+顧客希望で有効化できるモデルは、Box管理者が管理コンソールで有効にするか、利用可能になるようにリクエストします。これらのモデルは追加の条件の対象になる場合があります。
 
 ## モデルの使用
 
@@ -40,9 +40,9 @@ APIコールで`model`パラメータを使用する際は、各タイルおよ�
 
 <Message type="notice">
 
-The list may change depending on the model availability.
+このリストはモデルの提供状況により変更される可能性があります。
 
-Models offered in **Beta** mode have not been fully performance-tested at scale and are made available on an as-is basis. You may experience variability in model/output quality, availability, and accuracy.
+**ベータ**モードで提供されているモデルはパフォーマンスが大規模にテストされておらず、現状のままでの利用となるため、モデル/出力の品質、可用性、精度にはばらつきがある可能性があります。
 
 </Message>
 
@@ -90,7 +90,7 @@ Box AI for NotesのQ&Aのデフォルト
 
 <strong style="background-color: #fdfad8">
 
-Standard
+標準
 
 </strong>
 
@@ -118,7 +118,7 @@ Standard
 
 <strong style="background-color: #f8d59b">
 
-Premium
+プレミアム
 
 </strong>
 
@@ -146,7 +146,7 @@ Premium
 
 <strong style="background-color: #fdfad8">
 
-Standard
+標準
 
 </strong>
 
@@ -180,7 +180,7 @@ Standard
 
 <strong style="background-color: #f8d59b">
 
-Premium
+プレミアム
 
 </strong>
 
@@ -208,7 +208,7 @@ Premium
 
 <strong style="background-color: #fdfad8">
 
-Standard
+標準
 
 </strong>
 
@@ -236,7 +236,7 @@ Standard
 
 <strong style="background-color: #f8d59b">
 
-Premium
+プレミアム
 
 </strong>
 
@@ -264,7 +264,7 @@ Premium
 
 <strong style="background-color: #fdfad8">
 
-Standard
+標準
 
 </strong>
 
@@ -292,7 +292,7 @@ Standard
 
 <strong style="background-color: #fdfad8">
 
-Standard
+標準
 
 </strong>
 
@@ -326,7 +326,7 @@ Box AI Extractのデフォルト
 
 <strong style="background-color: #fdfad8">
 
-Standard
+標準
 
 </strong>
 
@@ -354,7 +354,7 @@ Standard
 
 <strong style="background-color: #fdfad8">
 
-Standard
+標準
 
 </strong>
 
@@ -382,7 +382,7 @@ Standard
 
 <strong style="background-color: #f8d59b">
 
-Premium
+プレミアム
 
 </strong>
 
@@ -410,7 +410,7 @@ Premium
 
 <strong style="background-color: #f8d59b">
 
-Premium
+プレミアム
 
 </strong>
 
@@ -420,7 +420,7 @@ Premium
 
 <Tile type="model" title="aws__claude_3_7_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-7-sonnet-model-card">
 
-A model designed to enhance language understanding and generation tasks
+言語の理解と生成のタスクを強化するよう設計されたモデル
 
 <div>
 
@@ -438,7 +438,7 @@ A model designed to enhance language understanding and generation tasks
 
 <strong style="background-color: #f8d59b">
 
-Premium
+プレミアム
 
 </strong>
 
@@ -466,7 +466,7 @@ Premium
 
 <strong style="background-color: #f8d59b">
 
-Premium
+プレミアム
 
 </strong>
 
@@ -494,7 +494,7 @@ Premium
 
 <strong style="background-color: #f8d59b">
 
-Premium
+プレミアム
 
 </strong>
 
@@ -522,7 +522,7 @@ Premium
 
 <strong style="background-color: #fdfad8">
 
-Standard
+標準
 
 </strong>
 
@@ -550,7 +550,7 @@ Standard
 
 <strong style="background-color: #fdfad8">
 
-Standard
+標準
 
 </strong>
 
@@ -578,7 +578,7 @@ Standard
 
 <strong style="background-color: #fdfad8">
 
-Standard
+標準
 
 </strong>
 
@@ -588,9 +588,9 @@ Standard
 
 </TileGrid>
 
-## 顧客が有効化を希望したモデル
+## 顧客希望で有効化できるモデル
 
-Box AIの一部の顧客は、リクエストに応じて追加のAIモデルを有効にしたり、管理コンソールから利用できる追加のAIモデルを有効にしたりすることができます。これらのモデルの使用は、追加の条件の対象になる場合があります。顧客が有効化を希望したモデルを選択すると、顧客は、選択した追加の[サブプロセッサ][subprocessors]によって自身のデータが処理される可能性があることに同意したことになります。
+Box AIの一部の顧客は、リクエストに応じて追加のAIモデルを有効にしたり、管理コンソールから利用できる追加のAIモデルを有効にしたりすることができます。これらのモデルの使用は、追加の条件の対象になる場合があります。顧客希望で有効化できるモデルを選択すると、顧客は、選択した追加の[サブプロセッサ][subprocessors]によって自身のデータが処理される可能性があることに同意したことになります。
 
 <TileGrid rows="2">
 
@@ -614,7 +614,7 @@ Box AIの一部の顧客は、リクエストに応じて追加のAIモデルを
 
 <strong style="background-color: #f8d59b">
 
-Premium
+プレミアム
 
 </strong>
 
@@ -642,7 +642,7 @@ Premium
 
 <strong style="background-color: #f8d59b">
 
-Premium
+プレミアム
 
 </strong>
 
@@ -664,7 +664,7 @@ Premium
 
 <strong style="background-color: #f8d59b">
 
-Premium
+プレミアム
 
 </strong>
 

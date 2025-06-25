@@ -338,7 +338,7 @@ Shieldの正当な理由が承認されると、イベントが[Enterprise Event
 
 ## 統合の制限
 
-If a 3rd-party application, including published platform applications with which your organization is integrated, is restricted from downloading a file or a folder, an event is produced within the [enterprise event][events] stream. These events follow the standard event object schema, with the `event_type` value set to `SHIELD_DOWNLOAD_BLOCKED`.
+サードパーティ製アプリケーション (組織と統合されている公開Platformアプリケーションなど) がファイルまたはフォルダのダウンロードを制限されている場合は、[Enterprise Event][events] Stream内でイベントが生成されます。これらのイベントは標準のイベントオブジェクトスキーマに従い、`event_type`値は`SHIELD_DOWNLOAD_BLOCKED`に設定されます。
 
 サードパーティ製アプリケーションの場合、`additional_details`ペイロードは以下の詳細を示します。
 
@@ -368,7 +368,7 @@ If a 3rd-party application, including published platform applications with which
 
 ```
 
-For platform applications, the `additional_details` payload will provide the following details:
+Platformアプリケーションの場合、`additional_details`ペイロードは以下の詳細を示します。
 
 ```json
 "additional_details": {

@@ -27,7 +27,7 @@ fullyTranslated: true
 
 ## 開始する前に
 
-Before you start using Box Doc Gen API, follow the steps listed in the [get started with Box Doc Gen][docgen-prerequisites] guide to create a platform app and a Box Doc Gen template.
+Box Doc Gen APIの使用を開始する前に、[Box Doc Genの使い方][docgen-prerequisites]ガイドに記載されている手順に従って、PlatformアプリとBox Doc Genテンプレートを作成してください。
 
 ## リクエストの送信
 

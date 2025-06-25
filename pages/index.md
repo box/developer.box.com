@@ -228,7 +228,7 @@ Box Platformのその他のコンセプト
 
 </Header>
 
-Want to learn more? Use these guides to discover supplementary information on the inner workings of Box Platform, broaden your understanding, and improve your platform applications.
+さらに詳しく知りたい場合は、以下のガイドを使用すると、Box Platformの仕組みに関する補足情報を確認して、理解を広げ、Platformアプリケーションを改善できます。
 
 </div>
 

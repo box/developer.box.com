@@ -24,7 +24,7 @@ fullyTranslated: true
 ---
 # Box AIの使い方
 
-To implement Box AI API in your solutions, you need to make sure you have access to the functionality. You will also need a platform application with enabled Box AI scope, and a developer token to authenticate your calls.
+ソリューションにBox AI APIを実装するには、その機能にアクセスできることを確認する必要があります。また、Box AIスコープが有効になっているPlatformアプリケーションと、コールを認証するための開発者トークンも必要です。
 
 <Message type="notice">
 
@@ -32,7 +32,7 @@ Box AI APIを使用するには、管理者が管理コンソールでこのAPI�
 
 </Message>
 
-## Create a platform application
+## Platformアプリケーションの作成
 
 まず、コールの実行に使用するPlatformアプリケーションを作成する必要があります。アプリケーションを作成するには、[Platformアプリの作成][createapps]に関するガイドに従ってください。
 

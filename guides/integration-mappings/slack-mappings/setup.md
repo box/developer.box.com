@@ -45,7 +45,7 @@ fullyTranslated: true
 
 ## Boxアプリケーションの作成
 
-1. Create a [platform app with OAuth authentication][4] in the [Box developer console][5]
+1. [Box開発者コンソール][5]で、[OAuth認証を使用するPlatformアプリ][4]を作成します。
 2. アプリケーションを開き、\[**構成**] > \[**必須のアクセススコープ**] で \[**Enterpriseのプロパティを管理する**] アプリケーションスコープを有効にします。
 
 <Message info>

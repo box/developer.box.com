@@ -25,7 +25,7 @@ fullyTranslated: true
 ---
 # Box AI
 
-Box AI API allows you to use Box AI functionality in your platform applications. For example, you can implement Box AI question and answer functionality in your third party application, or generate content right in your product’s content editor.
+Box AI APIを使用すると、Platformアプリケーション内でBox AI機能を利用できます。たとえば、Box AIの質疑応答機能をサードパーティ製アプリケーションに実装したり、自社製品のコンテンツエディタ内で直接コンテンツを生成したりできます。
 
 ## Box AI APIの機能
 
@@ -68,7 +68,7 @@ Box AI APIを使用すると、テキストをゼロから生成したり、Box 
 
 ### Box AI for UI Elements
 
-Box AI for UI Elements is available in Content Preview allows asking questions about documents directly within platform applications. Check out how to use the [Box AI for UI Elements][boxaielement] to embed Box AI functionality in your projects.
+Box AI for UI Elementsはコンテンツプレビューで利用可能で、これにより、Platformアプリケーション内で直接ドキュメントについて質問することができます。[Box AI for UI Elements][boxaielement]を使用してプロジェクトにBox AI機能を埋め込む方法をご確認ください。
 
 <!--alex ignore-->
 

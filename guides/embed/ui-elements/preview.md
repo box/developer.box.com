@@ -404,7 +404,7 @@ Box UI Elementsは、V4の注釈が十分に機能している、使用可能な
 
 ## Box AI for UI Elements
 
-Box AI for UI Elements enhances the Content Preview UI Element with additional features, allowing the developers to add the Box Q&A AI functionality to their platform app. Enriched with Box AI features, the Preview UI element brings the following functionality:
+Box AI for UI Elementsは、追加機能によってコンテンツプレビューUI Elementを強化するため、開発者はPlatformアプリにBox Q&A AI機能を追加できるようになります。Box AIの機能で強化されたプレビューUI Elementでは、以下の機能を提供します。
 
 * Q&Aとドキュメントの要約。
 * Box AIとの会話をリセットする \[**会話をクリア**] ボタン。

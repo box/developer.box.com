@@ -268,7 +268,7 @@ Enterprise設定に基づいて、管理者、[共同管理者][ca]、[サービ
 
 | OAuthスコープ                      | 説明                    |
 | ------------------------------ | --------------------- |
-| `ai.readwrite`                 | Manage AI API         |
+| `ai.readwrite`                 | AI APIを管理する           |
 | `manage_managed_users`         | 管理対象ユーザーを管理する         |
 | `manage_app_users`             | App Userを管理           |
 | `manage_data_retention`        | リテンションポリシーを管理する       |

@@ -36,7 +36,7 @@ Box AI APIを使用すると、指定した1ファイルまたは一連のファ
 
 ## 開始する前に
 
-Make sure you followed the steps listed in [getting started with Box AI][prereq] to create a platform app and authenticate.
+Platformアプリを作成して認証するには、[Box AIの使い方][prereq]に記載されている手順に従っていることを確認してください。
 
 ## リクエストの送信
 

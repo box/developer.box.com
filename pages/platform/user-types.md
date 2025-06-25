@@ -167,7 +167,7 @@ App Userは、既存のBoxアカウントを持っているかどうかに関係
 
 ### 権限
 
-App Users cannot see or interact any content in the folder tree of the Service Account unless explicitly added as a collaborator. Again, because App Users does not have login credentials, they cannot access content outside of the platform application.
+App Userは、コラボレータとして明示的に追加されない限り、サービスアカウントのフォルダツリー内のコンテンツを表示することも操作することもできません。また、App Userはログイン資格情報を持っていないため、Platformアプリケーション以外でコンテンツにアクセスすることはできません。
 
 ### UIでのアクセス
 
@@ -189,7 +189,7 @@ App Userには、管理コンソールの [\[ユーザーとグループ\] タ�
 
 ## As-User
 
-If you are using OAuth 2.0, JWT, or CCG as the authentication method for your application, it is possible to make what are called `as-user` calls. This means that even though you created an original connection to the Box API as yourself or as a service account, you can make subsequent calls impersonating another user. This is useful in automating administrative tasks like folder reorganization or employee provisioning. In order to make `as-user` calls, the appropriate scope must be added to the application when creating it in the developer console. For example, in an OAuth 2.0 platform app, you would need to turn on this switch.
+アプリケーションの認証方法としてOAuth 2.0、JWT、またはCCGを使用している場合、`as-user`コールを行うことができます。つまり、Box APIへの最初の接続を自分自身またはサービスアカウントとして作成した場合でも、それ以降のコールを別のユーザーの代理として行うことができます。これは、フォルダの再編成や従業員のプロビジョニングなどの管理タスクを自動化する場合に便利です。`as-user`コールを行うには、開発者コンソールでアプリケーションを作成する際に適切なスコープを追加する必要があります。たとえば、OAuth 2.0 Platformアプリでは、次の切り替えをオンにする必要があります。
 
 <ImageFrame center>
 

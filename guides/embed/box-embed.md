@@ -28,7 +28,7 @@ Box EmbedはHTMLベースのフレームワークで、これにより、独自�
 
 ウィジェットを作成するには、以下のことが必要です。
 
-* Set an embeddable element, such as a **folder**, **file**, **Hub**, **note**, or **app** for sharing. 
+* 共有用の埋め込み可能な要素 (**フォルダ**、**ファイル**、**Hub**、**メモ**、**アプリ**など) を設定する。 
 * **ビューアー**以上の[権限][5]がある。
 
 ## ウェブアプリの使用
@@ -47,17 +47,17 @@ BoxウェブアプリからBox埋め込みウィジェットのコードを取�
 2. 右上にある省略記号メニューをクリックします。 
 3. \[**Hubを埋め込む**] をクリックします。
 
-### 注
+### メモ
 
-1. Navigate to the chosen Box Note.
-2. Click on the ellipsis menu.
-3. Click **Embed Box Note**.
+1. 選択したBox Noteに移動します。
+2. 省略記号メニューをクリックします。
+3. \[**埋め込みウィジェット**] をクリックします。
 
-### Apps
+### アプリ
 
-1. Navigate to the chosen Box App or Box App View.
-2. Click on the ellipsis menu.
-3. Click **Embed**.
+1. 選択したBoxアプリまたはBoxアプリビューに移動します。
+2. 省略記号メニューをクリックします。
+3. \[**埋め込む**] をクリックします。
 
 <ImageFrame border>
 
@@ -67,9 +67,9 @@ BoxウェブアプリからBox埋め込みウィジェットのコードを取�
 
 次の手順では、埋め込み可能な要素のパラメータを構成します。
 
-| ファイル       | フォルダ                                                                                          | Hub                              | 注                                                                                                           | Apps       |
-| ---------- | --------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------- | ---------- |
-| ウィジェットのサイズ | Size of the widget, sorting of the files in a folder, hiding the navigation path and sidebar. | ウィジェットのサイズ、親のナビゲーションパスとサイドバーの非表示 | Size of the widget, skipping cloud game (results in note being in read only mode), hiding notes navigation. | ウィジェットのサイズ |
+| ファイル       | フォルダ                                            | Hub                              | メモ                                                                    | アプリ        |
+| ---------- | ----------------------------------------------- | -------------------------------- | --------------------------------------------------------------------- | ---------- |
+| ウィジェットのサイズ | ウィジェットのサイズ、フォルダ内のファイルの並べ替え、ナビゲーションパスとサイドバーの非表示。 | ウィジェットのサイズ、親のナビゲーションパスとサイドバーの非表示 | ウィジェットのサイズ、クラウド (雲) ゲームのスキップ (その結果、メモは読み取り専用モードになります)、メモのナビゲーションの非表示。 | ウィジェットのサイズ |
 
 <ImageFrame border>
 
@@ -132,24 +132,24 @@ curl https://api.box.com/2.0/folders/12345?fields=shared_link \
 
 次に、表示のカスタマイズオプションを選択します。構成可能なパラメータ (省略可) のリストを以下に示します。
 
-|                          |                                                                                                                  |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------- |
-| `hideHubsGallery`        | Hubsギャラリーに戻るためのナビゲーションの山括弧ボタンを非表示または表示します。`true`または`false` (デフォルト) を指定できます。                                      |
-| `hideNavigationControls` | Hide or show navigation controls in Box Notes.                                                                   |
-| `showItemFeedActions`    | ファイルのコメントまたはタスクを非表示または表示します。`true` (デフォルト) または`false`を指定できます。                                                    |
-| `showParentPath`         | フレームのヘッダーにフォルダパスを非表示または表示します。`true`または`false` (デフォルト) を指定できます。                                                   |
-| `sortColumn`             | ファイルまたはフォルダを並べ替える順番。`name`、`date` (デフォルト)、または、`size`を指定できます。                                                     |
-| `sortDirection`          | ファイルまたはフォルダの並べ替えの方向。`ASC` (デフォルト) または`DESC`を指定できます。                                                              |
-| `view`                   | ファイルまたはフォルダの表示方法の種類。`list` (デフォルト) または`icon`を指定できます。ログインユーザーの場合は、ユーザー設定の表示方法が優先されます。                             |
-| `uxLite`                 | Show the limited content preview (Preview Light), with no cloud game. Works only for shared files and Box Notes. |
+|                          |                                                                                      |
+| ------------------------ | ------------------------------------------------------------------------------------ |
+| `hideHubsGallery`        | Hubsギャラリーに戻るためのナビゲーションの山括弧ボタンを非表示または表示します。`true`または`false` (デフォルト) を指定できます。          |
+| `hideNavigationControls` | Box Notesのナビゲーションコントロールを非表示または表示します。                                                 |
+| `showItemFeedActions`    | ファイルのコメントまたはタスクを非表示または表示します。`true` (デフォルト) または`false`を指定できます。                        |
+| `showParentPath`         | フレームのヘッダーにフォルダパスを非表示または表示します。`true`または`false` (デフォルト) を指定できます。                       |
+| `sortColumn`             | ファイルまたはフォルダを並べ替える順番。`name`、`date` (デフォルト)、または、`size`を指定できます。                         |
+| `sortDirection`          | ファイルまたはフォルダの並べ替えの方向。`ASC` (デフォルト) または`DESC`を指定できます。                                  |
+| `view`                   | ファイルまたはフォルダの表示方法の種類。`list` (デフォルト) または`icon`を指定できます。ログインユーザーの場合は、ユーザー設定の表示方法が優先されます。 |
+| `uxLite`                 | クラウド (雲) ゲームを使用せず、制限付きコンテンツプレビュー (Preview Light) を表示します。共有ファイルおよびBox Notesのみに有効です。   |
 
 <Message type="notice">
 
-When you use `uxLite` with Box Notes, navigation controls are not displayed, regardless of the `hideNavigationControls` setting.
+Box Notesで`uxLite`を使用すると、`hideNavigationControls`の設定に関わらず、ナビゲーションコントロールは表示されません。
 
 </Message>
 
-All custom search parameters from the first-party app URL are passed to the embed widget modal and Content Preview.
+Boxが提供するアプリのURLにあるカスタム検索パラメータはすべて、埋め込みウィジェットウィンドウとコンテンツプレビューに渡されます。
 
 ### 全画面表示機能
 
@@ -238,7 +238,7 @@ https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
 
 ## クラウド (雲) ゲーム
 
-The cloud game is a widget created to prevent [clickjacking][cloud-game]. It's shown for embedded sites that aren’t partner integrations. In cloud game, user must drag a cloud to the correct location before an interaction is allowed. It makes clickjacking difficult, as the position of the cloud and its destination are randomly generated.
+クラウド (雲) ゲームとは、[クリックジャッキング][cloud-game]を防ぐために作成されたウィジェットです。これは、パートナー統合ではない埋め込みサイトに表示されます。クラウド (雲) ゲームでは、ユーザーは、操作の許可を得るためにクラウド (雲) を適切な場所にドラッグする必要があります。このゲームでは、クラウド (雲) の位置とそのドラッグ先がランダムに生成されるため、クリックジャッキングが難しくなります。
 
 <ImageFrame border>
 
@@ -272,4 +272,4 @@ Box Embedは、モバイルブラウザ向けには最適化されていない�
 
 [5]: https://support.box.com/hc/ja/articles/360044196413-コラボレータの権限レベルについて
 
-[cloud-game]: https://support.box.com/hc/en-us/articles/360043691034-How-Does-Box-Prevent-Clickjacking
+[cloud-game]: https://support.box.com/hc/ja/articles/360043691034-Boxはどのようにしてクリックジャッキングを防止していますか

@@ -57,7 +57,7 @@ curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
 
 Box APIでは、以下のリソースバリアントを使用できます。
 
-### Standard
+### 標準
 
 APIレスポンスで返されるデフォルトのフィールドセットです。Standardバリアントは、リソースに対して使用できるメインのAPIを介してそのリソースがリクエストされたときに返されます。たとえば、[`GET /files/:id`](endpoint://get_files_id)エンドポイントをリクエストすると、APIはファイルの標準バリエーションを返します。
 

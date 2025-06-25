@@ -25,7 +25,7 @@ fullyTranslated: true
 
 シングルサインオン (SSO) サービスは、会社の**Identity and Access Management (IAM)** ソリューションの一環として使用されることがよくあります。SSOサービスが展開されると、ユーザーは、1つの資格情報セット (ユーザー名とパスワード) だけを使用して1回ログインすれば、複数のアプリケーションの認証を安全に行うことができます。
 
-Box is one of the applications that can be connected to the SSO service of a company. Integrating these applications into your platform apps will allow you to provision Box users on the fly for any of your end users, without those users knowing they have a Box account.
+Boxは、会社のSSOサービスに接続可能なアプリケーションの1つです。こうしたアプリケーションをPlatformアプリに統合すれば、いずれのエンドユーザーに対しても即座にBoxユーザーがプロビジョニングされます。その際、このエンドユーザーにBoxアカウントが用意されたことは知らされません。
 
 <Message notice>
 
