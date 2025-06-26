@@ -17,6 +17,6 @@ base_version_notice:
       **[Box API versioning](g://api-calls/api-versioning-strategy)**.
     // resource: Notice that the resource has a version 2024.0
     resource: |-
-      This resource is used by enpoints in the version **2024.0**.
+      This resource is used by endpoints in the version **2024.0**.
       For more details, see
       **[Box API versioning](g://api-calls/api-versioning-strategy)**.
