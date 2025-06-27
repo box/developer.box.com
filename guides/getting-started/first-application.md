@@ -7,7 +7,7 @@ subcategory_id: null
 is_index: false
 id: getting-started/first-application
 type: guide
-total_steps: 3
+total_steps: 4
 sibling_id: getting-started
 parent_id: getting-started
 next_page_id: getting-started/publish-app
