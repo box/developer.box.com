@@ -177,9 +177,9 @@ Use Box for AI Integrations to extend LLM models' existing knowledge bases.
 
 <TileGrid rows="4">
 
-<Tile type="box-brown" title="Box MCP Server" href="/guides/box-mcp/remote">
+<Tile type="box-brown" title="Remote Box MCP Server" href="/guides/box-mcp/remote">
 
-Allow AI assistants to access enterprise content management capabilities with minimal friction, opening up new possibilities for intelligent document handling and analysis.
+The remote Box MCP Server allows third party AI systems to securely connect and interact with your content in Box.
 
 <div>
 
@@ -270,12 +270,6 @@ Use the Box MCP server to augment Pydantic AI agents with secure content in Box.
 
 <div>
 
-<strong style="background-color: #92e0c0">
-
-New
-
-</strong>
-
 <strong style="background-color: #e8e8e8">
 
 Demo
@@ -291,12 +285,6 @@ Demo
 Transform unstructured documents into structured, queryable data by using the “Box data extract”, an Airbyte source connector.
 
 <div>
-
-<strong style="background-color: #92e0c0">
-
-New
-
-</strong>
 
 <strong style="background-color: #e8e8e8">
 
@@ -314,12 +302,6 @@ Use OpenAI Responses API and a Box Agent to add unstructured data from your Box 
 
 <div>
 
-<strong style="background-color: #92e0c0">
-
-New
-
-</strong>
-
 <strong style="background-color: #e8e8e8">
 
 Integration
@@ -335,12 +317,6 @@ Integration
 Build RAG workflows by embedding Box content into a Weaviate vector database and leveraging Weaviate's new Query Agent.
 
 <div>
-
-<strong style="background-color: #92e0c0">
-
-New
-
-</strong>
 
 <strong style="background-color: #e8e8e8">
 
