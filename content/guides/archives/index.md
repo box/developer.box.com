@@ -21,8 +21,8 @@ alias_paths: []
 Box Archive is available only for Enterprise Advanced accounts.
 
 Box Archive allows you to create and manage archives. An archive is a folder dedicated to
-storing content that is redundant, outdated, or trivial. Content in an archive is not accessible to its
-owner and collaborators.
+storing content that is redundant, outdated, or trivial. Content in an archive is owned by the enterprise,
+it is not accessible to previous owner and collaborators.
 
 ## Archives are folders
 
