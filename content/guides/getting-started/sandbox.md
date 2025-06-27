@@ -21,8 +21,7 @@ Using a sandbox allows you to:
 * Safely build apps: develop securely within an enterprise-linked environment instead of a free standalone account.
 * Collaborate securely: you can work with both internal teams and external collaborators. Contractors, partners, and other external users can join the sandbox without accessing live systems and compromising security.
 * Test apps under realistic testing conditions: your sandbox setup closely matches your live production settings, as sandboxes inherit your enterprise’s plan and add-ons.
-* Catch issues early: sync sandbox updates with any major changes in your
-enterprise's production environment.
+* Catch issues early: sync sandbox updates with any major changes in your enterprise's production environment.
 
 ## Accessing your sandbox
 
