@@ -102,7 +102,7 @@ Prerequisites:
 Follow these instructions to start using Box MCP Sever with Cursor:
 
 1. Open the Cursor app.
-2. Click the cog icon located in the right-top corner to open settings.
+2. Click the cog icon to open settings.
 3. Select `MCP` within the Cursor Settings tab.
 4. Click the `Add new global MCP server` button. This opens the `mcp.json` file.
 5. Update the values with your local setup and paste the following JSON:
@@ -164,7 +164,7 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
 }
 ```
 
-3. Restart Claude for Desktop
+3. Restart Claude for Desktop.
 4. Authenticate the Box MCP Server using `box_authorize_app_tool` tool.
 
 ## Available tools
