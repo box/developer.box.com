@@ -16,7 +16,7 @@ Below is a table with all APIs that support Box Archive.
 
 <Message type='notice'>
   Those APIs require the `GCM` scope to be enabled in your application.
-  This scope is not available in the Developer Console and needs to instead be enabled by contacting customer support.
+  This scope is not available in the Developer Console and needs to be enabled by contacting customer support.
 
   Additionally, some of the below APIs need to be enabled by contacting customer support to properly work with Box Archive.
   When contacting customer support, please specify the user ID you plan to use those APIs with.
