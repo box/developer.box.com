@@ -175,9 +175,9 @@ BoxのAI統合を使用して、LLMモデルの既存のナレッジベースを
 
 <TileGrid rows="4">
 
-<Tile type="box-brown" title="Box MCPサーバー" href="https://github.com/box-community/mcp-server-box?tab=readme-ov-file#mcp-server-box">
+<Tile type="box-brown" title="Remote Box MCP Server" href="/guides/box-mcp/remote">
 
-AIアシスタントが最小限の負荷で企業のコンテンツ管理機能にアクセスできるようにし、インテリジェントなドキュメント処理および分析の新たな可能性を切り開きます。
+The remote Box MCP Server allows third party AI systems to securely connect and interact with your content in Box.
 
 <div>
 
@@ -190,6 +190,50 @@ AIアシスタントが最小限の負荷で企業のコンテンツ管理機能
 <strong style="background-color: #e8e8e8">
 
 MCP
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="box-brown" title="Self-hosted Box MCP Server" href="/guides/box-mcp/self-hosted">
+
+A Python Developer Community open source project. It integrates with the Box API to perform various operations such as file search, text extraction, AI-based querying, and data extraction.
+
+<div>
+
+<strong style="background-color: #92e0c0">
+
+新着
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
+MCP
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="box-brown" title="Openflow Connector for Box" href="https://docs.snowflake.com/en/user-guide/data-integration/openflow/connectors/box/setup">
+
+Seamlessly connect unstructured content in Box with the powerful analytics capabilities of Snowflake, unlocking new insights and automating data-driven workflows.
+
+<div>
+
+<strong style="background-color: #92e0c0">
+
+新着
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
+Connector
 
 </strong>
 
@@ -225,12 +269,6 @@ Box MCPサーバーを使用して、BoxのセキュアなコンテンツでPyda
 
 <div>
 
-<strong style="background-color: #92e0c0">
-
-新着
-
-</strong>
-
 <strong style="background-color: #e8e8e8">
 
 デモ
@@ -246,12 +284,6 @@ Box MCPサーバーを使用して、BoxのセキュアなコンテンツでPyda
 Airbyteソースコネクタ「Box Data Extract」を使用して、非構造化ドキュメントを照会可能な構造化データに変換します。
 
 <div>
-
-<strong style="background-color: #92e0c0">
-
-新着
-
-</strong>
 
 <strong style="background-color: #e8e8e8">
 
@@ -269,12 +301,6 @@ OpenAI Responses APIとBoxエージェントを使用して、Boxインスタン
 
 <div>
 
-<strong style="background-color: #92e0c0">
-
-新着
-
-</strong>
-
 <strong style="background-color: #e8e8e8">
 
 統合
@@ -290,12 +316,6 @@ OpenAI Responses APIとBoxエージェントを使用して、Boxインスタン
 WeaviateのベクトルデータベースにBoxコンテンツを埋め込み、Weaviateの新しいQuery Agentを利用して、RAGワークフローを作成します。
 
 <div>
-
-<strong style="background-color: #92e0c0">
-
-新着
-
-</strong>
 
 <strong style="background-color: #e8e8e8">
 

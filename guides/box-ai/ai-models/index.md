@@ -23,9 +23,33 @@ fullyTranslated: true
 ---
 # サポートされているAIモデル
 
-BoxでサポートされているAIモデルには、コアモデルと顧客希望で有効化できるモデルの2種類があります。Box AIサービスのデフォルトはBox AIのコアモデルで、すべてのお客様が利用できます。
+Box supports a variety of AI models, categorized along two dimensions: access level and capability tier.
 
-顧客希望で有効化できるモデルは、Box管理者が管理コンソールで有効にするか、利用可能になるようにリクエストします。これらのモデルは追加の条件の対象になる場合があります。
+## Access Levels
+
+### Core Models
+
+These models are built into Box AI and available by default for all customers. No configuration is required.
+
+### Customer-Enabled Models
+
+These models require activation by Box admins in the Admin Console or a request to Box to enable them. Some models may be subject to additional terms or pricing.
+
+## Capability Tiers
+
+### Standard Models
+
+Designed for high-speed, cost-efficient tasks like basic summarization, Q&A, and structured data extraction from shorter or simpler documents. Ideal for high-volume, low-complexity use cases.
+
+### Premium Models
+
+Offer more advanced reasoning, larger context windows, and better performance on long-form, complex, or domain-specific content. Suitable for sophisticated tasks like multi-step reasoning, understanding large taxonomies, and analyzing lengthy or unstructured documents.
+
+<Message type="notice">
+
+A model can be both customer-enabled and premium, or core and standard. In other words, access level and capability tiers are independent categorizations (for example, models can be either capability tier regardless of access level). The two categorizations are complementary.
+
+</Message>
 
 ## モデルの使用
 
@@ -58,25 +82,25 @@ Box AIには以下のモデルが搭載されています。Box AIと統合さ�
 
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Box AI for Hubsのデフォルト
 
 </strong>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Box AI for Documentsのデフォルト
 
 </strong>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Box AI for NotesのQ&Aのデフォルト
 
 </strong>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 チャット
 
@@ -104,7 +128,7 @@ Box AI for NotesのQ&Aのデフォルト
 
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 チャット
 
@@ -132,7 +156,7 @@ Box AI for NotesのQ&Aのデフォルト
 
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 チャット
 
@@ -160,7 +184,7 @@ Box AI for NotesのQ&Aのデフォルト
 
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 チャット
 
@@ -194,7 +218,7 @@ Box AI for NotesのQ&Aのデフォルト
 
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 埋め込み
 
@@ -222,7 +246,7 @@ Box AI for NotesのQ&Aのデフォルト
 
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 チャット
 
@@ -250,7 +274,7 @@ Box AI for NotesのQ&Aのデフォルト
 
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 チャット
 
@@ -278,7 +302,7 @@ Box AI for NotesのQ&Aのデフォルト
 
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 チャット
 
@@ -306,13 +330,13 @@ Box AI for NotesのQ&Aのデフォルト
 
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 Box AI Extractのデフォルト
 
 </strong>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 チャット
 
@@ -340,7 +364,7 @@ Box AI Extractのデフォルト
 
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 チャット
 
@@ -368,7 +392,7 @@ Box AI Extractのデフォルト
 
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 チャット
 
@@ -396,7 +420,7 @@ Box AI Extractのデフォルト
 
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 チャット
 
@@ -424,7 +448,7 @@ Box AI Extractのデフォルト
 
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 チャット
 
@@ -452,7 +476,7 @@ Box AI Extractのデフォルト
 
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 チャット
 
@@ -480,7 +504,7 @@ Box AI Extractのデフォルト
 
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 チャット
 
@@ -508,7 +532,7 @@ Box AI Extractのデフォルト
 
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 チャット
 
@@ -536,7 +560,7 @@ Box AI Extractのデフォルト
 
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 チャット
 
@@ -564,7 +588,7 @@ Box AI Extractのデフォルト
 
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 チャット
 
@@ -600,7 +624,7 @@ Box AIの一部の顧客は、リクエストに応じて追加のAIモデルを
 
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 チャット
 
@@ -628,7 +652,7 @@ Box AIの一部の顧客は、リクエストに応じて追加のAIモデルを
 
 <div>
 
-<strong style="background-color: #dde6ed">
+<strong style="background-color: #e8e8e8">
 
 チャット
 

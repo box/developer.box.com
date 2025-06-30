@@ -17,7 +17,7 @@ total_steps: 5
 sibling_id: docgen
 parent_id: docgen
 next_page_id: docgen/mark-template
-previous_page_id: docgen
+previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/docgen/docgen-getting-started.md
 fullyTranslated: true

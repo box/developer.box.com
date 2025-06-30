@@ -148,7 +148,7 @@ export default App;
 
 ## メタデータキー
 
-表示するフィールドを決定するには、メタデータのコンテンツエクスプローラで、[表示名][display-name]ではなく、メタデータの[フィールドキー][field-key]を使用します。表示名は管理コンソールやユーザービューで確認できる一方、フィールドキーはAPIを使用して取得できます。
+To decide which fields to show, the Content Explorer uses metadata [field keys][field-key], not the [display names][display-name]. You can see the display names in the Admin Console and user view, but you can obtain the field keys through the API.
 
 フィールドキーは、メタデータの表示名を変更した場合でも変わりません。これにより、UIビューでメタデータが変更されても、この機能は正常に動作します。
 
