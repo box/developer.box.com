@@ -29,7 +29,7 @@ When you are assigned as a primary admin of a sandbox, you receive a log-in emai
 
 Click the link in the email to access the [Dev Console][2] inside the sandbox environment and set up a password. You can also access your sandbox by logging in with your sandbox credentials on [developer.box.com][3].
 
-As a sandbox's primary admin you can create individual sandbox user accounts, giving developers access to a new Box environment that reflects the same plan as their parent Box enterprise.
+The sandbox's primary admin can create individual sandbox user accounts, giving developers access to a new Box environment that reflects the same plan as their parent Box enterprise.
 
 ### Access multiple sandboxes
 
