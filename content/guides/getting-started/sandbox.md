@@ -20,7 +20,7 @@ Using a sandbox allows you to:
 
 * Safely build apps within an enterprise-linked environment instead of a free standalone account.
 * Collaborate securely with both internal teams and external collaborators. Contractors, partners, and other external users can join the sandbox without accessing live systems and compromising security.
-* Test apps under realistic testing conditions, as sandboxes inherit your enterprise's plan and add-ons at creation time. If there are any changes to the plan and add-ons, it can be manually synced by an enterprise admin.
+* Test apps under realistic testing conditions, as sandboxes inherit your enterprise's plan and add-ons at creation time. If there are any changes to the plan or add-ons, they can be [manually synced][4] by an enterprise admin.
 
 ## Accessing your sandbox
 
@@ -38,3 +38,4 @@ As a primary admin, you can log into multiple sandboxes. If you want to use this
 [1]: https://support.box.com/hc/en-us/articles/360043697274-Managing-developer-sandboxes-for-Box-admins
 [2]: https://cloud.app.box.com/developers/console
 [3]: https://developer.box.com
+[4]: https://support.box.com/hc/en-us/articles/360043697274-Managing-developer-sandboxes-for-Box-admins#:~:text=in%20a%20sandbox.-,Synchronizing,-sandbox%20with%20production
