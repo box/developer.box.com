@@ -12,26 +12,26 @@ Developer sandboxes in Box provide a secure, controlled environment where develo
 
 ## What is a developer sandbox?
 
-A developer sandbox is an environment isolated from your production (live) enterprise setup and keeps development activities separate from real business data.
+A developer sandbox is an environment isolated from your production (live) enterprise setup that keeps development activities separate from real business data.
 
 ## Why use a sandbox?
 
 Using a sandbox allows you to:
 
-* Safely build apps: develop securely within an enterprise-linked environment instead of a free standalone account.
-* Collaborate securely: you can work with both internal teams and external collaborators. Contractors, partners, and other external users can join the sandbox without accessing live systems and compromising security.
-* Test apps under realistic testing conditions: when synced, sandboxes inherit your enterprise’s plan and add-ons.
+* Safely build apps within an enterprise-linked environment instead of a free standalone account.
+*  Collaborate securely with both internal teams and external collaborators. Contractors, partners, and other external users can join the sandbox without accessing live systems and compromising security.
+* Test apps under realistic testing conditions, as sandboxes inherit your enterprise's plan and add-ons at creation time. If there are any changes to the plan and add-ons, it can be manually synced by an enterprise admin.
 
 ## Accessing your sandbox
 
-Sandboxes in Box are created by the enterprise admins. See [this document][1] to learn how to create a sandbox. 
+Sandboxes in Box are created by enterprise admins. See [this document][1] to learn how to create a sandbox. 
 When you are assigned as a primary admin of a sandbox, you receive a log-in email from Box with your sandbox user ID.
 
-Click the link in the email to access the [Dev Console][2] inside the sandbox environment and set up a password. You can also access your sandbox by logging in with your sandbox credentials on [developer.box.com][3].
+To access the [Dev Console][2] inside the sandbox environment and set up a password, click the link in the email. You can also access your sandbox by logging in with your sandbox credentials on [developer.box.com][3].
 
-The sandbox's primary admin can create individual sandbox user accounts, giving developers access to a new Box environment that reflects the same plan as their parent Box enterprise.
+The sandbox's primary admin can create individual sandbox accounts, giving developers access to a new Box environment that matches the plan of their parent Box enterprise.s
 
-### Access multiple sandboxes
+### Accessing multiple sandboxes
 
 As a primary admin, you can log into multiple sandboxes. If you want to use this functionality for existing sandboxes, you can remove the unique email address and get a system generated email.
 
