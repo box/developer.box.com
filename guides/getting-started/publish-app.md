@@ -5,10 +5,10 @@ subcategory_id: null
 is_index: false
 id: getting-started/publish-app
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: getting-started
 parent_id: getting-started
-next_page_id: ''
+next_page_id: getting-started/sandbox
 previous_page_id: getting-started/first-application
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/publish-app.md
