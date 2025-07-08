@@ -79,7 +79,7 @@ Admin Console.
 A Service Account provides developers with a programmatic authentication
 mechanism for server-side integrations with Box. In other words, an application
 can authenticate to Box as the service, which is represented by a Service
-Account user. Service accounts are only accessible via the API, meaning they do not have login credentials.
+Account user. Service Accounts are only accessible with the API, meaning they do not have login credentials.
 
 A Service Account can then be used to create other application
 specific users, called App Users described further below.
