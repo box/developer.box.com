@@ -18,33 +18,33 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/sandbox.md
 fullyTranslated: true
 ---
-# Sandboxes in Box Platform
+# Box Platformのサンドボックス
 
-Developer sandboxes in Box provide a secure, controlled environment where developers can build, test, and collaborate on applications without affecting the actual data of your enterprise. They offer a safe space to experiment with Box APIs, test settings, try new integrations, and work alongside external partners.
+BoxのDeveloperサンドボックスでは、制御された安全な環境を提供しています。この環境で、開発者は、企業の実際のデータに影響を及ぼすことなく、アプリケーションの作成、テスト、コラボレーションを行うことができます。このようなサンドボックスは、Box APIの実験、設定のテスト、新しい統合の試用、外部パートナーとの連携を行うための安全なスペースを提供します。
 
-## What is a developer sandbox?
+## Developerサンドボックスとは
 
-A developer sandbox is an environment isolated from your production (live) enterprise setup that keeps development activities separate from real business data.
+Developerサンドボックスとは、実稼働 (ライブ) Enterpriseの設定から隔離された環境であり、開発アクティビティを実際のビジネスデータから切り離しておくことができます。
 
-## Why use a sandbox?
+## サンドボックスを使用する理由
 
-Using a sandbox allows you to:
+サンドボックスを使用すると、以下のことが可能です。
 
-* Safely build apps within an enterprise-linked environment instead of a free standalone account.
-* Collaborate securely with both internal teams and external collaborators. Contractors, partners, and other external users can join the sandbox without accessing live systems and compromising security.
-* Test apps under realistic testing conditions, as sandboxes inherit your enterprise's plan and add-ons at creation time. If there are any changes to the plan or add-ons, they can be [manually synced][4] by an enterprise admin.
+* 無料のスタンドアロンアカウントではなく、Enterpriseにリンクされている環境内で安全にアプリを開発する。
+* 社内チームとも外部コラボレータとも安全にコラボレーションする。請負業者、パートナー、その他の外部ユーザーは、実際のシステムにアクセスしてセキュリティを危険にさらすことなく、サンドボックスに参加できます。
+* サンドボックスは作成時に企業のプランやアドオンを継承するため、現実的なテスト条件下でアプリをテストする。プランやアドオンに変更があった場合は、Enterprise管理者が[手動で同期][4]することができます。
 
-## Accessing your sandbox
+## サンドボックスへのアクセス
 
-Sandboxes in Box are created by enterprise admins. See [this document][1] to learn how to create a sandbox. When you are assigned as a primary admin of a sandbox, you receive a log-in email from Box with your sandbox user ID.
+Box内のサンドボックスは、Enterprise管理者によって作成されます。サンドボックスの作成方法については、[こちらのドキュメント][1]を参照してください。サンドボックスのプライマリ管理者に任命されると、サンドボックスのユーザーIDが記載されたログインメールがBoxから届きます。
 
-To access the [Dev Console][2] inside the sandbox environment and set up a password, click the link in the email. You can also access your sandbox by logging in with your sandbox credentials on [developer.box.com][3].
+サンドボックス環境内で[開発者コンソール][2]にアクセスしてパスワードを設定するには、メールに記載されているリンクをクリックします。また、[developer.box.com][3]でサンドボックスの資格情報を使用してログインすることで、サンドボックスにアクセスすることもできます。
 
-The sandbox's primary admin can create individual sandbox accounts, giving developers access to a new Box environment that matches the plan of their parent Box enterprise.
+サンドボックスのプライマリ管理者は、個々のサンドボックスアカウントを作成し、親のBox Enterpriseのプランに一致する新しいBox環境へのアクセス権限を開発者に付与することができます。
 
-### Accessing multiple sandboxes
+### 複数のサンドボックスへのアクセス
 
-As a primary admin, you can log into multiple sandboxes. If you want to use this functionality for existing sandboxes, you can remove the unique email address and get a system generated email.
+プライマリ管理者は、複数のサンドボックスにログインできます。既存のサンドボックスにこの機能を使用する場合は、一意のメールアドレスを削除し、システムで生成されたメールアドレスを取得できます。
 
 [1]: https://support.box.com/hc/en-us/articles/360043697274-Managing-developer-sandboxes-for-Box-admins
 

@@ -175,9 +175,9 @@ BoxのAI統合を使用して、LLMモデルの既存のナレッジベースを
 
 <TileGrid rows="4">
 
-<Tile type="box-brown" title="Remote Box MCP Server" href="/guides/box-mcp/remote">
+<Tile type="box-brown" title="リモート型Box MCPサーバー" href="/guides/box-mcp/remote">
 
-The remote Box MCP Server allows third party AI systems to securely connect and interact with your content in Box.
+リモート型Box MCPサーバーを使用すると、サードパーティ製のAIシステムを安全にBoxに接続してコンテンツを操作することができます。
 
 <div>
 
@@ -197,9 +197,9 @@ MCP
 
 </Tile>
 
-<Tile type="box-brown" title="Self-hosted Box MCP Server" href="/guides/box-mcp/self-hosted">
+<Tile type="box-brown" title="セルフホスト型Box MCPサーバー" href="/guides/box-mcp/self-hosted">
 
-A Python Developer Community open source project. It integrates with the Box API to perform various operations such as file search, text extraction, AI-based querying, and data extraction.
+PythonのDeveloper Communityオープンソースプロジェクト。これは、さまざまな操作 (ファイル検索、テキスト抽出、AIベースのクエリ実行、データ抽出など) を行うためにBox APIと統合されています。
 
 <div>
 
@@ -221,7 +221,7 @@ MCP
 
 <Tile type="box-brown" title="Openflow Connector for Box" href="https://docs.snowflake.com/en/user-guide/data-integration/openflow/connectors/box/setup">
 
-Seamlessly connect unstructured content in Box with the powerful analytics capabilities of Snowflake, unlocking new insights and automating data-driven workflows.
+Box内の非構造化コンテンツをSnowflakeの強力な分析機能にシームレスに接続し、新しいインサイトを取得してデータ駆動型のワークフローを自動化します。
 
 <div>
 
@@ -233,7 +233,7 @@ Seamlessly connect unstructured content in Box with the powerful analytics capab
 
 <strong style="background-color: #e8e8e8">
 
-Connector
+コネクタ
 
 </strong>
 

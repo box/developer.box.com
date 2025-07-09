@@ -17,47 +17,47 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-mcp/remote/index.md
 fullyTranslated: true
 ---
-# Remote Box MCP Server
+# リモート型Box MCPサーバー
 
-The remote Box MCP Server allows third party AI systems to securely connect and interact with your content in Box.
+リモート型Box MCPサーバーを使用すると、サードパーティ製のAIシステムを安全にBoxに接続してコンテンツを操作することができます。
 
 <Message type="notice">
 
-Box MCP Server offered subject to Box’s Main Beta Agreement, meaning the available capabilities may change at any time. Box MCP Server is available for customers with Enterprise Plus or Enterprise Advanced plans.
+Box MCPサーバーは、BoxのMain Beta Agreementに従い提供されるため、利用可能な機能はいつでも変更される可能性があります。Box MCPサーバーは、Enterprise PlusまたはEnterprise Advancedプランをご利用のお客様が利用できます。
 
 </Message>
 
-## Access and manage predefined Box MCP Servers
+## あらかじめ定義されたBox MCPサーバーにアクセスして管理する
 
-1. Click **Integrations** in the sidebar of Box Admin Console. 
-2. Click **Box Integrations & Clients** in the Integrations window.
-3. Scroll down to **Individual Integration Controls**.
-4. Go to the **Box MCP Server for Copilot Studio (Beta)**, or **Box MCP Server for Azure API Center (Beta)** sections. 
-5. Click the state icon for the selected MCP server, then choose the state you want to enable.
-6. Click Save.
+1. Box管理コンソールのサイドバーにある \[**統合**] をクリックします。 
+2. \[統合] ウィンドウで \[**Box統合とクライアント**] をクリックします。
+3. \[**統合の個別管理**] までスクロールします。
+4. **Box MCP Server for Copilot Studio (ベータ)** または**Box MCP Server for Azure API Center (ベータ)** のセクションに移動します。 
+5. 選択したMCPサーバーの状態アイコンをクリックした後、有効にする状態を選択します。
+6. \[保存] をクリックします。
 
-## Create an unlisted Box MCP Server
+## リストに記載されていないBox MCPサーバーを作成する
 
-To create a new, unlisted Box MCP Server:
+リストに記載されていない新しいBox MCPサーバーを作成するには、以下の手順に従います。
 
-1. Click Integrations in the sidebar of Box Admin Console.
-2. Scroll down to **Individual Integration Controls** in the Box Integrations & Clients tab.
-3. Search for **Box MCP Server**. 
-4. Hover on the **Box MCP Server** application, then click **Configure**.
-5. In the **Additional Configuration** section, click on **+ Add Integration Credentials**.
-6. Copy the generated Client ID and Client Secret.
-7. Enter the Redirect URI provided by the external MCP Client.
-8. Under Scopes, ensure that _Manage AI_ is selected.
+1. Box管理コンソールのサイドバーにある \[統合] をクリックします。
+2. \[Box統合とクライアント] タブで \[**統合の個別管理**] までスクロールします。
+3. \[**Box MCP Server (Box MCPサーバー)**] を検索します。 
+4. \[**Box MCP Server (Box MCPサーバー)**] アプリケーションにカーソルを合わせ、\[**構成**] をクリックします。
+5. \[**追加の構成**] セクションで \[**+ 統合資格情報を追加**] をクリックします。
+6. 生成されたクライアントIDとクライアントシークレットをコピーします。
+7. 外部MCPクライアントから提供されたリダイレクトURIを入力します。
+8. \[Scopes (スコープ)] で \[_AIを管理する_] が選択されていることを確認します。
 
-## Add Box MCP Server to MCP clients
+## MCPクライアントにBox MCPサーバーを追加する
 
-To connect to Box from the AI Agent platform, you need to:
+AIエージェントプラットフォームからBoxに接続するには、以下の操作を行う必要があります。
 
-* Add an endpoint URL: `https://mcp.box.com`
-* Pass an MCP name: `box-remote-mcp`
-* Provide an `authorization_token`
+* エンドポイントURLを追加する: `https://mcp.box.com`
+* MCP名を渡す: `box-remote-mcp`
+* `authorization_token`を指定する
 
-Exact steps may vary depending on the AI platform. Refer to your platform’s documentation for client-side setup instructions. Check this sample code for reference:
+正確な手順はAIプラットフォームによって異なる場合があります。クライアント側での設定手順については、お使いのプラットフォームのドキュメントを参照してください。参考までに、次のサンプルコードを確認してください。
 
 ```python
 response = await client.beta.messages.create(
@@ -77,35 +77,35 @@ response = await client.beta.messages.create(
 
 ```
 
-### Anthropic's Messages API
+### AnthropicのMessages API
 
-Connect the remote Box MCP Server with Anthropic's Messages API (beta). Clone [this sample chat bot project](https://github.com/box-community/remote-box-mcp-anthropic) to get started quickly. It allows you to have a conversation with an Anthropic model, which has access to tools provided by the Box remote MCP server. The chatbot runs in a terminal, maintains conversation history for context-aware responses, and uses `asyncio` for asynchronous operation.
+リモート型Box MCPサーバーをAnthropicのMessages API (ベータ版) と関連付けます。[こちらのサンプルチャットボットプロジェクト](https://github.com/box-community/remote-box-mcp-anthropic)を複製すると、すぐに作業を開始できます。これにより、Anthropicモデルとの会話が可能になり、Boxのリモート型MCPサーバーが提供するツールにアクセスできます。このチャットボットは、ターミナルで実行され、コンテキストに対応した応答の会話履歴を維持し、非同期操作には`asyncio`を使用します。
 
 ### Copilot Studio
 
-To add an MCP server, follow the instructions provided by the Copilot Studio side. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp#add-tools-from-an-existing-mcp-connector-to-an-agent).
+MCPサーバーを追加するには、Copilot Studio側が提供する手順に従います。詳細な手順とガイダンスは、こちらのMicrosoftの公式ドキュメントで確認できます: [Copilot StudioでのMCPサーバーの追加](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp#add-tools-from-an-existing-mcp-connector-to-an-agent)
 
 ### Azure API Center
 
-To add an MCP server in Azure API Center's Enterprise Registry, follow the instructions provided by Azure. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Azure API Center's Enterprise Registry](https://learn.microsoft.com/en-us/azure/api-center/register-discover-mcp-server).
+Azure API CenterのEnterprise RegistryにMCPサーバーを追加するには、Azureが提供する手順に従います。詳細な手順とガイダンスは、こちらのMicrosoftの公式ドキュメントで確認できます: [Azure API CenterのEnterprise RegistryへのMCPサーバーの追加](https://learn.microsoft.com/en-us/azure/api-center/register-discover-mcp-server)
 
-### Using Box AI Features with the MCP Server
+### MCPサーバーでのBox AIの機能の使用
 
-When you use Box AI in third party applications, you can achieve the best experience and highest quality results by accessing the applications through the Box MCP Server. This ensures full functionality, improved performance, and a seamless user experience.
+サードパーティ製アプリケーションでBox AIを使用すると、Box MCPサーバー経由でアプリケーションにアクセスするため、最適なエクスペリエンスと質の高い結果を得ることができます。これにより、すべての機能、パフォーマンスの向上、シームレスなユーザーエクスペリエンスが実現します。
 
-## Available tools
+## 利用可能なツール
 
-Remote Box MCP Server includes several tools you can use:
+リモート型Box MCPサーバーには、使用できるツールがいくつかあります。
 
-| Tool                                              | 説明                                                                                                                                   |
-| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `box-remote-mcp_who_am_i`                         | Returns detailed information about the currently authenticated Box user.                                                             |
-| `box-remote-mcp_search_folders_by_name`           | Searches for folders within Box by name using keyword matching.                                                                      |
-| `box-remote-mcp_list_folder_content_by_folder_id` | Lists files, folders, and web links in a folder.                                                                                     |
-| `box-remote-mcp_search_files_keyword`             | Searches for files using keywords. Supports metadata filters, file extension filtering, and field selection.                         |
-| `box-remote-mcp_search_files_metadata`            | Searches for files using SQL-like metadata queries. Supports complex filtering with parameters, field selection, and folder scoping. |
-| `box-remote-mcp_ai_qa_single_file`                | Asks a question to a single file using Box AI.                                                                                       |
-| `box-remote-mcp_ai_qa_multi_file`                 | Asks a question to multiple files using Box AI.                                                                                      |
-| `box-remote-mcp_ai_qa_hub`                        | Asks a question to a Box Hub using Box AI.                                                                                           |
-| `box-remote-mcp_ai_extract_freeform`              | Extracts metadata from files using Box AI in freeform format without requiring predefined template structures.                       |
-| `box-remote-mcp_ai_extract_structured`            | Extracts structured metadata from files using Box AI based on either custom fields definition or an existing metadata template.      |
+| ツール                                               | 説明                                                                               |
+| ------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `box-remote-mcp_who_am_i`                         | 現在認証されているBoxユーザーの詳細な情報を返します。                                                     |
+| `box-remote-mcp_search_folders_by_name`           | キーワードの照合を使用して、名前でBox内のフォルダを検索します。                                                |
+| `box-remote-mcp_list_folder_content_by_folder_id` | フォルダ内のファイル、フォルダ、ウェブリンクのリストを取得します。                                                |
+| `box-remote-mcp_search_files_keyword`             | キーワードを使用してファイルを検索します。メタデータフィルタ、ファイル拡張子によるフィルタ処理、フィールドの選択がサポートされています。             |
+| `box-remote-mcp_search_files_metadata`            | SQLに似たメタデータクエリを使用してファイルを検索します。パラメータを使用した複雑なフィルタ処理、フィールドの選択、フォルダの範囲指定がサポートされています。 |
+| `box-remote-mcp_ai_qa_single_file`                | Box AIを使用して1つのファイルに質問します。                                                        |
+| `box-remote-mcp_ai_qa_multi_file`                 | Box AIを使用して複数のファイルに質問します。                                                        |
+| `box-remote-mcp_ai_qa_hub`                        | Box AIを使用してBox Hubに質問します。                                                        |
+| `box-remote-mcp_ai_extract_freeform`              | Box AIを使用して、ファイルから自由形式でメタデータを抽出します。あらかじめ定義されたテンプレート構造は必要ありません。                   |
+| `box-remote-mcp_ai_extract_structured`            | Box AIを使用して、ファイルから、カスタムフィールドの定義または既存のメタデータテンプレートに基づいて構造化メタデータを抽出します。             |

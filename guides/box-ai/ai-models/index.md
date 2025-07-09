@@ -23,31 +23,31 @@ fullyTranslated: true
 ---
 # サポートされているAIモデル
 
-Box supports a variety of AI models, categorized along two dimensions: access level and capability tier.
+Boxでは、さまざまなAIモデルがサポートされており、アクセスレベルと機能レベルという2つの側面で分類されます。
 
-## Access Levels
+## アクセスレベル
 
-### Core Models
+### コアモデル
 
-These models are built into Box AI and available by default for all customers. No configuration is required.
+このモデルは、Box AIに組み込まれており、デフォルトですべてのお客様が利用できます。構成は必要ありません。
 
-### Customer-Enabled Models
+### 顧客希望で有効化できるモデル
 
-These models require activation by Box admins in the Admin Console or a request to Box to enable them. Some models may be subject to additional terms or pricing.
+このモデルは、Box管理者が管理コンソールで有効にするか、Boxに有効にするようリクエストする必要があります。一部のモデルは、追加の条件や料金の対象になる場合があります。
 
-## Capability Tiers
+## 機能レベル
 
-### Standard Models
+### 標準モデル
 
-Designed for high-speed, cost-efficient tasks like basic summarization, Q&A, and structured data extraction from shorter or simpler documents. Ideal for high-volume, low-complexity use cases.
+基本的な要約、Q&A、短いまたはシンプルなドキュメントからの構造化データの抽出など、高速でコスト効率のよいタスク向けに設計されており、大量のあまり複雑でないユースケースに最適です。
 
-### Premium Models
+### プレミアムモデル
 
-Offer more advanced reasoning, larger context windows, and better performance on long-form, complex, or domain-specific content. Suitable for sophisticated tasks like multi-step reasoning, understanding large taxonomies, and analyzing lengthy or unstructured documents.
+より高度な推論、大きなコンテキストウィンドウ、長いコンテンツ、複雑なコンテンツ、またはドメイン固有のコンテンツに対する優れたパフォーマンスを提供します。マルチステップ推論、大規模なメタデータ階層の理解、長いドキュメントや非構造化ドキュメントの分析などの高度なタスクに適しています。
 
 <Message type="notice">
 
-A model can be both customer-enabled and premium, or core and standard. In other words, access level and capability tiers are independent categorizations (for example, models can be either capability tier regardless of access level). The two categorizations are complementary.
+モデルは、顧客希望で有効化できるモデルかつプレミアムモデルにすることも、コアモデルかつ標準モデルにすることもできます。つまり、アクセルレベルと機能レベルは、それぞれ独立した分類です (たとえば、モデルは、アクセスレベルに関係なくどちらの機能レベルにもなる可能性があります)。この2つの分類は相互に補完します。
 
 </Message>
 

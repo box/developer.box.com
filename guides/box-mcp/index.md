@@ -17,27 +17,27 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-mcp/index.md
 fullyTranslated: true
 ---
-# Box MCP Server
+# Box MCPサーバー
 
-Model Context Protocol ([MCP](https://modelcontextprotocol.io/introduction)) is an open protocol that standardizes how applications provide context to LLMs. MCP servers make building advanced integrations simpler and less time consuming.
+Model Context Protocol ([MCP](https://modelcontextprotocol.io/introduction)) は、アプリケーションがLLMにコンテキストを提供する方法を標準化するオープンプロトコルです。MCPサーバーにより、高度な統合をよりシンプルかつ時間をかけずに構築できるようになります。
 
-Box MCP Server allows third party AI agents from platforms like Copilot Studio, Cursor, Claude for Desktop to access Box content seamlessly. It extends the agent’s capabilities by allowing it to perform actions related to content stored in Box.
+Box MCPサーバーを使用すると、Copilot Studio、Cursor、Claude for Desktopなどのプラットフォームが提供するサードパーティ製AIエージェントは、Boxのコンテンツにシームレスにアクセスできるようになります。これは、Boxに保存されているコンテンツに関連した操作を実行できるようにすることで、エージェントの機能を拡張します。
 
-There are two types of Box MCP Servers:
+Box MCPサーバーには2種類あります。
 
-* remote Box MCP Server which you can create or enable in the Box Admin Console. It is hosted directly in Box.
+* リモート型Box MCPサーバー: Box管理コンソールで作成または有効化でき、Boxで直接ホストされています。
   <!--alex ignore-->
 
-* self-hosted Box MCP Server which you can clone and host on your local machine, as this version in an open source Box Developer community project.
+* セルフホスト型Box MCPサーバー: このバージョンはオープンソースのBox Developer Communityプロジェクトであるため、ローカルマシンで複製してホストできます。
   <!--alex enable-->
 
-Check the detailed guides on both types of Box MCP Servers, as the level of the implemented tools differs. Learn how to enable Box MCP Server:
+実装されるツールのレベルが異なるため、2種類のBox MCPサーバーに関する詳細なガイドを参照し、Box MCPサーバーを有効化する方法を確認してください。
 
 <TileGrid rows="2">
 
-<Tile type="mcp" title="Remote Box MCP Server" href="/guides/box-mcp/remote">
+<Tile type="mcp" title="リモート型Box MCPサーバー" href="/guides/box-mcp/remote">
 
-Enable the remote Box MCP Server in the Admin Console. It is hosted directly in Box.
+管理コンソールでリモート型Box MCPサーバーを有効にします。これはBoxで直接ホストされています。
 
 <div>
 
@@ -51,9 +51,9 @@ Enable the remote Box MCP Server in the Admin Console. It is hosted directly in 
 
 </Tile>
 
-<Tile type="mcp" title="Self-hosted Box MCP Server" href="/guides/box-mcp/self-hosted">
+<Tile type="mcp" title="セルフホスト型Box MCPサーバー" href="/guides/box-mcp/self-hosted">
 
-An open source Box Developer community project. You can clone this Box MCP Sever and host it on your local machine.
+オープンソースのBox Developer Communityプロジェクト。このBox MCPサーバーを複製し、ローカルマシンでホストすることができます。
 
 <div>
 
@@ -69,8 +69,8 @@ An open source Box Developer community project. You can clone this Box MCP Sever
 
 </TileGrid>
 
-Watch an interview with Box CTO, Ben Kus, and learn how MCP empowers AI agents to work dynamically across platforms, reducing the development effort.
+Box CTOのBen Kusとのインタビューを視聴し、MCPによってAIエージェントがどのようにプラットフォーム間で動的に動作し、開発の手間を軽減しているかをご覧ください。
 
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/u_y5_y9JGg4?si=PY2__LklwsGWwiAD" title="MCP: The API standard that makes AI actionable for enterprises | Box AI Explainer Series EP4 with Ben Kus, Box CTO" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/u_y5_y9JGg4?si=PY2__LklwsGWwiAD" title="MCP: 企業のためにAIを実用化するためのAPI標準 | Box CTOのBen KusによるBox AI Explainer Series EP4" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 
 </iframe>
