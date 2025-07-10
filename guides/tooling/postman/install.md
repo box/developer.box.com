@@ -30,8 +30,7 @@ Postman is available for Windows, Mac, and Linux environments.
 
 </Trigger>
 
-Next, install Postman on your machine and (optionally)
-[register for a Postman account and log in][register].
+Next, install Postman on your machine, [create an account, and sign in][register].
 
 <ImageFrame border center>
 
