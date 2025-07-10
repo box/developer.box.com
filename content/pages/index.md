@@ -35,6 +35,10 @@ All the developer resources to help you get the most from Box products
 
 </Banner>
 
+<Centered wide>
+  <FeaturedBoard type="aiDevZone" />
+</Centered>
+
 <Centered wide id="start-with-box-platform" >
   <Header centered>
     I'm new to Box Platform. How do I start?
@@ -80,7 +84,7 @@ All the developer resources to help you get the most from Box products
 </Centered>
 
 <Centered wide>
-  <FeaturedBoard type="aiDevZone" />
+  <FeaturedBoard type="community" />
 </Centered>
 
 <section id="sdks-and-tools" style="background-color: #FBFBFB;">
@@ -144,7 +148,7 @@ All the developer resources to help you get the most from Box products
 </section>
 
 <Centered wide>
-  <FeaturedBoard type="community" />
+  <FeaturedBoard type="sampleCode" />
 </Centered>
 
 <section id="additional-box-platform-concepts"
@@ -199,10 +203,6 @@ All the developer resources to help you get the most from Box products
     Browse all guides
   </More>
 </section>
-
-<Centered wide>
-  <FeaturedBoard type="sampleCode" />
-</Centered>
 
 <Centered wide>
   <Header centered>
