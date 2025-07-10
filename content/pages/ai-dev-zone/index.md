@@ -126,7 +126,7 @@ centered: false
     </Tile>
     <Tile type="mcp" title="Box MCP Server and LangChain MCP Adapters"
       href="https://medium.com/box-developer-blog/using-an-existing-mcp-server-with-langchain-mcp-adapters-94cdd4af6d1b">
-        Turn Box MCP Server it into a LangChain-compatible agent using the LangChain MCP Adapters.
+        Turn Box MCP Server into a LangChain-compatible agent using the LangChain MCP Adapters.
 
         <div>
           <strong style="background-color: #e8e8e8">Tutorial</strong>
