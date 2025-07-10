@@ -9,7 +9,7 @@ related_guides:
 category_id: box-ai
 subcategory_id: box-ai/ai-models
 is_index: false
-id: box-ai/ai-models/azure-openai-gpt-o3-model-card
+id: box-ai/ai-models/openai-gpt-o3-model-card
 type: guide
 total_steps: 23
 sibling_id: box-ai/ai-models
@@ -17,7 +17,7 @@ parent_id: box-ai/ai-models
 next_page_id: box-ai/ai-models/azure-openai-gpt-4-1-model-card
 previous_page_id: box-ai/ai-models
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/azure-openai-gpt-o3-model-card.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/openai-gpt-o3-model-card.md
 ---
 # OpenAI GPT o3
 
