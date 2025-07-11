@@ -66,7 +66,7 @@ Demo
 
 </Tile>
 
-<Tile type="ai" title="Extract metadata in the freeform mode" href="/ai-dev-zone-metadata">
+<Tile type="ai" title="Extract metadata from files (freeform)" href="/ai-dev-zone-metadata">
 
 Use natural langage, or pass a stringified data structure
 to extract metadata with Box AI API.
@@ -79,9 +79,10 @@ Demo
 
 </Tile>
 
-<Tile type="ai" title="Extract structured metadata in the structured mode" href="/ai-dev-zone-metadata-structured">
+<Tile type="ai" title="Extract metadata from files (structured)" href="/ai-dev-zone-metadata-structured">
 
-Extract document metadata suggestions with Box metadata templates or a predefined data structure.
+Extract document metadata suggestions. Pass a Box metadata template
+ID or a predefined data structure.
 
 <strong style="background-color: #e8e8e8">
 
