@@ -41,7 +41,7 @@ centered: false
     </Tile>
     <Tile type="ai" title="Extract metadata from files (structured)" href="/ai-dev-zone-metadata-structured">
         Extract document metadata suggestions. Pass a Box metadata template 
-        ID or a predefined structure.
+        ID or a predefined data structure.
 
         <strong style="background-color: #e8e8e8">Demo</strong>
     </Tile>
