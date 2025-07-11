@@ -83,11 +83,11 @@ response = await client.beta.messages.create(
 
 ### Copilot Studio
 
-MCPサーバーを追加するには、Copilot Studio側が提供する手順に従います。詳細な手順とガイダンスは、こちらのMicrosoftの公式ドキュメントで確認できます: [Copilot StudioでのMCPサーバーの追加](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp#add-tools-from-an-existing-mcp-connector-to-an-agent)
+MCPサーバーを追加するには、Copilot Studio側が提供する手順に従います。詳細な手順とガイダンスは、こちらのMicrosoftの公式ドキュメントで確認できます: [Add an MCP Server in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp#add-tools-from-an-existing-mcp-connector-to-an-agent)
 
 ### Azure API Center
 
-Azure API CenterのEnterprise RegistryにMCPサーバーを追加するには、Azureが提供する手順に従います。詳細な手順とガイダンスは、こちらのMicrosoftの公式ドキュメントで確認できます: [Azure API CenterのEnterprise RegistryへのMCPサーバーの追加](https://learn.microsoft.com/en-us/azure/api-center/register-discover-mcp-server)
+Azure API CenterのEnterprise RegistryにMCPサーバーを追加するには、Azureが提供する手順に従います。詳細な手順とガイダンスは、こちらのMicrosoftの公式ドキュメントで確認できます: [Add an MCP Server in Azure API Center's Enterprise Registry](https://learn.microsoft.com/en-us/azure/api-center/register-discover-mcp-server)
 
 ### MCPサーバーでのBox AIの機能の使用
 
@@ -104,7 +104,7 @@ Azure API CenterのEnterprise RegistryにMCPサーバーを追加するには、
 | `box-remote-mcp_list_folder_content_by_folder_id` | フォルダ内のファイル、フォルダ、ウェブリンクのリストを取得します。                                                |
 | `box-remote-mcp_search_files_keyword`             | キーワードを使用してファイルを検索します。メタデータフィルタ、ファイル拡張子によるフィルタ処理、フィールドの選択がサポートされています。             |
 | `box-remote-mcp_search_files_metadata`            | SQLに似たメタデータクエリを使用してファイルを検索します。パラメータを使用した複雑なフィルタ処理、フィールドの選択、フォルダの範囲指定がサポートされています。 |
-| `box-remote-mcp_ai_qa_single_file`                | Box AIを使用して1つのファイルに質問します。                                                        |
+| `box-remote-mcp_ai_qa_single_file`                | Box AIを使用して単一のファイルに質問します。                                                        |
 | `box-remote-mcp_ai_qa_multi_file`                 | Box AIを使用して複数のファイルに質問します。                                                        |
 | `box-remote-mcp_ai_qa_hub`                        | Box AIを使用してBox Hubに質問します。                                                        |
 | `box-remote-mcp_ai_extract_freeform`              | Box AIを使用して、ファイルから自由形式でメタデータを抽出します。あらかじめ定義されたテンプレート構造は必要ありません。                   |
