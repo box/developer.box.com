@@ -15,7 +15,7 @@ type: guide
 total_steps: 23
 sibling_id: box-ai
 parent_id: box-ai
-next_page_id: box-ai/ai-models/azure-openai-gpt-o3-model-card
+next_page_id: box-ai/ai-models/openai-gpt-o3-model-card
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/index.md
@@ -240,7 +240,7 @@ Box AI for NotesのQ&Aのデフォルト
 
 </Tile>
 
-<Tile type="gemini" title="google__gemini_2_5_pro_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-review-model-card">
+<Tile type="gemini" title="google__gemini_2_5_pro_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-preview-model-card">
 
 大規模かつ高頻度のタスクに最適になるよう設計されたGeminiマルチモーダルモデル。
 

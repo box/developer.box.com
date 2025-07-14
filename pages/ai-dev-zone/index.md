@@ -33,7 +33,7 @@ Developer Zone
 
 </Header>
 
-Box AI Developer Zoneでは、Box AI APIを実際に体験できる対話型のデモを紹介します。数回クリックするだけで、プロンプトの作成、サンプルコードの表示、Box AIのユースケースの確認などが可能です。
+Box AI Developer Zone features interactive demos, sample code, and tools for building AI agents and intelligent workflows. Explore use cases, get hands-on experience with Box AI API, and build agents with Box AI Studio!
 
 </HeroImage>
 
@@ -55,35 +55,57 @@ Box AI APIは、Enterprise PlusおよびEnterprise Advancedをご利用のすべ
 
 選択した語調でドキュメントを要約します。
 
-<strong style="background-color: #92e0c0">
+<strong style="background-color: #e8e8e8">
 
-新着
-
-</strong>
-
-</Tile>
-
-<Tile type="ai" title="メタデータの抽出" href="/ai-dev-zone-metadata">
-
-ドキュメントのメタデータの候補を自由形式モードで抽出します。
-
-<strong style="background-color: #92e0c0">
-
-新着
+デモ
 
 </strong>
 
 </Tile>
 
-<Tile type="ai" title="構造化メタデータの抽出" href="/ai-dev-zone-metadata-structured">
+<Tile type="ai" title="Extract metadata from files (freeform)" href="/ai-dev-zone-metadata">
 
-ドキュメントのメタデータの候補を構造化モードで抽出します。
+Use natural langage, or pass a stringified data structure to extract metadata with Box AI API.
+
+<strong style="background-color: #e8e8e8">
+
+デモ
+
+</strong>
+
+</Tile>
+
+<Tile type="ai" title="Extract metadata from files (structured)" href="/ai-dev-zone-metadata-structured">
+
+Extract document metadata suggestions. Pass a Box metadata template ID or a predefined data structure.
+
+<strong style="background-color: #e8e8e8">
+
+デモ
+
+</strong>
+
+</Tile>
+
+<Tile type="ai" title="Use Box AI Enhanced Extract Agent" href="https://medium.com/box-developer-blog/box-ai-enhanced-extract-agent-a-developers-guide-41eb59b2cc54">
+
+Extract document metadata suggestions with the new Enhanced Extract Agent. Get the best answers thanks to chain-of-thought processing.
+
+<div>
 
 <strong style="background-color: #92e0c0">
 
 新着
 
 </strong>
+
+<strong style="background-color: #e8e8e8">
+
+Tutorial
+
+</strong>
+
+</div>
 
 </Tile>
 
@@ -95,7 +117,7 @@ Box AI APIは、Enterprise PlusおよびEnterprise Advancedをご利用のすべ
 
 <Header>
 
-ドキュメントとサポート
+ドキュメント
 
 </Header>
 
@@ -107,7 +129,7 @@ Box AI APIを使用する際は、以下のリソースが参考になります�
 
 <TileGrid rows="4">
 
-<Tile type="code-new" title="AI APIリファレンス" href="/reference/resources/ai-response/">
+<Tile type="code-new" title="Box AI API reference" href="/reference/resources/ai-response/">
 
 仕様の詳細については、APIリファレンスをご確認ください。
 
@@ -119,7 +141,7 @@ Box AI APIを使用する際は、以下のリソースが参考になります�
 
 </Tile>
 
-<Tile type="code-new" title="開発者向けガイド" href="/guides/box-ai/">
+<Tile type="code-new" title="Get started with Box AI API" href="/guides/box-ai/">
 
 Box AI APIの使用方法については、ガイドをご覧ください。
 
@@ -133,7 +155,7 @@ Box AI APIの使用方法については、ガイドをご覧ください。
 
 <Tile type="code-new" title="サポートされているAIモデル" href="/guides/box-ai/supported-models/">
 
-サポートされているAIモデルのリストを確認できます。
+Box supports a variety of AI models, categorized along two dimensions: access level and capability tier. Check table list of the supported AI models.
 
 <strong style="background-color: #e8e8e8">
 
@@ -143,13 +165,191 @@ Box AI APIの使用方法については、ガイドをご覧ください。
 
 </Tile>
 
-<Tile type="code-new" title="サポート" href="https://community.box.com/">
+<Tile type="code-new" title="AIモデルの構成の上書き" href="/guides/box-ai/ai-agents/ai-agent-overrides/">
 
-サポートや知識共有が必要な場合は、Box Developer Community (英語のみ) にアクセスしてください。
+Override the default AI model configuration and fine tune LLMs with Box AI API.
 
 <strong style="background-color: #e8e8e8">
 
-コミュニティ
+ドキュメント
+
+</strong>
+
+</Tile>
+
+</TileGrid>
+
+</Centered>
+
+<Centered mid>
+
+<Header>
+
+MCP Servers
+
+</Header>
+
+<p style="text-align: left; margin-left: 0;">
+
+These resources will get you up and running with Box MCP Server.
+
+</p>
+
+<TileGrid rows="4">
+
+<Tile type="mcp" title="リモートBox MCPサーバー" href="/guides/box-mcp/remote">
+
+リモートBox MCPサーバーを使用すると、サードパーティ製のAIシステムを安全にBoxに接続してコンテンツを操作することができます。
+
+<div>
+
+<strong style="background-color: #92e0c0">
+
+新着
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
+MCP
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="mcp" title="セルフホストBox MCPサーバー" href="/guides/box-mcp/self-hosted">
+
+PythonのDeveloper Communityオープンソースプロジェクト。これは、さまざまな操作 (ファイル検索、テキスト抽出、AIベースのクエリ実行、データ抽出など) を行うためにBox APIと統合されています。
+
+<strong style="background-color: #e8e8e8">
+
+MCP
+
+</strong>
+
+</Tile>
+
+<Tile type="mcp" title="Box MCP server and Pydantic AI" href="https://medium.com/box-developer-blog/building-ai-powered-document-generation-with-box-mcp-and-pydantic-ai-48775b18ae32">
+
+Use Box Doc Gen through the Box MCP server for AI-Powered Document Generation
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Tutorial
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="mcp" title="Box MCP Server and LangChain MCP Adapters" href="https://medium.com/box-developer-blog/using-an-existing-mcp-server-with-langchain-mcp-adapters-94cdd4af6d1b">
+
+Turn Box MCP Server into a LangChain-compatible agent using the LangChain MCP Adapters.
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Tutorial
+
+</strong>
+
+</div>
+
+</Tile>
+
+</TileGrid>
+
+</Centered>
+
+<Centered mid>
+
+<Header>
+
+AI agents
+
+</Header>
+
+<p style="text-align: left; margin-left: 0;">
+
+Learn how to create advanced AI agents with Box.
+
+</p>
+
+<TileGrid rows="4">
+
+<Tile type="model" title="Manage agents with Box AI Studio API" href="guides/ai-studio/getting-started-ai-studio/">
+
+Create and manage custom AI agents with Box AI Studio API.
+
+<div>
+
+<strong style="background-color: #92e0c0">
+
+新着
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
+Box AI Studio
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="Box for Agentforce拡張パッケージ" href="/guides/tooling/salesforce-toolkit/box-agentforce-package/">
+
+Get started with reusable Agentforce actions that help automate workflows and enhance intelligent agent—based processes within Salesforce.
+
+<div>
+
+<strong style="background-color: #92e0c0">
+
+新着
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
+Salesforce
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="Multi-agent workflows with Box and OpenAI" href="https://medium.com/box-developer-blog/building-multi-agent-workflows-with-openais-new-sdk-and-box-3e3c81cf4715">
+
+OpenAI Responses APIとBoxエージェントを使用して、Boxインスタンスからエージェント型ワークフローに非構造化データを追加します。
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+OpenAI
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="Box AI Agents Toolkit" href="https://pypi.org/project/box-ai-agents-toolkit/">
+
+BoxのAIエージェントを作成するためのPythonライブラリの利用を開始します。
+
+<strong style="background-color: #e8e8e8">
+
+ベータ
 
 </strong>
 
@@ -175,50 +375,6 @@ BoxのAI統合を使用して、LLMモデルの既存のナレッジベースを
 
 <TileGrid rows="4">
 
-<Tile type="box-brown" title="リモート型Box MCPサーバー" href="/guides/box-mcp/remote">
-
-リモート型Box MCPサーバーを使用すると、サードパーティ製のAIシステムを安全にBoxに接続してコンテンツを操作することができます。
-
-<div>
-
-<strong style="background-color: #92e0c0">
-
-新着
-
-</strong>
-
-<strong style="background-color: #e8e8e8">
-
-MCP
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="box-brown" title="セルフホスト型Box MCPサーバー" href="/guides/box-mcp/self-hosted">
-
-PythonのDeveloper Communityオープンソースプロジェクト。これは、さまざまな操作 (ファイル検索、テキスト抽出、AIベースのクエリ実行、データ抽出など) を行うためにBox APIと統合されています。
-
-<div>
-
-<strong style="background-color: #92e0c0">
-
-新着
-
-</strong>
-
-<strong style="background-color: #e8e8e8">
-
-MCP
-
-</strong>
-
-</div>
-
-</Tile>
-
 <Tile type="box-brown" title="Openflow Connector for Box" href="https://docs.snowflake.com/en/user-guide/data-integration/openflow/connectors/box/setup">
 
 Box内の非構造化コンテンツをSnowflakeの強力な分析機能にシームレスに接続し、新しいインサイトを取得してデータ駆動型のワークフローを自動化します。
@@ -233,45 +389,7 @@ Box内の非構造化コンテンツをSnowflakeの強力な分析機能にシ�
 
 <strong style="background-color: #e8e8e8">
 
-コネクタ
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="box-brown" title="Box AI Agents Toolkit" href="https://pypi.org/project/box-ai-agents-toolkit/">
-
-BoxのAIエージェントを作成するためのPythonライブラリの利用を開始します。
-
-<div>
-
-<strong style="background-color: #92e0c0">
-
-新着
-
-</strong>
-
-<strong style="background-color: #e8e8e8">
-
-ベータ
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="box-brown" title="Pydantic AIとBox MCP" href="https://github.com/box-community/box-mcp-pydantic-ai">
-
-Box MCPサーバーを使用して、BoxのセキュアなコンテンツでPydantic AIエージェントを拡張します。
-
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-デモ
+統合
 
 </strong>
 
@@ -282,22 +400,6 @@ Box MCPサーバーを使用して、BoxのセキュアなコンテンツでPyda
 <Tile type="box-brown" title="Airbyte" href="https://github.com/box-community/airbyte/blob/barduinor/source-box-devrel/docs/integrations/sources/box-data-extract.md">
 
 Airbyteソースコネクタ「Box Data Extract」を使用して、非構造化ドキュメントを照会可能な構造化データに変換します。
-
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-統合
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="box-brown" title="OpenAI" href="https://github.com/box-community/box-openai-responses-ai-agent">
-
-OpenAI Responses APIとBoxエージェントを使用して、Boxインスタンスからエージェント型ワークフローに非構造化データを追加します。
 
 <div>
 
@@ -327,6 +429,18 @@ WeaviateのベクトルデータベースにBoxコンテンツを埋め込み、
 
 </Tile>
 
+<Tile type="box-brown" title="Pinecone" href="https://medium.com/box-developer-blog/demo-box-pinecone-f03783c412bb">
+
+BoxとPineconeを関連付けることで、ベクトル埋め込みをカスタマイズし、LLMからより関連性の高い回答を取得できます。
+
+<strong style="background-color: #e8e8e8">
+
+統合
+
+</strong>
+
+</Tile>
+
 <Tile type="box-brown" title="LlamaIndex" href="https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/readers/llama-index-readers-box#readme">
 
 LlamaIndex用のBox reader一式を使用して、LLMワークフロー内でのBoxコンテンツへのアクセスを可能にします。
@@ -351,15 +465,19 @@ LangChain向けのBox loaderを使用して、BoxコンテンツをLLMワーク�
 
 </Tile>
 
-<Tile type="box-brown" title="Pinecone" href="https://medium.com/box-developer-blog/demo-box-pinecone-f03783c412bb">
+<Tile type="box-brown" title="Pydantic AIとBox MCP" href="https://github.com/box-community/box-mcp-pydantic-ai">
 
-BoxとPineconeを関連付けることで、ベクトル埋め込みをカスタマイズし、LLMからより関連性の高い回答を取得できます。
+Box MCPサーバーを使用して、BoxのセキュアなコンテンツでPydantic AIエージェントを拡張します。
+
+<div>
 
 <strong style="background-color: #e8e8e8">
 
-統合
+デモ
 
 </strong>
+
+</div>
 
 </Tile>
 
@@ -417,9 +535,9 @@ Boxが公開APIを介してBox AIを公開することを選択した理由を�
 
 </TileGrid>
 
-<More secondary to="https://www.youtube.com/watch?v=amhOj0YRVRQ&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q" center>
+<More secondary to="https://www.youtube.com/playlist?list=PLCSEWOlbcUyIjaK2hCZMk6rSR1jg4r_4H" center>
 
-すべての動画を表示
+View more videos
 
 </More>
 

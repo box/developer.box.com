@@ -25,19 +25,19 @@ Box MCPサーバーを使用すると、Copilot Studio、Cursor、Claude for Des
 
 Box MCPサーバーには2種類あります。
 
-* リモート型Box MCPサーバー: Box管理コンソールで作成または有効化でき、Boxで直接ホストされています。
+* リモートBox MCPサーバー: Box管理コンソールで作成または有効化でき、Boxで直接ホストされています。
   <!--alex ignore-->
 
-* セルフホスト型Box MCPサーバー: このバージョンはオープンソースのBox Developer Communityプロジェクトであるため、ローカルマシンで複製してホストできます。
+* セルフホストBox MCPサーバー: このバージョンはオープンソースのBox Developer Communityプロジェクトであるため、ローカルマシンで複製してホストできます。
   <!--alex enable-->
 
 実装されるツールのレベルが異なるため、2種類のBox MCPサーバーに関する詳細なガイドを参照し、Box MCPサーバーを有効化する方法を確認してください。
 
 <TileGrid rows="2">
 
-<Tile type="mcp" title="リモート型Box MCPサーバー" href="/guides/box-mcp/remote">
+<Tile type="mcp" title="リモートBox MCPサーバー" href="/guides/box-mcp/remote">
 
-管理コンソールでリモート型Box MCPサーバーを有効にします。これはBoxで直接ホストされています。
+管理コンソールでリモートBox MCPサーバーを有効にします。これはBoxで直接ホストされています。
 
 <div>
 
@@ -51,7 +51,7 @@ Box MCPサーバーには2種類あります。
 
 </Tile>
 
-<Tile type="mcp" title="セルフホスト型Box MCPサーバー" href="/guides/box-mcp/self-hosted">
+<Tile type="mcp" title="セルフホストBox MCPサーバー" href="/guides/box-mcp/self-hosted">
 
 オープンソースのBox Developer Communityプロジェクト。このBox MCPサーバーを複製し、ローカルマシンでホストすることができます。
 

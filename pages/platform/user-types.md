@@ -70,7 +70,9 @@ Box管理者とは、主要なBoxアカウント管理者です。管理者は�
 
 ## サービスアカウント
 
-サービスアカウントにより、開発者は、サーバー側のBoxとの統合にプログラムによる認証メカニズムを使用できます。つまり、アプリケーションはBoxに対してサービスとして認証を受けることができ、これがサービスアカウントユーザーで表されます。その後、サービスアカウントを使用して、App Userと呼ばれるアプリケーション固有のユーザーを他に作成できます。App Userについては、以下で詳しく説明します。
+A Service Account provides developers with a programmatic authentication mechanism for server-side integrations with Box. In other words, an application can authenticate to Box as the service, which is represented by a Service Account user. Service Accounts are only accessible with the API, meaning they do not have login credentials.
+
+A Service Account can then be used to create other application specific users, called App Users described further below.
 
 <ImageFrame center>
 

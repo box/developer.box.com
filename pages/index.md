@@ -58,6 +58,14 @@ Box製品を最大限利用するために役立つすべての開発者向け�
 
 </Banner>
 
+<Centered wide>
+
+<FeaturedBoard type="aiDevZone">
+
+</FeaturedBoard>
+
+</Centered>
+
 <Centered wide id="start-with-box-platform">
 
 <Header centered>
@@ -112,7 +120,7 @@ Box Platformでは、OAuth 2.0、JSONウェブトークン (JWT)、クライア�
 
 <Centered wide>
 
-<FeaturedBoard type="aiDevZone">
+<FeaturedBoard type="community">
 
 </FeaturedBoard>
 
@@ -212,7 +220,7 @@ _Box Embed_
 
 <Centered wide>
 
-<FeaturedBoard type="community">
+<FeaturedBoard type="sampleCode">
 
 </FeaturedBoard>
 
@@ -285,14 +293,6 @@ BoxとSalesforceを統合しましょう。最近、Boxでは、ローコード/
 </More>
 
 </section>
-
-<Centered wide>
-
-<FeaturedBoard type="sampleCode">
-
-</FeaturedBoard>
-
-</Centered>
 
 <Centered wide>
 

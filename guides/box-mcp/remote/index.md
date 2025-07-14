@@ -17,9 +17,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-mcp/remote/index.md
 fullyTranslated: true
 ---
-# リモート型Box MCPサーバー
+# リモートBox MCPサーバー
 
-リモート型Box MCPサーバーを使用すると、サードパーティ製のAIシステムを安全にBoxに接続してコンテンツを操作することができます。
+リモートBox MCPサーバーを使用すると、サードパーティ製のAIシステムを安全にBoxに接続してコンテンツを操作することができます。
 
 <Message type="notice">
 
@@ -79,7 +79,7 @@ response = await client.beta.messages.create(
 
 ### AnthropicのMessages API
 
-リモート型Box MCPサーバーをAnthropicのMessages API (ベータ版) と関連付けます。[こちらのサンプルチャットボットプロジェクト](https://github.com/box-community/remote-box-mcp-anthropic)を複製すると、すぐに作業を開始できます。これにより、Anthropicモデルとの会話が可能になり、Boxのリモート型MCPサーバーが提供するツールにアクセスできます。このチャットボットは、ターミナルで実行され、コンテキストに対応した応答の会話履歴を維持し、非同期操作には`asyncio`を使用します。
+リモートBox MCPサーバーをAnthropicのMessages API (ベータ版) と関連付けます。[こちらのサンプルチャットボットプロジェクト](https://github.com/box-community/remote-box-mcp-anthropic)を複製すると、すぐに作業を開始できます。これにより、Anthropicモデルとの会話が可能になり、BoxのリモートMCPサーバーが提供するツールにアクセスできます。このチャットボットは、ターミナルで実行され、コンテキストに対応した応答の会話履歴を維持し、非同期操作には`asyncio`を使用します。
 
 ### Copilot Studio
 
@@ -95,7 +95,7 @@ Azure API CenterのEnterprise RegistryにMCPサーバーを追加するには、
 
 ## 利用可能なツール
 
-リモート型Box MCPサーバーには、使用できるツールがいくつかあります。
+リモートBox MCPサーバーには、使用できるツールがいくつかあります。
 
 | ツール                                               | 説明                                                                               |
 | ------------------------------------------------- | -------------------------------------------------------------------------------- |

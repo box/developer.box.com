@@ -29,7 +29,7 @@ fullyTranslated: true
 
 </Trigger>
 
-次に、お使いのマシンにPostmanをインストールし、(必要に応じて) [Postmanアカウントを登録してログインします][register]。
+Next, install Postman on your machine, [create an account, and sign in][register].
 
 <ImageFrame border center>
 
