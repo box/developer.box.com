@@ -57,6 +57,14 @@ All the developer resources to help you get the most from Box products
 
 </Banner>
 
+<Centered wide>
+
+<FeaturedBoard type="aiDevZone" >
+
+</FeaturedBoard>
+
+</Centered>
+
 <Centered wide id="start-with-box-platform" >
 
 <Header centered>
@@ -121,7 +129,7 @@ SDKS, Box CLI, Postman Collection, Box UI Elements and much more!
 
 <Centered wide>
 
-<FeaturedBoard type="aiDevZone" >
+<FeaturedBoard type="community" >
 
 </FeaturedBoard>
 
@@ -223,7 +231,7 @@ See more details
 
 <Centered wide>
 
-<FeaturedBoard type="community" >
+<FeaturedBoard type="sampleCode" >
 
 </FeaturedBoard>
 
@@ -308,14 +316,6 @@ Browse all guides
 </More>
 
 </section>
-
-<Centered wide>
-
-<FeaturedBoard type="sampleCode" >
-
-</FeaturedBoard>
-
-</Centered>
 
 <Centered wide>
 

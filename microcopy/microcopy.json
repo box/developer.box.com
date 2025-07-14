@@ -229,9 +229,11 @@
   "headers.primary.links.learn-sign.text": "Box Sign",
   "headers.primary.links.learn-sign.url": "/sign/",
   "headers.primary.links.ai_dev_zone.text": "Box AI Developer Zone",
-  "headers.primary.links.ai_dev_zone.url": "/sign/",
+  "headers.primary.links.ai_dev_zone.url": "/ai-dev-zone/",
   "headers.primary.links.buie.text": "Box UI Elements",
   "headers.primary.links.buie.url": "/box-ui-elements",
+  "headers.primary.links.mcp.text": "Box MCP Server",
+  "headers.primary.links.mcp.url": "/guides/box-mcp/",
   // The text for the link to the old Get Started guides
   "headers.primary.links.get_started.text": "Quick Start",
   // The URL to the old Get Started guides
