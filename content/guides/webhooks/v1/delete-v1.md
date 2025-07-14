@@ -1,7 +1,5 @@
 ---
 rank: 3
-related_endpoints:
-  - delete_webhooks_id
 required_guides:
   - webhooks/v1/create-v1
 ---
