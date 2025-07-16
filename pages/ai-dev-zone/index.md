@@ -33,7 +33,7 @@ Developer Zone
 
 </Header>
 
-Box AI Developer Zone features interactive demos, sample code, and tools for building AI agents and intelligent workflows. Explore use cases, get hands-on experience with Box AI API, and build agents with Box AI Studio!
+Box AI Developer Zoneでは、AIエージェントやインテリジェントなワークフローを作成するための対話型のデモ、サンプルコード、ツールを紹介します。ユースケースを確認したり、Box AI APIを実際に体験したり、Box AI Studioでエージェントを作成したりしてみましょう。
 
 </HeroImage>
 
@@ -63,21 +63,9 @@ Box AI APIは、Enterprise PlusおよびEnterprise Advancedをご利用のすべ
 
 </Tile>
 
-<Tile type="ai" title="Extract metadata from files (freeform)" href="/ai-dev-zone-metadata">
+<Tile type="ai" title="ファイルからメタデータを抽出する (自由形式)" href="/ai-dev-zone-metadata">
 
-Use natural langage, or pass a stringified data structure to extract metadata with Box AI API.
-
-<strong style="background-color: #e8e8e8">
-
-デモ
-
-</strong>
-
-</Tile>
-
-<Tile type="ai" title="Extract metadata from files (structured)" href="/ai-dev-zone-metadata-structured">
-
-Extract document metadata suggestions. Pass a Box metadata template ID or a predefined data structure.
+自然言語を使用するか文字列化したデータ構造を渡して、Box AI APIでメタデータを抽出します。
 
 <strong style="background-color: #e8e8e8">
 
@@ -87,9 +75,21 @@ Extract document metadata suggestions. Pass a Box metadata template ID or a pred
 
 </Tile>
 
-<Tile type="ai" title="Use Box AI Enhanced Extract Agent" href="https://medium.com/box-developer-blog/box-ai-enhanced-extract-agent-a-developers-guide-41eb59b2cc54">
+<Tile type="ai" title="ファイルからメタデータを抽出する (構造化)" href="/ai-dev-zone-metadata-structured">
 
-Extract document metadata suggestions with the new Enhanced Extract Agent. Get the best answers thanks to chain-of-thought processing.
+ドキュメントのメタデータの候補を抽出します。BoxメタデータテンプレートIDまたはあらかじめ定義されたデータ構造を渡します。
+
+<strong style="background-color: #e8e8e8">
+
+デモ
+
+</strong>
+
+</Tile>
+
+<Tile type="ai" title="Box AI抽出エージェント (強化) を使用する" href="https://medium.com/box-developer-blog/box-ai-enhanced-extract-agent-a-developers-guide-41eb59b2cc54">
+
+新しい抽出エージェント (強化) を使用して、ドキュメントのメタデータの候補を抽出します。思考連鎖処理により最良の回答が得られます。
 
 <div>
 
@@ -101,7 +101,7 @@ Extract document metadata suggestions with the new Enhanced Extract Agent. Get t
 
 <strong style="background-color: #e8e8e8">
 
-Tutorial
+チュートリアル
 
 </strong>
 
@@ -129,7 +129,7 @@ Box AI APIを使用する際は、以下のリソースが参考になります�
 
 <TileGrid rows="4">
 
-<Tile type="code-new" title="Box AI API reference" href="/reference/resources/ai-response/">
+<Tile type="code-new" title="Box AI APIリファレンス" href="/reference/resources/ai-response/">
 
 仕様の詳細については、APIリファレンスをご確認ください。
 
@@ -141,7 +141,7 @@ Box AI APIを使用する際は、以下のリソースが参考になります�
 
 </Tile>
 
-<Tile type="code-new" title="Get started with Box AI API" href="/guides/box-ai/">
+<Tile type="code-new" title="Box AI APIの使い方" href="/guides/box-ai/">
 
 Box AI APIの使用方法については、ガイドをご覧ください。
 
@@ -155,7 +155,7 @@ Box AI APIの使用方法については、ガイドをご覧ください。
 
 <Tile type="code-new" title="サポートされているAIモデル" href="/guides/box-ai/supported-models/">
 
-Box supports a variety of AI models, categorized along two dimensions: access level and capability tier. Check table list of the supported AI models.
+Boxでは、さまざまなAIモデルがサポートされており、アクセスレベルと機能レベルという2つの側面で分類されます。サポートされているAIモデルのリストを確認できます。
 
 <strong style="background-color: #e8e8e8">
 
@@ -167,7 +167,7 @@ Box supports a variety of AI models, categorized along two dimensions: access le
 
 <Tile type="code-new" title="AIモデルの構成の上書き" href="/guides/box-ai/ai-agents/ai-agent-overrides/">
 
-Override the default AI model configuration and fine tune LLMs with Box AI API.
+デフォルトのAIモデルの構成を上書きし、Box AI APIを使用してLLMを微調整します。
 
 <strong style="background-color: #e8e8e8">
 
@@ -185,13 +185,13 @@ Override the default AI model configuration and fine tune LLMs with Box AI API.
 
 <Header>
 
-MCP Servers
+MCPサーバー
 
 </Header>
 
 <p style="text-align: left; margin-left: 0;">
 
-These resources will get you up and running with Box MCP Server.
+Box MCPサーバーを使用する際は、以下のリソースが参考になります。
 
 </p>
 
@@ -231,15 +231,15 @@ MCP
 
 </Tile>
 
-<Tile type="mcp" title="Box MCP server and Pydantic AI" href="https://medium.com/box-developer-blog/building-ai-powered-document-generation-with-box-mcp-and-pydantic-ai-48775b18ae32">
+<Tile type="mcp" title="Box MCPサーバーとPydantic AI" href="https://medium.com/box-developer-blog/building-ai-powered-document-generation-with-box-mcp-and-pydantic-ai-48775b18ae32">
 
-Use Box Doc Gen through the Box MCP server for AI-Powered Document Generation
+AIを活用したドキュメント生成のためにBox MCPサーバーからBox Doc Genを使用します。
 
 <div>
 
 <strong style="background-color: #e8e8e8">
 
-Tutorial
+チュートリアル
 
 </strong>
 
@@ -247,15 +247,15 @@ Tutorial
 
 </Tile>
 
-<Tile type="mcp" title="Box MCP Server and LangChain MCP Adapters" href="https://medium.com/box-developer-blog/using-an-existing-mcp-server-with-langchain-mcp-adapters-94cdd4af6d1b">
+<Tile type="mcp" title="Box MCPサーバーとLangChain MCPアダプタ" href="https://medium.com/box-developer-blog/using-an-existing-mcp-server-with-langchain-mcp-adapters-94cdd4af6d1b">
 
-Turn Box MCP Server into a LangChain-compatible agent using the LangChain MCP Adapters.
+LangChain MCPアダプタを使用して、Box MCPサーバーをLangChain互換のエージェントに変換します。
 
 <div>
 
 <strong style="background-color: #e8e8e8">
 
-Tutorial
+チュートリアル
 
 </strong>
 
@@ -271,21 +271,21 @@ Tutorial
 
 <Header>
 
-AI agents
+AIエージェント
 
 </Header>
 
 <p style="text-align: left; margin-left: 0;">
 
-Learn how to create advanced AI agents with Box.
+Boxで高度なAIエージェントを作成する方法を確認します。
 
 </p>
 
 <TileGrid rows="4">
 
-<Tile type="model" title="Manage agents with Box AI Studio API" href="guides/ai-studio/getting-started-ai-studio/">
+<Tile type="model" title="Box AI Studio APIを使用したエージェントの管理" href="guides/ai-studio/getting-started-ai-studio/">
 
-Create and manage custom AI agents with Box AI Studio API.
+Box AI Studio APIを使用してカスタムAIエージェントを作成および管理します。
 
 <div>
 
@@ -307,7 +307,7 @@ Box AI Studio
 
 <Tile type="model" title="Box for Agentforce拡張パッケージ" href="/guides/tooling/salesforce-toolkit/box-agentforce-package/">
 
-Get started with reusable Agentforce actions that help automate workflows and enhance intelligent agent—based processes within Salesforce.
+Salesforce内でワークフローを自動化したり、インテリジェントなエージェントベースのプロセスを強化したりするのに役立つ、再利用可能なAgentforceアクションの利用を開始します。
 
 <div>
 
@@ -327,7 +327,7 @@ Salesforce
 
 </Tile>
 
-<Tile type="model" title="Multi-agent workflows with Box and OpenAI" href="https://medium.com/box-developer-blog/building-multi-agent-workflows-with-openais-new-sdk-and-box-3e3c81cf4715">
+<Tile type="model" title="BoxとOpenAIを使用したマルチエージェントワークフロー" href="https://medium.com/box-developer-blog/building-multi-agent-workflows-with-openais-new-sdk-and-box-3e3c81cf4715">
 
 OpenAI Responses APIとBoxエージェントを使用して、Boxインスタンスからエージェント型ワークフローに非構造化データを追加します。
 
@@ -537,7 +537,7 @@ Boxが公開APIを介してBox AIを公開することを選択した理由を�
 
 <More secondary to="https://www.youtube.com/playlist?list=PLCSEWOlbcUyIjaK2hCZMk6rSR1jg4r_4H" center>
 
-View more videos
+さらに動画を表示
 
 </More>
 
