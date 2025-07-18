@@ -19,7 +19,7 @@ The remote Box MCP Server allows third party AI systems to securely connect and 
 2. Click **Box Integrations & Clients** in the Integrations window.
 3. Scroll down to **Individual Integration Controls**.
 4. Search for predefined Box MCP Server, for example the **Box MCP Server for Copilot Studio (Beta)**. 
-5. Hover on the choosen integration, then click **Configure**.
+5. Hover on the chosen integration, then click **Configure**.
 6. Click Save.
 
 ## Create an unlisted Box MCP Server
