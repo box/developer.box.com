@@ -464,13 +464,13 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
       <td>
         `template_name (str)`: The key of the metadata template to retrieve.
       </td>
-      <td>The metadata template associated with the provided key</td>
+      <td>The metadata template associated with the provided key.</td>
     </tr>
     <tr>
       <td>`box_metadata_template_get_by_name_tool`</td>
       <td>Retrieve a metadata template by its name.</td>
       <td>`template_name (str)`: The name of the metadata template to retrieve.</td>
-      <td>The metadata template associated with the provided name..</td>
+      <td>The metadata template associated with the provided name.</td>
     </tr>
   </tbody>
 </table>
