@@ -29,15 +29,20 @@ when editing or sharing files.
 
 ## Features
 
-Using a Web App Integration, a user can modify, share, or edit content stored in
-Box using a third-party application. It can also offer new features to Box users
-through [Recommended Web Integrations][recommended-web-integrations], which show up in Box Preview.
+- **File interaction**. Users can modify, share, or edit content stored in Box using a third-party application. 
+- **Recommended Apps support**. Integrations can appear in the Box Preview interface under **Recommended Apps**. For details, see [Recommended Web Integrations][recommended-web-integrations].
+
+<ImageFrame shadow>
 
 ![Integration example](./images/recommended-apps-preview.png)
 
-By enabling a Web App Integration, an application can be added to Recommended
-Apps, allowing users to use their files in the application. Integrations can be
-restricted to certain content types and file extensions.
+</ImageFrame>
+
+- **Scoped availability**. Integrations can be restricted to certain content types and file extensions.
+
+## Visibility in Recommended Apps
+
+Your web application integration appears in **Recommended Apps** only if it is published in Integrations.
 
 <CTA to="g://applications/web-app-integrations/configure">
 
