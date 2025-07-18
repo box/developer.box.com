@@ -21,11 +21,11 @@ source_url: >-
 
 Developer sandboxes in Box provide a secure, controlled environment where developers can build, test, and collaborate on applications without affecting the actual data of your enterprise. They offer a safe space to experiment with Box APIs, test settings, try new integrations, and work alongside external partners.
 
-## What is a developer sandbox?
+## What is a developer sandbox
 
 A developer sandbox is an environment isolated from your production (live) enterprise setup that keeps development activities separate from real business data.
 
-## Why use a sandbox?
+## Why use a sandbox
 
 Using a sandbox allows you to:
 
