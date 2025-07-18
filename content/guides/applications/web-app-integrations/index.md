@@ -31,7 +31,7 @@ when editing or sharing files.
 
 ## Visibility in Recommended Apps
 
-Your web application integration appears in **Recommended Apps** only if it's not published in App Center.
+Your web application integration appears in **Recommended Apps** only if it is published in Integrations.
 
 <CTA to="g://applications/web-app-integrations/configure">
   Learn how to create a Web App Integration
