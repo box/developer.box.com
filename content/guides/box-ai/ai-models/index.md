@@ -59,7 +59,21 @@ Models offered in **Beta** mode have not been fully performance-tested at scale 
 Box AI is powered by the following AI models. These models are integrated with Box AI to facilitate various use cases while adhering to enterprise grade standards. Below, you’ll find information about each model, including its capabilities, intended applications, and applicable usage guidelines.
 
 <TileGrid rows="2">
-		<Tile type="gpt" title="azure__openai__gpt_4_1_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card">
+		<Tile type="gpt" title="openai__gpt_o4_mini" href="/guides/box-ai/ai-models/openai-gpt-o4-mini-model-card">
+			A multimodal model, highly efficient in handling complex, multi-step tasks.
+			<div>
+				<strong style="background-color: #f0e2ff">Beta</strong>
+				<strong style="background-color: #f8d59b">Premium</strong>
+			</div>
+		</Tile>
+		<Tile type="gpt" title="openai__gpt_o3" href="/guides/box-ai/ai-models/openai-gpt-o3-model-card">
+			A multimodal model, highly efficient in handling complex, multi-step tasks.
+			<div>
+				<strong style="background-color: #f0e2ff">Beta</strong>
+				<strong style="background-color: #f8d59b">Premium</strong>
+			</div>
+		</Tile>
+		<Tile type="gpt" title="openai__gpt_4_1_mini" href="/guides/box-ai/ai-models/openai-gpt-4-1-mini-model-card">
 			A multimodal model designed to handle lightweight tasks.
 			<div>
 				<strong style="background-color: #e8e8e8">Default for Box AI for Box Hubs</strong>
@@ -70,7 +84,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #fdfad8">Standard</strong>
 			</div>
 		</Tile>
-		<Tile type="gpt" title="azure__openai__gpt_4_1" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-model-card">
+		<Tile type="gpt" title="openai__gpt_4_1" href="/guides/box-ai/ai-models/openai-gpt-4-1-model-card">
 			A multimodal model, highly efficient in handling complex, multi-step tasks.
    		<div>
    			<strong style="background-color: #e8e8e8">Chat</strong>
@@ -78,7 +92,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #f8d59b">Premium</strong>
 			</div>
 		</Tile>
-		<Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card">
+		<Tile type="gpt" title="openai__gpt_4o_mini" href="/guides/box-ai/ai-models/openai-gpt-4o-mini-model-card">
 			A multimodal model designed to handle lightweight tasks.
 			<div>
 				<strong style="background-color: #e8e8e8">Chat</strong>
@@ -86,7 +100,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #fdfad8">Standard</strong>
 			</div>
 		</Tile>
-		<Tile type="gpt" title="azure__openai__gpt_4o" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-model-card">
+		<Tile type="gpt" title="openai__gpt_4o" href="/guides/box-ai/ai-models/openai-gpt-4o-model-card">
 			A multimodal model, highly efficient in handling complex, multi-step tasks.
 			<div>
 				<strong style="background-color: #e8e8e8">Chat</strong>
@@ -227,13 +241,6 @@ Certain Box AI customers may enable additional AI models upon their request and/
 			A lightweight model that is great for logic-based tasks that do not require deep domain knowledge.
 			<div>
 				<strong style="background-color: #e8e8e8">Chat</strong>
-				<strong style="background-color: #f0e2ff">Beta</strong>
-				<strong style="background-color: #f8d59b">Premium</strong>
-			</div>
-		</Tile>
-		<Tile type="gpt" title="openai__gpt_o3" href="/guides/box-ai/ai-models/openai-gpt-o3-model-card">
-			A multimodal model, highly efficient in handling complex, multi-step tasks.
-			<div>
 				<strong style="background-color: #f0e2ff">Beta</strong>
 				<strong style="background-color: #f8d59b">Premium</strong>
 			</div>
