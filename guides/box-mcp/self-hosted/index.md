@@ -1092,6 +1092,104 @@ Job details
 
 </table>
 
+### Box Metadata tools
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+
+Tool
+
+</th>
+
+<th>
+
+Description
+
+</th>
+
+<th>
+
+Parameters
+
+</th>
+
+<th>
+
+Returns
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+
+`box_metadata_template_get_by_key_tool`
+
+</td>
+
+<td>
+
+Retrieves a metadata template by its key.
+
+</td>
+
+<td>
+
+`template_name (str)`: The key of the metadata template to retrieve.
+
+</td>
+
+<td>
+
+The metadata template associated with the provided key.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+`box_metadata_template_get_by_name_tool`
+
+</td>
+
+<td>
+
+Retrieve a metadata template by its name.
+
+</td>
+
+<td>
+
+`template_name (str)`: The name of the metadata template to retrieve.
+
+</td>
+
+<td>
+
+The metadata template associated with the provided name.
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
 ## Troubleshooting
 
 In case of an `Error: spawn uv ENOENT` on MacOS when running the MCP server with Claude Desktop, you can:

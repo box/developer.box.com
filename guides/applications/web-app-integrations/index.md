@@ -27,11 +27,20 @@ fullyTranslated: true
 
 ## 機能
 
-ウェブアプリ統合を使用した場合、ユーザーはサードパーティ製アプリケーションを使用して、Boxに保存されているコンテンツを変更、共有、または編集できます。また、ウェブアプリ統合では、Boxプレビューに表示される[推奨ウェブ統合][recommended-web-integrations]を通じて、Boxユーザーに新しい機能を提供することもできます。
+* **File interaction**. Users can modify, share, or edit content stored in Box using a third-party application. 
+* **Recommended Apps support**. Integrations can appear in the Box Preview interface under **Recommended Apps**. For details, see [Recommended Web Integrations][recommended-web-integrations].
+
+<ImageFrame shadow>
 
 ![統合の例](./images/recommended-apps-preview.png)
 
-ウェブアプリ統合を有効にすると、アプリケーションを \[推奨アプリ] に追加できるため、ユーザーはそのアプリケーションでファイルを使用できるようになります。統合は、特定のコンテンツタイプとファイル拡張子に制限することができます。
+</ImageFrame>
+
+* **Scoped availability**. Integrations can be restricted to certain content types and file extensions.
+
+## Visibility in Recommended Apps
+
+Your web application integration appears in **Recommended Apps** only if it is published in Integrations.
 
 <CTA to="g://applications/web-app-integrations/configure">
 
