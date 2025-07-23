@@ -17,14 +17,14 @@ centered: false
 
 <Centered mid>
   <TileGrid rows="3">
-    <Tile type="code-new" title="Vistual Configuration">
+    <Tile type="code-new" title="Visual Configuration">
         Build complex AI configurations with our intuitive form-based interface.
     </Tile>
     <Tile type="ai" title="Real-time preview">
         See your JSON configuration update in real-time as you make changes.
     </Tile>
     <Tile type="export" title="Export and share">
-        Export configurations and share them with your team instantly.
+        Copy configuration and paste it directly in your project.
     </Tile>
   </TileGrid>
 </Centered>
