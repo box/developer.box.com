@@ -29,9 +29,9 @@ centered: false
   </TileGrid>
 </Centered>
 
-<Centered mid>
-  <!-- Config component -->
+<AgentConfiguration />
 
+<!--<Centered mid>
 ```sh
 {
   "type": "ai_agent_ask",
@@ -107,4 +107,4 @@ centered: false
   }
 }
 ```
-</Centered>
+</Centered> -->
