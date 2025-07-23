@@ -11,19 +11,19 @@ centered: false
       Box AI API model configurator
     </Header>
 
-    Build complex AI configurations with our intuitive form-based interface. See your JSON configuration update in real-time as you make changes. Export configurations and share them with your team instantly.
+    Choose from multiple AI models from leading providers, all accessible through a single, easy-to-use platform. Customize Box AI API parameters and fine-tune LLM parameters.
   </HeroImage>
 </Centered>
 
 <Centered mid>
   <TileGrid rows="3">
-    <Tile type="ai" title="Vistual Configuration">
+    <Tile type="code-new" title="Vistual Configuration">
         Build complex AI configurations with our intuitive form-based interface.
     </Tile>
     <Tile type="ai" title="Real-time preview">
         See your JSON configuration update in real-time as you make changes.
     </Tile>
-    <Tile type="ai" title="Export and share">
+    <Tile type="export" title="Export and share">
         Export configurations and share them with your team instantly.
     </Tile>
   </TileGrid>
