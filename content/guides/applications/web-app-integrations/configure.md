@@ -77,7 +77,7 @@ you cannot edit its values. You can change the **File** method to **Get**
 or **Post**, but you can't undo this action.
 </message>
 
-For example: **Get - `userid` - `#user_id#`**.
+For example: **GET - `userid` - `#user_id#`**.
 
 The following parameter values are available.
 
