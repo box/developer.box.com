@@ -8,7 +8,7 @@ centered: false
 <Centered wide id="buie" >
   <HeroImage type="Agents" imageWidth="548" imageHeight="493">
     <Header>
-      Box AI API model configurator
+      Box AI API agent configurator
     </Header>
 
     Choose from multiple AI models from leading providers, all accessible through a single, easy-to-use platform. Customize Box AI API parameters and fine-tune LLM parameters.
