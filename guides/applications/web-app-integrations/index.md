@@ -27,8 +27,8 @@ fullyTranslated: true
 
 ## 機能
 
-* **File interaction**. Users can modify, share, or edit content stored in Box using a third-party application. 
-* **Recommended Apps support**. Integrations can appear in the Box Preview interface under **Recommended Apps**. For details, see [Recommended Web Integrations][recommended-web-integrations].
+* **ファイル操作**。ユーザーは、サードパーティ製アプリケーションを使用して、Box内に保存されているコンテンツを変更、共有、または編集できます。 
+* **推奨アプリのサポート**。統合は、Boxプレビューインターフェースで \[**推奨アプリ**] の下に表示できます。詳細については、[推奨ウェブ統合][recommended-web-integrations]を参照してください。
 
 <ImageFrame shadow>
 
@@ -36,11 +36,11 @@ fullyTranslated: true
 
 </ImageFrame>
 
-* **Scoped availability**. Integrations can be restricted to certain content types and file extensions.
+* **スコープが設定された利用状況**。統合は、特定のコンテンツタイプやファイル拡張子に制限できます。
 
-## Visibility in Recommended Apps
+## \[推奨アプリ] での表示
 
-Your web application integration appears in **Recommended Apps** only if it is published in Integrations.
+ウェブアプリ統合が \[**推奨アプリ**] に表示されるのは、\[統合] で公開されている場合のみです。
 
 <CTA to="g://applications/web-app-integrations/configure">
 

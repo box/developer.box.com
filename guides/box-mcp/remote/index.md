@@ -32,8 +32,8 @@ Box MCPサーバーは、BoxのMain Beta Agreementに従い提供されるため
 1. Box管理コンソールのサイドバーにある \[**統合**] をクリックします。 
 2. \[統合] ウィンドウで \[**Box統合とクライアント**] をクリックします。
 3. \[**統合の個別管理**] までスクロールします。
-4. Search for predefined Box MCP Server, for example the **Box MCP Server for Copilot Studio (Beta)**. 
-5. Hover on the chosen integration, then click **Configure**.
+4. あらかじめ定義されたBox MCPサーバー (**Box MCP Server for Copilot Studio (ベータ)** など) を検索します。 
+5. 選択した統合にカーソルを合わせ、\[**構成**] をクリックします。
 6. \[保存] をクリックします。
 
 ## リストに記載されていないBox MCPサーバーを作成する
@@ -47,7 +47,7 @@ Box MCPサーバーは、BoxのMain Beta Agreementに従い提供されるため
 5. \[**追加の構成**] セクションで \[**+ 統合資格情報を追加**] をクリックします。
 6. 外部MCPクライアントから提供されたリダイレクトURIを入力します。 
 7. 生成されたクライアントIDとクライアントシークレットをコピーします。
-8. Under Scopes, ensure that _Manage AI Requests_ is selected.
+8. \[スコープ] で \[_AIリクエストの管理_] が選択されていることを確認します。
 
 ## MCPクライアントにBox MCPサーバーを追加する
 
