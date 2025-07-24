@@ -27,7 +27,7 @@ You will be able to deactivate them and change the implementation to a new one.
 ## Create an OAuth 2.0 Application
 
 Navigate to the [Developer Console][devconsole] and create a [Platform App][ca]
-that leverages [OAuth 2.0 authentication][custom-oauth2].
+that leverages [OAuth 2.0 authentication][custom-oauth2]. 
 
 ## Create a New Integration
 
