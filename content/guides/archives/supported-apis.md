@@ -10,16 +10,15 @@ alias_paths: []
 
 # Supported APIs for Box Archive
 
-Archives are a special type of folder. Box Archive APIs allow you to create, list and delete archives.
-However, there are other APIs that also work with archives or with content within archives.
-Below is a table with all APIs that support Box Archive.
+The basic Box Archive APIs allow you to create, list and delete archives, but you can use other APIs to interact with an archive or its content.
+See the table below for the full list of those APIs.
 
 <Message type='notice'>
-  Those APIs require the `GCM` scope to be enabled in your application.
+  Those APIs require the [`GCM` scope][GCM scope] to be enabled in your application.
   This scope is not available in the Developer Console and needs to be enabled by contacting customer support.
 
   Additionally, some of the below APIs need to be enabled by contacting customer support to properly work with Box Archive.
-  When contacting customer support, please specify the user ID you plan to use those APIs with.
+  When contacting customer support, specify the user ID you plan to use those APIs with.
 </Message>
 
 | API Endpoint                                                                                                      | Description                                                                                                                                                                                        |
@@ -71,3 +70,4 @@ Below is a table with all APIs that support Box Archive.
 [View classification label on file]: e://get-files-id-metadata-enterprise-securityClassification-6VMVochwUWo
 [Update classification label on file]: e://put-files-id-metadata-enterprise-securityClassification-6VMVochwUWo
 [Delete classification label on file]: e://delete-files-id-metadata-enterprise-securityClassification-6VMVochwUWo
+[GCM scope]: https://developer.box.com/guides/api-calls/permissions-and-errors/scopes/#global-content-manager-gcm
