@@ -38,6 +38,6 @@ Boxのコミュニティおよびサポートでは、お客様の質問に答�
 
 [twitter]: https://twitter.com/BoxPlatform
 
-[support]: https://support.box.com/hc/requests/new
+[support]: https://support.box.com/hc/ja/requests/new
 
 <!-- i18n-disable localize-links -->

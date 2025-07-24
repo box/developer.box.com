@@ -119,6 +119,6 @@ Box Platformで開発を行う際に注意すべき[ユーザータイプ][ut]�
 
 <!-- i18n-enable localize-links -->
 
-[ut]: https://support.box.com/hc/en-us/articles/4636533822483-Box-User-Types
+[ut]: https://support.box.com/hc/ja/articles/4636533822483-Box-User-Types
 
 <!-- i18n-disable localize-links -->

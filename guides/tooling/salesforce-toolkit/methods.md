@@ -355,9 +355,9 @@ Box for Salesforce Developer Toolkitによって作成されたコラボレー�
 
 [collab-type]: https://support.box.com/hc/ja/articles/360044196413-コラボレータの権限レベルについて
 
-[sf-httprequest]: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_restful_http_httprequest.htm
+[sf-httprequest]: https://developer.salesforce.com/docs/atlas.ja-jp.apexref.meta/apexref/apex_classes_restful_http_httprequest.htm
 
-[sf-httpresponse]: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_restful_http_httpresponse.htm#apex_classes_restful_http_httpresponse
+[sf-httpresponse]: https://developer.salesforce.com/docs/atlas.ja-jp.apexcode.meta/apexcode/apex_classes_restful_http_httpresponse.htm#apex_classes_restful_http_httpresponse
 
 <!-- i18n-disable localize-links -->
 

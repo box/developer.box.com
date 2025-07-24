@@ -24,6 +24,6 @@ V1 Webhookを完全に削除することはできません。その代わり、[
 
 <!-- i18n-enable localize-links -->
 
-[support]: https://support.box.com/hc/requests/new
+[support]: https://support.box.com/hc/ja/requests/new
 
 <!-- i18n-disable localize-links -->

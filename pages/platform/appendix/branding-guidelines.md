@@ -70,6 +70,6 @@ Boxに接続していることをユーザー自身が認識できるように�
 
 [logos]: https://cloud.app.box.com/v/BoxCorporateLogo
 
-[contact]: https://support.box.com/hc/requests/new
+[contact]: https://support.box.com/hc/ja/requests/new
 
 <!-- i18n-enable localize-links -->
