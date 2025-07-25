@@ -51,7 +51,6 @@ The following file types are supported by the representation API.
 | --------- | ------------ | ----------- | ----- |
 | `.dwg` | No | No | No |
 
-
 ## Documents
 
 | File Type | PDF Support? | Thumbnails? | Text? |
@@ -144,6 +143,7 @@ The following file types are supported by the representation API.
 | `.xlsb` | Yes | Yes | Yes |
 
 # Text-Based Files
+
 | File Type  | PDF Support? | Thumbnails? | Text? |
 | ---------- | ------------ | ----------- | ----- |
 | `.as` | Yes | No | Yes |
