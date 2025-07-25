@@ -29,6 +29,15 @@ types of users involved. There are four main types of users: managed (internal
 and external), admin, service account, and app users. Let's take a closer look
 at the differences.
 
+<!-- markdownlint-disable line-length -->
+
+|                  | Admin privileges                   | No Admin privileges         |
+| ---------------- | ---------------------------------- | --------------------------- |
+| Traditional user | Admin or Co-Admin User    | Managed User|
+| Platform only    | Service Account | App User |
+
+<!-- markdownlint-enable line-length -->
+
 <Message>
   # What type of user does my application use?
 
@@ -79,7 +88,9 @@ Admin Console.
 A Service Account provides developers with a programmatic authentication
 mechanism for server-side integrations with Box. In other words, an application
 can authenticate to Box as the service, which is represented by a Service
-Account user. A Service Account can then be used to create other application
+Account user. Service Accounts are only accessible with the API, meaning they do not have login credentials.
+
+A Service Account can then be used to create other application
 specific users, called App Users described further below.
 
 <ImageFrame center>
