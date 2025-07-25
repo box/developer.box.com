@@ -41,6 +41,9 @@ available for folders.
 | `COMMENT.CREATED`           | A comment object is created.                                                                                         | Yes   | Yes     |
 | `COMMENT.UPDATED`           | A comment object is edited.                                                                                         | Yes   | Yes     |
 | `COMMENT.DELETED`           | A comment object is removed.                                                                                         | Yes   | Yes     |
+| `DOCGEN_DOCUMENT_GENERATION_FAILED` | Doc Gen failed to generate a document. | Yes | No |
+| `DOCGEN_DOCUMENT_GENERATION_STARTED` | Doc Gen started to create a document. | Yes | No |
+| `DOCGEN_DOCUMENT_GENERATION_SUCCEEDED` | Doc Gen succeeded to create a document. | Yes | No |
 | `FILE.UPLOADED`             | A file is uploaded or moved to this folder.                                                                       | No    | Yes     |
 | `FILE.PREVIEWED`            | A file is previewed.                                                                                                 | Yes   | Yes     |
 | `FILE.DOWNLOADED`           | A file is downloaded.                                                                                                | Yes   | Yes     |
