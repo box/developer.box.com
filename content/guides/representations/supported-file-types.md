@@ -142,7 +142,7 @@ The following file types are supported by the representation API.
 | `.xlsx` | Yes | Yes | Yes |
 | `.xlsb` | Yes | Yes | Yes |
 
-# Text-Based Files
+## Text-Based Files
 
 | File Type  | PDF Support? | Thumbnails? | Text? |
 | ---------- | ------------ | ----------- | ----- |
