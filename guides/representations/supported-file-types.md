@@ -203,8 +203,8 @@ The following file types are supported by the representation API.
 | `.vi` | Yes | No | Yes |
 | `.vim` | Yes | No | Yes |
 | `.vtt` | Yes | No | Yes |
-| `webdoc`| Yes | No | Yes |
-| `yaml` | Yes | No | Yes |
+| `.webdoc`| Yes | No | Yes |
+| `.yaml` | Yes | No | Yes |
 
 ## Video
 
