@@ -12,7 +12,7 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 23
+total_steps: 24
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/ai-models/openai-gpt-o3-model-card
@@ -234,9 +234,9 @@ Standard
 
 </Tile>
 
-<Tile type="gemini" title="google__gemini_2_5_pro_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-preview-model-card">
+<Tile type="gemini" title="google__gemini_2_5_pro" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-model-card">
 
-Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
+Gemini multimodal model with a 1 million token context window and advanced reasoning capabilities.
 <div>
 
 <strong style="background-color: #e8e8e8">
@@ -261,6 +261,33 @@ Premium
 
 </Tile>
 
+<Tile type="gemini" title="google__gemini_2_5_pro_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-preview-model-card">
+
+Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Chat
+
+</strong>
+
+<strong style="background-color: #607079">
+
+Deprecated
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
+
+</strong>
+
+</div>
+
+</Tile>
+
 <Tile type="gemini" title="google__gemini_2_5_flash_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-flash-preview-model-card">
 
 Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
@@ -272,9 +299,9 @@ Chat
 
 </strong>
 
-<strong style="background-color: #e1ffe7">
+<strong style="background-color: #607079">
 
-Available
+Deprecated
 
 </strong>
 

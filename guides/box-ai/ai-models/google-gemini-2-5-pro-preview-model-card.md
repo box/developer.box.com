@@ -11,11 +11,11 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/google-gemini-2-5-pro-preview-model-card
 type: guide
-total_steps: 23
+total_steps: 24
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
 next_page_id: box-ai/ai-models/google-gemini-2-5-flash-preview-model-card
-previous_page_id: box-ai/ai-models/azure-text-embedding-ada-002-model-card
+previous_page_id: box-ai/ai-models/google-gemini-2-5-pro-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/google-gemini-2-5-pro-preview-model-card.md
 ---
