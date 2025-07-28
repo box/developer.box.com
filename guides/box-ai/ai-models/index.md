@@ -12,7 +12,7 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 23
+total_steps: 24
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/ai-models/openai-gpt-o3-model-card
@@ -240,9 +240,9 @@ Box AI for NotesのQ&Aのデフォルト
 
 </Tile>
 
-<Tile type="gemini" title="google__gemini_2_5_pro_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-preview-model-card">
+<Tile type="gemini" title="google__gemini_2_5_pro" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-model-card">
 
-大規模かつ高頻度のタスクに最適になるよう設計されたGeminiマルチモーダルモデル。
+Gemini multimodal model with a 1 million token context window and advanced reasoning capabilities.
 
 <div>
 
@@ -268,6 +268,34 @@ Box AI for NotesのQ&Aのデフォルト
 
 </Tile>
 
+<Tile type="gemini" title="google__gemini_2_5_pro_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-preview-model-card">
+
+大規模かつ高頻度のタスクに最適になるよう設計されたGeminiマルチモーダルモデル。
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
+<strong style="background-color: #607079">
+
+廃止
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+プレミアム
+
+</strong>
+
+</div>
+
+</Tile>
+
 <Tile type="gemini" title="google__gemini_2_5_flash_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-flash-preview-model-card">
 
 大規模かつ高頻度のタスクに最適になるよう設計されたGeminiマルチモーダルモデル。
@@ -280,9 +308,9 @@ Box AI for NotesのQ&Aのデフォルト
 
 </strong>
 
-<strong style="background-color: #e1ffe7">
+<strong style="background-color: #607079">
 
-利用可能
+廃止
 
 </strong>
 
