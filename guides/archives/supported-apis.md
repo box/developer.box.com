@@ -60,9 +60,9 @@ When contacting customer support, specify the user ID you plan to use those APIs
 | [`PUT /files/:id/metadata/enterprise/securityClassification/6VMVochwUWo`][Update classification label on file]    | Update a classification label on a file within an archive.                                                                                                                                         |
 | [`DELETE /files/:id/metadata/enterprise/securityClassification/6VMVochwUWo`][Delete classification label on file] | Delete a classification label on a file within an archive.                                                                                                                                         |
 
-[Create archive]: e://post-archives
-[List archives]: e://get-archives
-[Delete archive]: e://delete-archives-id
+[Create archive]: https://developer.box.com/reference/v2025.0/post-archives/
+[List archives]: https://developer.box.com/reference/v2025.0/get-archives/
+[Delete archive]: https://developer.box.com/reference/v2025.0/delete-archives-id/
 [Update file]: e://put-files-id
 [Update folder]: e://put-folders-id
 [Upload file]: e://post-files-content

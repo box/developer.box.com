@@ -34,7 +34,7 @@ To specify the destination, use the `parent.id` [parameter][Update parent id of 
 This is the ID of a folder (can be owned by any user) where you want to restore the file/folder.
 
 To restore a file/folder to user's root folder, use `0` as the `parent.id` value. Additionally, pass the ID of the user in the
-`parent.user_id` [parameter][Update parent user id of file] in the request body.
+`parent.user_id` [parameter][Update parent user id of folder] in the request body.
 
 [Update file]: e://put-files-id
 [Update parent id of file]: https://developer.box.com/reference/put-files-id/#param-parent-id
