@@ -74,6 +74,7 @@ To configure the integration, follow the guidance below for each value.
 | Field | Description |
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Client Callback URL | Handles additional callback requests from Box after the primary request with [Popup Integrations][pu]. If the application specifies a file parameter in the REST method, the preliminary callback URL cannot originate from the client. As a result, a second request must be made from the client to your server so the server can send the necessary interface to the user. |
+| Prompt Message | Specifies the message that users see when they initiate the integration. Use this field to provide context about what happens next. The message is limited to 500 characters. |
 | User Experience | Informs that the integration will open in a new window.|
 | New Window Settings | Determines if the application opens in a new tab. |
 
