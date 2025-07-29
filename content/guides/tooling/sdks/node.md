@@ -16,13 +16,6 @@ alias_paths: []
 You can use Box Node SDK to call Box APIs in a Node
 project.
 
-<Message type='notice'>
- [Node SDK][node] is currently in maintenance mode and will be deprecated soon.
- This means only critical security updates and bug fixes will be
- implemented.
- It is recommended to use the [auto-generated TypeScript SDK][ts-gen].
-</Message>
-
 <CTA to="https://github.com/box/box-node-sdk">
   Learn more about Node SDK on GitHub
 </CTA>
@@ -46,5 +39,4 @@ yarn add box-node-sdk
 
 [npm]: https://www.npmjs.com/
 [yarn]: https://yarnpkg.com/
-[ts-gen]: g://tooling/sdks/typescript-gen
 [node]: https://github.com/box/box-node-sdk

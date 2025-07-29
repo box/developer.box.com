@@ -11,16 +11,18 @@ alias_paths: []
 
 # Install Swift SDK (Generated)
 
+<Message type='warning'>
+  In August, we will be deprecating the Box Next Gen SDKs in its current form. Don’t worry, your existing code will continue to work without changes.
+
+  To learn more visit our SDK [versioning strategy document][versioning]
+</Message>
+
 You can use Box Swift SDK to call Box APIs in a Swift
 project.
 
 <Message type='notice'>
 Swift SDK is in a Public Beta phase.
 </Message>
-
-<CTA to="https://github.com/box/box-swift-sdk-gen">
-  Learn more about Swift SDK on GitHub
-</CTA>
 
 ## Swift Package Manager
 
@@ -61,3 +63,4 @@ For more detailed instructions, please see the [official documentation for Carth
 [spm]: https://www.swift.org/documentation/package-manager/
 [xcode]: https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app
 [carthage]: https://github.com/Carthage/Carthage#adding-frameworks-to-an-application
+[versioning]: g://tooling/sdks/sdk-versioning

@@ -13,6 +13,12 @@ alias_paths: []
 
 # Install .NET SDK (Generated)
 
+<Message type='warning'>
+  In August, we will be deprecating the Box Next Gen SDKs in its current form. Don’t worry, your existing code will continue to work without changes.
+
+  To learn more visit our SDK [versioning strategy document][versioning]
+</Message>
+
 You can use Box .NET SDK to call Box APIs in a .NET
 project.
 
@@ -31,3 +37,4 @@ PM> Install-Package Box.Sdk.Gen
 ```
 
 [nuget]: https://www.nuget.org/
+[versioning]: g://tooling/sdks/sdk-versioning

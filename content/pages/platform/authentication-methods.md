@@ -95,8 +95,6 @@ that:
 
 </Message>
 
-You can find a great Python CCG tutorial on [Medium][python_ccg].
-
 ## App Token Auth
 
 [App Token Auth][ata]is another server-side authentication option, utilizing
@@ -187,7 +185,6 @@ together, see our [security guide][security].
 <!-- i18n-enable localize-links -->
 [reference]: page://reference
 [python_oauth]: https://github.com/box-community/box-python-oauth-template
-[python_ccg]: https://medium.com/box-developer-blog/box-python-next-gen-sdk-getting-started-with-ccg-81be0abc82d9
 [node_jwt]: https://medium.com/box-developer-blog/authenticate-box-node-js-sdk-with-jwt-47fdd3aeec50
 [skill_watson]: https://medium.com/box-developer-blog/box-skills-ibm-watson-speech-to-text-tutorial-b7e3b3c0a8c7
 <!-- i18n-disable localize-links -->

@@ -13,12 +13,14 @@ alias_paths: []
 
 # Install Python SDK (Generated)
 
+<Message type='warning'>
+  In August, we will be deprecating the Box Next Gen SDKs in its current form. Don’t worry, your existing code will continue to work without changes.
+
+  To learn more visit our SDK [versioning strategy document][versioning]
+</Message>
+
 You can use the **auto-generated** Box Python SDK to call Box APIs in a Python project.
 This [next generation SDK][next-gen] brings along new functionality to designed to elevate the developer experience and streamline your integration with the Box Content Cloud.
-
-<CTA to="https://github.com/box/box-python-sdk-gen">
-  Learn more about auto-generated Python SDK on GitHub
-</CTA>
 
 ## Installation
 
@@ -40,3 +42,4 @@ pip install "box-sdk-gen[jwt]"
 [jwt]: g://authentication/jwt
 [next-gen]: g://tooling/sdks#next-generation-sdks
 [py-gen]: https://github.com/box/box-python-sdk-gen
+[versioning]: g://tooling/sdks/sdk-versioning

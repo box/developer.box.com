@@ -13,12 +13,14 @@ alias_paths: []
 
 # Install Typescript SDK (Generated)
 
+<Message type='warning'>
+  In August, we will be deprecating the Box Next Gen SDKs in its current form. Don’t worry, your existing code will continue to work without changes.
+
+  To learn more visit our SDK [versioning strategy document][versioning]
+</Message>
+
 You can use the **auto-generated** Box TypeScript SDK to call Box APIs in a TypeScript project.
 This [next generation SDK][next-gen] brings along new functionality to designed to elevate the developer experience and streamline your integration with the Box Content Cloud.
-
-<CTA to="https://github.com/box/box-typescript-sdk-gen">
-  Learn more about auto-generated TypeScript SDK on GitHub
-</CTA>
 
 ## NPM installation
 
@@ -40,3 +42,4 @@ yarn add box-typescript-sdk-gen
 [npm]: https://www.npmjs.com/
 [yarn]: https://yarnpkg.com/
 [next-gen]: g://tooling/sdks#next-generation-sdks
+[versioning]: g://tooling/sdks/sdk-versioning
