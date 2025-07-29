@@ -76,7 +76,7 @@ The following file types are supported by the representation API.
 ## Drawing
 
 | File Type | PDF Support? | Thumbnails? | Text? |
-| --- | --- | ---| --- |
+| --------- | ------------ | ----------- | ----- |
 | `.ai` | No | Yes | No |
 | `.boxcanvas` | No | No | Yes |
 | `.indd` | Yes | Yes | No |
