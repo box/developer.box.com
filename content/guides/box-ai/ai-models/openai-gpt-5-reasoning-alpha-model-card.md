@@ -7,7 +7,7 @@ related_guides:
   - box-ai/ai-tutorials/extract-metadata-structured
   - box-ai/ai-agents/get-agent-default-config
 ---
-#  OpenAI GPT-5
+# OpenAI GPT-5
 
 **OpenAI GPT-5** is a multimodal model with advanced reasoning and long-context understanding.
 
