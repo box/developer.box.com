@@ -70,6 +70,14 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #fdfad8">Standard</strong>
 			</div>
 		</Tile>
+    <Tile type="gpt" title="openai__gpt_5_reasoning_alpha" href="/guides/box-ai/ai-models/openai-gpt-5-reasoning-alpha-model-card">
+			A multimodal model with advanced reasoning and long-context understanding.
+   		<div>
+   			<strong style="background-color: #e8e8e8">Chat</strong>
+				<strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #f8d59b">Premium</strong>
+			</div>
+		</Tile>
 		<Tile type="gpt" title="azure__openai__gpt_4_1" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-model-card">
 			A multimodal model, highly efficient in handling complex, multi-step tasks.
    		<div>
