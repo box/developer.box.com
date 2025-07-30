@@ -69,7 +69,7 @@ Refer to [this][android-docs] documentation for more details.
 
   ## Why we are making this change
 
-  In keeping with industry best practices, we will be consolidating the Next Gen and legacy SDKs into a single package. This will make migration efforts much easier and will allow you to more seamlessly add new capabilities to existing applications still powered by the legacy SDKs. 
+  In keeping with industry best practices, we are consolidating the Next Gen and legacy SDKs into a single package. This makes migration efforts much easier and allows you to seamlessly add new capabilities to existing applications still powered by the legacy SDKs. 
 
   Ultimately, the Next Generation SDKs will replace the current legacy SDKs as the latest major version release. Read more to learn the details.
 
