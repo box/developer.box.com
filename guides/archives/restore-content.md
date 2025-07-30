@@ -23,15 +23,15 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/archives/restore-content.md
 fullyTranslated: true
 ---
-# Restore content from Box Archive
+# Box Archiveからのコンテンツの復元
 
-This guide describes how to restore content that you archived by mistake.
+このガイドでは、誤ってアーカイブしたコンテンツを復元する方法について説明します。
 
-## Restore file or folder from archive
+## アーカイブからのファイルまたはフォルダの復元
 
-Use the [`PUT /files/:id`][Update file] API endpoint to restore a file from an archive, or the [`PUT /folders/:id`][Update folder] endpoint to restore a folder from an archive. The `id` parameter is the ID of the file/folder you want to restore from an archive. To specify the destination, use the `parent.id` [parameter][Update parent id of folder] in the request body. This is the ID of a folder (can be owned by any user) where you want to restore the file/folder.
+[`PUT /files/:id`][Update file] APIエンドポイントを使用してアーカイブからファイルを復元するか、[`PUT /folders/:id`][Update folder]エンドポイントを使用してアーカイブからフォルダを復元します。`id`パラメータは、アーカイブから復元するファイル/フォルダのIDです。復元先を指定するには、リクエスト本文内で`parent.id`[パラメータ][Update parent id of folder]を使用します。これは、ファイル/フォルダの復元先となるフォルダ (任意のユーザーが所有している可能性があります) のIDです。
 
-To restore a file/folder to user's root folder, use `0` as the `parent.id` value. Additionally, pass the ID of the user in the `parent.user_id` [parameter][Update parent user id of folder] in the request body.
+ファイル/フォルダをユーザーのルートフォルダに復元するには、`parent.id`の値として`0`を使用します。さらに、リクエスト本文で`parent.user_id`[パラメータ][Update parent user id of folder]にユーザーのIDを渡します。
 
 [Update file]: e://put-files-id
 

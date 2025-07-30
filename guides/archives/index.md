@@ -32,23 +32,23 @@ fullyTranslated: true
 
 <Message type="notice">
 
-Box Archive is available only for Enterprise Advanced accounts.
+Box Archiveは、Enterprise Advancedアカウントでのみ使用できます。
 
 </Message>
 
-Box Archive allows you to create and manage archives. An archive is a folder dedicated to storing content that is redundant, outdated, or trivial. Content in an archive is owned by the enterprise, and it is not accessible to previous owner and collaborators.
+Box Archiveを使用すると、アーカイブを作成および管理できます。アーカイブとは、冗長なコンテンツ、古くなったコンテンツ、または重要でないコンテンツの保存専用のフォルダです。アーカイブ内のコンテンツは、企業が所有しており、以前の所有者やコラボレータがアクセスすることはできません。
 
-## Archives are folders
+## アーカイブはフォルダ
 
-Archives are a special type of folders. Box Archive APIs allow you to create, list and delete archives. However, there are other APIs that also work with archives or with content within archives. For a full list of supported APIs, see the [Supported APIs][Supported APIs] guide.
+アーカイブは、特別な種類のフォルダです。Box Archive APIを使用すると、アーカイブの作成、リスト取得、削除を実行できます。ただし、アーカイブまたはアーカイブ内のコンテンツを操作する他のAPIも存在します。サポートされているAPIの詳細なリストについては、[サポートされているAPI][Supported APIs]ガイドを参照してください。
 
 ## 必須のスコープ
 
-Before using any of the Box Archive APIs, make sure you can access [Box Archive in Admin Console][Box Archive in Admin Console]. Your Box Platform app must have the `GCM` and `Read and write all files and folders` [scopes][Scopes] enabled. If you plan to only view archives and not modify them, use the `Read all files and folders` instead of the `Read and write all files and folders` scope.
+Box Archive APIのいずれかを使用する前に、[管理コンソール内のBox Archive][Box Archive in Admin Console]にアクセスできることを確認してください。Box Platformアプリでは、`GCM`および`Read and write all files and folders`[スコープ][Scopes]が有効になっている必要があります。アーカイブを表示するだけで、変更しない予定の場合は、`Read and write all files and folders`スコープではなく`Read all files and folders`スコープを使用してください。
 
 <Message type="notice">
 
-The `GCM` scope is not available in the Developer Console and needs to be enabled by contacting customer support.
+`GCM`スコープは、開発者コンソールでは使用できないため、カスタマーサポートに連絡して有効にする必要があります。
 
 </Message>
 

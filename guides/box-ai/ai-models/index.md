@@ -242,7 +242,7 @@ Box AI for NotesのQ&Aのデフォルト
 
 <Tile type="gemini" title="google__gemini_2_5_pro" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-model-card">
 
-Gemini multimodal model with a 1 million token context window and advanced reasoning capabilities.
+100万トークンのコンテキストウィンドウと高度な推論機能が備わっている、Geminiマルチモーダルモデル。
 
 <div>
 

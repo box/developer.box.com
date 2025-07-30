@@ -24,13 +24,13 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/archives/add-content.md
 fullyTranslated: true
 ---
-# Add content to Box Archive
+# Box Archiveへのコンテンツの追加
 
-To add content to an archive, you need to create it first. If you have not done this yet, use the [Create Archive][Create Archive] endpoint.
+アーカイブにコンテンツを追加するには、まず、アーカイブを作成する必要があります。まだ作成していない場合は、[アーカイブを作成][Create Archive]エンドポイントを使用します。
 
-## Add file or folder to archive
+## アーカイブへのファイルまたはフォルダの追加
 
-Use the [`PUT /files/:id`][Update file] API endpoint to add a file to an archive, or the [`PUT /folders/:id`][Update folder] endpoint to add a folder. The `id` parameter is the ID of the file/folder you want to add to the archive. To specify the destination, use the `parent.id` [parameter][Update parent id of folder] in the request body. This can be either an ID of an archive or the ID of a folder that is inside an archive.
+[`PUT /files/:id`][Update file] APIエンドポイントを使用してアーカイブにファイルを追加するか、[`PUT /folders/:id`][Update folder]エンドポイントを使用してフォルダを追加します。`id`パラメータは、アーカイブに追加するファイル/フォルダのIDです。追加先を指定するには、リクエスト本文内で`parent.id`[パラメータ][Update parent id of folder]を使用します。これには、アーカイブのID、またはアーカイブ内にあるフォルダのIDを指定できます。
 
 [Create Archive]: https://developer.box.com/reference/v2025.0/post-archives/
 
