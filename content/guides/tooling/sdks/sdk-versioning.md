@@ -31,8 +31,8 @@ Currently, the legacy SDKs and the Next Gen SDKs are separate libraries. Going f
 ## How to decide
 
 1. If you are writing a new application, use the latest major release of the SDK package.
-2. If you have an existing application relying on the Next Gen SDK and you wish to further develop your project, replace the name of this library in the package manager with the latest major release of the legacy SDK package (`v10.0.0`). Most SDKs object imports persist the same and your code will work as-is; only the TypeScript SDK requires additional steps for migrating.
-3. If you have an existing application relying on the legacy SDK and you wish to further develop your project, once released, bump the library version by one major release. See the table above, for detailed breakdown of recommended versions.
+2. If you have an existing application relying on the **Next Gen SDK** and you wish to further develop your project, replace the name of this library in the package manager with the latest major release of the legacy SDK package (`v10.0.0`). Most SDKs object imports persist the same and your code will work as-is; only the TypeScript SDK requires additional steps for migrating.
+3. If you have an existing application relying on the **legacy SDK** and you wish to further develop your project, once released, bump the library version by one major release. See the table above, for detailed breakdown of recommended versions.
 4. If you have an existing application that you don’t plan to change, ensure your package manager includes the version of SDK you are using to prevent an accidental rebuild that pulls in a version you aren’t expecting.
 
 ## Versioning overview
