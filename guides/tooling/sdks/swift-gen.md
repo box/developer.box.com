@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 10
 related_endpoints: []
 related_guides: []
 related_pages:
@@ -12,15 +12,23 @@ subcategory_id: tooling/sdks
 is_index: false
 id: tooling/sdks/swift-gen
 type: guide
-total_steps: 9
+total_steps: 10
 sibling_id: tooling/sdks
 parent_id: tooling/sdks
-next_page_id: tooling/sdks/java
-previous_page_id: ''
+next_page_id: tooling/sdks
+previous_page_id: tooling/sdks/dotnet-gen
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/swift-gen.md
 ---
-# Install Swift SDK (Generated)
+# Deprecated Swift SDK
+
+<Message type='warning'>
+
+In mid-August, we will be deprecating the Box Next Gen SDKs in its current form. **Don’t worry, your existing code will continue to work without changes**.
+
+To learn more visit our SDK [versioning strategy document][versioning]
+
+</Message>
 
 You can use Box Swift SDK to call Box APIs in a Swift
 project.
@@ -30,12 +38,6 @@ project.
 Swift SDK is in a Public Beta phase.
 
 </Message>
-
-<CTA to="https://github.com/box/box-swift-sdk-gen">
-
-Learn more about Swift SDK on GitHub
-
-</CTA>
 
 ## Swift Package Manager
 
@@ -76,3 +78,4 @@ For more detailed instructions, please see the [official documentation for Carth
 [spm]: https://www.swift.org/documentation/package-manager/
 [xcode]: https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app
 [carthage]: https://github.com/Carthage/Carthage#adding-frameworks-to-an-application
+[versioning]: g://tooling/sdks/sdk-versioning

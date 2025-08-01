@@ -406,10 +406,6 @@
   "footer.categories.company.links.github_community.url": "https://github.com/box-community",
   // A title for a footer section on our tooling options
   "footer.categories.tooling.title": "Tooling",
-  // Text for link to the TypeScript SDK (Generated)
-  "footer.categories.tooling.links.ts_gen_sdk.text": "TypeScript SDK (Generated)",
-  // link to the TypeScript SDK (Generated)
-  "footer.categories.tooling.links.ts_gen_sdk.url": "https://github.com/box/box-typescript-sdk-gen",
   // Text for link to the Java SDK
   "footer.categories.tooling.links.java_sdk.text": "Java SDK",
   // link to the Java SDK
@@ -418,26 +414,10 @@
   "footer.categories.tooling.links.python_sdk.text": "Python SDK",
   // link to the Python SDK
   "footer.categories.tooling.links.python_sdk.url": "https://github.com/box/box-python-sdk",
-  // Text for link to the Python SDK (Generated)
-  "footer.categories.tooling.links.python_gen_sdk.text": "Python SDK (Generated)",
-  // link to the Python SDK (Generated)
-  "footer.categories.tooling.links.python_gen_sdk.url": "https://github.com/box/box-python-sdk-gen",
   // Text for link to the .NET SDK
   "footer.categories.tooling.links.dotnet_sdk.text": ".NET SDK",
   // link to the .Net SDK
   "footer.categories.tooling.links.dotnet_sdk.url": "https://github.com/box/box-windows-sdk-v2",
-  // Text for link to the Swift SDK (Generated)
-  "footer.categories.tooling.links.swift_gen_sdk.text": "Swift SDK (Generated)",
-  // link to the Swift SDK (Generated)
-  "footer.categories.tooling.links.swift_gen_sdk.url": "https://github.com/box/box-swift-sdk-gen",
-  // Text for link to the Java SDK (Generated)
-  "footer.categories.tooling.links.java_gen_sdk.text": "Java SDK (Generated)",
-  // link to the Java SDK (Generated)
-  "footer.categories.tooling.links.java_gen_sdk.url": "https://github.com/box/box-java-sdk-gen",
-  // Text for link to the .NET (Generated) SDK
-  "footer.categories.tooling.links.dotnet_gen_sdk.text": ".NET SDK (Generated)",
-  // link to the .Net SDK (Generated)
-  "footer.categories.tooling.links.dotnet_gen_sdk.url": "https://github.com/box/box-dotnet-sdk-gen",
   // Text for link to the Node SDK
   "footer.categories.tooling.links.node_sdk.text": "Node SDK",
   // link to the Node SDK

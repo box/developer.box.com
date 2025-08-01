@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 9
 related_endpoints: []
 related_guides:
   - authentication/jwt
@@ -14,15 +14,23 @@ subcategory_id: tooling/sdks
 is_index: false
 id: tooling/sdks/dotnet-gen
 type: guide
-total_steps: 9
+total_steps: 10
 sibling_id: tooling/sdks
 parent_id: tooling/sdks
-next_page_id: tooling/sdks/java
-previous_page_id: ''
+next_page_id: tooling/sdks/swift-gen
+previous_page_id: tooling/sdks/python-gen
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/dotnet-gen.md
 ---
-# Install .NET SDK (Generated)
+# Deprecated .NET SDK
+
+<Message type='warning'>
+
+In mid-August, we will be deprecating the Box Next Gen SDKs in its current form. **Don’t worry, your existing code will continue to work without changes**.
+
+To learn more visit our SDK [versioning strategy document][versioning]
+
+</Message>
 
 You can use Box .NET SDK to call Box APIs in a .NET
 project.
@@ -44,3 +52,4 @@ PM> Install-Package Box.Sdk.Gen
 ```
 
 [nuget]: https://www.nuget.org/
+[versioning]: g://tooling/sdks/sdk-versioning

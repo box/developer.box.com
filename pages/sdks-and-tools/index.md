@@ -30,12 +30,6 @@ The following SDKs and tools are developed and supported by Box.
 
 Here you will find a list of SDKs
 you can use to build your application.
-Separately, we have listed the next generation
-Python, TypeScript, and .NET SDKs, which are the
-newest addition.
-.NET is still a beta feature, but we encourage
-you to give it a try and explore all the
-features they bring along.
 
 <Message type='notice'>
 
@@ -54,37 +48,7 @@ these projects to full parity.
 
 </Message>
 
-### Next generation SDKs
-
-The latest generation Box Python SDK, Box TypeScript
-SDK, .NET SDK, and Swift SDK are designed to elevate the developer
-experience and streamline your integration
-with the Box Content Cloud.
-
-<Message type='notice'>
-
-Swift SDK is in a Public Beta phase.
-
-</Message>
-
-Here's what you can expect from the new SDKs:
-
-- **Full API Support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
-- **Rapid API Updates**: The new auto-generation development approach allows for adding Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
-- **Embedded Documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
-- **Enhanced Convenience Methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers which help to ensure that you’re using variables correctly, and much more.
-
-Download the **Box Platform** SDK in a programming language of your choice and get started:
-
-| Platform                          | Status | API Parity |
-| --------------------------------- | ------ | ---------- |
-| [Python Gen SDK][pythongensdk]    | Active | Full       |
-| [TypeScript Gen SDK][tsgensdk]    | Active | Full       |
-| [.NET SDK][dotnetgensdk]          | Active | Full       |
-| [Swift SDK][swiftgensdk] (Beta)   | Active | Full       |
-| [Java Gen SDK][javagensdk] (Beta) | Active | Full       |
-
-### Legacy SDKs
+### SDKs
 
 The table lists legacy Box SDKs that you can use when building your
 applications. For latest API support and features, use the next
@@ -113,6 +77,34 @@ recommend using Java SDK to build apps on Android.
 Refer to [this][android-docs] documentation for more details.
 
 </Message>
+
+### Next generation SDKs
+
+<Message type='warning'>
+
+In mid-August, we will be deprecating the Box Next Gen SDKs in its current form. **Don’t worry, your existing code will continue to work without changes**.
+
+## Why we are making this change
+
+In keeping with industry best practices, we are consolidating the Next Gen and legacy SDKs into a single package. This makes migration efforts much easier and allows you to seamlessly add new capabilities to existing applications still powered by the legacy SDKs.
+
+Ultimately, the Next Generation SDKs will replace the current legacy SDKs as the latest major version release. Read more to learn the details.
+
+To learn more visit our SDK [versioning strategy document][versioning]
+
+</Message>
+
+The latest generation Box Python SDK, Box TypeScript
+SDK, .NET SDK, and Swift SDK are designed to elevate the developer
+experience and streamline your integration
+with the Box Content Cloud.
+
+Here's what you can expect from the new SDKs:
+
+- **Full API Support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
+- **Rapid API Updates**: The new auto-generation development approach allows for adding Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
+- **Embedded Documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
+- **Enhanced Convenience Methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers which help to ensure that you’re using variables correctly, and much more.
 
 ## Box CLI
 
@@ -237,13 +229,9 @@ for these tools.
 [salesforcesdk]: https://github.com/box/box-salesforce-sdk
 [rubysdk]: https://github.com/cburnette/boxr
 [jssdk]: https://github.com/allenmichael/box-javascript-sdk
-[pythongensdk]: https://github.com/box/box-python-sdk-gen
-[tsgensdk]: https://github.com/box/box-typescript-sdk-gen
-[dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen
-[swiftgensdk]: https://github.com/box/box-swift-sdk-gen
-[javagensdk]: https://github.com/box/box-java-sdk-gen
 [postman]: https://postman.com
 [badges]: https://opensource.box.com/badges/
+[versioning]: g://tooling/sdks/sdk-versioning
 
 <!-- i18n-enable localize-links -->
 
