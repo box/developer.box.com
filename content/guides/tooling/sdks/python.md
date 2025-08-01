@@ -11,7 +11,7 @@ related_resources: []
 alias_paths: []
 ---
 
-# Install Python SDK (Deprecated)
+# Install Python SDK
 
 You can use Box Python SDK to call Box APIs in a Python project.
 

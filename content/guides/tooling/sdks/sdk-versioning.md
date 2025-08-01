@@ -39,7 +39,7 @@ Currently, the legacy SDKs and the Next Gen SDKs are separate libraries. Going f
 
 ### Box SDK versions and artifacts
 
-| SDK Package Name   | Current latest version | Combined legacy SDKs </br> and Box Next Gen artifacts | Next Gen SDK artifact |
+| SDK Package Name   | Current latest version | Combined legacy and Next Gen artifacts | Next Gen SDK artifact |
 |--------------------|---------|--------|----------|
 | `box-node-sdk`       | `v3.8.2`  | `v4.0.0` | `v10.0.0`  |
 | `box-python-sdk`     | `v3.14.0` | `v4.0.0` | `v10.0.0`  |

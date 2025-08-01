@@ -11,7 +11,7 @@ related_resources: []
 alias_paths: []
 ---
 
-# Install .NET SDK (Deprecated)
+# Install .NET SDK
 
 You can use Box .NET SDK to call Box APIs in a .NET
 project.

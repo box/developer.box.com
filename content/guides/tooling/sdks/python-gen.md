@@ -11,7 +11,7 @@ related_resources: []
 alias_paths: []
 ---
 
-# Install Python SDK (Generated)
+# Deprecated Python SDK
 
 <Message type='warning'>
   In mid-August, we will be deprecating the Box Next Gen SDKs in its current form. Don’t worry, your existing code will continue to work without changes. 

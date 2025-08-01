@@ -11,7 +11,7 @@ related_resources: []
 alias_paths: []
 ---
 
-# Install Node SDK (Deprecated)
+# Install Node SDK
 
 You can use Box Node SDK to call Box APIs in a Node
 project.
