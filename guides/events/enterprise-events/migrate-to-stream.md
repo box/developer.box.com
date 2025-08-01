@@ -60,7 +60,7 @@ curl https://api.box.com/2.0/events?stream_type=admin_logs&stream_position=16328
 
 ### 2. `admin_logs_streaming`を使用して重複する既存のリクエストを開始します
 
-* 2週間前に開始し、埋め戻しする:
+* 2週間前から開始し、埋め戻しする:
 
 ```curl
     curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=0 \
@@ -86,7 +86,7 @@ curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_posi
 
 ```
 
-### 4. 確信できるまで重複に進みます
+### 4. 十分と思われるまで重複を継続します
 
 ### 5. 古い`admin_logs`リクエストを無効にします
 
