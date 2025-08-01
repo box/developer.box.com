@@ -82,16 +82,6 @@ Here's what you can expect from the new SDKs:
 - **Embedded Documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
 - **Enhanced Convenience Methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers which help to ensure that you’re using variables correctly, and much more.
 
-<!-- Download the **Box Platform** SDK in a programming language of your choice and get started:
-
-| Platform                            | Maintained? | API Parity |
-| ----------------------------------- | ----------- | ---------- |
-| [Python Gen SDK][pythongensdk]      |     Yes     |    Full    |
-| [TypeScript Gen SDK][tsgensdk]      |     Yes     |    Full    |
-| [.NET Gen SDK][dotnetgensdk]        |     Yes     |    Full    |
-| [Swift Gen SDK][swiftgensdk] (Beta) |     Yes     |    Full    |
-| [Java Gen SDK][javagensdk] (Beta)   |     Yes     |    Full    | -->
-
 <!-- i18n-enable localize-links -->
 
 [javasdk]: https://github.com/box/box-java-sdk
@@ -100,11 +90,6 @@ Here's what you can expect from the new SDKs:
 [nodesdk]: https://github.com/box/box-node-sdk
 [iossdk]: https://github.com/box/box-ios-sdk
 [androidsdk]: https://github.com/box/box-android-sdk
-[pythongensdk]: https://github.com/box/box-python-sdk-gen
-[tsgensdk]: https://github.com/box/box-typescript-sdk-gen
-[dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen
-[swiftgensdk]: https://github.com/box/box-swift-sdk-gen
-[javagensdk]: https://github.com/box/box-java-sdk-gen
 [android-docs]: https://github.com/box/box-java-sdk/blob/main/doc/android.md
 [versioning]: g://tooling/sdks/sdk-versioning
 [forum]: https://community.box.com/sdks-and-tools-7
