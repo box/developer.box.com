@@ -65,7 +65,7 @@ Refer to [this][android-docs] documentation for more details.
 ### Next generation SDKs
 
 <Message type='warning'>
-  In August, we will be deprecating the Box Next Gen SDKs in its current form. Don’t worry, your existing code will continue to work without changes.
+  In mid-August, we will be deprecating the Box Next Gen SDKs in its current form. Don’t worry, your existing code will continue to work without changes.
 
   ## Why we are making this change
 
