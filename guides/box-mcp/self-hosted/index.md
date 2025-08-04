@@ -15,21 +15,22 @@ next_page_id: ''
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-mcp/self-hosted/index.md
+fullyTranslated: true
 ---
-# Self-hosted Box MCP Server
+# セルフホストBox MCPサーバー
 
-The [Self-hosted Box MCP Server](https://github.com/box-community/mcp-server-box.git) is a Python project that integrates with the Box API to perform various operations such as file search, text extraction, AI-based querying, and data extraction. It leverages the Box Python Next Gen SDK library and provides a set of tools to interact with Box files and folders.
+[セルフホストBox MCPサーバー](https://github.com/box-community/mcp-server-box.git)とは、さまざまな操作 (ファイル検索、テキスト抽出、AIベースのクエリ実行、データ抽出など) を行うためにBox APIと統合されているPythonプロジェクトです。Box Pythonの次世代SDKライブラリを利用し、Boxのファイルやフォルダを操作するための一連のツールを提供します。
 
-## Installation
+## インストール
 
-### Prerequisites
+### 前提条件
 
-* Python 3.13 or higher
-* Box Platform app credentials (Client ID, Client Secret)
+* Python 3.13以上
+* Box Platformアプリの資格情報 (クライアントID、クライアントシークレット)
 
-Follow the steps from this section to set up the self-hosted Box MCP Server.
+セルフホストBox MCPサーバーを設定するには、このセクションの手順に従います。
 
-1. Clone the repository:
+1. リポジトリを複製します。
 
 ```sh
 git clone https://github.com/box-community/mcp-server-box.git
@@ -37,11 +38,11 @@ cd mcp-server-box
 
 ```
 
-2. Install `uv` if it's not installed on your machine:
+2. `uv`がマシンにインストールされていない場合はインストールします。
 
 <Tabs>
 
-<Tab title='MacOS/Linux'>
+<Tab title="macOS/Linux">
 
 ```sh
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -50,7 +51,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 </Tab>
 
-<Tab title='Windows'>
+<Tab title="Windows">
 
 ```powershell
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
@@ -61,13 +62,13 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 
 </Tabs>
 
-Restart your terminal afterwards to ensure that the `uv` command gets picked up.
+その後ターミナルを再起動し、`uv`コマンドが取得されることを確認します。
 
-3. Create and set up our project:
+3. プロジェクトを作成して設定します。
 
 <Tabs>
 
-<Tab title='MacOS/Linux'>
+<Tab title="macOS/Linux">
 
 ```sh
 # Create virtual environment and activate it
@@ -81,7 +82,7 @@ uv lock
 
 </Tab>
 
-<Tab title='Windows'>
+<Tab title="Windows">
 
 ```sh
 # Create virtual environment and activate it
@@ -97,7 +98,7 @@ uv lock
 
 </Tabs>
 
-4. Create a `.env` file in the root directory and fill your Box Platform app credentials:
+4. ルートディレクトリに`.env`ファイルを作成し、Box Platformアプリの資格情報を入力します。
 
 ```.env
 BOX_CLIENT_ID=your_client_id
@@ -105,36 +106,36 @@ BOX_CLIENT_SECRET=your_client_secret
 
 ```
 
-You can also watch a video tutorial and see example usage of Box MCP tools.
+動画によるチュートリアルを視聴して、Box MCPツールの使用例を確認することもできます。
 
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/h109CMywlVQ?si=0EIRYyczpxfuidVU" title="Box self-hosted MCP Server" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/h109CMywlVQ?si=0EIRYyczpxfuidVU" title="セルフホストBox MCPサーバー" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 
 </iframe>
 
-## Running Box MCP Server locally
+## Box MCPサーバーのローカルでの実行
 
-To start the Box MCP Server, run the following command:
+Box MCPサーバーを起動するには、次のコマンドを実行します。
 
 ```sh
 uv --directory /Users/USER_NAME/PATH_TO_PROJECT/mcp-server-box run src/mcp_server_box.py
 
 ```
 
-Update the path so it reflects your local setup.
+ローカルの設定が反映されるようにパスを更新します。
 
-### Use Cursor as the Box MCP client
+### CursorをBox MCPクライアントとして使用する
 
-Prerequisites:
+前提条件:
 
-* Download [Cursor desktop app](https://www.cursor.com/)
+* [Cursorデスクトップアプリ](https://www.cursor.com/)をダウンロードする
 
-Follow these instructions to start using Box MCP Sever with Cursor:
+CursorでBox MCPサーバーの使用を開始するには、以下の手順に従います。
 
-1. Open the Cursor app.
-2. Click the cog icon to open settings.
-3. Select `MCP` within the Cursor Settings tab.
-4. Click the `Add new global MCP server` button. This opens the `mcp.json` file.
-5. Update the values with your local setup and paste the following JSON:
+1. Cursorアプリを開きます。
+2. 歯車アイコンをクリックして設定を開きます。
+3. \[Cursor Settings] タブで \[`MCP`] を選択します。
+4. \[`Add new global MCP server`] ボタンをクリックします。これにより、`mcp.json`ファイルが開きます。
+5. ローカルの設定を使用して値を更新し、次のJSONを貼り付けます。
 
 ```json
 {
@@ -153,31 +154,31 @@ Follow these instructions to start using Box MCP Sever with Cursor:
 
 ```
 
-6. Save and close the `mcp.json` file.
-7. Restart Cursor if necessary.
-8. Use the `box_authorize_app_tool` tool to start using Box MCP.
+6. `mcp.json`ファイルを保存して閉じます。
+7. 必要に応じて、Cursorを再起動します。
+8. `box_authorize_app_tool`ツールを使用して、Box MCPの使用を開始します。
 
-### Use Claude for Desktop as the Box MCP client
+### Claude for DesktopをBox MCPクライアントとして使用する
 
-Prerequisites:
+前提条件:
 
-* Download [Claude for Desktop](https://claude.ai/download) client
-* Optionally, set up [`code`](https://code.visualstudio.com/docs/setup/mac#_configure-the-path-with-vs-code) command for VS Code
+* [Claude for Desktop](https://claude.ai/download)クライアントをダウンロードする
+* 必要に応じて、VS Codeの[`code`](https://code.visualstudio.com/docs/setup/mac#_configure-the-path-with-vs-code)コマンドを設定する
 
-Follow these steps to set up Box MCP in Claude for Desktop:
+Claude for DesktopでBox MCPを設定するには、以下の手順に従います。
 
-1. Edit your `claude_desktop_config.json`.
+1. `claude_desktop_config.json`を編集します。
 
-You can run this command in your terminal:
+ターミナルで次のコマンドを実行します。
 
 ```sh
 code ~/Library/Application\ Support/Claude/claude_desktop_config.json
 
 ```
 
-Alternatively, in the main Claude navigation choose `Settings`. Select the Developers tab and click `Edit Config`. This opens a folder window containing `claude_desktop_config.json`.
+または、Claudeのメインのナビゲーションで \[`Settings`] を選択します。\[Developers] タブを選択し、\[`Edit Config`] をクリックします。これにより、`claude_desktop_config.json`を含むフォルダウィンドウが表示されます。
 
-2. Add the configuration:
+2. 構成を追加します。
 
 ```json
 {
@@ -196,19 +197,19 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
 
 ```
 
-3. Restart Claude for Desktop.
-4. Authenticate the Box MCP Server using `box_authorize_app_tool` tool.
+3. Claude for Desktopを再起動します。
+4. `box_authorize_app_tool`を使用してBox MCPサーバーを認証します。
 
-## Available tools
+## 利用可能なツール
 
-### Authentication and user tools
+### 認証およびユーザーツール
 
-| Tool                     | Description                                                         | Parameters | Returns                       |
-| ------------------------ | ------------------------------------------------------------------- | ---------- | ----------------------------- |
-| `box_who_am_i`           | Gets the current user information and checks the connection status. | None       | User information string.      |
-| `box_authorize_app_tool` | Starts the Box application authorization process.                   | None       | Authorization status message. |
+| ツール                      | 説明                             | パラメータ | 戻り値           |
+| ------------------------ | ------------------------------ | ----- | ------------- |
+| `box_who_am_i`           | 現在のユーザーの情報を取得し、接続のステータスを確認します。 | なし    | ユーザー情報の文字列。   |
+| `box_authorize_app_tool` | Boxアプリケーションの承認プロセスを開始します。      | なし    | 承認ステータスメッセージ。 |
 
-### Search and navigation tools
+### 検索およびナビゲーションツール
 
 <table>
 
@@ -218,25 +219,25 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
 
 <th>
 
-Tool
+ツール
 
 </th>
 
 <th>
 
-Description
+説明
 
 </th>
 
 <th>
 
-Parameters
+パラメータ
 
 </th>
 
 <th>
 
-Returns
+戻り値
 
 </th>
 
@@ -256,22 +257,22 @@ Returns
 
 <td>
 
-Search for files in Box
+Box内のファイルを検索します
 
 </td>
 
 <td>
 
-* `query (str):` Search query.
-* `file_extensions (List[str], optional):` Filter by extensions.
-* `where_to_look_for_query (List[str], optional):` Locations to search.
-* `ancestor_folder_ids (List[str], optional):` Folder IDs to limit the search.
+* `query (str):` 検索クエリ。
+* `file_extensions (List[str], optional):` 拡張子によるフィルタ。
+* `where_to_look_for_query (List[str], optional):` 検索する場所。
+* `ancestor_folder_ids (List[str], optional):` 検索を制限するためのフォルダID。
 
 </td>
 
 <td>
 
-Newline-separated list of file names and IDs
+改行で区切られた、ファイル名とIDのリスト
 
 </td>
 
@@ -289,19 +290,19 @@ Newline-separated list of file names and IDs
 
 <td>
 
-Locate a folder by name
+名前でフォルダを検索します
 
 </td>
 
 <td>
 
-`folder_name (str):` Name of the folder
+`folder_name (str):` フォルダの名前
 
 </td>
 
 <td>
 
-Folder ID and information
+フォルダIDと情報
 
 </td>
 
@@ -317,7 +318,7 @@ Folder ID and information
 
 <td>
 
-List folder contents
+フォルダコンテンツのリストを取得します
 
 </td>
 
@@ -327,13 +328,13 @@ List folder contents
 
 <li>
 
-`folder_id (str):` ID of the folder.
+`folder_id (str):` フォルダのID。
 
 </li>
 
 <li>
 
-`is_recursive (bool):` Whether to list recursively.
+`is_recursive (bool):` 再帰的にリストを取得するかどうか。
 
 </li>
 
@@ -343,7 +344,7 @@ List folder contents
 
 <td>
 
-Folder content in JSON format
+JSON形式のフォルダコンテンツ
 
 </td>
 
@@ -353,7 +354,7 @@ Folder content in JSON format
 
 </table>
 
-### File operations
+### ファイル操作
 
 <table>
 
@@ -363,25 +364,25 @@ Folder content in JSON format
 
 <th>
 
-Tool
+ツール
 
 </th>
 
 <th>
 
-Description
+説明
 
 </th>
 
 <th>
 
-Parameters
+パラメータ
 
 </th>
 
 <th>
 
-Returns
+戻り値
 
 </th>
 
@@ -401,19 +402,19 @@ Returns
 
 <td>
 
-Read the text content of a Box file
+Boxファイルのテキストコンテンツを読み取ります
 
 </td>
 
 <td>
 
-* `file_id (str):` ID of the file to read.
+* `file_id (str):` 読み取るファイルのID。
 
 </td>
 
 <td>
 
-File content
+ファイルコンテンツ
 
 </td>
 
@@ -429,23 +430,23 @@ File content
 
 <td>
 
-Upload a file from local path
+ローカルパスからファイルをアップロードします
 
 </td>
 
 <td>
 
-* `file_path (str):` Local file path.<br>
+* `file_path (str):` ローカルファイルパス。<br>
 
-* `folder_id (str, optional):` Destination folder ID.<br>
+* `folder_id (str, optional):` アップロード先フォルダID。<br>
 
-* `new_file_name (str, optional):` New file name.
+* `new_file_name (str, optional):` 新しいファイルの名前。
 
 </td>
 
 <td>
 
-File details or error message
+ファイルの詳細またはエラーメッセージ
 
 </td>
 
@@ -461,25 +462,25 @@ File details or error message
 
 <td>
 
-Upload content as a file
+コンテンツをファイルとしてアップロードします
 
 </td>
 
 <td>
 
-* `content (str|bytes):` Content to upload.<br>
+* `content (str|bytes):` アップロードするコンテンツ。<br>
 
-* `file_name (str):` File name.<br>
+* `file_name (str):` ファイル名。<br>
 
-* `folder_id (str, optional):` Destination folder ID.<br>
+* `folder_id (str, optional):` アップロード先フォルダID。<br>
 
-* `is_base64 (bool, optional):` If content is base64 encoded.
+* `is_base64 (bool, optional):` コンテンツがbase64でエンコードされているかどうか。
 
 </td>
 
 <td>
 
-Upload success message
+アップロードの成功を示すメッセージ
 
 </td>
 
@@ -495,23 +496,23 @@ Upload success message
 
 <td>
 
-Download a file from Box
+Boxからファイルをダウンロードします
 
 </td>
 
 <td>
 
-* `file_id (str):` File ID.<br>
+* `file_id (str):` ファイルID。<br>
 
-* `save_file (bool, optional):` Whether to save locally.<br>
+* `save_file (bool, optional):` ローカルに保存するかどうか。<br>
 
-* `save_path (str, optional):` Local save path.
+* `save_path (str, optional):` ローカルの保存パス。
 
 </td>
 
 <td>
 
-File content or save confirmation
+ファイルコンテンツまたは保存の確認
 
 </td>
 
@@ -521,7 +522,7 @@ File content or save confirmation
 
 </table>
 
-### Folder Management
+### フォルダ管理
 
 <table>
 
@@ -531,25 +532,25 @@ File content or save confirmation
 
 <th>
 
-Tool
+ツール
 
 </th>
 
 <th>
 
-Description
+説明
 
 </th>
 
 <th>
 
-Parameters
+パラメータ
 
 </th>
 
 <th>
 
-Returns
+戻り値
 
 </th>
 
@@ -569,24 +570,24 @@ Returns
 
 <td>
 
-Create, update, or delete folders
+フォルダを作成、更新、または削除します
 
 </td>
 
 <td style="white-space: pre-wrap;">
 
 * `action (str):` `create`, `delete`, or `update`.
-* `folder_id (str, optional):` Folder ID.
-* `name (str, optional):` Folder name.
-* `parent_id (str, optional):` Parent folder ID.
-* `description (str, optional):` Folder description.
-* `recursive (bool, optional):` For recursive delete.
+* `folder_id (str, optional):` フォルダID。
+* `name (str, optional):` フォルダ名。
+* `parent_id (str, optional):` 親フォルダID。
+* `description (str, optional):` フォルダの説明。
+* `recursive (bool, optional):` 再帰的な削除かどうか。
 
 </td >
 
 <td>
 
-Status message with folder details
+フォルダの詳細を含むステータスメッセージ
 
 </td >
 
@@ -596,7 +597,7 @@ Status message with folder details
 
 </table >
 
-### Box AI tools
+### Box AIのツール
 
 <table>
 
@@ -606,25 +607,25 @@ Status message with folder details
 
 <th>
 
-Tool
+ツール
 
 </th>
 
 <th>
 
-Description
+説明
 
 </th>
 
 <th>
 
-Parameters
+パラメータ
 
 </th>
 
 <th>
 
-Returns
+戻り値
 
 </th>
 
@@ -644,21 +645,21 @@ Returns
 
 <td>
 
-Ask Box AI about a file
+ファイルについてBox AIに質問します
 
 </td>
 
 <td>
 
-* `file_id (str):` File ID.<br>
+* `file_id (str):` ファイルID。<br>
 
-* `prompt (str):` Question for the AI.
+* `prompt (str):` AIに対する質問。
 
 </td>
 
 <td>
 
-AI response
+AIの応答
 
 </td>
 
@@ -674,21 +675,21 @@ AI response
 
 <td>
 
-Query Box AI using multiple files
+複数のファイルを使用してBox AIにクエリを実行します
 
 </td>
 
 <td>
 
-* `file_ids (List[str]):` List of file IDs.<br>
+* `file_ids (List[str]):` ファイルIDのリスト。<br>
 
-* `prompt (str):` Instruction for AI.
+* `prompt (str):` AIに対する指示。
 
 </td>
 
 <td>
 
-AI-generated answer
+AIが生成した回答
 
 </td>
 
@@ -704,21 +705,21 @@ AI-generated answer
 
 <td>
 
-Ask Box AI about a hub
+HubについてBox AIに質問します
 
 </td>
 
 <td>
 
-* `hubs_id (str):` ID of the hub.<br>
+* `hubs_id (str):` HubのID。<br>
 
-* `prompt (str):` Question for the AI.
+* `prompt (str):` AIに対する質問。
 
 </td>
 
 <td>
 
-AI response
+AIの応答
 
 </td>
 
@@ -734,21 +735,21 @@ AI response
 
 <td>
 
-Extract data from a file using AI
+AIを使用してファイルからデータを抽出します
 
 </td>
 
 <td>
 
-* `file_id (str):` File ID.<br>
+* `file_id (str):` ファイルID。<br>
 
-* `fields (str):` Fields to extract.
+* `fields (str):` 抽出するフィールド。
 
 </td>
 
 <td>
 
-Extracted data in JSON format
+JSON形式で抽出されたデータ
 
 </td>
 
@@ -758,7 +759,7 @@ Extracted data in JSON format
 
 </table>
 
-### Box Doc Gen tools
+### Box Doc Genのツール
 
 <table>
 
@@ -768,25 +769,25 @@ Extracted data in JSON format
 
 <th>
 
-Tool
+ツール
 
 </th>
 
 <th>
 
-Description
+説明
 
 </th>
 
 <th>
 
-Parameters
+パラメータ
 
 </th>
 
 <th>
 
-Returns
+戻り値
 
 </th>
 
@@ -806,22 +807,22 @@ Returns
 
 <td>
 
-Generate documents using a template
+テンプレートを使用してドキュメントを生成します
 
 </td>
 
 <td>
 
-* `file_id` (str): Template file ID.
-* `destination_folder_id` (str): Output folder ID.
-* `user_input_file_path` (str): JSON input data path.
-* `output_type` (str, optional): Output format.
+* `file_id` (str): テンプレートファイルID。
+* `destination_folder_id` (str): 出力フォルダID。
+* `user_input_file_path` (str): JSON入力データのパス。
+* `output_type` (str, optional): 出力形式。
 
 </td>
 
 <td>
 
-Batch generation result
+一括生成の結果
 
 </td>
 
@@ -837,19 +838,19 @@ Batch generation result
 
 <td>
 
-Fetch a Doc Gen job by ID
+IDを指定してDoc Genジョブを取得します
 
 </td>
 
 <td>
 
-`job_id (str):` Job identifier
+`job_id (str):` ジョブの識別子
 
 </td>
 
 <td>
 
-Job details in JSON
+JSON形式のジョブの詳細
 
 </td>
 
@@ -865,20 +866,20 @@ Job details in JSON
 
 <td>
 
-List all Doc Gen jobs
+すべてのDoc Genジョブのリストを取得します
 
 </td>
 
 <td>
 
-* `marker (str, optional):` Pagination marker.
-* `limit (int, optional):` Max jobs to return.
+* `marker (str, optional):` ページ割りのマーカー。
+* `limit (int, optional):` 返される最大ジョブ数。
 
 </td>
 
 <td>
 
-List of jobs in JSON
+JSON形式のジョブのリスト
 
 </td>
 
@@ -894,21 +895,21 @@ List of jobs in JSON
 
 <td>
 
-List jobs in a specific batch
+特定のバッチ内にあるジョブのリストを取得します
 
 </td>
 
 <td>
 
-* `batch_id (str):` Batch identifier.
-* `marker (str, optional):` Pagination marker.
-* `limit (int, optional):` Max jobs to return.
+* `batch_id (str):` バッチの識別子。
+* `marker (str, optional):` ページ割りのマーカー。
+* `limit (int, optional):` 返される最大ジョブ数。
 
 </td>
 
 <td>
 
-Batch jobs details
+バッチジョブの詳細
 
 </td>
 
@@ -924,19 +925,19 @@ Batch jobs details
 
 <td>
 
-Mark a file as a template
+ファイルをテンプレートとして設定します
 
 </td>
 
 <td>
 
-`file_id (str):` File ID to mark
+`file_id (str):` 設定するファイルID
 
 </td>
 
 <td>
 
-Template details
+テープレートの詳細
 
 </td>
 
@@ -952,20 +953,20 @@ Template details
 
 <td>
 
-List all available templates
+すべての使用可能なテンプレートのリストを取得します
 
 </td>
 
 <td>
 
-* `marker` (str, optional): Pagination marker.
-* `limit` (int, optional): Max templates to list.
+* `marker` (str, optional): ページ割りのマーカー。
+* `limit` (int, optional): リストに取得するテンプレートの最大数。
 
 </td>
 
 <td>
 
-List of templates
+テンプレートのリスト
 
 </td>
 
@@ -981,19 +982,19 @@ List of templates
 
 <td>
 
-Remove template marking
+テンプレートの設定を削除します
 
 </td>
 
 <td>
 
-`template_id (str):` Template identifier
+`template_id (str):` テンプレートの識別子
 
 </td>
 
 <td>
 
-Deletion confirmation
+削除の確認
 
 </td>
 
@@ -1009,19 +1010,19 @@ Deletion confirmation
 
 <td>
 
-Get template details
+テンプレートの詳細を取得します
 
 </td>
 
 <td>
 
-`template_id (str):` Template identifier
+`template_id (str):` テンプレートの識別子
 
 </td>
 
 <td>
 
-Template details
+テープレートの詳細
 
 </td>
 
@@ -1037,22 +1038,22 @@ Template details
 
 <td>
 
-List template tags
+テンプレートタグのリストを取得します
 
 </td>
 
 <td>
 
-* `template_id` (str): Template ID.
-* `template_version_id` (str, optional): Version ID.
-* `marker` (str, optional): Pagination marker.
-* `limit` (int, optional): Max tags to return.
+* `template_id` (str): テンプレートID。
+* `template_version_id` (str, optional): バージョンID。
+* `marker` (str, optional): ページ割りのマーカー。
+* `limit` (int, optional): 返される最大タグ数。
 
 </td>
 
 <td>
 
-List of tags
+タグのリスト
 
 </td>
 
@@ -1068,21 +1069,21 @@ List of tags
 
 <td>
 
-List jobs using a template
+テンプレートを使用してジョブのリストを取得します
 
 </td>
 
 <td>
 
-* `template_id (str):` Template identifier.
-* `marker (str, optional):` Pagination marker.
-* `limit (int, optional):` Max jobs to list.
+* `template_id (str):` テンプレートの識別子。
+* `marker (str, optional):` ページ割りのマーカー。
+* `limit (int, optional):` リストに取得する最大ジョブ数。
 
 </td>
 
 <td>
 
-Job details
+ジョブの詳細
 
 </td>
 
@@ -1092,7 +1093,7 @@ Job details
 
 </table>
 
-### Box Metadata tools
+### Boxメタデータのツール
 
 <table>
 
@@ -1102,25 +1103,25 @@ Job details
 
 <th>
 
-Tool
+ツール
 
 </th>
 
 <th>
 
-Description
+説明
 
 </th>
 
 <th>
 
-Parameters
+パラメータ
 
 </th>
 
 <th>
 
-Returns
+戻り値
 
 </th>
 
@@ -1140,19 +1141,19 @@ Returns
 
 <td>
 
-Retrieves a metadata template by its key.
+キーを指定してメタデータテンプレートを取得します。
 
 </td>
 
 <td>
 
-`template_name (str)`: The key of the metadata template to retrieve.
+`template_name (str)`: 取得するメタデータテンプレートのキー。
 
 </td>
 
 <td>
 
-The metadata template associated with the provided key.
+指定したキーに関連付けられているメタデータテンプレート。
 
 </td>
 
@@ -1168,19 +1169,19 @@ The metadata template associated with the provided key.
 
 <td>
 
-Retrieve a metadata template by its name.
+名前を指定してメタデータテンプレートを取得します。
 
 </td>
 
 <td>
 
-`template_name (str)`: The name of the metadata template to retrieve.
+`template_name (str)`: 取得するメタデータテンプレートの名前。
 
 </td>
 
 <td>
 
-The metadata template associated with the provided name.
+指定した名前に関連付けられているメタデータテンプレート。
 
 </td>
 
@@ -1190,16 +1191,16 @@ The metadata template associated with the provided name.
 
 </table>
 
-## Troubleshooting
+## トラブルシューティング
 
-In case of an `Error: spawn uv ENOENT` on MacOS when running the MCP server with Claude Desktop, you can:
+Claude for DesktopでMCPサーバーを実行したときにmacOSで`Error: spawn uv ENOENT`が発生した場合は、以下を実行できます。
 
-* Remove `uv` and reinstall it with Homebrew: `brew install uv`.
-* Provide the full path to the `uv` executable in your configuration:
+* Homebrewを使用して`uv`を削除し手再インストールする: `brew install uv`
+* 構成内に`uv`実行可能ファイルのフルパスを指定する
 
 ```sh
 /Users/USER_NAME/.local/bin/uv --directory /Users/USER_NAME/local/mcp-server-box run src/mcp_server_box.py
 
 ```
 
-In case of additional issues related to setup, post your question on our [Developer Community forum](https://community.box.com/ai-developers-23).
+設定に関連するその他の問題が発生した場合は、Boxの[Developer Communityフォーラム](https://community.box.com/ai-developers-23)に質問を投稿してください (英語のみ)。
