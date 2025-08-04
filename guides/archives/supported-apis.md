@@ -32,31 +32,31 @@ fullyTranslated: true
 
 </Message>
 
-| APIエンドポイント                                                                                                        | 説明                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| [`POST /archives`][Create archive]                                                                                | アーカイブを作成します。                                                                                                   |
-| [`GET /archives`][List archives]                                                                                  | すべてのアーカイブのリストを取得します。                                                                                           |
-| [`DELETE /archives/:id`][Delete archive]                                                                          | アーカイブを削除します。                                                                                                   |
-| [`PUT /files/:id`][Update file]                                                                                   | ファイルをアーカイブに追加したり、アーカイブから復元したり、アーカイブ内またはアーカイブ間で移動したりします。ファイルに対するその他の更新は許可されていません。有効にするには、カスタマーサポートに連絡する必要があります。 |
-| [`PUT /folders/:id`][Update folder]                                                                               | フォルダをアーカイブに追加したり、アーカイブから復元したり、アーカイブ内またはアーカイブ間で移動したりします。フォルダに対するその他の更新は許可されていません。有効にするには、カスタマーサポートに連絡する必要があります。 |
-| [`POST /files/content`][Upload file]                                                                              | ファイルをアーカイブまたはアーカイブ内のフォルダにアップロードします。有効にするには、カスタマーサポートに連絡する必要があります。                                              |
-| [`GET /files/:id/content`][Download file]                                                                         | ファイルをアーカイブまたはアーカイブ内のフォルダからダウンロードします。                                                                           |
-| [`POST /zip_downloads`][Download zip]                                                                             | アーカイブまたはアーカイブ内のフォルダのzipファイルをダウンロードします。                                                                         |
-| [`POST /folders`][Create folder within archive]                                                                   | アーカイブ内にフォルダを作成します。有効にするには、カスタマーサポートに連絡する必要があります。                                                               |
-| [`GET /files/:id`][Get file details]                                                                              | アーカイブ内のファイルの詳細を取得します。                                                                                          |
-| [`GET /folders/:id`][Get folder details]                                                                          | アーカイブまたはアーカイブ内のフォルダの詳細を取得します。                                                                                  |
-| [`GET /folders/:id/items`][List folder items]                                                                     | アーカイブまたはアーカイブ内のフォルダ内にある項目のリストを取得します。                                                                           |
-| [`POST /files/:id/copy`][Copy file]                                                                               | アーカイブ内のファイルを別のアーカイブにコピーします。                                                                                    |
-| [`POST /folders/:id/copy`][Copy folder]                                                                           | アーカイブ内のフォルダを別のアーカイブにコピーします。                                                                                    |
-| [`POST /files/:id/metadata/:scope/:template_key`][Create metadata on file]                                        | アーカイブ内のファイルにメタデータインスタンスを作成します。                                                                                 |
-| [`GET /files/:id/metadata/:scope/:template_key`][View metadata on file]                                           | アーカイブ内のファイルのメタデータインスタンスを表示します。                                                                                 |
-| [`GET /files/:id/metadata`][List metadata on file]                                                                | アーカイブ内のファイルのすべてのメタデータインスタンスのリストを取得します。                                                                         |
-| [`PUT /files/:id/metadata/:scope/:template_key`][Update metadata on file]                                         | アーカイブ内のファイルのメタデータインスタンスを更新します。                                                                                 |
-| [`DELETE /files/:id/metadata/:scope/:template_key`][Delete metadata on file]                                      | アーカイブ内のファイルのメタデータインスタンスを削除します。                                                                                 |
-| [`POST /files/:id/metadata/enterprise/securityClassification/6VMVochwUWo`][Create classification label on file]   | アーカイブ内のファイルに分類ラベルを作成します。                                                                                       |
-| [`GET /files/:id/metadata/enterprise/securityClassification/6VMVochwUWo`][View classification label on file]      | アーカイブ内のファイルの分類ラベルを表示します。                                                                                       |
-| [`PUT /files/:id/metadata/enterprise/securityClassification/6VMVochwUWo`][Update classification label on file]    | アーカイブ内のファイルの分類ラベルを更新します。                                                                                       |
-| [`DELETE /files/:id/metadata/enterprise/securityClassification/6VMVochwUWo`][Delete classification label on file] | アーカイブ内のファイルの分類ラベルを削除します。                                                                                       |
+| APIエンドポイント                                                                   | 説明                                                                                                             |
+| ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| [`POST /archives`][Create archive]                                           | アーカイブを作成します。                                                                                                   |
+| [`GET /archives`][List archives]                                             | すべてのアーカイブのリストを取得します。                                                                                           |
+| [`DELETE /archives/:id`][Delete archive]                                     | アーカイブを削除します。                                                                                                   |
+| [`PUT /files/:id`][Update file]                                              | ファイルをアーカイブに追加したり、アーカイブから復元したり、アーカイブ内またはアーカイブ間で移動したりします。ファイルに対するその他の更新は許可されていません。有効にするには、カスタマーサポートに連絡する必要があります。 |
+| [`PUT /folders/:id`][Update folder]                                          | フォルダをアーカイブに追加したり、アーカイブから復元したり、アーカイブ内またはアーカイブ間で移動したりします。フォルダに対するその他の更新は許可されていません。有効にするには、カスタマーサポートに連絡する必要があります。 |
+| [`POST /files/content`][Upload file]                                         | ファイルをアーカイブまたはアーカイブ内のフォルダにアップロードします。有効にするには、カスタマーサポートに連絡する必要があります。                                              |
+| [`GET /files/:id/content`][Download file]                                    | ファイルをアーカイブまたはアーカイブ内のフォルダからダウンロードします。                                                                           |
+| [`POST /zip_downloads`][Download zip]                                        | アーカイブまたはアーカイブ内のフォルダのzipファイルをダウンロードします。                                                                         |
+| [`POST /folders`][Create folder within archive]                              | アーカイブ内にフォルダを作成します。有効にするには、カスタマーサポートに連絡する必要があります。                                                               |
+| [`GET /files/:id`][Get file details]                                         | アーカイブ内のファイルの詳細を取得します。                                                                                          |
+| [`GET /folders/:id`][Get folder details]                                     | アーカイブまたはアーカイブ内のフォルダの詳細を取得します。                                                                                  |
+| [`GET /folders/:id/items`][List folder items]                                | アーカイブまたはアーカイブ内のフォルダ内にある項目のリストを取得します。                                                                           |
+| [`POST /files/:id/copy`][Copy file]                                          | アーカイブ内のファイルを別のアーカイブにコピーします。                                                                                    |
+| [`POST /folders/:id/copy`][Copy folder]                                      | アーカイブ内のフォルダを別のアーカイブにコピーします。                                                                                    |
+| [`POST /files/:id/metadata/:scope/:template_key`][Create metadata on file]   | アーカイブ内のファイルにメタデータインスタンスを作成します。                                                                                 |
+| [`GET /files/:id/metadata/:scope/:template_key`][View metadata on file]      | アーカイブ内のファイルのメタデータインスタンスを表示します。                                                                                 |
+| [`GET /files/:id/metadata`][List metadata on file]                           | アーカイブ内のファイルのすべてのメタデータインスタンスのリストを取得します。                                                                         |
+| [`PUT /files/:id/metadata/:scope/:template_key`][Update metadata on file]    | アーカイブ内のファイルのメタデータインスタンスを更新します。                                                                                 |
+| [`DELETE /files/:id/metadata/:scope/:template_key`][Delete metadata on file] | アーカイブ内のファイルのメタデータインスタンスを削除します。                                                                                 |
+| [`POST securityClassification`][Create classification label on file]         | アーカイブ内のファイルに分類ラベルを作成します。                                                                                       |
+| [`GET securityClassification`][View classification label on file]            | アーカイブ内のファイルの分類ラベルを表示します。                                                                                       |
+| [`PUT securityClassification`][Update classification label on file]          | アーカイブ内のファイルの分類ラベルを更新します。                                                                                       |
+| [`DELETE securityClassification`][Delete classification label on file]       | アーカイブ内のファイルの分類ラベルを削除します。                                                                                       |
 
 [Create archive]: https://developer.box.com/reference/v2025.0/post-archives/
 
