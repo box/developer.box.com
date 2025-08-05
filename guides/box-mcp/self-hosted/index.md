@@ -576,7 +576,7 @@ Boxからファイルをダウンロードします
 
 <td style="white-space: pre-wrap;">
 
-* `action (str):` `create`、`delete`、および`update`。
+* `action (str):` `create`、`delete`、または`update`。
 * `folder_id (str, optional):` フォルダID。
 * `name (str, optional):` フォルダ名。
 * `parent_id (str, optional):` 親フォルダID。
