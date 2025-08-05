@@ -11,7 +11,6 @@ alias_paths:
   - /docs/box-content-explorer
   - /docs/content-explorer
 ---
-
 # Content Explorer - metadata view
 
 With Content Explorer you can also display files based on their metadata.

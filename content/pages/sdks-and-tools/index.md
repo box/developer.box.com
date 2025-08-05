@@ -133,6 +133,16 @@ this is what you are looking for, have a look at the
 [Box SDK for Salesforce][sf-sdk].
 </Message>
 
+## Box CLI
+
+Box CLI is a user-friendly command line tool which
+allows both technical and non-technical users to
+leverage Box API to perform routine or bulk actions.
+
+| Platform                          | Maintained?  | API Parity |
+| --------------------------------- | ----------- | ------- |
+| [CLI][cli]                        | Yes         | Full    |
+
 ## Official UI Libraries
 
 Extend your application with pre-built UI components to browse, share, and

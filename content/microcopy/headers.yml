@@ -136,6 +136,7 @@ primary:
       // url: The URL to the developer signup - DO NOT TRANSLATE
       url: https://account.box.com/signup/n/developer#ty9l3
 
+  // featured: Featured section of the documentation menu
   featured:
     tag:
       text: New
