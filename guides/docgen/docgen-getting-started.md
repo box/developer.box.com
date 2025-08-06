@@ -75,6 +75,32 @@ After you generate the token, you can use it in cURL
 or other clients, such as [Postman][postman], to make
 calls.
 
+## Using webhooks
+
+You can create webhooks to monitor Doc Gen events and automate your business process or workflow.
+
+Follow the instructions for [adding webhooks][webhooks]. Your content type is your Doc Gen template file or folder.
+
+The supported [events][events] are:
+
+* `DOCGEN_DOCUMENT_GENERATION_STARTED`
+* `DOCGEN_DOCUMENT_GENERATION_SUCCEEDED` 
+* `DOCGEN_DOCUMENT_GENERATION_FAILED`
+
+![Doc Gen event triggers](./images/docgen-triggers.png)
+
+Information that is posted in a notification:
+
+* Trigger name.
+* Webhook trigger timestamp.
+* Template file ID.
+* Template file version ID.
+* Template file name.
+* Destination folder.
+* Generated file ID (if the document generation process succeeds).
+* Output type (DOCX or PDF).
+* Reason (if the document generation process fails).
+
 [token]: g://authentication/tokens/developer-tokens
 [createapps]: g://applications/app-types/platform-apps
 [postman]: g://tooling/postman
@@ -82,3 +108,5 @@ calls.
 [template-addin]: https://support.box.com/hc/en-us/articles/36587535449747-Installing-Box-Doc-Gen-Add-in
 [template-tags]: https://support.box.com/hc/en-us/articles/36151895655059-Creating-A-Box-Doc-Gen-Template-Manually
 [json-template]: https://support.box.com/hc/en-us/articles/36148012877843-Creating-a-Box-Doc-Gen-Template-using-JSON-data
+[webhooks]: g://webhooks/v2/create-v2/
+[events]: g://webhooks/triggers
