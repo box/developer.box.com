@@ -12,7 +12,7 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 24
+total_steps: 22
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/ai-models/openai-gpt-o3-model-card
@@ -254,60 +254,6 @@ Available
 <strong style="background-color: #f8d59b">
 
 Premium
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="gemini" title="google__gemini_2_5_pro_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-preview-model-card">
-
-Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-Chat
-
-</strong>
-
-<strong style="background-color: #607079">
-
-Deprecated
-
-</strong>
-
-<strong style="background-color: #f8d59b">
-
-Premium
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="gemini" title="google__gemini_2_5_flash_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-flash-preview-model-card">
-
-Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-Chat
-
-</strong>
-
-<strong style="background-color: #607079">
-
-Deprecated
-
-</strong>
-
-<strong style="background-color: #fdfad8">
-
-Standard
 
 </strong>
 
