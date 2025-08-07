@@ -49,7 +49,7 @@ The following file types are supported by the representation API.
 
 | File Type | PDF Support? | Thumbnails? | Text? |
 | --------- | ------------ | ----------- | ----- |
-| `.dwg` | No | No | No |
+| `.dwg` | Yes | Yes | No |
 
 ## Documents
 
