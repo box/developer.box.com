@@ -404,14 +404,6 @@
   "footer.categories.company.links.github_community.text": "Community GitHub",
   // Link to the github community org
   "footer.categories.company.links.github_community.url": "https://github.com/box-community",
-  // Text for a link to the AI Dev Zone
-  "footer.categories.company.links.ai_dev_zone.text": "AI Developer Zone",
-  // Link to the AI Dev Zone
-  "footer.categories.company.links.ai_dev_zone.url": "/ai-dev-zone/",
-  // Text for a link to the sample code catalog
-  "footer.categories.company.links.sample_code_catalog.text": "Community GitHub",
-  // Link to the sample code catalog
-  "footer.categories.company.links.sample_code_catalog.url": "/sample-code/",
   // A title for a footer section on our tooling options
   "footer.categories.tooling.title": "Tooling",
   // Text for link to the TypeScript SDK (Generated)
@@ -462,28 +454,16 @@
   "footer.categories.tooling.links.skills_kit.text": "Box Skills Kit",
   // link to the Box Skills Kit
   "footer.categories.tooling.links.skills_kit.url": "https://github.com/box/box-skills-kit-nodejs",
-  // A title for a footer section showing the files available for LLMs
-  "footer.categories.llms.title": "LLM",
-  // Text for link to our llms-full.txt file
-  "footer.categories.llms.links.llms_full.text": "llms-full.txt",
-  // Link to our llms-full.txt file
-  "footer.categories.llms.links.llms_full.url": "/llms-full.txt/",
-  // Text for link to our Guides llms.txt file
-  "footer.categories.llms.links.guides_llms.text": "Guides llms.txt",
-  // Link to our Guides llms.txt file
-  "footer.categories.llms.links.guides_llms.url": "/guides/llms.txt/",
-  // Text for link to our API Reference llms.txt file
-  "footer.categories.llms.links.api_reference_llms.text": "API Reference llms.txt",
-  // Link to our API Reference llms.txt file
-  "footer.categories.llms.links.api_reference_llms.url": "/reference/llms.txt/",
-  // Text for link to our Platform llms.txt file
-  "footer.categories.llms.links.platform_llms.text": "Platform llms.txt",
-  // Link to our Platform llms.txt file
-  "footer.categories.llms.links.platform_llms.url": "/platform/llms.txt/",
-  // Text for link to our AI Dev Zone llms.txt file
-  "footer.categories.llms.links.ai_dev_zone_llms.text": "AI Dev Zone llms.txt",
-  // Link to our AI Developer Zone llms.txt file
-  "footer.categories.llms.links.ai_dev_zone_llms.url": "/ai-dev-zone/llms.txt/",
+  // A title for a footer section on our available code samples
+  "footer.categories.code.title": "Samples",
+  // Text for link to our code samples
+  "footer.categories.code.links.samples.text": "Platform Samples",
+  // Link to our code samples
+  "footer.categories.code.links.samples.url": "https://github.com/box/samples",
+  // Text for link to our Box skills code samples
+  "footer.categories.code.links.skills_samples.text": "Skills Samples",
+  // Link to our Box skills code samples
+  "footer.categories.code.links.skills_samples.url": "https://github.com/box-community?utf8=%E2%9C%93&q=sample-*-skills&type=&language=",
   // A title for a footer section on our support channels
   "footer.categories.support.title": "Support",
   // Text for link to go to our support page
