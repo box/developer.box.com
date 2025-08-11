@@ -103,23 +103,15 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #fdfad8">Standard</strong>
 			</div>
 		</Tile>
-		<Tile type="gemini" title="google__gemini_2_5_pro_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-preview-model-card">
-		Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
+		<Tile type="gemini" title="google__gemini_2_5_pro" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-model-card">
+		Gemini multimodal model with a 1 million token context window and advanced reasoning capabilities.
 			<div>
 				<strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #f8d59b">Premium</strong>
 			</div>
 		</Tile>
-		<Tile type="gemini" title="google__gemini_2_5_flash_preview" href="/guides/box-ai/ai-models/google-gemini-2-5-flash-preview-model-card">
-			Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
-			<div>
-				<strong style="background-color: #e8e8e8">Chat</strong>
-				<strong style="background-color: #e1ffe7">Available</strong>
-				<strong style="background-color: #fdfad8">Standard</strong>
-			</div>
-		</Tile>
-		<Tile type="gemini" title="google__gemini_2_0_flash_001" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-001-model-card">
+	<Tile type="gemini" title="google__gemini_2_0_flash_001" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-001-model-card">
 		Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
 		<div>
 		<strong style="background-color: #e8e8e8">Chat</strong>
