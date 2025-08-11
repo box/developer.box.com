@@ -50,15 +50,15 @@ categories:
 
       ai_dev_zone:
         // text: Text for a link to the AI Dev Zone
-        text: AI Dev Zone
+        text: AI Developer Zone
         // url: Link to the AI Dev Zone
-        url: /ai-dev-zone
+        url: /ai-dev-zone/
 
       sample_code_catalog:
         // text: Text for a link to the sample code catalog
         text: Community GitHub
         // url: Link to the sample code catalog
-        url: /sample-code
+        url: /sample-code/
 
   tooling:
     // title: |-
@@ -148,31 +148,31 @@ categories:
         // text: Text for link to our llms-full.txt file
         text: llms-full.txt
         // url: Link to our llms-full.txt file
-        url: /llms-full.txt
+        url: /llms-full.txt/
 
       guides_llms:
         // text: Text for link to our Guides llms.txt file
         text: Guides llms.txt
         // url: Link to our Guides llms.txt file
-        url: /guides/llms.txt
+        url: /guides/llms.txt/
 
       api_reference_llms:
         // text: Text for link to our API Reference llms.txt file
         text: API Reference llms.txt
         // url: Link to our API Reference llms.txt file
-        url: /reference/llms.txt
+        url: /reference/llms.txt/
 
       platform_llms:
         // text: Text for link to our Platform llms.txt file
         text: Platform llms.txt
         // url: Link to our Platform llms.txt file
-        url: /platform/llms.txt
+        url: /platform/llms.txt/
 
       ai_dev_zone_llms:
         // text: Text for link to our AI Dev Zone llms.txt file
         text: AI Dev Zone llms.txt
-        // url: Link to our AI Dev Zone llms.txt file
-        url: /ai-dev-zone/llms.txt
+        // url: Link to our AI Developer Zone llms.txt file
+        url: /ai-dev-zone/llms.txt/
 
   support:
     // title: |-
