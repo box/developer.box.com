@@ -10,6 +10,7 @@ related_guides:
   - box-ai/ai-tutorials/extract-metadata
 alias_paths:
   - guides/box-ai/extract-metadata-structured
+  - guides/extract-metadata
 category_id: box-ai
 subcategory_id: box-ai/ai-tutorials
 is_index: false
