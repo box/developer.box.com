@@ -75,7 +75,7 @@ After you generate the token, you can use it in cURL
 or other clients, such as [Postman][postman], to make
 calls.
 
-## Using webhooks
+## Use webhooks
 
 You can create webhooks to monitor Doc Gen events and automate your business process or workflow.
 
