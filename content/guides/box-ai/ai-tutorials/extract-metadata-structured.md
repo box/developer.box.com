@@ -10,6 +10,7 @@ related_guides:
   - box-ai/ai-tutorials/extract-metadata
 alias_paths:
   - guides/box-ai/extract-metadata-structured
+  - guides/extract-metadata
 ---
 
 # Extract metadata from file (structured)
