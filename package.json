@@ -56,7 +56,7 @@
   "dependencies": {
     "@apidevtools/json-schema-ref-parser": "^11.7.2",
     "alex": "^11.0.1",
-    "axios": "^1.7.8",
+    "axios": "^1.8.2",
     "comment-json": "^4.2.5",
     "concurrently": "^9.1.0",
     "dot-prop": "^9.0.0",
