@@ -63,31 +63,31 @@ Box Doc Gen APIを使用してドキュメントを生成するには、Box Doc 
 
 詳細については、[開発者トークン][token]を参照してください。トークンを生成したら、cURLや他のクライアント ([Postman][postman]など) で使用してコールを実行できます。
 
-## Use webhooks
+## Webhookの使用
 
-You can create webhooks to monitor Doc Gen events and automate your business process or workflow.
+Webhookを作成して、Doc Genイベントを監視したり、ビジネスプロセスやワークフローを自動化したりできます。
 
-Follow the instructions for [adding webhooks][webhooks]. Your content type is your Doc Gen template file or folder.
+[Webhookの追加][webhooks]手順に従います。コンテンツタイプは、Doc Genテンプレートファイルまたはフォルダです。
 
-The supported [events][events] are:
+サポートされている[イベント][events]は以下のとおりです。
 
 * `DOCGEN_DOCUMENT_GENERATION_STARTED`
 * `DOCGEN_DOCUMENT_GENERATION_SUCCEEDED` 
 * `DOCGEN_DOCUMENT_GENERATION_FAILED`
 
-![Doc Gen event triggers](./images/docgen-triggers.png)
+![Doc Genのイベントトリガー](./images/docgen-triggers.png)
 
-Information that is posted in a notification:
+通知に掲載される情報は以下のとおりです。
 
-* Trigger name.
-* Webhook trigger timestamp.
-* Template file ID.
-* Template file version ID.
-* Template file name.
-* Destination folder.
-* Generated file ID (if the document generation process succeeds).
-* Output type (DOCX or PDF).
-* Reason (if the document generation process fails).
+* トリガー名
+* Webhookトリガーのタイムスタンプ
+* テンプレートファイルID
+* テンプレートファイルバージョンID
+* テンプレートファイル名
+* 保存先フォルダ
+* 生成されたファイルのID (ドキュメント生成プロセスが成功した場合)
+* 出力タイプ (DOCXまたはPDF)
+* 理由 (ドキュメント生成プロセスが失敗した場合)
 
 [token]: g://authentication/tokens/developer-tokens
 

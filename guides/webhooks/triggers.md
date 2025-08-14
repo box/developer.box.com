@@ -40,9 +40,9 @@ fullyTranslated: true
 | `COMMENT.CREATED`                      | コメントオブジェクトが作成される。                                           | はい         | はい         |
 | `COMMENT.UPDATED`                      | コメントオブジェクトが編集される。                                           | はい         | はい         |
 | `COMMENT.DELETED`                      | コメントオブジェクトが削除される。                                           | はい         | はい         |
-| `DOCGEN_DOCUMENT_GENERATION_FAILED`    | Doc Gen failed to generate a document.                      | はい         | いいえ        |
-| `DOCGEN_DOCUMENT_GENERATION_STARTED`   | Doc Gen started to create a document.                       | はい         | いいえ        |
-| `DOCGEN_DOCUMENT_GENERATION_SUCCEEDED` | Doc Gen succeeded to create a document.                     | はい         | いいえ        |
+| `DOCGEN_DOCUMENT_GENERATION_FAILED`    | Doc Genがドキュメントの生成に失敗しました。                                   | はい         | いいえ        |
+| `DOCGEN_DOCUMENT_GENERATION_STARTED`   | Doc Genがドキュメントの作成を開始しました。                                   | はい         | いいえ        |
+| `DOCGEN_DOCUMENT_GENERATION_SUCCEEDED` | Doc Genがドキュメントの作成に成功しました。                                   | はい         | いいえ        |
 | `FILE.UPLOADED`                        | ファイルがこのフォルダにアップロードまたは移動される。                                 | いいえ        | はい         |
 | `FILE.PREVIEWED`                       | ファイルがプレビューされる。                                              | はい         | はい         |
 | `FILE.DOWNLOADED`                      | ファイルがダウンロードされる。                                             | はい         | はい         |
