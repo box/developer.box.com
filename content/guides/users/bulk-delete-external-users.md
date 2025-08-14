@@ -23,3 +23,7 @@ To remove the external users, call the
 <Samples id="post_external_users_submit_delete_job" />
 
 This job runs in the background, and sends a completion report listing deletion status for each user when it's finished.
+
+<Message type='notice'>
+When you delete external users, their pending collaboration invites are not deleted. 
+</Message>
