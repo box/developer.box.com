@@ -12,10 +12,10 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 22
+total_steps: 23
 sibling_id: box-ai
 parent_id: box-ai
-next_page_id: box-ai/ai-models/openai-gpt-o3-model-card
+next_page_id: box-ai/ai-models/openai-gpt-5-reasoning-alpha-model-card
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/index.md
@@ -74,6 +74,33 @@ Models offered in **Beta** mode have not been fully performance-tested at scale 
 Box AI is powered by the following AI models. These models are integrated with Box AI to facilitate various use cases while adhering to enterprise grade standards. Below, you’ll find information about each model, including its capabilities, intended applications, and applicable usage guidelines.
 
 <TileGrid rows="2">
+
+<Tile type="gpt" title="openai__gpt_5_reasoning_alpha" href="/guides/box-ai/ai-models/openai-gpt-5-reasoning-alpha-model-card">
+
+A multimodal model with advanced reasoning and long-context understanding.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Chat
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+Available
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
+
+</strong>
+
+</div>
+
+</Tile>
 
 <Tile type="gpt" title="azure__openai__gpt_4_1_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card">
 
