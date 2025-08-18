@@ -14,10 +14,10 @@ subcategory_id: null
 is_index: false
 id: users/delete-user
 type: guide
-total_steps: 3
+total_steps: 4
 sibling_id: users
 parent_id: users
-next_page_id: users
+next_page_id: users/bulk-delete-external-users
 previous_page_id: users/create-app-user
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/users/delete-user.md
