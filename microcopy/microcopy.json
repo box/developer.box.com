@@ -448,22 +448,10 @@
   "footer.categories.llms.links.llms_full.text": "llms-full.txt",
   // Link to our llms-full.txt file
   "footer.categories.llms.links.llms_full.url": "/llms-full.txt",
-  // Text for link to our Guides llms.txt file
-  "footer.categories.llms.links.guides_llms.text": "Guides llms.txt",
-  // Link to our Guides llms.txt file
-  "footer.categories.llms.links.guides_llms.url": "/guides/llms.txt",
-  // Text for link to our API Reference llms.txt file
-  "footer.categories.llms.links.api_reference_llms.text": "API Reference llms.txt",
-  // Link to our API Reference llms.txt file
-  "footer.categories.llms.links.api_reference_llms.url": "/reference/llms.txt",
-  // Text for link to our Platform llms.txt file
-  "footer.categories.llms.links.platform_llms.text": "Platform llms.txt",
-  // Link to our Platform llms.txt file
-  "footer.categories.llms.links.platform_llms.url": "/platform/llms.txt",
-  // Text for link to our AI Dev Zone llms.txt file
-  "footer.categories.llms.links.ai_dev_zone_llms.text": "AI Developer Zone llms.txt",
-  // Link to our AI Developer Zone llms.txt file
-  "footer.categories.llms.links.ai_dev_zone_llms.url": "/ai-dev-zone/llms.txt",
+  // Text for link to our llms.txt file
+  "footer.categories.llms.links.llms_links.text": "llms.txt",
+  // Link to our llms.txt file
+  "footer.categories.llms.links.llms_links.url": "/llms.txt",
   // A title for a footer section on our support channels
   "footer.categories.support.title": "Support",
   // Text for link to go to our support page
