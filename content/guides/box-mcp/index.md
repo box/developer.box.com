@@ -23,9 +23,6 @@ Check the detailed guides on both types of Box MCP Servers, as the level of the 
 <TileGrid rows="2">
   <Tile type="mcp" title="Remote Box MCP Server" href="/guides/box-mcp/remote">
     Enable the remote Box MCP Server in the Admin Console. It is hosted directly in Box.
-    <div>
-    <strong style="background-color: #e1ffe7">Beta</strong>
-    </div>
   </Tile>
   <Tile type="mcp" title="Self-hosted Box MCP Server" href="/guides/box-mcp/self-hosted">
     An open source Box Developer community project. You can clone this Box MCP Sever and host it on your local machine.
