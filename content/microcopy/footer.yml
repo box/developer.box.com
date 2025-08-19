@@ -60,6 +60,18 @@ categories:
         // url: Link to the sample code catalog
         url: /sample-code/
 
+      ai_dev_zone:
+        // text: Text for a link to the AI Dev Zone
+        text: AI Developer Zone
+        // url: Link to the AI Dev Zone
+        url: /ai-dev-zone/
+
+      sample_code_catalog:
+        // text: Text for a link to the sample code catalog
+        text: Community GitHub
+        // url: Link to the sample code catalog
+        url: /sample-code/
+
   tooling:
     // title: |-
       A title for a footer section on our tooling options
