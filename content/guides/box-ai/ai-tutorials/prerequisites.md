@@ -86,4 +86,4 @@ calls.
 [postman]: g://tooling/postman
 [form]: https://forms.gle/Nsh3TwM3W8qg4U35A
 [authorization]: g://authorization
-[reauthorization]: g://authorization/custom-app-approval#re-authorization-on-changes
+[reauthorization]: g://authorization/platform-app-approval#re-authorization-on-changes
