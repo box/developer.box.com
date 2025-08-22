@@ -74,7 +74,7 @@ and view Platform Insights:
 
 [token]: g://authentication/tokens/developer-tokens
 [authorization]: g://authorization
-[enablement]: g://authorization/custom-app-approval#user-authentication-apps
+[enablement]: g://authorization/platform-app-approval#user-authentication-apps
 [select]: g://applications/app-types/select
 [report]: g://api-calls/permissions-and-errors/app-diagnostics-report
 [clientcredentials]: g://authentication/client-credentials

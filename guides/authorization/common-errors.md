@@ -10,7 +10,7 @@ subcategory_id: null
 is_index: false
 id: authorization/common-errors
 type: guide
-total_steps: 5
+total_steps: 4
 sibling_id: authorization
 parent_id: authorization
 next_page_id: authorization/custom-skill-approval

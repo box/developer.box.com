@@ -220,7 +220,7 @@ require enablement.
 [serviceaccount]: page://platform/user-types/#service-account
 [appusers]: page://platform/user-types/#app-user
 [mu]: page://platform/user-types/#managed-users
-[auth]: g://authorization/custom-app-approval
+[auth]: g://authorization/platform-app-approval
 [oauth]: g://authentication/oauth2
 [jwt]: g://authentication/jwt
 [ccg]: g://authentication/client-credentials

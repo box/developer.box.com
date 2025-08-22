@@ -93,4 +93,4 @@ calls.
 [createapps]: g://applications/app-types/platform-apps
 [postman]: g://tooling/postman
 [authorization]: g://authorization
-[reauthorization]: g://authorization/custom-app-approval#re-authorization-on-changes
+[reauthorization]: g://authorization/platform-app-approval#re-authorization-on-changes

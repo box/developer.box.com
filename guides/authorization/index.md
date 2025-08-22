@@ -1,7 +1,7 @@
 ---
 rank: 25
 required_guides:
-  - authorization/custom-app-approval
+  - authorization/platform-app-approval
   - authorization/limited-access-approval
   - authorization/custom-skill-approval
 category_id: authorization
@@ -9,7 +9,7 @@ subcategory_id: null
 is_index: true
 id: authorization
 type: guide
-total_steps: 5
+total_steps: 4
 sibling_id: guides
 parent_id: guides
 next_page_id: ''
