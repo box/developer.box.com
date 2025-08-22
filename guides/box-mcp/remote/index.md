@@ -21,18 +21,12 @@ fullyTranslated: true
 
 リモートBox MCPサーバーを使用すると、サードパーティ製のAIシステムを安全にBoxに接続してコンテンツを操作することができます。
 
-<Message type="notice">
-
-Box MCPサーバーは、BoxのMain Beta Agreementに従い提供されるため、利用可能な機能はいつでも変更される可能性があります。Box MCPサーバーは、Enterprise PlusまたはEnterprise Advancedプランをご利用のお客様が利用できます。
-
-</Message>
-
 ## あらかじめ定義されたBox MCPサーバーにアクセスして管理する
 
 1. Box管理コンソールのサイドバーにある \[**統合**] をクリックします。 
 2. \[統合] ウィンドウで \[**Box統合とクライアント**] をクリックします。
 3. \[**統合の個別管理**] までスクロールします。
-4. あらかじめ定義されたBox MCPサーバー (**Box MCP Server for Copilot Studio (ベータ)** など) を検索します。 
+4. Search for predefined Box MCP Server, for example the **Box MCP Server for Copilot Studio**. 
 5. 選択した統合にカーソルを合わせ、\[**構成**] をクリックします。
 6. \[保存] をクリックします。
 
@@ -79,7 +73,7 @@ response = await client.beta.messages.create(
 
 ### AnthropicのMessages API
 
-リモートBox MCPサーバーをAnthropicのMessages API (ベータ版) と関連付けます。[こちらのサンプルチャットボットプロジェクト](https://github.com/box-community/remote-box-mcp-anthropic)を複製すると、すぐに作業を開始できます。これにより、Anthropicモデルとの会話が可能になり、BoxのリモートMCPサーバーが提供するツールにアクセスできます。このチャットボットは、ターミナルで実行され、コンテキストに対応した応答の会話履歴を維持し、非同期操作には`asyncio`を使用します。
+Connect the remote Box MCP Server with Anthropic's Messages API. Clone [this sample chat bot project](https://github.com/box-community/remote-box-mcp-anthropic) to get started quickly. It allows you to have a conversation with an Anthropic model, which has access to tools provided by the Box remote MCP server. The chatbot runs in a terminal, maintains conversation history for context-aware responses, and uses `asyncio` for asynchronous operation.
 
 ### Copilot Studio
 

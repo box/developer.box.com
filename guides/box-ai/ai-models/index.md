@@ -78,7 +78,7 @@ Box AIには以下のモデルが搭載されています。Box AIと統合さ�
 
 <Tile type="gpt" title="openai__gpt_5_reasoning_alpha" href="/guides/box-ai/ai-models/openai-gpt-5-reasoning-alpha-model-card">
 
-A multimodal model with advanced reasoning and long-context understanding.
+高度な推論機能と長いコンテキストの理解を備えたマルチモーダルモデル。
 
 <div>
 

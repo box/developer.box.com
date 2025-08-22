@@ -25,11 +25,11 @@ fullyTranslated: true
 
 <Header>
 
-Box AI API agent configurator
+Box AI APIエージェントの構成ツール
 
 </Header>
 
-Choose from multiple AI models from leading providers, all accessible through a single, easy-to-use platform. Customize Box AI API parameters and fine-tune LLM parameters.
+主要プロバイダが提供する複数のAIモデルから選択しましょう。すべてのモデルには、使いやすい1つのプラットフォームからアクセス可能です。Box AI APIのパラメータをカスタマイズしたり、LLMのパラメータを微調整したりできます。
 
 </HeroImage>
 
@@ -39,21 +39,21 @@ Choose from multiple AI models from leading providers, all accessible through a 
 
 <TileGrid rows="3">
 
-<Tile type="code-new" title="Visual Configuration">
+<Tile type="code-new" title="視覚的な構成">
 
-Build complex AI configurations with our intuitive form-based interface.
-
-</Tile>
-
-<Tile type="ai" title="Real-time preview">
-
-See your JSON configuration update in real-time as you make changes.
+フォームベースの直感的なインターフェースを使用した、AIの複雑な構成が可能です。
 
 </Tile>
 
-<Tile type="export" title="Export and share">
+<Tile type="ai" title="リアルタイムのプレビュー">
 
-Copy configuration and paste it directly in your project.
+変更に合わせて、リアルタイムでJSON構成の更新を確認できます。
+
+</Tile>
+
+<Tile type="export" title="エクスポートと共有">
+
+構成をコピーし、プロジェクトに直接貼り付けることができます。
 
 </Tile>
 

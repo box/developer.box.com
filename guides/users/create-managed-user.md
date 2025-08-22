@@ -15,7 +15,7 @@ subcategory_id: null
 is_index: false
 id: users/create-managed-user
 type: guide
-total_steps: 3
+total_steps: 4
 sibling_id: users
 parent_id: users
 next_page_id: users/create-app-user

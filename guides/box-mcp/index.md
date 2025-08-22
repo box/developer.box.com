@@ -39,16 +39,6 @@ Box MCPサーバーには2種類あります。
 
 管理コンソールでリモートBox MCPサーバーを有効にします。これはBoxで直接ホストされています。
 
-<div>
-
-<strong style="background-color: #e1ffe7">
-
-ベータ
-
-</strong>
-
-</div>
-
 </Tile>
 
 <Tile type="mcp" title="セルフホストBox MCPサーバー" href="/guides/box-mcp/self-hosted">

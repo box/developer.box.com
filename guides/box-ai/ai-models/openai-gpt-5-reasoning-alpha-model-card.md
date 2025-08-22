@@ -22,7 +22,7 @@ fullyTranslated: true
 ---
 # OpenAI GPT-5
 
-**OpenAI GPT-5** is a multimodal model with advanced reasoning and long-context understanding.
+**OpenAI GPT-5**は、高度な推論機能と長いコンテキストの理解を備えたマルチモーダルモデルです。
 
 ## モデルの詳細
 
@@ -33,7 +33,7 @@ fullyTranslated: true
 | APIモデル名       | `openai__gpt_5_reasoning_alpha` | [Box AI APIでのモデルの上書き][overrides]に使用されるモデルの名前。APIを動作させるには、ユーザーがこの名前を正確に指定する必要があります。 |
 | ホスティングレイヤー    | **OpenAI**                      | LLMを安全にホストする、信頼できる組織。                                                              |
 | モデルプロバイダ      | **OpenAI**                      | このモデルを提供する組織。                                                                      |
-| リリース日         | **TBD**                         | モデルのリリース日。                                                                         |
+| リリース日         | **August 7th, 2025**            | モデルのリリース日。                                                                         |
 | ナレッジカットオフ日    | **2024年10月**                    | モデルが情報の更新を取得しなくなった日付。                                                              |
 | 入力コンテキストウィンドウ | **100万トークン**                    | 入力コンテキストウィンドウでサポートされるトークン数。                                                        |
 | 出力トークンの最大数    | **100,000トークン**                 | 1回のリクエストでモデルが生成できるトークン数。                                                           |
@@ -42,8 +42,8 @@ fullyTranslated: true
 
 ## その他のドキュメント
 
-For additional information, see [official OpenAI GPT-5 documentation][openai-gpt-5-model].
+詳細については、[OpenAI GPT-5の公式ドキュメント][openai-gpt-5-model]を参照してください。
 
-[openai-gpt-5-model]: https://openai.com/index/introducing-gpt-4-5/
+[openai-gpt-5-model]: https://openai.com/index/introducing-gpt-5/
 
 [overrides]: g://box-ai/ai-agents/ai-agent-overrides
