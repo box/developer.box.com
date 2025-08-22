@@ -304,7 +304,7 @@ would need to turn on this switch.
 </Next>
 
 [dc]: https://app.box.com/developers/console
-[auth]: g://authorization/custom-app-approval
+[auth]: g://authorization/platform-app-approval
 [scopes]: g://api-calls/permissions-and-errors/scopes
 [collabapi]: e://post-collaborations
 [getuser]: e://get-users-me
