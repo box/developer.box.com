@@ -3,7 +3,7 @@ rank: 4
 related_endpoints:
   - post_files_id_metadata_global_boxSkillsCards
 related_guides:
-  - authorization/custom-app-approval
+  - authorization/platform-app-approval
   - authorization/limited-access-approval
 required_guides:
   - authorization
@@ -14,7 +14,7 @@ subcategory_id: null
 is_index: false
 id: authorization/custom-skill-approval
 type: guide
-total_steps: 5
+total_steps: 4
 sibling_id: authorization
 parent_id: authorization
 next_page_id: authorization

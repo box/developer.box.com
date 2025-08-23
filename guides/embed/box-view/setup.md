@@ -37,7 +37,7 @@ Box Viewでは、**アプリトークン認証**と呼ばれる認証メカニ�
 
 <Message type="warning">
 
-アプリトークンアプリは、Box管理者による承認が必要です。承認されない場合は、APIリクエストの送信時に権限エラーが発生します。アプリ承認を受けるには、[このガイド](guide://authorization/custom-app-approval)に従ってください。
+アプリトークンアプリは、Box管理者による承認が必要です。承認されない場合は、APIリクエストの送信時に権限エラーが発生します。アプリ承認を受けるには、[このガイド](guide://authorization/platform-app-approval)に従ってください。
 
 </Message>
 

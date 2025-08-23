@@ -2,7 +2,7 @@
 rank: 2
 related_endpoints: []
 related_guides:
-  - authorization/custom-app-approval
+  - authorization/platform-app-approval
   - authorization/custom-skill-approval
 required_guides:
   - authorization
@@ -14,11 +14,11 @@ subcategory_id: null
 is_index: false
 id: authorization/limited-access-approval
 type: guide
-total_steps: 5
+total_steps: 4
 sibling_id: authorization
 parent_id: authorization
 next_page_id: authorization/common-errors
-previous_page_id: authorization/custom-app-approval
+previous_page_id: authorization/platform-app-approval
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authorization/limited-access-approval.md
 fullyTranslated: true

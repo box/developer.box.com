@@ -94,7 +94,7 @@ Boxにログインし、[開発者コンソール][devconsole]に移動して、
 
 \[**確認して送信**] をクリックして、承認を得るためにBox Enterprise管理者にメールを送信します。このプロセスの詳細については、[承認ガイド][app-auth]を参照してください。
 
-<CTA to="g://authorization/custom-app-approval">
+<CTA to="g://authorization/platform-app-approval">
 
 Platformアプリケーションの承認方法を確認する
 

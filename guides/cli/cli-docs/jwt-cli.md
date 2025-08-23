@@ -205,7 +205,7 @@ Notification Email: []
 
 [scopes]: g://api-calls/permissions-and-errors/scopes
 
-[ag]: g://authorization/custom-app-approval
+[ag]: g://authorization/platform-app-approval
 
 <!-- i18n-enable localize-links -->
 

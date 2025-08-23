@@ -127,4 +127,4 @@ Grant credentials are invalid [400 Bad Request] invalid_grant - Grant credential
 
 [aa]: g://authentication/client-credentials/client-credentials-setup/#application-access
 
-[reauth]: g://authorization/custom-app-approval#re-authorization-on-changes
+[reauth]: g://authorization/platform-app-approval#re-authorization-on-changes

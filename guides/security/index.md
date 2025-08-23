@@ -177,7 +177,7 @@ Platformアプリケーションは、公開アプリケーションと未公開
 
 [mu]: page://platform/user-types/#managed-users
 
-[auth]: g://authorization/custom-app-approval
+[auth]: g://authorization/platform-app-approval
 
 [oauth]: g://authentication/oauth2
 

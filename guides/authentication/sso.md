@@ -30,7 +30,7 @@ fullyTranslated: true
 
 ## クライアント側認証を使用するPlatformアプリ
 
-[OAuth 2.0][oauth2]を使用するよう構成された[Platformアプリ][custom_app]でユーザーが認証されると、Boxは、企業でSSOを使用するよう構成されているかどうかを検出します。SSOを使用するよう構成されている場合、ユーザーはブラウザにリダイレクトされ、企業の構成済みのSSOログイン画面が表示されます。
+[OAuth 2.0][oauth2]を使用するよう構成された[Platformアプリ][platform_app]でユーザーが認証されると、Boxは、企業でSSOを使用するよう構成されているかどうかを検出します。SSOを使用するよう構成されている場合、ユーザーはブラウザにリダイレクトされ、企業の構成済みのSSOログイン画面が表示されます。
 
 ### SSOの有効化とSSO必須モード
 
@@ -51,7 +51,7 @@ SSOが必須モードに設定されている企業では、SSOからユーザ�
 
 ## サーバー側認証を使用するPlatformアプリ
 
-[JWT][jwt]または[クライアント資格情報許可][ccg]を使用する[Platformアプリ][custom_app]および[アプリトークン][app_token]認証を使用する[アクセス制限付きアプリ][la-app]では、Boxでの認証にSSOは使用されません。
+[JWT][jwt]または[クライアント資格情報許可][ccg]を使用する[Platformアプリ][platform_app]および[アプリトークン][app_token]認証を使用する[アクセス制限付きアプリ][la-app]では、Boxでの認証にSSOは使用されません。
 
 サーバー側認証を使用するPlatformアプリは、Boxとの通信にサーバー間のAPIコールのみを使用します。このシナリオでのエンドユーザーの認証方法は、Boxではなくアプリケーションが決定します。
 
@@ -73,7 +73,7 @@ Skillsを使用した場合でも、スキルイベントをトリガーする�
 
 [mu]: page://platform/user-types/#managed-users
 
-[admin-approval]: g://authorization/custom-app-approval
+[admin-approval]: g://authorization/platform-app-approval
 
 [jwt]: g://authentication/jwt
 
@@ -85,7 +85,7 @@ Skillsを使用した場合でも、スキルイベントをトリガーする�
 
 [app_token]: g://authentication/app-token
 
-[custom_app]: g://applications/app-types/platform-apps
+[platform_app]: g://applications/app-types/platform-apps
 
 [custom_skills]: g://applications/app-types/custom-skills
 

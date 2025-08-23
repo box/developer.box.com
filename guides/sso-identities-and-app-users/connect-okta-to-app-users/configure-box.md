@@ -65,7 +65,7 @@ Box APIの呼び出しに使用できる新しいBoxアプリケーションを�
 
 </Message>
 
-アプリケーションを社内で承認してもらうには、[このガイド](g://authorization/custom-app-approval)に従ってください。
+アプリケーションを社内で承認してもらうには、[このガイド](g://authorization/platform-app-approval)に従ってください。
 
 </Choice>
 

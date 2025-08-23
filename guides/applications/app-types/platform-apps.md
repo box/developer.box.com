@@ -67,7 +67,7 @@ Platformアプリでは、[OAuth 2.0][oauth2]、[JWT][jwt]、および[クライ
 
 Platformアプリは、使用前に承認が必要になる場合があります。
 
-<CTA to="g://authorization/custom-app-approval">
+<CTA to="g://authorization/platform-app-approval">
 
 Platformアプリの承認方法を確認する
 

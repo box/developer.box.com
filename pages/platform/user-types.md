@@ -207,7 +207,7 @@ App Userには、管理コンソールの [\[ユーザーとグループ\] タ�
 
 [dc]: https://app.box.com/developers/console
 
-[auth]: g://authorization/custom-app-approval
+[auth]: g://authorization/platform-app-approval
 
 [scopes]: g://api-calls/permissions-and-errors/scopes
 

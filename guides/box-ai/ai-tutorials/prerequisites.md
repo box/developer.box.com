@@ -88,4 +88,4 @@ Box AI APIを操作するには、アプリケーションに`ai.readwrite`[ス�
 
 [authorization]: g://authorization
 
-[reauthorization]: g://authorization/custom-app-approval#re-authorization-on-changes
+[reauthorization]: g://authorization/platform-app-approval#re-authorization-on-changes

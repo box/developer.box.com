@@ -6,7 +6,7 @@ related_guides:
 required_guides:
   - authentication/select
   - applications/app-types/platform-apps
-  - authorization/custom-app-approval
+  - authorization/platform-app-approval
 related_resources: []
 alias_paths:
   - /docs/setting-up-a-jwt-app
@@ -165,7 +165,7 @@ Windowsユーザーは、[Cygwin][cygwin]パッケージをインストールし
 
 \[**確認して送信**] をクリックして、承認を得るためにBox Enterprise管理者にメールを送信します。このプロセスの詳細については、[アプリの承認に関するサポート記事][app-auth]を参照してください。
 
-<CTA to="g://authorization/custom-app-approval">
+<CTA to="g://authorization/platform-app-approval">
 
 Platformアプリケーションの承認方法を確認する
 

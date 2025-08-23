@@ -68,7 +68,7 @@ Platformインサイトにアクセスして表示するには、以下の権限
 
 [authorization]: g://authorization
 
-[enablement]: g://authorization/custom-app-approval#user-authentication-apps
+[enablement]: g://authorization/platform-app-approval#user-authentication-apps
 
 [select]: g://applications/app-types/select
 
