@@ -28,7 +28,7 @@ fullyTranslated: true
 ---
 # 項目からのメタデータの削除
 
-To remove an instance of a metadata template assigned to a file or folder, use the item's `id`, and the template's `templateKey` and `scope`.
+ファイルまたはフォルダに割り当てられたメタデータテンプレートのインスタンスを削除するには、項目の`id`に加え、テンプレートの`templateKey`と`scope`を使用します。
 
 <Message>
 
@@ -36,9 +36,9 @@ To remove an instance of a metadata template assigned to a file or folder, use t
 
 </Message>
 
-## Remove metadata from a file
+## ファイルからメタデータを削除する
 
-To delete an instance of a metadata template from a file, call the [`DELETE /files/:file_id/metadata/:templateKey/schema`][e_on_file] API endpoint.
+ファイルからメタデータテンプレートのインスタンスを削除するには、[`DELETE /files/:file_id/metadata/:templateKey/schema`][e_on_file] APIエンドポイントを呼び出します。
 
 <Samples id="delete_files_id_metadata_id_id">
 
@@ -46,9 +46,9 @@ To delete an instance of a metadata template from a file, call the [`DELETE /fil
 
 ファイルからインスタンスが正常に削除されている場合、このAPIは、レスポンスの本文がない`204 No Content` APIレスポンスを返します。
 
-## Remove metadata from a folder
+## フォルダからメタデータを削除する
 
-To delete an instance of a metadata template, call the [`DELETE /folders/:folder_id/metadata/:templateKey/schema`][e_on_folder] API endpoint.
+メタデータテンプレートのインスタンスを削除するには、[`DELETE /folders/:folder_id/metadata/:templateKey/schema`][e_on_folder] APIエンドポイントを呼び出します。
 
 <Samples id="delete_folders_id_metadata_id_id">
 

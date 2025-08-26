@@ -23,20 +23,20 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/users/bulk-delete-external-users.md
 fullyTranslated: true
 ---
-# Bulk delete external users
+# 外部ユーザーの一括削除
 
-You can remove up to 100 external users from your enterprise using API. This API endpoint removes access to all types of content you invited the listed external users to collaborate on.
+APIを使用して、企業から最大100件の外部ユーザーを削除できます。このAPIエンドポイントにより、リストの外部ユーザーをコラボレーションに招待したすべての種類のコンテンツへのアクセスが削除されます。
 
-To remove the external users, call the [`POST /external_users/post_external_users_submit_delete_job`][`POST /external_users/post_external_users_submit_delete_job`].
+外部ユーザーを削除するには、[`POST /external_users/post_external_users_submit_delete_job`][`POST /external_users/post_external_users_submit_delete_job`]を呼び出します。
 
 <Samples id="post_external_users_submit_delete_job">
 
 </Samples>
 
-This job runs in the background, and sends a completion report listing deletion status for each user when it's finished.
+このジョブはバックグラウンドで実行され、終了時に、各ユーザーの削除ステータスが記載されている完了レポートを送信します。
 
 <Message type="notice">
 
-When you delete external users, their pending collaboration invites are not deleted.
+外部ユーザーを削除しても、保留中のコラボレーションの招待は削除されません。
 
 </Message>

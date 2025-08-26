@@ -44,7 +44,7 @@ NPMまたはBox CDN経由でBox UI Elementsをインストールする方法は�
 
 ## Box Edit
 
-Box Edit requires additional setup in order to be integrated into a platform application. Box Edit uses the desktop application [Box Tools][tools] in order to open content locally.
+Box Editでは、Platformアプリケーションに統合するために追加の設定が必要です。Box Editは、デスクトップアプリケーションの[Box Tools][tools]を使用してコンテンツをローカルで開きます。
 
 * リクエストでは (`https`ドメインからの) セキュアな接続を使用する必要があります。
 * アプリケーションのドメインは、Box Toolsで許可する必要があります。手順については、[こちら][custom-domains]を参照してください。理想的なワークフローでは、Box Toolsもインストールされるインストーラにこれらの手順をバンドルします。
