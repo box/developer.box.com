@@ -465,15 +465,15 @@ const suggestedQuestions = [
 ];
 
 preview.show(<FILE_ID>, <TOKEN>, {
-   container: '.preview-container',
-   contentAnswersProps={
-     show: true,
-     isCitationsEnabled: true,
-     isMarkdownEnabled: true,
-     isResetChatEnabled: true,
-     suggestedQuestions
-       }
-   hasHeader: true,
+    container: '.preview-container',
+    contentAnswersProps={
+      show: true,
+      isCitationsEnabled: true,
+      isMarkdownEnabled: true,
+      isResetChatEnabled: true,
+      suggestedQuestions
+    }
+    hasHeader: true,
 });
 ```
 
@@ -495,7 +495,7 @@ To localize the `suggestedQuestions` properly, make sure that the prompts are tr
 import ContentPreview from 'box-ui-elements/es/elements/content-preview';
 import { IntlProvider } from "react-intl";
 
-const suggestedQuestions = [
+const questions = [
   {
     label: 'Key takeaways',
     prompt: 'What are the key takeaways from this document?',
@@ -521,11 +521,11 @@ export default () => {
               isCitationsEnabled: true,
               isMarkdownEnabled: true,
               isResetChatEnabled: true,
-              suggestedQuestions
+              suggestedQuestions: questions
             }}
             fileId={FILE_ID}
             token={TOKEN}
-            hasHeader=true
+            hasHeader="true"
          />
       </IntlProvider>
   );
