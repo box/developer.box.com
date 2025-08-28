@@ -85,7 +85,7 @@ The Enhanced Extract Agent is designed to extract key-value pairs from complex d
 You can [use the agent][eea-tutorial] through the Box AI API and turn unstructured data into structured output to use in production databases, third party systems, or analytics.
 
 The Enhanced Extract Agent uses Gemini 2.5 Pro to provide a chain-of-thought reasoning and returns both the extracted values and a reasoning behind
-its answer. 
+its answer.
 
 ### Configuration overrides
 
