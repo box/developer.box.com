@@ -7,12 +7,12 @@ required_guides: []
 
 # Remote Box MCP Server
 
-Remote MCP Server (https://modelcontextprotocol.io/introduction) is a standardized way for AI Agents to connect and interact with third-party applications like Box, enabling seamless access to content and AI capabilities across platforms. The Box MCP Server acts as a bridge that allows leading AI Agent platforms—such as Copilot Studio and Claude Enterprise — to securely query and utilize Box data and AI-powered tools without exposing raw file content. Through OAuth authorization, users can grant AI Agents controlled access to their Box accounts, enabling intelligent document handling, advanced search, and multi-file AI queries directly within these external AI environments.
+[Remote MCP Server](https://modelcontextprotocol.io/introduction) is a standardized way for AI Agents to connect and interact with third-party applications like Box, enabling seamless access to content and AI capabilities across platforms. The Box MCP Server acts as a bridge that allows leading AI Agent platforms — such as Copilot Studio, Claude Enterprise, Mistral Le Chat — to securely query and utilize Box data and AI-powered tools without exposing raw file content. Through OAuth authorization, users can grant AI Agents controlled access to their Box accounts, enabling intelligent document handling, advanced search, and multi-file AI queries directly within these external AI environments.
 
 ## Access and manage predefined Box MCP Servers
 
 1. Click **Integrations** in the sidebar of Box Admin Console. 
-2. Search for a predefined Box MCP Server, for example: **Box MCP Server for Copilot Studio** in the search field search at the top of the window.
+2. Search for a predefined Box MCP Server, for example: **Copilot Studio** in the search field search at the top of the window.
 3. Beside the selected MCP server, click the state, then select the state you want to enable.
 
 ## Create an unlisted Box MCP Server
