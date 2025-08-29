@@ -9,7 +9,7 @@ required_guides: []
 
 Model Context Protocol ([MCP](https://modelcontextprotocol.io/introduction)) is an open protocol that standardizes how applications provide context to LLMs. MCP servers make building advanced integrations simpler and less time consuming.
 
-Box MCP Server allows third party AI agents from platforms like Copilot Studio, Cursor, Mistral Le Chat, Claude for Desktop to access Box content seamlessly. It extends the agent’s capabilities by allowing it to perform actions related to content stored in Box.
+Box MCP Server allows third party AI agents from platforms like Copilot Studio, Cursor, Mistral AI, Claude to access Box content seamlessly. It extends the agent’s capabilities by allowing it to perform actions related to content stored in Box.
 
 There are two types of Box MCP Servers:
 
