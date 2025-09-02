@@ -57,17 +57,17 @@ Box AI APIを使用すると、テキストをゼロから生成したり、Box 
 
 [`POST /2.0/ai/extract`][extract]および[`POST /2.0/ai/extract_structured`][extract-structured]エンドポイントを使用すると、指定した入力からデータを抽出し、キー/値ペアの形式で返すことができます。
 
-* Use the `extract_structured` endpoint to extract data according to a pre-defined structure obtained from the metadata template, or a set of fields. Use it for shorter documents
-* Use the Enhanced Extract Agent for long, complex documents
+* `extract_structured`エンドポイントは、メタデータテンプレートから取得したあらかじめ定義された構造、または一連のフィールドに従ってデータを抽出する場合に使用します。ドキュメントが短い場合に使用してください。
+* ドキュメントが長くて複雑な場合は、抽出エージェント (強化) を使用します。
 * `extract`エンドポイントは、プロンプトを使用してファイルからデータを抽出する場合に使用します。プロンプトには、JSONやXMLなどの形式の文字列化バージョン、またはプレーンテキストを含めることができます。
 
-#### Enhanced Extract Agent
+#### 抽出エージェント (強化)
 
-The Enhanced Extract Agent is designed to extract key-value pairs from complex documents. It converts the unstructured content into metadata for easier discovery and search.
+抽出エージェント (強化) は、複雑なドキュメントからキー/値ペアを抽出するよう設計されています。検出や検索を容易にするため、非構造化コンテンツをメタデータに変換します。
 
-You can [use the agent][eea-tutorial] through the Box AI API and turn unstructured data into structured output to use in production databases, third party systems, or analytics.
+Box AI APIを介して[エージェントを使用][eea-tutorial]すると、非構造化データを、実稼働環境のデータベース、サードパーティ製システム、分析で使用する構造化された出力に変換できます。
 
-The Enhanced Extract Agent uses Gemini 2.5 Pro to provide a chain-of-thought reasoning and returns both the extracted values and a reasoning behind its answer.
+抽出エージェント (強化) は、Gemini 2.5 Proを使用して思考連鎖推論機能を提供し、抽出された値とその回答の根拠となる推論の両方を返します。
 
 ### 構成の上書き
 

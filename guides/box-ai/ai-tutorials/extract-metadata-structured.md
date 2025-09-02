@@ -189,22 +189,22 @@ curl --location 'https://api.box.com/2.0/ai/extract_structured' \
 
 ```
 
-### Enhanced Extract Agent
+### 抽出エージェント (強化)
 
-To start using the agent, you need:
+エージェントの使用を開始するには、以下が必要です。
 
-* A Box Platform App with enabled `Manage AI` scope. 
-* The app installed and enabled in your Box instance.
-* A file to test with.
+* `Manage AI`スコープが有効になっているBox Platformアプリ。 
+* そのアプリがBoxインスタンスにインストールされ、有効になっていること。
+* テストに使用するファイル。
 
-Calling an Enhanced Extract Agent works like calling the AI API - set the `type` to `AI Agent ID`, then string to the Enhanced Extract AI agent.
+抽出エージェント (強化) の呼び出しは、AI APIの呼び出しのように動作します。`type`を`AI Agent ID`に設定した後、文字列をAI抽出エージェント (強化) に設定します。
 
-To extract data using the Enhanced Extract Agent you need:
+抽出エージェント (強化) を使用してデータを抽出するには、以下のいずれかが必要です。
 
-* Inline field definitions created with `agentCreateAiExtractStructuredMetadataTemplate` if your fields change frequently,
-* or a metadata template that contains the data about the fields you wish to extract, if your extracted fields stay the same. 
+* `agentCreateAiExtractStructuredMetadataTemplate`を使用して作成されたインラインフィールドの定義 (フィールドが頻繁に変更される場合)。
+* 抽出するフィールドに関するデータを含むメタデータテンプレート (抽出される複数のフィールドが一定の場合)。 
 
-See the full sample Python script that demonstrates how to call the Enhanced Extract Agent on a file using the Box AI SDK:
+Box AI SDKを使用してファイルに対して抽出エージェント (強化) を呼び出す方法を示すPythonサンプルスクリプト全体を参照してください。
 
 ```Python
 from box_sdk_gen import (
