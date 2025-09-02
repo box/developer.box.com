@@ -5,13 +5,13 @@ rank: 223
 # Box Relay
 
 [Box Relay][boxrelay] is a workflow automation application that enables Box
-power users to automate and accelerate business processes centered 
-around content. Currently, there are two API [endpoints][workflow] developers 
-can use with more planned to be released in the future. Both were created to 
-work directly with [manual start flows][manualstart]. 
+power users to automate and accelerate business processes centered
+around content. Currently, there are two API [endpoints][workflow] developers
+can use with more planned to be released in the future. Both were created to
+work directly with [manual start flows][manualstart].
 
 <Message type='notice'>
-  For more information on how to use these endpoints, refer to our [blog][blog] 
+  For more information on how to use these endpoints, refer to our [blog][blog]
   post.
 </Message>
 
@@ -38,7 +38,7 @@ Please see our [rate limit guide][ratelimit] for more information.
 
 Due to the feature parity, it may be useful to familiarize yourself with
 [Box Relay functionality using the Box web app][webapp] before leveraging the
-API. As with all API endpoints, we recommend testing via 
+API. As with all API endpoints, we recommend testing via
 [developer sandbox environment][sandbox] to eliminate the risk of impacting
 production content.
 
@@ -53,7 +53,7 @@ production content.
 [relay]: g://api-calls/permissions-and-errors/scopes/#manage-box-relay
 <!-- i18n-enable localize-links -->
 [boxrelay]: https://support.box.com/hc/en-us/articles/360044196213-Introducing-Box-Relay
-[workflow]: https://developer.box.com/reference/resources/workflow/
+[workflow]: resource://workflow
 [manualstart]: https://support.box.com/hc/en-us/articles/360044628853-Creating-and-Running-a-Manual-Start-Workflow
 [blog]: https://medium.com/box-developer-blog/manual-start-workflow-api-box-relay-4f8d0f51b7a4
 <!-- i18n-disable localize-links -->

@@ -9,14 +9,14 @@ Box offers various application types to cater to different needs and use cases
 in application development. Each provides different capabilities and
 authentication method options.
 
-## Custom App
+## Platform App
 
-[Custom Apps][custom_app] are versatile and can accommodate most use cases.
+[Platform Apps][custom_app] are versatile and can accommodate most use cases.
 They allow developers to present Box functionalities within a custom interface.
 Box
 provides customizable UI Elements for tasks like browsing, searching, and
 previewing content. These apps support OAuth 2.0, JWT, and Client Credentials
-Grant for authentication. Custom Apps are ideal for applications that need to
+Grant for authentication. Platform Apps are ideal for applications that need to
 access both their own and others' files, upload and download files, and
 potentially be listed in the Box Integrations.
 
@@ -67,8 +67,8 @@ sections in the Integrations, and they can also be unpublished if necessary.
   Next step
 </Next>
 
-[custom_app]: g://applications/app-types/custom-apps/
-[limited_app]: g://applications/app-types/limited-access-apps/
-[skills]: g://applications/app-types/custom-skills/
-[web_app]: g://applications/web-app-integrations/
+[custom_app]: g://applications/app-types/platform-apps
+[limited_app]: g://applications/app-types/limited-access-apps
+[skills]: g://applications/app-types/custom-skills
+[web_app]: g://applications/web-app-integrations
 [integrations]: g://applications/integrations/

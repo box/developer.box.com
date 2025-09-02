@@ -205,6 +205,10 @@ environments:
     A label for Swift code sample from
     auto-generated SDK - DO NOT TRANSLATE
   swift_gen: Swift Gen (Beta)
+  // java_gen: |-
+    A label for Java code sample from
+    auto-generated SDK - DO NOT TRANSLATE
+  java_gen: Java Gen (Beta)
 
 resource_variants:
   // base: |-
@@ -240,6 +244,18 @@ pill:
   // deprecated: |-
     Pill added to deprecated endpoints and resources
   deprecated: Deprecated
+
+tooltip:
+  // beta: |-
+    Tooltip text for the beta pill
+  beta: |-
+    This endpoint is in beta version and may be subject to changes
+  // latest_version: |-
+    Tooltip text for the latest version pill
+  latest_version: This is the most recent stable version of the endpoint
+  // deprecated: |-
+    Tooltip text for the deprecated pill
+  deprecated: This version of the endpoint is deprecated
 
 sidebar:
   titles:

@@ -14,10 +14,6 @@ related_guides:
 
 # Get default AI agent configuration
 
-<Message type="notice">
-Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
-</Message>
-
 The `GET /2.0/ai_agent_default` endpoint allows you to fetch the default configuration for AI services. 
 Once you get the configuration details you can override them using the [`ai_agent`][ai-agent-config] parameter.
 
@@ -40,7 +36,7 @@ To make a call, you must pass the following parameters. Mandatory parameters are
 |--------|--------|-------|
 |`language`| The language code the agent configuration is returned for. If the language is not supported, the default configuration is returned. | `ja-JP`| 
 |**`mode`**|The mode used to filter the agent configuration. The value can be `ask`, `text_gen`, `extract`, or `extract_structured` depending on the result you want to achieve. |`ask`|
-|`model`|The model you want to get the configuration for. To make sure your chosen model is supported, see the [list of models][models].| `azure__openai__gpt_3_5_turbo_16k`|
+|`model`|The model you want to get the configuration for. To make sure your chosen model is supported, see the [list of models][models].| `azure__openai__gpt_4o_mini`|
 
 ## Responses
 
@@ -140,7 +136,7 @@ When you set the `mode` parameter to `text_gen` the response will be as follows:
 {
      "type": "ai_agent_text_gen",
      "basic_gen": {
-          "model": "azure__openai__gpt_3_5_turbo_16k",
+          "model": "azure__openai__gpt_4o_mini",
           "system_message": "\nIf you need to know today's date to respond, it is {current_date}.\nThe user is working in a collaborative document creation editor called Box Notes.\nAssume that you are helping a business user create documents or to help the user revise existing text.\nYou can help the user in creating templates to be reused or update existing documents, you can respond with text that the user can use to place in the document that the user is editing.\nIf the user simply asks to \"improve\" the text, then simplify the language and remove jargon, unless the user specifies otherwise.\nDo not open with a preamble to the response, just respond.\n",
           "prompt_template": "{user_question}",
           "num_tokens_for_completion": 12000,

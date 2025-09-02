@@ -103,7 +103,7 @@ extra steps to set up.
 
 * You either selected to create a new **Box App**
     * Signed up for a developer account (Optional)
-    * Had us create a **Custom App** for you that uses **OAuth 2.0** authentication
+    * Had us create a **Platform App** for you that uses **OAuth 2.0** authentication
     * Had us set up the **redirect URL** for the application
 * Or you selected to use an **existing Box App**
 
@@ -115,4 +115,4 @@ extra steps to set up.
 
 [devconsole]: https://cloud.app.box.com/developers/console
 [signup]: https://account.box.com/signup/n/developer
-[scopes]: https://developer.box.com/guides/api-calls/permissions-and-errors/scopes/
+[scopes]: g://api-calls/permissions-and-errors/scopes

@@ -7,7 +7,7 @@ alias_paths:
   - /docs/get-started-with-the-box-api
   - /docs/app-management
   - /docs/configuring-box-platform
-  - /guides/applications/custom-apps/
+  - /guides/applications/platform-apps
   - /guides/applications/limited-access-apps/
   - /guides/applications/custom-skills/
 ---
@@ -33,8 +33,8 @@ create.
 [jwt]: g://authentication/jwt
 [apptoken]: g://authentication/app-token
 [devtoken]: g://authentication/tokens/developer-tokens
-[custom-apps]: g://applications/app-types/custom-apps
+[custom-apps]: g://applications/app-types/platform-apps
 [custom-skills]: g://applications/app-types/custom-skills
-[ccg]: g://authentication/client-credentials/
-[laa]: g://applications/app-types/limited-access-apps/
+[ccg]: g://authentication/client-credentials
+[laa]: g://applications/app-types/limited-access-apps
 [insights]: https://support.box.com/hc/en-us/articles/20738406915219-Platform-Insights

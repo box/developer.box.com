@@ -51,11 +51,15 @@ primary:
 
     ai_dev_zone:
       text: Box AI Developer Zone
-      url: /sign/
+      url: /ai-dev-zone/
 
     buie:
       text: Box UI Elements
       url: /box-ui-elements
+
+    mcp:
+      text: Box MCP Server
+      url: /guides/box-mcp/
 
     get_started:
       // text: The text for the link to the old Get Started guides
@@ -170,11 +174,12 @@ primary:
       text: Event
 
     title:
-      text: Box Developer Day Toronto
+      text: BoxWorks Content + AI
 
     details:
       text: |-
-        Join the upcoming Box Platform Developer Day in Toronto on November 20!
+        Learn how to use Box MCP Server, dive into Box AI APIs,
+        and discover enhanced metadata extraction with agents.
 
     cta:
       text: |-

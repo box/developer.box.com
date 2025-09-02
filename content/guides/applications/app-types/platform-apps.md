@@ -6,24 +6,25 @@ alias_paths:
   - /docs/partner-integrations
   - /docs/getting-started-box-platform
   - /docs/box-platform
+  - /guides/applications/custom-apps
 related_guides:
   - authentication/oauth2
   - authentication/jwt
   - authentication/client-credentials
 ---
 
-# Custom App
+# Platform App
 
-Custom Apps encompass most use cases and is the most flexible application type.
+Platform Apps encompass most use cases and is the most flexible application type.
 
-A custom application typically presents Box functionality to a user within a
+A platform application typically presents Box functionality to a user within a
 custom interface. Box offers pre-built, customizable user interface components,
 known as [UI Elements][uie], for functionality like browsing, searching, and
 previewing content.
 
 ## Authentication methods
 
-Custom Apps support [OAuth 2.0][oauth2], [JWT][jwt], and
+Platform Apps support [OAuth 2.0][oauth2], [JWT][jwt], and
 [Client Credentials Grant][cc].
 
 <CTA to='g://authentication/select'>
@@ -32,7 +33,7 @@ Custom Apps support [OAuth 2.0][oauth2], [JWT][jwt], and
 
 ## When to use
 
-A Custom App is best used when the application:
+A Platform App is best used when the application:
 
 - Wants to use [OAuth 2.0][oauth2], [JWT][jwt] or [Client Credentials Grant][cc] for authentication.
 - Wants to upload and download files
@@ -42,13 +43,13 @@ A Custom App is best used when the application:
 
 ## Use cases
 
-Example use cases for a Custom App include:
+Example use cases for a Platform App include:
 
 - A file vault in an application that allows an end user to access files that have been shared with them, while also providing access for employees to the same files through the Box Web app.
 
   An example of this is financial advisor sharing statements and investment
   prospectuses with investors that can be viewed and commented on within a
-  custom application.
+  platform application.
 
 - A file upload feature in an application that allows an end user to submit and upload files from within a custom-built application to Box. These uploads then initiate a business process with the Box Web app.
 
@@ -58,14 +59,14 @@ Example use cases for a Custom App include:
 
 ## Approval
 
-Custom Apps may require approval before use.
+Platform Apps may require approval before use.
 
-<CTA to='g://authorization/custom-app-approval'>
-  Learn how to approve Custom Apps
+<CTA to='g://authorization/platform-app-approval'>
+  Learn how to approve Platform Apps
 </CTA>
 
 [oauth2]: g://authentication/oauth2
 [jwt]: g://authentication/jwt
-[cc]: g://authentication/client-credentials/
-[uie]: g://embed/ui-elements/
+[cc]: g://authentication/client-credentials
+[uie]: g://embed/ui-elements
 [users]: g;//getting-started/user-types/#managed-users/

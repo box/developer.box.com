@@ -64,7 +64,7 @@ The [Box Developer Console][dc] is an interactive interface that provides
 developers with tools and resources for managing their applications integrated
 with Box. It allows for the creation, configuration, and monitoring of apps,
 offering insights and control over how these apps interact with the Box
-platform. 
+platform.
 
 <ImageFrame center>
 ![Box Developer Console](images/developer_console.png)
@@ -97,7 +97,7 @@ web app, they should be able to access it using the API.
 ### Application Type
 
 There are three main types of applications that can be created in the developer
-console. They include Custom App, Limited Access App, and Box Custom Skills. You
+console. They include Platform App, Limited Access App, and Box Custom Skills. You
 can also create third party and web app integrations.
 
 <ImageFrame center>
@@ -121,12 +121,12 @@ to successfully make an API call to Box.
 
 [box]: https://www.box.com
 [platform]: https://www.box.com/platform
-[apptypes]: g://applications/app-types/select/
-[authmethods]: g://authentication/select/
-[api]: https://developer.box.com/reference/
+[apptypes]: g://applications/app-types/select
+[authmethods]: g://authentication/select
+[api]: page://reference
 [change]: page://changelog
 [dc]: https://app.box.com/developers/console
-[at]: g://authentication/tokens/
+[at]: g://authentication/tokens
 <!-- i18n-enable localize-links -->
 [ut]: https://support.box.com/hc/en-us/articles/4636533822483-Box-User-Types
 <!-- i18n-disable localize-links -->

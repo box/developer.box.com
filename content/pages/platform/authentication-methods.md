@@ -16,7 +16,7 @@ The following authorization methods are available to each Box application type.
 
 | Box Application Type         | Supports OAuth 2.0? | JWT? | Client Credentials? | App Token? |
 | ---------------------------- | ------------------- | ---- | ------------------- | ---------- |
-| Custom App     | Yes                 | Yes  | Yes                 | No         |
+| Platform App     | Yes                 | Yes  | Yes                 | No         |
 | Limited Access App | No                  | Yes  | No                  | Yes        |
 | Custom Skill | No                  | No   | No                  | No         |
 
@@ -48,7 +48,7 @@ You can find a great Python OAuth 2.0 tutorial on [GitHub][python_oauth].
 
 JSON Web Tokens (JWT) is the most common server-side authentication method for
 the Box API. [JWT][jwt], an open standard, enables robust server-to-server
-authentication. This method, exclusive to Custom Apps, does not involve
+authentication. This method, exclusive to Platform Apps, does not involve
 end-user interaction. It allows an app, if granted appropriate privileges, to
 act on behalf of any user in an enterprise, thus facilitating powerful and
 seamless integrations. Upon approval by an administrator, a JWT application
@@ -175,17 +175,17 @@ together, see our [security guide][security].
   Next step
 </Next>
 
-[oauth]: g://authentication/oauth2/
-[jwt]: g://authentication/jwt/
-[ata]: g://authentication/app-token/
-[ccg]: g://authentication/client-credentials/
+[oauth]: g://authentication/oauth2
+[jwt]: g://authentication/jwt
+[ata]: g://authentication/app-token
+[ccg]: g://authentication/client-credentials
 [skill]: g://skills/handle/payload/#access-tokens
-[app_ep]: g://authentication/app-token/endpoints/
-[scopes]: g://api-calls/permissions-and-errors/scopes/
+[app_ep]: g://authentication/app-token/endpoints
+[scopes]: g://api-calls/permissions-and-errors/scopes
 [at]: g://authentication/tokens
 [security]: g://security
 <!-- i18n-enable localize-links -->
-[reference]: https://developer.box.com/reference
+[reference]: page://reference
 [python_oauth]: https://github.com/box-community/box-python-oauth-template
 [python_ccg]: https://medium.com/box-developer-blog/box-python-next-gen-sdk-getting-started-with-ccg-81be0abc82d9
 [node_jwt]: https://medium.com/box-developer-blog/authenticate-box-node-js-sdk-with-jwt-47fdd3aeec50

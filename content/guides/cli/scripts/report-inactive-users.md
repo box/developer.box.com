@@ -112,10 +112,13 @@ When the script run is completed, you will see the following
 output or a similar one.
 
 ```bash
-Transfered employee content Managed User 1
-with User ID: 19927131476 to Employee Archive Folder
-Deleted user 19927131476
-Deleted employee Managed User 1
+Looking for users inactive for more than 3 days.
+Found 6 users.
+Found 7 events in last 3 days
+Enterprise has: 0 App user, 6 regular users. With 1 admin role, 5 user roles.
+Need to check 5 users (regular user, with user role) for inactive.
+Found 5 users inactive for more than 3 days.
+Report is available at InactiveUsers.csv
 ```
 
 ## Logging
@@ -128,8 +131,8 @@ You have access to these log files:
 
 [scripts]: https://github.com/box/boxcli/tree/main/examples
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2
-[quickstart]: g://cli/quick-start/create-oauth-app/
-[boxevents]: https://developer.box.com/reference/resources/event/
+[quickstart]: g://cli/quick-start/create-oauth-app
+[boxevents]: resource://event
 [deprovisionscript]: g://cli/scripts/deprovision-users
 [console]: https://app.box.com/developers/console
 [auth]: g://authentication/oauth2/oauth2-setup

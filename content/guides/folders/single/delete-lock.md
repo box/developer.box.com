@@ -29,6 +29,6 @@ To remove a lock applied to a folder in Box, call the
 
   To delete a folder lock you must supply the folder lock ID to the API. A
   folder lock ID is supplied in the response when
-  [creating a folder lock](g://folders/single/create-lock/), or
-  when [listing locks](g://folders/single/get-locks/) on a given folder.
+  [creating a folder lock](g://folders/single/create-lock), or
+  when [listing locks](g://folders/single/get-locks) on a given folder.
 </Message>

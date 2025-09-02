@@ -1,5 +1,5 @@
 ---
-rank: 5
+rank: 8
 related_guides:
   - box-ai/ai-tutorials/ask-questions
   - box-ai/ai-tutorials/generate-text
@@ -15,7 +15,8 @@ related_guides:
 
 | Item  | Value | Description |
 |-----------|----------|----------|
-|Model name|**text-embedding-ada-002**| The name of the model. | 
+|Model name|**text-embedding-ada-002**| The name of the model. |
+| Model category | Standard | The category of the model - standard or premium. |
 |API model name|`azure__openai__text_embedding_ada_002`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer| **Microsoft Azure** | The trusted organization that securely hosts LLM. |
 |Model provider|**Microsoft Azure**| The organization that provides this model. |

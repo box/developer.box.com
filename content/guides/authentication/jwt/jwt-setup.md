@@ -5,8 +5,8 @@ related_guides:
   - authentication/jwt
 required_guides:
   - authentication/select
-  - applications/app-types/custom-apps
-  - authorization/custom-app-approval
+  - applications/app-types/platform-apps
+  - authorization/platform-app-approval
 related_resources: []
 alias_paths:
   - /docs/setting-up-a-jwt-app
@@ -159,7 +159,7 @@ Click **Review and Submit** to send an email to your Box enterprise Admin for
 approval. More information on this process is available in our
 [support article for app authorization][app-auth].
 
-<CTA to='g://authorization/custom-app-approval'>
+<CTA to='g://authorization/platform-app-approval'>
   Learn how to authorize a Platform Application
 </CTA>
 

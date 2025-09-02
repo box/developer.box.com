@@ -15,12 +15,12 @@ If this is your first application, you will be prompted to get started.
 ## Choose application type
 
 The first step is to select the application type you want to create.
-In this guide we use the **Custom App** option, as most of our partners
+In this guide we use the **Platform App** option, as most of our partners
 use this type for their integrations.
 
 ## Choose the authentication method
 
-After you choose the **Custom App**, you need to [select an authentication
+After you choose the **Platform App**, you need to [select an authentication
 method][auth] that your app will use. In this guide we use the
 [**User Authentication (OAuth 2.0)**][oauth2] option, as most of our partners
 use this type for their integrations.
@@ -89,5 +89,5 @@ You can also use [Box CLI tool][box-cli] if you prefer to use the terminal.
 [integrations]: https://cloud.app.box.com/integrations
 [dev-token]: g://authentication/tokens/developer-tokens/#create-developer-token
 [postman-collection]: g://tooling/postman
-[api-ref]: https://developer.box.com/reference/
+[api-ref]: page://reference
 [box-cli]: https://github.com/box/boxcli

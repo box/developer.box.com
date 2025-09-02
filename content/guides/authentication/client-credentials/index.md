@@ -20,7 +20,7 @@ verify your application's identity using a client ID and client secret.
 
 ## Prerequisites
 
-- A Custom Application using Server Authentication (with Client Credentials Grant) authentication in the Box [Developer Console][devconsole]
+- A Platform Application using Server Authentication (with Client Credentials Grant) authentication in the Box [Developer Console][devconsole]
 - [2FA][2fa] enabled on your Box account for viewing and copying the application's client secret from the configuration tab
 - The application is [authorized][auth] in the Box Admin Console
 
@@ -80,7 +80,7 @@ This error indicates either:
 
 - the client ID and client secret passed are incorrect or are not for the same application,
 
-- the `box_subject_id` cannot be used based on the selected [application access][aa]. 
+- the `box_subject_id` cannot be used based on the selected [application access][aa].
 
 <Message warning>
 
@@ -105,8 +105,8 @@ Once you make changes to the app settings, don't forget to [reauthorize][reauth]
 <!-- i18n-disable localize-links -->
 
 [devconsole]: https://app.box.com/developers/console
-[accesstoken]: e://post-oauth2-token/
-[sa]: page://platform/user-types/#service-account/
+[accesstoken]: e://post-oauth2-token
+[sa]: page://platform/user-types/#service-account
 [auth]: g://authorization
 [aa]: g://authentication/client-credentials/client-credentials-setup/#application-access
-[reauth]: g://authorization/custom-app-approval#re-authorization-on-changes
+[reauth]: g://authorization/platform-app-approval#re-authorization-on-changes

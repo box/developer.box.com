@@ -30,6 +30,47 @@ Do something long here ...........................................
 <!-- markdownlint-enable line-length -->
 ```
 
+## Internal links
+
+You can link internal pages using `page://` (`p://`), `guide://` (`g://`), `endpoint://` (`e://`) or `resource://` (`r://`) prefixes:
+
+* Using `page://` or `p://` you can link all internal pages.
+
+  For example
+  `page://changelog` will be resolved to `https://<domain>/changelog`
+  where domain is a domain of a page on which the link is clicked. E.g. it can navigate to `https://developer.box.com/changelog` or `https://ja.developer.box.com/changelog`
+
+* Using or `guide://` or `g://` prefix you can link guides. For example
+  ```
+  g://api-calls/permissions-and-errors/rate-limits
+  ```
+  will be changed to
+  ```
+  https://<domain>/guides/api-calls/permissions-and-errors/rate-limits
+  ```
+* Using `endpoint://` or `e://` you can link API reference pages. For instance
+  ```
+  e://post_users#param-language
+  ```
+  will become
+  ```
+  https://<domain>/reference/post_users#param-language
+  ```
+
+  * Using `resource://` or `r://` you can link resource pages:
+  ```
+  resource://user
+  ```
+  will become
+  ```
+  https://<domain>/reference/resources/user
+  ```
+
+> **Important note**
+>
+> Links staring with one of these prefixes should not end with `/`
+
+
 ## Localize links
 
 Any links that do not use the `g://`, `e://` structure or otherwise need to use
@@ -124,8 +165,8 @@ names.
 
 ## Standards for Box terminology
 
-* Custom App refers to the type of app selected in the create new app flow
-whereas custom application refers to the custom solution built by the customer
+* Platform App refers to the type of app selected in the create new app flow
+whereas platform application refers to the custom solution built by the customer
 * Access Token
 * Box Admin
 * App Users and Managed Users

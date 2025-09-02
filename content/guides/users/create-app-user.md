@@ -16,7 +16,7 @@ alias_paths: []
 # Create App User
 
 App Users are programmatic user accounts that may only be created by apps that
-are using [JWT authentication](g://authentication/jwt/jwt-setup/).
+are using [JWT authentication](g://authentication/jwt/jwt-setup).
 They are designed to allow for users, groups, or processes to be represented
 behind the scenes in an application without the need for the user to have a Box
 account to log in.
@@ -41,6 +41,11 @@ be a name for the app user.
 
 To see all available optional parameters that may be set when creating an app
 user, see the [create user endpoint](endpoint://post-users).
+
+<Message type='notice'>
+Before you can make any changes to the newly created account, you need to
+click the link you receive in the confirmation email.
+</Message>
 
 Once the app user is created a user object will be returned. Within the user
 object is an ID for the app user, which may be used to make API requests to

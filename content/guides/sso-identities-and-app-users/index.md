@@ -17,7 +17,7 @@ users the ability to securely authenticate multiple applications by logging in
 once, with only one set of credentials (username and password).
 
 Box is one of the applications that can be connected to the SSO service of a
-company. Integrating these applications into your custom apps will allow you to
+company. Integrating these applications into your platform apps will allow you to
 provision Box users on the fly for any of your end users, without those users
 knowing they have a Box account.
 
