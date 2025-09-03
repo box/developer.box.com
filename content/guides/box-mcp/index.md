@@ -11,8 +11,6 @@ Model Context Protocol ([MCP](https://modelcontextprotocol.io/introduction)) is 
 
 Box MCP server allows third party AI agents from platforms like Anthropic's Claude, Microsoft Copilot Studio, and Mistral Le Chat to access Box content seamlessly. It extends the agent’s capabilities by allowing it to perform actions related to content stored in Box.
 
-Box MCP server server allows third party AI agents from platforms like Anthropic's Claude, Microsoft Copilot Studio, and Mistral Le Chat Copilot Studio, Cursor, Mistral AI, Claude, Mistral Le Chat to access Box content seamlessly. It extends the agent’s capabilities by allowing it to perform actions related to content stored in Box.
-
 <ImageFrame noborder center>
   ![MCP](./img/mcp.png)
 </ImageFrame>
