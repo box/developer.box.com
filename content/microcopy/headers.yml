@@ -58,7 +58,7 @@ primary:
       url: /box-ui-elements
 
     mcp:
-      text: Box MCP Server
+      text: Box MCP server
       url: /guides/box-mcp/
 
     get_started:
@@ -178,7 +178,7 @@ primary:
 
     details:
       text: |-
-        Learn how to use Box MCP Server, dive into Box AI APIs,
+        Learn how to use Box MCP server, dive into Box AI APIs,
         and discover enhanced metadata extraction with agents.
 
     cta:
