@@ -150,29 +150,11 @@ categories:
         // url: Link to our llms-full.txt file
         url: /llms-full.txt
 
-      guides_llms:
-        // text: Text for link to our Guides llms.txt file
-        text: Guides llms.txt
-        // url: Link to our Guides llms.txt file
-        url: /guides/llms.txt
-
-      api_reference_llms:
-        // text: Text for link to our API Reference llms.txt file
-        text: API Reference llms.txt
-        // url: Link to our API Reference llms.txt file
-        url: /reference/llms.txt
-
-      platform_llms:
-        // text: Text for link to our Platform llms.txt file
-        text: Platform llms.txt
-        // url: Link to our Platform llms.txt file
-        url: /platform/llms.txt
-
-      ai_dev_zone_llms:
-        // text: Text for link to our AI Dev Zone llms.txt file
-        text: AI Developer Zone llms.txt
-        // url: Link to our AI Developer Zone llms.txt file
-        url: /ai-dev-zone/llms.txt
+      llms_links:
+        // text: Text for link to our llms.txt file
+        text: llms.txt
+        // url: Link to our llms.txt file
+        url: /llms.txt
 
   support:
     // title: |-

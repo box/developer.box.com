@@ -1,7 +1,7 @@
 ---
 rank: 25
 required_guides:
-- authorization/custom-app-approval
+- authorization/platform-app-approval
 - authorization/limited-access-approval
 - authorization/custom-skill-approval
 ---
