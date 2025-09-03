@@ -53,21 +53,41 @@ Exact steps may vary depending on the AI platform. Refer to your platform’s do
   )
 ```
 
-### Anthropic's Messages API
+### Claude Desktop
 
-Connect the remote Box MCP Server with Anthropic's Messages API. Clone [this sample chat bot project](https://github.com/box-community/remote-box-mcp-anthropic) to get started quickly. It allows you to have a conversation with an Anthropic model, which has access to tools provided by the Box remote MCP server. The chatbot runs in a terminal, maintains conversation history for context-aware responses, and uses `asyncio` for asynchronous operation.
+To start using the remote Box MCP server in [Claude Desktop](https://claude.ai/download), go to Claude app settings and click *Connectors*. Within this view click *Browse connectors* and choose Box. Ensure to grant Claude access to Box.
+
+See a demo video that showcases how to connect Box MCP with Mistral Claude desktop.
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/OJVjXZkPd54?si=PSiV6aKkUnL7CXoG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Copilot Studio
 
-To add an MCP server, follow the instructions provided by the Copilot Studio side. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp#add-tools-from-an-existing-mcp-connector-to-an-agent).
+To add the remote Box MCP server, follow the instructions provided by the Copilot Studio side. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp#add-tools-from-an-existing-mcp-connector-to-an-agent).
 
 ### Azure API Center
 
-To add an MCP server in Azure API Center's Enterprise Registry, follow the instructions provided by Azure. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Azure API Center's Enterprise Registry](https://learn.microsoft.com/en-us/azure/api-center/register-discover-mcp-server).
+To add the remote Box MCP server in Azure API Center's Enterprise Registry, follow the instructions provided by Azure. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Azure API Center's Enterprise Registry](https://learn.microsoft.com/en-us/azure/api-center/register-discover-mcp-server).
+
+### Anthropic's Messages API
+
+Connect the remote Box MCP Server with [Anthropic's Messages API](https://docs.anthropic.com/en/api/messages). Clone [this sample chat bot project](https://github.com/box-community/mcp-client-remote-mcp-react) to get started quickly. It allows you to have a conversation with an Anthropic model, which has access to tools provided by the Box remote MCP server.
+
+Watch a video that features a demo project, a React based chat bot that leverages remote Box MCP.
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/Rcn8p-nLJtI?si=dWsMnE6reTE-aKQw" title="Box remote MCP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Mistral AI’s Le Chat
+
+To enable Box MCP for [Mistral AI’s Le Chat](https://chat.mistral.ai/chat), visit [connectors page](https://chat.mistral.ai/connections), click *Connect* and grant access to Box. Alternatively, directly form the chat view, click *Tools* and choose Box.
+
+<ImageFrame noborder center>
+  ![MCP](./img/mistral.png)
+</ImageFrame>
 
 ### Using Box AI Features with the MCP Server
 
-When you use Box AI in third party applications, you can achieve the best experience and highest quality results by accessing the applications through the Box MCP Server. This ensures full functionality, improved performance, and a seamless user experience.
+When you use Box AI in third-party applications, you can achieve the best experience and highest quality results by accessing the applications through the Box MCP Server. This ensures full functionality, improved performance, and a seamless user experience.
 
 ## Available tools
 
@@ -75,13 +95,14 @@ Remote Box MCP Server includes several tools you can use:
 
 | Tool | Description|
 |--------|--------|
-| `box-remote-mcp_who_am_i`| Returns detailed information about the currently authenticated Box user.|
-| `box-remote-mcp_search_folders_by_name`| Searches for folders within Box by name using keyword matching.|
-| `box-remote-mcp_list_folder_content_by_folder_id`| Lists files, folders, and web links in a folder. |
-| `box-remote-mcp_search_files_keyword`| Searches for files using keywords. Supports metadata filters, file extension filtering, and field selection.|
-| `box-remote-mcp_search_files_metadata`| Searches for files using SQL-like metadata queries. Supports complex filtering with parameters, field selection, and folder scoping.|
-| `box-remote-mcp_ai_qa_single_file`| Asks a question to a single file using Box AI.|
-| `box-remote-mcp_ai_qa_multi_file`| Asks a question to multiple files using Box AI.|
-| `box-remote-mcp_ai_qa_hub`| Asks a question to a Box Hub using Box AI.|
-| `box-remote-mcp_ai_extract_freeform`| Extracts metadata from files using Box AI in freeform format without requiring predefined template structures.|
-| `box-remote-mcp_ai_extract_structured`| Extracts structured metadata from files using Box AI based on either custom fields definition or an existing metadata template.|
+| `mcp_who_am_i`| Returns detailed information about the currently authenticated Box user.|
+| `get_file_content` | Returns content of a file stored in Box |
+| `search_folders_by_name`| Searches for folders within Box by name using keyword matching.|
+| `list_folder_content_by_folder_id`| Lists files, folders, and web links in a folder. |
+| `search_files_keyword`| Searches for files using keywords. Supports metadata filters, file extension filtering, and field selection.|
+| `search_files_metadata`| Searches for files using SQL-like metadata queries. Supports complex filtering with parameters, field selection, and folder scoping.|
+| `ai_qa_single_file`| Asks a question to a single file using Box AI.|
+| `ai_qa_multi_file`| Asks a question to multiple files using Box AI.|
+| `ai_qa_hub`| Asks a question to a Box Hub using Box AI.|
+| `ai_extract_freeform`| Extracts metadata from files using Box AI in freeform format without requiring predefined template structures.|
+| `ai_extract_structured`| Extracts structured metadata from files using Box AI based on either custom fields definition or an existing metadata template.|
