@@ -49,14 +49,14 @@ categories:
         url: https://github.com/box-community
 
       ai_dev_zone:
-        // text: Text for a link to the AI Dev Zone
+        // text: Text for a link to the AI Developer Zone
         text: AI Developer Zone
         // url: Link to the AI Dev Zone
         url: /ai-dev-zone/
 
       sample_code_catalog:
         // text: Text for a link to the sample code catalog
-        text: Community GitHub
+        text: Sample Code Catalog
         // url: Link to the sample code catalog
         url: /sample-code/
 
