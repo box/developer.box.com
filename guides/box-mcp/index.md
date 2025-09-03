@@ -16,11 +16,11 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-mcp/index.md
 ---
-# Box MCP Server
+# Box MCP server
 
 Model Context Protocol ([MCP](https://modelcontextprotocol.io/introduction)) is an open protocol that standardizes how applications provide context to LLMs. MCP servers make building advanced integrations simpler and less time consuming.
 
-Box MCP Server allows third party AI agents from platforms like Copilot Studio, Cursor, Mistral AI, Claude, Mistral Le Chat to access Box content seamlessly. It extends the agent’s capabilities by allowing it to perform actions related to content stored in Box.
+Box MCP server allows third party AI agents from platforms like Anthropic's Claude, Microsoft Copilot Studio, and Mistral Le Chat to access Box content seamlessly. It extends the agent’s capabilities by allowing it to perform actions related to content stored in Box.
 
 <ImageFrame noborder center>
 
@@ -28,21 +28,21 @@ Box MCP Server allows third party AI agents from platforms like Copilot Studio, 
 
 </ImageFrame>
 
-There are two types of Box MCP Servers:
+There are two types of Box MCP servers:
 
-- remote Box MCP Server which you can create or enable in the Box Admin Console. It is hosted directly in Box.
+- remote Box MCP server which you can create or enable in the Box Admin Console. It is hosted directly in Box.
 <!--alex ignore-->
 
-- self-hosted Box MCP Server which you can clone and host on your local machine, as this version in an open source Box Developer community project.
+- self-hosted Box MCP server which you can clone and host on your local machine, as this version in an open source Box Developer community project.
 <!--alex enable-->
 
-Check the detailed guides on both types of Box MCP Servers, as the level of the implemented tools differs. Learn how to enable Box MCP Server:
+Check the detailed guides on both types of Box MCP servers, as the level of the implemented tools differs. Learn how to enable Box MCP server:
 
 <TileGrid rows="2">
 
-<Tile type="mcp" title="Remote Box MCP Server" href="/guides/box-mcp/remote">
+<Tile type="mcp" title="Remote Box MCP server" href="/guides/box-mcp/remote">
 
-Enable the remote Box MCP Server in the Admin Console. It is hosted directly in Box.
+Enable the remote Box MCP server in the Admin Console. It is hosted directly in Box.
 <div>
 
 <strong style="background-color: #e1ffe7">
@@ -55,7 +55,7 @@ New
 
 </Tile>
 
-<Tile type="mcp" title="Self-hosted Box MCP Server" href="/guides/box-mcp/self-hosted">
+<Tile type="mcp" title="Self-hosted Box MCP server" href="/guides/box-mcp/self-hosted">
 
 An open source Box Developer community project. You can clone this Box MCP Sever and host it on your local machine.
 <div>

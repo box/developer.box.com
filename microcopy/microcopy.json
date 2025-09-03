@@ -232,7 +232,7 @@
   "headers.primary.links.ai_dev_zone.url": "/ai-dev-zone/",
   "headers.primary.links.buie.text": "Box UI Elements",
   "headers.primary.links.buie.url": "/box-ui-elements",
-  "headers.primary.links.mcp.text": "Box MCP Server",
+  "headers.primary.links.mcp.text": "Box MCP server",
   "headers.primary.links.mcp.url": "/guides/box-mcp/",
   // The text for the link to the old Get Started guides
   "headers.primary.links.get_started.text": "Quick Start",
@@ -286,7 +286,7 @@
   "headers.primary.develop_featured.cta.text": "Browse sample code",
   "headers.primary.connect_featured.tag.text": "Event",
   "headers.primary.connect_featured.title.text": "BoxWorks Content + AI",
-  "headers.primary.connect_featured.details.text": "Learn how to use Box MCP Server, dive into Box AI APIs,\nand discover enhanced metadata extraction with agents.",
+  "headers.primary.connect_featured.details.text": "Learn how to use Box MCP server, dive into Box AI APIs,\nand discover enhanced metadata extraction with agents.",
   "headers.primary.connect_featured.cta.text": "Register now",
   // The HTML alt-text for the site logo
   "headers.secondary.images.logo.alt_text": "Box Developer Documentation",

@@ -16,9 +16,9 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-mcp/self-hosted/index.md
 ---
-# Self-hosted Box MCP Server
+# Self-hosted Box MCP server
 
-The [Self-hosted Box MCP Server](https://github.com/box-community/mcp-server-box.git) is a Python project that integrates with the Box API to perform various operations such as file search, text extraction, AI-based querying, and data extraction. It leverages the Box Python Next Gen SDK library and provides a set of tools to interact with Box files and folders.
+The [Self-hosted Box MCP server](https://github.com/box-community/mcp-server-box.git) is a Python project that integrates with the Box API to perform various operations such as file search, text extraction, AI-based querying, and data extraction. It leverages the Box Python Next Gen SDK library and provides a set of tools to interact with Box files and folders.
 
 ## Installation
 
@@ -27,7 +27,7 @@ The [Self-hosted Box MCP Server](https://github.com/box-community/mcp-server-box
 - Python `3.13` or higher
 - Box Platform app credentials (Client ID, Client Secret)
 
-Follow the steps from this section to set up the self-hosted Box MCP Server.
+Follow the steps from this section to set up the self-hosted Box MCP server.
 
 1. Clone the repository:
 
@@ -105,9 +105,9 @@ You can also watch a video tutorial and see example usage of Box MCP tools.
 
 </iframe>
 
-## Running Box MCP Server locally
+## Running Box MCP server locally
 
-To start the Box MCP Server, run the following command:
+To start the Box MCP server, run the following command:
 
 ```sh
 uv --directory /Users/USER_NAME/PATH_TO_PROJECT/mcp-server-box run src/mcp_server_box.py
@@ -193,7 +193,7 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
 ```
 
 3. Restart Claude for Desktop.
-4. Authenticate the Box MCP Server using `box_authorize_app_tool` tool.
+4. Authenticate the Box MCP server using `box_authorize_app_tool` tool.
 
 ## Available tools
 
