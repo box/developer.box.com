@@ -12,8 +12,12 @@ required_guides: []
 ## Access and manage predefined Box MCP Servers
 
 1. Click **Integrations** in the sidebar of Box Admin Console. 
-2. Search for a predefined Box MCP Server, for example: **Copilot Studio** in the search field search at the top of the window.
+2. Use *Categories* filter and choose MCP or search for a predefined Box MCP Server in the search field search at the top of the window.
 3. Beside the selected MCP server, click the state, then select the state you want to enable.
+
+<ImageFrame noborder center>
+  ![MCP](./img/integrations-mcp.png)
+</ImageFrame>
 
 ## Create an unlisted Box MCP Server
 
@@ -95,7 +99,7 @@ Remote Box MCP Server includes several tools you can use:
 
 | Tool | Description|
 |--------|--------|
-| `mcp_who_am_i`| Returns detailed information about the currently authenticated Box user.|
+| `who_am_i`| Returns detailed information about the currently authenticated Box user.|
 | `get_file_content` | Returns content of a file stored in Box |
 | `search_folders_by_name`| Searches for folders within Box by name using keyword matching.|
 | `list_folder_content_by_folder_id`| Lists files, folders, and web links in a folder. |
