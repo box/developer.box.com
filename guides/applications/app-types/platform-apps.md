@@ -74,7 +74,7 @@ Example use cases for a Platform App include:
 
 Platform Apps may require approval before use.
 
-<CTA to='g://authorization/custom-app-approval'>
+<CTA to='g://authorization/platform-app-approval'>
 
 Learn how to approve Platform Apps
 
