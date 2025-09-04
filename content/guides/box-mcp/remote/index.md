@@ -5,36 +5,36 @@ related_guides: []
 required_guides: []
 ---
 
-# Remote Box MCP Server
+# Remote Box MCP server
 
-[Remote MCP Server](https://modelcontextprotocol.io/introduction) is a standardized way for AI Agents to connect and interact with third-party applications like Box, enabling seamless access to content and AI capabilities across platforms. The Box MCP Server acts as a bridge that allows leading AI Agent platforms — such as Copilot Studio, Claude Enterprise, Mistral Le Chat — to securely query and utilize Box data and AI-powered tools without exposing raw file content. Through OAuth authorization, users can grant AI Agents controlled access to their Box accounts, enabling intelligent document handling, advanced search, and multi-file AI queries directly within these external AI environments.
+[Remote Box MCP server](https://modelcontextprotocol.io/introduction) is a standardized way for AI Agents to connect and interact with third-party applications like Box, enabling seamless access to content and AI capabilities across platforms. The Box MCP server acts as a bridge that allows leading AI Agent platforms — such as Copilot Studio, Claude Enterprise, Mistral Le Chat — to securely query and utilize Box data and AI-powered tools without exposing raw file content. Through OAuth authorization, users can grant AI Agents controlled access to their Box accounts, enabling intelligent document handling, advanced search, and multi-file AI queries directly within these external AI environments.
 
-## Access and manage predefined Box MCP Servers
+## Access and manage predefined Box MCP servers
 
 1. Click **Integrations** in the sidebar of Box Admin Console. 
-2. Use *Categories* filter and choose MCP or search for a predefined Box MCP Server in the search field search at the top of the window.
+2. Use *Categories* filter and choose MCP or search for a predefined Box MCP server in the search field search at the top of the window.
 3. Beside the selected MCP server, click the state, then select the state you want to enable.
 
 <ImageFrame noborder center>
   ![MCP](./img/integrations-mcp.png)
 </ImageFrame>
 
-## Create an unlisted Box MCP Server
+## Create an unlisted Box MCP server
 
 1. Click Integrations in the sidebar of Box Admin Console.
-2. Search for **Box MCP Server** in the search field search at the top of the window.
-4. Hover on the **Box MCP Server** application, then click **Configure**.
+2. Search for **Box MCP server** in the search field search at the top of the window.
+4. Hover on the **Box MCP server** application, then click **Configure**.
 5. In the **Additional Configuration** section, click on **+ Add Integration Credentials**.
 6. Copy the generated Client ID and Client Secret. 
 7. Enter the Redirect URI provided by the external MCP Client. 
 8. Under Scopes, ensure that *Manage AI Requests* is selected.
 
-## Add Box MCP Server on the Client Side
+## Add Box MCP server on the Client Side
 
 To connect to Box from the AI Agent platform, you need to:
 
 * Endpoint URL: `https://mcp.box.com`
-* Client ID and Client Secret: Box generates these in the Integration Credentials section of your Admin Console when configuring the Box MCP Server, above.
+* Client ID and Client Secret: Box generates these in the Integration Credentials section of your Admin Console when configuring the Box MCP server, above.
 * Pass an MCP name: `box-remote-mcp`
 * Provide an `authorization_token`
 
@@ -75,7 +75,7 @@ To add the remote Box MCP server in Azure API Center's Enterprise Registry, foll
 
 ### Anthropic's Messages API
 
-Connect the remote Box MCP Server with [Anthropic's Messages API](https://docs.anthropic.com/en/api/messages). Clone [this sample chat bot project](https://github.com/box-community/mcp-client-remote-mcp-react) to get started quickly. It allows you to have a conversation with an Anthropic model, which has access to tools provided by the Box remote MCP server.
+Connect the remote Box MCP server with [Anthropic's Messages API](https://docs.anthropic.com/en/api/messages). Clone [this sample chat bot project](https://github.com/box-community/mcp-client-remote-mcp-react) to get started quickly. It allows you to have a conversation with an Anthropic model, which has access to tools provided by the Box remote MCP server.
 
 Watch a video that features a demo project, a React based chat bot that leverages remote Box MCP.
 
@@ -91,11 +91,11 @@ To enable Box MCP for [Mistral AI’s Le Chat](https://chat.mistral.ai/chat), vi
 
 ### Using Box AI Features with the MCP Server
 
-When you use Box AI in third-party applications, you can achieve the best experience and highest quality results by accessing the applications through the Box MCP Server. This ensures full functionality, improved performance, and a seamless user experience.
+When you use Box AI in third-party applications, you can achieve the best experience and highest quality results by accessing the applications through the Box MCP server. This ensures full functionality, improved performance, and a seamless user experience.
 
 ## Available tools
 
-Remote Box MCP Server includes several tools you can use:
+Remote Box MCP server includes several tools you can use:
 
 | Tool | Description|
 |--------|--------|
