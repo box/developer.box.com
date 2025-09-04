@@ -104,7 +104,7 @@ To enable Box MCP for [Mistral AI’s Le Chat](https://chat.mistral.ai/chat), vi
 
 <ImageFrame noborder center>
 
-![MCP](./img/mistral.png)
+![MCP](./img/mistral.gif)
 
 </ImageFrame>
 
