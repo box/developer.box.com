@@ -13,7 +13,7 @@ The [Self-hosted Box MCP Server](https://github.com/box-community/mcp-server-box
 
 ### Prerequisites
 
-- Python 3.13 or higher
+- Python `3.13` or higher
 - Box Platform app credentials (Client ID, Client Secret)
 
 Follow the steps from this section to set up the self-hosted Box MCP Server.
@@ -127,6 +127,12 @@ Follow these instructions to start using Box MCP Sever with Cursor:
 7. Restart Cursor if necessary.
 8. Use the `box_authorize_app_tool` tool to start using Box MCP.
 
+### Use dedicated Box integration in Claude
+
+You can access the Box MCP server in the [Claude directory](http://claude.ai/directory). The directory is available to all Claude users on web and desktop.
+
+Read the [official Anthropic documentation](https://support.anthropic.com/en/articles/11724452-browsing-and-connecting-to-tools-from-the-directory#h_79b235c2c7) to learn how to add Box connector tool.
+
 ### Use Claude for Desktop as the Box MCP client
 
 Prerequisites:
@@ -192,17 +198,17 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
       <td>`box_search_tool`</td>
       <td>Search for files in Box</td>
       <td>
-        - `query (str):` Search query.
-        - `file_extensions (List[str], optional):` Filter by extensions.
-        - `where_to_look_for_query (List[str], optional):` Locations to search.
-        - `ancestor_folder_ids (List[str], optional):` Folder IDs to limit the search.
+        - `query (str)`: Search query.
+        - `file_extensions (List[str], optional)`: Filter by extensions.
+        - `where_to_look_for_query (List[str], optional)`: Locations to search.
+        - `ancestor_folder_ids (List[str], optional)`: Folder IDs to limit the search.
       </td>
       <td>Newline-separated list of file names and IDs</td>
     </tr>
     <tr>
       <td>`box_search_folder_by_name`</code></td>
       <td>Locate a folder by name</td>
-      <td>`folder_name (str):` Name of the folder</td>
+      <td>`folder_name (str)`: Name of the folder</td>
       <td>Folder ID and information</td>
     </tr>
     <tr>
@@ -210,8 +216,8 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
       <td>List folder contents</td>
       <td>
           <ul>
-             <li>`folder_id (str):` ID of the folder.</li>
-             <li>`is_recursive (bool):` Whether to list recursively.</li>
+             <li>`folder_id (str)`: ID of the folder.</li>
+             <li>`is_recursive (bool)`: Whether to list recursively.</li>
           </ul>
        </td>
       <td>Folder content in JSON format</td>
@@ -235,7 +241,7 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
       <td>`box_read_tool`</td>
       <td>Read the text content of a Box file</td>
       <td>
-        - `file_id (str):` ID of the file to read.
+        - `file_id (str)`: ID of the file to read.
       </td>
       <td>File content</td>
     </tr>
@@ -243,9 +249,9 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
       <td>`box_upload_file_from_path_tool`</td>
       <td>Upload a file from local path</td>
       <td>
-        - `file_path (str):` Local file path.<br>
-        - `folder_id (str, optional):` Destination folder ID.<br>
-        - `new_file_name (str, optional):` New file name.
+        - `file_path (str)`: Local file path.<br>
+        - `folder_id (str, optional)`: Destination folder ID.<br>
+        - `new_file_name (str, optional)`: New file name.
       </td>
       <td>File details or error message</td>
     </tr>
@@ -253,10 +259,10 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
       <td>`box_upload_file_from_content_tool`</td>
       <td>Upload content as a file</td>
       <td>
-        - `content (str|bytes):` Content to upload.<br>
-        - `file_name (str):` File name.<br>
-        - `folder_id (str, optional):` Destination folder ID.<br>
-        - `is_base64 (bool, optional):` If content is base64 encoded.
+        - `content (str|bytes)`: Content to upload.<br>
+        - `file_name (str)`: File name.<br>
+        - `folder_id (str, optional)`: Destination folder ID.<br>
+        - `is_base64 (bool, optional)`: If content is base64 encoded.
       </td>
       <td>Upload success message</td>
     </tr>
@@ -264,11 +270,19 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
       <td>`box_download_file_tool`</td>
       <td>Download a file from Box</td>
       <td>
-        - `file_id (str):` File ID.<br>
-        - `save_file (bool, optional):` Whether to save locally.<br>
-        - `save_path (str, optional):` Local save path.
+        - `file_id (str)`: File ID.<br>
+        - `save_file (bool, optional)`: Whether to save locally.<br>
+        - `save_path (str, optional)`: Local save path.
       </td>
       <td>File content or save confirmation</td>
+    </tr>
+		<tr>
+      <td>`get_file_content`</td>
+      <td>Extract text content from a file</td>
+      <td>
+        - `file_id (str)`: File ID.<br>
+      </td>
+      <td>Text file content</td>
     </tr>
   </tbody>
 </table>
@@ -284,12 +298,12 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
       <td>`box_manage_folder_tool`</td>
       <td>Create, update, or delete folders</td>
       <td style="white-space: pre-wrap;">
-        - `action (str):` `create`, `delete`, or `update`.
-        - `folder_id (str, optional):` Folder ID.
-        - `name (str, optional):` Folder name.
-        - `parent_id (str, optional):` Parent folder ID.
-        - `description (str, optional):` Folder description.
-        - `recursive (bool, optional):` For recursive delete.
+        - `action (str)`: `create`, `delete`, or `update`.
+        - `folder_id (str, optional)`: Folder ID.
+        - `name (str, optional)`: Folder name.
+        - `parent_id (str, optional)`: Parent folder ID.
+        - `description (str, optional)`: Folder description.
+        - `recursive (bool, optional)`: For recursive delete.
      </td >
      <td>Status message with folder details</td >
    </tr >
@@ -312,8 +326,8 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
       <td>`box_ask_ai_tool`</td>
       <td>Ask Box AI about a file</td>
       <td>
-        - `file_id (str):` File ID.<br>
-        - `prompt (str):` Question for the AI.
+        - `file_id (str)`: File ID.<br>
+        - `prompt (str)`: Question for the AI.
       </td>
       <td>AI response</td>
     </tr>
@@ -321,8 +335,8 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
       <td>`box_ask_ai_tool_multi_file`</td>
       <td>Query Box AI using multiple files</td>
       <td>
-        - `file_ids (List[str]):` List of file IDs.<br>
-        - `prompt (str):` Instruction for AI.
+        - `file_ids (List[str])`: List of file IDs.<br>
+        - `prompt (str)`: Instruction for AI.
       </td>
       <td>AI-generated answer</td>
     </tr>
@@ -330,8 +344,8 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
       <td>`box_hubs_ask_ai_tool`</td>
       <td>Ask Box AI about a hub</td>
       <td>
-        - `hubs_id (str):` ID of the hub.<br>
-        - `prompt (str):` Question for the AI.
+        - `hubs_id (str)`: ID of the hub.<br>
+        - `prompt (str)`: Question for the AI.
       </td>
       <td>AI response</td>
     </tr>
@@ -339,8 +353,8 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
       <td>`box_ai_extract_data`</td>
       <td>Extract data from a file using AI</td>
       <td>
-        - `file_id (str):` File ID.<br>
-        - `fields (str):` Fields to extract.
+        - `file_id (str)`: File ID.<br>
+        - `fields (str)`: Fields to extract.
       </td>
       <td>Extracted data in JSON format</td>
     </tr>
@@ -363,25 +377,25 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
       <td>`box_docgen_create_batch_tool`</td>
       <td>Generate documents using a template</td>
       <td>
-        - `file_id` (str): Template file ID.
-        - `destination_folder_id` (str): Output folder ID.
-        - `user_input_file_path` (str): JSON input data path.
-        - `output_type` (str, optional): Output format.
+        - `file_id (str)`: Template file ID.
+        - `destination_folder_id (str)`: Output folder ID.
+        - `user_input_file_path (str)`: JSON input data path.
+        - `output_type (str, optional)`: Output format.
       </td>
       <td>Batch generation result</td>
     </tr>
     <tr>
       <td>`box_docgen_get_job_tool`</td>
       <td>Fetch a Doc Gen job by ID</td>
-      <td>`job_id (str):` Job identifier</td>
+      <td>`job_id (str)`: Job identifier</td>
       <td>Job details in JSON</td>
     </tr>
     <tr>
       <td>`box_docgen_list_jobs_tool`</td>
       <td>List all Doc Gen jobs</td>
       <td>
-        - `marker (str, optional):` Pagination marker.
-        - `limit (int, optional):` Max jobs to return.
+        - `marker (str, optional)`: Pagination marker.
+        - `limit (int, optional)`: Max jobs to return.
       </td>
       <td>List of jobs in JSON</td>
     </tr>
@@ -389,47 +403,47 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
       <td>`box_docgen_list_jobs_by_batch_tool`</td>
       <td>List jobs in a specific batch</td>
       <td>
-        - `batch_id (str):` Batch identifier.
-        - `marker (str, optional):` Pagination marker.
-        - `limit (int, optional):` Max jobs to return.
+        - `batch_id (str)`: Batch identifier.
+        - `marker (str, optional)`: Pagination marker.
+        - `limit (int, optional)`: Max jobs to return.
       </td>
       <td>Batch jobs details</td>
     </tr>
     <tr>
       <td>`box_docgen_template_create_tool`</td>
       <td>Mark a file as a template</td>
-      <td>`file_id (str):` File ID to mark</td>
+      <td>`file_id (str)`: File ID to mark</td>
       <td>Template details</td>
     </tr>
     <tr>
       <td>`box_docgen_template_list_tool`</td>
       <td>List all available templates</td>
       <td>
-        - `marker` (str, optional): Pagination marker.
-        - `limit` (int, optional): Max templates to list.
+        - `marker (str, optional)`: Pagination marker.
+        - `limit (int, optional)`: Max templates to list.
       </td>
       <td>List of templates</td>
     </tr>
     <tr>
       <td>`box_docgen_template_delete_tool`</td>
       <td>Remove template marking</td>
-      <td>`template_id (str):` Template identifier</td>
+      <td>`template_id (str)`: Template identifier</td>
       <td>Deletion confirmation</td>
     </tr>
     <tr>
       <td>`box_docgen_template_get_by_id_tool`</td>
       <td>Get template details</td>
-      <td>`template_id (str):` Template identifier</td>
+      <td>`template_id (str)`: Template identifier</td>
       <td>Template details</td>
     </tr>
     <tr>
       <td>`box_docgen_template_list_tags_tool`</td>
       <td>List template tags</td>
       <td>
-        - `template_id` (str): Template ID.
-        - `template_version_id` (str, optional): Version ID.
-        - `marker` (str, optional): Pagination marker.
-        - `limit` (int, optional): Max tags to return.
+        - `template_id (str)`: Template ID.
+        - `template_version_id (str, optional)`: Version ID.
+        - `marker (str, optional)`: Pagination marker.
+        - `limit (int, optional)`: Max tags to return.
       </td>
       <td>List of tags</td>
     </tr>
@@ -437,9 +451,9 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
       <td>`box_docgen_template_list_jobs_tool`</td>
       <td>List jobs using a template</td>
       <td>
-        - `template_id (str):` Template identifier.
-        - `marker (str, optional):` Pagination marker.
-        - `limit (int, optional):` Max jobs to list.
+        - `template_id (str)`: Template identifier.
+        - `marker (str, optional)`: Pagination marker.
+        - `limit (int, optional)`: Max jobs to list.
       </td>
       <td>Job details</td>
     </tr>
@@ -471,6 +485,50 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
       <td>Retrieve a metadata template by its name.</td>
       <td>`template_name (str)`: The name of the metadata template to retrieve.</td>
       <td>The metadata template associated with the provided name.</td>
+    </tr>
+    <tr>
+      <td>`box_metadata_template_create_tool`</td>
+      <td>Create a metadata template.</td>
+      <td>
+        - `ctx (Context)`: The context object
+        - `display_name (str)`: The display name of the metadata template
+        - `fields (List[Dict[str, Any]])`: A list of field definitions with type, key, displayName, description, hidden, and options (for enum/multiSelect)
+        - `template_key (Optional[str])`: An optional key for the metadata template
+      </td>
+      <td>The created metadata template.</td>
+    </tr>
+    <tr>
+      <td>`box_metadata_set_instance_on_file_tool`</td>
+      <td>Set a metadata instance on a file.</td>
+      <td>
+        - `ctx (Context)`: The context object
+        - `template_key (str)`: The key of the metadata template
+        - `file_id (str)`: The ID of the file to set metadata on
+        - `metadata (dict)`: The metadata values to set
+      </td>
+      <td>The metadata instance associated with the file.</td>
+    </tr>
+    <tr>
+      <td>`box_metadata_update_instance_on_file_tool`</td>
+      <td>Update a metadata instance on a file.</td>
+      <td>
+        - `ctx (Context)`: The context object
+        - `file_id (str)`: The ID of the file to update metadata on
+        - `template_key (str)`: The key of the metadata template
+        - `metadata (dict)`: The metadata values to update
+        - `remove_non_included_data (bool)`: If True, removes fields not included in metadata
+      </td>
+      <td>The response from the Box API after updating the metadata.</td>
+    </tr>
+    <tr>
+      <td>`box_metadata_delete_instance_on_file_tool`</td>
+      <td>Delete a metadata instance on a file.</td>
+      <td>
+        - `ctx (Context)`: The context object
+        - `file_id (str)`: The ID of the file to delete metadata from
+        - `template_key (str)`: The key of the metadata template
+      </td>
+      <td>The response from the Box API after deleting the metadata.</td>
     </tr>
   </tbody>
 </table>
