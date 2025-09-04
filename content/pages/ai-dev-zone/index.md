@@ -98,20 +98,20 @@ centered: false
     MCP Servers
   </Header>
   <p style="text-align: left; margin-left: 0;">
-    These resources will get you up and running with Box MCP Server.
+    These resources will get you up and running with Box MCP server.
   </p>
 
   <TileGrid rows="4">
-    <Tile type="mcp" title="Remote Box MCP Server"
+    <Tile type="mcp" title="Remote Box MCP server"
       href="/guides/box-mcp/remote">
-        The remote Box MCP Server allows third party AI systems to securely connect and interact with your content in Box.
+        The remote Box MCP server allows third party AI systems to securely connect and interact with your content in Box.
 
         <div>
           <strong style="background-color: #92e0c0">New</strong>
           <strong style="background-color: #e8e8e8">MCP</strong>
         </div>
     </Tile>
-    <Tile type="mcp" title="Self-hosted Box MCP Server"
+    <Tile type="mcp" title="Self-hosted Box MCP server"
       href="/guides/box-mcp/self-hosted">
         A Python Developer Community open source project. It integrates with the Box API to perform various operations such as file search, text extraction, AI-based querying, and data extraction.
 
@@ -125,9 +125,9 @@ centered: false
           <strong style="background-color: #e8e8e8">Tutorial</strong>
         </div>
     </Tile>
-    <Tile type="mcp" title="Box MCP Server and LangChain MCP Adapters"
+    <Tile type="mcp" title="Box MCP server and LangChain MCP Adapters"
       href="https://medium.com/box-developer-blog/using-an-existing-mcp-server-with-langchain-mcp-adapters-94cdd4af6d1b">
-        Turn Box MCP Server into a LangChain-compatible agent using the LangChain MCP Adapters.
+        Turn Box MCP server into a LangChain-compatible agent using the LangChain MCP Adapters.
 
         <div>
           <strong style="background-color: #e8e8e8">Tutorial</strong>
