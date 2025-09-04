@@ -17,18 +17,18 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-mcp/self-hosted/index.md
 fullyTranslated: true
 ---
-# セルフホストBox MCPサーバー
+# Self-hosted Box MCP server
 
-[セルフホストBox MCPサーバー](https://github.com/box-community/mcp-server-box.git)とは、さまざまな操作 (ファイル検索、テキスト抽出、AIベースのクエリ実行、データ抽出など) を行うためにBox APIと統合されているPythonプロジェクトです。Box Pythonの次世代SDKライブラリを利用し、Boxのファイルやフォルダを操作するための一連のツールを提供します。
+The [Self-hosted Box MCP server](https://github.com/box-community/mcp-server-box.git) is a Python project that integrates with the Box API to perform various operations such as file search, text extraction, AI-based querying, and data extraction. It leverages the Box Python Next Gen SDK library and provides a set of tools to interact with Box files and folders.
 
 ## インストール
 
 ### 前提条件
 
-* Python 3.13以上
+* Python `3.13` or higher
 * Box Platformアプリの資格情報 (クライアントID、クライアントシークレット)
 
-セルフホストBox MCPサーバーを設定するには、このセクションの手順に従います。
+Follow the steps from this section to set up the self-hosted Box MCP server.
 
 1. リポジトリを複製します。
 
@@ -112,9 +112,9 @@ BOX_CLIENT_SECRET=your_client_secret
 
 </iframe>
 
-## Box MCPサーバーのローカルでの実行
+## Running Box MCP server locally
 
-Box MCPサーバーを起動するには、次のコマンドを実行します。
+To start the Box MCP server, run the following command:
 
 ```sh
 uv --directory /Users/USER_NAME/PATH_TO_PROJECT/mcp-server-box run src/mcp_server_box.py
@@ -158,6 +158,12 @@ CursorでBox MCPサーバーの使用を開始するには、以下の手順に�
 7. 必要に応じて、Cursorを再起動します。
 8. `box_authorize_app_tool`ツールを使用して、Box MCPの使用を開始します。
 
+### Use dedicated Box integration in Claude
+
+You can access the Box MCP server in the [Claude directory](http://claude.ai/directory). The directory is available to all Claude users on web and desktop.
+
+Read the [official Anthropic documentation](https://support.anthropic.com/en/articles/11724452-browsing-and-connecting-to-tools-from-the-directory#h_79b235c2c7) to learn how to add Box connector tool.
+
 ### Claude for DesktopをBox MCPクライアントとして使用する
 
 前提条件:
@@ -198,7 +204,7 @@ code ~/Library/Application\ Support/Claude/claude_desktop_config.json
 ```
 
 3. Claude for Desktopを再起動します。
-4. `box_authorize_app_tool`を使用してBox MCPサーバーを認証します。
+4. Authenticate the Box MCP server using `box_authorize_app_tool` tool.
 
 ## 利用可能なツール
 
@@ -263,10 +269,10 @@ Box内のファイルを検索します
 
 <td>
 
-* `query (str):` 検索クエリ。
-* `file_extensions (List[str], optional):` 拡張子によるフィルタ。
-* `where_to_look_for_query (List[str], optional):` 検索する場所。
-* `ancestor_folder_ids (List[str], optional):` 検索を制限するためのフォルダID。
+* `query (str)`: Search query.
+* `file_extensions (List[str], optional)`: Filter by extensions.
+* `where_to_look_for_query (List[str], optional)`: Locations to search.
+* `ancestor_folder_ids (List[str], optional)`: Folder IDs to limit the search.
 
 </td>
 
@@ -296,7 +302,7 @@ Box内のファイルを検索します
 
 <td>
 
-`folder_name (str):` フォルダの名前
+`folder_name (str)`: Name of the folder
 
 </td>
 
@@ -328,13 +334,13 @@ Box内のファイルを検索します
 
 <li>
 
-`folder_id (str):` フォルダのID。
+`folder_id (str)`: ID of the folder.
 
 </li>
 
 <li>
 
-`is_recursive (bool):` 再帰的にリストを取得するかどうか。
+`is_recursive (bool)`: Whether to list recursively.
 
 </li>
 
@@ -408,7 +414,7 @@ Boxファイルのテキストコンテンツを読み取ります
 
 <td>
 
-* `file_id (str):` 読み取るファイルのID。
+* `file_id (str)`: ID of the file to read.
 
 </td>
 
@@ -436,11 +442,11 @@ Boxファイルのテキストコンテンツを読み取ります
 
 <td>
 
-* `file_path (str):` ローカルファイルパス。<br>
+* `file_path (str)`: Local file path.<br>
 
-* `folder_id (str, optional):` アップロード先フォルダID。<br>
+* `folder_id (str, optional)`: Destination folder ID.<br>
 
-* `new_file_name (str, optional):` 新しいファイルの名前。
+* `new_file_name (str, optional)`: New file name.
 
 </td>
 
@@ -468,13 +474,13 @@ Boxファイルのテキストコンテンツを読み取ります
 
 <td>
 
-* `content (str|bytes):` アップロードするコンテンツ。<br>
+* `content (str|bytes)`: Content to upload.<br>
 
-* `file_name (str):` ファイル名。<br>
+* `file_name (str)`: File name.<br>
 
-* `folder_id (str, optional):` アップロード先フォルダID。<br>
+* `folder_id (str, optional)`: Destination folder ID.<br>
 
-* `is_base64 (bool, optional):` コンテンツがbase64でエンコードされているかどうか。
+* `is_base64 (bool, optional)`: If content is base64 encoded.
 
 </td>
 
@@ -502,17 +508,45 @@ Boxからファイルをダウンロードします
 
 <td>
 
-* `file_id (str):` ファイルID。<br>
+* `file_id (str)`: File ID.<br>
 
-* `save_file (bool, optional):` ローカルに保存するかどうか。<br>
+* `save_file (bool, optional)`: Whether to save locally.<br>
 
-* `save_path (str, optional):` ローカルの保存パス。
+* `save_path (str, optional)`: Local save path.
 
 </td>
 
 <td>
 
 ファイルコンテンツまたは保存の確認
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+`get_file_content`
+
+</td>
+
+<td>
+
+Extract text content from a file
+
+</td>
+
+<td>
+
+* `file_id (str)`: File ID.<br>
+
+</td>
+
+<td>
+
+Text file content
 
 </td>
 
@@ -576,12 +610,12 @@ Boxからファイルをダウンロードします
 
 <td style="white-space: pre-wrap;">
 
-* `action (str):` `create`、`delete`、または`update`。
-* `folder_id (str, optional):` フォルダID。
-* `name (str, optional):` フォルダ名。
-* `parent_id (str, optional):` 親フォルダID。
-* `description (str, optional):` フォルダの説明。
-* `recursive (bool, optional):` 再帰的な削除かどうか。
+* `action (str)`: `create`, `delete`, or `update`.
+* `folder_id (str, optional)`: Folder ID.
+* `name (str, optional)`: Folder name.
+* `parent_id (str, optional)`: Parent folder ID.
+* `description (str, optional)`: Folder description.
+* `recursive (bool, optional)`: For recursive delete.
 
 </td >
 
@@ -651,9 +685,9 @@ Boxからファイルをダウンロードします
 
 <td>
 
-* `file_id (str):` ファイルID。<br>
+* `file_id (str)`: File ID.<br>
 
-* `prompt (str):` AIに対する質問。
+* `prompt (str)`: Question for the AI.
 
 </td>
 
@@ -681,9 +715,9 @@ AIの応答
 
 <td>
 
-* `file_ids (List[str]):` ファイルIDのリスト。<br>
+* `file_ids (List[str])`: List of file IDs.<br>
 
-* `prompt (str):` AIに対する指示。
+* `prompt (str)`: Instruction for AI.
 
 </td>
 
@@ -711,9 +745,9 @@ HubについてBox AIに質問します
 
 <td>
 
-* `hubs_id (str):` HubのID。<br>
+* `hubs_id (str)`: ID of the hub.<br>
 
-* `prompt (str):` AIに対する質問。
+* `prompt (str)`: Question for the AI.
 
 </td>
 
@@ -741,9 +775,9 @@ AIを使用してファイルからデータを抽出します
 
 <td>
 
-* `file_id (str):` ファイルID。<br>
+* `file_id (str)`: File ID.<br>
 
-* `fields (str):` 抽出するフィールド。
+* `fields (str)`: Fields to extract.
 
 </td>
 
@@ -813,10 +847,10 @@ JSON形式で抽出されたデータ
 
 <td>
 
-* `file_id` (str): テンプレートファイルID。
-* `destination_folder_id` (str): 出力フォルダID。
-* `user_input_file_path` (str): JSON入力データのパス。
-* `output_type` (str, optional): 出力形式。
+* `file_id (str)`: Template file ID.
+* `destination_folder_id (str)`: Output folder ID.
+* `user_input_file_path (str)`: JSON input data path.
+* `output_type (str, optional)`: Output format.
 
 </td>
 
@@ -844,7 +878,7 @@ IDを指定してDoc Genジョブを取得します
 
 <td>
 
-`job_id (str):` ジョブの識別子
+`job_id (str)`: Job identifier
 
 </td>
 
@@ -872,8 +906,8 @@ JSON形式のジョブの詳細
 
 <td>
 
-* `marker (str, optional):` ページ割りのマーカー。
-* `limit (int, optional):` 返される最大ジョブ数。
+* `marker (str, optional)`: Pagination marker.
+* `limit (int, optional)`: Max jobs to return.
 
 </td>
 
@@ -901,9 +935,9 @@ JSON形式のジョブのリスト
 
 <td>
 
-* `batch_id (str):` バッチの識別子。
-* `marker (str, optional):` ページ割りのマーカー。
-* `limit (int, optional):` 返される最大ジョブ数。
+* `batch_id (str)`: Batch identifier.
+* `marker (str, optional)`: Pagination marker.
+* `limit (int, optional)`: Max jobs to return.
 
 </td>
 
@@ -931,7 +965,7 @@ JSON形式のジョブのリスト
 
 <td>
 
-`file_id (str):` 設定するファイルID
+`file_id (str)`: File ID to mark
 
 </td>
 
@@ -959,8 +993,8 @@ JSON形式のジョブのリスト
 
 <td>
 
-* `marker` (str, optional): ページ割りのマーカー。
-* `limit` (int, optional): リストに取得するテンプレートの最大数。
+* `marker (str, optional)`: Pagination marker.
+* `limit (int, optional)`: Max templates to list.
 
 </td>
 
@@ -988,7 +1022,7 @@ JSON形式のジョブのリスト
 
 <td>
 
-`template_id (str):` テンプレートの識別子
+`template_id (str)`: Template identifier
 
 </td>
 
@@ -1016,7 +1050,7 @@ JSON形式のジョブのリスト
 
 <td>
 
-`template_id (str):` テンプレートの識別子
+`template_id (str)`: Template identifier
 
 </td>
 
@@ -1044,10 +1078,10 @@ JSON形式のジョブのリスト
 
 <td>
 
-* `template_id` (str): テンプレートID。
-* `template_version_id` (str, optional): バージョンID。
-* `marker` (str, optional): ページ割りのマーカー。
-* `limit` (int, optional): 返される最大タグ数。
+* `template_id (str)`: Template ID.
+* `template_version_id (str, optional)`: Version ID.
+* `marker (str, optional)`: Pagination marker.
+* `limit (int, optional)`: Max tags to return.
 
 </td>
 
@@ -1075,9 +1109,9 @@ JSON形式のジョブのリスト
 
 <td>
 
-* `template_id (str):` テンプレートの識別子。
-* `marker (str, optional):` ページ割りのマーカー。
-* `limit (int, optional):` リストに取得する最大ジョブ数。
+* `template_id (str)`: Template identifier.
+* `marker (str, optional)`: Pagination marker.
+* `limit (int, optional)`: Max jobs to list.
 
 </td>
 
@@ -1182,6 +1216,130 @@ JSON形式のジョブのリスト
 <td>
 
 指定した名前に関連付けられているメタデータテンプレート。
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+`box_metadata_template_create_tool`
+
+</td>
+
+<td>
+
+Create a metadata template.
+
+</td>
+
+<td>
+
+* `ctx (Context)`: The context object
+* `display_name (str)`: The display name of the metadata template
+* `fields (List[Dict[str, Any]])`: A list of field definitions with type, key, displayName, description, hidden, and options (for enum/multiSelect)
+* `template_key (Optional[str])`: An optional key for the metadata template
+
+</td>
+
+<td>
+
+The created metadata template.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+`box_metadata_set_instance_on_file_tool`
+
+</td>
+
+<td>
+
+Set a metadata instance on a file.
+
+</td>
+
+<td>
+
+* `ctx (Context)`: The context object
+* `template_key (str)`: The key of the metadata template
+* `file_id (str)`: The ID of the file to set metadata on
+* `metadata (dict)`: The metadata values to set
+
+</td>
+
+<td>
+
+The metadata instance associated with the file.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+`box_metadata_update_instance_on_file_tool`
+
+</td>
+
+<td>
+
+Update a metadata instance on a file.
+
+</td>
+
+<td>
+
+* `ctx (Context)`: The context object
+* `file_id (str)`: The ID of the file to update metadata on
+* `template_key (str)`: The key of the metadata template
+* `metadata (dict)`: The metadata values to update
+* `remove_non_included_data (bool)`: If True, removes fields not included in metadata
+
+</td>
+
+<td>
+
+The response from the Box API after updating the metadata.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+`box_metadata_delete_instance_on_file_tool`
+
+</td>
+
+<td>
+
+Delete a metadata instance on a file.
+
+</td>
+
+<td>
+
+* `ctx (Context)`: The context object
+* `file_id (str)`: The ID of the file to delete metadata from
+* `template_key (str)`: The key of the metadata template
+
+</td>
+
+<td>
+
+The response from the Box API after deleting the metadata.
 
 </td>
 

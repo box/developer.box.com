@@ -21,27 +21,43 @@ fullyTranslated: true
 
 Model Context Protocol ([MCP](https://modelcontextprotocol.io/introduction)) は、アプリケーションがLLMにコンテキストを提供する方法を標準化するオープンプロトコルです。MCPサーバーにより、高度な統合をよりシンプルかつ時間をかけずに構築できるようになります。
 
-Box MCPサーバーを使用すると、Copilot Studio、Cursor、Claude for Desktopなどのプラットフォームが提供するサードパーティ製AIエージェントは、Boxのコンテンツにシームレスにアクセスできるようになります。これは、Boxに保存されているコンテンツに関連した操作を実行できるようにすることで、エージェントの機能を拡張します。
+Box MCP server allows third party AI agents from platforms like Anthropic's Claude, Microsoft Copilot Studio, and Mistral Le Chat to access Box content seamlessly. It extends the agent’s capabilities by allowing it to perform actions related to content stored in Box.
 
-Box MCPサーバーには2種類あります。
+<ImageFrame noborder center>
 
-* リモートBox MCPサーバー: Box管理コンソールで作成または有効化でき、Boxで直接ホストされています。
+![MCP](./img/mcp.png)
+
+</ImageFrame>
+
+There are two types of Box MCP servers:
+
+* remote Box MCP server which you can create or enable in the Box Admin Console. It is hosted directly in Box.
   <!--alex ignore-->
 
-* セルフホストBox MCPサーバー: このバージョンはオープンソースのBox Developer Communityプロジェクトであるため、ローカルマシンで複製してホストできます。
+* self-hosted Box MCP server which you can clone and host on your local machine, as this version in an open source Box Developer community project.
   <!--alex enable-->
 
-実装されるツールのレベルが異なるため、2種類のBox MCPサーバーに関する詳細なガイドを参照し、Box MCPサーバーを有効化する方法を確認してください。
+Check the detailed guides on both types of Box MCP servers, as the level of the implemented tools differs. Learn how to enable Box MCP server:
 
 <TileGrid rows="2">
 
-<Tile type="mcp" title="リモートBox MCPサーバー" href="/guides/box-mcp/remote">
+<Tile type="mcp" title="Remote Box MCP server" href="/guides/box-mcp/remote">
 
-管理コンソールでリモートBox MCPサーバーを有効にします。これはBoxで直接ホストされています。
+Enable the remote Box MCP server in the Admin Console. It is hosted directly in Box.
+
+<div>
+
+<strong style="background-color: #e1ffe7">
+
+新着
+
+</strong>
+
+</div>
 
 </Tile>
 
-<Tile type="mcp" title="セルフホストBox MCPサーバー" href="/guides/box-mcp/self-hosted">
+<Tile type="mcp" title="Self-hosted Box MCP server" href="/guides/box-mcp/self-hosted">
 
 オープンソースのBox Developer Communityプロジェクト。このBox MCPサーバーを複製し、ローカルマシンでホストすることができます。
 

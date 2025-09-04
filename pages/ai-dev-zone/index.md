@@ -191,15 +191,15 @@ MCPサーバー
 
 <p style="text-align: left; margin-left: 0;">
 
-Box MCPサーバーを使用する際は、以下のリソースが参考になります。
+These resources will get you up and running with Box MCP server.
 
 </p>
 
 <TileGrid rows="4">
 
-<Tile type="mcp" title="リモートBox MCPサーバー" href="/guides/box-mcp/remote">
+<Tile type="mcp" title="Remote Box MCP server" href="/guides/box-mcp/remote">
 
-リモートBox MCPサーバーを使用すると、サードパーティ製のAIシステムを安全にBoxに接続してコンテンツを操作することができます。
+The remote Box MCP server allows third party AI systems to securely connect and interact with your content in Box.
 
 <div>
 
@@ -219,7 +219,7 @@ MCP
 
 </Tile>
 
-<Tile type="mcp" title="セルフホストBox MCPサーバー" href="/guides/box-mcp/self-hosted">
+<Tile type="mcp" title="Self-hosted Box MCP server" href="/guides/box-mcp/self-hosted">
 
 PythonのDeveloper Communityオープンソースプロジェクト。これは、さまざまな操作 (ファイル検索、テキスト抽出、AIベースのクエリ実行、データ抽出など) を行うためにBox APIと統合されています。
 
@@ -247,9 +247,9 @@ AIを活用したドキュメント生成のためにBox MCPサーバーからBo
 
 </Tile>
 
-<Tile type="mcp" title="Box MCPサーバーとLangChain MCPアダプタ" href="https://medium.com/box-developer-blog/using-an-existing-mcp-server-with-langchain-mcp-adapters-94cdd4af6d1b">
+<Tile type="mcp" title="Box MCP server and LangChain MCP Adapters" href="https://medium.com/box-developer-blog/using-an-existing-mcp-server-with-langchain-mcp-adapters-94cdd4af6d1b">
 
-LangChain MCPアダプタを使用して、Box MCPサーバーをLangChain互換のエージェントに変換します。
+Turn Box MCP server into a LangChain-compatible agent using the LangChain MCP Adapters.
 
 <div>
 
