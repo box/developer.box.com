@@ -86,7 +86,7 @@ Watch a video that features a demo project, a React based chat bot that leverage
 To enable Box MCP for [Mistral AI’s Le Chat](https://chat.mistral.ai/chat), visit [connectors page](https://chat.mistral.ai/connections), click *Connect* and grant access to Box. Alternatively, directly form the chat view, click *Tools* and choose Box.
 
 <ImageFrame noborder center>
-  ![MCP](./img/mistral.png)
+  ![MCP](./img/mistral.gif)
 </ImageFrame>
 
 ### Using Box AI Features with the MCP Server
