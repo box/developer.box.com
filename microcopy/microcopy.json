@@ -404,7 +404,7 @@
   "footer.categories.company.links.github_community.text": "コミュニティGitHub",
   // Link to the github community org
   "footer.categories.company.links.github_community.url": "https:\/\/github.com\/box-community",
-  // Text for a link to the AI Dev Zone
+  // Text for a link to the AI Developer Zone
   "footer.categories.company.links.ai_dev_zone.text": "AI Developer Zone",
   // Link to the AI Dev Zone
   "footer.categories.company.links.ai_dev_zone.url": "\/ai-dev-zone\/",
