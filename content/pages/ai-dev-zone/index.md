@@ -145,7 +145,7 @@ centered: false
   </p>
   <TileGrid rows="4">
     <Tile type="model" title="Manage agents with Box AI Studio API"
-      href="guides/ai-studio/getting-started-ai-studio/">
+      href="/guides/ai-studio/getting-started-ai-studio/">
         Create and manage custom AI agents with Box AI Studio API.
 
       <div>
