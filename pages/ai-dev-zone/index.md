@@ -289,7 +289,7 @@ Learn how to create advanced AI agents with Box.
 
 <TileGrid rows="4">
 
-<Tile type="model" title="Manage agents with Box AI Studio API" href="guides/ai-studio/getting-started-ai-studio/">
+<Tile type="model" title="Manage agents with Box AI Studio API" href="/guides/ai-studio/getting-started-ai-studio/">
 
 Create and manage custom AI agents with Box AI Studio API.
 
