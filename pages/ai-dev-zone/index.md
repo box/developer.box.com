@@ -283,7 +283,7 @@ Boxで高度なAIエージェントを作成する方法を確認します。
 
 <TileGrid rows="4">
 
-<Tile type="model" title="Box AI Studio APIを使用したエージェントの管理" href="guides/ai-studio/getting-started-ai-studio/">
+<Tile type="model" title="Box AI Studio APIを使用したエージェントの管理" href="/guides/ai-studio/getting-started-ai-studio/">
 
 Box AI Studio APIを使用してカスタムAIエージェントを作成および管理します。
 
