@@ -149,13 +149,7 @@ Follow these instructions to start using Box MCP Sever with Cursor:
 7. Restart Cursor if necessary.
 8. Use the `box_authorize_app_tool` tool to start using Box MCP.
 
-### Use dedicated Box integration in Claude
-
-You can access the Box MCP server in the [Claude directory](http://claude.ai/directory). The directory is available to all Claude users on web and desktop.
-
-Read the [official Anthropic documentation](https://support.anthropic.com/en/articles/11724452-browsing-and-connecting-to-tools-from-the-directory#h_79b235c2c7) to learn how to add Box connector tool.
-
-### Use Claude for Desktop as the Box MCP client
+### Use Claude as the Box MCP client
 
 Prerequisites:
 
@@ -192,7 +186,7 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
 }
 ```
 
-3. Restart Claude for Desktop.
+3. Restart Claude desktop app.
 4. Authenticate the Box MCP server using `box_authorize_app_tool` tool.
 
 ## Available tools
