@@ -409,7 +409,7 @@
   // Link to the AI Dev Zone
   "footer.categories.company.links.ai_dev_zone.url": "\/ai-dev-zone\/",
   // Text for a link to the sample code catalog
-  "footer.categories.company.links.sample_code_catalog.text": "コミュニティGitHub",
+  "footer.categories.company.links.sample_code_catalog.text": "サンプルコードカタログ",
   // Link to the sample code catalog
   "footer.categories.company.links.sample_code_catalog.url": "\/sample-code\/",
   // A title for a footer section on our tooling options
