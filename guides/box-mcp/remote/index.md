@@ -72,11 +72,11 @@ response = await client.beta.messages.create(
 
 ```
 
-### Claude Desktop
+### Claude
 
-To start using the remote Box MCP server in [Claude Desktop](https://claude.ai/download), go to Claude app settings and click _Connectors_. Within this view click _Browse connectors_ and choose Box. Ensure to grant Claude access to Box.
+To start using the remote Box MCP server in [Claude](https://claude.ai/directory), go to Claude app settings and click _Connectors_. Within this view click _Browse connectors_ and choose Box. Ensure to grant Claude access to Box.
 
-See a demo video that showcases how to connect Box MCP with Mistral Claude desktop.
+See a demo video that showcases how to connect Box MCP with the Claude desktop app.
 
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/OJVjXZkPd54?si=PSiV6aKkUnL7CXoG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 
