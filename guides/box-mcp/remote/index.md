@@ -17,15 +17,15 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-mcp/remote/index.md
 fullyTranslated: true
 ---
-# Remote Box MCP server
+# リモートBox MCPサーバー
 
-[Remote Box MCP server](https://modelcontextprotocol.io/introduction) is a standardized way for AI Agents to connect and interact with third-party applications like Box, enabling seamless access to content and AI capabilities across platforms. The Box MCP server acts as a bridge that allows leading AI Agent platforms — such as Copilot Studio, Claude Enterprise, Mistral Le Chat — to securely query and utilize Box data and AI-powered tools without exposing raw file content. Through OAuth authorization, users can grant AI Agents controlled access to their Box accounts, enabling intelligent document handling, advanced search, and multi-file AI queries directly within these external AI environments.
+[リモートBox MCPサーバー](https://modelcontextprotocol.io/introduction)は、AIエージェントがBoxなどのサードパーティ製アプリケーションに接続して操作するための標準的な方法で、プラットフォーム間でのコンテンツやAI機能へのシームレスなアクセスを可能にします。Box MCPサーバーは、主要なAIエージェントプラットフォーム (Copilot Studio、Claude Enterprise、Mistral Le Chatなど) が未加工のファイルコンテンツを公開することなく、BoxのデータやAIを活用したツールを安全に照会および利用できるようにする橋渡しの役割を果たします。OAuth承認により、ユーザーは、自身のBoxアカウントへの制限付きアクセスをAIエージェントに許可することができるため、このような外部のAI環境内で直接、インテリジェントなドキュメント処理、高度な検索、複数ファイルのAIクエリが可能になります。
 
-## Access and manage predefined Box MCP servers
+## あらかじめ定義されたBox MCPサーバーにアクセスして管理する
 
 1. Box管理コンソールのサイドバーにある \[**統合**] をクリックします。 
-2. Use _Categories_ filter and choose MCP or search for a predefined Box MCP server in the search field search at the top of the window.
-3. Beside the selected MCP server, click the state, then select the state you want to enable.
+2. \[_カテゴリ_] フィルタを使用して \[MCP] を選択するか、ウィンドウ上部にある検索フィールドであらかじめ定義されたBox MCPサーバーを検索します。
+3. 選択したMCPサーバーの横にある状態をクリックし、有効にする状態を選択します。
 
 <ImageFrame noborder center>
 
@@ -33,22 +33,22 @@ fullyTranslated: true
 
 </ImageFrame>
 
-## Create an unlisted Box MCP server
+## リストに記載されていないBox MCPサーバーを作成する
 
 1. Box管理コンソールのサイドバーにある \[統合] をクリックします。
-2. Search for **Box MCP server** in the search field search at the top of the window.
-3. Hover on the **Box MCP server** application, then click **Configure**.
+2. ウィンドウ上部にある検索フィールドで**Box MCP Server**を検索します。
+3. \[**Box MCP Server**] アプリケーションにカーソルを合わせ、\[**構成**] をクリックします。
 4. \[**追加の構成**] セクションで \[**+ 統合資格情報を追加**] をクリックします。
 5. 生成されたクライアントIDとクライアントシークレットをコピーします。 
 6. 外部MCPクライアントから提供されたリダイレクトURIを入力します。 
 7. \[スコープ] で \[_AIリクエストの管理_] が選択されていることを確認します。
 
-## Add Box MCP server on the Client Side
+## クライアント側でBox MCPサーバーを追加する
 
 AIエージェントプラットフォームからBoxに接続するには、以下の操作を行う必要があります。
 
-* Endpoint URL: `https://mcp.box.com`
-* Client ID and Client Secret: Box generates these in the Integration Credentials section of your Admin Console when configuring the Box MCP server, above.
+* エンドポイントURL: `https://mcp.box.com`
+* クライアントIDとクライアントシークレット: これらは、上記のBox MCPサーバーの構成時に管理コンソールの統合資格情報のセクションで生成されます。
 * MCP名を渡す: `box-remote-mcp`
 * `authorization_token`を指定する
 
@@ -74,35 +74,35 @@ response = await client.beta.messages.create(
 
 ### Claude
 
-To start using the remote Box MCP server in [Claude](https://claude.ai/directory), go to Claude app settings and click _Connectors_. Within this view click _Browse connectors_ and choose Box. Ensure to grant Claude access to Box.
+[Claude](https://claude.ai/directory)でリモートBox MCPサーバーの使用を開始するには、Claudeアプリの設定に移動し、\[_Connectors (コネクタ)_] をクリックします。このビューで \[_Browse connectors (コネクタを参照)_] をクリックして \[Box] を選択し、ClaudeにBoxへのアクセスを許可します。
 
-See a demo video that showcases how to connect Box MCP with the Claude desktop app.
+Box MCPをClaudeデスクトップアプリと関連付ける方法を紹介するデモ動画をご確認ください。
 
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/OJVjXZkPd54?si=PSiV6aKkUnL7CXoG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/OJVjXZkPd54?si=PSiV6aKkUnL7CXoG" title="YouTube動画プレイヤー" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 
 </iframe>
 
 ### Copilot Studio
 
-To add the remote Box MCP server, follow the instructions provided by the Copilot Studio side. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp#add-tools-from-an-existing-mcp-connector-to-an-agent).
+リモートBox MCPサーバーを追加するには、Copilot Studio側が提供する手順に従います。詳細な手順とガイダンスは、こちらのMicrosoftの公式ドキュメントで確認できます: [Add an MCP Server in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp#add-tools-from-an-existing-mcp-connector-to-an-agent)
 
 ### Azure API Center
 
-To add the remote Box MCP server in Azure API Center's Enterprise Registry, follow the instructions provided by Azure. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Azure API Center's Enterprise Registry](https://learn.microsoft.com/en-us/azure/api-center/register-discover-mcp-server).
+Azure API CenterのEnterprise RegistryにリモートBox MCPサーバーを追加するには、Azureが提供する手順に従います。詳細な手順とガイダンスは、こちらのMicrosoftの公式ドキュメントで確認できます: [Add an MCP Server in Azure API Center's Enterprise Registry](https://learn.microsoft.com/en-us/azure/api-center/register-discover-mcp-server)
 
 ### AnthropicのMessages API
 
-Connect the remote Box MCP server with [Anthropic's Messages API](https://docs.anthropic.com/en/api/messages). Clone [this sample chat bot project](https://github.com/box-community/mcp-client-remote-mcp-react) to get started quickly. It allows you to have a conversation with an Anthropic model, which has access to tools provided by the Box remote MCP server.
+リモートBox MCPサーバーを[AnthropicのMessages API](https://docs.anthropic.com/en/api/messages)と関連付けます。[こちらのサンプルチャットボットプロジェクト](https://github.com/box-community/mcp-client-remote-mcp-react)を複製すると、すぐに作業を開始できます。これにより、Anthropicモデルとの会話が可能になり、BoxのリモートMCPサーバーが提供するツールにアクセスできます。
 
-Watch a video that features a demo project, a React based chat bot that leverages remote Box MCP.
+リモートBox MCPを利用しているReactベースのチャットボットのデモプロジェクトを紹介する動画をご覧ください。
 
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/Rcn8p-nLJtI?si=dWsMnE6reTE-aKQw" title="Box remote MCP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/Rcn8p-nLJtI?si=dWsMnE6reTE-aKQw" title="BoxのリモートMCP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 
 </iframe>
 
-### Mistral AI’s Le Chat
+### Mistral AIのLe Chat
 
-To enable Box MCP for [Mistral AI’s Le Chat](https://chat.mistral.ai/chat), visit [connectors page](https://chat.mistral.ai/connections), click _Connect_ and grant access to Box. Alternatively, directly form the chat view, click _Tools_ and choose Box.
+[Mistral AIのLe Chat](https://chat.mistral.ai/chat)に対してBox MCPを有効にするには、[コネクタのページ](https://chat.mistral.ai/connections)にアクセスし、\[_Connect (接続)_] をクリックして、Boxへのアクセスを許可します。または、チャットビューから直接、\[_Tools (ツール)_] をクリックして \[Box] を選択します。
 
 <ImageFrame noborder center>
 
@@ -112,16 +112,16 @@ To enable Box MCP for [Mistral AI’s Le Chat](https://chat.mistral.ai/chat), vi
 
 ### MCPサーバーでのBox AIの機能の使用
 
-When you use Box AI in third-party applications, you can achieve the best experience and highest quality results by accessing the applications through the Box MCP server. This ensures full functionality, improved performance, and a seamless user experience.
+サードパーティ製アプリケーションでBox AIを使用すると、Box MCPサーバー経由でアプリケーションにアクセスするため、最適なエクスペリエンスと質の高い結果を得ることができます。これにより、すべての機能、パフォーマンスの向上、シームレスなユーザーエクスペリエンスが実現します。
 
 ## 利用可能なツール
 
-Remote Box MCP server includes several tools you can use:
+リモートBox MCPサーバーには、使用できるツールがいくつかあります。
 
 | ツール                                | 説明                                                                               |
 | ---------------------------------- | -------------------------------------------------------------------------------- |
 | `who_am_i`                         | 現在認証されているBoxユーザーの詳細な情報を返します。                                                     |
-| `get_file_content`                 | Returns content of a file stored in Box                                          |
+| `get_file_content`                 | Boxに保存されているファイルのコンテンツを返します。                                                      |
 | `search_folders_by_name`           | キーワードの照合を使用して、名前でBox内のフォルダを検索します。                                                |
 | `list_folder_content_by_folder_id` | フォルダ内のファイル、フォルダ、ウェブリンクのリストを取得します。                                                |
 | `search_files_keyword`             | キーワードを使用してファイルを検索します。メタデータフィルタ、ファイル拡張子によるフィルタ処理、フィールドの選択がサポートされています。             |
