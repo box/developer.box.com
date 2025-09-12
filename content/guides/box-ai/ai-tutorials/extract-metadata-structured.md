@@ -177,20 +177,23 @@ The response lists the fields included in the metadata template and their values
 
 ### Enhanced Extract Agent
 
-To start using the agent, you need:
+To use the Enhanced Extract Agent, specify the `ai_agent` object as follows:
 
-- A Box Platform App with enabled `Manage AI` scope. 
-- The app installed and enabled in your Box instance.
-- A file to test with.
+```bash
+{
+  "ai_agent": {
+    "type": "ai_agent_id", 
+    "id": "enhanced_extract_agent"
+  }
+}
+```
 
-Calling an Enhanced Extract Agent works like calling the AI API - set the `type` to `AI Agent ID`, then string to the Enhanced Extract AI agent. 
+To extract data using the Enhanced Extract Agent you need one of the following:
 
-To extract data using the Enhanced Extract Agent you need:
+- [Inline field definitions][inline-field] (best when fields change frequently)
+- [Metadata template][metadata-template] (best when fields stay consistent)
 
-- Inline field definitions created with `agentCreateAiExtractStructuredMetadataTemplate` if your fields change frequently,
-- or a metadata template that contains the data about the fields you wish to extract, if your extracted fields stay the same. 
-
-See the full sample Python script that demonstrates how to call the Enhanced Extract Agent on a file using the Box AI SDK:
+See the sample code snippet using Box Python SDK:
 
 ```Python
 from box_sdk_gen import (
@@ -247,3 +250,5 @@ print(f"box_ai_response: {box_ai_response.answer}")
 [overrides]: g://box-ai/ai-agents/ai-agent-overrides
 [changelog]: page://changelog
 [blog]: https://medium.com/box-developer-blog
+[inline-field]: r://extract-metadata-structured/#use-fields-parameter
+[metadata-template]: r://extract-metadata-structured/#use-metadata-template
