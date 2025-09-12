@@ -250,5 +250,5 @@ print(f"box_ai_response: {box_ai_response.answer}")
 [overrides]: g://box-ai/ai-agents/ai-agent-overrides
 [changelog]: page://changelog
 [blog]: https://medium.com/box-developer-blog
-[inline-field]: r://extract-metadata-structured/#use-fields-parameter
-[metadata-template]: r://extract-metadata-structured/#use-metadata-template
+[inline-field]: #use-fields-parameter
+[metadata-template]: #use-metadata-template
