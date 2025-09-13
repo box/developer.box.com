@@ -191,20 +191,24 @@ curl --location 'https://api.box.com/2.0/ai/extract_structured' \
 
 ### 抽出エージェント (強化)
 
-エージェントの使用を開始するには、以下が必要です。
+To use the Enhanced Extract Agent, specify the `ai_agent` object as follows:
 
-* `Manage AI`スコープが有効になっているBox Platformアプリ。 
-* そのアプリがBoxインスタンスにインストールされ、有効になっていること。
-* テストに使用するファイル。
+```bash
+{
+  "ai_agent": {
+    "type": "ai_agent_id", 
+    "id": "enhanced_extract_agent"
+  }
+}
 
-抽出エージェント (強化) の呼び出しは、AI APIの呼び出しのように動作します。`type`を`AI Agent ID`に設定した後、文字列をAI抽出エージェント (強化) に設定します。
+```
 
-抽出エージェント (強化) を使用してデータを抽出するには、以下のいずれかが必要です。
+To extract data using the Enhanced Extract Agent you need one of the following:
 
-* `agentCreateAiExtractStructuredMetadataTemplate`を使用して作成されたインラインフィールドの定義 (フィールドが頻繁に変更される場合)。
-* 抽出するフィールドに関するデータを含むメタデータテンプレート (抽出される複数のフィールドが一定の場合)。 
+* [Inline field definitions][inline-field] (best when fields change frequently)
+* [Metadata template][metadata-template] (best when fields stay consistent)
 
-Box AI SDKを使用してファイルに対して抽出エージェント (強化) を呼び出す方法を示すPythonサンプルスクリプト全体を参照してください。
+See the sample code snippet using Box Python SDK:
 
 ```Python
 from box_sdk_gen import (
@@ -270,3 +274,7 @@ print(f"box_ai_response: {box_ai_response.answer}")
 [changelog]: page://changelog
 
 [blog]: https://medium.com/box-developer-blog
+
+[inline-field]: #use-fields-parameter
+
+[metadata-template]: #use-metadata-template
