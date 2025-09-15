@@ -784,5 +784,45 @@
   // Notice that the endpoint has a version 2024.0
   "versions.base_version_notice.__raw__.endpoint": "This endpoint is in the version **2024.0**. No changes are required to\ncontinue using it. For more details, see\n**[Box API versioning](g://api-calls/api-versioning-strategy)**.",
   // Notice that the resource has a version 2024.0
-  "versions.base_version_notice.__raw__.resource": "This resource is used by endpoints in the version **2024.0**.\nFor more details, see\n**[Box API versioning](g://api-calls/api-versioning-strategy)**."
+  "versions.base_version_notice.__raw__.resource": "This resource is used by endpoints in the version **2024.0**.\nFor more details, see\n**[Box API versioning](g://api-calls/api-versioning-strategy)**.",
+  // header button label
+  "boxai.button.text": "Ask Box AI",
+  // header button aria-label
+  "boxai.button.aria_label": "Open Box AI chatbot",
+  // Close button aria-label (default is "Close")
+  "boxai.modal.close": "Close",
+  // Clear button aria-label (default is "Clear chat")
+  "boxai.modal.clear": "Clear",
+  // Input placeholder text (default is "Ask a question about Box...")
+  "boxai.modal.placeholder": "Ask Box AI",
+  // Send button aria-label (default is "Send")
+  "boxai.modal.send": "Send",
+  // Loading state aria-label (default is "Thinking...")
+  "boxai.modal.thinking": "Thinking...",
+  // Based on text for AI responses (default is "Based on")
+  "boxai.modal.basedOn": "Based on",
+  // Error message for AI responses (default is "Sorry, I couldn't process yourrequest. Please try again.")
+  "boxai.modal.error": "Sorry, I couldn't process your request. Please try again.",
+  // Timeout error message
+  "boxai.modal.timeout": "Your request is taking longer than usual. Please wait a moment and try again.",
+  // Network error message
+  "boxai.modal.network": "Unable to connect to Box AI. Please check your connection and try again.",
+  "boxai.modal.copy.aria_label": "Copy message",
+  "boxai.modal.copy.tooltip": "Copy to clipboard",
+  // Modal title (default is "Box AI")
+  "boxai.modal.header.title": "Box AI",
+  // Welcome message title
+  "boxai.modal.welcome.title": "Welcome to Box AI",
+  // Welcome message subtitle
+  "boxai.modal.welcome.subtitle": "Ask your developer questions here.",
+  // Welcome message hub (default is "Powered by Box AI and Box Hubs")
+  "boxai.modal.welcome.hub": "Powered by Box AI and Box Hubs",
+  "boxai.modal.welcome.prompts.prompt1": "How do I authenticate with Box APIs?",
+  "boxai.modal.welcome.prompts.prompt2": "What are the different Box API scopes?",
+  "boxai.modal.welcome.prompts.prompt3": "Why am I getting a 404 when the file exists?",
+  "boxai.modal.welcome.prompts.prompt4": "How do I create a Box application?",
+  // Notification message when content is copied (default is "Copied to your clipboard")
+  "boxai.modal.notification.copied": "Copied to your clipboard",
+  // Close notification button aria-label (default is "Close notification")
+  "boxai.modal.notification.close": "Close notification"
 }
