@@ -14,10 +14,14 @@ alias_paths: []
 # Deprecated TypeScript SDK
 
 <Message type='warning'>
-  In mid-August, we will be deprecating the Box Next Gen SDKs in its current form. **Don’t worry, your existing code will continue to work without changes**.
+  As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts.
 
-  To learn more visit our SDK [versioning strategy document][versioning]
-</Message>
+  Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDK with no impact, but you won't receive new features, updates, or bug fixes.
+
+  All future development, including new features and updates for Next Generation SDKs, will now be delivered through Box core SDKs starting with version `v10`.
+
+  For more details, see our [SDK versioning strategy document][versioning].
+</Message
 
 You can use the **auto-generated** Box TypeScript SDK to call Box APIs in a TypeScript project.
 This [next generation SDK][next-gen] brings along new functionality to designed to elevate the developer experience and streamline your integration with the Box Content Cloud.

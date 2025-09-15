@@ -10,7 +10,7 @@ alias_paths:
   - /docs/community-supported-projects
 ---
 
-# SDKs
+# Box SDKs
 
 Box offers a set of SDKs
 you can use to build your application.
@@ -30,7 +30,7 @@ with partial API parity lack some functionality while we work on bringing
 these projects to full parity.
 </Message>
 
-The table lists legacy Box SDKs that you can use when building your
+The table lists Box SDKs that you can use when building your
 applications. For latest API support and features, use the next
 generation SDKs.
 
@@ -56,18 +56,18 @@ build apps on Android.
 Refer to [this][android-docs] documentation for more details.
 </Message>
 
-## Next generation SDKs
+## Next Generation SDKs
 
 <Message type='warning'>
-  In mid-August, we will be deprecating the Box Next Gen SDKs in its current form. **Don’t worry, your existing code will continue to work without changes**.
+  As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts.
 
-  ## Why we are making this change
+  Don't worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDK with no impact, but you won't receive new features, updates, or bug fixes.
 
-  In keeping with industry best practices, we are consolidating the Next Gen and legacy SDKs into a single package. This makes migration efforts much easier and allows you to seamlessly add new capabilities to existing applications still powered by the legacy SDKs. 
+  In keeping with industry best practices, we are consolidating the Box Next Generation SDKs and Box core SDKs into a single package for each programming language. This makes migration efforts much easier and allows to seamlessly add new capabilities to existing applications still powered by the manually maintained Box core SDKs.
 
-  Ultimately, the Next Generation SDKs will replace the current legacy SDKs as the latest major version release.
+  Box Next Generation SDKs are now available as the latest major version release (`v10`) of Box core SDKs.
 
-  To learn more visit our SDK [versioning strategy document][versioning]
+  For more details, see our [SDK versioning strategy document][versioning].
 </Message>
 
 The latest generation Box Python SDK, Box TypeScript

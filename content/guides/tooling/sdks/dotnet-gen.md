@@ -14,20 +14,20 @@ alias_paths: []
 # Deprecated .NET SDK
 
 <Message type='warning'>
-  In mid-August, we will be deprecating the Box Next Gen SDKs in its current form. **Don’t worry, your existing code will continue to work without changes**.
+  As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts.
 
-  To learn more visit our SDK [versioning strategy document][versioning]
-</Message>
+  Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDK with no impact, but you won't receive new features, updates, or bug fixes.
+
+  All future development, including new features and updates for Next Generation SDKs, will now be delivered through Box core SDKs starting with version `v10`.
+
+  For more details, see our [SDK versioning strategy document][versioning].
+</Message
 
 You can use Box .NET SDK to call Box APIs in a .NET
 project.
 
 The SDK is available for both .NET Framework 4.5 and .NET Core 1.0 or
 above. The installation of the SDK depends on the framework used.
-
-<CTA to="https://github.com/box/box-dotnet-sdk-gen">
-  Learn more about .NET SDK on GitHub
-</CTA>
 
 To install the .NET SDK in the .NET framework, run the following command using
 the [Nuget][nuget] package manager.

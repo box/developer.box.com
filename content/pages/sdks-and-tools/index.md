@@ -36,7 +36,7 @@ these projects to full parity.
 
 ### SDKs
 
-The table lists legacy Box SDKs that you can use when building your
+The table lists Box SDKs that you can use when building your
 applications. For latest API support and features, use the next
 generation SDKs.
 
@@ -62,26 +62,19 @@ recommend using Java SDK to build apps on Android.
 Refer to [this][android-docs] documentation for more details.
 </Message>
 
-### Next generation SDKs
+### Next Generation SDKs
 
 <Message type='warning'>
-  In mid-August, we will be deprecating the Box Next Gen SDKs in its current form. **Don’t worry, your existing code will continue to work without changes**.
+  As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts.
 
-  ## Why we are making this change
+  Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDK with no impact, but you won't receive new features, updates, or bug fixes.
 
-  In keeping with industry best practices, we are consolidating the Next Gen and legacy SDKs into a single package. This makes migration efforts much easier and allows you to seamlessly add new capabilities to existing applications still powered by the legacy SDKs. 
+  All future development, including new features and updates for Next Generation SDKs, will now be delivered through Box core SDKs starting with version `v10`.
 
-  Ultimately, the Next Generation SDKs will replace the current legacy SDKs as the latest major version release.
+  For more details, see our [SDK versioning strategy document][versioning].
+</Message
 
-  To learn more visit our SDK [versioning strategy document][versioning]
-</Message>
-
-The latest generation Box Python SDK, Box TypeScript
-SDK, .NET SDK, and Swift SDK are designed to elevate the developer
-experience and streamline your integration
-with the Box Content Cloud.
-
-Here's what you can expect from the new SDKs:
+Here's what you can expect from generated SDKs:
 
 - **Full API Support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
 - **Rapid API Updates**: The new auto-generation development approach allows for adding Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
