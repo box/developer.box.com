@@ -2,7 +2,7 @@
 rank: 2
 related_endpoints: []
 related_guides:
-- authorization/custom-app-approval
+- authorization/platform-app-approval
 - authorization/custom-skill-approval
 required_guides:
 - authorization
