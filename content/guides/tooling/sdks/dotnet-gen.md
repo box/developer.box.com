@@ -21,7 +21,7 @@ alias_paths: []
   All future development, including new features and updates for Next Generation SDKs, will now be delivered through Box core SDKs starting with version `v10`.
 
   For more details, see our [SDK versioning strategy document][versioning].
-</Message
+</Message>
 
 You can use Box .NET SDK to call Box APIs in a .NET
 project.

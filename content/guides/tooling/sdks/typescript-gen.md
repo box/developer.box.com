@@ -21,7 +21,7 @@ alias_paths: []
   All future development, including new features and updates for Next Generation SDKs, will now be delivered through Box core SDKs starting with version `v10`.
 
   For more details, see our [SDK versioning strategy document][versioning].
-</Message
+</Message> 
 
 You can use the **auto-generated** Box TypeScript SDK to call Box APIs in a TypeScript project.
 This [next generation SDK][next-gen] brings along new functionality to designed to elevate the developer experience and streamline your integration with the Box Content Cloud.
