@@ -26,8 +26,8 @@ modal:
     request. Please try again.")
   error: Sorry, I couldn't process your request. Please try again.
   // timeout: Timeout error message
-  timeout: Your request is taking longer than usual. Please wait a moment and try
-    again.
+  timeout: Your request is taking longer than usual. Please wait a moment and
+    try again.
   // network: Network error message
   network: Unable to connect to Box AI. Please check your connection and try
     again.
