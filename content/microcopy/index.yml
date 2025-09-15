@@ -49,3 +49,6 @@ box_ui_elements:
 
 versions:
   $ref: "content/microcopy/versions.yml"
+
+boxai:
+  $ref: "content/microcopy/boxai.yml"
