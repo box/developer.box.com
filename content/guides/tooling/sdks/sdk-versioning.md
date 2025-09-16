@@ -21,7 +21,7 @@ Don’t worry, your existing code will continue to work without changes. You can
 
 In keeping with industry best practices, we are consolidating the Box Next Generation SDKs and Box core SDKs into a single package for each programming language. This makes migration efforts much easier and allows seamless addition of new capabilities to existing applications still powered by Box core SDKs, which were maintained manually.
 
-All future development, including new features and updates for the Next Generation SDKs, will now be delivered through Box core SDKs starting with version `v10`.
+All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` available as a separate branch.
 
 ## How it will work
 
