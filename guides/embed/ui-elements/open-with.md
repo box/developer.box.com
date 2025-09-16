@@ -17,7 +17,7 @@ total_steps: 17
 sibling_id: embed/ui-elements
 parent_id: embed/ui-elements
 next_page_id: embed/ui-elements/picker
-previous_page_id: embed/ui-elements/explorer-metadata
+previous_page_id: embed/ui-elements/explorer-metadata-v1
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/open-with.md
 fullyTranslated: true

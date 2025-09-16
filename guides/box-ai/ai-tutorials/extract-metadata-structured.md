@@ -191,7 +191,7 @@ curl --location 'https://api.box.com/2.0/ai/extract_structured' \
 
 ### 抽出エージェント (強化)
 
-To use the Enhanced Extract Agent, specify the `ai_agent` object as follows:
+抽出エージェント (強化) を使用するには、次のように`ai_agent`オブジェクトを指定します。
 
 ```bash
 {
@@ -203,12 +203,12 @@ To use the Enhanced Extract Agent, specify the `ai_agent` object as follows:
 
 ```
 
-To extract data using the Enhanced Extract Agent you need one of the following:
+抽出エージェント (強化) を使用してデータを抽出するには、以下のいずれかが必要です。
 
-* [Inline field definitions][inline-field] (best when fields change frequently)
-* [Metadata template][metadata-template] (best when fields stay consistent)
+* [インラインでのフィールド定義][inline-field] (フィールドが頻繁に変わる場合に最適)
+* [メタデータテンプレート][metadata-template] (フィールドが一定である場合に最適)
 
-See the sample code snippet using Box Python SDK:
+Box Python SDKを使用したサンプルのコードスニペットを確認してください。
 
 ```Python
 from box_sdk_gen import (
