@@ -27,8 +27,8 @@ All future development, including new features and updates for the Next Generati
 
 Box core SDKs and Box Next Generation SDKs were created as separate libraries. Going forward, within the Box core SDK artifacts will include:
 
-- `(n+1)` major version will include manually maintained **Box core SDK and Box Next Generation SDK artifacts**. This version enables leveraging coexisting artifacts at the same time, and serve as a transition phase.
-- `v10.0.0` version includes **only the Box Next Generation SDK artifact**.
+- `(n+1)` major version will include manually maintained **Box core SDK and Box Next Generation SDK artifacts**. This version enables leveraging coexisting artifacts at the same time, and serve as a transition phase. Stay tuned for this upcoming release.
+- `v10.0.0` version includes **only the Box Next Generation SDK artifact**. Currently, this version is available as a branch for each SDK repository.
 
 ## How to decide
 

@@ -188,11 +188,11 @@ environments:
   curl: cURL
   // ios: |-
     A label for iOS code sample - DO NOT TRANSLATE
-  ios: iOS
+  ios: iOS v5
   // ts_gen: |-
     A label for TypeScript code sample
     from auto-generated SDK - DO NOT TRANSLATE
-  ts_gen: Node v10
+  ts_gen: Node/TypeScript v10
   // python_gen: |-
     A label for Python code sample from
     auto-generated SDK - DO NOT TRANSLATE
@@ -267,3 +267,10 @@ sidebar:
   filter:
     // placeholder: Placeholder text for the search filter in the sidebar
     placeholder: "Filter by name"
+
+sdk_version_notice:
+  __raw__:
+    // sdk: Notice about sdk versioning
+    sdk: |-
+      Learn more about Box SDK versionig strategy
+      **[Box SDK versionig strategy](g://tooling/sdks/sdk-versioning)**.

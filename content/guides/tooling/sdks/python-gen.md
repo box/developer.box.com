@@ -20,4 +20,7 @@ alias_paths: []
   For more details, see our [SDK versioning strategy document][versioning].
 </Message>
 
+Check [migration guide][migration] to learn how to switch to `v10`.
+
 [versioning]: g://tooling/sdks/sdk-versioning
+[migration]: https://github.com/box/box-python-sdk/blob/sdk-gen/migration-guides/from-box-python-sdk-gen-v1-to-box-python-sdk-v10.md
