@@ -20,3 +20,4 @@ alias_paths: []
   For more details, see our [SDK versioning strategy document][versioning].
 </Message>
 
+[versioning]: g://tooling/sdks/sdk-versioning
