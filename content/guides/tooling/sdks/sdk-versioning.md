@@ -41,19 +41,19 @@ Box core SDKs and Box Next Generation SDKs were created as separate libraries. G
 
 ### Box SDK versions and artifacts
 
-| SDK Package Name   | Current latest version | Next Gen SDK artifact |
-|--------------------|---------|----------|
-| `box-node-sdk`       | `v3.8.2`  | `v10.0.0`  |
-| `box-python-sdk`     | `v3.14.0` | `v10.0.0`  |
-| `box-java-sdk`      | `v4.16.3`  | `v10.0.0`  |
-| `box-windows-sdk-v2` | `v5.8.0`  | `v10.0.0`  |
-| `box-ios-sdk`       | `v5.6.0`  | `v10.0.0`  |
+| SDK Package Name   | Current latest version | Will include both SDK artifacts | Includes only Box Next Gen SDK artifact |
+|--------------------|---------|----------|----------|
+| `box-node-sdk`       | `v3.8.2`  | `v4.0.0` | `v10.0.0`  |
+| `box-python-sdk`     | `v3.14.0` | `v4.0.0` | `v10.0.0`  |
+| `box-java-sdk`      | `v4.16.3`  | `v5.0.0`| `v10.0.0`  |
+| `box-windows-sdk-v2` | `v5.8.0`  | `v6.0.0`| `v10.0.0`  |
+| `box-ios-sdk`       | `v5.6.0`  | `v6.0.0`| `v10.0.0`  |
 
 ### Box Next Gen SDK deprecation status
 
 | SDK Package Name | Current latest version  | Note 
 |------------------|-------------------------|-------|
-| `box-typescript-sdk-gen`    | `v1.19.0` | Deprecated, use `box-node-sdk` `v10.0.0` |
+| `box-typescript-sdk-gen`    | `v1.19.1` | Deprecated, use `box-node-sdk` `v10.0.0` |
 | `box-python-sdk-gen`        | `v1.17.0` | Deprecated, use `box-python-sdk` `v10.0.0` |
 | `box-java-sdk-gen`          | `v0.8.1`  | Deprecated, use `box-java-sdk` `v10.0.0`  |
 | `box-dotnet-sdk-gen`        | `v1.12.0` | Deprecated, use `box-windows-sdk-v2` `v10.0.0` |
