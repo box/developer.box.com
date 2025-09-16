@@ -272,5 +272,5 @@ sdk_version_notice:
   __raw__:
     // sdk: Notice about sdk versioning
     sdk: |-
-      Learn more about Box SDK versionig strategy
+      Learn more about
       **[Box SDK versionig strategy](g://tooling/sdks/sdk-versioning)**.
