@@ -15,13 +15,13 @@ alias_paths: []
 
 As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts.
 
-Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDK with no impact, but you won't receive new features, updates, or bug fixes.
+Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
 
 ## Why we are making this change
 
 In keeping with industry best practices, we are consolidating the Box Next Generation SDKs and Box core SDKs into a single package for each programming language. This makes migration efforts much easier and allows seamless addition of new capabilities to existing applications still powered by Box core SDKs, which were maintained manually.
 
-All future development, including new features and updates for Next Generation SDKs, will now be delivered through Box core SDKs starting with version `v10`.
+All future development, including new features and updates for the Next Generation SDKs, will now be delivered through Box core SDKs starting with version `v10`.
 
 ## How it will work
 
