@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 10
 related_endpoints: []
 related_guides: []
 related_pages:
@@ -12,67 +12,29 @@ subcategory_id: tooling/sdks
 is_index: false
 id: tooling/sdks/swift-gen
 type: guide
-total_steps: 9
+total_steps: 11
 sibling_id: tooling/sdks
 parent_id: tooling/sdks
-next_page_id: tooling/sdks/java
-previous_page_id: ''
+next_page_id: tooling/sdks
+previous_page_id: tooling/sdks/dotnet-gen
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/swift-gen.md
 ---
-# Install Swift SDK (Generated)
+# Deprecated Box Next Gen Swift SDK
 
-You can use Box Swift SDK to call Box APIs in a Swift
-project.
+<Message type='warning'>
 
-<Message type='notice'>
+As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts.
 
-Swift SDK is in a Public Beta phase.
+Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
+
+All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` is available as a separate branch.
+
+For more details, see our [SDK versioning strategy document][versioning].
 
 </Message>
 
-<CTA to="https://github.com/box/box-swift-sdk-gen">
+Check the [migration guide][migration] to learn how to switch from Box Next Generation SDK to Box core SDK `v10`.
 
-Learn more about Swift SDK on GitHub
-
-</CTA>
-
-## Swift Package Manager
-
-[Swift Package Manager][spm] is a tool for managing the distribution of Swift code. It is integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
-
-To add a dependency to your Xcode project:
-
-1. Select **File** > **Add Package Dependency** in your Xcode project.
-2. Click the **plus** icon > **Add Package Collection**.
-2. Enter the following repository URL: `https://github.com/box/box-swift-sdk-gen.git` and click **Load**.
-
-Alternatively you can add a dependency to the dependencies value of your `Package.swift`.
-
-For detailed instructions, please see the official documentation for [Swift Package Manager][spm] and [XCode documentation][xcode].
-
-## Carthage
-
-Carthage is a decentralized dependency manager which builds your dependencies and provides you with binary frameworks.
-
-To add a dependency to `BoxSdkGen`:
-
-1. add the following line to your `Cartfile` :
-
-```bash
-git "https://github.com/box/box-swift-sdk-gen.git"
-```
-
-2. Run:
-
-```bash
-carthage bootstrap --use-xcframeworks
-```
-
-3. Drag the built `xcframework` from **Carthage/Build** into your project.
-
-For more detailed instructions, please see the [official documentation for Carthage][carthage].
-
-[spm]: https://www.swift.org/documentation/package-manager/
-[xcode]: https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app
-[carthage]: https://github.com/Carthage/Carthage#adding-frameworks-to-an-application
+[versioning]: g://tooling/sdks/sdk-versioning
+[migration]: https://github.com/box/box-ios-sdk/blob/sdk-gen/migration-guides/from-box-swift-sdk-gen-v0-to-box-ios-sdk-v10.md

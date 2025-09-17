@@ -1,5 +1,5 @@
 ---
-rank: 5
+rank: 6
 related_endpoints: []
 related_guides:
   - authentication/jwt
@@ -15,10 +15,10 @@ subcategory_id: tooling/sdks
 is_index: false
 id: tooling/sdks/salesforce
 type: guide
-total_steps: 9
+total_steps: 11
 sibling_id: tooling/sdks
 parent_id: tooling/sdks
-next_page_id: tooling/sdks
+next_page_id: tooling/sdks/typescript-gen
 previous_page_id: tooling/sdks/node
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/salesforce.md

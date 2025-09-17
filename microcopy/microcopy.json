@@ -114,29 +114,29 @@
   // Describes the situation where a parameter canbe only one of many values
   "reference.enum.value_is_one_of": "Value is one of",
   // A label for Node JScode sample - DO NOT TRANSLATE
-  "reference.environments.node": "Node",
+  "reference.environments.node": "Node v3",
   // A label for .NETcode sample - DO NOT TRANSLATE
-  "reference.environments.dotnet": ".NET",
+  "reference.environments.dotnet": ".NET v5",
   // A label for Javacode sample - DO NOT TRANSLATE
-  "reference.environments.java": "Java",
+  "reference.environments.java": "Java v4",
   // A label for Pythoncode sample - DO NOT TRANSLATE
-  "reference.environments.python": "Python",
+  "reference.environments.python": "Python v3",
   // A label for command line interfacecode sample - DO NOT TRANSLATE
   "reference.environments.cli": "CLI",
   // A label for cURLcode sample
   "reference.environments.curl": "cURL",
   // A label for iOS code sample - DO NOT TRANSLATE
-  "reference.environments.ios": "iOS",
+  "reference.environments.ios": "iOS v5",
   // A label for TypeScript code samplefrom auto-generated SDK - DO NOT TRANSLATE
-  "reference.environments.ts_gen": "TypeScript Gen",
+  "reference.environments.ts_gen": "Node/TypeScript v10",
   // A label for Python code sample fromauto-generated SDK - DO NOT TRANSLATE
-  "reference.environments.python_gen": "Python Gen",
+  "reference.environments.python_gen": "Python v10",
   // A label for .NET code sample fromauto-generated SDK - DO NOT TRANSLATE
-  "reference.environments.dotnet_gen": ".NET Gen",
+  "reference.environments.dotnet_gen": ".NET v10",
   // A label for Swift code sample fromauto-generated SDK - DO NOT TRANSLATE
-  "reference.environments.swift_gen": "Swift Gen (Beta)",
+  "reference.environments.swift_gen": "Swift v10",
   // A label for Java code sample fromauto-generated SDK - DO NOT TRANSLATE
-  "reference.environments.java_gen": "Java Gen (Beta)",
+  "reference.environments.java_gen": "Java v10",
   // Describes the smallest set of fields that are returnedfor a resource in an API response
   "reference.resource_variants.base": "Base",
   // Describes the set of fields that can be returnedfor a resource when embedded in another resource
@@ -163,6 +163,8 @@
   "reference.sidebar.titles.deprecated_entries": "Deprecated",
   // Placeholder text for the search filter in the sidebar
   "reference.sidebar.filter.placeholder": "Filter by name",
+  // Notice about sdk versioning
+  "reference.sdk_version_notice.__raw__.sdk": "Learn more about\n**[Box SDK versionig strategy](g://tooling/sdks/sdk-versioning)**.",
   // The title for the guides section
   "guides.titles.guides": "Guides",
   // A title for a set of links describing things to read before
@@ -414,10 +416,6 @@
   "footer.categories.company.links.sample_code_catalog.url": "/sample-code/",
   // A title for a footer section on our tooling options
   "footer.categories.tooling.title": "Tooling",
-  // Text for link to the TypeScript SDK (Generated)
-  "footer.categories.tooling.links.ts_gen_sdk.text": "TypeScript SDK (Generated)",
-  // link to the TypeScript SDK (Generated)
-  "footer.categories.tooling.links.ts_gen_sdk.url": "https://github.com/box/box-typescript-sdk-gen",
   // Text for link to the Java SDK
   "footer.categories.tooling.links.java_sdk.text": "Java SDK",
   // link to the Java SDK
@@ -426,26 +424,10 @@
   "footer.categories.tooling.links.python_sdk.text": "Python SDK",
   // link to the Python SDK
   "footer.categories.tooling.links.python_sdk.url": "https://github.com/box/box-python-sdk",
-  // Text for link to the Python SDK (Generated)
-  "footer.categories.tooling.links.python_gen_sdk.text": "Python SDK (Generated)",
-  // link to the Python SDK (Generated)
-  "footer.categories.tooling.links.python_gen_sdk.url": "https://github.com/box/box-python-sdk-gen",
   // Text for link to the .NET SDK
   "footer.categories.tooling.links.dotnet_sdk.text": ".NET SDK",
   // link to the .Net SDK
   "footer.categories.tooling.links.dotnet_sdk.url": "https://github.com/box/box-windows-sdk-v2",
-  // Text for link to the Swift SDK (Generated)
-  "footer.categories.tooling.links.swift_gen_sdk.text": "Swift SDK (Generated)",
-  // link to the Swift SDK (Generated)
-  "footer.categories.tooling.links.swift_gen_sdk.url": "https://github.com/box/box-swift-sdk-gen",
-  // Text for link to the Java SDK (Generated)
-  "footer.categories.tooling.links.java_gen_sdk.text": "Java SDK (Generated)",
-  // link to the Java SDK (Generated)
-  "footer.categories.tooling.links.java_gen_sdk.url": "https://github.com/box/box-java-sdk-gen",
-  // Text for link to the .NET (Generated) SDK
-  "footer.categories.tooling.links.dotnet_gen_sdk.text": ".NET SDK (Generated)",
-  // link to the .Net SDK (Generated)
-  "footer.categories.tooling.links.dotnet_gen_sdk.url": "https://github.com/box/box-dotnet-sdk-gen",
   // Text for link to the Node SDK
   "footer.categories.tooling.links.node_sdk.text": "Node SDK",
   // link to the Node SDK

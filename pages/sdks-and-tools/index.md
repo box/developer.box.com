@@ -30,12 +30,6 @@ The following SDKs and tools are developed and supported by Box.
 
 Here you will find a list of SDKs
 you can use to build your application.
-Separately, we have listed the next generation
-Python, TypeScript, and .NET SDKs, which are the
-newest addition.
-.NET is still a beta feature, but we encourage
-you to give it a try and explore all the
-features they bring along.
 
 <Message type='notice'>
 
@@ -54,39 +48,9 @@ these projects to full parity.
 
 </Message>
 
-### Next generation SDKs
+### SDKs
 
-The latest generation Box Python SDK, Box TypeScript
-SDK, .NET SDK, and Swift SDK are designed to elevate the developer
-experience and streamline your integration
-with the Box Content Cloud.
-
-<Message type='notice'>
-
-Swift SDK is in a Public Beta phase.
-
-</Message>
-
-Here's what you can expect from the new SDKs:
-
-- **Full API Support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
-- **Rapid API Updates**: The new auto-generation development approach allows for adding Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
-- **Embedded Documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
-- **Enhanced Convenience Methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers which help to ensure that you’re using variables correctly, and much more.
-
-Download the **Box Platform** SDK in a programming language of your choice and get started:
-
-| Platform                          | Status | API Parity |
-| --------------------------------- | ------ | ---------- |
-| [Python Gen SDK][pythongensdk]    | Active | Full       |
-| [TypeScript Gen SDK][tsgensdk]    | Active | Full       |
-| [.NET SDK][dotnetgensdk]          | Active | Full       |
-| [Swift SDK][swiftgensdk] (Beta)   | Active | Full       |
-| [Java Gen SDK][javagensdk] (Beta) | Active | Full       |
-
-### Legacy SDKs
-
-The table lists legacy Box SDKs that you can use when building your
+The table lists Box SDKs that you can use when building your
 applications. For latest API support and features, use the next
 generation SDKs.
 
@@ -94,10 +58,10 @@ generation SDKs.
 | --------------------------------- | ---------- | ---------- |
 | [Java SDK][javasdk]               | Active     | Full       |
 | [iOS Content SDK][iossdk]         | Active     | Full       |
+| [.NET SDK][dotnetsdk]             | Active     | Full       |
+| [Python SDK][pythonsdk]           | Active     | Full       |
+| [Node SDK][nodesdk]               | Active     | Full       |
 | [Android Content SDK][androidsdk] | Deprecated | Partial    |
-| [.NET SDK][dotnetsdk]             | Stable     | Full       |
-| [Python SDK][pythonsdk]           | Stable     | Full       |
-| [Node SDK][nodesdk]               | Stable     | Full       |
 
 <Message type='warning'>
 
@@ -114,9 +78,30 @@ Refer to [this][android-docs] documentation for more details.
 
 </Message>
 
+### Next Generation SDKs
+
+<Message type='warning'>
+
+As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts.
+
+Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
+
+All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` is available as a separate branch.
+
+For more details, see our [SDK versioning strategy document][versioning].
+
+</Message>
+
+Here's what you can expect from generated SDKs:
+
+- **Full API support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
+- **Rapid API updates**: The new auto-generation development approach allows you to add Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
+- **Embedded documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
+- **Enhanced convenience methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers that help to ensure that you’re using variables correctly, and much more.
+
 ## Box CLI
 
-Box CLI is a user-friendly command line tool which
+Box CLI is a user-friendly command line tool that
 allows both technical and non-technical users to
 leverage Box API to perform routine or bulk actions.
 
@@ -164,6 +149,16 @@ this is what you are looking for, have a look at the
 [Box SDK for Salesforce][sf-sdk].
 
 </Message>
+
+## Box CLI
+
+Box CLI is a user-friendly command line tool that
+allows both technical and non-technical users to
+leverage Box API to perform routine or bulk actions.
+
+| Platform                          | Maintained?  | API Parity |
+| --------------------------------- | ----------- | ------- |
+| [CLI][cli]                        | Yes         | Full    |
 
 ## Official UI Libraries
 
@@ -227,13 +222,9 @@ for these tools.
 [salesforcesdk]: https://github.com/box/box-salesforce-sdk
 [rubysdk]: https://github.com/cburnette/boxr
 [jssdk]: https://github.com/allenmichael/box-javascript-sdk
-[pythongensdk]: https://github.com/box/box-python-sdk-gen
-[tsgensdk]: https://github.com/box/box-typescript-sdk-gen
-[dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen
-[swiftgensdk]: https://github.com/box/box-swift-sdk-gen
-[javagensdk]: https://github.com/box/box-java-sdk-gen
 [postman]: https://postman.com
 [badges]: https://opensource.box.com/badges/
+[versioning]: g://tooling/sdks/sdk-versioning
 
 <!-- i18n-enable localize-links -->
 
