@@ -24,7 +24,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/explorer-metadata-v1.md
 fullyTranslated: true
 ---
-# Content Explorer - metadata view v1
+# コンテンツエクスプローラ - メタデータビューv1
 
 コンテンツエクスプローラを使用すると、メタデータに基づいてファイルを表示することもできます。メタデータビューでは、[メタデータテンプレート][template]と[メタデータクエリ][metadata-query]を使用して、表示するデータを探します。
 
