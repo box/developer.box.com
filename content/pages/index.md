@@ -103,7 +103,7 @@ All the developer resources to help you get the most from Box products
       *Box API Reference*
     </Tile>
     <Tile type="python" title="Python SDK"
-    href="https://github.com/box/box-python-sdk">
+    href="https://github.com/box/box-python-sdk#readme">
       *box-python-sdk*
     </Tile>
     <Tile type="java" title="Box Java SDK"
@@ -111,11 +111,11 @@ All the developer resources to help you get the most from Box products
       *box-java-sdk*
     </Tile>
     <Tile type="box-orange" title="Node SDK"
-    href="https://github.com/box/box-node-sdk">
+    href="https://github.com/box/box-node-sdk#readme">
       *box-node-sdk*
     </Tile>
     <Tile type="net" title="Box .NET SDK"
-    href="https://github.com/box/box-windows-sdk-v2">
+    href="https://github.com/box/box-windows-sdk-v2#readme">
       *box-windows-sdk-v2*
     </Tile>
     <Tile type="tool" title="Box iOS SDK"
