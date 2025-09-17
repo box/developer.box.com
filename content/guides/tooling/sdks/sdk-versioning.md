@@ -61,7 +61,7 @@ Box core SDKs and Box Next Generation SDKs were created as separate libraries. G
 
 ## Migration 
 
-## Migrating from Box Next Generations SDKs to core Box SDK `v10`
+### Migrating from Box Next Generations SDKs to core Box SDK `v10`
 
 Follow detailed migrations guides to migrate to Box core SDK `v10`:
 
