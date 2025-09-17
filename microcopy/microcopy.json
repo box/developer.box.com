@@ -113,30 +113,30 @@
   "reference.enum.value_is_any_of": "Value is any of",
   // Describes the situation where a parameter canbe only one of many values
   "reference.enum.value_is_one_of": "Value is one of",
-  // Describes the Node JS programming language when selectinga code sample - DO NOT TRANSLATE
-  "reference.environments.node": "Node",
-  // Describes the .NET programming language when selectinga code sample - DO NOT TRANSLATE
-  "reference.environments.dotnet": ".NET",
-  // Describes the Java programming language when selectinga code sample - DO NOT TRANSLATE
-  "reference.environments.java": "Java",
-  // Describes the Python programming language whenselecting a code sample - DO NOT TRANSLATE
-  "reference.environments.python": "Python",
+  // A label for Node JScode sample - DO NOT TRANSLATE
+  "reference.environments.node": "Node v3",
+  // A label for .NETcode sample - DO NOT TRANSLATE
+  "reference.environments.dotnet": ".NET v5",
+  // A label for Javacode sample - DO NOT TRANSLATE
+  "reference.environments.java": "Java v4",
+  // A label for Pythoncode sample - DO NOT TRANSLATE
+  "reference.environments.python": "Python v3",
   // Describes the command line interface whenselecting a code sample - DO NOT TRANSLATE
   "reference.environments.cli": "CLI",
   // Describes the cURL tool whenselecting a code sample
   "reference.environments.curl": "cURL",
-  // Describes the iOS programming language whenselecting a code sample - DO NOT TRANSLATE
-  "reference.environments.ios": "iOS",
+  // A label for iOS code sample - DO NOT TRANSLATE
+  "reference.environments.ios": "iOS v5",
   // A label for TypeScript code samplefrom auto-generated SDK - DO NOT TRANSLATE
-  "reference.environments.ts_gen": "TypeScript Gen",
+  "reference.environments.ts_gen": "Node/TypeScript v10",
   // A label for Python code sample fromauto-generated SDK - DO NOT TRANSLATE
-  "reference.environments.python_gen": "Python Gen",
+  "reference.environments.python_gen": "Python v10",
   // A label for .NET code sample fromauto-generated SDK - DO NOT TRANSLATE
-  "reference.environments.dotnet_gen": ".NET Gen",
+  "reference.environments.dotnet_gen": ".NET v10",
   // A label for Swift code sample fromauto-generated SDK - DO NOT TRANSLATE
-  "reference.environments.swift_gen": "Swift Gen (Beta)",
+  "reference.environments.swift_gen": "Swift v10",
   // A label for Java code sample fromauto-generated SDK - DO NOT TRANSLATE
-  "reference.environments.java_gen": "Java Gen (Beta)",
+  "reference.environments.java_gen": "Java v10",
   // Describes the smallest set of fields that are returnedfor a resource in an API response
   "reference.resource_variants.base": "Base",
   // Describes the set of fields that can be returnedfor a resource when embedded in another resource
@@ -163,6 +163,8 @@
   "reference.sidebar.titles.deprecated_entries": "Deprecated",
   // Placeholder text for the search filter in the sidebar
   "reference.sidebar.filter.placeholder": "Filter by name",
+  // Notice about sdk versioning
+  "reference.sdk_version_notice.__raw__.sdk": "Learn more about\n**[Box SDK versionig strategy](g://tooling/sdks/sdk-versioning)**.",
   // The title for the guides section
   "guides.titles.guides": "Guides",
   // A title for a set of links describing things to read before

@@ -15,7 +15,7 @@ subcategory_id: tooling/sdks
 is_index: false
 id: tooling/sdks/salesforce
 type: guide
-total_steps: 10
+total_steps: 11
 sibling_id: tooling/sdks
 parent_id: tooling/sdks
 next_page_id: tooling/sdks/typescript-gen

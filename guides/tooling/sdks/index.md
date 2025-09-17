@@ -13,15 +13,15 @@ subcategory_id: tooling/sdks
 is_index: true
 id: tooling/sdks
 type: guide
-total_steps: 10
+total_steps: 11
 sibling_id: tooling
 parent_id: tooling
 next_page_id: ''
-previous_page_id: tooling/sdks/swift-gen
+previous_page_id: tooling/sdks/java-gen
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/index.md
 ---
-# SDKs
+# Box SDKs
 
 Box offers a set of SDKs
 you can use to build your application.
@@ -43,18 +43,18 @@ these projects to full parity.
 
 </Message>
 
-The table lists legacy Box SDKs that you can use when building your
+The table lists Box SDKs that you can use when building your
 applications. For latest API support and features, use the next
 generation SDKs.
 
 | Platform   |  Maintained?  | API Parity |
 | --- | ------- |-------- |
-| [Java SDK][javasdk]   | Yes |    Partial    |
-| [iOS Content SDK][iossdk]   |   Yes    |    Partial    |
-| [Android Content SDK][androidsdk] |   No   |  Partial   |
-| [.NET SDK][dotnetsdk]             | Yes  |    Partial    |
-| [Python SDK][pythonsdk]           | Yes  |    Partial    |
-| [Node SDK][nodesdk]               | Yes  |    Partial    |
+| [Java SDK][javasdk]   | Yes |    Full    |
+| [iOS Content SDK][iossdk]   |   Yes    |    Full    |
+| [.NET SDK][dotnetsdk]             | Yes  |    Full    |
+| [Python SDK][pythonsdk]           | Yes  |    Full    |
+| [Node SDK][nodesdk]               | Yes  |    Full    |
+| [Android Content SDK][androidsdk] |   No   |  Full   |
 
 <Message type='warning'>
 
@@ -71,33 +71,33 @@ Refer to [this][android-docs] documentation for more details.
 
 </Message>
 
-## Next generation SDKs
+## Next Generation SDKs
 
 <Message type='warning'>
 
-In mid-August, we will be deprecating the Box Next Gen SDKs in its current form. **Don’t worry, your existing code will continue to work without changes**.
+As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts.
 
-## Why we are making this change
+Don't worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
 
-In keeping with industry best practices, we are consolidating the Next Gen and legacy SDKs into a single package. This makes migration efforts much easier and allows you to seamlessly add new capabilities to existing applications still powered by the legacy SDKs.
+In keeping with industry best practices, we are consolidating the Box Next Generation SDKs and Box core SDKs into a single package for each programming language. This makes migration efforts much easier and allows seamless additions of new capabilities to existing applications still powered by Box core SDKs, which were maintained manually.
 
-Ultimately, the Next Generation SDKs will replace the current legacy SDKs as the latest major version release. Read more to learn the details.
+All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` is available as a separate branch.
 
-To learn more visit our SDK [versioning strategy document][versioning]
+For more details, see our [SDK versioning strategy document][versioning].
 
 </Message>
 
 The latest generation Box Python SDK, Box TypeScript
-SDK, .NET SDK, and Swift SDK are designed to elevate the developer
+SDK, Box .NET SDK, and Box Swift SDK are designed to elevate the developer
 experience and streamline your integration
-with the Box Content Cloud.
+with Box Content Cloud.
 
 Here's what you can expect from the new SDKs:
 
-- **Full API Support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
-- **Rapid API Updates**: The new auto-generation development approach allows for adding Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
-- **Embedded Documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
-- **Enhanced Convenience Methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers which help to ensure that you’re using variables correctly, and much more.
+- **Full API support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
+- **Rapid API updates**: The new auto-generation development approach allows you to add Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
+- **Embedded documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
+- **Enhanced convenience methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers that help to ensure that you’re using variables correctly, and much more.
 
 <!-- i18n-enable localize-links -->
 

@@ -159,7 +159,7 @@ front-end UI elements, and much more.
 
 </Tile>
 
-<Tile type="python" title="Python SDK" href="https://github.com/box/box-python-sdk">
+<Tile type="python" title="Python SDK" href="https://github.com/box/box-python-sdk#readme">
 
 *box-python-sdk*
 
@@ -171,13 +171,13 @@ front-end UI elements, and much more.
 
 </Tile>
 
-<Tile type="box-orange" title="Node SDK" href="https://github.com/box/box-node-sdk">
+<Tile type="box-orange" title="Node SDK" href="https://github.com/box/box-node-sdk#readme">
 
 *box-node-sdk*
 
 </Tile>
 
-<Tile type="net" title="Box .NET SDK" href="https://github.com/box/box-windows-sdk-v2">
+<Tile type="net" title="Box .NET SDK" href="https://github.com/box/box-windows-sdk-v2#readme">
 
 *box-windows-sdk-v2*
 
