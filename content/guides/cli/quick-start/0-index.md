@@ -13,7 +13,7 @@ alias_paths:
 
 <!--alex ignore executed-->
 
-CLI is a user-friendly command line tool that allows both technical andThe 
+The Box CLI is a user-friendly command line tool that allows both technical and 
 non-technical users to leverage the Box API to perform routine or bulk actions.
 There is no need to write any code, as these actions are executed through a set
 of [commands][commands].
