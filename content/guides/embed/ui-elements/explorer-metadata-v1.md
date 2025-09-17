@@ -12,7 +12,7 @@ alias_paths:
   - /docs/content-explorer
 ---
 
-# Content Explorer - metadata view
+# Content Explorer - metadata view v1
 
 With Content Explorer you can also display files based on their metadata.
 The metadata view uses [metadata template][template] and [metadata query][metadata-query] to
@@ -178,12 +178,12 @@ Keys are based on the display names.
 
 [terminology]: g://metadata/#metadata-terminology
 [template]: r://get-metadata-templates-id
-[explorer]: g:///embed/ui-elements/explorer
+[explorer]: g://embed/ui-elements/explorer
 [blogpost]: https://medium.com/box-developer-blog/metadata-view-in-box-content-explorer-4978e47e97e9
-[creating-templates-api]: g:///metadata/templates/create
+[creating-templates-api]: g://metadata/templates/create
 [creating-templates-ui]: https://support.box.com/hc/en-us/articles/360044194033-Customizing-Metadata-Templates
 [appjs]: https://github.com/box-community/content-explorer-metadata/blob/main/src/App.js
-[box-app]: g:///applications/app-types
+[box-app]: g://applications/app-types
 [token]: g://authentication/tokens/developer-tokens
 [apply-templates]: https://support.box.com/hc/en-us/articles/360044196173-Using-Metadata
 [metadata-project]: https://github.com/box-community/content-explorer-metadata/tree/main
