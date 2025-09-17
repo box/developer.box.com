@@ -65,11 +65,11 @@ Box core SDKs and Box Next Generation SDKs were created as separate libraries. G
 
 Follow detailed migrations guides to migrate to Box core SDK `v10`:
 
-* [Python][python-migration]
-* [TypeScript][ts-migration]
-* [Java][java-migration]
-* [.NET][dotnet-migration]
-* [Swift][swift-migration]
+- [Python][python-migration]
+- [TypeScript][ts-migration]
+- [Java][java-migration]
+- [.NET][dotnet-migration]
+- [Swift][swift-migration]
 
 [node-repo]: https://github.com/box/box-node-sdk
 [windows-repo]: https://github.com/box/box-windows-sdk-v2
