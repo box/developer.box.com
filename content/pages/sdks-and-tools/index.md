@@ -44,10 +44,10 @@ generation SDKs.
 | --------------------------------- | ---------- | ---------- |
 | [Java SDK][javasdk]               | Active     | Full       |
 | [iOS Content SDK][iossdk]         | Active     | Full       |
+| [.NET SDK][dotnetsdk]             | Active     | Full       |
+| [Python SDK][pythonsdk]           | Active     | Full       |
+| [Node SDK][nodesdk]               | Active     | Full       |
 | [Android Content SDK][androidsdk] | Deprecated | Partial    |
-| [.NET SDK][dotnetsdk]             | Stable     | Full       |
-| [Python SDK][pythonsdk]           | Stable     | Full       |
-| [Node SDK][nodesdk]               | Stable     | Full       |
 
 <Message type='warning'>
 As of May 31, 2023 Android SDK is no
@@ -69,21 +69,21 @@ Refer to [this][android-docs] documentation for more details.
 
   Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
 
-  All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` available as a separate branch.
+  All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` is available as a separate branch.
 
   For more details, see our [SDK versioning strategy document][versioning].
 </Message>
 
 Here's what you can expect from generated SDKs:
 
-- **Full API Support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
-- **Rapid API Updates**: The new auto-generation development approach allows for adding Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
-- **Embedded Documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
-- **Enhanced Convenience Methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers which help to ensure that you’re using variables correctly, and much more.
+- **Full API support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
+- **Rapid API updates**: The new auto-generation development approach allows you to add Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
+- **Embedded documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
+- **Enhanced convenience methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers which help to ensure that you’re using variables correctly, and much more.
 
 ## Box CLI
 
-Box CLI is a user-friendly command line tool which
+Box CLI is a user-friendly command line tool that
 allows both technical and non-technical users to
 leverage Box API to perform routine or bulk actions.
 
@@ -128,7 +128,7 @@ this is what you are looking for, have a look at the
 
 ## Box CLI
 
-Box CLI is a user-friendly command line tool which
+Box CLI is a user-friendly command line tool that
 allows both technical and non-technical users to
 leverage Box API to perform routine or bulk actions.
 

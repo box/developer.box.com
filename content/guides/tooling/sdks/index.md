@@ -36,12 +36,12 @@ generation SDKs.
 
 | Platform   |  Maintained?  | API Parity |
 | --- | ------- |-------- |
-| [Java SDK][javasdk]   | Yes |    Partial    |
-| [iOS Content SDK][iossdk]   |   Yes    |    Partial    |
-| [Android Content SDK][androidsdk] |   No   |  Partial   |
-| [.NET SDK][dotnetsdk]             | Yes  |    Partial    |
-| [Python SDK][pythonsdk]           | Yes  |    Partial    |
-| [Node SDK][nodesdk]               | Yes  |    Partial    |
+| [Java SDK][javasdk]   | Yes |    Full    |
+| [iOS Content SDK][iossdk]   |   Yes    |    Full    |
+| [.NET SDK][dotnetsdk]             | Yes  |    Full    |
+| [Python SDK][pythonsdk]           | Yes  |    Full    |
+| [Node SDK][nodesdk]               | Yes  |    Full    |
+| [Android Content SDK][androidsdk] |   No   |  Full   |
 
 <Message type='warning'>
 As of May 31, 2023 Android SDK is no
@@ -63,9 +63,9 @@ Refer to [this][android-docs] documentation for more details.
 
   Don't worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
 
-  In keeping with industry best practices, we are consolidating the Box Next Generation SDKs and Box core SDKs into a single package for each programming language. This makes migration efforts much easier and allows to seamlessly add new capabilities to existing applications still powered by the manually maintained Box core SDKs.
+  In keeping with industry best practices, we are consolidating the Box Next Generation SDKs and Box core SDKs into a single package for each programming language. This makes migration efforts much easier and allows seamless additions of new capabilities to existing applications still powered by Box core SDKs, which were maintained manually.
 
-  All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` available as a separate branch.
+  All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` is available as a separate branch.
 
   For more details, see our [SDK versioning strategy document][versioning].
 </Message>
@@ -73,14 +73,14 @@ Refer to [this][android-docs] documentation for more details.
 The latest generation Box Python SDK, Box TypeScript
 SDK, .NET SDK, and Swift SDK are designed to elevate the developer
 experience and streamline your integration
-with the Box Content Cloud.
+with Box Content Cloud.
 
 Here's what you can expect from the new SDKs:
 
-- **Full API Support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
-- **Rapid API Updates**: The new auto-generation development approach allows for adding Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
-- **Embedded Documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
-- **Enhanced Convenience Methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers which help to ensure that you’re using variables correctly, and much more.
+- **Full API support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
+- **Rapid API updates**: The new auto-generation development approach allows you to add Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
+- **Embedded documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
+- **Enhanced convenience methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers which help to ensure that you’re using variables correctly, and much more.
 
 <!-- i18n-enable localize-links -->
 
