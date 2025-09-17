@@ -71,7 +71,7 @@ Refer to [this][android-docs] documentation for more details.
 </Message>
 
 The latest generation Box Python SDK, Box TypeScript
-SDK, .NET SDK, and Swift SDK are designed to elevate the developer
+SDK, Box .NET SDK, and Box Swift SDK are designed to elevate the developer
 experience and streamline your integration
 with Box Content Cloud.
 
