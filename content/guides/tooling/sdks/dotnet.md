@@ -16,7 +16,7 @@ alias_paths: []
 You can use Box .NET SDK to call Box APIs in a .NET
 project.
 
-Up to version `5.8.0` the SDK is available for both .NET Framework `4.5` and .NET Core `1.0` or above. Starting from version `10.0.0` SDK is available for both .NET Framework `4.6.2` and .NET `8.0` or above. The installation of the SDK depends on the framework used.
+Up to version `5.8.0` the SDK is available for both .NET Framework `4.5` and .NET Core `1.0` or above. Starting from version `10.0.0`, SDK is available for both .NET Framework `4.6.2` and .NET `8.0` or above. The installation of the SDK depends on the framework used.
 
 <CTA to="https://github.com/box/box-windows-sdk-v2">
   Learn more about .NET SDK on GitHub

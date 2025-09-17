@@ -33,7 +33,7 @@ Box core SDKs and Box Next Generation SDKs were created as separate libraries. G
 ## How to decide
 
 1. If you are creating a new application, use `v10` of the Box core SDK package.
-2. If you have an existing application relying on the **Box Next Generation SDK** and you wish to further develop your project, replace the name of this library in the package manager with the Box core SDK package (`v10.0.0`). Object imports for most SDKs will persist the same and your code will work as-is; the TypeScript SDK requires additional steps for migrating. Check section below for detailed guides.
+2. If you have an existing application relying on the **Box Next Generation SDK** and you wish to further develop your project, replace the name of this library in the package manager with the Box core SDK package (`v10.0.0`). Object imports for most SDKs will persist the same and your code will work as-is; the TypeScript SDK requires additional steps for migrating. Check the section below for detailed guides.
 3. If you have an existing application relying on **Box core SDK** and you wish to further develop your project, once released, bump the library version by one major release. See the table above for a detailed breakdown of recommended versions.
 4. If you have an existing application that you don’t plan to change, ensure your package manager includes the version of SDK you are using to prevent an accidental rebuild that pulls in a version you aren’t expecting.
 

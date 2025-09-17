@@ -21,7 +21,7 @@ alias_paths: []
   For more details, see our [SDK versioning strategy document][versioning].
 </Message>
 
-Check the [migration guide][migration] to learn how to switch from Box Next Generation SDK to code Box SDK `v10`.
+Check the [migration guide][migration] to learn how to switch from Box Next Generation SDK to Box core SDK `v10`.
 
 [versioning]: g://tooling/sdks/sdk-versioning
 [migration]: https://github.com/box/box-ios-sdk/blob/sdk-gen/migration-guides/from-box-swift-sdk-gen-v0-to-box-ios-sdk-v10.md
