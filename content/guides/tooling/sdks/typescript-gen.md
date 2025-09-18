@@ -1,9 +1,6 @@
 ---
-rank: 4
+rank: 7
 related_endpoints: []
-related_guides:
-  - authentication/jwt
-  - authentication/oauth2
 related_pages:
   - sdks-and-tools
 required_guides: []
@@ -11,32 +8,19 @@ related_resources: []
 alias_paths: []
 ---
 
-# Install Typescript SDK (Generated)
+# Deprecated Box Next Gen TypeScript SDK
 
-You can use the **auto-generated** Box TypeScript SDK to call Box APIs in a TypeScript project.
-This [next generation SDK][next-gen] brings along new functionality to designed to elevate the developer experience and streamline your integration with the Box Content Cloud.
+<Message type='warning'>
+  As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts.
 
-<CTA to="https://github.com/box/box-typescript-sdk-gen">
-  Learn more about auto-generated TypeScript SDK on GitHub
-</CTA>
+  Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
 
-## NPM installation
+  All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` is available as a separate branch.
 
-To install the TypeScript SDK run the following command from your terminal
-window or command prompt using the [Node Package Manager][npm].
+  For more details, see our [SDK versioning strategy document][versioning].
+</Message>
 
-```shell
-npm install box-typescript-sdk-gen
-```
+Check the [migration guide][migration] to learn how to switch from Box Next Generation SDK to Box core SDK `v10`.
 
-## Yarn installation
-
-Similarly, the SDK can be installed using the [Yarn package][yarn] manager.
-
-```shell
-yarn add box-typescript-sdk-gen
-```
-
-[npm]: https://www.npmjs.com/
-[yarn]: https://yarnpkg.com/
-[next-gen]: g://tooling/sdks#next-generation-sdks
+[versioning]: g://tooling/sdks/sdk-versioning
+[migration]: https://github.com/box/box-node-sdk/blob/sdk-gen/docs/migration-guides/from-box-typescript-sdk-gen-v1-to-box-node-sdk-v10.md
