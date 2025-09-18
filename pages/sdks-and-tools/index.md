@@ -29,7 +29,7 @@ Boxで開発およびサポートされているSDKおよびツールは以下�
 
 ## SDK
 
-アプリケーションの作成に使用できるSDKの一覧を以下に示します。これとは別に、新しく追加された次世代のPython SDK、TypeScript SDK、.NET SDKも記載しています。.NET SDKはまだベータ機能ですが、試しに使用して、備わっているすべての機能を確認することをお勧めします。
+Here you will find a list of SDKs you can use to build your application.
 
 <Message type="notice">
 
@@ -41,45 +41,18 @@ Boxで開発およびサポートされているSDKおよびツールは以下�
 
 </Message>
 
-### 次世代のSDK
+### SDK
 
-最新世代のBox Python SDK、Box TypeScript SDK、.NET SDK、Swift SDKは、開発者エクスペリエンスを向上させ、Boxコンテンツクラウドとの統合を効率化することを目的としています。
-
-<Message type="notice">
-
-Swift SDKはパブリックベータ段階です。
-
-</Message>
-
-新しいSDKに実装予定の機能を以下に示します。
-
-* **APIの全面的なサポート**: 新しいBox SDKにより、開発者はBox APIエコシステム全体をカバーできるようになります。Boxが提供する最新機能をすべて利用して、機能豊富なアプリケーションを作成できます。
-* **迅速なAPIの更新**: 自動生成による新しい開発アプローチにより、SDKへのBox APIの追加がさらに速いペースで (数日中に) 可能になります。これは、最新の機能をすぐにアプリケーションで利用できるようになることを意味します。
-* **ドキュメントへの埋め込み**: 必要な情報すべてが1か所に保存されるように、すべてのオブジェクトおよびパラメータはSDKのソースコードに直接記述されます。
-* **便利なメソッドの強化**: 新しく導入された便利なメソッドは、認証、分割アップロード、指数バックオフ、自動再試行、型チェック (変数を正しく使用しているかどうかの確認に役立ちます) など、さまざまな側面をカバーします。
-
-任意のプログラミング言語の**Box Platform** SDKをダウンロードして開始します。
-
-| プラットフォーム                        | ステータス | APIパリティ |
-| ------------------------------- | ----- | ------- |
-| [Pythonの次世代SDK][pythongensdk]   | アクティブ | Full    |
-| [TypeScriptの次世代SDK][tsgensdk]   | アクティブ | Full    |
-| [.NET SDK][dotnetgensdk]        | アクティブ | Full    |
-| [Swift SDK][swiftgensdk] (ベータ)  | アクティブ | Full    |
-| [Javaの次世代SDK][javagensdk] (ベータ) | アクティブ | Full    |
-
-### 従来のSDK
-
-次の表に、アプリケーションの作成時に使用できる従来のBox SDKを示します。最新のAPIサポートや機能には、次世代のSDKを使用してください。
+The table lists Box SDKs that you can use when building your applications. For latest API support and features, use the next generation SDKs.
 
 | プラットフォーム                          | ステータス | APIパリティ |
 | --------------------------------- | ----- | ------- |
 | [Java SDK][javasdk]               | アクティブ | Full    |
 | [iOS Content SDK][iossdk]         | アクティブ | Full    |
+| [.NET SDK][dotnetsdk]             | アクティブ | Full    |
+| [Python SDK][pythonsdk]           | アクティブ | Full    |
+| [Node SDK][nodesdk]               | アクティブ | Full    |
 | [Android Content SDK][androidsdk] | 廃止    | 部分的     |
-| [.NET SDK][dotnetsdk]             | 安定    | Full    |
-| [Python SDK][pythonsdk]           | 安定    | Full    |
-| [Node SDK][nodesdk]               | 安定    | Full    |
 
 <Message type="warning">
 
@@ -89,9 +62,30 @@ Swift SDKはパブリックベータ段階です。
 
 </Message>
 
+### Next Generation SDKs
+
+<Message type="warning">
+
+As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts.
+
+Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
+
+All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` is available as a separate branch.
+
+For more details, see our [SDK versioning strategy document][versioning].
+
+</Message>
+
+Here's what you can expect from generated SDKs:
+
+* **Full API support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
+* **Rapid API updates**: The new auto-generation development approach allows you to add Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
+* **Embedded documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
+* **Enhanced convenience methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers that help to ensure that you’re using variables correctly, and much more.
+
 ## Box CLI
 
-Box CLIは、使い勝手の良いコマンドラインツールです。これにより、開発者でも開発者以外のユーザーでもBox APIを利用してルーチンや一括操作を実行できるようになります。
+Box CLI is a user-friendly command line tool that allows both technical and non-technical users to leverage Box API to perform routine or bulk actions.
 
 | プラットフォーム   | ステータス | APIパリティ |
 | ---------- | ----- | ------- |
@@ -126,6 +120,14 @@ Salesforce Developer Toolkitを使用すると、Box for Salesforce統合の動�
 このツールキットは、BOX Content API用のフル機能を備えたAPEXラッパーではありません。このようなラッパーをお求めの場合は、[Box SDK for Salesforce][sf-sdk]を参照してください。
 
 </Message>
+
+## Box CLI
+
+Box CLI is a user-friendly command line tool that allows both technical and non-technical users to leverage Box API to perform routine or bulk actions.
+
+| プラットフォーム   | メンテナンスの有無 | APIパリティ |
+| ---------- | --------- | ------- |
+| [CLI][cli] | はい        | Full    |
 
 ## 公式UIライブラリ
 
@@ -197,19 +199,11 @@ Salesforce Developer Toolkitを使用すると、Box for Salesforce統合の動�
 
 [jssdk]: https://github.com/allenmichael/box-javascript-sdk
 
-[pythongensdk]: https://github.com/box/box-python-sdk-gen
-
-[tsgensdk]: https://github.com/box/box-typescript-sdk-gen
-
-[dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen
-
-[swiftgensdk]: https://github.com/box/box-swift-sdk-gen
-
-[javagensdk]: https://github.com/box/box-java-sdk-gen
-
 [postman]: https://postman.com
 
 [badges]: https://opensource.box.com/badges/
+
+[versioning]: g://tooling/sdks/sdk-versioning
 
 <!-- i18n-enable localize-links -->
 

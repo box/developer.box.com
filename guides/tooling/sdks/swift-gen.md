@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 10
 related_endpoints: []
 related_guides: []
 related_pages:
@@ -12,71 +12,31 @@ subcategory_id: tooling/sdks
 is_index: false
 id: tooling/sdks/swift-gen
 type: guide
-total_steps: 9
+total_steps: 11
 sibling_id: tooling/sdks
 parent_id: tooling/sdks
-next_page_id: tooling/sdks/java
-previous_page_id: ''
+next_page_id: tooling/sdks
+previous_page_id: tooling/sdks/dotnet-gen
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/swift-gen.md
 fullyTranslated: true
 ---
-# Swift SDK (Generated) のインストール
+# Deprecated Box Next Gen Swift SDK
 
-Swiftプロジェクトでは、Box Swift SDKを使用してBox APIを呼び出すことができます。
+<Message type="warning">
 
-<Message type="notice">
+As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts.
 
-Swift SDKはパブリックベータ段階です。
+Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
+
+All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` is available as a separate branch.
+
+For more details, see our [SDK versioning strategy document][versioning].
 
 </Message>
 
-<CTA to="https://github.com/box/box-swift-sdk-gen">
+Check the [migration guide][migration] to learn how to switch from Box Next Generation SDK to Box core SDK `v10`.
 
-GitHubでSwift SDKの詳細を確認する
+[versioning]: g://tooling/sdks/sdk-versioning
 
-</CTA>
-
-## Swift Package Manager
-
-[Swift Package Manager][spm]は、Swiftコードの配布を管理するためのツールです。これは、依存関係のダウンロード、コンパイル、リンクのプロセスを自動化するためにSwiftのビルドシステムと統合されています。
-
-Xcodeプロジェクトに依存関係を追加するには:
-
-1. Xcodeプロジェクトで、\[**File (ファイル)**]、\[**Add Package Dependency (パッケージの依存関係を追加)**] の順に選択します。
-2. **プラス**アイコン、\[**Add Package Collection (パッケージコレクションの追加)**] の順にクリックします。
-3. リポジトリのURL `https://github.com/box/box-swift-sdk-gen.git`を入力し、\[**Load (読み込む)**] をクリックします。
-
-または、`Package.swift`の依存関係の値に依存関係を追加することもできます。
-
-詳細な手順については、[Swift Package Manager][spm]の公式ドキュメントや[Xcodeのドキュメント][xcode]を参照してください。
-
-## Carthage
-
-Carthageは、依存関係を構築し、バイナリフレームワークを提供する分散型の依存関係マネージャです。
-
-`BoxSdkGen`に依存関係を追加するには:
-
-1. `Cartfile`に次の行を追加します。
-
-```bash
-git "https://github.com/box/box-swift-sdk-gen.git"
-
-```
-
-2. 以下を実行します。
-
-```bash
-carthage bootstrap --use-xcframeworks
-
-```
-
-3. ビルドされた`xcframework`を**Carthage/Build**からプロジェクトにドラッグします。
-
-詳細な手順については、[Carthageの公式ドキュメント][carthage]を参照してください。
-
-[spm]: https://www.swift.org/documentation/package-manager/
-
-[xcode]: https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app
-
-[carthage]: https://github.com/Carthage/Carthage#adding-frameworks-to-an-application
+[migration]: https://github.com/box/box-ios-sdk/blob/sdk-gen/migration-guides/from-box-swift-sdk-gen-v0-to-box-ios-sdk-v10.md

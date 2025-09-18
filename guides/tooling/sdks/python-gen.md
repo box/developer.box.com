@@ -1,9 +1,6 @@
 ---
-rank: 3
+rank: 8
 related_endpoints: []
-related_guides:
-  - authentication/jwt
-  - authentication/oauth2
 related_pages:
   - sdks-and-tools
 required_guides: []
@@ -14,47 +11,31 @@ subcategory_id: tooling/sdks
 is_index: false
 id: tooling/sdks/python-gen
 type: guide
-total_steps: 9
+total_steps: 11
 sibling_id: tooling/sdks
 parent_id: tooling/sdks
-next_page_id: tooling/sdks/node
-previous_page_id: tooling/sdks/java
+next_page_id: tooling/sdks/dotnet-gen
+previous_page_id: tooling/sdks/typescript-gen
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/python-gen.md
 fullyTranslated: true
 ---
-# Python SDK (Generated) のインストール
+# Deprecated Box Next Gen Python SDK
 
-Pythonプロジェクトでは、**自動生成された**Box Python SDKを使用してBox APIを呼び出すことができます。この[次世代のSDK][next-gen]には、開発者エクスペリエンスを向上させ、Boxコンテンツクラウドとの統合を効率化することを目的とした新機能が備わっています。
+<Message type="warning">
 
-<CTA to="https://github.com/box/box-python-sdk-gen">
+As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts.
 
-GitHubで自動生成されたPython SDKの詳細を確認する
+Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
 
-</CTA>
+All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` is available as a separate branch.
 
-## インストール
+For more details, see our [SDK versioning strategy document][versioning].
 
-自動生成されたPython SDKをインストールするには、[pip][pip]を使用してターミナルウィンドウまたはコマンドプロンプトから以下のコマンドを実行します。
+</Message>
 
-```shell
-pip install box-sdk-gen
+Check the [migration guide][migration] to learn how to switch from Box Next Generation SDK to Box core SDK `v10`.
 
-```
+[versioning]: g://tooling/sdks/sdk-versioning
 
-## JWTアプリケーション
-
-サーバー側[JWT認証][jwt]を使用するBoxアプリを使用する場合、次の追加モジュールをインストールします。
-
-```shell
-pip install "box-sdk-gen[jwt]"
-
-```
-
-[pip]: https://pypi.org/project/pip/
-
-[jwt]: g://authentication/jwt
-
-[next-gen]: g://tooling/sdks#next-generation-sdks
-
-[py-gen]: https://github.com/box/box-python-sdk-gen
+[migration]: https://github.com/box/box-python-sdk/blob/sdk-gen/migration-guides/from-box-python-sdk-gen-v1-to-box-python-sdk-v10.md

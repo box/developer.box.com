@@ -132,7 +132,7 @@ Box Platformでは、OAuth 2.0、JSONウェブトークン (JWT)、クライア�
 
 <Header centered>
 
-SDKやツール別に見る
+Browse by SDK and developer tools
 
 </Header>
 
@@ -148,9 +148,9 @@ _Box APIリファレンス_
 
 </Tile>
 
-<Tile type="python" title="Pythonの次世代SDK" href="https://github.com/box/box-python-sdk-gen?tab=readme-ov-file#box-python-sdk-generated">
+<Tile type="python" title="Python SDK" href="https://github.com/box/box-python-sdk#readme">
 
-_box-python-sdk-gen_
+_box-python-sdk_
 
 </Tile>
 
@@ -160,27 +160,21 @@ _box-java-sdk_
 
 </Tile>
 
-<Tile type="box-orange" title="TypeScriptの次世代SDK" href="https://github.com/box/box-typescript-sdk-gen?tab=readme-ov-file#box-typescript-sdk-generated">
+<Tile type="box-orange" title="Node SDK" href="https://github.com/box/box-node-sdk#readme">
 
-_box-typescript-sdk-gen_
+_box-node-sdk_
 
 </Tile>
 
-<Tile type="net" title="Box .NETの次世代SDK" href="https://github.com/box/box-dotnet-sdk-gen?tab=readme-ov-file#box-dotnet-sdk-generated">
+<Tile type="net" title="Box .NET SDK" href="https://github.com/box/box-windows-sdk-v2#readme">
 
-_box-dotnet-sdk-gen_
+_box-windows-sdk-v2_
 
 </Tile>
 
 <Tile type="tool" title="Box iOS SDK" href="https://github.com/box/box-ios-sdk#readme">
 
 _box-ios-sdk_
-
-</Tile>
-
-<Tile type="tool" title="Box Swiftの次世代SDK (ベータ)" href="https://github.com/box/box-ios-sdk#readme">
-
-_box-swift-sdk-gen_
 
 </Tile>
 

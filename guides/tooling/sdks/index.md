@@ -13,18 +13,18 @@ subcategory_id: tooling/sdks
 is_index: true
 id: tooling/sdks
 type: guide
-total_steps: 9
+total_steps: 11
 sibling_id: tooling
 parent_id: tooling
 next_page_id: ''
-previous_page_id: tooling/sdks/salesforce
+previous_page_id: tooling/sdks/java-gen
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/index.md
 fullyTranslated: true
 ---
-# SDK
+# Box SDKs
 
-Boxには、アプリケーションの作成に使用できる一連のSDKが用意されています。次世代の.NET SDKもここに新しく追加されました。これはまだベータ機能ですが、試しに使用して、備わっているすべての機能を確認することができます。
+Box offers a set of SDKs you can use to build your application.
 
 <Message type="notice">
 
@@ -36,45 +36,16 @@ Boxには、アプリケーションの作成に使用できる一連のSDKが�
 
 </Message>
 
-## 次世代のSDK
-
-最新世代のBox Python SDK、Box TypeScript SDK、.NET SDK、Swift SDKは、開発者エクスペリエンスを向上させ、Boxコンテンツクラウドとの統合を効率化することを目的としています。
-
-<Message type="notice">
-
-Swift SDKはパブリックベータ段階です。
-
-</Message>
-
-新しいSDKに実装予定の機能を以下に示します。
-
-* **APIの全面的なサポート**: 新しいBox SDKにより、開発者はBox APIエコシステム全体をカバーできるようになります。Boxが提供する最新機能をすべて利用して、機能豊富なアプリケーションを作成できます。
-* **迅速なAPIの更新**: 自動生成による新しい開発アプローチにより、SDKへのBox APIの追加がさらに速いペースで (数日中に) 可能になります。これは、最新の機能をすぐにアプリケーションで利用できるようになることを意味します。
-* **ドキュメントへの埋め込み**: 必要な情報すべてが1か所に保存されるように、すべてのオブジェクトおよびパラメータはSDKのソースコードに直接記述されます。
-* **便利なメソッドの強化**: 新しく導入された便利なメソッドは、認証、分割アップロード、指数バックオフ、自動再試行、型チェック (変数を正しく使用しているかどうかの確認に役立ちます) など、さまざまな側面をカバーします。
-
-任意のプログラミング言語の**Box Platform** SDKをダウンロードして開始します。
+The table lists Box SDKs that you can use when building your applications. For latest API support and features, use the next generation SDKs.
 
 | プラットフォーム                          | メンテナンスの有無 | APIパリティ |
 | --------------------------------- | --------- | ------- |
-| [Pythonの次世代SDK][pythongensdk]     | はい        | Full    |
-| [TypeScriptの次世代SDK][tsgensdk]     | はい        | Full    |
-| [.NETの次世代SDK][dotnetgensdk]       | はい        | Full    |
-| [Swiftの次世代SDK][swiftgensdk] (ベータ) | はい        | Full    |
-| [Javaの次世代SDK][javagensdk] (ベータ)   | はい        | Full    |
-
-## 従来のSDK
-
-次の表に、アプリケーションの作成時に使用できる従来のBox SDKを示します。最新のAPIサポートや機能には、次世代のSDKを使用してください。
-
-| プラットフォーム                          | メンテナンスの有無                               | APIパリティ |
-| --------------------------------- | --------------------------------------- | ------- |
-| [Java SDK][javasdk]               | はい                                      | Full    |
-| [iOS Content SDK][iossdk]         | はい                                      | Full    |
-| [Android Content SDK][androidsdk] | いいえ                                     | 部分的     |
-| [.NET SDK][dotnetsdk]             | 公式サポート終了。重要なセキュリティ更新プログラムとバグ修正のみ実装されます。 | Full    |
-| [Python SDK][pythonsdk]           | 公式サポート終了。重要なセキュリティ更新プログラムとバグ修正のみ実装されます。 | Full    |
-| [Node SDK][nodesdk]               | 公式サポート終了。重要なセキュリティ更新プログラムとバグ修正のみ実装されます。 | Full    |
+| [Java SDK][javasdk]               | はい        | Full    |
+| [iOS Content SDK][iossdk]         | はい        | Full    |
+| [.NET SDK][dotnetsdk]             | はい        | Full    |
+| [Python SDK][pythonsdk]           | はい        | Full    |
+| [Node SDK][nodesdk]               | はい        | Full    |
+| [Android Content SDK][androidsdk] | いいえ       | Full    |
 
 <Message type="warning">
 
@@ -83,6 +54,31 @@ Swift SDKはパブリックベータ段階です。
 最新のAndroid機能を引き続き利用するには、Java SDKを使用してAndroid版アプリを作成してください。詳細については、[こちら][android-docs]のドキュメントを参照してください。
 
 </Message>
+
+## Next Generation SDKs
+
+<Message type="warning">
+
+As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts.
+
+Don't worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
+
+In keeping with industry best practices, we are consolidating the Box Next Generation SDKs and Box core SDKs into a single package for each programming language. This makes migration efforts much easier and allows seamless additions of new capabilities to existing applications still powered by Box core SDKs, which were maintained manually.
+
+All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` is available as a separate branch.
+
+For more details, see our [SDK versioning strategy document][versioning].
+
+</Message>
+
+The latest generation Box Python SDK, Box TypeScript SDK, Box .NET SDK, and Box Swift SDK are designed to elevate the developer experience and streamline your integration with Box Content Cloud.
+
+新しいSDKに実装予定の機能を以下に示します。
+
+* **Full API support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
+* **Rapid API updates**: The new auto-generation development approach allows you to add Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
+* **Embedded documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
+* **Enhanced convenience methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers that help to ensure that you’re using variables correctly, and much more.
 
 <!-- i18n-enable localize-links -->
 
@@ -98,18 +94,10 @@ Swift SDKはパブリックベータ段階です。
 
 [androidsdk]: https://github.com/box/box-android-sdk
 
-[pythongensdk]: https://github.com/box/box-python-sdk-gen
-
-[tsgensdk]: https://github.com/box/box-typescript-sdk-gen
-
-[dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen
-
-[swiftgensdk]: https://github.com/box/box-swift-sdk-gen
-
-[javagensdk]: https://github.com/box/box-java-sdk-gen
-
 [android-docs]: https://github.com/box/box-java-sdk/blob/main/doc/android.md
 
-[forum]: https://support.box.com/hc/ja/community/topics/360001932973-Platform-and-Developer-Forum
+[versioning]: g://tooling/sdks/sdk-versioning
+
+[forum]: https://community.box.com/sdks-and-tools-7
 
 <!-- i18n-disable localize-links -->
