@@ -11,7 +11,7 @@ related_resources: []
 
 # Content Explorer – metadata view v2
 
-The metadata view of [Content Explorer][content-explorer] allows to display files and folders based on their metadata.
+The metadata view of [Content Explorer][content-explorer] allows you to display files and folders based on their metadata.
 
 ## Overview
 
@@ -26,7 +26,7 @@ Before implementing the metadata view `v2` of Content Explorer, ensure you have:
 - The `box-ui-elements` package `v24.0.0`+, React `v18.0.0`, and `Node.js` `v18.0.0`+
 - The Box Platform app with proper CORS settings
 - A valid [developer token][developer-token]
-- A configured metadata template applied to target folder or files. See [creating templates via API][creating-templates-api] or [via the Admin Console][creating-templates-ui].
+- A configured metadata template applied to target folder or files. See [creating templates with API][creating-templates-api] or [with the Admin Console][creating-templates-ui].
 
 <Message type='tip'>
  Make sure you enable the cascade policy. For detailed instructions, see
@@ -39,7 +39,7 @@ The metadata view interface consists of the following areas:
 
 - **Header** – Displays the current view title, navigation, and context-sensitive information like selection counts. The header value can be specified with a `title` prop. If it’s not defined, it defaults to the folder name specified in the `ancestor_folder_id`.
 - **Action bar** – Contains filter chips for each metadata field, sort options, and the view mode toggle button (list or grid).
-- **Pagination footer** – Provides the Previous and Next navigation buttons and page indicators.
+- **Pagination footer** – Provides the **Previous** and **Next** navigation buttons and page indicators.
 
 ## Display metadata view
 
@@ -49,7 +49,7 @@ To display the metadata view of Content Explorer, you need the following propert
 |---|---|
 | `token` | Developer token generated in the Developer Console. |
 | `title` | The title of the whole component, if not defined, defaults to the folder name specified in the `ancestor_folder_id`. |
-| `defaultView` | Must be set to "metadata". |
+| `defaultView` | Must be set to `metadata`. |
 | `features.contentExplorer.metadataViewV2` | Must be set to true to enable the metadata view (v2). |
 | `metadataQuery` | Metadata query request body matching the [Metadata Query API][md-queries] schema. |
 | `metadataViewProps` | Component configuration. For configuration details, see `metadataViewProps` object. |
@@ -57,7 +57,9 @@ To display the metadata view of Content Explorer, you need the following propert
 
 Depending on your needs and setup, Box UI Elements can be used with Vanilla JavaScript or React. You can learn more about installation from the [Installation][installation] guide. 
 
-**Capitalized strings need to be replaced with your custom values.**
+<Message type='notice'>
+  **Capitalized strings need to be replaced with your custom values.**
+</Message>
 
 ### Vanilla JavaScript code snippet
 
@@ -104,13 +106,13 @@ import { IntlProvider } from 'react-intl';
 import ContentExplorer from "box-ui-elements/es/elements/content-explorer"
 
 // Fill with custom values of your metadata template
-// You can use this enpoint to get all needed values: https://developer.box.com/reference/get-metadata-templates-id-id-schema/
+// You can use this endpoint to get all needed values: https://developer.box.com/reference/get-metadata-templates-id-id-schema/
 const metadataScopeAndKey = `${METADATA_TEMPLATE_SCOPE}.${METADATA_TEMPLATE_KEY}`;
 const metadataFieldNamePrefix = `metadata.${metadataScopeAndKey}`;
 const folderID = "FOLDER_ID"
 
 const metadataQuery = {
-   // Check this enpoint for more details on query structure:
+   // Check this endpoint for more details on query structure:
    // https://developer.box.com/reference/post-metadata-queries-execute-read/
    from: metadataScopeAndKey,
    ancestor_folder_id: folderID,
@@ -241,7 +243,7 @@ metadataViewProps: {
 
 ### Toggling list and grid view
 
-Grid view is available by default through the view mode toggle button in the Action bar. When the grid view is active, a zoom control becomes available. Other functionalities like selecting, filtering, and editing are also available within this view.
+Grid view is available by default through the view mode toggle button in the action bar. When the grid view is active, a zoom control becomes available. Other functionalities like selecting, filtering, and editing are also available within this view.
 
 ![Grid view](./images/explorer-grid.png)
 
@@ -275,7 +277,7 @@ The `v1` of the metadata view Content Explorer has reached end of support. While
 
 To migrate from `v1` to v2 in projects using `box-ui-elements` package:
 
-1. Upgrade the `box-ui-elements` package version to at least version `24.0.0`.
+1. Upgrade the `box-ui-elements` package version to version `24.0.0` or higher.
 2. Ensure `box-ui-elements` peer dependencies are added as dependencies in your `package.json` file. Install them with your package manager.
 3. Add the `features` flag to enable the enhanced metadata view.
 
@@ -309,7 +311,7 @@ const columns = [
 
 To migrate from `v1` to v2 in projects using CDN imports:
 
-1. Ensure that CDN link includes package version with at least version `24.0.0`.
+1. Ensure that CDN link includes package version with version `24.0.0` or higher.
 2. Add the `features` flag to enable the enhanced metadata view.
 
 ```js
