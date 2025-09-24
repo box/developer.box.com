@@ -1,5 +1,5 @@
 ---
-rank: 4
+rank: 5
 related_endpoints:
   - get-metadata-templates-id
 related_guides:
@@ -15,19 +15,24 @@ subcategory_id: embed/ui-elements
 is_index: false
 id: embed/ui-elements/explorer-metadata-v1
 type: guide
-total_steps: 17
+total_steps: 18
 sibling_id: embed/ui-elements
 parent_id: embed/ui-elements
 next_page_id: embed/ui-elements/open-with
-previous_page_id: embed/ui-elements/explorer
+previous_page_id: embed/ui-elements/explorer-metadata-v2
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/explorer-metadata-v1.md
 ---
 # Content Explorer - metadata view v1
 
-With Content Explorer you can also display files based on their metadata.
-The metadata view uses [metadata template][template] and [metadata query][metadata-query] to
-find the data you want to display.
+<Message type='notice'>
+
+The `v1` of the metadata view Content Explorer has reached end of support. While `v1` remains available in the `24.0.0` package, it will no longer receive bug fixes or new features. Follow the migration guide and switch to the `v2` metadata view of Content Explorer in order to receive the newest features.
+
+</Message>
+
+With Content Explorer you can display files and folders based on their metadata.
+The metadata view uses [metadata template][template] and [metadata query][metadata-query] to find the data you want to display.
 
 ![Metadata view](./images/explorer-view.png)
 
@@ -95,7 +100,7 @@ defined in the sample project. Examples of these parameters are available in the
 | --- | --- |
 | `defaultView` | A required prop to paint the metadata view. If it's not provided, you get the regular file view. |
 | `fieldsToShow` | Add or hide specific metadata columns to display in the Content Explorer. |
-|`metadataQuery` | Provides a way to find files by searching for the metadata attached to them. For additional information on metadata queries, see [this guide][metadata-query]. |
+|`metadataQuery` | Provides a way to find files and folders by searching for the metadata attached to them. For additional information on metadata queries, see [this guide][metadata-query]. |
 
 3. Pass the required parameters to the Content Explorer component.
 
