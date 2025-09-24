@@ -273,4 +273,4 @@ sdk_version_notice:
     // sdk: Notice about sdk versioning
     sdk: |-
       Learn more about
-      **[Box SDK versionig strategy](g://tooling/sdks/sdk-versioning)**.
+      **[Box SDK versioning strategy](g://tooling/sdks/sdk-versioning)**.

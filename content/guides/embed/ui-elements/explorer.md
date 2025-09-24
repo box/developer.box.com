@@ -20,7 +20,7 @@ renders the content in a folder view, similar to the main Box web application.
 Users can then navigate through the folder hierarchy and perform file operations
 like rename, delete, and share.
 
-Content Explorer comes with a metadata view that uses
+Content Explorer comes with a [metadata view][explorer-metadata] that uses
 metadata query to find files and folders based
 on their metadata. The data is then displayed in the embedded view.
 
@@ -363,3 +363,4 @@ style="width: 100%;"
 [creating-templates-api]: g:///metadata/templates/create
 [appjs]: https://github.com/box-community/content-explorer-metadata/blob/main/src/App.js
 [blogpost]: https://medium.com/box-developer-blog/metadata-view-in-box-content-explorer-4978e47e97e9
+[explorer-metadata]: g://embed/ui-elements/explorer-metadata-v2
