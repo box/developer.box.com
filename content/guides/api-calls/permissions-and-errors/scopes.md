@@ -34,10 +34,10 @@ together, see our [security guide][security].
 ## Scopes & OAuth 2 authorization
 
 When sending a user through a client-side OAuth 2 flow to authorize your
-application it is possible to append a set of scopes to the authorization URL to
+application, it is possible to append a set of scopes to the authorization URL to
 further restrict the user's access token.
 
-For example, if you application has the `root_readonly` and `root_readwrite`
+For example, if your application has the `root_readonly` and `root_readwrite`
 scopes enabled, it is possible to restrict a user's access token to
 `root_readonly` by specifying this scope when redirecting the user.
 
@@ -45,14 +45,14 @@ scopes enabled, it is possible to restrict a user's access token to
 GET https://account.box.com/api/oauth2/authorize?scope=root_readonly&client_id=....
 ```
 
-When the scope parameter is omitted the application will use the scopes that
+When the scope parameter is omitted, the application will use the scopes that
 were set when the application was created.
 
 ## Self-service scopes
 
 These scopes are available through the Developer Console when configuring an
 application. Navigate to the **Application Scopes** section of the
-**Configuration** tab and select one or more of the following scope.
+**Configuration** tab and select one or more of the following scopes.
 
 ### Read all files and folders
 
@@ -160,7 +160,7 @@ application to edit and delete device pins.
 
 <Message type='notice'>
 Although this allows an application to enterprise properties, for client-side
-applications, the Access Token used must must be associated with an
+applications, the Access Token used must be associated with an
 Admin Co-Admin with the correct permissions.
 </Message>
 
@@ -282,7 +282,7 @@ For this reason, this scope will not be provisioned unless absolutely necessary.
 
 ## Scopes for downscoping
 
-In some cases an Access Token needs to be [downscoped][ds] to a more strict
+In some cases, an Access Token needs to be [downscoped][ds] to a more strict
 permission level, especially when a token needs to be exposed to a client-side,
 public environment like a browser. The primary example for this is when using
 [Box UI Elements][ui-elements], which require an Access Token in the user's
