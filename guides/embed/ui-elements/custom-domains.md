@@ -1,5 +1,5 @@
 ---
-rank: 16
+rank: 17
 related_endpoints: []
 related_guides:
   - embed/ui-elements
@@ -13,11 +13,11 @@ subcategory_id: embed/ui-elements
 is_index: false
 id: embed/ui-elements/custom-domains
 type: guide
-total_steps: 18
+total_steps: 19
 sibling_id: embed/ui-elements
 parent_id: embed/ui-elements
 next_page_id: ''
-previous_page_id: embed/ui-elements/theming-branding
+previous_page_id: embed/ui-elements/viewers-and-events
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/custom-domains.md
 ---

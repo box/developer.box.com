@@ -14,10 +14,10 @@ subcategory_id: embed/ui-elements
 is_index: false
 id: embed/ui-elements/explorer
 type: guide
-total_steps: 18
+total_steps: 19
 sibling_id: embed/ui-elements
 parent_id: embed/ui-elements
-next_page_id: embed/ui-elements/explorer-metadata-v1
+next_page_id: embed/ui-elements/explorer-metadata-v2
 previous_page_id: embed/ui-elements/browser
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/explorer.md
@@ -31,7 +31,7 @@ renders the content in a folder view, similar to the main Box web application.
 Users can then navigate through the folder hierarchy and perform file operations
 like rename, delete, and share.
 
-Content Explorer comes with a metadata view that uses
+Content Explorer comes with a [metadata view][explorer-metadata] that uses
 metadata query to find files and folders based
 on their metadata. The data is then displayed in the embedded view.
 
@@ -359,3 +359,4 @@ See the implemented examples in CodePen:
 [creating-templates-api]: g:///metadata/templates/create
 [appjs]: https://github.com/box-community/content-explorer-metadata/blob/main/src/App.js
 [blogpost]: https://medium.com/box-developer-blog/metadata-view-in-box-content-explorer-4978e47e97e9
+[explorer-metadata]: g://embed/ui-elements/explorer-metadata-v2

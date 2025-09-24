@@ -164,7 +164,7 @@
   // Placeholder text for the search filter in the sidebar
   "reference.sidebar.filter.placeholder": "Filter by name",
   // Notice about sdk versioning
-  "reference.sdk_version_notice.__raw__.sdk": "Learn more about\n**[Box SDK versionig strategy](g://tooling/sdks/sdk-versioning)**.",
+  "reference.sdk_version_notice.__raw__.sdk": "Learn more about\n**[Box SDK versioning strategy](g://tooling/sdks/sdk-versioning)**.",
   // The title for the guides section
   "guides.titles.guides": "Guides",
   // A title for a set of links describing things to read before

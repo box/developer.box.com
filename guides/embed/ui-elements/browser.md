@@ -12,7 +12,7 @@ subcategory_id: embed/ui-elements
 is_index: false
 id: embed/ui-elements/browser
 type: guide
-total_steps: 18
+total_steps: 19
 sibling_id: embed/ui-elements
 parent_id: embed/ui-elements
 next_page_id: embed/ui-elements/explorer
