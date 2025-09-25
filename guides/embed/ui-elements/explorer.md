@@ -14,10 +14,10 @@ subcategory_id: embed/ui-elements
 is_index: false
 id: embed/ui-elements/explorer
 type: guide
-total_steps: 17
+total_steps: 18
 sibling_id: embed/ui-elements
 parent_id: embed/ui-elements
-next_page_id: embed/ui-elements/explorer-metadata-v1
+next_page_id: embed/ui-elements/explorer-metadata-v2
 previous_page_id: embed/ui-elements/browser
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/explorer.md
@@ -27,7 +27,7 @@ fullyTranslated: true
 
 Box Content Explorer UI Elementを使用すると、開発者は、Boxに保存されているコンテンツのフォルダビューをデスクトップまたはモバイルウェブアプリに埋め込むことができます。ライブラリはBox APIを介して指定されたフォルダに関する情報を取得した後、メインのBoxウェブアプリと同様にそのコンテンツをフォルダビューにレンダリングします。ユーザーは、そのフォルダ階層内を移動し、名前の変更、削除、共有などのファイル操作を実行できます。
 
-コンテンツエクスプローラで、メタデータビューを使用できるようになりました。このビューでは、メタデータクエリを使用して、メタデータに基づいてファイルやフォルダを検索できます。データは埋め込みのビューに表示されます。
+Content Explorer comes with a [metadata view][explorer-metadata] that uses metadata query to find files and folders based on their metadata. The data is then displayed in the embedded view.
 
 ## インストール
 
@@ -312,3 +312,5 @@ CodePenで実装例を確認してください。
 [appjs]: https://github.com/box-community/content-explorer-metadata/blob/main/src/App.js
 
 [blogpost]: https://medium.com/box-developer-blog/metadata-view-in-box-content-explorer-4978e47e97e9
+
+[explorer-metadata]: g://embed/ui-elements/explorer-metadata-v2

@@ -1,5 +1,5 @@
 ---
-rank: 7
+rank: 8
 related_endpoints: []
 related_guides:
   - embed/ui-elements
@@ -14,11 +14,11 @@ subcategory_id: embed/ui-elements
 is_index: false
 id: embed/ui-elements/preview
 type: guide
-total_steps: 17
+total_steps: 18
 sibling_id: embed/ui-elements
 parent_id: embed/ui-elements
 next_page_id: embed/ui-elements/sidebar
-previous_page_id: embed/ui-elements/picker
+previous_page_id: embed/ui-elements/open-with
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/preview.md
 fullyTranslated: true
@@ -457,15 +457,15 @@ const suggestedQuestions = [
 ];
 
 preview.show(<FILE_ID>, <TOKEN>, {
-   container: '.preview-container',
-   contentAnswersProps={
-     show: true,
-     isCitationsEnabled: true,
-     isMarkdownEnabled: true,
-     isResetChatEnabled: true,
-     suggestedQuestions
-       }
-   hasHeader: true,
+    container: '.preview-container',
+    contentAnswersProps={
+      show: true,
+      isCitationsEnabled: true,
+      isMarkdownEnabled: true,
+      isResetChatEnabled: true,
+      suggestedQuestions
+    }
+    hasHeader: true,
 });
 
 ```
