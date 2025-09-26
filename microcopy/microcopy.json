@@ -164,7 +164,7 @@
   // Placeholder text for the search filter in the sidebar
   "reference.sidebar.filter.placeholder": "名前でフィルタ",
   // Notice about sdk versioning
-  "reference.sdk_version_notice.__raw__.sdk": "Learn more about\n**[Box SDK versionig strategy](g:\/\/tooling\/sdks\/sdk-versioning)**.",
+  "reference.sdk_version_notice.__raw__.sdk": "Box SDKのバージョン戦略の詳細については、\n**[こちら](g:\/\/tooling\/sdks\/sdk-versioning)**を確認してください。",
   // The title for the guides section
   "guides.titles.guides": "ガイド",
   // A title for a set of links describing things to read before
