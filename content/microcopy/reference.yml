@@ -165,19 +165,19 @@ environments:
   // node: |-
     A label for Node JS
     code sample - DO NOT TRANSLATE
-  node: Node
+  node: Node v3
   // dotnet: |-
     A label for .NET
     code sample - DO NOT TRANSLATE
-  dotnet: .NET
+  dotnet: .NET v5
   // java: |-
     A label for Java
     code sample - DO NOT TRANSLATE
-  java: Java
+  java: Java v4
   // python: |-
     A label for Python
     code sample - DO NOT TRANSLATE
-  python: Python
+  python: Python v3
   // cli: |-
     A label for command line interface
     code sample - DO NOT TRANSLATE
@@ -188,27 +188,27 @@ environments:
   curl: cURL
   // ios: |-
     A label for iOS code sample - DO NOT TRANSLATE
-  ios: iOS
+  ios: iOS v5
   // ts_gen: |-
     A label for TypeScript code sample
     from auto-generated SDK - DO NOT TRANSLATE
-  ts_gen: TypeScript Gen
+  ts_gen: Node/TypeScript v10
   // python_gen: |-
     A label for Python code sample from
     auto-generated SDK - DO NOT TRANSLATE
-  python_gen: Python Gen
+  python_gen: Python v10
   // dotnet_gen: |-
     A label for .NET code sample from
     auto-generated SDK - DO NOT TRANSLATE
-  dotnet_gen: .NET Gen
+  dotnet_gen: .NET v10
   // swift_gen: |-
     A label for Swift code sample from
     auto-generated SDK - DO NOT TRANSLATE
-  swift_gen: Swift Gen (Beta)
+  swift_gen: Swift v10
   // java_gen: |-
     A label for Java code sample from
     auto-generated SDK - DO NOT TRANSLATE
-  java_gen: Java Gen (Beta)
+  java_gen: Java v10
 
 resource_variants:
   // base: |-
@@ -267,3 +267,10 @@ sidebar:
   filter:
     // placeholder: Placeholder text for the search filter in the sidebar
     placeholder: "Filter by name"
+
+sdk_version_notice:
+  __raw__:
+    // sdk: Notice about sdk versioning
+    sdk: |-
+      Learn more about
+      **[Box SDK versioning strategy](g://tooling/sdks/sdk-versioning)**.
