@@ -1,5 +1,5 @@
 ---
-rank: 7
+rank: 8
 related_endpoints: []
 related_guides:
   - embed/ui-elements
@@ -465,15 +465,15 @@ const suggestedQuestions = [
 ];
 
 preview.show(<FILE_ID>, <TOKEN>, {
-   container: '.preview-container',
-   contentAnswersProps={
-     show: true,
-     isCitationsEnabled: true,
-     isMarkdownEnabled: true,
-     isResetChatEnabled: true,
-     suggestedQuestions
-       }
-   hasHeader: true,
+    container: '.preview-container',
+    contentAnswersProps={
+      show: true,
+      isCitationsEnabled: true,
+      isMarkdownEnabled: true,
+      isResetChatEnabled: true,
+      suggestedQuestions
+    }
+    hasHeader: true,
 });
 ```
 
