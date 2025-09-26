@@ -12,7 +12,7 @@ alias_paths: []
 
 ## Generic Method
 
-The following code will create metadata on a Box folder in Salesforce using the
+The following code creates metadata on a Box folder in Salesforce using the
 generic Toolkit method:
 
 <Tabs>
@@ -52,7 +52,7 @@ HttpResponse response = toolkit.sendRequest(request);
 
 ## New Folder Association
 
-The following code will create a folder for a specific Salesforce record Id:
+The following code creates a folder for a specific Salesforce record Id:
 
 <Tabs>
   <Tab title='Apex'>
@@ -79,8 +79,8 @@ boxToolkit.commitChanges();
 
 ## Folder Templates
 
-The following code will create a folder for a record, create subfolders (folder
-template), and collaborate the current user:
+The following code creates a folder for a record, creates subfolders (folder
+template), and collaborates the current user:
 
 <Tabs>
   <Tab title='Apex'>
@@ -115,7 +115,7 @@ boxToolkit.commitChanges();
 
 ## Metadata
 
-The following code will get, add, delete, and update Box folder metadata and
+The following code gets, adds, deletes, and updates Box folder metadata and
 cascade policies.
 
 <Tabs>
@@ -289,4 +289,58 @@ System.debug(tk.mostRecentError);
 ```
 
   </Tab>
+</Tabs>
+
+## Create a sign request
+
+The following code creates a Box Sign request in Salesforce.
+
+<Tabs>
+  <Tab title='Apex'>
+
+```java
+//Send Sign Request
+Box.BoxSignRequest request = new Box.BoxSignRequest();
+Box.Signer signer = new Box.Signer();
+signer.role = 'signer';
+signer.email = 'test@test.com';
+request.signers = new List<Box.Signer>{ signer };
+Box.File srcFile = new Box.File();
+srcFile.id = '1947563411908';
+request.source_files = new List<Box.File>{ srcFile };
+request.recordId = '0017z00001IdXIHAA3';
+request.subject = 'Test Subject';
+request.message = 'Test Message';
+request.send_reminders = false;
+List<Box.BoxSignResponse> responses = Box.BoxSignService.sendSignRequests(new List<Box.BoxSignRequest>{ request });
+System.debug(responses[0]);
+```
+
+</Tab>
+</Tabs>
+
+## Get Box Hubs
+
+The following code retrieves all Box Hubs.
+
+<Tabs>
+  <Tab title='Apex'>
+
+```java
+//Get All Hubs
+Box.HubsToolkit tk = new Box.HubsToolkit();
+Box.HubsList hubsList = tk.getAllHubs();
+System.debug(hubsList);
+System.debug(hubsList.entries);
+for(Box.Hub hub : hubsList.entries){
+System.debug(hub);
+System.debug(hub.id);
+}
+Box.Hub hub = tk.getHubById('106600628');
+System.debug(hub);
+System.debug(hub.id);
+System.debug(hub.title);
+```
+
+</Tab>
 </Tabs>
