@@ -330,16 +330,12 @@ The following code retrieves all Box Hubs.
 //Get All Hubs
 Box.HubsToolkit tk = new Box.HubsToolkit();
 Box.HubsList hubsList = tk.getAllHubs();
-System.debug(hubsList);
-System.debug(hubsList.entries);
 for(Box.Hub hub : hubsList.entries){
-System.debug(hub);
-System.debug(hub.id);
+//process hubs
 }
+//Get Hub by Id
 Box.Hub hub = tk.getHubById('106600628');
-System.debug(hub);
-System.debug(hub.id);
-System.debug(hub.title);
+//processing single Hub by using hub.title, hub.id, etc.
 ```
 
 </Tab>
