@@ -12,7 +12,7 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 27
+total_steps: 28
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/ai-models/openai-gpt-5-reasoning-alpha-model-card
@@ -348,36 +348,9 @@ Standard
 
 </Tile>
 
-<Tile type="model" title="aws__claude_3_haiku" href="/guides/box-ai/ai-models/aws-claude-3-haiku-model-card">
+<Tile type="model" title="aws__claude_4_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-5-sonnet-model-card">
 
-A model tailored for various language tasks, including creative writing and conversational AI.
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-Chat
-
-</strong>
-
-<strong style="background-color: #e1ffe7">
-
-Available
-
-</strong>
-
-<strong style="background-color: #fdfad8">
-
-Standard
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="model" title="aws__claude_3_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-sonnet-model-card">
-
-A model designed for advanced language tasks, focusing on comprehension and context handling.
+A model that excels at complex agents, coding, and autonomous multi-step workflows.
 <div>
 
 <strong style="background-color: #e8e8e8">
@@ -402,9 +375,36 @@ Premium
 
 </Tile>
 
-<Tile type="model" title="aws__claude_3_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-5-sonnet-model-card">
+<Tile type="model" title="aws__claude_4_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-5-sonnet-model-card">
 
-A model designed to enhance language understanding and generation tasks.
+A model that brings frontier performance to everyday use cases.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Chat
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+Available
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="aws__claude_4_opus" href="/guides/box-ai/ai-models/aws-claude-4-opus-model-card">
+
+A model that excels at coding and complex problem-solving, powering frontier agent products.
 <div>
 
 <strong style="background-color: #e8e8e8">
@@ -456,9 +456,9 @@ Premium
 
 </Tile>
 
-<Tile type="model" title="aws__claude_4_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-sonnet-model-card">
+<Tile type="model" title="aws__claude_3_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-5-sonnet-model-card">
 
-A model that brings frontier performance to everyday use cases.
+A model designed to enhance language understanding and generation tasks.
 <div>
 
 <strong style="background-color: #e8e8e8">
@@ -483,9 +483,9 @@ Premium
 
 </Tile>
 
-<Tile type="model" title="aws__claude_4_opus" href="/guides/box-ai/ai-models/aws-claude-4-opus-model-card">
+<Tile type="model" title="aws__claude_3_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-sonnet-model-card">
 
-A model that excels at coding and complex problem-solving, powering frontier agent products.
+A model designed for advanced language tasks, focusing on comprehension and context handling.
 <div>
 
 <strong style="background-color: #e8e8e8">
@@ -503,6 +503,33 @@ Available
 <strong style="background-color: #f8d59b">
 
 Premium
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="aws__claude_3_haiku" href="/guides/box-ai/ai-models/aws-claude-3-haiku-model-card">
+
+A model tailored for various language tasks, including creative writing and conversational AI.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Chat
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+Available
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+Standard
 
 </strong>
 
