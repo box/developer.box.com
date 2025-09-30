@@ -144,7 +144,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #f8d59b">Premium</strong>
 			</div>
 		</Tile>     
-		<Tile type="model" title="aws__claude_4_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-sonnet-model-card">
+		<Tile type="model" title="aws__claude_4_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-5-sonnet-model-card">
 			A model that brings frontier performance to everyday use cases.
 			<div>
 				<strong style="background-color: #e8e8e8">Chat</strong>
