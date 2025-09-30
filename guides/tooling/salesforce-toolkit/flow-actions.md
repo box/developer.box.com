@@ -33,35 +33,101 @@ The list below contains all methods that can be invoked in
 
 <!--alex ignore -->
 
-- Create Box Metadata by Folder Id (`createBoxMetadataByFolderId`)
-- Create Collaboration (`createCollaboration`)
-- Create Collaboration On Record (`createCollaborationOnRecord`)
-- Create File From Attachment (`createFileFromAttachment`)
-- Create Folder (`createFolder`)
-- Create Folder Association (`createFolderAssociation`)
-- Create Folder For Record ID (`createFolderForRecordId`)
-- Create Folder For Record ID From Template (`createFolderForRecordIdFromTemplate`)
-- Create Metadata Cascade Policy (`createMetadataCascadePolicy`)
-- Create Object Folder For Record ID (`createObjectFolderForRecordId`)
-- Create Slack Channel Mapping (`mapSfdcRecordToSlackChannel`)
-- Delete Box Metadata by Folder Id (`deleteBoxMetadataByFolderId`)
-- Delete Collaboration (`deleteCollaboration`)
-- Delete Metadata Cascade Policy (`deleteMetadataCascadePolicyById`)
-- Edit Collaboration (`editCollaboration`)
-- Enable Integration Activity (`enableAppActivity`)
-- Get Box Metadata by Folder Id (`getBoxMetadataByFolderId`)
-- Get Folder Associations By Salesforce Record ID (`getFolderAssociationsByRecordId`)
-- Get Folder ID By Record ID (`getFolderIdByRecordId`)
-- Get Folder URL (`getFolderUrl`)
-- Get Metadata Cascade Policies by Folder Id (`getMetadataCascadePoliciesByFolderId`)
-- Get Metadata Cascade Policy by Id (`getMetadataCascadePolicyById`)
-- Get Object Folder By Record ID (`getObjectFolderByRecordId`)
-- Get Record ID By Folder ID (`getRecordIdByFolderId`)
-- Get Root Folder ID (`getRootFolderId`)
-- Get URL For Folder (`getUrlForFolder`)
-- Move Folder (`moveFolder`)
-- Set Slack Channel Access Management Disabled (`setSlackChannelAccessManagementDisabled`)
-- Update Box Metadata by Folder Id (`updateBoxMetadataByFolderId`)
+### Box Sign
+
+- Send Box Sign Request (`sendSignRequests`)
+
+### Box Hubs
+
+- Add Hub Item (`tkAddHubItem`)
+- Copy Hub (`tkCopyHub`)
+- Create Hub (`tkCreateHub`)
+- Create Hub Collaboration (`tkCreateHubCollaboration`)
+- Get All Hubs (`tkGetAllHubs`)
+- Get Enterprise Hubs (`tkGetEnterpriseHubs`)
+- Get Hub by ID (`tkGetHubById`)
+- Get Hub Collaborations (`tkGetHubCollaborations`)
+- Update Hub (`tkUpdateHub`)
+- Update Hub Collaboration (`tkUpdateHubCollaboration`)
+
+### Box AI
+
+- Box AI Ask by Item Id (`askBoxAI`)
+- Box AI Extract by Fields (`extractBoxAI`)
+- Box AI Extract by Metadata Template (`extractBoxAI`)
+- Box AI Extract by SObject Type (`extractBoxAI`)
+- Box AI Generate Text by Item Id (`generateBoxAI`)
+
+### Doc Gen
+
+- Create Doc Gen Template (`createDocGenTemplate`)
+- Generate Doc Gen For Record (`generateDocGenForRecord`)
+- Submit Doc Gen Batch (`submitDocgenBatch`)
+- Get Doc Gen Batch Status (`getDocgenBatch`)
+
+### File Box Metadata and actions
+
+- Create Box Metadata by File Id (`tkCreateBoxMetadataByFileId`)
+- Delete Box Metadata by File Id (`tkDeleteBoxMetadataByFileId`)
+- Get Box Metadata by File Id (`tkGetBoxMetadataByFileId`)
+- Update Box Metadata by File Id (`tkUpdateBoxMetadataByFileId`)
+- Move File (`tkMoveFile`)
+- Get Last Item (`getLastItem`)
+- Get Recent Items (`GetRecentItems`)
+
+### Folder Box Metadata and actions
+
+- Create Box Metadata by Folder Id (`tkCreateBoxMetadataByFolderId`)
+- Delete Box Metadata by Folder Id (`tkDeleteBoxMetadataByFolderId`)
+- Get Box Metadata by Folder Id (`tkGetBoxMetadataByFolderId`)
+- Update Box Metadata by Folder Id (`tkUpdateBoxMetadataByFolderId`)
+
+### Folder management
+
+- Create Folder (`tkCreateFolder`)
+- Create Folder Association (`tkCreateFolderAssociation`)
+- Create Folder For Record ID (`tkCreateFolderForRecordId`)
+- Create Folder For Record ID From Template (`tkCreateFolderForRecordIdFromTemplate`)
+- Create Object Folder For Record ID (`tkCreateObjectFolderForRecordId`)
+- Get Folder Associations By Salesforce Record ID (`tkGetFolderAssociationsByRecordId`)
+- Get Folder ID By Record ID (`tkGetFolderIdByRecordId`)
+- Get Folder URL (`tkGetFolderUrl`)
+- Get Object Folder By Record ID (`tkGetObjectFolderByRecordId`)
+- Get Record ID By Folder ID (`tkGetRecordIdByFolderId`)
+- Get Root Folder ID (`tkGetRootFolderId`)
+- Get URL For Folder (`tkGetUrlForFolder`)
+- Move Folder (`tkMoveFolder`)
+- Update Folder (`tkUpdateFolder`)
+- Get Box Folder Contents by Folder Id (`tkGetFolderContents`)
+
+### Cascade policies
+
+- Create Metadata Cascade Policy (`tkCreateMetadataCascadePolicy`)
+- Delete Metadata Cascade Policy (`tkDeleteBoxMetadataByFolderId`)
+- Get Metadata Cascade Policies by Folder Id (`tkGetMetadataCascadePoliciesByFolderId`)
+- Get Metadata Cascade Policy by Id (`tkGetMetadataCascadePolicyById`)
+
+### Collaboration
+
+- Create Collaboration (`tkCreateCollaboration`)
+- Create Collaboration On Record (`tkCreateCollaborationOnRecord`)
+- Delete Collaboration (`tkDeleteCollaboration`)
+- Edit Collaboration (`tkEditCollaboration`)
+
+### Slack integration
+
+<!--alex ignore -->
+
+- Create Slack Channel Mapping (`tkCreateSlackChannelMapping`)
+- Set Slack Channel Access Management Disabled (`tkSetSlackChannelAccessManagementDisabled`)
+
+<!--alex enable -->
+
+### Other / utilities
+
+- Create File From Attachment (`tkCreateFileFromAttachment`)
+- Enable Integration Activity (`tkEnableAppActivity`)
+- Search (`search`)
 
 <!--alex enable -->
 

@@ -686,6 +686,232 @@ Returns:
 
 - Boolean based on the transaction success.
 
+## Box Sign
+
+### `sendSignRequests`
+
+This method calls the [create sign request][15] endpoint to send documents for signature.
+
+| **Parameter** | **Type** | **Description** |
+| --- | --- | --- |
+| `requests` | `List<BoxSignRequest>` | List of Box Sign Request objects containing signers, files, and configuration for the signature request. |
+
+**Returns:**
+
+List of `BoxSignResponse` objects, one for each request processed. Each response contains the sign request ID, status, and any error information.
+
+`BoxSignResponse` returns error details, if:
+
+- the parameters are incorrect,
+- access to the files is missing,
+- file upload fails,
+- Box Sign API returns an error.
+
+## Box Hubs
+
+### Manage Box Hubs
+
+#### `getHubById`
+
+This method calls the [get hub by ID][16] endpoint to retrieve a specific hub.
+
+| **Parameter** | **Type** | **Description** |
+| --- | --- | --- |
+| `hubId` | `string` | The ID of the hub to retrieve. |
+
+**Returns:**
+
+- Hub object containing the hub details and metadata.
+- `HubsToolkitException` if:
+  - the hub ID is blank or null,
+  - access to the hub is missing,
+  - the hub is not found.
+
+#### `getAllHubs`
+
+This method calls the [get all hubs][13] endpoint to retrieve a list of all hubs.
+
+| **Parameter** | **Type** | **Description** |
+| --- | --- | --- |
+| `limitCount` | `integer` | Optional - maximum number of hubs to return. |
+| `marker` | `string` | Optional - pagination marker for retrieving additional results. |
+
+**Returns:**
+
+- `HubsList` object containing the list of hubs and pagination information.
+- `HubsToolkitException` if:
+  - access to hubs is missing,
+  - API request fails.
+
+#### `getEnterpriseHubs`
+
+This method calls the [get enterprise hubs][14] endpoint to retrieve enterprise-level hubs.
+
+| **Parameter** | **Type** | **Description** |
+| --- | --- | --- |
+| `limitCount` | `integer` | Optional - maximum number of hubs to return. |
+| `marker` | `string` | Optional - pagination marker for retrieving additional results. |
+
+**Returns:**
+
+- `HubsList` object containing the list of enterprise hubs and pagination information.
+- `HubsToolkitException` if:
+  - access to enterprise hubs is missing,
+  - API request fails.
+
+#### `createHub`
+
+This method calls the [create hub endpoint][17] to create a new hub.
+
+| **Parameter** | **Type** | **Description** |
+| --- | --- | --- |
+| `title` | `string` | Required - title of the hub (max 50 characters). |
+| `description` | `string` | Optional - description of the hub. |
+
+**Returns:**
+
+- Hub object containing the newly created hub details.
+- `HubsToolkitException` if:
+  - the title is blank or null,
+  - the title exceeds 50 characters,
+  - access to create hubs is missing,
+  - API request fails.
+
+#### `updateHub`
+
+This method calls the [update hub endpoint][18] to modify an existing hub.
+
+| **Parameter** | **Type** | **Description** |
+| --- | --- | --- |
+| `hubId` | `string` | Required - the ID of the hub to update. |
+| `updateRequest` | `HubUpdateRequest` | Required - object containing the fields to update. |
+
+**Returns:**
+
+- Hub object containing the updated hub details.
+- `HubsToolkitException` if:
+  - the hub ID is blank or null,
+  - the update request is null,
+  - the title exceeds 50 characters,
+  - access to the hub is missing,
+  - API request fails.
+
+#### `copyHub`
+
+This method calls the [copy hub endpoint][19] to create a copy of an existing hub.
+
+**Parameter** | **Type** | **Description**
+| --- | --- | --- |
+`hubId` | `string` | Required - the ID of the hub to copy.
+`title` | `string` | Optional - title for the copied hub (max 50 characters).
+`description` | `string` | Optional - description for the copied hub.
+
+**Returns:**
+
+- Hub object containing the newly created copied hub details.
+- `HubsToolkitException` if:
+  - the hub ID is blank or null,
+  - the title exceeds 50 characters,
+  - access to the source hub is missing,
+  - API request fails.
+
+### Box Hub Collaborations
+
+#### `createUserCollaboration`
+
+This method calls the [create hub collaboration][20] endpoint to add a user to a hub.
+
+**Parameter** | **Type** | **Description**
+| --- | --- | --- |
+`hubId` | `string` | Required - the ID of the hub.
+`userId` | `string` | Required - the ID of the user to add.
+`role` | `string` | Required - the role for the user in the hub.
+
+**Returns:**
+
+- `HubCollaboration` object containing the collaboration details.
+- `HubsToolkitException` if:
+  - the hub ID is blank or null,
+  - the user ID is blank or null,
+  - the role is blank or null,
+  - access to the hub is missing,
+  - API request fails.
+
+#### `createHubCollaboration`
+
+This method calls the [create hub collaboration][20] endpoint to add a collaboration to a hub.
+
+**Parameter** | **Type** | **Description**
+| --- | --- | --- |
+`request` | `HubCollaborationRequest` | Required - object containing the collaboration details including hub reference and accessible by information.
+
+**Returns:**
+
+- `HubCollaboration` object containing the collaboration details.
+- `HubsToolkitException` if:
+  - the collaboration request is null,
+  - the hub reference with ID is missing,
+  - access to the hub is missing,
+  - API request fails.
+
+#### `getHubCollaborations`
+
+This method calls the [get hub collaborations][21] endpoint to retrieve collaborations for a hub.
+
+**Parameter** | **Type** | **Description**
+| --- | --- | --- |
+`hubId` | `string` | Required - the ID of the hub.
+`limitCount` | `integer` | Optional - maximum number of collaborations to return.
+`marker` | `string` | Optional - pagination marker for retrieving additional results.
+
+**Returns:**
+
+- `HubCollaborationsList` object containing the list of collaborations and pagination information.
+- `HubsToolkitException` if:
+  - the hub ID is blank or null,
+  - access to the hub is missing,
+  - API request fails.
+
+#### `updateHubCollaboration`
+
+This method calls the [update hub collaboration][22] endpoint to modify a collaboration.
+
+**Parameter** | **Type** | **Description**
+| --- | --- | --- |
+`collaborationId` | `string` | Required - the ID of the collaboration to update.
+`role` | `string` | Required - the new role for the collaboration.
+
+**Returns:**
+
+- `HubCollaboration` object containing the updated collaboration details.
+- `HubsToolkitException` if:
+  - the collaboration ID is blank or null,
+  - the role is blank or null,
+  - access to the collaboration is missing,
+  - API request fails.
+
+### Box Hub Items
+
+#### `addHubItem`
+
+This method calls the [manage hub items][23] endpoint to add an item to a hub.
+
+**Parameter** | **Type** | **Description**
+| --- | --- | --- |
+`hubId` | `string` | Required - the ID of the hub.
+`itemId` | `string` | Required - the ID of the item to add.
+`itemType` | `string` | Required - the type of the item (e.g., `file`, `folder`).
+
+**Returns:**
+
+- `HubItemsManageResponse` object containing the result of the item management operation.
+- `HubsToolkitException` if:
+  - the hub ID is blank or null,
+  - the item ID is blank or null,
+  - the item type is blank or null,
+  - access to the hub is missing,
+  - API request fails.
+
 [1]: e://get-folders-id-metadata-id-id
 [2]: e://post-folders-id-metadata-id-id
 [3]: e://put-folders-id-metadata-id-id
@@ -698,3 +924,14 @@ Returns:
 [10]: e://delete-integration-mappings-slack-id
 [11]: e://put-integration-mappings-slack-id
 [12]: https://support.box.com/hc/articles/360043694554-Creating-and-Managing-Groups
+[13]: e://get-hubs
+[14]: e://get-enterprise-hubs
+[15]: e://post-sign-requests
+[16]: e://get-hubs-id
+[17]: e://post-hubs
+[18]: e://put-hubs-id
+[19]: e://post-hubs-id-copy
+[20]: e://post-hub-collaborations
+[21]: e://get-hub-collaborations
+[22]: e://put-hub-collaborations-id
+[23]: e://post-hubs-id-manage-items
