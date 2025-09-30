@@ -29,7 +29,7 @@ Boxで開発およびサポートされているSDKおよびツールは以下�
 
 ## SDK
 
-Here you will find a list of SDKs you can use to build your application.
+アプリケーションの作成に使用できるSDKの一覧を以下に示します。
 
 <Message type="notice">
 
@@ -43,7 +43,7 @@ Here you will find a list of SDKs you can use to build your application.
 
 ### SDK
 
-The table lists Box SDKs that you can use when building your applications. For latest API support and features, use the next generation SDKs.
+次の表に、アプリケーションの作成時に使用できるBox SDKを示します。最新のAPIサポートや機能には、次世代のSDKを使用してください。
 
 | プラットフォーム                          | ステータス | APIパリティ |
 | --------------------------------- | ----- | ------- |
@@ -62,30 +62,30 @@ The table lists Box SDKs that you can use when building your applications. For l
 
 </Message>
 
-### Next Generation SDKs
+### 次世代のSDK
 
 <Message type="warning">
 
-As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts.
+日本時間2025年9月18日をもって、Boxの次世代SDKは、個別のアーティファクトとしてサポートされなくなりました。
 
-Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
+既存のコードは、変更しなくても引き続き動作します。Boxの次世代SDKをベースにしたアプリケーションは影響なく引き続きご利用いただけますが、新機能、更新、バグ修正は提供されなくなります。
 
-All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` is available as a separate branch.
+次世代SDK向けの新機能や更新を含む、今後の開発はすべて、`v10`以降のBoxコアSDKを通じて提供されます。現在、`v10`は個別のブランチとして利用可能です。
 
-For more details, see our [SDK versioning strategy document][versioning].
+詳細については、[SDKのバージョン戦略に関するドキュメント][versioning]を参照してください。
 
 </Message>
 
-Here's what you can expect from generated SDKs:
+生成されたSDKに実装予定の機能を以下に示します。
 
-* **Full API support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
-* **Rapid API updates**: The new auto-generation development approach allows you to add Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
-* **Embedded documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
-* **Enhanced convenience methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers that help to ensure that you’re using variables correctly, and much more.
+* **APIの全面的なサポート**: 新しいBox SDKにより、開発者はBox APIエコシステム全体をカバーできるようになります。Boxが提供する最新機能をすべて利用して、機能豊富なアプリケーションを作成できます。
+* **迅速なAPIの更新**: 自動生成による新しい開発アプローチにより、SDKへのBox APIの追加がさらに速いペースで (数日中に) 可能になります。これは、最新の機能をすぐにアプリケーションで利用できるようになることを意味します。
+* **ドキュメントへの埋め込み**: 必要な情報すべてが1か所に保存されるように、すべてのオブジェクトおよびパラメータはSDKのソースコードに直接記述されます。
+* **便利なメソッドの強化**: 新しく導入された便利なメソッドは、認証、分割アップロード、指数バックオフ、自動再試行、型チェック (変数を正しく使用しているかどうかの確認に役立ちます) など、さまざまな側面をカバーします。
 
 ## Box CLI
 
-Box CLI is a user-friendly command line tool that allows both technical and non-technical users to leverage Box API to perform routine or bulk actions.
+Box CLIは、使い勝手の良いコマンドラインツールです。これにより、開発者でも開発者以外のユーザーでもBox APIを利用してルーチンや一括操作を実行できるようになります。
 
 | プラットフォーム   | ステータス | APIパリティ |
 | ---------- | ----- | ------- |
@@ -123,7 +123,7 @@ Salesforce Developer Toolkitを使用すると、Box for Salesforce統合の動�
 
 ## Box CLI
 
-Box CLI is a user-friendly command line tool that allows both technical and non-technical users to leverage Box API to perform routine or bulk actions.
+Box CLIは、使い勝手の良いコマンドラインツールです。これにより、開発者でも開発者以外のユーザーでもBox APIを利用してルーチンや一括操作を実行できるようになります。
 
 | プラットフォーム   | メンテナンスの有無 | APIパリティ |
 | ---------- | --------- | ------- |

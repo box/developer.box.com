@@ -132,7 +132,7 @@ Box Platformでは、OAuth 2.0、JSONウェブトークン (JWT)、クライア�
 
 <Header centered>
 
-Browse by SDK and developer tools
+SDKや開発者ツール別に見る
 
 </Header>
 

@@ -22,9 +22,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/index.md
 fullyTranslated: true
 ---
-# Box SDKs
+# Box SDK
 
-Box offers a set of SDKs you can use to build your application.
+Boxには、アプリケーションの作成に使用できる一連のSDKが用意されています。
 
 <Message type="notice">
 
@@ -36,7 +36,7 @@ Box offers a set of SDKs you can use to build your application.
 
 </Message>
 
-The table lists Box SDKs that you can use when building your applications. For latest API support and features, use the next generation SDKs.
+次の表に、アプリケーションの作成時に使用できるBox SDKを示します。最新のAPIサポートや機能には、次世代のSDKを使用してください。
 
 | プラットフォーム                          | メンテナンスの有無 | APIパリティ |
 | --------------------------------- | --------- | ------- |
@@ -55,30 +55,30 @@ The table lists Box SDKs that you can use when building your applications. For l
 
 </Message>
 
-## Next Generation SDKs
+## 次世代のSDK
 
 <Message type="warning">
 
-As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts.
+日本時間2025年9月18日をもって、Boxの次世代SDKは、個別のアーティファクトとしてサポートされなくなりました。
 
-Don't worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
+既存のコードは、変更しなくても引き続き動作します。Boxの次世代SDKをベースにしたアプリケーションは影響なく引き続きご利用いただけますが、新機能、更新、バグ修正は提供されなくなります。
 
-In keeping with industry best practices, we are consolidating the Box Next Generation SDKs and Box core SDKs into a single package for each programming language. This makes migration efforts much easier and allows seamless additions of new capabilities to existing applications still powered by Box core SDKs, which were maintained manually.
+Boxでは、業界のベストプラクティスに従って、プログラミング言語ごとにBoxの次世代SDKとBoxコアSDKを1つのパッケージに統合します。これにより、移行作業がさらに容易になり、手動で管理されていたBoxコアSDKを引き続き使用している既存のアプリケーションに新機能をシームレスに追加できるようになります。
 
-All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` is available as a separate branch.
+次世代SDK向けの新機能や更新を含む、今後の開発はすべて、`v10`以降のBoxコアSDKを通じて提供されます。現在、`v10`は個別のブランチとして利用可能です。
 
-For more details, see our [SDK versioning strategy document][versioning].
+詳細については、[SDKのバージョン戦略に関するドキュメント][versioning]を参照してください。
 
 </Message>
 
-The latest generation Box Python SDK, Box TypeScript SDK, Box .NET SDK, and Box Swift SDK are designed to elevate the developer experience and streamline your integration with Box Content Cloud.
+最新世代のBox Python SDK、Box TypeScript SDK、Box .NET SDK、Box Swift SDKは、開発者エクスペリエンスを向上させ、Boxコンテンツクラウドとの統合を効率化することを目的としています。
 
 新しいSDKに実装予定の機能を以下に示します。
 
-* **Full API support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
-* **Rapid API updates**: The new auto-generation development approach allows you to add Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
-* **Embedded documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
-* **Enhanced convenience methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers that help to ensure that you’re using variables correctly, and much more.
+* **APIの全面的なサポート**: 新しいBox SDKにより、開発者はBox APIエコシステム全体をカバーできるようになります。Boxが提供する最新機能をすべて利用して、機能豊富なアプリケーションを作成できます。
+* **迅速なAPIの更新**: 自動生成による新しい開発アプローチにより、SDKへのBox APIの追加がさらに速いペースで (数日中に) 可能になります。これは、最新の機能をすぐにアプリケーションで利用できるようになることを意味します。
+* **ドキュメントへの埋め込み**: 必要な情報すべてが1か所に保存されるように、すべてのオブジェクトおよびパラメータはSDKのソースコードに直接記述されます。
+* **便利なメソッドの強化**: 新しく導入された便利なメソッドは、認証、分割アップロード、指数バックオフ、自動再試行、型チェック (変数を正しく使用しているかどうかの確認に役立ちます) など、さまざまな側面をカバーします。
 
 <!-- i18n-enable localize-links -->
 

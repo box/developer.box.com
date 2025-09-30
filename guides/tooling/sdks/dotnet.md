@@ -27,7 +27,7 @@ fullyTranslated: true
 
 .NETプロジェクトでは、Box .NET SDKを使用してBox APIを呼び出すことができます。
 
-Up to version `5.8.0` the SDK is available for both .NET Framework `4.5` and .NET Core `1.0` or above. Starting from version `10.0.0`, SDK is available for both .NET Framework `4.6.2` and .NET `8.0` or above. The installation of the SDK depends on the framework used.
+バージョン`5.8.0`までのSDKは、.NET Framework `4.5`以上および.NET Core `1.0`以上の両方で利用できます。バージョン`10.0.0`以降のSDKは、.NET Framework `4.6.2`以上および.NET `8.0`以上の両方で利用できます。SDKのインストール方法は、使用しているフレームワークによって異なります。
 
 <CTA to="https://github.com/box/box-windows-sdk-v2">
 

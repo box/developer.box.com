@@ -23,59 +23,59 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/sdk-versioning.md
 fullyTranslated: true
 ---
-# Box SDK versioning strategy
+# Box SDKのバージョン戦略
 
-As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts.
+日本時間2025年9月18日をもって、Boxの次世代SDKは、個別のアーティファクトとしてサポートされなくなりました。
 
-Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
+既存のコードは、変更しなくても引き続き動作します。Boxの次世代SDKをベースにしたアプリケーションは影響なく引き続きご利用いただけますが、新機能、更新、バグ修正は提供されなくなります。
 
-## Why we are making this change
+## 今回の変更を行う理由
 
-In keeping with industry best practices, we are consolidating the Box Next Generation SDKs and Box core SDKs into a single package for each programming language. This makes migration efforts much easier and allows seamless addition of new capabilities to existing applications still powered by Box core SDKs, which were maintained manually.
+Boxでは、業界のベストプラクティスに従って、プログラミング言語ごとにBoxの次世代SDKとBoxコアSDKを1つのパッケージに統合します。これにより、移行作業がさらに容易になり、手動で管理されていたBoxコアSDKを引き続き使用している既存のアプリケーションに新機能をシームレスに追加できるようになります。
 
-All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` is available as a separate branch.
+次世代SDK向けの新機能や更新を含む、今後の開発はすべて、`v10`以降のBoxコアSDKを通じて提供されます。現在、`v10`は個別のブランチとして利用可能です。
 
-## How it will work
+## 仕組み
 
-Box core SDKs and Box Next Generation SDKs were created as separate libraries. Going forward, the Box core SDK artifacts will include:
+BoxコアSDKとBoxの次世代SDKは、別々のライブラリとして作成されました。今後、BoxコアSDLのアーティファクトには以下が含まれる予定です。
 
-* `(n+1)` major version will include manually maintained **Box core SDK** and **Box Next Generation SDK** artifacts. This version enables leveraging coexisting artifacts at the same time, and serve as a transition phase. Stay tuned for this upcoming release.
-* `v10.0.0` version includes **only the Box Next Generation SDK artifact**. Currently, this version is available as a branch for each SDK repository.
+* `(n+1)` メジャーバージョンには、手動で管理されている**BoxコアSDK**と**Boxの次世代SDK**のアーティファクトが含まれます。このバージョンは、共存するアーティファクトを同時に利用できるようにするほか、移行フェーズとして機能します。この今後のリリースにご期待ください。
+* `v10.0.0`バージョンには、**Boxの次世代SDKのアーティファクトのみ**が含まれます。現在、このバージョンは、各SDKリポジトリでブランチとして利用可能です。
 
-## How to decide
+## 決定方法
 
-1. If you are creating a new application, use `v10` of the Box core SDK package.
-2. If you have an existing application relying on the **Box Next Generation SDK** and you wish to further develop your project, replace the name of this library in the package manager with the Box core SDK package (`v10.0.0`). Object imports for most SDKs will persist the same and your code will work as-is; the TypeScript SDK requires additional steps for migrating. Check the section below for detailed guides.
-3. If you have an existing application relying on **Box core SDK** and you wish to further develop your project, once released, bump the library version by one major release. See the table above for a detailed breakdown of recommended versions.
-4. If you have an existing application that you don’t plan to change, ensure your package manager includes the version of SDK you are using to prevent an accidental rebuild that pulls in a version you aren’t expecting.
+1. 新規アプリケーションを作成する場合は、BoxコアSDKパッケージの`v10`を使用します。
+2. **Boxの次世代SDK**を利用している既存のアプリケーションがあり、プロジェクトをさらに発展させたい場合は、パッケージマネージャ内のこのライブラリの名前をBoxコアSDKパッケージ (`v10.0.0`) に置き換えてください。ほとんどのSDKのオブジェクトのインポートは変わらず維持され、コードは現状のままで動作しますが、TypeScript SDKでは、移行のために追加の手順が必要になります。詳細なガイドについては、以下のセクションを確認してください。
+3. **BoxコアSDK**を利用している既存のアプリケーションがあり、プロジェクトをさらに進化させたい場合は、リリース後に、ライブラリのバージョンをメジャーリリース1つ分引き上げてください。推奨されているバージョンの詳細な解説については、上の表を参照してください。
+4. 変更する予定のない既存のアプリケーションがある場合は、使用しているSDKのバージョンがパッケージマネージャに含まれていることを確認し、不注意による再ビルドによって予期しないバージョンを取得しないようにしてください。
 
-## Versioning overview
+## バージョン管理の概要
 
-### Box SDK versions and artifacts
+### Box SDKのバージョンとアーティファクト
 
-| Repository name                      | Artifact name           | Current latest version | Will include both SDK artifacts | Includes only Box Next Gen SDK artifact |
-| ------------------------------------ | ----------------------- | ---------------------- | ------------------------------- | --------------------------------------- |
-| [`box-python-sdk`][python-repo]      | `boxsdk`                | `v3.14.0`              | `v4.X.Y`                        | >=`v10.0.0`                             |
-| [`box-node-sdk`][node-repo]          | `box-node-sdk`          | `v3.8.2`               | `v4.X.Y`                        | >=`v10.0.0`                             |
-| [`box-java-sdk`][java-repo]          | `box-java-sdk`          | `v4.16.3`              | `v5.X.Y`                        | >=`v10.0.0`                             |
-| [`box-windows-sdk-v2`][windows-repo] | `Box.V2`, `Box.V2.Core` | `v5.8.0`               | `v6.X.Y`                        | >=`v10.0.0`                             |
-| [`box-ios-sdk`][ios-repo]            | `BoxSDK`                | `v5.6.0`               | `v6.X.Y`                        | >=`v10.0.0`                             |
+| リポジトリ名                               | アーティファクト名               | 現在の最新バージョン | 両方のSDKのアーティファクトを含むバージョン | Boxの次世代SDKのアーティファクトを含むバージョン |
+| ------------------------------------ | ----------------------- | ---------- | ----------------------- | --------------------------- |
+| [`box-python-sdk`][python-repo]      | `boxsdk`                | `v3.14.0`  | `v4.X.Y`                | >=`v10.0.0`                 |
+| [`box-node-sdk`][node-repo]          | `box-node-sdk`          | `v3.8.2`   | `v4.X.Y`                | >=`v10.0.0`                 |
+| [`box-java-sdk`][java-repo]          | `box-java-sdk`          | `v4.16.3`  | `v5.X.Y`                | >=`v10.0.0`                 |
+| [`box-windows-sdk-v2`][windows-repo] | `Box.V2`, `Box.V2.Core` | `v5.8.0`   | `v6.X.Y`                | >=`v10.0.0`                 |
+| [`box-ios-sdk`][ios-repo]            | `BoxSDK`                | `v5.6.0`   | `v6.X.Y`                | >=`v10.0.0`                 |
 
-### Box Next Gen SDK deprecation status
+### Boxの次世代SDKの公式サポート終了ステータス
 
-| Repository name          | Artifact name            | Current latest version | Note                                                     |
-| ------------------------ | ------------------------ | ---------------------- | -------------------------------------------------------- |
-| `box-python-sdk-gen`     | `box-sdk-gen`            | `v1.17.0`              | Deprecated, use `boxsdk` >=[`v10.0.0`][python-v10]       |
-| `box-typescript-sdk-gen` | `box-typescript-sdk-gen` | `v1.19.1`              | Deprecated, use `box-node-sdk` >=[`v10.0.0`][node-v10]   |
-| `box-java-sdk-gen`       | `box-java-sdk-gen`       | `v0.8.1`               | Deprecated, use `box-java-sdk` >=[`v10.0.0`][java-v10]   |
-| `box-dotnet-sdk-gen`     | `Box.Sdk.Gen`            | `v1.12.0`              | Deprecated, use `Box.V2.Core` >=[`v10.0.0`][windows-v10] |
-| `box-swift-sdk-gen`      | `BoxSdkGen`              | `v0.6.3`               | Deprecated, use `BoxSDK` >=[`v10.0.0`][ios-v10]          |
+| リポジトリ名                   | アーティファクト名                | 現在の最新バージョン | 注                                                          |
+| ------------------------ | ------------------------ | ---------- | ---------------------------------------------------------- |
+| `box-python-sdk-gen`     | `box-sdk-gen`            | `v1.17.0`  | 公式サポート終了。[`v10.0.0`][python-v10]以上の`boxsdk`を使用してください       |
+| `box-typescript-sdk-gen` | `box-typescript-sdk-gen` | `v1.19.1`  | 公式サポート終了。[`v10.0.0`][node-v10]以上の`box-node-sdk`を使用してください   |
+| `box-java-sdk-gen`       | `box-java-sdk-gen`       | `v0.8.1`   | 公式サポート終了。[`v10.0.0`][java-v10]以上の`box-java-sdk`を使用してください   |
+| `box-dotnet-sdk-gen`     | `Box.Sdk.Gen`            | `v1.12.0`  | 公式サポート終了。[`v10.0.0`][windows-v10]以上の`Box.V2.Core`を使用してください |
+| `box-swift-sdk-gen`      | `BoxSdkGen`              | `v0.6.3`   | 公式サポート終了。[`v10.0.0`][ios-v10]以上の`BoxSDK`を使用してください          |
 
-## Migration
+## 移行
 
-### Migrating from Box Next Generations SDKs to core Box SDK `v10`
+### Boxの次世代SDKからBoxコアSDK `v10`への移行
 
-Follow detailed migrations guides to migrate from from Box Next Generations SDKs to Box core SDK `v10`:
+Boxの次世代SDKからBoxコアSDK `v10`に移行するには、以下の詳細な移行ガイドに従います。
 
 * [Python][python-migration]
 * [TypeScript][ts-migration]

@@ -20,21 +20,21 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/dotnet-gen.md
 fullyTranslated: true
 ---
-# Deprecated Box Next Gen .NET SDK
+# 公式サポートが終了したBoxの次世代.NET SDK
 
 <Message type="warning">
 
-As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts.
+日本時間2025年9月18日をもって、Boxの次世代SDKは、個別のアーティファクトとしてサポートされなくなりました。
 
-Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
+既存のコードは、変更しなくても引き続き動作します。Boxの次世代SDKをベースにしたアプリケーションは影響なく引き続きご利用いただけますが、新機能、更新、バグ修正は提供されなくなります。
 
-All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` is available as a separate [branch][branch].
+次世代SDK向けの新機能や更新を含む、今後の開発はすべて、`v10`以降のBoxコアSDKを通じて提供されます。現在、`v10`は個別の[ブランチ][branch]として利用可能です。
 
-For more details, see our [SDK versioning strategy document][versioning].
+詳細については、[SDKのバージョン戦略に関するドキュメント][versioning]を参照してください。
 
 </Message>
 
-Check the [migration guide][migration] to learn how to switch from Box Next Generation SDK to Box core SDK `v10`.
+Boxの次世代SDKからBoxコアSDK `v10`への切り替え方法については、[移行ガイド][migration]を参照してください。
 
 [versioning]: g://tooling/sdks/sdk-versioning
 

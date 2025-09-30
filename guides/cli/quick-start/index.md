@@ -24,7 +24,7 @@ fullyTranslated: true
 
 <!--alex ignore executed-->
 
-The Box CLI is a user-friendly command line tool that allows both technical and non-technical users to leverage the Box API to perform routine or bulk actions. There is no need to write any code, as these actions are executed through a set of [commands][commands].
+Box CLIは、使い勝手の良いコマンドラインツールです。これにより、開発者でも開発者以外のユーザーでもBox APIを利用してルーチンや一括操作を実行できるようになります。コードを書く必要はありません。これらの操作は、一連の[コマンド][commands]によって実行されます。
 
 <YouTube id="whxT3Bdx3E0">
 
