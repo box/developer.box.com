@@ -321,7 +321,7 @@ System.debug(responses[0]);
 
 ## Get Box Hubs
 
-The following code retrieves all Box Hubs.
+The following code retrieves Box Hubs.
 
 <Tabs>
   <Tab title='Apex'>
