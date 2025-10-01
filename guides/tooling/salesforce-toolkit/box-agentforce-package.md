@@ -59,6 +59,14 @@ fullyTranslated: true
 * コラボレーションを編集
 * コラボレーションを削除
 
+### Box Hubs
+
+* Get Hubs
+* Get Hub Collaborations
+* Copy Hub
+* Create Hub
+* Get Hub by ID
+
 ### その他のアクション
 
 <!--alex ignore -->

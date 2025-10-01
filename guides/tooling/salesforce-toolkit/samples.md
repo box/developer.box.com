@@ -320,3 +320,59 @@ System.debug(tk.mostRecentError);
 </Tab>
 
 </Tabs>
+
+## Create a sign request
+
+The following code creates a Box Sign request in Salesforce.
+
+<Tabs>
+
+<Tab title="Apex">
+
+```java
+//Send Sign Request
+Box.BoxSignRequest request = new Box.BoxSignRequest();
+Box.Signer signer = new Box.Signer();
+signer.role = 'signer';
+signer.email = 'test@test.com';
+request.signers = new List<Box.Signer>{ signer };
+Box.File srcFile = new Box.File();
+srcFile.id = '1947563411908';
+request.source_files = new List<Box.File>{ srcFile };
+request.recordId = '0017z00001IdXIHAA3';
+request.subject = 'Test Subject';
+request.message = 'Test Message';
+request.send_reminders = false;
+List<Box.BoxSignResponse> responses = Box.BoxSignService.sendSignRequests(new List<Box.BoxSignRequest>{ request });
+System.debug(responses[0]);
+
+```
+
+</Tab>
+
+</Tabs>
+
+## Get Box Hubs
+
+The following code retrieves Box Hubs.
+
+<Tabs>
+
+<Tab title="Apex">
+
+```java
+//Get All Hubs
+Box.HubsToolkit tk = new Box.HubsToolkit();
+Box.HubsList hubsList = tk.getAllHubs();
+for(Box.Hub hub : hubsList.entries){
+//process hubs
+}
+//Get Hub by Id
+Box.Hub hub = tk.getHubById('106600628');
+//processing single Hub by using hub.title, hub.id, etc.
+
+```
+
+</Tab>
+
+</Tabs>
