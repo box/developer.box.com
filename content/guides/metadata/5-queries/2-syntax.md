@@ -91,6 +91,10 @@ A query supports the following logical operators.
 | `NOT IN`                | Similar to `IN` but when the template field value matches none of the arguments provided in the list.                                                                                                                                                 |
 | `IS NULL`               | Matches when the template field value is `null`.                                                                                                                                                                                                      |
 | `IS NOT NULL`                | Matches when the template field value is not `null` .                                                                                                                                                                                                 |
+| `~` | Performs term-level search on the field against the provided terms. |
+| `HASANY` | Matches when the field value is equal to any of a list of arguments provided. The format for this requires each item in the list to be an explicitly defined `query_params` argument, for example amount `HASANY (:arg1, :arg2, :arg3)`. |
+| `HASALL` | Matches when the field value has match for all of the list of arguments provided. The format for this requires each item in the list to be an explicitly defined `query_params` argument, for example amount `HASALL (:arg1, :arg2, :arg3)`. |
+| `HASANCESTOR` | Matches when the field value is a descendant of any of a list of arguments provided. The format for this requires each item in the list to be an explicitly defined `query_params` argument, for example amount `HASANCESTOR (:arg1, :arg2, :arg3)`. Supported only for taxonomy MD field. |
 
 <!-- i18n-disable localize-links -->
 
