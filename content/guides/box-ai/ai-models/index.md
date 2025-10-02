@@ -61,8 +61,8 @@ Box actively monitors the AI market and ensures compliance with industry regulat
 | Models | FedRAMP Moderate | FedRAMP High | ITAR	| DOD |
 | ------ | ---------------- | ------------ | ---- | --- |
 | Microsoft Azure OpenAI | Supported | Supported | Not Supported | IL2 |
-| AWS Bedrock | Coming Soon | Not Supported | Not Supported | Not Supported |
-| Google Gemini	| Coming Soon |	Coming Soon |	Not Supported |	IL2 |
+| AWS Bedrock | Supported | Not Supported | Not Supported | Not Supported |
+| Google Gemini	| Supported |	Supported |	Not Supported |	IL2 |
 | IBM WatsonX |	Not Supported |	Not Supported |	Not Supported |	Not Supported |
 
 ## Core Box AI Models
