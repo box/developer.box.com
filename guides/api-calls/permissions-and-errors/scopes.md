@@ -317,4 +317,4 @@ Enterprise設定に基づいて、管理者、[共同管理者][ca]、[サービ
 
 [sa]: page://platform/user-types/#service-account
 
-[ca][ca]: [https://support.box.com/hc/ja/articles/1500005433721#h_01GSE1DYJKTY9EXEWJEDKFHCNV][https://support.box.com/hc/en-us/articles/1500005433721-Users-Groups-Settings#h_01GSE1DYJKTY9EXEWJEDKFHCNV]
+[ca]: https://support.box.com/hc/en-us/articles/1500005433721-Users-Groups-Settings#h_01GSE1DYJKTY9EXEWJEDKFHCNV
