@@ -54,6 +54,17 @@ The list may change depending on the model availability.
 Models offered in **Beta** mode have not been fully performance-tested at scale and are made available on an as-is basis. You may experience variability in model/output quality, availability, and accuracy.
 </Message>
 
+## Compliance support
+
+Box actively monitors the AI market and ensures compliance with industry regulations. Customers are responsible for configuring suitable AI models for their specific needs.
+
+| Models | FedRAMP Moderate | FedRAMP High | ITAR	| DOD |
+| ------ | ---------------- | ------------ | ---- | --- |
+| Microsoft Azure OpenAI | Supported | Supported | Not Supported | IL2 |
+| AWS Bedrock | Coming Soon | Not Supported | Not Supported | Not Supported |
+| Google Gemini	| Coming Soon |	Coming Soon |	Not Supported |	IL2 |
+| IBM WatsonX |	Not Supported |	Not Supported |	Not Supported |	Not Supported |
+
 ## Core Box AI Models
 
 Box AI is powered by the following AI models. These models are integrated with Box AI to facilitate various use cases while adhering to enterprise grade standards. Below, you’ll find information about each model, including its capabilities, intended applications, and applicable usage guidelines.
