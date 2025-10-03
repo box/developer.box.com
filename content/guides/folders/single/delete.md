@@ -38,5 +38,5 @@ operation can performed on any of the locked folders.
 
 ## Timeout
 
-Timeout for this operation is 600 seconds. The operation will include
+Timeout for this operation is 600 seconds. The operation will complete
 after a `HTTP 503` has been returned.
