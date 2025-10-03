@@ -41,5 +41,5 @@ also prohibited.
 
 ## Timeout
 
-Timeout for this operation is 60 seconds. The operation will complete
+Timeout for this operation is 600 seconds. The operation will complete
 after a `HTTP 503` has been returned.
