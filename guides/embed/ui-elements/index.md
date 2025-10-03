@@ -30,8 +30,8 @@ Boxには、アプリケーションでファイルやフォルダに共通す�
 
 使用可能なUI Elementは以下のとおりです。
 
-* [Content Explorer][explorer]- Allow users to search and browse through files and folders. It also has a metadata query based view [variant][explorer-metadata] that supports items sorting, filtering, custom columns, and more.
-* [Content Open With][openwith] - Allow users to open content stored in box with a partner application using an embedded dropdown.
+* [コンテンツエクスプローラ][explorer]- ユーザーがファイルやフォルダを検索および参照できるようにします。また、項目の並べ替え、フィルタ、カスタム列などに対応している、メタデータクエリベースのビューの[バリアント][explorer-metadata]もあります。
+* [Content Open With][openwith] - ユーザーが埋め込みのドロップダウンを使用して、Boxに保存されているコンテンツをパートナーアプリケーションで開けるようにします。
 
 <Message type="warning">
 
@@ -39,10 +39,10 @@ Boxには、アプリケーションでファイルやフォルダに共通す�
 
 </Message>
 
-* [Content Picker][picker] - Allow users to select files or folders from their Box account.
-* [Content Preview][preview] - Display interactive viewers for documents, images, audio, video, and more.
-* [Content Sidebar][sidebar] - Display a sidebar for file metadata and activity feed information.
-* [Content Uploader][uploader] - Allow users to upload files by selecting or using drag-and-drop.
+* [Content Picker][picker] - ユーザーがBoxアカウントからファイルやフォルダを選択できるようにします。
+* [コンテンツプレビュー][preview] - ドキュメント、画像、音声、動画などに使用するインタラクティブなビューアーを表示します。
+* [Content Sidebar][sidebar] - ファイルメタデータとアクティビティフィード情報用のサイドバーを表示します。
+* [コンテンツアップローダー][uploader] - ユーザーがファイルを選択するかドラッグアンドドロップしてアップロードできるようにします。
 
 UI Elementは、単独で使用することも、ファイルをアップロードしてから表示するように、組み合わせてコンテンツに関する共通のユーザーフローを構築することもできます。
 

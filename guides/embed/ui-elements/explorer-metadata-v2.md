@@ -21,62 +21,62 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/explorer-metadata-v2.md
 fullyTranslated: true
 ---
-# Content Explorer – metadata view v2
+# コンテンツエクスプローラ – メタデータビューv2
 
-The metadata view of [Content Explorer][content-explorer] allows you to display files and folders based on their metadata.
+[コンテンツエクスプローラ][content-explorer]のメタデータビューを使用すると、メタデータに基づいてファイルやフォルダを表示できます。
 
 ## 概要
 
-The metadata view `v2` is a ground-up redesign of the original metadata view of the Box Content Explorer UI element. It introduces a streamlined interface tailored for metadata-driven workflows. Key features include filtering and editing interfaces with dedicated UI for each metadata field type, flexible display options with list and grid views, pagination support, and more.
+メタデータビュー`v2`は、Box Content Explorer UI Elementの元のメタデータビューのデザインを根本から変更したもので、メタデータ駆動型ワークフローに合わせて合理化されたインターフェースが導入されています。主な機能には、メタデータフィールドのタイプごとに専用のUIを備えたフィルタおよび編集用のインターフェース、リストビューとグリッドビューを使用した柔軟な表示オプション、ページ割りのサポートなどがあります。
 
 ![メタデータビュー](./images/explorer-metadata-v2.png)
 
 ## 前提条件
 
-Before implementing the metadata view `v2` of Content Explorer, ensure you have:
+コンテンツエクスプローラのメタデータビュー`v2`を実装する前に、以下を準備できていることを確認してください。
 
-* The `box-ui-elements` package `v24.0.0`+, React `v18.0.0`, and `Node.js` `v18.0.0`+
-* The Box Platform app with proper CORS settings
-* A valid [developer token][developer-token]
-* A configured metadata template applied to target folder or files. See [creating templates with API][creating-templates-api] or [with the Admin Console][creating-templates-ui].
+* `box-ui-elements`パッケージ`v24.0.0`以上、React `v18.0.0`、`Node.js` `v18.0.0`以上
+* 適切なCORS設定を含むBox Platformアプリ
+* 有効な[開発者トークン][developer-token]
+* 対象のフォルダまたはファイルに適用されている構成済みのメタデータテンプレート。[APIを使用したテンプレートの作成][creating-templates-api]または[管理コンソールを使用したテンプレートの作成][creating-templates-ui]を確認してください。
 
 <Message type="tip">
 
-Make sure you enable the cascade policy. For detailed instructions, see [instructions on customizing and applying templates][apply-templates].
+必ずカスケードポリシーを有効にするようにしてください。詳細な手順については、[テンプレートのカスタマイズと適用の手順][apply-templates]を参照してください。
 
 </Message>
 
-## Interface areas
+## インターフェースの領域
 
-The metadata view interface consists of the following areas:
+メタデータビューのインターフェースは、以下の領域で構成されています。
 
-* **Header** – Displays the current view title, navigation, and context-sensitive information like selection counts. The header value can be specified with a `title` prop. If it’s not defined, it defaults to the folder name specified in the `ancestor_folder_id`.
-* **Action bar** – Contains filter chips for each metadata field, sort options, and the view mode toggle button (list or grid).
-* **Pagination footer** – Provides the **Previous** and **Next** navigation buttons and page indicators.
+* **ヘッダー** – 現在のビューのタイトル、ナビゲーション、コンテキストに応じた情報 (選択数など) が表示されます。ヘッダーの値は、`title`プロパティで指定できます。定義されていない場合は、デフォルトで、`ancestor_folder_id`で指定されているフォルダ名に設定されます。
+* **操作バー** – 各メタデータフィールドのフィルタチップ、並べ替えオプション、表示モードの切り替えボタン (リストまたはグリッド) が含まれています。
+* **ページ割りのフッター** – \[**前へ**] および \[**次へ**] ナビゲーションボタンとページインジケータが提供されます。
 
 ## メタデータビューの表示
 
-To display the metadata view of Content Explorer, you need the following properties:
+コンテンツエクスプローラのメタデータビューを表示するには、以下のプロパティが必要です。
 
-| Property                                  | 説明                                                                                                                   |
-| ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `token`                                   | 開発者コンソールで生成された開発者トークン。                                                                                               |
-| `title`                                   | The title of the whole component, if not defined, defaults to the folder name specified in the `ancestor_folder_id`. |
-| `defaultView`                             | Must be set to `metadata`.                                                                                           |
-| `features.contentExplorer.metadataViewV2` | Must be set to true to enable the metadata view (v2).                                                                |
-| `metadataQuery`                           | Metadata query request body matching the [Metadata Query API][md-queries] schema.                                    |
-| `metadataViewProps`                       | Component configuration. For configuration details, see `metadataViewProps` object.                                  |
-| `columns`                                 | Defines the structure and behavior of your metadata table columns. See Columns for details.                          |
+| プロパティ                                     | 説明                                                                          |
+| ----------------------------------------- | --------------------------------------------------------------------------- |
+| `token`                                   | 開発者コンソールで生成された開発者トークン。                                                      |
+| `title`                                   | コンポーネント全体のタイトル。定義されていない場合は、デフォルトで、`ancestor_folder_id`で指定されているフォルダ名が設定されます。 |
+| `defaultView`                             | `metadata`に設定する必要があります。                                                     |
+| `features.contentExplorer.metadataViewV2` | メタデータビュー (v2) を有効にするには、trueに設定する必要があります。                                    |
+| `metadataQuery`                           | [メタデータクエリAPI][md-queries]のスキーマに一致するメタデータクエリのリクエスト本文。                        |
+| `metadataViewProps`                       | コンポーネントの構成。構成の詳細については、`metadataViewProps`オブジェクトを参照してください。                   |
+| `columns`                                 | メタデータテーブルの列の構造と動作を定義します。詳細については、列を参照してください。                                 |
 
-Depending on your needs and setup, Box UI Elements can be used with Vanilla JavaScript or React. You can learn more about installation from the [Installation][installation] guide.
+ニーズや設定に応じて、Box UI Elementsは、Vanilla JavaScriptまたはReactとともに使用できます。インストールの詳細については、[インストール][installation]ガイドを参照してください。
 
 <Message type="notice">
 
-**Capitalized strings need to be replaced with your custom values.**
+**大文字で記述された文字列は、カスタム値に置き換える必要があります。**
 
 </Message>
 
-### Vanilla JavaScript code snippet
+### Vanilla JavaScriptのコードスニペット
 
 ```js
 const contentExplorer = new Box.ContentExplorer();
@@ -114,7 +114,7 @@ contentExplorer.show(FOLDER_ID, ACCESS_TOKEN, {
 
 ```
 
-### React code snippet
+### Reactのコードスニペット
 
 ```js
 import React from 'react';
@@ -192,28 +192,28 @@ export default ContentExplorerContainer;
 
 ```
 
-## Columns
+## 列
 
-The columns prop defines the structure and behavior of your metadata table columns.
+列プロパティでは、メタデータテーブルの列の構造と動作を定義します。
 
-| Property        | 型       | 必須  | 説明                                                                                          |
-| --------------- | ------- | --- | ------------------------------------------------------------------------------------------- |
-| `id`            | string  | はい  | Metadata field identifier in the following format: `metadata.<scope>.<templateKey>.<field>` |
-| `textValue`     | string  | はい  | Column header display name.                                                                 |
-| `type`          | string  | はい  | Box metadata field type (`string`, `number`, `date`, `singleSelect`, `multiSelect`).        |
-| `allowsSorting` | boolean | いいえ | Enables column header sorting.                                                              |
-| `minWidth`      | number  | いいえ | Minimum column width in pixels.                                                             |
-| `maxWidth`      | number  | いいえ | Maximum column width in pixels.                                                             |
+| プロパティ           | 型       | 必須  | 説明                                                                         |
+| --------------- | ------- | --- | -------------------------------------------------------------------------- |
+| `id`            | string  | はい  | 次の形式のメタデータフィールド識別子: `metadata.<scope>.<templateKey>.<field>`               |
+| `textValue`     | string  | はい  | 列ヘッダーの表示名。                                                                 |
+| `type`          | string  | はい  | Boxメタデータフィールドのタイプ (`string`、`number`、`date`、`singleSelect`、`multiSelect`)。 |
+| `allowsSorting` | boolean | いいえ | 列ヘッダーの並べ替えを有効にします。                                                         |
+| `minWidth`      | number  | いいえ | 列の幅の最小値 (ピクセル単位)。                                                          |
+| `maxWidth`      | number  | いいえ | 列の幅の最大値 (ピクセル単位)。                                                          |
 
 ## 機能
 
-### Enabling row selection
+### 行の選択の有効化
 
-You can enable selecting individual rows. When one or more rows are selected, the header updates to show a selection descriptor and a metadata edit button. This allows users to perform single or bulk actions. Row selection is scoped to the paginated content.
+個々の行の選択を有効化できます。1行以上が選択されると、ヘッダーが更新され、選択記述子とメタデータ編集ボタンが表示されます。これにより、ユーザーは、単一の操作または一括操作を実行できます。行の選択の範囲は、ページ割りされたコンテンツに限定されます。
 
-![Row selection](./images/explorer-select.png)
+![行の選択](./images/explorer-select.png)
 
-To enable the selection feature, set the `isSelectionEnabled` property to `true` within the `metadataViewProps` object:
+選択機能を有効にするには、`metadataViewProps`オブジェクト内で`isSelectionEnabled`プロパティを`true`に設定します。
 
 ```js
 const contentExplorer = new Box.ContentExplorer();
@@ -228,19 +228,19 @@ contentExplorer.show(FOLDER_ID, ACCESS_TOKEN, {
 
 ```
 
-### Editing metadata values
+### メタデータ値の編集
 
-When one or more items are selected, the component header displays the selected count and the **Metadata** button becomes active. Clicking the **Metadata** button opens a sidebar that lets users view and edit metadata for the selected items.
+1つ以上の項目が選択されると、コンポーネントのヘッダーには、選択した数が表示され、\[**メタデータ**] ボタンがアクティブになります。\[**メタデータ**] ボタンをクリックすると、サイドバーが開き、ユーザーは、選択した項目のメタデータを表示したり編集したりできます。
 
-![Editing metadata](./images/explorer-edit.png)
+![メタデータの編集](./images/explorer-edit.png)
 
-This behavior is enabled by default; no additional properties are required to activate it.
+この動作は、デフォルトで有効になっています。つまり、有効にするために、追加のプロパティは必要ありません。
 
-### Filtering metadata
+### メタデータのフィルタ
 
-Filter items by the file type, filter folders, or filter by metadata field values specified in the Box [metadata templates][metadata-guides].
+ファイルタイプで項目にフィルタをかけたり、フォルダにフィルタをかけたり、Boxの[メタデータテンプレート][metadata-guides]で指定されたメタデータフィールド値でフィルタをかけたりできます。
 
-Filter chips are enabled by default. To disable the **All Filters** chip, set the `isAllFiltersDisabled` to `true` in the `actionBarProps` object:
+フィルタチップは、デフォルトで有効になっています。\[**すべてのフィルタ**] チップを無効にするには、`actionBarProps`オブジェクトの`isAllFiltersDisabled`を`true`に設定します。
 
 ```js
 const contentExplorer = new Box.ContentExplorer();
@@ -260,13 +260,13 @@ metadataViewProps: {
 
 <!-- Add info about custom and bulk actions -->
 
-### Toggling list and grid view
+### リストビューとグリッドビューの切り替え
 
-Grid view is available by default through the view mode toggle button in the action bar. When the grid view is active, a zoom control becomes available. Other functionalities like selecting, filtering, and editing are also available within this view.
+グリッドビューは、操作バーにある表示モード切り替えボタンからデフォルトで利用可能です。グリッドビューがアクティブな場合は、ズームコントロールが使用可能になります。選択、フィルタ、編集などのその他の機能もこのビュー内で使用できます。
 
-![Grid view](./images/explorer-grid.png)
+![グリッドビュー](./images/explorer-grid.png)
 
-To disable grid view, set `actionBarProps.isViewModeButtonDisabled` to `true` within the `metadataViewProps` object:
+グリッドビューを無効にするには、`metadataViewProps`オブジェクト内で`actionBarProps.isViewModeButtonDisabled`を`true`に設定します。
 
 ```js
 const contentExplorer = new Box.ContentExplorer();
@@ -285,23 +285,23 @@ contentExplorer.show(FOLDER_ID, ACCESS_TOKEN, {
 
 ### ページ割り
 
-The UI Element uses marker-based pagination only, with the footer always visible. You cannot set an offset or page number. Users can navigate using only **Previous** and **Next**. Infinite scrolling is not supported.
+このUI Elementでは、フッターが常に表示された状態で、マーカーベースのページ割りのみが使用されます。オフセットまたはページ番号は設定できません。ユーザーが移動する際は \[**前へ**] と \[**次へ**] しか使用できません。無制限のスクロールはサポートされていません。
 
-## Migrating from v1 to v2
+## v1からv2への移行
 
-### Npm package
+### Npmパッケージ
 
 <Message type="notice">
 
-The `v1` of the metadata view Content Explorer has reached end of support. While `v1` remains available in the `24.0.0` package, it will no longer receive bug fixes or new features. Follow the migration guide and switch to the `v2` metadata view of Content Explorer in order to receive the newest features.
+コンテンツエクスプローラのメタデータビューの`v1`は公式サポートが終了しました。`v1`は`24.0.0`パッケージで引き続き利用できますが、バグ修正や新機能は提供されなくなります。最新の機能が提供されるようにするには、移行ガイドに従い、コンテンツエクスプローラの`v2`のメタデータビューに切り替えてください。
 
 </Message>
 
-To migrate from `v1` to v2 in projects using `box-ui-elements` package:
+`box-ui-elements`パッケージを使用してプロジェクト内で`v1`からv2に移行するには:
 
-1. Upgrade the `box-ui-elements` package version to version `24.0.0` or higher.
-2. Ensure `box-ui-elements` peer dependencies are added as dependencies in your `package.json` file. Install them with your package manager.
-3. Add the `features` flag to enable the enhanced metadata view.
+1. `box-ui-elements`パッケージのバージョンをバージョン`24.0.0`以上にアップグレードします。
+2. `box-ui-elements`ピア依存関係が依存関係として`package.json`ファイルに追加されていることを確認します。これは、パッケージマネージャを使用してインストールします。
+3. `features`フラグを追加して、強化されたメタデータビューを有効にします。
 
 ```js
 features: {
@@ -312,7 +312,7 @@ features: {
 
 ```
 
-4. Convert your metadata `fieldToShow` configuration to the new column object. Add field types that correspond with the values in the Box metadata template. Pass the columns array to the new `metadataViewProps` object.
+4. メタデータの`fieldToShow`の構成を新しい列オブジェクトに変換します。Boxメタデータテンプレートの値に対応するフィールドタイプを追加します。列の配列を新しい`metadataViewProps`オブジェクトに渡します。
 
 ```js
 const columns = [
@@ -329,14 +329,14 @@ const columns = [
 
 ```
 
-5. Optionally, configure additional features described in this guide.
+5. 必要に応じて、このガイドで説明されている追加機能を構成します。
 
 ### CDN
 
-To migrate from `v1` to v2 in projects using CDN imports:
+CDNのインポートを使用してプロジェクト内で`v1`からv2に移行するには:
 
-1. Ensure that CDN link includes package version with version `24.0.0` or higher.
-2. Add the `features` flag to enable the enhanced metadata view.
+1. CDNリンクにバージョン`24.0.0`以上のパッケージバージョンが含まれていることを確認します。
+2. `features`フラグを追加して、強化されたメタデータビューを有効にします。
 
 ```js
 features: {
@@ -347,7 +347,7 @@ features: {
 
 ```
 
-3. Convert your metadata `fieldToShow` configuration to the new column object. Add field types that correspond with the values in the Box metadata template. Pass the columns array to the new `metadataViewProps` object.
+3. メタデータの`fieldToShow`の構成を新しい列オブジェクトに変換します。Boxメタデータテンプレートの値に対応するフィールドタイプを追加します。列の配列を新しい`metadataViewProps`オブジェクトに渡します。
 
 ```js
 const columns = [
@@ -364,7 +364,7 @@ const columns = [
 
 ```
 
-4. Optionally, configure additional features described in this guide.
+4. 必要に応じて、このガイドで説明されている追加機能を構成します。
 
 [content-explorer]: g://embed/ui-elements/explorer/
 

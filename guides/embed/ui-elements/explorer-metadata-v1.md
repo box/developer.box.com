@@ -28,11 +28,11 @@ fullyTranslated: true
 
 <Message type="notice">
 
-The `v1` of the metadata view Content Explorer has reached end of support. While `v1` remains available in the `24.0.0` package, it will no longer receive bug fixes or new features. Follow the migration guide and switch to the `v2` metadata view of Content Explorer in order to receive the newest features.
+コンテンツエクスプローラのメタデータビューの`v1`は公式サポートが終了しました。`v1`は`24.0.0`パッケージで引き続き利用できますが、バグ修正や新機能は提供されなくなります。最新の機能が提供されるようにするには、移行ガイドに従い、コンテンツエクスプローラの`v2`のメタデータビューに切り替えてください。
 
 </Message>
 
-With Content Explorer you can display files and folders based on their metadata. The metadata view uses [metadata template][template] and [metadata query][metadata-query] to find the data you want to display.
+コンテンツエクスプローラを使用すると、メタデータに基づいてファイルおよびフォルダを表示できます。メタデータビューでは、[メタデータテンプレート][template]と[メタデータクエリ][metadata-query]を使用して、表示するデータを探します。
 
 ![メタデータビュー](./images/explorer-view.png)
 
@@ -85,11 +85,11 @@ With Content Explorer you can display files and folders based on their metadata.
 
 `defaultView`、`fieldsToShow`、`metadataQuery`の各パラメータは、すでにサンプルプロジェクトで定義されています。これらのパラメータの例は、サンプルプロジェクトで確認できます。
 
-| パラメータ           | 説明                                                                                                                                                                         |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `defaultView`   | メタデータビューを描画するための必須プロパティ。指定されていない場合は、通常のファイルビューが表示されます。                                                                                                                     |
-| `fieldsToShow`  | コンテンツエクスプローラに表示する特定のメタデータ列を追加または非表示にします。                                                                                                                                   |
-| `metadataQuery` | Provides a way to find files and folders by searching for the metadata attached to them. For additional information on metadata queries, see [this guide][metadata-query]. |
+| パラメータ           | 説明                                                                                                     |
+| --------------- | ------------------------------------------------------------------------------------------------------ |
+| `defaultView`   | メタデータビューを描画するための必須プロパティ。指定されていない場合は、通常のファイルビューが表示されます。                                                 |
+| `fieldsToShow`  | コンテンツエクスプローラに表示する特定のメタデータ列を追加または非表示にします。                                                               |
+| `metadataQuery` | ファイルやフォルダに設定されているメタデータを検索してそのファイルやフォルダを探す方法を指定します。メタデータクエリの詳細については、[こちらのガイド][metadata-query]を参照してください。 |
 
 3. コンテンツエクスプローラコンポーネントに必須パラメータを渡します。
 
