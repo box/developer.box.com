@@ -39,4 +39,4 @@ Box上でフォルダを更新するには、次のAPIを呼び出す必要が�
 
 ## タイムアウト
 
-この操作のタイムアウトは60秒です。この操作は、`HTTP 503`が返されたら完了します。
+Timeout for this operation is 600 seconds. The operation will complete after a `HTTP 503` has been returned.
