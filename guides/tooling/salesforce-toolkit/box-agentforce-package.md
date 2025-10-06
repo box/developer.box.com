@@ -61,11 +61,11 @@ fullyTranslated: true
 
 ### Box Hubs
 
-* Get Hubs
-* Get Hub Collaborations
-* Copy Hub
-* Create Hub
-* Get Hub by ID
+* Hubを取得
+* Hubコラボレーションを取得
+* Hubをコピー
+* Hubを作成
+* IDでHubを取得
 
 ### その他のアクション
 

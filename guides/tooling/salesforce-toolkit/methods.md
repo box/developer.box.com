@@ -638,227 +638,227 @@ Slackチャンネルにマッピングする場合、はデフォルト`FALSE`�
 
 ### `sendSignRequests`
 
-This method calls the [create sign request][15] endpoint to send documents for signature.
+このメソッドでは、[署名リクエストを作成][15]エンドポイントを呼び出して、署名用ドキュメントを送信します。
 
-| **パラメータ**  | **型**                  | **説明**                                                                                                   |
-| ---------- | ---------------------- | -------------------------------------------------------------------------------------------------------- |
-| `requests` | `List<BoxSignRequest>` | List of Box Sign Request objects containing signers, files, and configuration for the signature request. |
+| **パラメータ**  | **型**                  | **説明**                                         |
+| ---------- | ---------------------- | ---------------------------------------------- |
+| `requests` | `List<BoxSignRequest>` | 署名者、ファイル、署名リクエストの構成を含むBox Signリクエストオブジェクトのリスト。 |
 
 **戻り値:**
 
-List of `BoxSignResponse` objects, one for each request processed. Each response contains the sign request ID, status, and any error information.
+`BoxSignResponse`オブジェクト (処理されるリクエストごとに1つ) のリスト。各レスポンスには、署名リクエストのID、ステータス、エラー情報 (ある場合) が含まれます。
 
-`BoxSignResponse` returns error details, if:
+以下の場合、`BoxSignResponse`によってエラーの詳細が返されます。
 
 * パラメータが正しくない
-* access to the files is missing,
-* file upload fails,
-* Box Sign API returns an error.
+* ファイルへのアクセス権限がない
+* ファイルのアップロードに失敗した
+* Box Sign APIからエラーが返された
 
 ## Box Hubs
 
-### Manage Box Hubs
+### Box Hubsの管理
 
 #### `getHubById`
 
-This method calls the [get hub by ID][16] endpoint to retrieve a specific hub.
+このメソッドでは、[IDを指定してHubを取得][16]エンドポイントを呼び出して、特定のHubを取得します。
 
-| **パラメータ** | **型**    | **説明**                         |
-| --------- | -------- | ------------------------------ |
-| `hubId`   | `string` | The ID of the hub to retrieve. |
+| **パラメータ** | **型**    | **説明**      |
+| --------- | -------- | ----------- |
+| `hubId`   | `string` | 取得するHubのID。 |
 
 **戻り値:**
 
-* Hub object containing the hub details and metadata.
-* `HubsToolkitException` if:
-  * the hub ID is blank or null,
-  * access to the hub is missing,
-  * the hub is not found.
+* Hubの詳細およびメタデータを含むHubオブジェクト。
+* 以下の場合は`HubsToolkitException`。
+  * Hub IDが空またはnullである
+  * Hubへのアクセス権限がない
+  * Hubが見つからない
 
 #### `getAllHubs`
 
-This method calls the [get all hubs][13] endpoint to retrieve a list of all hubs.
+このメソッドでは、[すべてのHubを取得][13]エンドポイントを呼び出して、すべてのHubのリストを取得します。
 
-| **パラメータ**    | **型**     | **説明**                                                          |
-| ------------ | --------- | --------------------------------------------------------------- |
-| `limitCount` | `integer` | Optional - maximum number of hubs to return.                    |
-| `marker`     | `string`  | Optional - pagination marker for retrieving additional results. |
+| **パラメータ**    | **型**     | **説明**                         |
+| ------------ | --------- | ------------------------------ |
+| `limitCount` | `integer` | 省略可 - 返されるHubの最大数。             |
+| `marker`     | `string`  | 省略可 - 追加の結果を取得する場合のページ割りのマーカー。 |
 
 **戻り値:**
 
-* `HubsList` object containing the list of hubs and pagination information.
-* `HubsToolkitException` if:
-  * access to hubs is missing,
-  * API request fails.
+* Hubのリストとページ割りの情報を含む`HubsList`オブジェクト。
+* 以下の場合は`HubsToolkitException`。
+  * Hubへのアクセス権限がない
+  * APIリクエストが失敗した
 
 #### `getEnterpriseHubs`
 
-This method calls the [get enterprise hubs][14] endpoint to retrieve enterprise-level hubs.
+このメソッドでは、[企業のHubを取得][14]エンドポイントを呼び出して、企業レベルのHubを取得します。
 
-| **パラメータ**    | **型**     | **説明**                                                          |
-| ------------ | --------- | --------------------------------------------------------------- |
-| `limitCount` | `integer` | Optional - maximum number of hubs to return.                    |
-| `marker`     | `string`  | Optional - pagination marker for retrieving additional results. |
+| **パラメータ**    | **型**     | **説明**                         |
+| ------------ | --------- | ------------------------------ |
+| `limitCount` | `integer` | 省略可 - 返されるHubの最大数。             |
+| `marker`     | `string`  | 省略可 - 追加の結果を取得する場合のページ割りのマーカー。 |
 
 **戻り値:**
 
-* `HubsList` object containing the list of enterprise hubs and pagination information.
-* `HubsToolkitException` if:
-  * access to enterprise hubs is missing,
-  * API request fails.
+* 企業のHubのリストとページ割りの情報を含む`HubsList`オブジェクト。
+* 以下の場合は`HubsToolkitException`。
+  * 企業のHubへのアクセス権限がない
+  * APIリクエストが失敗した
 
 #### `createHub`
 
-This method calls the [create hub endpoint][17] to create a new hub.
+このメソッドでは、[Hubを作成エンドポイント][17]を呼び出して、新しいHubを作成します。
 
-| **パラメータ**     | **型**    | **説明**                                           |
-| ------------- | -------- | ------------------------------------------------ |
-| `title`       | `string` | Required - title of the hub (max 50 characters). |
-| `description` | `string` | Optional - description of the hub.               |
+| **パラメータ**     | **型**    | **説明**                  |
+| ------------- | -------- | ----------------------- |
+| `title`       | `string` | 必須 - Hubのタイトル (最大50文字)。 |
+| `description` | `string` | 省略可 - Hubの説明。           |
 
 **戻り値:**
 
-* Hub object containing the newly created hub details.
-* `HubsToolkitException` if:
-  * the title is blank or null,
-  * the title exceeds 50 characters,
-  * access to create hubs is missing,
-  * API request fails.
+* 新しく作成されたHubの詳細を含むHubオブジェクト。
+* 以下の場合は`HubsToolkitException`。
+  * タイトルが空またはnullである
+  * タイトルが50文字を超えている
+  * Hubを作成するためのアクセス権限がない
+  * APIリクエストが失敗した
 
 #### `updateHub`
 
-This method calls the [update hub endpoint][18] to modify an existing hub.
+このメソッドでは、[Hubを更新エンドポイント][18]を呼び出して、既存のHubを変更します。
 
-| **パラメータ**       | **型**              | **説明**                                             |
-| --------------- | ------------------ | -------------------------------------------------- |
-| `hubId`         | `string`           | Required - the ID of the hub to update.            |
-| `updateRequest` | `HubUpdateRequest` | Required - object containing the fields to update. |
+| **パラメータ**       | **型**              | **説明**                   |
+| --------------- | ------------------ | ------------------------ |
+| `hubId`         | `string`           | 必須 - 更新するHubのID。         |
+| `updateRequest` | `HubUpdateRequest` | 必須 - 更新するフィールドを含むオブジェクト。 |
 
 **戻り値:**
 
-* Hub object containing the updated hub details.
-* `HubsToolkitException` if:
-  * the hub ID is blank or null,
-  * the update request is null,
-  * the title exceeds 50 characters,
-  * access to the hub is missing,
-  * API request fails.
+* 更新されたHubの詳細を含むHubオブジェクト。
+* 以下の場合は`HubsToolkitException`。
+  * Hub IDが空またはnullである
+  * 更新リクエストがnullである
+  * タイトルが50文字を超えている
+  * Hubへのアクセス権限がない
+  * APIリクエストが失敗した
 
 #### `copyHub`
 
-This method calls the [copy hub endpoint][19] to create a copy of an existing hub.
+このメソッドでは、[Hubをコピーエンドポイント][19]を呼び出して、既存のHubのコピーを作成します。
 
-| **パラメータ**     | **型**    | **説明**                                                   |
-| ------------- | -------- | -------------------------------------------------------- |
-| `hubId`       | `string` | Required - the ID of the hub to copy.                    |
-| `title`       | `string` | Optional - title for the copied hub (max 50 characters). |
-| `description` | `string` | Optional - description for the copied hub.               |
+| **パラメータ**     | **型**    | **説明**                        |
+| ------------- | -------- | ----------------------------- |
+| `hubId`       | `string` | 必須 - コピーするHubのID。             |
+| `title`       | `string` | 省略可 - コピーしたHubのタイトル (最大50文字)。 |
+| `description` | `string` | 省略可 - コピーしたHubの説明。            |
 
 **戻り値:**
 
-* Hub object containing the newly created copied hub details.
-* `HubsToolkitException` if:
-  * the hub ID is blank or null,
-  * the title exceeds 50 characters,
-  * access to the source hub is missing,
-  * API request fails.
+* 新しくコピーして作成されたHubの詳細を含むHubオブジェクト。
+* 以下の場合は`HubsToolkitException`。
+  * Hub IDが空またはnullである
+  * タイトルが50文字を超えている
+  * 元のHubへのアクセス権限がない
+  * APIリクエストが失敗した
 
-### Box Hub Collaborations
+### Box Hubコラボレーション
 
 #### `createUserCollaboration`
 
-This method calls the [create hub collaboration][20] endpoint to add a user to a hub.
+このメソッドでは、[Hubコラボレーションを作成][20]エンドポイントを呼び出して、Hubにユーザーを追加します。
 
-| **パラメータ** | **型**    | **説明**                                       |
-| --------- | -------- | -------------------------------------------- |
-| `hubId`   | `string` | Required - the ID of the hub.                |
-| `userId`  | `string` | Required - the ID of the user to add.        |
-| `role`    | `string` | Required - the role for the user in the hub. |
+| **パラメータ** | **型**    | **説明**              |
+| --------- | -------- | ------------------- |
+| `hubId`   | `string` | 必須 - HubのID。        |
+| `userId`  | `string` | 必須 - 追加するユーザーのID。   |
+| `role`    | `string` | 必須 - Hub内のユーザーのロール。 |
 
 **戻り値:**
 
-* `HubCollaboration` object containing the collaboration details.
-* `HubsToolkitException` if:
-  * the hub ID is blank or null,
-  * the user ID is blank or null,
-  * the role is blank or null,
-  * access to the hub is missing,
-  * API request fails.
+* コラボレーションの詳細を含む`HubCollaboration`オブジェクト。
+* 以下の場合は`HubsToolkitException`。
+  * Hub IDが空またはnullである
+  * ユーザーIDが空またはnullである
+  * ロールが空またはnullである
+  * Hubへのアクセス権限がない
+  * APIリクエストが失敗した
 
 #### `createHubCollaboration`
 
-This method calls the [create hub collaboration][20] endpoint to add a collaboration to a hub.
+このメソッドでは、[Hubコラボレーションを作成][20]エンドポイントを呼び出して、Hubにコラボレーションを追加します。
 
-| **パラメータ** | **型**                     | **説明**                                                                                                        |
-| --------- | ------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `request` | `HubCollaborationRequest` | Required - object containing the collaboration details including hub reference and accessible by information. |
+| **パラメータ** | **型**                     | **説明**                                         |
+| --------- | ------------------------- | ---------------------------------------------- |
+| `request` | `HubCollaborationRequest` | 必須 - Hubの参照などのコラボレーションの詳細を含み、情報でアクセス可能なオブジェクト。 |
 
 **戻り値:**
 
-* `HubCollaboration` object containing the collaboration details.
-* `HubsToolkitException` if:
-  * the collaboration request is null,
-  * the hub reference with ID is missing,
-  * access to the hub is missing,
-  * API request fails.
+* コラボレーションの詳細を含む`HubCollaboration`オブジェクト。
+* 以下の場合は`HubsToolkitException`。
+  * コラボレーションリクエストがnullである
+  * IDによるHubの参照がない
+  * Hubへのアクセス権限がない
+  * APIリクエストが失敗した
 
 #### `getHubCollaborations`
 
-This method calls the [get hub collaborations][21] endpoint to retrieve collaborations for a hub.
+このメソッドでは、[Hubコラボレーションを取得][21]エンドポイントを呼び出して、Hubのコラボレーションを取得します。
 
-| **パラメータ**    | **型**     | **説明**                                                          |
-| ------------ | --------- | --------------------------------------------------------------- |
-| `hubId`      | `string`  | Required - the ID of the hub.                                   |
-| `limitCount` | `integer` | Optional - maximum number of collaborations to return.          |
-| `marker`     | `string`  | Optional - pagination marker for retrieving additional results. |
+| **パラメータ**    | **型**     | **説明**                         |
+| ------------ | --------- | ------------------------------ |
+| `hubId`      | `string`  | 必須 - HubのID。                   |
+| `limitCount` | `integer` | 省略可 - 返されるコラボレーションの最大数。        |
+| `marker`     | `string`  | 省略可 - 追加の結果を取得する場合のページ割りのマーカー。 |
 
 **戻り値:**
 
-* `HubCollaborationsList` object containing the list of collaborations and pagination information.
-* `HubsToolkitException` if:
-  * the hub ID is blank or null,
-  * access to the hub is missing,
-  * API request fails.
+* コラボレーションのリストとページ割りの情報を含む`HubCollaborationsList`オブジェクト。
+* 以下の場合は`HubsToolkitException`。
+  * Hub IDが空またはnullである
+  * Hubへのアクセス権限がない
+  * APIリクエストが失敗した
 
 #### `updateHubCollaboration`
 
-This method calls the [update hub collaboration][22] endpoint to modify a collaboration.
+このメソッドでは、[Hubコラボレーションを更新][22]エンドポイントを呼び出して、コラボレーションを変更します。
 
-| **パラメータ**         | **型**    | **説明**                                            |
-| ----------------- | -------- | ------------------------------------------------- |
-| `collaborationId` | `string` | Required - the ID of the collaboration to update. |
-| `role`            | `string` | Required - the new role for the collaboration.    |
+| **パラメータ**         | **型**    | **説明**                |
+| ----------------- | -------- | --------------------- |
+| `collaborationId` | `string` | 必須 - 更新するコラボレーションのID。 |
+| `role`            | `string` | 必須 - コラボレーションの新しいロール。 |
 
 **戻り値:**
 
-* `HubCollaboration` object containing the updated collaboration details.
-* `HubsToolkitException` if:
-  * the collaboration ID is blank or null,
-  * the role is blank or null,
-  * access to the collaboration is missing,
-  * API request fails.
+* コラボレーションの詳細を含む`HubCollaboration`オブジェクト。
+* 以下の場合は`HubsToolkitException`。
+  * コラボレーションIDが空またはnullである
+  * ロールが空またはnullである
+  * コラボレーションへのアクセス権限がない
+  * APIリクエストが失敗した
 
-### Box Hub Items
+### Box Hubの項目
 
 #### `addHubItem`
 
-This method calls the [manage hub items][23] endpoint to add an item to a hub.
+このメソッドでは、[Hubの項目を管理][23]エンドポイントを呼び出して、Hubに項目を追加します。
 
-| **パラメータ**  | **型**    | **説明**                                                    |
-| ---------- | -------- | --------------------------------------------------------- |
-| `hubId`    | `string` | Required - the ID of the hub.                             |
-| `itemId`   | `string` | Required - the ID of the item to add.                     |
-| `itemType` | `string` | Required - the type of the item (e.g., `file`, `folder`). |
+| **パラメータ**  | **型**    | **説明**                            |
+| ---------- | -------- | --------------------------------- |
+| `hubId`    | `string` | 必須 - HubのID。                      |
+| `itemId`   | `string` | 必須 - 追加する項目のID。                   |
+| `itemType` | `string` | 必須 - 項目のタイプ (例: `file`、`folder`)。 |
 
 **戻り値:**
 
-* `HubItemsManageResponse` object containing the result of the item management operation.
-* `HubsToolkitException` if:
-  * the hub ID is blank or null,
-  * the item ID is blank or null,
-  * the item type is blank or null,
-  * access to the hub is missing,
-  * API request fails.
+* 項目の管理操作の結果を含む`HubItemsManageResponse`オブジェクト。
+* 以下の場合は`HubsToolkitException`。
+  * Hub IDが空またはnullである
+  * 項目IDが空またはnullである
+  * 項目タイプが空またはnullである
+  * Hubへのアクセス権限がない
+  * APIリクエストが失敗した
 
 [1]: e://get-folders-id-metadata-id-id
 

@@ -32,54 +32,54 @@ Salesforceツールキットには、管理者が以下の[メソッド][methods
 
 ### Box Sign
 
-* Send Box Sign Request (`sendSignRequests`)
+* Box Signリクエストを送信する (`sendSignRequests`)
 
 ### Box Hubs
 
-* Add Hub Item (`tkAddHubItem`)
-* Copy Hub (`tkCopyHub`)
-* Create Hub (`tkCreateHub`)
-* Create Hub Collaboration (`tkCreateHubCollaboration`)
-* Get All Hubs (`tkGetAllHubs`)
-* Get Enterprise Hubs (`tkGetEnterpriseHubs`)
-* Get Hub by ID (`tkGetHubById`)
-* Get Hub Collaborations (`tkGetHubCollaborations`)
-* Update Hub (`tkUpdateHub`)
-* Update Hub Collaboration (`tkUpdateHubCollaboration`)
+* Hubの項目を追加する (`tkAddHubItem`)
+* Hubをコピーする (`tkCopyHub`)
+* Hubを作成する (`tkCreateHub`)
+* Hubコラボレーションを作成する (`tkCreateHubCollaboration`)
+* すべてのHubを取得する (`tkGetAllHubs`)
+* 企業のHubを取得する (`tkGetEnterpriseHubs`)
+* IDを指定してHubを取得する (`tkGetHubById`)
+* Hubコラボレーションを取得する (`tkGetHubCollaborations`)
+* Hubを更新する (`tkUpdateHub`)
+* Hubコラボレーションを更新する (`tkUpdateHubCollaboration`)
 
 ### Box AI
 
-* Box AI Ask by Item Id (`askBoxAI`)
-* Box AI Extract by Fields (`extractBoxAI`)
-* Box AI Extract by Metadata Template (`extractBoxAI`)
-* Box AI Extract by SObject Type (`extractBoxAI`)
-* Box AI Generate Text by Item Id (`generateBoxAI`)
+* Box AIで項目IDを指定して質問する (`askBoxAI`)
+* Box AIでフィールドを指定して抽出する (`extractBoxAI`)
+* Box AIでメタデータテンプレートを指定して抽出する (`extractBoxAI`)
+* Box AIでSObjectタイプを指定して抽出する (`extractBoxAI`)
+* Box AIで項目IDを指定してテキストを生成する (`generateBoxAI`)
 
 ### Doc Gen
 
-* Create Doc Gen Template (`createDocGenTemplate`)
-* Generate Doc Gen For Record (`generateDocGenForRecord`)
-* Submit Doc Gen Batch (`submitDocgenBatch`)
-* Get Doc Gen Batch Status (`getDocgenBatch`)
+* Doc Genテンプレートを作成する (`createDocGenTemplate`)
+* レコード用のDoc Genを生成する (`generateDocGenForRecord`)
+* Doc Genのバッチを送信する (`submitDocgenBatch`)
+* Doc Genのバッチステータスを取得する (`getDocgenBatch`)
 
-### File Box Metadata and actions
+### ファイルのBoxメタデータとアクション
 
-* Create Box Metadata by File Id (`tkCreateBoxMetadataByFileId`)
-* Delete Box Metadata by File Id (`tkDeleteBoxMetadataByFileId`)
-* Get Box Metadata by File Id (`tkGetBoxMetadataByFileId`)
-* Update Box Metadata by File Id (`tkUpdateBoxMetadataByFileId`)
-* Move File (`tkMoveFile`)
-* Get Last Item (`getLastItem`)
-* Get Recent Items (`GetRecentItems`)
+* ファイルIDを指定してBoxメタデータを作成する (`tkCreateBoxMetadataByFileId`)
+* ファイルIDを指定してBoxメタデータを削除する (`tkDeleteBoxMetadataByFileId`)
+* ファイルIDを指定してBoxメタデータを取得する (`tkGetBoxMetadataByFileId`)
+* ファイルIDを指定してBoxメタデータを更新する (`tkUpdateBoxMetadataByFileId`)
+* ファイルを移動する (`tkMoveFile`)
+* 最後の項目を取得する (`getLastItem`)
+* 最近使用した項目を取得する (`GetRecentItems`)
 
-### Folder Box Metadata and actions
+### フォルダのBoxメタデータとアクション
 
 * フォルダIDでBoxメタデータを作成する (`tkCreateBoxMetadataByFolderId`)
 * フォルダIDでBoxメタデータを削除する (`tkDeleteBoxMetadataByFolderId`)
 * フォルダIDでBoxメタデータを取得する (`tkGetBoxMetadataByFolderId`)
 * フォルダIDでBoxメタデータを更新する (`tkUpdateBoxMetadataByFolderId`)
 
-### Folder management
+### フォルダ管理
 
 * フォルダを作成する (`tkCreateFolder`)
 * フォルダの関連付けを作成する (`tkCreateFolderAssociation`)
@@ -94,10 +94,10 @@ Salesforceツールキットには、管理者が以下の[メソッド][methods
 * ルートフォルダIDを取得する (`tkGetRootFolderId`)
 * フォルダ用URLを取得する (`tkGetUrlForFolder`)
 * フォルダを移動する (`tkMoveFolder`)
-* Update Folder (`tkUpdateFolder`)
-* Get Box Folder Contents by Folder Id (`tkGetFolderContents`)
+* フォルダを更新する (`tkUpdateFolder`)
+* フォルダIDを指定してBoxフォルダのコンテンツを取得する (`tkGetFolderContents`)
 
-### Cascade policies
+### カスケードポリシー
 
 * メタデータカスケードポリシーを作成する (`tkCreateMetadataCascadePolicy`)
 * メタデータカスケードポリシーを削除する (`tkDeleteBoxMetadataByFolderId`)
@@ -111,7 +111,7 @@ Salesforceツールキットには、管理者が以下の[メソッド][methods
 * コラボレーションを削除する (`tkDeleteCollaboration`)
 * コラボレーションを編集する (`tkEditCollaboration`)
 
-### Slack integration
+### Slack統合
 
 <!--alex ignore -->
 
@@ -120,11 +120,11 @@ Salesforceツールキットには、管理者が以下の[メソッド][methods
 
 <!--alex enable -->
 
-### Other / utilities
+### その他/ユーティリティ
 
 * 添付ファイルからファイルを作成する (`tkCreateFileFromAttachment`)
 * 統合アクティビティを有効にする (`tkEnableAppActivity`)
-* Search (`search`)
+* 検索する (`search`)
 
 <!--alex enable -->
 

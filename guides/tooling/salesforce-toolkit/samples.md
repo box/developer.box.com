@@ -321,9 +321,9 @@ System.debug(tk.mostRecentError);
 
 </Tabs>
 
-## Create a sign request
+## 署名リクエストの作成
 
-The following code creates a Box Sign request in Salesforce.
+次のコードでは、SalesforceにBox Signリクエストを作成します。
 
 <Tabs>
 
@@ -352,9 +352,9 @@ System.debug(responses[0]);
 
 </Tabs>
 
-## Get Box Hubs
+## Box Hubの取得
 
-The following code retrieves Box Hubs.
+次のコードでは、Box Hubを取得します。
 
 <Tabs>
 
