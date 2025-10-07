@@ -45,4 +45,4 @@ Box上でフォルダを削除するには、削除するフォルダのIDをAPI
 
 ## タイムアウト
 
-Timeout for this operation is 600 seconds. The operation will complete after a `HTTP 503` has been returned.
+この操作のタイムアウトは600秒です。`HTTP 503`が返されるとこの操作は完了します。
