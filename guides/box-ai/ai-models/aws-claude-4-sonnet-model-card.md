@@ -11,11 +11,11 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/aws-claude-4-sonnet-model-card
 type: guide
-total_steps: 23
+total_steps: 24
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
 next_page_id: box-ai/ai-models/aws-claude-4-opus-model-card
-previous_page_id: box-ai/ai-models/google-gemini-1-5-flash-001-model-card
+previous_page_id: box-ai/ai-models/aws-claude-4-5-sonnet-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/aws-claude-4-sonnet-model-card.md
 ---
@@ -27,8 +27,8 @@ source_url: >-
 
 | Item  | Value | Description |
 |-----------|----------|----------|
-|Model name|**AWS Claude 4 Sonnet**| The name of the model. |
-| Model name |**AWS Titan Text Lite**| The name of the model - standard or premium. |
+| Model name |**AWS Claude 4 Sonnet**| The name of the model. |
+| Model category | **Premium** | The category of the model: Standard or Premium. |
 |API model name|`aws__claude_4_sonnet`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer|  **Amazon Web Services (AWS)** | The trusted organization that securely hosts LLM. |
 |Model provider|**Anthropic**| The organization that provides this model. |
