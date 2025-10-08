@@ -54,6 +54,14 @@ Agentforce.
 * Edit Collaboration
 * Delete Collaboration
 
+### Box Hubs
+
+* Get Hubs
+* Get Hub Collaborations
+* Copy Hub
+* Create Hub
+* Get Hub by ID
+
 ### Additional Actions
 
 <!--alex ignore -->
