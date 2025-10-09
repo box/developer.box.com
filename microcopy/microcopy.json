@@ -491,7 +491,7 @@
   // Link to our privacy policy
   "footer.bottom.links.privacy.url": "https:\/\/account.box.com\/legal_text\/privacy_policy",
   // Text for link to our cookie notification settings
-  "footer.bottom.links.cookies.text": "Cookie通知",
+  "footer.bottom.links.cookies.text": "Cookieに関する通知",
   // Link to our cookie notification settings
   "footer.bottom.links.cookies.url": "https:\/\/www.box.com\/legal\/cookie-notification",
   // Text for link to creative commons code
