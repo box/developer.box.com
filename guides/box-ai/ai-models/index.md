@@ -713,6 +713,12 @@ Standard
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
 </div>
 
 </Tile>
