@@ -22,7 +22,7 @@ your development issues. You can also share any successes you have had.
 
 ## Box Developer Blog
 
-For more updates, tutorials, and annoucements check out our Box Developer Blog[blog].
+For more updates, tutorials, and announcements check out our Box Developer Blog[blog].
 
 <Next>
   Next step
