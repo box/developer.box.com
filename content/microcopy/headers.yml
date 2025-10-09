@@ -112,7 +112,7 @@ primary:
       text: Box Developer Blog
 
       // url: The URL to Medium bev blog
-      url: https://medium.com/box-developer-blog
+      url: https://blog.box.com/category/developer
 
   buttons:
     dashboard:
