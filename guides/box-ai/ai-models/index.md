@@ -69,17 +69,6 @@ Models offered in **Beta** mode have not been fully performance-tested at scale 
 
 </Message>
 
-## Compliance support
-
-Box actively monitors the AI market and ensures compliance with industry regulations. Customers are responsible for configuring suitable AI models for their specific needs.
-
-| Models | FedRAMP Moderate | FedRAMP High | ITAR	| DOD |
-| ------ | ---------------- | ------------ | ---- | --- |
-| Microsoft Azure OpenAI | Supported | Supported | Not Supported | IL2 |
-| AWS Bedrock | Supported | Not Supported | Not Supported | Not Supported |
-| Google Gemini	| Supported |	Supported |	Not Supported |	IL2 |
-| IBM WatsonX |	Not Supported |	Not Supported |	Not Supported |	Not Supported |
-
 ## Core Box AI Models
 
 Box AI is powered by the following AI models. These models are integrated with Box AI to facilitate various use cases while adhering to enterprise grade standards. Below, you’ll find information about each model, including its capabilities, intended applications, and applicable usage guidelines.
@@ -154,6 +143,24 @@ Standard
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
+
+</strong>
+
 </div>
 
 </Tile>
@@ -181,6 +188,24 @@ Premium
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
+
+</strong>
+
 </div>
 
 </Tile>
@@ -205,6 +230,24 @@ Available
 <strong style="background-color: #fdfad8">
 
 Standard
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
 
 </strong>
 
@@ -241,6 +284,24 @@ Premium
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
+
+</strong>
+
 </div>
 
 </Tile>
@@ -265,6 +326,24 @@ Available
 <strong style="background-color: #fdfad8">
 
 Standard
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
 
 </strong>
 
@@ -295,6 +374,24 @@ Premium
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
+
+</strong>
+
 </div>
 
 </Tile>
@@ -319,6 +416,24 @@ Available
 <strong style="background-color: #fdfad8">
 
 Standard
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
 
 </strong>
 
@@ -355,6 +470,24 @@ Standard
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
+
+</strong>
+
 </div>
 
 </Tile>
@@ -376,9 +509,15 @@ Available
 
 </strong>
 
-<strong style="background-color: #f8d59b">
+<strong style="background-color: #fdfad8">
 
-Premium
+Standard
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
 
 </strong>
 
@@ -409,6 +548,12 @@ Premium
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
 </div>
 
 </Tile>
@@ -433,6 +578,12 @@ Available
 <strong style="background-color: #f8d59b">
 
 Premium
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
 
 </strong>
 
@@ -463,6 +614,12 @@ Premium
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
 </div>
 
 </Tile>
@@ -490,6 +647,12 @@ Premium
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
 </div>
 
 </Tile>
@@ -514,6 +677,12 @@ Available
 <strong style="background-color: #f8d59b">
 
 Premium
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
 
 </strong>
 
@@ -568,6 +737,12 @@ Available
 <strong style="background-color: #fdfad8">
 
 Standard
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
 
 </strong>
 
