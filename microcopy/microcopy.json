@@ -265,7 +265,7 @@
   // The text for the Medium Dev Blog
   "headers.primary.links.blog.text": "Box Developer Blog",
   // The URL to Medium bev blog
-  "headers.primary.links.blog.url": "https://medium.com/box-developer-blog",
+  "headers.primary.links.blog.url": "https://blog.box.com/category/developer",
   // A longer description of getting to the developer console
   "headers.primary.buttons.dashboard.text": "Go to Dev Console",
   // The URL to the developer console
@@ -389,7 +389,7 @@
   // Text for a link to the Platform blog
   "footer.categories.company.links.devblog.text": "Developer Blog",
   // A link to our developer blog
-  "footer.categories.company.links.devblog.url": "https://medium.com/box-developer-blog",
+  "footer.categories.company.links.devblog.url": "https://blog.box.com/category/developer",
   // Text for a link to the newsletter page
   "footer.categories.company.links.newsletter.text": "Developer Newsletter",
   // A link to the newsletter page
@@ -541,7 +541,7 @@
   "pages.additionalResources.blog.title": "Box Developer Blog",
   "pages.additionalResources.blog.text": "Read news, updates and tutorials on Box APIs, SDKs and gain useful developers' and admins' insights.",
   "pages.additionalResources.blog.cta": "Visit Box Developer Blog",
-  "pages.additionalResources.blog.url": "https://medium.com/box-developer-blog",
+  "pages.additionalResources.blog.url": "https://blog.box.com/category/developer",
   // The label for all things API
   "changelog.labels.api": "API",
   // The label for all things SDKS
