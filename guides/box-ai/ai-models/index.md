@@ -12,7 +12,7 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 23
+total_steps: 24
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/ai-models/openai-gpt-5-reasoning-alpha-model-card
@@ -358,37 +358,9 @@ Box AI Extractのデフォルト
 
 </Tile>
 
-<Tile type="model" title="aws__claude_3_haiku" href="/guides/box-ai/ai-models/aws-claude-3-haiku-model-card">
+<Tile type="model" title="aws__claude_4_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-5-sonnet-model-card">
 
-創造性豊かな文章作成AIや会話AIなど、さまざまな言語タスク向けにカスタマイズされたモデル。
-
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-チャット
-
-</strong>
-
-<strong style="background-color: #e1ffe7">
-
-利用可能
-
-</strong>
-
-<strong style="background-color: #fdfad8">
-
-標準
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="model" title="aws__claude_3_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-sonnet-model-card">
-
-高度な言語タスク向けに設計されており、理解とコンテキスト処理に重点が置かれているモデル。
+A model that excels at complex agents, coding, and autonomous multi-step workflows.
 
 <div>
 
@@ -414,9 +386,37 @@ Box AI Extractのデフォルト
 
 </Tile>
 
-<Tile type="model" title="aws__claude_3_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-5-sonnet-model-card">
+<Tile type="model" title="aws__claude_4_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-5-sonnet-model-card">
 
-言語の理解と生成のタスクを強化するよう設計されたモデル。
+日常的なユースケースに最先端のパフォーマンスをもたらすモデル。
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+利用可能
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+プレミアム
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="aws__claude_4_opus" href="/guides/box-ai/ai-models/aws-claude-4-opus-model-card">
+
+コーディングや複雑な問題解決に優れており、最先端のエージェント製品を支えるモデル。
 
 <div>
 
@@ -470,9 +470,9 @@ Box AI Extractのデフォルト
 
 </Tile>
 
-<Tile type="model" title="aws__claude_4_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-sonnet-model-card">
+<Tile type="model" title="aws__claude_3_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-5-sonnet-model-card">
 
-日常的なユースケースに最先端のパフォーマンスをもたらすモデル。
+言語の理解と生成のタスクを強化するよう設計されたモデル。
 
 <div>
 
@@ -498,9 +498,9 @@ Box AI Extractのデフォルト
 
 </Tile>
 
-<Tile type="model" title="aws__claude_4_opus" href="/guides/box-ai/ai-models/aws-claude-4-opus-model-card">
+<Tile type="model" title="aws__claude_3_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-sonnet-model-card">
 
-コーディングや複雑な問題解決に優れており、最先端のエージェント製品を支えるモデル。
+高度な言語タスク向けに設計されており、理解とコンテキスト処理に重点が置かれているモデル。
 
 <div>
 
@@ -519,6 +519,34 @@ Box AI Extractのデフォルト
 <strong style="background-color: #f8d59b">
 
 プレミアム
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="aws__claude_3_haiku" href="/guides/box-ai/ai-models/aws-claude-3-haiku-model-card">
+
+創造性豊かな文章作成AIや会話AIなど、さまざまな言語タスク向けにカスタマイズされたモデル。
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+利用可能
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+標準
 
 </strong>
 
