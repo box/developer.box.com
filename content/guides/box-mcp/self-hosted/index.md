@@ -169,14 +169,44 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
 
 ## Available tools
 
-### Authentication and user tools
+### Authentication and Authorization
 
-| Tool | Description | Parameters | Returns |
-|------|-------------|------------|---------|
-| `box_who_am_i` | Gets the current user information and checks the connection status. | None | User information string. |
-| `box_authorize_app_tool` | Starts the Box application authorization process. | None | Authorization status message. |
+<table>
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th>Description</th>
+      <th>Parameters</th>
+      <th>Returns</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`get_box_client`</td>
+      <td>Helper function to get Box client from context</td>
+      <td>
+        - `ctx (Context)`: Request context.
+      </td>
+      <td>Box client instance</td>
+    </tr>
+    <tr>
+      <td>`box_who_am_i`</td>
+      <td>Get the current user's information</td>
+      <td>
+        - `ctx (Context)`: Request context.
+      </td>
+      <td>User information string</td>
+    </tr>
+    <tr>
+      <td>`box_authorize_app_tool`</td>
+      <td>Authorize the Box application</td>
+      <td>None</td>
+      <td>Authorization status message</td>
+    </tr>
+  </tbody>
+</table>
 
-### Search and navigation tools
+### Search and Navigation
 
 <table>
   <thead>
@@ -219,7 +249,7 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
   </tbody>
 </table>
 
-### File operations
+### File Operations
 
 <table>
   <thead>
@@ -302,9 +332,9 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
      <td>Status message with folder details</td >
    </tr >
   </tbody >
-</table >
+</table>
 
-### Box AI tools
+### Box AI
 
 <table>
   <thead>
@@ -355,7 +385,238 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
   </tbody>
 </table>
 
-### Box Doc Gen tools
+### Collaborations
+
+<table>
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th>Description</th>
+      <th>Parameters</th>
+      <th>Returns</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`box_collaboration_list_by_file_tool`</td>
+      <td>List all collaborations on a specific file</td>
+      <td>
+        - `ctx (Context)`: Request context.<br>
+        - `file_id (str)`: ID of the Box file.
+      </td>
+      <td>List of collaborations in JSON format</td>
+    </tr>
+    <tr>
+      <td>`box_collaboration_list_by_folder_tool`</td>
+      <td>List all collaborations on a specific folder</td>
+      <td>
+        - `ctx (Context)`: Request context.<br>
+        - `folder_id (str)`: ID of the Box folder.
+      </td>
+      <td>List of collaborations in JSON format</td>
+    </tr>
+    <tr>
+      <td>`box_collaboration_delete_tool`</td>
+      <td>Delete a specific collaboration</td>
+      <td>
+        - `ctx (Context)`: Request context.<br>
+        - `collaboration_id (str)`: ID of the collaboration.
+      </td>
+      <td>Deletion confirmation</td>
+    </tr>
+    <tr>
+      <td>`box_collaboration_file_group_by_group_id_tool`</td>
+      <td>Add a group as a collaborator to a file</td>
+      <td>
+        - `ctx (Context)`: Request context.<br>
+        - `file_id (str)`: ID of the Box file.<br>
+        - `group_id (str)`: ID of the group.<br>
+        - `role (str, optional)`: Collaboration role (default: "editor").
+      </td>
+      <td>Created collaboration details</td>
+    </tr>
+  </tbody>
+</table>
+
+### Groups
+
+<table>
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th>Description</th>
+      <th>Parameters</th>
+      <th>Returns</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`box_groups_search_tool`</td>
+      <td>Search for groups by name (partial match)</td>
+      <td>
+        - `ctx (Context)`: Request context.<br>
+        - `query (str)`: Search query.
+      </td>
+      <td>List of matching groups in JSON format</td>
+    </tr>
+    <tr>
+      <td>`box_groups_list_members_tool`</td>
+      <td>List all members of a specific group</td>
+      <td>
+        - `ctx (Context)`: Request context.<br>
+        - `group_id (str)`: ID of the group.
+      </td>
+      <td>List of group members in JSON format</td>
+    </tr>
+    <tr>
+      <td>`box_groups_list_by_user_tool`</td>
+      <td>List all groups that a specific user belongs to</td>
+      <td>
+        - `ctx (Context)`: Request context.<br>
+        - `user_id (str)`: ID of the user.
+      </td>
+      <td>List of groups in JSON format</td>
+    </tr>
+  </tbody>
+</table>
+
+### Users
+
+<table>
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th>Description</th>
+      <th>Parameters</th>
+      <th>Returns</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`box_users_list_tool`</td>
+      <td>List all users in the Box account</td>
+      <td>
+        - `ctx (Context)`: Request context.
+      </td>
+      <td>List of users in JSON format</td>
+    </tr>
+    <tr>
+      <td>`box_users_locate_by_name_tool`</td>
+      <td>Locate a user by their name (exact match)</td>
+      <td>
+        - `ctx (Context)`: Request context.<br>
+        - `name (str)`: Name of the user.
+      </td>
+      <td>User details in JSON format</td>
+    </tr>
+    <tr>
+      <td>`box_users_locate_by_email_tool`</td>
+      <td>Locate a user by their email address (exact match)</td>
+      <td>
+        - `ctx (Context)`: Request context.<br>
+        - `email (str)`: Email address.
+      </td>
+      <td>User details in JSON format</td>
+    </tr>
+    <tr>
+      <td>`box_users_search_by_name_or_email_tool`</td>
+      <td>Search for users by name or email (partial match)</td>
+      <td>
+        - `ctx (Context)`: Request context.<br>
+        - `query (str)`: Search query.
+      </td>
+      <td>List of matching users in JSON format</td>
+    </tr>
+  </tbody>
+</table>
+
+### Box Shared Links
+
+<table>
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th>Description</th>
+      <th>Parameters</th>
+      <th>Returns</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`box_shared_link_file_get_tool`</td>
+      <td>Get a shared link for a file</td>
+      <td>
+        - `ctx (Context)`: Request context.<br>
+        - `file_id (str)`: ID of the file.
+      </td>
+      <td>Shared link details in JSON format</td>
+    </tr>
+    <tr>
+      <td>`box_shared_link_file_create_or_update_tool`</td>
+      <td>Create or update a shared link for a file</td>
+      <td>
+        - `ctx (Context)`: Request context.<br>
+        - `file_id (str)`: ID of the file.<br>
+        - `access (str, optional)`: Access level.<br>
+        - `can_download (bool, optional)`: Can download.<br>
+        - `can_preview (bool, optional)`: Can preview.<br>
+        - `can_edit (bool, optional)`: Can edit.<br>
+        - `password (str, optional)`: Password.<br>
+        - `vanity_name (str, optional)`: Vanity name.<br>
+        - `unshared_at (str, optional)`: Expiration date.
+      </td>
+      <td>Created/updated shared link details in JSON format</td>
+    </tr>
+  </tbody>
+</table>
+
+### Box Tools Web Link
+
+<table>
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th>Description</th>
+      <th>Parameters</th>
+      <th>Returns</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`box_web_link_create_tool`</td>
+      <td>Create a Box web link</td>
+      <td>
+        - `ctx (Context)`: Request context.<br>
+        - `url (str)`: URL of the web link.<br>
+        - `parent_folder_id (str)`: Parent folder ID.<br>
+        - `name (str, optional)`: Name of the web link.<br>
+        - `description (str, optional)`: Description.
+      </td>
+      <td>Created web link details in JSON format</td>
+    </tr>
+    <tr>
+      <td>`box_web_link_get_by_id_tool`</td>
+      <td>Get a Box web link by its ID</td>
+      <td>
+        - `ctx (Context)`: Request context.<br>
+        - `web_link_id (str)`: ID of the web link.
+      </td>
+      <td>Web link details in JSON format</td>
+    </tr>
+    <tr>
+      <td>`box_web_link_update_by_id_tool`</td>
+      <td>Update a Box web link by its ID</td>
+      <td>
+        - `ctx (Context)`: Request context.<br>
+        - `web_link_id (str)`: ID of the web link.<br>
+        - `url (str)`: New URL.
+      </td>
+      <td>Updated web link details in JSON format</td>
+    </tr>
+  </tbody>
+</table>
+
+### Box Doc Gen
 
 <table>
   <thead>
@@ -454,7 +715,7 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
   </tbody>
 </table>
 
-### Box Metadata tools
+### Box Metadata
 
 <table>
   <thead>
