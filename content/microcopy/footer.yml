@@ -22,7 +22,7 @@ categories:
         // text: Text for a link to the Platform blog
         text: Developer Blog
         // url: A link to our developer blog
-        url: https://medium.com/box-developer-blog
+        url: https://blog.box.com/category/developer
 
       newsletter:
         // text: Text for a link to the newsletter page
