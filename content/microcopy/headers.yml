@@ -174,16 +174,16 @@ primary:
       text: Event
 
     title:
-      text: BoxWorks Content + AI
+      text: Build AI Apps with MCP Servers
 
     details:
       text: |-
-        Learn how to use Box MCP server, dive into Box AI APIs,
-        and discover enhanced metadata extraction with agents.
+        Join a short online course, built in partnership with 
+        Deeplearning.ai, and taught by Ben Kus, Box CTO.
 
     cta:
       text: |-
-        Register now
+        Enroll for free
 
 secondary:
   images:
