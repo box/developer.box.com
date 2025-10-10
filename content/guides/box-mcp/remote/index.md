@@ -77,12 +77,17 @@ To add the remote Box MCP server in Azure API Center's Enterprise Registry, foll
 
 To add the remote Box MCP server in Amazon Quick Suite, follow these steps:
 
-1. In the Amazon Quick Suite console, choose **Integrations** and click **Model Content Protocol** tile.
-2. On the Create Integration page, enter a name and optional description.
+1. In the Amazon Quick Suite console, choose **Integrations** and create new integration by choosing **Model Content Protocol**.
+2. Enter a name and a description in the Create Integration page.
 3. Set the MCP server endpoint to `https://mcp.box.com`.
-4. Click **Next**, select the authentication method, and provide the required configuration.
-   - For OAuth, use the client credentials you created in the Box Admin Console when configuring the Box MCP server (Additional Configuration → Add Integration Credentials). Ensure the Amazon Quick Suite redirect/callback URI is allow‑listed in Box.
-5. Select **Create and continue**, review the integration, then **Next**. Optionally share the integration with other users.
+4. Choose Auto-publishing to make the integration immediatly avaliable for personal use. 
+5. Click **Next**, select the authentication method, and provide the required configuration.
+  - For OAuth, use the client credentials you created in the Box Developer Console when configuring the Box MCP server.
+  - Add token URL: https://api.box.com/oauth2/token
+  - Add authorization URL: https://account.box.com/api/oauth2/authorize
+  - Ensure the Amazon Quick Suite redirect/callback URI is allow‑listed in Box Platform App settings.
+6. Grant access to Box.
+7. Select **Create and continue**, review the integration, then **Next**. Optionally share the integration with other users.
 
 For details, see Amazon Quick Suite documentation: [Model Context Protocol (MCP) integration](https://docs.aws.amazon.com/quicksuite/latest/userguide/mcp-integration.html).
 
