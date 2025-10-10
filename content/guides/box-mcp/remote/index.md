@@ -73,6 +73,19 @@ To add the remote Box MCP server, follow the instructions provided by the Copilo
 
 To add the remote Box MCP server in Azure API Center's Enterprise Registry, follow the instructions provided by Azure. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Azure API Center's Enterprise Registry](https://learn.microsoft.com/en-us/azure/api-center/register-discover-mcp-server).
 
+### Amazon Quick Suite
+
+To add the remote Box MCP server in Amazon Quick Suite, follow these steps:
+
+1. In the Amazon Quick Suite console, choose **Integrations** and click **Model Content Protocol** tile.
+2. On the Create Integration page, enter a name and optional description.
+3. Set the MCP server endpoint to `https://mcp.box.com`.
+4. Click **Next**, select the authentication method, and provide the required configuration.
+   - For OAuth, use the client credentials you created in the Box Admin Console when configuring the Box MCP server (Additional Configuration → Add Integration Credentials). Ensure the Amazon Quick Suite redirect/callback URI is allow‑listed in Box.
+5. Select **Create and continue**, review the integration, then **Next**. Optionally share the integration with other users.
+
+For details, see Amazon Quick Suite documentation: [Model Context Protocol (MCP) integration](https://docs.aws.amazon.com/quicksuite/latest/userguide/mcp-integration.html).
+
 ### Anthropic's Messages API
 
 Connect the remote Box MCP server with [Anthropic's Messages API](https://docs.anthropic.com/en/api/messages). Clone [this sample chat bot project](https://github.com/box-community/mcp-client-remote-mcp-react) to get started quickly. It allows you to have a conversation with an Anthropic model, which has access to tools provided by the Box remote MCP server.
