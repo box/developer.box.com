@@ -21,24 +21,26 @@ required_guides: []
 
 ## Create an unlisted Box MCP server
 
-1. Click Integrations in the sidebar of Box Admin Console.
+1. Click **Integrations** in the sidebar of Box Admin Console.
 2. Search for **Box MCP server** in the search field search at the top of the window.
-4. Hover on the **Box MCP server** application, then click **Configure**.
-5. In the **Additional Configuration** section, click on **+ Add Integration Credentials**.
-6. Copy the generated Client ID and Client Secret. 
-7. Enter the Redirect URI provided by the external MCP Client. 
-8. Under Scopes, ensure that *Manage AI Requests* is selected.
+3. Hover on the **Box MCP server** application, then click **Configure**.
+4. In the **Additional Configuration** section, click on **+ Add Integration Credentials**.
+5. Enter integation name and click **Save**.
+6. Expand details of the newly created entry.
+7. Copy the generated **Client ID** and **Client Secret**. 
+8. Enter the **Redirect URI** provided by the external MCP client. 
+9. Under **Acces Scopes**, enable **Content Actions**.
 
 ## Add Box MCP server on the Client Side
 
+Exact steps for addig Box MCP server may vary depending on the AI platform. Refer to your platform’s documentation for client-side setup instructions. Check this sample code for reference:
+
 To connect to Box from the AI Agent platform, you need to:
 
-* Endpoint URL: `https://mcp.box.com`
-* Client ID and Client Secret: Box generates these in the Integration Credentials section of your Admin Console when configuring the Box MCP server, above.
+* Add endpoint URL: `https://mcp.box.com`
+* Pass client ID and client secret. Box generates these in the Integration Credentials section of your Admin Console when configuring the Box MCP server, above.
 * Pass an MCP name: `box-remote-mcp`
 * Provide an `authorization_token`
-
-Exact steps may vary depending on the AI platform. Refer to your platform’s documentation for client-side setup instructions. Check this sample code for reference:
 
 ```python
   response = await client.beta.messages.create(
