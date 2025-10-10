@@ -172,7 +172,7 @@ primary:
 
   connect_featured:
     tag:
-      text: Event
+      text: Workshop
 
     title:
       text: Build AI Apps with MCP Servers
