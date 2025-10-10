@@ -206,7 +206,7 @@ Alternatively, in the main Claude navigation choose `Settings`. Select the Devel
   </tbody>
 </table>
 
-### Search and navigation
+### Search and Navigation
 
 <table>
   <thead>
