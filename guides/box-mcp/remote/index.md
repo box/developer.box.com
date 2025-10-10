@@ -34,24 +34,26 @@ source_url: >-
 
 ## Create an unlisted Box MCP server
 
-1. Click Integrations in the sidebar of Box Admin Console.
+1. Click **Integrations** in the sidebar of Box Admin Console.
 2. Search for **Box MCP server** in the search field search at the top of the window.
-4. Hover on the **Box MCP server** application, then click **Configure**.
-5. In the **Additional Configuration** section, click on **+ Add Integration Credentials**.
-6. Copy the generated Client ID and Client Secret. 
-7. Enter the Redirect URI provided by the external MCP Client. 
-8. Under Scopes, ensure that *Manage AI Requests* is selected.
+3. Hover on the **Box MCP server** application, then click **Configure**.
+4. In the **Additional Configuration** section, click on **+ Add Integration Credentials**.
+5. Enter integration name and click **Save**.
+6. Expand details of the newly created entry.
+7. Copy the generated **Client ID** and **Client Secret**. 
+8. Enter the **Redirect URI** provided by the external MCP client. 
+9. Under **Access Scopes**, enable **Content Actions**.
 
 ## Add Box MCP server on the Client Side
 
+Exact steps for adding Box MCP server may vary depending on the AI platform. Refer to your platform’s documentation for client-side setup instructions. Check this sample code for reference:
+
 To connect to Box from the AI Agent platform, you need to:
 
-* Endpoint URL: `https://mcp.box.com`
-* Client ID and Client Secret: Box generates these in the Integration Credentials section of your Admin Console when configuring the Box MCP server, above.
+* Add endpoint URL: `https://mcp.box.com`
+* Pass client ID and client secret. Box generates these in the Integration Credentials section of your Admin Console when configuring the Box MCP server, above.
 * Pass an MCP name: `box-remote-mcp`
 * Provide an `authorization_token`
-
-Exact steps may vary depending on the AI platform. Refer to your platform’s documentation for client-side setup instructions. Check this sample code for reference:
 
 ```python
 response = await client.beta.messages.create(
@@ -87,6 +89,26 @@ To add the remote Box MCP server, follow the instructions provided by the Copilo
 ### Azure API Center
 
 To add the remote Box MCP server in Azure API Center's Enterprise Registry, follow the instructions provided by Azure. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Azure API Center's Enterprise Registry](https://learn.microsoft.com/en-us/azure/api-center/register-discover-mcp-server).
+
+### Amazon Quick Suite
+
+To add the remote Box MCP server in Amazon Quick Suite, follow these steps:
+
+1. In the Amazon Quick Suite console, choose **Integrations** and create new integration by choosing **Model Content Protocol**.
+2. Enter a name and a description in the **Create integration** page.
+3. Set the MCP server endpoint to `https://mcp.box.com`.
+4. Choose Auto-publishing to make the integration immediately available for personal use.
+5. Click **Next**, select the authentication method, and provide the required configuration.
+
+  * For OAuth, use the client credentials you created in the Box Developer Console when configuring the Box MCP server.
+  * Add token URL: `https://api.box.com/oauth2/token`.
+  * Add authorization URL: `https://account.box.com/api/oauth2/authorize`.
+  * Ensure the Amazon Quick Suite redirect URI is allow‑listed in Box Platform App settings.
+
+6. Grant access to Box.
+7. Select **Create and continue**, review the integration, then **Next**. Optionally share the integration with other users.
+
+For details, see Amazon Quick Suite documentation: [Model Context Protocol (MCP) integration](https://docs.aws.amazon.com/quicksuite/latest/userguide/mcp-integration.html).
 
 ### Anthropic's Messages API
 
