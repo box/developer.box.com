@@ -286,10 +286,10 @@
   "headers.primary.develop_featured.title.text": "Box Sample Code Catalog",
   "headers.primary.develop_featured.details.text": "Browse 90+ open-source repositories\nin various programming languages to find useful scripts,\napp examples, and inspiring use cases!",
   "headers.primary.develop_featured.cta.text": "Browse sample code",
-  "headers.primary.connect_featured.tag.text": "Event",
-  "headers.primary.connect_featured.title.text": "BoxWorks Content + AI",
-  "headers.primary.connect_featured.details.text": "Learn how to use Box MCP server, dive into Box AI APIs,\nand discover enhanced metadata extraction with agents.",
-  "headers.primary.connect_featured.cta.text": "Register now",
+  "headers.primary.connect_featured.tag.text": "Workshop",
+  "headers.primary.connect_featured.title.text": "Build AI Apps with MCP Servers",
+  "headers.primary.connect_featured.details.text": "Join a short online course, built in partnership with\nDeeplearning.ai, and taught by Ben Kus, Box CTO.",
+  "headers.primary.connect_featured.cta.text": "Enroll for free",
   // The HTML alt-text for the site logo
   "headers.secondary.images.logo.alt_text": "Box Developer Documentation",
   // A short label to signify that this page is new
