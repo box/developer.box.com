@@ -29,25 +29,9 @@ Boxは最近、Box Developer Communityをリニューアルしました。開発
 
 </ImageFrame>
 
-## Mediumブログ
+## Box開発者向けブログ
 
-Boxと一部のパートナー企業は、定期的にBoxの[Mediumブログ][medium]でチュートリアルやお知らせを公開しています。通常は毎週火曜日にコンテンツをリリースしますが、それより頻度が高くなることもあります。コンテンツのご要望がありましたら、ぜひDeveloper Forumまで英語でお寄せください。
-
-<ImageFrame center>
-
-![Box開発者向けブログ](images/blog.png)
-
-</ImageFrame>
-
-## Box PlatformのTwitter
-
-Developerドキュメントの変更ログと同様に、Box Platformの更新情報や新規ブログを投稿しています。[Box Platform][twitter]でフォローできます。
-
-<ImageFrame center>
-
-![Box PlatformのTwitter](images/twitter.png)
-
-</ImageFrame>
+For more updates, tutorials, and announcements check out our Box Developer Blog[blog][blog].
 
 <Next>
 
@@ -61,7 +45,7 @@ Developerドキュメントの変更ログと同様に、Box Platformの更新�
 
 [forum]: https://community.box.com/
 
-[medium]: https://medium.com/box-developer-japan-blog
+[blog]: https://blog.box.com/category/developer
 
 [twitter]: https://twitter.com/BoxPlatform
 
