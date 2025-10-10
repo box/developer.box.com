@@ -25,15 +25,15 @@ required_guides: []
 2. Search for **Box MCP server** in the search field search at the top of the window.
 3. Hover on the **Box MCP server** application, then click **Configure**.
 4. In the **Additional Configuration** section, click on **+ Add Integration Credentials**.
-5. Enter integation name and click **Save**.
+5. Enter integration name and click **Save**.
 6. Expand details of the newly created entry.
 7. Copy the generated **Client ID** and **Client Secret**. 
 8. Enter the **Redirect URI** provided by the external MCP client. 
-9. Under **Acces Scopes**, enable **Content Actions**.
+9. Under **Access Scopes**, enable **Content Actions**.
 
 ## Add Box MCP server on the Client Side
 
-Exact steps for addig Box MCP server may vary depending on the AI platform. Refer to your platform’s documentation for client-side setup instructions. Check this sample code for reference:
+Exact steps for adding Box MCP server may vary depending on the AI platform. Refer to your platform’s documentation for client-side setup instructions. Check this sample code for reference:
 
 To connect to Box from the AI Agent platform, you need to:
 
@@ -82,12 +82,14 @@ To add the remote Box MCP server in Amazon Quick Suite, follow these steps:
 1. In the Amazon Quick Suite console, choose **Integrations** and create new integration by choosing **Model Content Protocol**.
 2. Enter a name and a description in the Create Integration page.
 3. Set the MCP server endpoint to `https://mcp.box.com`.
-4. Choose Auto-publishing to make the integration immediatly avaliable for personal use. 
+4. Choose Auto-publishing to make the integration immediately available for personal use.
 5. Click **Next**, select the authentication method, and provide the required configuration.
-  - For OAuth, use the client credentials you created in the Box Developer Console when configuring the Box MCP server.
-  - Add token URL: https://api.box.com/oauth2/token
-  - Add authorization URL: https://account.box.com/api/oauth2/authorize
-  - Ensure the Amazon Quick Suite redirect/callback URI is allow‑listed in Box Platform App settings.
+
+  * For OAuth, use the client credentials you created in the Box Developer Console when configuring the Box MCP server.
+  * Add token URL: `https://api.box.com/oauth2/token`.
+  * Add authorization URL: `https://account.box.com/api/oauth2/authorize`.
+  * Ensure the Amazon Quick Suite redirect URI is allow‑listed in Box Platform App settings.
+
 6. Grant access to Box.
 7. Select **Create and continue**, review the integration, then **Next**. Optionally share the integration with other users.
 
