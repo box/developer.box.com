@@ -317,7 +317,7 @@ Authorization status message
 
 </table>
 
-### Search and navigation
+### Search and Navigation
 
 <table>
 
