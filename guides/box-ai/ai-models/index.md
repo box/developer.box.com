@@ -143,6 +143,24 @@ Standard
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
+
+</strong>
+
 </div>
 
 </Tile>
@@ -170,6 +188,24 @@ Premium
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
+
+</strong>
+
 </div>
 
 </Tile>
@@ -194,6 +230,24 @@ Available
 <strong style="background-color: #fdfad8">
 
 Standard
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
 
 </strong>
 
@@ -230,6 +284,24 @@ Premium
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
+
+</strong>
+
 </div>
 
 </Tile>
@@ -254,6 +326,24 @@ Available
 <strong style="background-color: #fdfad8">
 
 Standard
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
 
 </strong>
 
@@ -284,6 +374,24 @@ Premium
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
+
+</strong>
+
 </div>
 
 </Tile>
@@ -308,6 +416,24 @@ Available
 <strong style="background-color: #fdfad8">
 
 Standard
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
 
 </strong>
 
@@ -344,6 +470,24 @@ Standard
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
+
+</strong>
+
 </div>
 
 </Tile>
@@ -365,9 +509,15 @@ Available
 
 </strong>
 
-<strong style="background-color: #f8d59b">
+<strong style="background-color: #fdfad8">
 
 Premium
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
 
 </strong>
 
@@ -398,6 +548,12 @@ Premium
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
 </div>
 
 </Tile>
@@ -422,6 +578,12 @@ Available
 <strong style="background-color: #f8d59b">
 
 Premium
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
 
 </strong>
 
@@ -452,6 +614,12 @@ Premium
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
 </div>
 
 </Tile>
@@ -479,6 +647,12 @@ Premium
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
 </div>
 
 </Tile>
@@ -503,6 +677,12 @@ Available
 <strong style="background-color: #f8d59b">
 
 Premium
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
 
 </strong>
 
@@ -557,6 +737,12 @@ Available
 <strong style="background-color: #fdfad8">
 
 Standard
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
 
 </strong>
 
