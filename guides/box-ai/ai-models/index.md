@@ -360,7 +360,7 @@ Box AI Extractのデフォルト
 
 <Tile type="model" title="aws__claude_4_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-5-sonnet-model-card">
 
-A model that excels at complex agents, coding, and autonomous multi-step workflows.
+複雑なエージェント、コーディング、自律的なマルチステップワークフローに優れているモデル。
 
 <div>
 

@@ -22,7 +22,7 @@ fullyTranslated: true
 ---
 # AWS Claude 4.5 Sonnet
 
-**AWS Claude 4.5 Sonnet** model is a high-performance model designed for building complex agents, delivering leading coding capabilities and executing across development tasks. It excels at autonomously planning and executing complex, multi-step workflows and is particularly effective in areas like finance, research, and cybersecurity.
+**AWS Claude 4.5 Sonnet**モデルは、複雑なエージェントの作成用に設計された高性能のモデルであり、優れたコーディング機能を提供し、開発タスク全体にわたって実行します。このモデルは、複雑なマルチステップワークフローの自律的な計画および実行に優れており、特に金融、研究、サイバーセキュリティなどの分野で効果的です。
 
 ## モデルの詳細
 
@@ -33,7 +33,7 @@ fullyTranslated: true
 | APIモデル名       | `aws__claude_4_5_sonnet`      | [Box AI APIでのモデルの上書き][overrides]に使用されるモデルの名前。APIを動作させるには、ユーザーがこの名前を正確に指定する必要があります。 |
 | ホスティングレイヤー    | **Amazon Web Services (AWS)** | LLMを安全にホストする、信頼できる組織。                                                              |
 | モデルプロバイダ      | **Anthropic**                 | このモデルを提供する組織。                                                                      |
-| リリース日         | **September 29th, 2025**      | モデルのリリース日。                                                                         |
+| リリース日         | **2025年9月29日**                | モデルのリリース日。                                                                         |
 | ナレッジカットオフ日    | **2025年1月**                   | モデルが情報の更新を取得しなくなった日付。                                                              |
 | 入力コンテキストウィンドウ | **200,000トークン**               | 入力コンテキストウィンドウでサポートされるトークン数。                                                        |
 | 出力トークンの最大数    | **64,000トークン**                | 1回のリクエストでモデルが生成できるトークン数。                                                           |
@@ -42,7 +42,7 @@ fullyTranslated: true
 
 ## その他のドキュメント
 
-For additional information, see [official AWS Claude 4.5 Sonnet documentation][aws-claude].
+詳細については、[AWS Claude 4.5 Sonnetの公式ドキュメント][aws-claude]を参照してください。
 
 [aws-claude]: https://aws.amazon.com/bedrock/anthropic/
 
