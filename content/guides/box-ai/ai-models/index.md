@@ -134,7 +134,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
         <strong style="background-color: #e1f8ff">FedRAMP High</strong>
-        <strong style="background-color: #e1f8ff">DOD IL2</strong>        
+        <strong style="background-color: #e1f8ff">DOD IL5</strong>        
 			</div>
 		</Tile>
 	<Tile type="gemini" title="google__gemini_2_0_flash_001" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-001-model-card">
@@ -145,7 +145,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 		<strong style="background-color: #fdfad8">Standard</strong>
     <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
     <strong style="background-color: #e1f8ff">FedRAMP High</strong>
-    <strong style="background-color: #e1f8ff">DOD IL2</strong>            
+    <strong style="background-color: #e1f8ff">DOD IL5</strong>            
 		</div>
 	</Tile>
 	<Tile type="gemini" title="google__gemini_2_0_flash_lite_preview" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-lite-preview-02-05">
@@ -157,7 +157,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #fdfad8">Standard</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
         <strong style="background-color: #e1f8ff">FedRAMP High</strong>
-        <strong style="background-color: #e1f8ff">DOD IL2</strong>                
+        <strong style="background-color: #e1f8ff">DOD IL5</strong>                
 				</div>
 		</Tile>
 		<Tile type="model" title="aws__claude_4_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-5-sonnet-model-card">
