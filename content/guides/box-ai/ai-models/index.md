@@ -160,26 +160,26 @@ Box AI is powered by the following AI models. These models are integrated with B
         <strong style="background-color: #e1f8ff">DOD IL2</strong>                
 				</div>
 		</Tile>
-		<Tile type="model" title="aws__claude_3_haiku" href="/guides/box-ai/ai-models/aws-claude-3-haiku-model-card">
-			A model tailored for various language tasks, including creative writing and conversational AI.
+		<Tile type="model" title="aws__claude_4_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-5-sonnet-model-card">
+			A model that excels at complex agents, coding, and autonomous multi-step workflows.
 			<div>
 				<strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #e1ffe7">Available</strong>
-				<strong style="background-color: #fdfad8">Standard</strong>
+				<strong style="background-color: #fdfad8">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
 			</div>
-		</Tile>
-		<Tile type="model" title="aws__claude_3_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-sonnet-model-card">
-			A model designed for advanced language tasks, focusing on comprehension and context handling.
+		</Tile>     
+		<Tile type="model" title="aws__claude_4_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-5-sonnet-model-card">
+			A model that brings frontier performance to everyday use cases.
 			<div>
 				<strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
 			</div>
-		</Tile>
-		<Tile type="model" title="aws__claude_3_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-5-sonnet-model-card">
-			A model designed to enhance language understanding and generation tasks.
+		</Tile>    
+		<Tile type="model" title="aws__claude_4_opus" href="/guides/box-ai/ai-models/aws-claude-4-opus-model-card">
+				A model that excels at coding and complex problem-solving, powering frontier agent products.
 			<div>
 				<strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #e1ffe7">Available</strong>
@@ -196,8 +196,8 @@ Box AI is powered by the following AI models. These models are integrated with B
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
 			</div>
 		</Tile>
-		<Tile type="model" title="aws__claude_4_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-sonnet-model-card">
-			A model that brings frontier performance to everyday use cases.
+		<Tile type="model" title="aws__claude_3_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-5-sonnet-model-card">
+			A model designed to enhance language understanding and generation tasks.
 			<div>
 				<strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #e1ffe7">Available</strong>
@@ -205,13 +205,21 @@ Box AI is powered by the following AI models. These models are integrated with B
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
 			</div>
 		</Tile>
-		<Tile type="model" title="aws__claude_4_opus" href="/guides/box-ai/ai-models/aws-claude-4-opus-model-card">
-				A model that excels at coding and complex problem-solving, powering frontier agent products.
+		<Tile type="model" title="aws__claude_3_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-sonnet-model-card">
+			A model designed for advanced language tasks, focusing on comprehension and context handling.
 			<div>
 				<strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
+			</div>
+		</Tile>
+		<Tile type="model" title="aws__claude_3_haiku" href="/guides/box-ai/ai-models/aws-claude-3-haiku-model-card">
+			A model tailored for various language tasks, including creative writing and conversational AI.
+			<div>
+				<strong style="background-color: #e8e8e8">Chat</strong>
+				<strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #fdfad8">Standard</strong>
 			</div>
 		</Tile>
 		<Tile type="model" title="aws__titan_text_lite" href="/guides/box-ai/ai-models/aws-titan-text-lite-model-card">
