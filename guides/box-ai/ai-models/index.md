@@ -146,6 +146,24 @@ Box AI for NotesのQ&Aのデフォルト
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
+
+</strong>
+
 </div>
 
 </Tile>
@@ -174,6 +192,24 @@ Box AI for NotesのQ&Aのデフォルト
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
+
+</strong>
+
 </div>
 
 </Tile>
@@ -199,6 +235,24 @@ Box AI for NotesのQ&Aのデフォルト
 <strong style="background-color: #fdfad8">
 
 標準
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
 
 </strong>
 
@@ -236,6 +290,24 @@ Box AI for NotesのQ&Aのデフォルト
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
+
+</strong>
+
 </div>
 
 </Tile>
@@ -261,6 +333,24 @@ Box AI for NotesのQ&Aのデフォルト
 <strong style="background-color: #fdfad8">
 
 標準
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
 
 </strong>
 
@@ -292,6 +382,24 @@ Box AI for NotesのQ&Aのデフォルト
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL5
+
+</strong>
+
 </div>
 
 </Tile>
@@ -317,6 +425,24 @@ Box AI for NotesのQ&Aのデフォルト
 <strong style="background-color: #fdfad8">
 
 標準
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL5
 
 </strong>
 
@@ -354,6 +480,24 @@ Box AI Extractのデフォルト
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL5
+
+</strong>
+
 </div>
 
 </Tile>
@@ -376,9 +520,15 @@ Box AI Extractのデフォルト
 
 </strong>
 
-<strong style="background-color: #f8d59b">
+<strong style="background-color: #fdfad8">
 
 プレミアム
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
 
 </strong>
 
@@ -410,6 +560,12 @@ Box AI Extractのデフォルト
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
 </div>
 
 </Tile>
@@ -435,6 +591,12 @@ Box AI Extractのデフォルト
 <strong style="background-color: #f8d59b">
 
 プレミアム
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
 
 </strong>
 
@@ -466,6 +628,12 @@ Box AI Extractのデフォルト
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
 </div>
 
 </Tile>
@@ -494,6 +662,12 @@ Box AI Extractのデフォルト
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
 </div>
 
 </Tile>
@@ -519,6 +693,12 @@ Box AI Extractのデフォルト
 <strong style="background-color: #f8d59b">
 
 プレミアム
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
 
 </strong>
 
@@ -575,6 +755,12 @@ Box AI Extractのデフォルト
 <strong style="background-color: #fdfad8">
 
 標準
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
 
 </strong>
 

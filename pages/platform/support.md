@@ -31,7 +31,7 @@ Boxは最近、Box Developer Communityをリニューアルしました。開発
 
 ## Box開発者向けブログ
 
-For more updates, tutorials, and announcements check out our Box Developer Blog[blog][blog].
+その他の更新情報、チュートリアル、お知らせについては、[Box開発者向けブログ][blog]をご確認ください。
 
 <Next>
 
@@ -45,7 +45,7 @@ For more updates, tutorials, and announcements check out our Box Developer Blog[
 
 [forum]: https://community.box.com/
 
-[blog]: https://blog.box.com/category/developer
+[blog]: https://medium.com/box-developer-japan-blog
 
 [twitter]: https://twitter.com/BoxPlatform
 

@@ -202,7 +202,7 @@ code ~/Library/Application\ Support/Claude/claude_desktop_config.json
 
 ## 利用可能なツール
 
-### Authentication and Authorization
+### 認証と承認
 
 <table>
 
@@ -250,19 +250,19 @@ code ~/Library/Application\ Support/Claude/claude_desktop_config.json
 
 <td>
 
-Helper function to get Box client from context
+コンテキストからBoxクライアントを取得するためのヘルパー関数
 
 </td>
 
 <td>
 
-* `ctx (Context)`: Request context.
+* `ctx (Context)`: リクエストのコンテキスト。
 
 </td>
 
 <td>
 
-Box client instance
+Boxクライアントインスタンス
 
 </td>
 
@@ -278,19 +278,19 @@ Box client instance
 
 <td>
 
-Get the current user's information
+現在のユーザーの情報を取得します
 
 </td>
 
 <td>
 
-* `ctx (Context)`: Request context.
+* `ctx (Context)`: リクエストのコンテキスト。
 
 </td>
 
 <td>
 
-User information string
+ユーザー情報の文字列
 
 </td>
 
@@ -306,7 +306,7 @@ User information string
 
 <td>
 
-Authorize the Box application
+Boxアプリケーションを承認します
 
 </td>
 
@@ -318,7 +318,7 @@ Authorize the Box application
 
 <td>
 
-Authorization status message
+承認ステータスメッセージ
 
 </td>
 
@@ -328,7 +328,7 @@ Authorization status message
 
 </table>
 
-### Search and Navigation
+### 検索とナビゲーション
 
 <table>
 
@@ -954,21 +954,21 @@ JSON形式で抽出されたデータ
 
 <td>
 
-List all collaborations on a specific file
+特定のファイルのすべてのコラボレーションのリストを取得します
 
 </td>
 
 <td>
 
-* `ctx (Context)`: Request context.<br>
+* `ctx (Context)`: リクエストのコンテキスト。<br>
 
-* `file_id (str)`: ID of the Box file.
+* `file_id (str)`: BoxファイルのID。
 
 </td>
 
 <td>
 
-List of collaborations in JSON format
+コラボレーションのリスト (JSON形式)
 
 </td>
 
@@ -984,21 +984,21 @@ List of collaborations in JSON format
 
 <td>
 
-List all collaborations on a specific folder
+特定のフォルダのすべてのコラボレーションのリストを取得します
 
 </td>
 
 <td>
 
-* `ctx (Context)`: Request context.<br>
+* `ctx (Context)`: リクエストのコンテキスト。<br>
 
-* `folder_id (str)`: ID of the Box folder.
+* `folder_id (str)`: BoxフォルダのID。
 
 </td>
 
 <td>
 
-List of collaborations in JSON format
+コラボレーションのリスト (JSON形式)
 
 </td>
 
@@ -1014,15 +1014,15 @@ List of collaborations in JSON format
 
 <td>
 
-Delete a specific collaboration
+特定のコラボレーションを削除します
 
 </td>
 
 <td>
 
-* `ctx (Context)`: Request context.<br>
+* `ctx (Context)`: リクエストのコンテキスト。<br>
 
-* `collaboration_id (str)`: ID of the collaboration.
+* `collaboration_id (str)`: コラボレーションのID。
 
 </td>
 
@@ -1044,25 +1044,25 @@ Delete a specific collaboration
 
 <td>
 
-Add a group as a collaborator to a file
+グループをコラボレータとしてファイルに追加します
 
 </td>
 
 <td>
 
-* `ctx (Context)`: Request context.<br>
+* `ctx (Context)`: リクエストのコンテキスト。<br>
 
-* `file_id (str)`: ID of the Box file.<br>
+* `file_id (str)`: BoxファイルのID。<br>
 
-* `group_id (str)`: ID of the group.<br>
+* `group_id (str)`: グループのID。<br>
 
-* `role (str, optional)`: Collaboration role (default: "editor").
+* `role (str, optional)`: コラボレーションロール (デフォルト: 「編集者」)。
 
 </td>
 
 <td>
 
-Created collaboration details
+作成されたコラボレーションの詳細
 
 </td>
 
@@ -1072,7 +1072,7 @@ Created collaboration details
 
 </table>
 
-### Groups
+### グループ
 
 <table>
 
@@ -1120,13 +1120,13 @@ Created collaboration details
 
 <td>
 
-Search for groups by name (partial match)
+名前でグループを検索します (部分一致)
 
 </td>
 
 <td>
 
-* `ctx (Context)`: Request context.<br>
+* `ctx (Context)`: リクエストのコンテキスト。<br>
 
 * `query (str)`: 検索クエリ。
 
@@ -1134,7 +1134,7 @@ Search for groups by name (partial match)
 
 <td>
 
-List of matching groups in JSON format
+一致するグループのリスト (JSON形式)
 
 </td>
 
@@ -1150,21 +1150,21 @@ List of matching groups in JSON format
 
 <td>
 
-List all members of a specific group
+特定のグループのすべてのメンバーのリストを取得します
 
 </td>
 
 <td>
 
-* `ctx (Context)`: Request context.<br>
+* `ctx (Context)`: リクエストのコンテキスト。<br>
 
-* `group_id (str)`: ID of the group.
+* `group_id (str)`: グループのID。
 
 </td>
 
 <td>
 
-List of group members in JSON format
+グループメンバーのリスト (JSON形式)
 
 </td>
 
@@ -1180,21 +1180,21 @@ List of group members in JSON format
 
 <td>
 
-List all groups that a specific user belongs to
+特定のユーザーが属しているすべてのグループを取得します
 
 </td>
 
 <td>
 
-* `ctx (Context)`: Request context.<br>
+* `ctx (Context)`: リクエストのコンテキスト。<br>
 
-* `user_id (str)`: ID of the user.
+* `user_id (str)`: ユーザーのID。
 
 </td>
 
 <td>
 
-List of groups in JSON format
+グループのリスト (JSON形式)
 
 </td>
 
@@ -1252,19 +1252,19 @@ List of groups in JSON format
 
 <td>
 
-List all users in the Box account
+Boxアカウント内のすべてのユーザーのリストを取得します
 
 </td>
 
 <td>
 
-* `ctx (Context)`: Request context.
+* `ctx (Context)`: リクエストのコンテキスト。
 
 </td>
 
 <td>
 
-List of users in JSON format
+ユーザーのリスト (JSON形式)
 
 </td>
 
@@ -1280,21 +1280,21 @@ List of users in JSON format
 
 <td>
 
-Locate a user by their name (exact match)
+名前でユーザーを検索します (完全一致)
 
 </td>
 
 <td>
 
-* `ctx (Context)`: Request context.<br>
+* `ctx (Context)`: リクエストのコンテキスト。<br>
 
-* `name (str)`: Name of the user.
+* `name (str)`: ユーザーの名前。
 
 </td>
 
 <td>
 
-User details in JSON format
+ユーザーの詳細 (JSON形式)
 
 </td>
 
@@ -1310,21 +1310,21 @@ User details in JSON format
 
 <td>
 
-Locate a user by their email address (exact match)
+メールアドレスでユーザーを検索します (完全一致)
 
 </td>
 
 <td>
 
-* `ctx (Context)`: Request context.<br>
+* `ctx (Context)`: リクエストのコンテキスト。<br>
 
-* `email (str)`: Email address.
+* `email (str)`: メールアドレス。
 
 </td>
 
 <td>
 
-User details in JSON format
+ユーザーの詳細 (JSON形式)
 
 </td>
 
@@ -1340,13 +1340,13 @@ User details in JSON format
 
 <td>
 
-Search for users by name or email (partial match)
+名前またはメールアドレスでユーザーを検索します (部分一致)
 
 </td>
 
 <td>
 
-* `ctx (Context)`: Request context.<br>
+* `ctx (Context)`: リクエストのコンテキスト。<br>
 
 * `query (str)`: 検索クエリ。
 
@@ -1354,7 +1354,7 @@ Search for users by name or email (partial match)
 
 <td>
 
-List of matching users in JSON format
+一致するユーザーのリスト (JSON形式)
 
 </td>
 
@@ -1364,7 +1364,7 @@ List of matching users in JSON format
 
 </table>
 
-### Box Shared Links
+### Boxの共有リンク
 
 <table>
 
@@ -1412,21 +1412,21 @@ List of matching users in JSON format
 
 <td>
 
-Get a shared link for a file
+ファイルの共有リンクを取得します
 
 </td>
 
 <td>
 
-* `ctx (Context)`: Request context.<br>
+* `ctx (Context)`: リクエストのコンテキスト。<br>
 
-* `file_id (str)`: ID of the file.
+* `file_id (str)`: ファイルのID。
 
 </td>
 
 <td>
 
-Shared link details in JSON format
+共有リンクの詳細 (JSON形式)
 
 </td>
 
@@ -1442,35 +1442,35 @@ Shared link details in JSON format
 
 <td>
 
-Create or update a shared link for a file
+ファイルの共有リンクを作成または更新します
 
 </td>
 
 <td>
 
-* `ctx (Context)`: Request context.<br>
+* `ctx (Context)`: リクエストのコンテキスト。<br>
 
-* `file_id (str)`: ID of the file.<br>
+* `file_id (str)`: ファイルのID。<br>
 
-* `access (str, optional)`: Access level.<br>
+* `access (str, optional)`: アクセスレベル。<br>
 
-* `can_download (bool, optional)`: Can download.<br>
+* `can_download (bool, optional)`: ダウンロード可能かどうか。<br>
 
-* `can_preview (bool, optional)`: Can preview.<br>
+* `can_preview (bool, optional)`: プレビュー可能かどうか。<br>
 
-* `can_edit (bool, optional)`: Can edit.<br>
+* `can_edit (bool, optional)`: 編集可能かどうか。<br>
 
-* `password (str, optional)`: Password.<br>
+* `password (str, optional)`: パスワード。<br>
 
-* `vanity_name (str, optional)`: Vanity name.<br>
+* `vanity_name (str, optional)`: バニティ名。<br>
 
-* `unshared_at (str, optional)`: Expiration date.
+* `unshared_at (str, optional)`: 有効期限。
 
 </td>
 
 <td>
 
-Created/updated shared link details in JSON format
+作成/更新された共有リンクの詳細 (JSON形式)
 
 </td>
 
@@ -1480,7 +1480,7 @@ Created/updated shared link details in JSON format
 
 </table>
 
-### Box Tools Web Link
+### Box Toolsのウェブリンク
 
 <table>
 
@@ -1528,27 +1528,27 @@ Created/updated shared link details in JSON format
 
 <td>
 
-Create a Box web link
+Boxウェブリンクを作成します
 
 </td>
 
 <td>
 
-* `ctx (Context)`: Request context.<br>
+* `ctx (Context)`: リクエストのコンテキスト。<br>
 
-* `url (str)`: URL of the web link.<br>
+* `url (str)`: ウェブリンクのURL。<br>
 
 * `parent_folder_id (str)`: 親フォルダID。<br>
 
-* `name (str, optional)`: Name of the web link.<br>
+* `name (str, optional)`: ウェブリンクの名前。<br>
 
-* `description (str, optional)`: Description.
+* `description (str, optional)`: 説明。
 
 </td>
 
 <td>
 
-Created web link details in JSON format
+作成されたウェブリンクの詳細 (JSON形式)
 
 </td>
 
@@ -1564,21 +1564,21 @@ Created web link details in JSON format
 
 <td>
 
-Get a Box web link by its ID
+IDを指定してBoxウェブリンクを取得します
 
 </td>
 
 <td>
 
-* `ctx (Context)`: Request context.<br>
+* `ctx (Context)`: リクエストのコンテキスト。<br>
 
-* `web_link_id (str)`: ID of the web link.
+* `web_link_id (str)`: ウェブリンクのID。
 
 </td>
 
 <td>
 
-Web link details in JSON format
+ウェブリンクの詳細 (JSON形式)
 
 </td>
 
@@ -1594,23 +1594,23 @@ Web link details in JSON format
 
 <td>
 
-Update a Box web link by its ID
+IDを指定してBoxウェブリンクを更新します
 
 </td>
 
 <td>
 
-* `ctx (Context)`: Request context.<br>
+* `ctx (Context)`: リクエストのコンテキスト。<br>
 
-* `web_link_id (str)`: ID of the web link.<br>
+* `web_link_id (str)`: ウェブリンクのID。<br>
 
-* `url (str)`: New URL.
+* `url (str)`: 新しいURL。
 
 </td>
 
 <td>
 
-Updated web link details in JSON format
+更新されたウェブリンクの詳細 (JSON形式)
 
 </td>
 
@@ -1954,7 +1954,7 @@ JSON形式のジョブのリスト
 
 </table>
 
-### Box Metadata
+### Boxメタデータ
 
 <table>
 

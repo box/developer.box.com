@@ -39,20 +39,20 @@ fullyTranslated: true
 2. ウィンドウ上部にある検索フィールドで**Box MCP Server**を検索します。
 3. \[**Box MCP Server**] アプリケーションにカーソルを合わせ、\[**構成**] をクリックします。
 4. \[**追加の構成**] セクションで \[**+ 統合資格情報を追加**] をクリックします。
-5. Enter integration name and click **Save**.
-6. Expand details of the newly created entry.
-7. Copy the generated **Client ID** and **Client Secret**. 
-8. Enter the **Redirect URI** provided by the external MCP client. 
-9. Under **Access Scopes**, enable **Content Actions**.
+5. 統合名を入力し、\[**保存**] をクリックします。
+6. 新しく作成したエントリの詳細を展開します。
+7. 生成された**クライアントID**と**クライアントシークレット**をコピーします。 
+8. 外部MCPクライアントから提供された**リダイレクトURI**を入力します。 
+9. \[**アクセススコープ**] で \[**コンテンツ操作**] を有効にします。
 
 ## クライアント側でBox MCPサーバーを追加する
 
-Exact steps for adding Box MCP server may vary depending on the AI platform. Refer to your platform’s documentation for client-side setup instructions. Check this sample code for reference:
+Box MCPサーバーを追加するための正確な手順はAIプラットフォームによって異なる場合があります。クライアント側での設定手順については、お使いのプラットフォームのドキュメントを参照してください。参考までに、次のサンプルコードを確認してください。
 
 AIエージェントプラットフォームからBoxに接続するには、以下の操作を行う必要があります。
 
-* Add endpoint URL: `https://mcp.box.com`
-* Pass client ID and client secret. Box generates these in the Integration Credentials section of your Admin Console when configuring the Box MCP server, above.
+* エンドポイントURLを追加する: `https://mcp.box.com`
+* クライアントIDとクライアントシークレットを渡す。これらは、上記のBox MCPサーバーの構成時に管理コンソールの統合資格情報のセクションで生成されます。
 * MCP名を渡す: `box-remote-mcp`
 * `authorization_token`を指定する
 
@@ -94,23 +94,23 @@ Azure API CenterのEnterprise RegistryにリモートBox MCPサーバーを追�
 
 ### Amazon Quick Suite
 
-To add the remote Box MCP server in Amazon Quick Suite, follow these steps:
+Amazon Quick SuiteでリモートBox MCPサーバーを追加するには、以下の手順に従います。
 
-1. In the Amazon Quick Suite console, choose **Integrations** and create new integration by choosing **Model Content Protocol**.
-2. Enter a name and a description in the **Create integration** page.
-3. Set the MCP server endpoint to `https://mcp.box.com`.
-4. Choose Auto-publishing to make the integration immediately available for personal use.
-5. Click **Next**, select the authentication method, and provide the required configuration.
+1. Amazon Quick Suiteコンソールで、\[**Integrations (統合)**] を選択し、\[**Model Content Protocol**] を選択して新しい統合を作成します。
+2. \[**Create integration (統合の作成)**] ページで、名前と説明を入力します。
+3. MCPサーバーのエンドポイントを`https://mcp.box.com`に設定します。
+4. 自動公開を選択して、個人利用向けに統合をすぐに提供します。
+5. \[**Next (次へ)**] をクリックし、認証方法を選択して、必要な構成を指定します。
 
-* For OAuth, use the client credentials you created in the Box Developer Console when configuring the Box MCP server.
-* Add token URL: `https://api.box.com/oauth2/token`.
-* Add authorization URL: `https://account.box.com/api/oauth2/authorize`.
-* Ensure the Amazon Quick Suite redirect URI is allow‑listed in Box Platform App settings.
+* OAuthの場合、Box MCPサーバーの構成時にBox開発者コンソールで作成したクライアント資格情報を使用します。
+* トークンURLを追加します: `https://api.box.com/oauth2/token`。
+* 承認URLを追加します: `https://account.box.com/api/oauth2/authorize`。
+* Amazon Quick SuiteのリダイレクトURIがBox Platformアプリの設定で許可リストに登録されていることを確認します。
 
-6. Grant access to Box.
-7. Select **Create and continue**, review the integration, then **Next**. Optionally share the integration with other users.
+6. Boxへのアクセスを許可します。
+7. \[**Create and continue (作成して続行)**] を選択し、統合を確認して、\[**Next (次へ)**] を選択します。必要に応じて、統合を他のユーザーと共有します。
 
-For details, see Amazon Quick Suite documentation: [Model Context Protocol (MCP) integration](https://docs.aws.amazon.com/quicksuite/latest/userguide/mcp-integration.html).
+詳細については、Amazon Quick Suiteドキュメントの[Model Context Protocol (MCP) integration](https://docs.aws.amazon.com/quicksuite/latest/userguide/mcp-integration.html) (英語) を参照してください。
 
 ### AnthropicのMessages API
 
