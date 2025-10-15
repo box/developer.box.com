@@ -16,12 +16,13 @@ alias_paths: []
 
   Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
 
-  All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` is available as a separate branch.
-
-  For more details, see our [SDK versioning strategy document][versioning].
+  **All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` is available as a separate branch of the Box core SDKs**.
 </Message>
 
 Check the [migration guide][migration] to learn how to switch from Box Next Generation SDK to Box core SDK `v10`.
 
+For more details, see our [SDK versioning strategy document][versioning].
+
 [versioning]: g://tooling/sdks/sdk-versioning
 [migration]: https://github.com/box/box-ios-sdk/blob/sdk-gen/migration-guides/from-box-swift-sdk-gen-v0-to-box-ios-sdk-v10.md
+[sdk-branch]: https://github.com/box/box-ios-sdk/tree/sdk-gen
