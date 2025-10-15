@@ -15,9 +15,9 @@ alias_paths: []
 
 Box core SDKs and Box Next Generation SDKs were created as separate libraries. However, in keeping with industry best practices, **we are consolidating the Box Next Generation SDKs and Box core SDKs into a single package for each programming language**. This makes migration efforts much easier and allows seamless addition of new capabilities to existing applications still powered by older versions of Box core SDKs, which were maintained manually.
 
-To facilitate this migration process, there are two actively maitained major Box core SDK versions:
+To facilitate this migration process, there are two actively maintained major Box core SDK versions:
 
-- **the current major version which includes:** the manually maintained package and the generated one. This SDK version enables leveraging coexisting packages at the same time, and serve as a transition phase. This versionSDK will be supported until 2027.
+- **the current major version which includes:** the manually maintained package and the generated one. This SDK version enables leveraging coexisting packages at the same time, and serve as a transition phase. This version of Box SDK will be supported until 2027.
 - `v10` includes **only the generated package**. This version is available as a branch for each Box core SDK repository.
 
 Here's what you can expect from generated packages:
@@ -80,7 +80,7 @@ As of September 17, 2025 Box Next Generation SDKs are no longer supported as sep
 
 ## Migration
 
-### Migration from manually maitained package to generated package
+### Migration from manually maintained package to generated package
 
 TBD
 
