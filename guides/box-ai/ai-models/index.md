@@ -392,6 +392,24 @@ DOD IL5
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL5
+
+</strong>
+
 </div>
 
 </Tile>
@@ -416,6 +434,24 @@ Available
 <strong style="background-color: #fdfad8">
 
 Standard
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL5
 
 </strong>
 
@@ -467,6 +503,24 @@ Available
 <strong style="background-color: #fdfad8">
 
 Standard
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL5
 
 </strong>
 
@@ -554,6 +608,12 @@ FedRAMP Moderate
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
 </div>
 
 </Tile>
@@ -578,6 +638,12 @@ Available
 <strong style="background-color: #f8d59b">
 
 Premium
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
 
 </strong>
 
@@ -620,6 +686,12 @@ FedRAMP Moderate
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
 </div>
 
 </Tile>
@@ -653,6 +725,12 @@ FedRAMP Moderate
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
 </div>
 
 </Tile>
@@ -677,6 +755,12 @@ Available
 <strong style="background-color: #f8d59b">
 
 Premium
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
 
 </strong>
 
@@ -743,6 +827,12 @@ Available
 <strong style="background-color: #fdfad8">
 
 Standard
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
 
 </strong>
 
