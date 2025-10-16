@@ -112,7 +112,7 @@ primary:
       text: Box Developer Blog
 
       // url: The URL to Medium bev blog
-      url: https://medium.com/box-developer-blog
+      url: https://blog.box.com/category/developer
 
   buttons:
     dashboard:
@@ -171,19 +171,19 @@ primary:
 
   connect_featured:
     tag:
-      text: Event
+      text: Workshop
 
     title:
-      text: BoxWorks Content + AI
+      text: Build AI Apps with MCP Servers
 
     details:
       text: |-
-        Learn how to use Box MCP server, dive into Box AI APIs,
-        and discover enhanced metadata extraction with agents.
+        Join a short online course, built in partnership with
+        Deeplearning.ai, and taught by Ben Kus, Box CTO.
 
     cta:
       text: |-
-        Register now
+        Enroll for free
 
 secondary:
   images:
