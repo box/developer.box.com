@@ -5,15 +5,15 @@ category_id: metadata
 subcategory_id: metadata/5-queries
 is_index: false
 id: metadata/queries/pagination
-rank: 3
+rank: 6
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: metadata/queries
 parent_id: metadata/queries
-next_page_id: metadata/queries/errors
-previous_page_id: metadata/queries/syntax
+next_page_id: metadata/queries/comparison
+previous_page_id: metadata/queries
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/metadata/5-queries/3-pagination.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/metadata/5-queries/6-pagination.md
 ---
 # Paginate and sort
 

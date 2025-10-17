@@ -7,10 +7,10 @@ is_index: true
 id: metadata/queries
 rank: 5
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: metadata
 parent_id: metadata
-next_page_id: metadata/queries/comparison
+next_page_id: metadata/queries/pagination
 previous_page_id: metadata/queries/errors
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/5-queries/0-index.md
