@@ -65,7 +65,7 @@ Refer to [this][android-docs] documentation for more details.
 
   In keeping with industry best practices, we are consolidating the Box Next Generation SDKs and Box core SDKs into a single package for each programming language. This makes migration efforts much easier and allows seamless additions of new capabilities to existing applications still powered by Box core SDKs, which were maintained manually.
 
-  **All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` is available as a separate branch of the Box core SDKs**.
+  **All future development, including new features and updates for the Box Next Generation SDKs, will be delivered through Box core SDKs. The standalone generated artifact was introduced in the version `v10` of the Box core SDKs, and it is currently available as a separate branch.**
 
   For more details, see our [SDK versioning strategy document][versioning].
 </Message>

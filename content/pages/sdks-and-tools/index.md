@@ -69,7 +69,7 @@ Refer to [this][android-docs] documentation for more details.
 
   Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
 
-  **All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` is available as a separate branch of the Box core SDKs**.
+  **All future development, including new features and updates for the Box Next Generation SDKs, will be delivered through Box core SDKs. The standalone generated artifact was introduced in the version `v10` of the Box core SDKs, and it is currently available as a separate branch.**
 
   For more details, see our [SDK versioning strategy document][versioning].
 </Message>

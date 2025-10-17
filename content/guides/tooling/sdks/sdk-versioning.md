@@ -30,10 +30,10 @@ Here's what you can expect from generated packages of the Box SDK:
 ## What does it mean for your project
 
 <TileGrid rows="2">
-  <Tile type="cog" title="1. Existing App - Box core SDK" href="/">
+  <Tile type="cog" title="1. Existing App - Box core SDK" href="/guides/tooling/sdks/sdk-versioning/#migration-to-the-generated-package">
     If you have an existing application relying on Box core SDK and you wish to further develop your project:
 
-    **Action** Use the major version which includes consolidated packages. Start leveraging convenience methods, new features thanks to the generated package, and gradually migrate your code base. Check version breakdown for each programing langage.
+    **Action** Use the major version which includes consolidated packages. Start leveraging convenience methods, new features thanks to the generated package, and gradually migrate your code base. Check version breakdown for each programming language.
   </Tile>
   <Tile type="code-new" title="2. Existing App - Next Generation SDK" href="/guides/tooling/sdks/sdk-versioning/#migrating-from-box-next-generation-sdks-to-core-box-sdk-v10">
     If you have an existing application relying on the Box Next Generation SDK and you wish to further develop your project:
@@ -45,7 +45,7 @@ Here's what you can expect from generated packages of the Box SDK:
 
     **Action** Use ≥`v10.0.0` of the Box core SDK package.
   </Tile>
-  <Tile type="info" title="4. No Active Development" href="/guides/tooling/sdks/sdk-versioning/#box-sdk-versions-and-artifacts">
+  <Tile type="info" title="4. No Active Development" href="/guides/tooling/sdks/sdk-versioning/#box-core-sdk-versions-and-artifacts-overview">
     If you have an existing application that you don't plan to change:
 
     **Action** Ensure your package manager includes the specific version of the SDK version to prevent accidental updates. We strongly recommend upgrading to the major version which includes consolidated packages to receive ongoing security patches and improvements.
@@ -68,7 +68,7 @@ Here's what you can expect from generated packages of the Box SDK:
 
 As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts. Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
 
-**All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` is available as a separate branch of the Box core SDKs**.
+**All future development, including new features and updates for the Box Next Generation SDKs, will be delivered through Box core SDKs. The standalone generated artifact was introduced in the version `v10` of the Box core SDKs, and it is currently available as a separate branch.**
 
 | Repository name | Artifact name |  Note  |
 |------|---------------|--------|
@@ -80,16 +80,20 @@ As of September 17, 2025 Box Next Generation SDKs are no longer supported as sep
 
 ## Migration
 
-### Migration from manually maintained package to generated package
+### Migration to the generated package
 
-TBD
+- Python
+- Node
+- Java
+- .NET
+- Swift
 
 ### Migrating from Box Next Generation SDKs to core Box SDK `v10`
 
 Follow detailed migrations guides to migrate from from Box Next Generation SDKs to Box core SDK `v10`:
 
 - [Python][python-migration-v10]
-- [TypeScript][ts-migration-v10]
+- [TypeScript/Node][ts-migration-v10]
 - [Java][java-migration-v10]
 - [.NET][dotnet-migration-v10]
 - [Swift][swift-migration-v10]
@@ -118,7 +122,7 @@ Follow detailed migrations guides to migrate from from Box Next Generation SDKs 
 [ios-combined]: https://github.com/box/box-ios-sdk/tree/combined-sdk
 [windows-combined]: https://github.com/box/box-windows-sdk-v2/tree/combined-sdk
 
-<!-- [java-migration]: 
+<!-- [java-migration]:
 [ios-migration]: 
 [node-migration]: 
 [python-migration]: 
