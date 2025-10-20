@@ -40,12 +40,12 @@ Here's what you can expect from generated packages of the Box SDK:
 
     **Action** Replace the library name in your package manager with Box core SDK package (≥`v10.0.0`). Check migration guides for detailed instructions.
   </Tile>
-  <Tile type="cog" title="3. Existing App - Box core SDK and the Box Next Generation SDK" href="/guides/tooling/sdks/sdk-versioning/#migration-to-the-generated-package">
+  <Tile type="branch" title="3. Existing App - Box core SDK and the Box Next Generation SDK" href="/guides/tooling/sdks/sdk-versioning/#migration-to-the-generated-package">
     If you have an existing application that relies both on Box core SDK and  Next Generation SDK:
 
     **Action** Use the major version which includes consolidated packages.
   </Tile>
-  <Tile type="branch" title="4. New Application" href="/guides/tooling/sdks/sdk-versioning/#box-core-sdk-versions-and-artifacts-overview">
+  <Tile type="cli2" title="4. New Application" href="/guides/tooling/sdks/sdk-versioning/#box-core-sdk-versions-and-artifacts-overview">
     If you are creating a new application:
 
     **Action** Use ≥`v10.0.0` of the Box core SDK.
