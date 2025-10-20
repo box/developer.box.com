@@ -15,7 +15,7 @@ The following table lists the item fields you can use in metadata queries.
 | `item.type` | KEYWORD | Type of the item: `file` or `folder` | Yes |
 | `item.name` | TEXT, KEYWORD | Name of the item | Yes |
 | `item.description` | TEXT, KEYWORD | Description of the item | Yes |
-| `item.extension` | KEYWORD | File extension such as `pdf`, `jpeg`, `xlsx`, `txt`, `xls`, `png`, `log`, or `csv` | Yes |
+| `item.extension` | KEYWORD | File extension, such as `pdf`, `jpeg`, `xlsx`, `txt`, `xls`, `png`, `log`, or `csv` | Yes |
 | `item.owned_by` | KEYWORD | Owner of the item, for example `user_123` | Yes |
 | `item.owner_enterprise_id` | KEYWORD | Enterprise ID of the item owner, for example `1234` | Yes |
 | `item.created_at` | DATE | Date and time when the item was created on Box | Yes |
