@@ -13,12 +13,12 @@ alias_paths: []
 
 # Box SDK versioning strategy
 
-Box core SDKs and Box Next Generation SDKs were created as separate libraries. However, in keeping with industry best practices, **we are consolidating the Box Next Generation SDKs and Box core SDKs into a single package for each programming language**. This makes migration efforts much easier and allows seamless addition of new capabilities to existing applications still powered by older versions of Box core SDKs, which were maintained manually.
+Box core SDKs and Box Next Generation SDKs were initially created as separate libraries. However, in keeping with industry best practices, **we are consolidating the Box Next Generation SDKs and the Box core SDKs into a single package for each programming language**. This makes migration efforts much easier and allows seamless addition of new capabilities to existing applications still powered by older versions of the Box core SDKs, which were maintained manually.
 
 To facilitate this migration process, there are two actively maintained major Box core SDK versions:
 
-- **the current major version which includes:** the manually maintained package and the generated one. This SDK version enables leveraging coexisting packages at the same time, and serve as a transition phase. This version of Box SDK will be supported until 2027.
-- `v10` includes **only the generated package**. This version is available as a branch for each Box core SDK repository.
+- **The latest major version that follows sequential versioning includes:** the manually maintained package and the generated one. This SDK version enables leveraging coexisting packages at the same time, and serve as a transition phase. This version of Box SDK will be supported until 2027.
+- `v10` includes **only the generated package**.
 
 Here's what you can expect from generated packages of the Box SDK:
 
@@ -27,7 +27,7 @@ Here's what you can expect from generated packages of the Box SDK:
 - **Embedded documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
 - **Enhanced convenience methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers that help to ensure that you’re using variables correctly, and much more.
 
-## What does it mean for your project
+## What it means for your project
 
 <TileGrid rows="2">
   <Tile type="cog" title="1. Existing App - Box core SDK" href="/guides/tooling/sdks/sdk-versioning/#migration-to-the-generated-package">
@@ -36,7 +36,7 @@ Here's what you can expect from generated packages of the Box SDK:
     **Action** Use the major version which includes consolidated packages. Start using convenience methods and new features from the generated package, and gradually migrate your codebase.
   </Tile>
   <Tile type="code-new" title="2. Existing App - Next Generation SDK" href="/guides/tooling/sdks/sdk-versioning/#migrating-from-box-next-generation-sdks-to-core-box-sdk-v10">
-    If you have an existing application that relies on the Box Next Generation SDK and you wish to further develop your project:
+    If you have an existing application that relies only ∂on the Box Next Generation SDK and you wish to further develop your project:
 
     **Action** Replace the library name in your package manager with Box core SDK package (≥`v10.0.0`). Check migration guides for detailed instructions.
   </Tile>
@@ -48,7 +48,7 @@ Here's what you can expect from generated packages of the Box SDK:
   <Tile type="info" title="4. No Active Development" href="/guides/tooling/sdks/sdk-versioning/#box-core-sdk-versions-and-artifacts-overview">
     If you have an existing application that you don't plan to change:
 
-    **Action** Ensure your package manager includes the specific version of the SDK version to prevent accidental updates. We strongly recommend upgrading to the major version which includes consolidated packages to receive ongoing security patches and improvements.
+    **Action** Ensure your package manager includes the specific version of the SDK version to prevent accidental updates. We strongly recommend upgrading to the major version, which includes consolidated packages, to receive ongoing security patches and improvements.
   </Tile>
 </TileGrid>
 
@@ -56,7 +56,7 @@ Here's what you can expect from generated packages of the Box SDK:
 
 ### Box core SDK versions and artifacts overview
 
-| Repository name  | Artifact name |  Includes both packages | Includes the only generated package|
+| Repository name  | Artifact name |  Includes both packages | Includes generated package only |
 |--------------|------|---------|----------|
 | [`box-python-sdk`][python-repo] | `boxsdk` | [`v4.X.Y`][python-combined] | [`≥v10.0.0`][python-v10] |
 | [`box-node-sdk`][node-repo]  | `box-node-sdk` | [`v4.X.Y`][node-combined] | [`≥v10.0.0`][node-v10] |
@@ -88,9 +88,9 @@ As of September 17, 2025 Box Next Generation SDKs are no longer supported as sep
 - [.NET][windows-migration] 
 - [Swift][ios-migration]
 
-### Migrating from Box Next Generation SDKs to core Box SDK `v10`
+### Migration from Box Next Generation SDKs
 
-Follow detailed migrations guides to migrate from from Box Next Generation SDKs to Box core SDK `v10`:
+Follow detailed migration guides to migrate from from the Box Next Generation SDKs to the Box core SDK `v10`:
 
 - [Python][python-migration-v10]
 - [TypeScript/Node][ts-migration-v10]

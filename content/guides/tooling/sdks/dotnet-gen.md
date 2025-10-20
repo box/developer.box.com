@@ -18,7 +18,7 @@ alias_paths: []
   All future development, including new features and updates, will be delivered through the Box core SDKs. The standalone generated artifact was introduced in the version `v10` of the Box core SDKs, and it is currently available as a separate [branch][sdk-branch].
 </Message>
 
-Check the [migration guide][migration] to learn how to switch from Box Next Generation SDK to Box core SDK `v10`.
+Check the [migration guide][migration] to learn how to switch from the Box Next Generation SDK to the Box core SDK `v10`.
 
 For more details, see our [SDK versioning strategy document][versioning].
 
