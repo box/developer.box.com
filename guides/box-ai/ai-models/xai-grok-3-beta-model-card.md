@@ -11,11 +11,11 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/xai-grok-3-beta-model-card
 type: guide
-total_steps: 24
+total_steps: 26
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
 next_page_id: box-ai/ai-models/xai-grok-3-mini-beta-model-card
-previous_page_id: box-ai/ai-models/ibm-llama-3-2-90b-vision-instruct-model-card
+previous_page_id: box-ai/ai-models/ibm-mistral-small-3-1-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/xai-grok-3-beta-model-card.md
 ---

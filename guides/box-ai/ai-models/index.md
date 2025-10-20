@@ -12,7 +12,7 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 24
+total_steps: 26
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/ai-models/openai-gpt-5-reasoning-alpha-model-card
@@ -791,6 +791,60 @@ Chat
 <strong style="background-color: #e1ffe7">
 
 Available
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+Standard
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="ibm__mistral_medium_2505" href="/guides/box-ai/ai-models/ibm-mistral-medium-3-model-card">
+
+High-performance enterprise model for coding and advanced reasoning.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Chat
+
+</strong>
+
+<strong style="background-color: #fffbf3">
+
+Preview
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+Standard
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="ibm__mistral_small_3_1_24b_instruct_2503" href="/guides/box-ai/ai-models/ibm-mistral-small-3-1-model-card">
+
+Fast open-source multimodal model with low latency.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Chat
+
+</strong>
+
+<strong style="background-color: #fffbf3">
+
+Preview
 
 </strong>
 
