@@ -23,5 +23,5 @@ Check the [migration guide][migration] to learn how to switch from the Box Next 
 For more details, see our [SDK versioning strategy document][versioning].
 
 [versioning]: g://tooling/sdks/sdk-versioning
-[migration]: https://github.com/box/box-node-sdk/blob/sdk-gen/docs/migration-guides/from-box-typescript-sdk-gen-v1-to-box-node-sdk-v10.md
+[migration]: https://github.com/box/box-node-sdk/blob/sdk-gen/docs/migration-guides/from-box-typescript-sdk-gen-v1-to-box-node-sdk.md
 [sdk-branch]: https://github.com/box/box-node-sdk/tree/sdk-gen
