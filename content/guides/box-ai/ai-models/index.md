@@ -247,6 +247,22 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #fdfad8">Standard</strong>
 			</div>
 		</Tile>
+    		<Tile type="model" title="ibm__mistral_medium_2505" href="/guides/box-ai/ai-models/ibm-mistral-medium-3-model-card">
+			High-performance enterprise model for coding and advanced reasoning.
+			<div>
+				<strong style="background-color: #e8e8e8">Chat</strong>
+				<strong style="background-color: #fffbf3">Preview</strong>
+				<strong style="background-color: #fdfad8">Standard</strong>
+			</div>
+		</Tile>
+    		<Tile type="model" title="ibm__mistral_small_3_1_24b_instruct_2503" href="/guides/box-ai/ai-models/ibm-mistral-small-3-1-model-card">
+			Fast open-source multimodal model with low latency.
+			<div>
+				<strong style="background-color: #e8e8e8">Chat</strong>
+				<strong style="background-color: #fffbf3">Preview</strong>
+				<strong style="background-color: #fdfad8">Standard</strong>
+			</div>
+		</Tile>
 </TileGrid>
 
 ## Customer-enabled models
