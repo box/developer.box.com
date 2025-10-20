@@ -31,19 +31,19 @@ Here's what you can expect from generated packages of the Box SDK:
 
 <TileGrid rows="2">
   <Tile type="cog" title="1. Existing App - Box core SDK" href="/guides/tooling/sdks/sdk-versioning/#migration-to-the-generated-package">
-    If you have an existing application relying on Box core SDK and you wish to further develop your project:
+    If you have an existing application that relies on Box core SDK and you wish to further develop your project:
 
-    **Action** Use the major version which includes consolidated packages. Start leveraging convenience methods, new features thanks to the generated package, and gradually migrate your code base. Check version breakdown for each programming language.
+    **Action** Use the major version which includes consolidated packages. Start using convenience methods and new features from the generated package, and gradually migrate your codebase.
   </Tile>
   <Tile type="code-new" title="2. Existing App - Next Generation SDK" href="/guides/tooling/sdks/sdk-versioning/#migrating-from-box-next-generation-sdks-to-core-box-sdk-v10">
-    If you have an existing application relying on the Box Next Generation SDK and you wish to further develop your project:
+    If you have an existing application that relies on the Box Next Generation SDK and you wish to further develop your project:
 
     **Action** Replace the library name in your package manager with Box core SDK package (≥`v10.0.0`). Check migration guides for detailed instructions.
   </Tile>
   <Tile type="branch" title="3. New Application" href="/guides/tooling/sdks/sdk-versioning/#box-core-sdk-versions-and-artifacts-overview">
     If you are creating a new application:
 
-    **Action** Use ≥`v10.0.0` of the Box core SDK package.
+    **Action** Use ≥`v10.0.0` of the Box core SDK.
   </Tile>
   <Tile type="info" title="4. No Active Development" href="/guides/tooling/sdks/sdk-versioning/#box-core-sdk-versions-and-artifacts-overview">
     If you have an existing application that you don't plan to change:
@@ -68,7 +68,7 @@ Here's what you can expect from generated packages of the Box SDK:
 
 As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts. Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
 
-**All future development, including new features and updates for the Box Next Generation SDKs, will be delivered through Box core SDKs. The standalone generated artifact was introduced in the version `v10` of the Box core SDKs, and it is currently available as a separate branch.**
+**All future development, including new features and updates, will be delivered through the Box core SDKs. The standalone generated artifact was introduced in the version `v10` of the Box core SDKs, and it is currently available as a separate branch.**
 
 | Repository name | Artifact name |  Note  |
 |------|---------------|--------|
@@ -82,11 +82,11 @@ As of September 17, 2025 Box Next Generation SDKs are no longer supported as sep
 
 ### Migration to the generated package
 
-- Python
-- Node
-- Java
-- .NET
-- Swift
+- [Python][python-migration]
+- [Node][node-migration]
+- [Java][java-migration]
+- [.NET][windows-migration] 
+- [Swift][ios-migration]
 
 ### Migrating from Box Next Generation SDKs to core Box SDK `v10`
 
@@ -110,11 +110,11 @@ Follow detailed migrations guides to migrate from from Box Next Generation SDKs 
 [python-v10]: https://github.com/box/box-python-sdk/tree/sdk-gen
 [windows-v10]: https://github.com/box/box-windows-sdk-v2/tree/sdk-gen
 
-[java-migration-v10]: https://github.com/box/box-java-sdk/blob/sdk-gen/migration-guides/from-box-java-sdk-gen-v0-to-box-java-sdk-v10.md
-[python-migration-v10]: https://github.com/box/box-python-sdk/blob/sdk-gen/migration-guides/from-box-python-sdk-gen-v1-to-box-python-sdk-v10.md
-[swift-migration-v10]: https://github.com/box/box-ios-sdk/blob/sdk-gen/migration-guides/from-box-swift-sdk-gen-v0-to-box-ios-sdk-v10.md
-[ts-migration-v10]: https://github.com/box/box-node-sdk/blob/sdk-gen/docs/migration-guides/from-box-typescript-sdk-gen-v1-to-box-node-sdk-v10.md
-[dotnet-migration-v10]: https://github.com/box/box-windows-sdk-v2/blob/sdk-gen/migration-guides/from-dotnet-sdk-gen-v1-to-box-windows-sdk-v10.md
+[java-migration-v10]: https://github.com/box/box-java-sdk/blob/sdk-gen/migration-guides/from-box-java-sdk-gen-v0-to-box-java-sdk.md
+[python-migration-v10]: https://github.com/box/box-python-sdk/blob/sdk-gen/migration-guides/from-box-python-sdk-gen-v1-to-box-python-sdk.md
+[swift-migration-v10]: https://github.com/box/box-ios-sdk/blob/sdk-gen/migration-guides/from-box-swift-sdk-gen-v0-to-box-ios-sdk.md
+[ts-migration-v10]: https://github.com/box/box-node-sdk/blob/sdk-gen/docs/migration-guides/from-box-typescript-sdk-gen-v1-to-box-node-sdk.md
+[dotnet-migration-v10]: https://github.com/box/box-windows-sdk-v2/blob/sdk-gen/migration-guides/from-dotnet-sdk-gen-v1-to-box-windows-sdk.md
 
 [python-combined]: https://github.com/box/box-python-sdk/tree/combined-sdk
 [java-combined]: https://github.com/box/box-java-sdk/tree/combined-sdk
@@ -122,8 +122,8 @@ Follow detailed migrations guides to migrate from from Box Next Generation SDKs 
 [ios-combined]: https://github.com/box/box-ios-sdk/tree/combined-sdk
 [windows-combined]: https://github.com/box/box-windows-sdk-v2/tree/combined-sdk
 
-<!-- [java-migration]:
-[ios-migration]: 
-[node-migration]: 
-[python-migration]: 
-[windows-migration]:  -->
+[java-migration]: https://github.com/box/box-java-sdk/blob/sdk-gen/migration-guides/from-box-java-sdk-gen-v0-to-box-java-sdk.md
+[ios-migration]: https://github.com/box/box-ios-sdk/blob/sdk-gen/migration-guides/from-box-swift-sdk-gen-v0-to-box-ios-sdk.md
+[node-migration]: https://github.com/box/box-node-sdk/blob/sdk-gen/docs/migration-guides/from-box-typescript-sdk-gen-v1-to-box-node-sdk.md
+[python-migration]: https://github.com/box/box-python-sdk/blob/sdk-gen/migration-guides/from-box-python-sdk-gen-v1-to-box-python-sdk.md
+[windows-migration]: https://github.com/box/box-windows-sdk-v2/blob/sdk-gen/migration-guides/from-dotnet-sdk-gen-v1-to-box-windows-sdk.md
