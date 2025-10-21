@@ -47,7 +47,7 @@ Box AI Developer Zoneでは、AIエージェントやインテリジェントな
 
 </Header>
 
-Box AI APIは、Enterprise PlusおよびEnterprise Advancedをご利用のすべてのお客様が利用できます。
+Box AI API is available to all customers Business and above.
 
 <TileGrid rows="4">
 
@@ -231,9 +231,21 @@ MCP
 
 </Tile>
 
+<Tile type="mcp" title="Build AI Apps with MCP Servers" href="https://www.deeplearning.ai/short-courses/build-ai-apps-with-mcp-server-working-with-box-files/">
+
+Join a short online course, built in partnership with Deeplearning.ai, and taught by Ben Kus, Box CTO.
+
+<strong style="background-color: #e8e8e8">
+
+Short Course
+
+</strong>
+
+</Tile>
+
 <Tile type="mcp" title="Box MCPサーバーとPydantic AI" href="https://medium.com/box-developer-blog/building-ai-powered-document-generation-with-box-mcp-and-pydantic-ai-48775b18ae32">
 
-AIを活用したドキュメント生成のためにBox MCPサーバーからBox Doc Genを使用します。
+Use Box Doc Gen through the Box MCP server for AI-Powered Document Generation.
 
 <div>
 
@@ -375,9 +387,9 @@ BoxのAI統合を使用して、LLMモデルの既存のナレッジベースを
 
 <TileGrid rows="4">
 
-<Tile type="box-brown" title="Openflow Connector for Box" href="https://docs.snowflake.com/en/user-guide/data-integration/openflow/connectors/box/setup">
+<Tile type="box-brown" title="LangChain.js" href="https://www.npmjs.com/package/langchainjs-box">
 
-Box内の非構造化コンテンツをSnowflakeの強力な分析機能にシームレスに接続し、新しいインサイトを取得してデータ駆動型のワークフローを自動化します。
+Include Box content in your LLM workflows with Box loader for LangChain.js.
 
 <div>
 
@@ -386,6 +398,22 @@ Box内の非構造化コンテンツをSnowflakeの強力な分析機能にシ�
 新着
 
 </strong>
+
+<strong style="background-color: #e8e8e8">
+
+統合
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="box-brown" title="Openflow Connector for Box" href="https://docs.snowflake.com/en/user-guide/data-integration/openflow/connectors/box/setup">
+
+Box内の非構造化コンテンツをSnowflakeの強力な分析機能にシームレスに接続し、新しいインサイトを取得してデータ駆動型のワークフローを自動化します。
+
+<div>
 
 <strong style="background-color: #e8e8e8">
 
