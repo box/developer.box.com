@@ -15,7 +15,7 @@ type: guide
 total_steps: 30
 sibling_id: box-ai
 parent_id: box-ai
-next_page_id: box-ai/ai-models/openai-gpt-5-reasoning-alpha-model-card
+next_page_id: box-ai/ai-models/openai-gpt-5-model-card
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/index.md
@@ -75,10 +75,28 @@ Box AI is powered by the following AI models. These models are integrated with B
 
 <TileGrid rows="2">
 
-<Tile type="gpt" title="openai__gpt_5_reasoning_alpha" href="/guides/box-ai/ai-models/openai-gpt-5-reasoning-alpha-model-card">
+<Tile type="gpt" title="openai__gpt_5" href="/guides/box-ai/ai-models/openai-gpt-5-model-card">
 
 A multimodal model with advanced reasoning and long-context understanding.
 <div>
+
+<strong style="background-color: #e8e8e8">
+
+Default for Box AI for Box Hubs
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
+Default for Box AI for Docs
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
+Default for Box AI for Box Notes Q&A
+
+</strong>
 
 <strong style="background-color: #e8e8e8">
 
@@ -106,24 +124,6 @@ Premium
 
 A multimodal model designed to handle lightweight tasks.
 <div>
-
-<strong style="background-color: #e8e8e8">
-
-Default for Box AI for Box Hubs
-
-</strong>
-
-<strong style="background-color: #e8e8e8">
-
-Default for Box AI for Docs
-
-</strong>
-
-<strong style="background-color: #e8e8e8">
-
-Default for Box AI for Box Notes Q&A
-
-</strong>
 
 <strong style="background-color: #e8e8e8">
 
