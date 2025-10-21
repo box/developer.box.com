@@ -62,9 +62,9 @@ Box AI is powered by the following AI models. These models are integrated with B
     <Tile type="gpt" title="openai__gpt_5" href="/guides/box-ai/ai-models/openai-gpt-5-model-card">
 			A multimodal model with advanced reasoning and long-context understanding.
    		<div>
-      	<strong style="background-color: #e8e8e8">Default for Box AI for Box Hubs</strong>
-				<strong style="background-color: #e8e8e8">Default for Box AI for Docs</strong>
-				<strong style="background-color: #e8e8e8">Default for Box AI for Box Notes Q&A</strong>
+      	<strong style="background-color: #e8e8e8">Default for Box AI for Hubs</strong>
+				<strong style="background-color: #e8e8e8">Default for Box AI for Documents</strong>
+				<strong style="background-color: #e8e8e8">Default for Box AI for Notes Q&A</strong>
    			<strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #f8d59b">Premium</strong>
