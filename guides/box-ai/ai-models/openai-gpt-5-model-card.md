@@ -1,5 +1,5 @@
 ---
-rank: 3
+rank: 2
 related_guides:
   - box-ai/ai-tutorials/ask-questions
   - box-ai/ai-tutorials/generate-text
@@ -9,15 +9,15 @@ related_guides:
 category_id: box-ai
 subcategory_id: box-ai/ai-models
 is_index: false
-id: box-ai/ai-models/openai-gpt-5-reasoning-alpha-model-card
+id: box-ai/ai-models/openai-gpt-5-model-card
 type: guide
 total_steps: 26
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
-next_page_id: box-ai/ai-models/azure-openai-gpt-4-1-model-card
+next_page_id: box-ai/ai-models/openai-gpt-o3-model-card
 previous_page_id: box-ai/ai-models
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/openai-gpt-5-reasoning-alpha-model-card.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/openai-gpt-5-model-card.md
 ---
 # OpenAI GPT-5
 
@@ -29,7 +29,7 @@ source_url: >-
 | ----- | ----- | ----------- |
 | Model name | **GPT-5** | The name of the model. |
 | Model category | **Premium** | The category of the model: Standard or Premium. |
-| API model name |`openai__gpt_5_reasoning_alpha`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
+| API model name |`openai__gpt_5`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 | Hosting layer | **OpenAI** | The trusted organization that securely hosts LLM. |
 | Model provider | **OpenAI** | The organization that provides this model. |
 | Release date | **August 7th, 2025** | The release date for the model. |
