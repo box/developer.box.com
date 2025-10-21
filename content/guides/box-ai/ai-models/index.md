@@ -220,6 +220,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #fdfad8">Standard</strong>
+        <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
 			</div>
 		</Tile>
 		<Tile type="model" title="aws__titan_text_lite" href="/guides/box-ai/ai-models/aws-titan-text-lite-model-card">
