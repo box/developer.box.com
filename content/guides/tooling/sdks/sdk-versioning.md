@@ -102,7 +102,7 @@ Once your project is upgraded, follow the migration guides and migrate to the ge
 Follow detailed migration guides to migrate to the generated package within the Box core SDKs.
 
 - [Python: migrate from `boxsdk` to `box_sdk_gen` package][python-migration-gen]
-- [Node: migrate X][node-migration-gen]
+- [Node: migrate from `box-node-sdk` to `sdk-gen`][node-migration-gen]
 - [Java: migrate migrate from `com.box.sdk` to com.`box.sdkgen` package][java-migration-gen]
 - [.NET: migrate from `Box.V2` module to `Box.Sdk.Gen` module][windows-migration-gen]
 - [Swift: migrate from `BoxSDK` module to `BoxSdkGe`n module][swift-migration-gen]
@@ -141,14 +141,14 @@ Follow detailed migration guides to migrate from the Box Next Generation SDKs to
 [windows-migration-v6]: https://github.com/box/box-windows-sdk-v2/blob/combined-sdk/migration-guides/from-v5-to-v6.md
 [java-migration-v5]: https://github.com/box/box-java-sdk/blob/combined-sdk/migration-guides/from-v4-to-v5.md
 
-[java-migration-next-gen]: https://github.com/box/box-java-sdk/blob/sdk-gen/migration-guides/from-box-java-sdk-gen-v0-to-box-java-sdk.md
-[python-migration-next-gen]: https://github.com/box/box-python-sdk/blob/sdk-gen/migration-guides/from-box-python-sdk-gen-v1-to-box-python-sdk.md
-[swift-migration-next-gen]: https://github.com/box/box-ios-sdk/blob/sdk-gen/migration-guides/from-box-swift-sdk-gen-v0-to-box-ios-sdk.md
-[ts-migration-next-gen]: https://github.com/box/box-node-sdk/blob/sdk-gen/docs/migration-guides/from-box-typescript-sdk-gen-v1-to-box-node-sdk.md
-[dotnet-migration-next-gen]: https://github.com/box/box-windows-sdk-v2/blob/sdk-gen/migration-guides/from-dotnet-sdk-gen-v1-to-box-windows-sdk.md
+[java-migration-next-gen]: https://github.com/box/box-java-sdk/blob/combined-sdk/migration-guides/from-box-java-sdk-gen-v0-to-box-java-sdk.md
+[python-migration-next-gen]: https://github.com/box/box-python-sdk/blob/combined-sdk/migration-guides/from-box-python-sdk-gen-v1-to-box-python-sdk.md
+[swift-migration-next-gen]: https://github.com/box/box-ios-sdk/blob/combined-sdk/migration-guides/from-box-swift-sdk-gen-v0-to-box-ios-sdk.md
+[ts-migration-next-gen]: https://github.com/box/box-node-sdk/blob/combined-sdk/migration-guides/from-box-typescript-sdk-gen-v1-to-box-node-sdk.md
+[dotnet-migration-next-gen]: https://github.com/box/box-windows-sdk-v2/blob/combined-sdk/migration-guides/from-dotnet-sdk-gen-v1-to-box-windows-sdk.md
 
 [python-migration-gen]: https://github.com/box/box-python-sdk/blob/combined-sdk/migration-guides/from-boxsdk-to-box_sdk_gen.md
 [windows-migration-gen]: https://github.com/box/box-windows-sdk-v2/blob/combined-sdk/migration-guides/from-box-v2-to-box-sdk-gen-namespace.md
 [swift-migration-gen]: https://github.com/box/box-ios-sdk/blob/combined-sdk/migration-guides/from-BoxSDK-to-BoxSdkGen.md
 [java-migration-gen]: https://github.com/box/box-java-sdk/blob/combined-sdk/migration-guides/from-com-box-sdk-to-com-box-sdkgen.md
-[node-migration-gen]: /
+[node-migration-gen]: https://github.com/box/box-node-sdk/blob/combined-sdk/migration-guides/from-box-node-sdk-to-sdk-gen.md
