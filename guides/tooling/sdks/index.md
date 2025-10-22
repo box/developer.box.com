@@ -88,7 +88,8 @@ For more details, see our [SDK versioning strategy document][versioning].
 </Message>
 
 `v10` of Python SDK, Box TypeScript
-SDK, Box .NET SDK, and Box Swift SDK is designed to elevate the developer
+SDK, Box .NET SDK, Box Java SDK, and Box Swift SDK are designed
+to elevate the developer
 experience and streamline your integration
 with Box Content Cloud.
 
