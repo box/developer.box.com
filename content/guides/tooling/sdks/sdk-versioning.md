@@ -30,20 +30,20 @@ Here's what you can expect from generated packages of the Box SDK:
 ## What it means for your project
 
 <TileGrid rows="2">
-  <Tile type="cog" title="1. Existing App - Box core SDK" href="/guides/tooling/sdks/sdk-versioning/#migration-to-the-generated-package">
+  <Tile type="cog" title="1. Existing App - the Box core SDK" href="/guides/tooling/sdks/sdk-versioning/#migration-to-the-generated-package">
     If you have an existing application that relies on Box core SDK and you wish to further develop your project:
 
-    **Action** Use the major version which includes consolidated packages. Start using convenience methods and new features from the generated package, and gradually migrate your codebase.
+    **Action** Use the major version that includes consolidated packages. Start using convenience methods and new features from the generated package, and gradually migrate your codebase.
   </Tile>
-  <Tile type="code-new" title="2. Existing App - Box Next Generation SDK" href="/guides/tooling/sdks/sdk-versioning/#migration-from-box-next-generation-sdks">
+  <Tile type="code-new" title="2. Existing App - the Box Next Generation SDK" href="/guides/tooling/sdks/sdk-versioning/#migration-from-box-next-generation-sdks">
     If you have an existing application that relies only on the Box Next Generation SDK and you wish to further develop your project:
 
     **Action** Replace the library name in your package manager with Box core SDK package (≥`v10.0.0`). Check migration guides for detailed instructions.
   </Tile>
-  <Tile type="branch" title="3. Existing App - Box core SDK and the Box Next Generation SDK" href="/guides/tooling/sdks/sdk-versioning/#migration-to-the-generated-package">
+  <Tile type="branch" title="3. Existing App - the Box core SDK and the Box Next Generation SDK" href="/guides/tooling/sdks/sdk-versioning/#migration-to-the-generated-package">
     If you have an existing application that relies both on Box core SDK and  Next Generation SDK:
 
-    **Action** Use the major version which includes consolidated packages.
+    **Action** Use the major version that includes consolidated packages.
   </Tile>
   <Tile type="cli2" title="4. New Application" href="/guides/tooling/sdks/sdk-versioning/#box-core-sdk-versions-and-artifacts-overview">
     If you are creating a new application:
@@ -53,7 +53,7 @@ Here's what you can expect from generated packages of the Box SDK:
   <Tile type="info" title="5. No Active Development" href="/guides/tooling/sdks/sdk-versioning/#box-core-sdk-versions-and-artifacts-overview">
     If you have an existing application that you don't plan to change:
 
-    **Action** Ensure your package manager includes the specific version of the SDK version to prevent accidental updates. We strongly recommend upgrading to the major version, which includes consolidated packages, to receive ongoing security patches and improvements.
+    **Action** Ensure your package manager includes the specific version to prevent accidental updates. We strongly recommend upgrading to the major version, which includes consolidated packages, to receive ongoing security patches and improvements.
   </Tile>
 </TileGrid>
 
@@ -95,7 +95,7 @@ As of September 17, 2025 Box Next Generation SDKs are no longer supported as sep
 
 ### Migration from Box Next Generation SDKs
 
-Follow detailed migration guides to migrate from from the Box Next Generation SDKs to the Box core SDK `v10`:
+Follow detailed migration guides to migrate from the Box Next Generation SDKs to the Box core SDK `v10`:
 
 - [Python][python-migration-v10]
 - [TypeScript/Node][ts-migration-v10]
