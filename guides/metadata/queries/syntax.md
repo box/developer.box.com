@@ -7,10 +7,10 @@ is_index: false
 id: metadata/queries/syntax
 rank: 2
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: metadata/queries
 parent_id: metadata/queries
-next_page_id: metadata/queries/pagination
+next_page_id: metadata/queries/item-fields
 previous_page_id: metadata/queries/create
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/5-queries/2-syntax.md
@@ -103,6 +103,10 @@ A query supports the following logical operators.
 | `NOT IN`                | Similar to `IN` but when the template field value matches none of the arguments provided in the list.                                                                                                                                                 |
 | `IS NULL`               | Matches when the template field value is `null`.                                                                                                                                                                                                      |
 | `IS NOT NULL`                | Matches when the template field value is not `null` .                                                                                                                                                                                                 |
+| `~` | Performs term-level search on the field against the provided terms. |
+| `HASANY` | Matches when the field value is equal to any of the arguments provided. The format requires each item in the list to be an explicitly defined `query_params` argument, for example, amount `HASANY (:arg1, :arg2, :arg3)`. |
+| `HASALL` | Matches when the field value has a match for all the arguments provided. The format requires each item in the list to be an explicitly defined `query_params` argument, for example, amount `HASALL (:arg1, :arg2, :arg3)`. |
+| `HASANCESTOR` | Matches when the field value is a descendant of any argument provided. The format requires each item in the list to be an explicitly defined `query_params` argument, for example, amount `HASANCESTOR (:arg1, :arg2, :arg3)`. Supported only for the taxonomy MD field. |
 
 <!-- i18n-disable localize-links -->
 

@@ -7,10 +7,10 @@ is_index: false
 id: metadata/queries/limitations
 rank: 5
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: metadata/queries
 parent_id: metadata/queries
-next_page_id: metadata/queries/comparison
+next_page_id: metadata/queries/pagination
 previous_page_id: metadata/queries/errors
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/5-queries/5-limitations.md
@@ -40,21 +40,21 @@ There are no immediate plans to start supporting these queries in the future.
 
 ## Recommended result set size
 
-Where possible it is recommended to only send requests for which the result
+Where possible, it is recommended to only send requests for which the result
 set is less than 2,000 items.​ The ​result set​ is the entire collection of
-files and folder that match the metadata query exclusively based on evaluating
-the `​from​`, `​query​`, and `​query_params​` parameters - before the requesting
+files and folders that match the metadata query exclusively based on evaluating
+the `​from​`, `​query​`, and `​query_params​` parameters — before the requesting
 user’s permissions and the `​ancestor_folder​` scope are considered.
 
 When sending a metadata query request for which the result set exceeds 2,000
-items, the API can only guarantee that it returns all all matching results if
-both the following conditions are met.
+items, the API can only guarantee that it returns all matching results if
+both the following conditions are met:
 
 1. The requesting user has at least **​Previewer** ​permission to all items in the result set
 2. The ancestor folder contains all of the files in the result set
 
 When sending a metadata query request for which the result set exceeds 2,000
-items and for which these conditions are not true, the API might return error
+items and for which these conditions are not true, the API might return an error
 with a 4XX response code indicating that the query will need to be restricted to
 return fewer results.
 
@@ -78,7 +78,7 @@ In this example, assume that there are 10 photographers, each of which have
 captured the same number of images that have the ​`catalogImages​` template
 applied.
 
-Now consider assume that there are 4,000 files in your Box enterprise
+Now consider that there are 4,000 files in your Box enterprise
 which have the `catalogImages` template ​applied and which are split evenly
 between the two folders,​ `Parts​` and `Products`, ​which are children of the
 parent folder `​Catalog​` as shown below.
@@ -102,9 +102,7 @@ The following table indicates the outcome of several possible queries. The query
 is described in plain language for readability.
 
 Remember that the ​result set ​is defined as a collection of items (files and
-folders) which match the metadata query exclusively based on evaluating the
-`​from​`, `​query​`, and `​query_params` parameters before the requesting user’s
-permissions and the `​ancestor_folder​` scope are considered.
+folders) which match the metadata query exclusively based on evaluating the `​from​`, `​query​`, and `​query_params` parameters — before the requesting user’s permissions and the `​ancestor_folder​` scope are considered.
 
 | Query                                                                                                      | Result Set  | Outcome  | Notes                                                                                                                         |
 |------------------------------------------------------------------------------------------------------------|-------------|----------|-------------------------------------------------------------------------------------------------------------------------------|
