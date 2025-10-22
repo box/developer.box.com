@@ -114,19 +114,19 @@
   // Describes the situation where a parameter canbe only one of many values
   "reference.enum.value_is_one_of": "Value is one of",
   // A label for Node JScode sample - DO NOT TRANSLATE
-  "reference.environments.node": "Node v3",
+  "reference.environments.node": "Node v4",
   // A label for .NETcode sample - DO NOT TRANSLATE
-  "reference.environments.dotnet": ".NET v5",
+  "reference.environments.dotnet": ".NET v6",
   // A label for Javacode sample - DO NOT TRANSLATE
-  "reference.environments.java": "Java v4",
+  "reference.environments.java": "Java v5",
   // A label for Pythoncode sample - DO NOT TRANSLATE
-  "reference.environments.python": "Python v3",
+  "reference.environments.python": "Python v4",
   // Describes the command line interface whenselecting a code sample - DO NOT TRANSLATE
   "reference.environments.cli": "CLI",
   // Describes the cURL tool whenselecting a code sample
   "reference.environments.curl": "cURL",
   // A label for iOS code sample - DO NOT TRANSLATE
-  "reference.environments.ios": "iOS v5",
+  "reference.environments.ios": "iOS v6",
   // A label for TypeScript code samplefrom auto-generated SDK - DO NOT TRANSLATE
   "reference.environments.ts_gen": "Node/TypeScript v10",
   // A label for Python code sample fromauto-generated SDK - DO NOT TRANSLATE
