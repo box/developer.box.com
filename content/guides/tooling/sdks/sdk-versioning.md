@@ -17,7 +17,7 @@ the Box core SDKs and the Box Next Generation SDKs were initially created as sep
 
 To facilitate this migration process, there are two actively maintained major Box core SDK versions:
 
-- **A major version that follows sequential versioning for each SDK artifact. includes:** the manually maintained package and the generated one. This SDK version enables leveraging coexisting packages at the same time, and serve as a transition phase. Support for the consolidated version of each Box core SDKs will continue in 2027.
+- **A major version that follows sequential versioning for each SDK artifact. includes:** the manually maintained package and the generated one. This SDK version enables leveraging coexisting packages at the same time, and serves as a transition phase. Support for the consolidated version of each Box core SDKs will continue in 2027.
 - `v10` includes **only the generated package**.
 
 Here's what you can expect from generated packages of the Box SDK:
