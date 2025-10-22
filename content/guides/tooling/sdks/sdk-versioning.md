@@ -43,7 +43,7 @@ Here's what you can expect from generated packages of the Box SDK:
   <Tile type="branch" title="3. Existing App - the Box core SDK and the Box Next Generation SDK" href="/guides/tooling/sdks/sdk-versioning/#migration-from-manually-maintained-sdk-version-to-the-consolidated-sdk-version">
     If you have an existing application that relies both on the Box core SDK and the Next Generation SDK:
 
-    **Action** Use the major version that includes consolidated packages.
+    **Action** Use the major version that includes consolidated packages. Ultimately, migrate to the Box core SDK package (≥`v10.0.0`).
   </Tile>
   <Tile type="cli2" title="4. A New Application" href="/guides/tooling/sdks/sdk-versioning/#box-core-sdk-versions-and-artifacts-overview">
     If you are creating a new application:
