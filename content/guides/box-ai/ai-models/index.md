@@ -169,7 +169,7 @@ Box AI is powered by the following AI models. These models are integrated with B
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
 			</div>
 		</Tile> 
-    		<Tile type="model" title="aws__claude_4_5_haiku" href="/guides/box-ai/ai-models/aws-claude-4-5-haiku-model-card">
+    <Tile type="model" title="aws__claude_4_5_haiku" href="/guides/box-ai/ai-models/aws-claude-4-5-haiku-model-card">
 			A fast model with near-frontier intelligence.
 			<div>
 				<strong style="background-color: #e8e8e8">Chat</strong>
