@@ -15,7 +15,7 @@ type: guide
 total_steps: 26
 sibling_id: box-ai
 parent_id: box-ai
-next_page_id: box-ai/ai-models/openai-gpt-5-reasoning-alpha-model-card
+next_page_id: box-ai/ai-models/openai-gpt-5-model-card
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/index.md
@@ -76,11 +76,29 @@ Box AIには以下のモデルが搭載されています。Box AIと統合さ�
 
 <TileGrid rows="2">
 
-<Tile type="gpt" title="openai__gpt_5_reasoning_alpha" href="/guides/box-ai/ai-models/openai-gpt-5-reasoning-alpha-model-card">
+<Tile type="gpt" title="openai__gpt_5" href="/guides/box-ai/ai-models/openai-gpt-5-model-card">
 
 高度な推論機能と長いコンテキストの理解を備えたマルチモーダルモデル。
 
 <div>
+
+<strong style="background-color: #e8e8e8">
+
+Default for Box AI for Hubs
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
+Default for Box AI for Documents
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
+Default for Box AI for Notes Q&A
+
+</strong>
 
 <strong style="background-color: #e8e8e8">
 
@@ -109,24 +127,6 @@ Box AIには以下のモデルが搭載されています。Box AIと統合さ�
 軽量のタスクを処理するように設計されたマルチモーダルモデル。
 
 <div>
-
-<strong style="background-color: #e8e8e8">
-
-Box AI for Hubsのデフォルト
-
-</strong>
-
-<strong style="background-color: #e8e8e8">
-
-Box AI for Documentsのデフォルト
-
-</strong>
-
-<strong style="background-color: #e8e8e8">
-
-Box AI for NotesのQ&Aのデフォルト
-
-</strong>
 
 <strong style="background-color: #e8e8e8">
 
@@ -727,6 +727,12 @@ FedRAMP Moderate
 <strong style="background-color: #fdfad8">
 
 標準
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
 
 </strong>
 
