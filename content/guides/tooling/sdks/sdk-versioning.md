@@ -31,7 +31,7 @@ Here's what you can expect from generated packages of the Box SDK:
 
 <TileGrid rows="2">
   <Tile type="cog" title="1. Existing App - the Box core SDK" href="/guides/tooling/sdks/sdk-versioning/#migration-to-the-generated-package">
-    If you have an existing application that relies on Box core SDK and you wish to further develop your project:
+    If you have an existing application that relies on the Box core SDK and you wish to further develop your project:
 
     **Action** Use the major version that includes consolidated packages. Start using convenience methods and new features from the generated package, and gradually migrate your codebase.
   </Tile>
