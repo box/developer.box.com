@@ -81,18 +81,19 @@ Don't worry, your existing code will continue to work without changes. You can s
 
 In keeping with industry best practices, we are consolidating the Box Next Generation SDKs and Box core SDKs into a single package for each programming language. This makes migration efforts much easier and allows seamless additions of new capabilities to existing applications still powered by Box core SDKs, which were maintained manually.
 
-All future development, including new features and updates for the Next Generation SDKs, will be delivered through Box core SDKs starting with version `v10`. Currently, `v10` is available as a separate branch.
+**All future development, including new features and updates, will be delivered through the Box core SDKs. The standalone generated artifact was introduced in the version `v10` of the Box core SDKs, and it is currently available as a separate branch.**
 
 For more details, see our [SDK versioning strategy document][versioning].
 
 </Message>
 
-The latest generation Box Python SDK, Box TypeScript
-SDK, Box .NET SDK, and Box Swift SDK are designed to elevate the developer
+`v10` of Python SDK, Box TypeScript
+SDK, Box .NET SDK, Box Java SDK, and Box Swift SDK are designed
+to elevate the developer
 experience and streamline your integration
 with Box Content Cloud.
 
-Here's what you can expect from the new SDKs:
+Here's what you can expect from `v10`:
 
 - **Full API support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
 - **Rapid API updates**: The new auto-generation development approach allows you to add Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.

@@ -38,7 +38,7 @@ Box AI API provides a number of capabilities
 designed to help you leverage Large Language Models (LLMs)
 in your application workflows.
 
-Currently, you can ask Box AI to answer
+You can ask Box AI to answer
 user questions, summarize the document content,
 or generate text you can use in your documents.
 You can also use Box AI to extract metadata from the
