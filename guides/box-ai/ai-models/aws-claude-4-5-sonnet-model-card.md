@@ -19,15 +19,15 @@ previous_page_id: box-ai/ai-models/google-gemini-2-0-flash-001-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/aws-claude-4-5-sonnet-model-card.md
 ---
-# AWS Claude 4.5 Sonnet
+# AWS Claude Sonnet 4.5
 
-**AWS Claude 4.5 Sonnet** model is a high-performance model designed for building complex agents, delivering leading coding capabilities and executing across development tasks. It excels at autonomously planning and executing complex, multi-step workflows and is particularly effective in areas like finance, research, and cybersecurity.
+**AWS Claude Sonnet 4.5** model is a high-performance model designed for building complex agents, delivering leading coding capabilities and executing across development tasks. It excels at autonomously planning and executing complex, multi-step workflows and is particularly effective in areas like finance, research, and cybersecurity.
 
 ## Model details
 
 | Item  | Value | Description |
 | ----- | ----- | ----------- |
-| Model name | **AWS Claude 4.5 Sonnet** | The name of the model. |
+| Model name | **AWS Claude Sonnet 4.5** | The name of the model. |
 | Model category | **Premium** | The category of the model: Standard or Premium. |
 | API model name |`aws__claude_4_5_sonnet`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 | Hosting layer | **Amazon Web Services (AWS)** | The trusted organization that securely hosts LLM. |
@@ -41,7 +41,7 @@ source_url: >-
 
 ## Additional documentation
 
-For additional information, see [official AWS Claude 4.5 Sonnet documentation][aws-claude].
+For additional information, see [official AWS Claude Sonnet 4.5 documentation][aws-claude].
 
 [aws-claude]: https://aws.amazon.com/bedrock/anthropic/
 [overrides]: g://box-ai/ai-agents/ai-agent-overrides
