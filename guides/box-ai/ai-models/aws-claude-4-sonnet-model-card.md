@@ -11,11 +11,11 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/aws-claude-4-sonnet-model-card
 type: guide
-total_steps: 26
+total_steps: 27
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
 next_page_id: box-ai/ai-models/aws-claude-4-opus-model-card
-previous_page_id: box-ai/ai-models/aws-claude-4-5-sonnet-model-card
+previous_page_id: box-ai/ai-models/aws-claude-4-5-haiku-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/aws-claude-4-sonnet-model-card.md
 ---
