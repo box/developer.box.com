@@ -13,12 +13,12 @@ alias_paths: []
 
 # Box SDK versioning strategy
 
-the Box core SDKs and the Box Next Generation SDKs were initially created as separate libraries. However, in keeping with industry best practices, **we are consolidating the Box Next Generation SDKs and the Box core SDKs into a single package for each programming language**. This makes migration efforts much easier and allows seamless addition of new capabilities to existing applications still powered by older versions of the Box core SDKs, which were maintained manually.
+The Box core SDKs and the Box Next Generation SDKs were initially created as separate libraries. However, in keeping with industry best practices, **we are consolidating the Box Next Generation SDKs and the Box core SDKs into a single package for each programming language**. This makes migration efforts much easier and allows seamless addition of new capabilities to existing applications still powered by older versions of the Box core SDKs, which were maintained manually.
 
 To facilitate this migration process, there are two actively maintained major Box core SDK versions:
 
-- **A major version that follows sequential versioning for each SDK artifact. includes:** the manually maintained package and the generated one. This SDK version enables leveraging coexisting packages at the same time, and serves as a transition phase. Support for the consolidated version of each Box core SDKs will continue in 2027.
-- `v10` includes **only the generated package**.
+- **A major version that follows sequential versioning for each SDK artifact and includes:** the manually maintained package and the generated one. This SDK version enables leveraging coexisting packages at the same time, and serves as a transition phase. Support for the consolidated version of each Box core SDKs will continue in 2027.
+- `v10` that includes **only the generated package**.
 
 Here's what you can expect from generated packages of the Box SDK:
 
