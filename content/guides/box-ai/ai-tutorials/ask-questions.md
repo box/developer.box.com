@@ -15,7 +15,7 @@ alias_paths:
 # Ask questions to Box AI
 
 <Message type="notice">
-Box AI API is available to all Enterprise Plus and Enterprise Advanced customers.
+Box AI API is available to all customers Business and above.
 
 </Message>
 
