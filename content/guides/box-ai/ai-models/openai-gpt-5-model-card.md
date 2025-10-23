@@ -1,5 +1,5 @@
 ---
-rank: 3
+rank: 2
 related_guides:
   - box-ai/ai-tutorials/ask-questions
   - box-ai/ai-tutorials/generate-text
@@ -17,7 +17,7 @@ related_guides:
 | ----- | ----- | ----------- |
 | Model name | **GPT-5** | The name of the model. | 
 | Model category | **Premium** | The category of the model: Standard or Premium. |
-| API model name |`openai__gpt_5_reasoning_alpha`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
+| API model name |`openai__gpt_5`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 | Hosting layer | **OpenAI** | The trusted organization that securely hosts LLM. |
 | Model provider | **OpenAI** | The organization that provides this model. |
 | Release date | **August 7th, 2025** | The release date for the model. |
