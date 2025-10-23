@@ -165,10 +165,19 @@ Box AI is powered by the following AI models. These models are integrated with B
 			<div>
 				<strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #e1ffe7">Available</strong>
-				<strong style="background-color: #fdfad8">Premium</strong>
+				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
 			</div>
-		</Tile>     
+		</Tile> 
+    <Tile type="model" title="aws__claude_4_5_haiku" href="/guides/box-ai/ai-models/aws-claude-4-5-haiku-model-card">
+			A fast model with near-frontier intelligence.
+			<div>
+				<strong style="background-color: #e8e8e8">Chat</strong>
+				<strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #fdfad8">Standard</strong>
+        <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
+			</div>
+		</Tile>    
 		<Tile type="model" title="aws__claude_4_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-5-sonnet-model-card">
 			A model that brings frontier performance to everyday use cases.
 			<div>
