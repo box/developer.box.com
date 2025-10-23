@@ -7,10 +7,10 @@ is_index: false
 id: metadata/queries/syntax
 rank: 2
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: metadata/queries
 parent_id: metadata/queries
-next_page_id: metadata/queries/pagination
+next_page_id: metadata/queries/item-fields
 previous_page_id: metadata/queries/create
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/5-queries/2-syntax.md
@@ -77,19 +77,23 @@ fullyTranslated: true
 
 <!-- i18n-enable localize-links -->
 
-| 演算子           |                                                                                                                                                                                 |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `AND`         | `AND`で区切られたすべての条件が`TRUE`の場合に一致となります。                                                                                                                                            |
-| `OR`          | `OR`で区切られた条件のいずれかが`TRUE`の場合に一致となります。                                                                                                                                            |
-| `NOT`         | 先行する条件が`TRUE`**でない**場合に一致となります。                                                                                                                                                 |
-| `LIKE`        | テンプレートフィールドの値がパターンと一致する場合に一致となります。文字列値のみに対応します。詳細については、[パターン一致](#pattern-matching)を参照してください。その他の制限については以下を参照してください。                                                             |
-| `NOT LIKE`    | テンプレートフィールドの値がパターンと一致**しない**場合に一致となります。文字列値のみに対応します。詳細については、[パターン一致](#pattern-matching)を参照してください。その他の制限については以下を参照してください。                                                        |
-| `ILIKE`       | `LIKE`と同じですが、大文字と小文字が区別されません。その他の制限については以下を参照してください。                                                                                                                            |
-| `NOT ILIKE`   | `NOT LIKE`と同じですが、大文字と小文字が区別されません。その他の制限については以下を参照してください。                                                                                                                        |
-| `IN`          | テンプレートフィールドの値が指定されたリストの任意の値と等しい場合に一致となります。`amount IN (:arg1, :arg2, :arg3)`などの各リスト項目には、明示的に定義された`query_params`引数を使用します。仕様では、IN演算子はメタデータクエリの複数選択フィールドでサポートされていないため、400エラーが返されます。 |
-| `NOT IN`      | `IN`に似ていますが、テンプレートフィールドの値は、リストに指定されたどの引数にも一致しません。                                                                                                                               |
-| `IS NULL`     | テンプレートフィールドの値が`null`の場合に一致となります。                                                                                                                                                |
-| `IS NOT NULL` | テンプレートフィールドの値が`null`でない場合に一致となります。                                                                                                                                              |
+| 演算子           |                                                                                                                                                                                                                                                                          |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `AND`         | `AND`で区切られたすべての条件が`TRUE`の場合に一致となります。                                                                                                                                                                                                                                     |
+| `OR`          | `OR`で区切られた条件のいずれかが`TRUE`の場合に一致となります。                                                                                                                                                                                                                                     |
+| `NOT`         | 先行する条件が`TRUE`**でない**場合に一致となります。                                                                                                                                                                                                                                          |
+| `LIKE`        | テンプレートフィールドの値がパターンと一致する場合に一致となります。文字列値のみに対応します。詳細については、[パターン一致](#pattern-matching)を参照してください。その他の制限については以下を参照してください。                                                                                                                                                      |
+| `NOT LIKE`    | テンプレートフィールドの値がパターンと一致**しない**場合に一致となります。文字列値のみに対応します。詳細については、[パターン一致](#pattern-matching)を参照してください。その他の制限については以下を参照してください。                                                                                                                                                 |
+| `ILIKE`       | `LIKE`と同じですが、大文字と小文字が区別されません。その他の制限については以下を参照してください。                                                                                                                                                                                                                     |
+| `NOT ILIKE`   | `NOT LIKE`と同じですが、大文字と小文字が区別されません。その他の制限については以下を参照してください。                                                                                                                                                                                                                 |
+| `IN`          | テンプレートフィールドの値が指定されたリストの任意の値と等しい場合に一致となります。`amount IN (:arg1, :arg2, :arg3)`などの各リスト項目には、明示的に定義された`query_params`引数を使用します。仕様では、IN演算子はメタデータクエリの複数選択フィールドでサポートされていないため、400エラーが返されます。                                                                                          |
+| `NOT IN`      | `IN`に似ていますが、テンプレートフィールドの値は、リストに指定されたどの引数にも一致しません。                                                                                                                                                                                                                        |
+| `IS NULL`     | テンプレートフィールドの値が`null`の場合に一致となります。                                                                                                                                                                                                                                         |
+| `IS NOT NULL` | テンプレートフィールドの値が`null`でない場合に一致となります。                                                                                                                                                                                                                                       |
+| `~`           | Performs term-level search on the field against the provided terms.                                                                                                                                                                                                      |
+| `HASANY`      | Matches when the field value is equal to any of the arguments provided. The format requires each item in the list to be an explicitly defined `query_params` argument, for example, amount `HASANY (:arg1, :arg2, :arg3)`.                                               |
+| `HASALL`      | Matches when the field value has a match for all the arguments provided. The format requires each item in the list to be an explicitly defined `query_params` argument, for example, amount `HASALL (:arg1, :arg2, :arg3)`.                                              |
+| `HASANCESTOR` | Matches when the field value is a descendant of any argument provided. The format requires each item in the list to be an explicitly defined `query_params` argument, for example, amount `HASANCESTOR (:arg1, :arg2, :arg3)`. Supported only for the taxonomy MD field. |
 
 <!-- i18n-disable localize-links -->
 

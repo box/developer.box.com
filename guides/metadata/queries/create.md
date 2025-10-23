@@ -7,7 +7,7 @@ is_index: false
 id: metadata/queries/create
 rank: 1
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: metadata/queries
 parent_id: metadata/queries
 next_page_id: metadata/queries/syntax

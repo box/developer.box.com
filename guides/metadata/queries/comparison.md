@@ -7,11 +7,11 @@ is_index: false
 id: metadata/queries/comparison
 rank: 7
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: metadata/queries
 parent_id: metadata/queries
 next_page_id: ''
-previous_page_id: metadata/queries
+previous_page_id: metadata/queries/pagination
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/5-queries/7-comparison.md
 fullyTranslated: true

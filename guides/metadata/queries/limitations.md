@@ -7,10 +7,10 @@ is_index: false
 id: metadata/queries/limitations
 rank: 5
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: metadata/queries
 parent_id: metadata/queries
-next_page_id: metadata/queries/comparison
+next_page_id: metadata/queries/pagination
 previous_page_id: metadata/queries/errors
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/5-queries/5-limitations.md
@@ -36,14 +36,14 @@ Boxでは、メタデータテンプレートを使用してコンテンツの�
 
 ## 推奨される結果セットのサイズ
 
-可能であれば、結果セットの項目数が2,000未満になるリクエストのみを送信することをお勧めします。結果セットは、リクエストするユーザーの権限と`​ancestor_folder​`スコープが考慮される前に、`​from​`、`​query​`および`​query_params​`パラメータの評価だけに基づいてメタデータクエリに一致するファイルとフォルダのコレクション全体です。
+Where possible, it is recommended to only send requests for which the result set is less than 2,000 items.​ The ​result set​ is the entire collection of files and folders that match the metadata query exclusively based on evaluating the `​from​`, `​query​`, and `​query_params​` parameters — before the requesting user’s permissions and the `​ancestor_folder​` scope are considered.
 
-結果セットの項目数が2,000を超えるメタデータクエリリクエストを送信した場合、APIは、以下の条件が両方とも満たされる場合に一致する結果をすべて返すことのみを保証できます。
+When sending a metadata query request for which the result set exceeds 2,000 items, the API can only guarantee that it returns all matching results if both the following conditions are met:
 
 1. リクエストするユーザーが、結果セットに含まれるすべての項目に対して**プレビューアー**以上の権限を持っていること。
 2. 先祖フォルダに、結果セット内のすべてのファイルが含まれていること。
 
-結果セットの項目数が2,000を超えており、上記の条件が当てはまらないメタデータクエリリクエストを送信すると、APIは、返される結果が少なくなるようクエリを制限する必要があることを示すレスポンスコード4XXとともにエラーを返す可能性があります。
+When sending a metadata query request for which the result set exceeds 2,000 items and for which these conditions are not true, the API might return an error with a 4XX response code indicating that the query will need to be restricted to return fewer results.
 
 たとえば、次に示す、`catalogImages​`というメタデータテンプレートの簡略化したレプリゼンテーションを考えてみます。これには、`​photographer`という文字列フィールドが1つあります。
 
@@ -62,7 +62,7 @@ Boxでは、メタデータテンプレートを使用してコンテンツの�
 
 この例では、10人のphotographer (写真家) がいて、それぞれが`catalogImages​`テンプレートが適用されている同じ数の画像を取り込むとします。
 
-ここで、Box Enterpriseに、`catalogImages`テンプレートが適用され、2つのフォルダ`Parts​`と`Products`に均等に分けられている、4,000個のファイルがあると考えてみます。この2つのフォルダは、以下に示すように親フォルダ`​Catalog​`の子です。
+Now consider that there are 4,000 files in your Box enterprise which have the `catalogImages` template ​applied and which are split evenly between the two folders,​ `Parts​` and `Products`, ​which are children of the parent folder `​Catalog​` as shown below.
 
 ```sh
 Catalog/
@@ -82,7 +82,7 @@ Catalog/
 
 以下の表に、考えられるいくつかのクエリの結果を示します。クエリについては、読みやすくするために平易な言葉で説明しています。
 
-結果セットは、リクエストするユーザーの権限と`​ancestor_folder​`スコープが考慮される前に、`​from​`、`​query​`および`​query_params`パラメータの評価だけに基づいてメタデータクエリに一致する項目 (ファイルとフォルダ) のコレクションとして定義されることに注意してください。
+Remember that the ​result set ​is defined as a collection of items (files and folders) which match the metadata query exclusively based on evaluating the `​from​`, `​query​`, and `​query_params` parameters — before the requesting user’s permissions and the `​ancestor_folder​` scope are considered.
 
 | クエリ                                                                  | 結果セット   | 結果        | メモ                                                                    |
 | -------------------------------------------------------------------- | ------- | --------- | --------------------------------------------------------------------- |
