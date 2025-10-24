@@ -28,16 +28,16 @@ fullyTranslated: true
 
 既存のコードは、変更しなくても引き続き動作します。Boxの次世代SDKをベースにしたアプリケーションは影響なく引き続きご利用いただけますが、新機能、更新、バグ修正は提供されなくなります。
 
-次世代SDK向けの新機能や更新を含む、今後の開発はすべて、`v10`以降のBoxコアSDKを通じて提供されます。現在、`v10`は個別の[ブランチ][branch]として利用可能です。
-
-詳細については、[SDKのバージョン戦略に関するドキュメント][versioning]を参照してください。
+**All future development, including new features and updates, will be delivered through the Box core SDKs. The standalone generated artifact was introduced in the version `v10` of the Box core SDKs, and it is currently available as a separate [branch][sdk-branch].**
 
 </Message>
 
-Boxの次世代SDKからBoxコアSDK `v10`への切り替え方法については、[移行ガイド][migration]を参照してください。
+Check the [migration guide][migration] to learn how to switch from the Box Next Generation SDK to the Box core SDK `v10`.
+
+詳細については、[SDKのバージョン戦略に関するドキュメント][versioning]を参照してください。
 
 [versioning]: g://tooling/sdks/sdk-versioning
 
-[branch]: https://github.com/box/box-java-sdk/tree/sdk-gen
+[sdk-branch]: https://github.com/box/box-java-sdk/tree/sdk-gen
 
-[migration]: https://github.com/box/box-java-sdk/blob/sdk-gen/migration-guides/from-box-java-sdk-gen-v0-to-box-java-sdk-v10.md
+[migration]: https://github.com/box/box-java-sdk/blob/sdk-gen/migration-guides/from-box-java-sdk-gen-v0-to-box-java-sdk.md

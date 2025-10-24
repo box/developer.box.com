@@ -47,7 +47,7 @@ Box AI Developer Zoneでは、AIエージェントやインテリジェントな
 
 </Header>
 
-Box AI API is available to all customers Business and above.
+Box AI APIは、Business以上をご利用のすべてのお客様が利用できます。
 
 <TileGrid rows="4">
 
@@ -231,13 +231,13 @@ MCP
 
 </Tile>
 
-<Tile type="mcp" title="Build AI Apps with MCP Servers" href="https://www.deeplearning.ai/short-courses/build-ai-apps-with-mcp-server-working-with-box-files/">
+<Tile type="mcp" title="MCPサーバーを使用したAIアプリの構築" href="https://www.deeplearning.ai/short-courses/build-ai-apps-with-mcp-server-working-with-box-files/">
 
-Join a short online course, built in partnership with Deeplearning.ai, and taught by Ben Kus, Box CTO.
+Deeplearning.aiと共同で作成された、Box CTOのBen Kusによる簡単なオンラインコースにご参加ください。
 
 <strong style="background-color: #e8e8e8">
 
-Short Course
+簡単なコース
 
 </strong>
 
@@ -245,7 +245,7 @@ Short Course
 
 <Tile type="mcp" title="Box MCPサーバーとPydantic AI" href="https://medium.com/box-developer-blog/building-ai-powered-document-generation-with-box-mcp-and-pydantic-ai-48775b18ae32">
 
-Use Box Doc Gen through the Box MCP server for AI-Powered Document Generation.
+AIを活用したドキュメント生成のためにBox MCPサーバーからBox Doc Genを使用します。
 
 <div>
 
@@ -389,7 +389,7 @@ BoxのAI統合を使用して、LLMモデルの既存のナレッジベースを
 
 <Tile type="box-brown" title="LangChain.js" href="https://www.npmjs.com/package/langchainjs-box">
 
-Include Box content in your LLM workflows with Box loader for LangChain.js.
+LangChain.js向けのBox loaderを使用して、BoxコンテンツをLLMワークフローに含めます。
 
 <div>
 

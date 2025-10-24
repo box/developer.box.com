@@ -1,5 +1,5 @@
 ---
-rank: 29
+rank: 28
 related_guides:
   - box-ai/ai-tutorials/ask-questions
   - box-ai/ai-tutorials/generate-text
@@ -11,24 +11,24 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/aws-claude-4-5-sonnet-model-card
 type: guide
-total_steps: 26
+total_steps: 27
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
-next_page_id: box-ai/ai-models/aws-claude-4-sonnet-model-card
+next_page_id: box-ai/ai-models/aws-claude-4-5-haiku-model-card
 previous_page_id: box-ai/ai-models/google-gemini-1-5-flash-001-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/aws-claude-4-5-sonnet-model-card.md
 fullyTranslated: true
 ---
-# AWS Claude 4.5 Sonnet
+# AWS Claude Sonnet 4.5
 
-**AWS Claude 4.5 Sonnet**モデルは、複雑なエージェントの作成用に設計された高性能のモデルであり、優れたコーディング機能を提供し、開発タスク全体にわたって実行します。このモデルは、複雑なマルチステップワークフローの自律的な計画および実行に優れており、特に金融、研究、サイバーセキュリティなどの分野で効果的です。
+The **AWS Claude Sonnet 4.5** model is a high-performance model designed for building complex agents, delivering leading coding capabilities, and executing across development tasks. It excels at autonomously planning and executing complex, multi-step workflows and is particularly effective in areas like finance, research, and cybersecurity.
 
 ## モデルの詳細
 
 | 項目            | 値                             | 説明                                                                                 |
 | ------------- | ----------------------------- | ---------------------------------------------------------------------------------- |
-| モデル名          | **AWS Claude 4.5 Sonnet**     | モデルの名前。                                                                            |
+| モデル名          | **AWS Claude Sonnet 4.5**     | モデルの名前。                                                                            |
 | モデルのカテゴリ      | **プレミアム**                     | モデルのカテゴリ: 標準またはプレミアム。                                                              |
 | APIモデル名       | `aws__claude_4_5_sonnet`      | [Box AI APIでのモデルの上書き][overrides]に使用されるモデルの名前。APIを動作させるには、ユーザーがこの名前を正確に指定する必要があります。 |
 | ホスティングレイヤー    | **Amazon Web Services (AWS)** | LLMを安全にホストする、信頼できる組織。                                                              |
@@ -42,7 +42,7 @@ fullyTranslated: true
 
 ## その他のドキュメント
 
-詳細については、[AWS Claude 4.5 Sonnetの公式ドキュメント][aws-claude]を参照してください。
+For additional information, see [official AWS Claude Sonnet 4.5 documentation][aws-claude].
 
 [aws-claude]: https://aws.amazon.com/bedrock/anthropic/
 

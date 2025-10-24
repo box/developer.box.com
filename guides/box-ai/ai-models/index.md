@@ -12,7 +12,7 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 26
+total_steps: 27
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/ai-models/openai-gpt-5-model-card
@@ -520,9 +520,43 @@ DOD IL5
 
 </strong>
 
-<strong style="background-color: #fdfad8">
+<strong style="background-color: #f8d59b">
 
 プレミアム
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="aws__claude_4_5_haiku" href="/guides/box-ai/ai-models/aws-claude-4-5-haiku-model-card">
+
+A fast model with near-frontier intelligence.
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+利用可能
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+標準
 
 </strong>
 
@@ -832,7 +866,7 @@ FedRAMP Moderate
 
 <Tile type="model" title="ibm__mistral_medium_2505" href="/guides/box-ai/ai-models/ibm-mistral-medium-3-model-card">
 
-High-performance enterprise model for coding and advanced reasoning.
+コーディングや高度な推論に対応した、高性能のエンタープライズモデル。
 
 <div>
 
@@ -860,7 +894,7 @@ High-performance enterprise model for coding and advanced reasoning.
 
 <Tile type="model" title="ibm__mistral_small_3_1_24b_instruct_2503" href="/guides/box-ai/ai-models/ibm-mistral-small-3-1-model-card">
 
-Fast open-source multimodal model with low latency.
+低レイテンシで処理の速いオープンソースのマルチモーダルモデル。
 
 <div>
 

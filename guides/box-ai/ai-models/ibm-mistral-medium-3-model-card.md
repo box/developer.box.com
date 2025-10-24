@@ -11,7 +11,7 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/ibm-mistral-medium-3-model-card
 type: guide
-total_steps: 26
+total_steps: 27
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
 next_page_id: box-ai/ai-models/ibm-mistral-small-3-1-model-card
@@ -22,7 +22,7 @@ fullyTranslated: true
 ---
 # IBM Mistral Medium 3
 
-**IBM Mistral Medium 3** model is a high-performance enterprise-grade model that delivers frontier-level capabilities, excelling in coding, STEM reasoning, and multimodal understanding.
+**IBM Mistral Medium 3**モデルは、最先端の機能を提供する高性能のエンタープライズグレードモデルで、コーディング、STEM推論、マルチモーダルの理解に優れています。
 
 ## モデルの詳細
 
@@ -33,7 +33,7 @@ fullyTranslated: true
 | APIモデル名       | `ibm__mistral_medium_2505` | [Box AI APIでのモデルの上書き][overrides]に使用されるモデルの名前。APIを動作させるには、ユーザーがこの名前を正確に指定する必要があります。 |
 | ホスティングレイヤー    | **IBM**                    | LLMを安全にホストする、信頼できる組織。                                                              |
 | モデルプロバイダ      | **Mistral AI**             | このモデルを提供する組織。                                                                      |
-| リリース日         | **May 2025**               | モデルのリリース日。                                                                         |
+| リリース日         | **2025年5月**                | モデルのリリース日。                                                                         |
 | ナレッジカットオフ日    | **指定なし**                   | モデルが情報の更新を取得しなくなった日付。                                                              |
 | 入力コンテキストウィンドウ | **128,000トークン**            | 入力コンテキストウィンドウでサポートされるトークン数。                                                        |
 | 出力トークンの最大数    | **指定なし**                   | 1回のリクエストでモデルが生成できるトークン数。                                                           |
@@ -42,7 +42,7 @@ fullyTranslated: true
 
 ## その他のドキュメント
 
-For additional information, see [official Mistral AI documentation][mistral-ai].
+詳細については、[Mistral AIの公式ドキュメント][mistral-ai]を参照してください。
 
 [mistral-ai]: https://docs.mistral.ai/getting-started/models/models_overview/
 

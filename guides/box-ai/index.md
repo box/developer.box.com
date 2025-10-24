@@ -31,7 +31,7 @@ Box AI APIを使用すると、Platformアプリケーション内でBox AI機�
 
 Box AI APIには、アプリケーションのワークフローで大規模言語モデル (LLM) を利用できるように設計された多数の機能が用意されています。
 
-現在は、Box AIに対して、ユーザーの質問への回答、ドキュメントの内容の要約、ドキュメントで使用できるテキストの生成を求めることができます。また、Box AIを使用して、スキーマやメタデータテンプレートなど、指定した入力データからメタデータを抽出することもできます。
+You can ask Box AI to answer user questions, summarize the document content, or generate text you can use in your documents. You can also use Box AI to extract metadata from the provided input, such as a schema or metadata template.
 
 [Box AI for UI Elements][boxaielement]機能を使用すると、アプリにBox AIを組み込むことができます。
 
