@@ -245,7 +245,7 @@ Deeplearning.aiと共同で作成された、Box CTOのBen Kusによる簡単な
 
 <Tile type="mcp" title="Box MCPサーバーとPydantic AI" href="https://medium.com/box-developer-blog/building-ai-powered-document-generation-with-box-mcp-and-pydantic-ai-48775b18ae32">
 
-AIを活用したドキュメント生成のためにBox MCPサーバーからBox Doc Genを使用します。
+Box MCPサーバーからBox Doc Genを使用して、AIを活用したドキュメント生成を行います。
 
 <div>
 
