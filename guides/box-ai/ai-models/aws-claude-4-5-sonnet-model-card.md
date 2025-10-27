@@ -21,7 +21,7 @@ source_url: >-
 ---
 # AWS Claude Sonnet 4.5
 
-**AWS Claude Sonnet 4.5** model is a high-performance model designed for building complex agents, delivering leading coding capabilities and executing across development tasks. It excels at autonomously planning and executing complex, multi-step workflows and is particularly effective in areas like finance, research, and cybersecurity.
+The **AWS Claude Sonnet 4.5** model is a high-performance model designed for building complex agents, delivering leading coding capabilities, and executing across development tasks. It excels at autonomously planning and executing complex, multi-step workflows and is particularly effective in areas like finance, research, and cybersecurity.
 
 ## Model details
 

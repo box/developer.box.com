@@ -21,7 +21,7 @@ source_url: >-
 ---
 # AWS Claude Haiku 4.5
 
-**AWS Claude Haiku 4.5** model is optimized for high-volume, low-latency applications. It provides strong coding performance with improved speed and cost efficiency compared to larger models.
+The **AWS Claude Haiku 4.5** model is optimized for high-volume, low-latency applications. It provides strong coding performance with improved speed and cost efficiency compared to larger models.
 
 ## Model details
 
