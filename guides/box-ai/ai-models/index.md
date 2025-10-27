@@ -84,19 +84,19 @@ Box AIには以下のモデルが搭載されています。Box AIと統合さ�
 
 <strong style="background-color: #e8e8e8">
 
-Default for Box AI for Hubs
+Box AI for Hubsのデフォルト
 
 </strong>
 
 <strong style="background-color: #e8e8e8">
 
-Default for Box AI for Documents
+Box AI for Documentsのデフォルト
 
 </strong>
 
 <strong style="background-color: #e8e8e8">
 
-Default for Box AI for Notes Q&A
+Box AI for NotesのQ&Aのデフォルト
 
 </strong>
 

@@ -16,24 +16,24 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/5-queries/3-item-fields.md
 fullyTranslated: true
 ---
-# Query item fields
+# クエリの項目フィールド
 
-Item fields are searchable metadata fields that describe items (files and folders) in Box. These fields expose built-in item properties such as name, type, owner, and timestamps with defined data types so you can filter, sort, and search Box content.
+項目フィールドとは、Box内の項目 (ファイルおよびフォルダ) を説明する検索可能なメタデータフィールドです。これらのフィールドは、名前、タイプ、所有者、タイムスタンプなどの組み込みの項目プロパティを定義されたデータ型を使用して公開します。これにより、Boxコンテンツのフィルタ、並べ替え、検索が可能になります。
 
-## Supported item fields
+## サポートされている項目フィールド
 
-The following table lists the item fields you can use in metadata queries.
+次の表に、メタデータクエリで使用できる項目フィールドを示します。
 
-| フィールド名                      | 説明                                                                                               | Sorting |
-| --------------------------- | ------------------------------------------------------------------------------------------------ | ------- |
-| `item.type`                 | Type of the item: `file` or `folder`                                                             | はい      |
-| `item.name`                 | Name of the item                                                                                 | はい      |
-| `item.description`          | Description of the item                                                                          | はい      |
-| `item.extension`            | File extension, such as `pdf`, `jpeg`, `xlsx`, `txt`, `xls`, `png`, `log`, or `csv`              | はい      |
-| `item.owned_by`             | Owner of the item, for example `user_123`                                                        | はい      |
-| `item.owner_enterprise_id`  | Enterprise ID of the item owner, for example `1234`                                              | はい      |
-| `item.created_at`           | Date and time when the item was created in Box                                                   | はい      |
-| `item.modified_at`          | Date and time when the item was last updated in Box                                              | はい      |
-| `item.content_created_at`   | Date and time when the item was originally created, which might be before it was uploaded to Box | はい      |
-| `item.content_modified_at`  | Date and time when the item was last updated, which might be before it was uploaded to Box       | はい      |
-| `item.quick_search_content` | Full-text search across item name, description, and metadata fields                              | いいえ     |
+| フィールド名                      | 説明                                                            | 並べ替え |
+| --------------------------- | ------------------------------------------------------------- | ---- |
+| `item.type`                 | 項目のタイプ: `file`または`folder`                                     | はい   |
+| `item.name`                 | 項目の名前                                                         | はい   |
+| `item.description`          | 項目の説明                                                         | はい   |
+| `item.extension`            | ファイル拡張子 (`pdf`、`jpeg`、`xlsx`、`txt`、`xls`、`png`、`log`、`csv`など) | はい   |
+| `item.owned_by`             | 項目の所有者 (例: `user_123`)                                        | はい   |
+| `item.owner_enterprise_id`  | 項目所有者のEnterprise ID (例: `1234`)                               | はい   |
+| `item.created_at`           | Boxで項目が作成された日時                                                | はい   |
+| `item.modified_at`          | Boxで項目が最後に更新された日時                                             | はい   |
+| `item.content_created_at`   | 項目が最初に作成された日時 (この日時は項目がBoxにアップロードされた時点よりも前になる場合があります)         | はい   |
+| `item.content_modified_at`  | 項目が最後に更新された日時 (この日時は項目がBoxにアップロードされた時点よりも前になる場合があります)         | はい   |
+| `item.quick_search_content` | 項目名、説明、メタデータのフィールド全体でのファイルコンテンツ検索                             | いいえ  |
