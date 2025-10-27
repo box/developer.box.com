@@ -136,18 +136,100 @@ When you use Box AI in third-party applications, you can achieve the best experi
 
 ## Available tools
 
-Remote Box MCP server includes several tools you can use:
+The remote Box MCP server provides access to a comprehensive set of tools that enable AI agents to interact with Box content and features. These tools are organized by functional category to help you quickly identify the right capabilities for your use case.
+
+### Content Management
+
+Manage files and folders, perform searches, and handle content operations across your Box environment.
+
+#### File operations
 
 | Tool | Description|
-|--------|--------|
-| `who_am_i`| Returns detailed information about the currently authenticated Box user.|
-| `get_file_content` | Returns content of a file stored in Box |
-| `search_folders_by_name`| Searches for folders within Box by name using keyword matching.|
+| ---- | ---------- |
+| `file_content_extract` | Extracts and returns file content in text or PDF format for files under 50 MB. |
+| `file_resource_link` | Returns MCP-compliant resource links for downloading files from Box in their native format. |
+| `get_file_details` | Gets comprehensive file information from Box including metadata, permissions, and version details. |
+| `update_folder_properties` | Updates file metadata, including name, description, tags, and collections. |
+
+#### Folder operations
+
+| Tool | Description|
+| ---- | ---------- |
+| `create_folder` | Creates a new folder in Box. |
+| `get_folder_details` | Retrieves comprehensive folder information including metadata, permissions, and collaboration settings. |
 | `list_folder_content_by_folder_id`| Lists files, folders, and web links in a folder. |
+| `update_file_properties` | Updates file metadata including name, description, tags, and collections. |
+
+#### Search
+
+| Tool | Description|
+| ---- | ---------- |
 | `search_files_keyword`| Searches for files using keywords. Supports metadata filters, file extension filtering, and field selection.|
 | `search_files_metadata`| Searches for files using SQL-like metadata queries. Supports complex filtering with parameters, field selection, and folder scoping.|
+| `search_folders_by_name`| Searches for folders within Box by name using keyword matching.|
+
+### Box AI Features
+
+Use AI-powered tools to ask questions, extract insights, and analyze content across files and hubs.
+
+| Tool | Description|
+| ---- | ---------- |
+| `ai_agent` | Gets Box AI agent configuration for different AI modes and models. |
+| `ai_qa` | Ask questions about files or hubs using Box AI. Automatically optimizes analysis approach based on content type (individual files, multiple files, or collaborative hubs).
+| `ai_qa_hub`| Asks a question to a Box Hub using Box AI.|
 | `ai_qa_single_file`| Asks a question to a single file using Box AI.|
 | `ai_qa_multi_file`| Asks a question to multiple files using Box AI.|
-| `ai_qa_hub`| Asks a question to a Box Hub using Box AI.|
 | `ai_extract_freeform`| Extracts metadata from files using Box AI in freeform format without requiring predefined template structures.|
 | `ai_extract_structured`| Extracts structured metadata from files using Box AI based on either custom fields definition or an existing metadata template.|
+
+### Collaboration
+
+Enable team collaboration through comments, shared links, and collaboration management tools.
+
+| Tool | Description|
+| ---- | ---------- |
+| `create_file_comment` | Creates a new comment on a file for collaboration and feedback purposes. |
+| `create_share_link` | Creates shared links for files or folders with configurable access controls and security settings. |
+| `list_file_comments` | Lists all comments on a specific file with configurable fields and pagination support. |
+| `list_item_collaborations`| Lists all collaborations for multiple files and folders in a single request. |
+| `list_tasks` | Lists all tasks associated with a specific file, including status, message, and due dates. |
+
+### Hubs
+
+Create and manage Box Hubs for organizing collaborative content and resources around specific topics or projects.
+
+| Tool | Description|
+| ---- | ---------- |
+| `add_items_to_hub` | Adds files and folders to an existing hub. |
+| `copy_hub` | Creates a copy of an existing hub with a new title and optional description. |
+| `create_hub` | Creates a new Box Hub for collaborative content organization. |
+| `get_hub_details` | Retrieves detailed information about a specific hub. |
+| `get_hub_items` | Gets items (files and folders) associated with a specific hub. |
+| `list_hubs` | Lists all hubs accessible to the authenticated user. |
+| `update_hub` | Updates properties of an existing hub. |
+
+### Metadata and Templates
+
+Work with metadata templates and use document generation to automate content creation workflows.
+
+| Tool | Description|
+| ---- | ---------- |
+| `find_metadata_template_by_instance` | Finds a metadata template by its instance ID. |
+| `get_metadata_template_by_id` | Retrieves a specific metadata template by its ID. |
+| `get_metadata_template_by_name` | Retrieves a specific metadata template by its name and scope. |
+| `list_enterprise_metadata_templates` | Lists all enterprise metadata templates available in the organization. |
+| `list_file_metadata` | Lists all metadata instances associated with a file. |
+| `list_folder_metadata` | Lists all metadata instances associated with a folder. |
+| `list_global_metadata_templates` | Lists all global metadata templates available across Box. |
+| `create_docgen_batch` | Generates documents from a Doc Gen template by filling placeholder tags with provided data. |
+| `create_docgen_template` | Marks a Box file (.docx or .pptx) as a Doc Gen template for automated document generation. |
+| `get_docgen_template_by_id` | Retrieves details about a specific Box Doc Gen template, including file reference, friendly name, and metadata. |
+| `list_docgen_templates` | Lists all Box Doc Gen templates available to the authenticated user and supports pagination by using marker and limit parameters. |
+
+### User and authentication
+
+Manage user authentication and retrieve information about the authenticated user.
+
+| Tool | Description|
+| ---- | ---------- |
+| `who_am_i`| Returns detailed information about the currently authenticated Box user.|
