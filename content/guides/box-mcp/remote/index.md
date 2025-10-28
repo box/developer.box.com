@@ -148,7 +148,7 @@ Manage files and folders, perform searches, and handle content operations across
 | `search_files_metadata`| Searches for files using SQL-like metadata queries. Supports complex filtering with parameters, field selection, and folder scoping.|
 | `search_folders_by_name`| Searches for folders within Box by name using keyword matching.|
 
-### Box AI Features
+### Box AI
 
 Use AI-powered tools to ask questions, extract insights, and analyze content across files and hubs.
 
