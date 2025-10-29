@@ -138,6 +138,14 @@ When you use Box AI in third-party applications, you can achieve the best experi
 
 The remote Box MCP server provides access to a comprehensive set of tools that enable AI agents to interact with Box content and features. These tools are organized by functional category to help you quickly identify the right capabilities for your use case.
 
+### User and authentication
+
+Manage user authentication and retrieve information about the authenticated user.
+
+| Tool | Description|
+| ---- | ---------- |
+| `who_am_i`| Returns detailed information about the currently authenticated Box user.|
+
 ### Content Management
 
 Manage files and folders, perform searches, and handle content operations across your Box environment.
@@ -195,11 +203,3 @@ Create and manage Box Hubs for organizing collaborative content and resources ar
 | `get_hub_details` | Retrieves detailed information about a specific hub. |
 | `get_hub_items` | Gets items (files and folders) associated with a specific hub. |
 | `list_hubs` | Lists all hubs accessible to the authenticated user. |
-
-### User and authentication
-
-Manage user authentication and retrieve information about the authenticated user.
-
-| Tool | Description|
-| ---- | ---------- |
-| `who_am_i`| Returns detailed information about the currently authenticated Box user.|
