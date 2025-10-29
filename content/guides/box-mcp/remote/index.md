@@ -113,11 +113,11 @@ To enable Box MCP for [Mistral AI’s Le Chat](https://chat.mistral.ai/chat), vi
   ![MCP](./img/mistral.gif)
 </ImageFrame>
 
-### Github Copilot
+### GitHub Copilot
 
-To set up Box MCP server with Github Copilot, go to the [overview page](https://github.com/mcp/box/mcp-server-box-remote) and click *Install MCP server*. You'll be redirected to VS Code editor. Click *Install* and complete OAuth to grant access to Box. 
+To set up the Box MCP server with GitHub Copilot, go to the [overview page](https://github.com/mcp/box/mcp-server-box-remote) and click *Install MCP server*. You'll be redirected to the VS Code editor. Click *Install* and complete OAuth to grant access to Box. 
 
-You may need to manually enter your Client ID and Client Secret. When registering your OAuth application, make sure to include these redirect URIs:
+You may need to manually enter your Client ID and Client Secret. When registering your OAuth application, make sure to include following redirect URIs:
 
 ```curl
 http://127.0.0.1:33418
