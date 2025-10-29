@@ -117,18 +117,70 @@ When you use Box AI in third-party applications, you can achieve the best experi
 
 ## Available tools
 
-Remote Box MCP server includes several tools you can use:
+The remote Box MCP server provides access to a comprehensive set of tools that enable AI agents to interact with Box content and features. These tools are organized by functional category to help you quickly identify the right capabilities for your use case.
+
+### User and authentication
+
+Manage user authentication and retrieve information about the authenticated user.
 
 | Tool | Description|
-|--------|--------|
+| ---- | ---------- |
 | `who_am_i`| Returns detailed information about the currently authenticated Box user.|
-| `get_file_content` | Returns content of a file stored in Box |
-| `search_folders_by_name`| Searches for folders within Box by name using keyword matching.|
+
+### Content Management
+
+Manage files and folders, perform searches, and handle content operations across your Box environment.
+
+#### File operations
+
+| Tool | Description|
+| ---- | ---------- |
+| `get_file_content` | Returns the content of a file stored in Box. |
+| `get_file_details` | Gets comprehensive file information from Box including metadata, permissions, and version details. |
+| `upload_file` | Uploads a new file to Box. |
+| `upload_file_version` | Uploads a new file version by providing the entire file contents to update an existing file in Box. |
+
+#### Folder operations
+
+| Tool | Description|
+| ---- | ---------- |
+| `create_folder` | Creates a new folder in Box. |
+| `get_folder_details` | Retrieves comprehensive folder information including metadata, permissions, and collaboration settings. |
 | `list_folder_content_by_folder_id`| Lists files, folders, and web links in a folder. |
+
+#### Search
+
+| Tool | Description|
+| ---- | ---------- |
 | `search_files_keyword`| Searches for files using keywords. Supports metadata filters, file extension filtering, and field selection.|
-| `search_files_metadata`| Searches for files using SQL-like metadata queries. Supports complex filtering with parameters, field selection, and folder scoping.|
+| `search_folders_by_name`| Searches for folders within Box by name using keyword matching.|
+
+### Box AI
+
+Use AI-powered tools to ask questions, extract insights, and analyze content across files and hubs.
+
+| Tool | Description|
+| ---- | ---------- |
+| `ai_qa_hub`| Asks a question to a Box Hub using Box AI.|
 | `ai_qa_single_file`| Asks a question to a single file using Box AI.|
 | `ai_qa_multi_file`| Asks a question to multiple files using Box AI.|
-| `ai_qa_hub`| Asks a question to a Box Hub using Box AI.|
 | `ai_extract_freeform`| Extracts metadata from files using Box AI in freeform format without requiring predefined template structures.|
 | `ai_extract_structured`| Extracts structured metadata from files using Box AI based on either custom fields definition or an existing metadata template.|
+
+### Collaboration
+
+Enable team collaboration through comments, shared links, and collaboration management tools.
+
+| Tool | Description|
+| ---- | ---------- |
+| `list_tasks` | Lists all tasks associated with a specific file, including status, message, and due dates. |
+
+### Hubs
+
+Create and manage Box Hubs for organizing collaborative content and resources around specific topics or projects.
+
+| Tool | Description|
+| ---- | ---------- |
+| `get_hub_details` | Retrieves detailed information about a specific hub. |
+| `get_hub_items` | Gets items (files and folders) associated with a specific hub. |
+| `list_hubs` | Lists all hubs accessible to the authenticated user. |
