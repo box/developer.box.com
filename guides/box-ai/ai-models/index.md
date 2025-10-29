@@ -538,7 +538,7 @@ FedRAMP Moderate
 
 <Tile type="model" title="aws__claude_4_5_haiku" href="/guides/box-ai/ai-models/aws-claude-4-5-haiku-model-card">
 
-A fast model with near-frontier intelligence.
+ほぼ最先端のインテリジェンスを備えた高速モデル。
 
 <div>
 

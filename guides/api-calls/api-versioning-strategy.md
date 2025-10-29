@@ -112,7 +112,7 @@ APIの現在の状態が常にわかるようにし、バージョン管理さ�
 
 ## Box SDKのバージョン管理の仕組み
 
-The versioning strategy applies only to [generated SDKs](page://sdks-and-tools/#next-generation-sdks).
+このバージョン戦略は、[生成されたSDK](page://sdks-and-tools/#next-generation-sdks)にのみ適用されます。
 
 Box SDKは、**すべてのバージョンに対応**というSDKのアプローチをサポートしています。つまり、SDKの各リリースでは、現在サポートされている任意のバージョンのすべてのエンドポイントにアクセスできます。生成されたすべてのSDKはマネージャのアプローチを使用します。このアプローチでは、同じドメインを使用するすべてのエンドポイントを1つのマネージャにグループ化します。
 

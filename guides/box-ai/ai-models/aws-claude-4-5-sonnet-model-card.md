@@ -22,7 +22,7 @@ fullyTranslated: true
 ---
 # AWS Claude Sonnet 4.5
 
-The **AWS Claude Sonnet 4.5** model is a high-performance model designed for building complex agents, delivering leading coding capabilities, and executing across development tasks. It excels at autonomously planning and executing complex, multi-step workflows and is particularly effective in areas like finance, research, and cybersecurity.
+**AWS Claude Sonnet 4.5**モデルは、複雑なエージェントの作成用に設計された高性能のモデルであり、優れたコーディング機能を提供し、開発タスク全体にわたって実行します。このモデルは、複雑なマルチステップワークフローの自律的な計画および実行に優れており、特に金融、研究、サイバーセキュリティなどの分野で効果的です。
 
 ## モデルの詳細
 
@@ -42,7 +42,7 @@ The **AWS Claude Sonnet 4.5** model is a high-performance model designed for bui
 
 ## その他のドキュメント
 
-For additional information, see [official AWS Claude Sonnet 4.5 documentation][aws-claude].
+詳細については、[AWS Claude Sonnet 4.5の公式ドキュメント][aws-claude]を参照してください。
 
 [aws-claude]: https://aws.amazon.com/bedrock/anthropic/
 

@@ -65,15 +65,15 @@ Boxには、アプリケーションの作成に使用できる一連のSDKが�
 
 Boxでは、業界のベストプラクティスに従って、プログラミング言語ごとにBoxの次世代SDKとBoxコアSDKを1つのパッケージに統合します。これにより、移行作業がさらに容易になり、手動で管理されていたBoxコアSDKを引き続き使用している既存のアプリケーションに新機能をシームレスに追加できるようになります。
 
-**All future development, including new features and updates, will be delivered through the Box core SDKs. The standalone generated artifact was introduced in the version `v10` of the Box core SDKs, and it is currently available as a separate branch.**
+**新機能や更新を含む、今後の開発はすべて、BoxコアSDKを通じて提供されます。スタンドアロンの生成されたアーティファクトは、BoxコアSDKのバージョン`v10`で導入されました。これは、現在、個別のブランチとして提供されています。**
 
 詳細については、[SDKのバージョン戦略に関するドキュメント][versioning]を参照してください。
 
 </Message>
 
-`v10` of Python SDK, Box TypeScript SDK, Box .NET SDK, Box Java SDK, and Box Swift SDK are designed to elevate the developer experience and streamline your integration with Box Content Cloud.
+`v10`のPython SDK、Box TypeScript SDK、Box .NET SDK、Box Java SDK、Box Swift SDKは、開発者エクスペリエンスを向上させ、Boxコンテンツクラウドとの統合を効率化することを目的としています。
 
-Here's what you can expect from `v10`:
+`v10`に実装予定の機能を以下に示します。
 
 * **APIの全面的なサポート**: 新しいBox SDKにより、開発者はBox APIエコシステム全体をカバーできるようになります。Boxが提供する最新機能をすべて利用して、機能豊富なアプリケーションを作成できます。
 * **迅速なAPIの更新**: 自動生成による新しい開発アプローチにより、SDKへのBox APIの追加がさらに速いペースで (数日中に) 可能になります。これは、最新の機能をすぐにアプリケーションで利用できるようになることを意味します。
