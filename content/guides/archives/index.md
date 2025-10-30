@@ -28,7 +28,7 @@ and it is not accessible to previous owner and collaborators.
 
 ## Archives are folders
 
-Archives are a special type of folders. Box Archive APIs allow you to create, list and delete archives.
+Archives are a special type of folders. Box Archive APIs allow you to create, list, update and delete archives.
 However, there are other APIs that also work with archives or with content within archives.
 For a full list of supported APIs, see the [Supported APIs][Supported APIs] guide.
 
