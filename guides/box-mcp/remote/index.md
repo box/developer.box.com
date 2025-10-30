@@ -112,6 +112,10 @@ Amazon Quick SuiteでリモートBox MCPサーバーを追加するには、以�
 
 詳細については、Amazon Quick Suiteドキュメントの[Model Context Protocol (MCP) integration](https://docs.aws.amazon.com/quicksuite/latest/userguide/mcp-integration.html) (英語) を参照してください。
 
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/S2kns2tYJjA?si=AWuXpvrjJY0J0qBb" title="Box remote MCP with Amazon Quick Suite" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
+
 ### AnthropicのMessages API
 
 リモートBox MCPサーバーを[AnthropicのMessages API](https://docs.anthropic.com/en/api/messages)と関連付けます。[こちらのサンプルチャットボットプロジェクト](https://github.com/box-community/mcp-client-remote-mcp-react)を複製すると、すぐに作業を開始できます。これにより、Anthropicモデルとの会話が可能になり、BoxのリモートMCPサーバーが提供するツールにアクセスできます。
@@ -132,24 +136,92 @@ Amazon Quick SuiteでリモートBox MCPサーバーを追加するには、以�
 
 </ImageFrame>
 
+### GitHub Copilot
+
+To set up the Box MCP server with GitHub Copilot, go to the [overview page](https://github.com/mcp/box/mcp-server-box-remote) and click _Install MCP server_. You'll be redirected to the VS Code editor. Click _Install_ and complete OAuth to grant access to Box.
+
+You may need to manually enter your Client ID and Client Secret. When registering your OAuth application, make sure to include following redirect URIs:
+
+```curl
+http://127.0.0.1:33418
+https://vscode.dev/redirect
+
+```
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/Y1a16jhCVPc?si=MOutZC3_tGtpcJ7c" title="Box remote MCP with Github Copilot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
+
 ### MCPサーバーでのBox AIの機能の使用
 
 サードパーティ製アプリケーションでBox AIを使用すると、Box MCPサーバー経由でアプリケーションにアクセスするため、最適なエクスペリエンスと質の高い結果を得ることができます。これにより、すべての機能、パフォーマンスの向上、シームレスなユーザーエクスペリエンスが実現します。
 
 ## 利用可能なツール
 
-リモートBox MCPサーバーには、使用できるツールがいくつかあります。
+The remote Box MCP server provides access to a comprehensive set of tools that enable AI agents to interact with Box content and features. These tools are organized by functional category to help you quickly identify the right capabilities for your use case.
 
-| ツール                                | 説明                                                                               |
-| ---------------------------------- | -------------------------------------------------------------------------------- |
-| `who_am_i`                         | 現在認証されているBoxユーザーの詳細な情報を返します。                                                     |
-| `get_file_content`                 | Boxに保存されているファイルのコンテンツを返します。                                                      |
-| `search_folders_by_name`           | キーワードの照合を使用して、名前でBox内のフォルダを検索します。                                                |
-| `list_folder_content_by_folder_id` | フォルダ内のファイル、フォルダ、ウェブリンクのリストを取得します。                                                |
-| `search_files_keyword`             | キーワードを使用してファイルを検索します。メタデータフィルタ、ファイル拡張子によるフィルタ処理、フィールドの選択がサポートされています。             |
-| `search_files_metadata`            | SQLに似たメタデータクエリを使用してファイルを検索します。パラメータを使用した複雑なフィルタ処理、フィールドの選択、フォルダの範囲指定がサポートされています。 |
-| `ai_qa_single_file`                | Box AIを使用して単一のファイルに質問します。                                                        |
-| `ai_qa_multi_file`                 | Box AIを使用して複数のファイルに質問します。                                                        |
-| `ai_qa_hub`                        | Box AIを使用してBox Hubに質問します。                                                        |
-| `ai_extract_freeform`              | Box AIを使用して、ファイルから自由形式でメタデータを抽出します。あらかじめ定義されたテンプレート構造は必要ありません。                   |
-| `ai_extract_structured`            | Box AIを使用して、ファイルから、カスタムフィールドの定義または既存のメタデータテンプレートに基づいて構造化メタデータを抽出します。             |
+### User and authentication
+
+Manage user authentication and retrieve information about the authenticated user.
+
+| ツール        | 説明                           |
+| ---------- | ---------------------------- |
+| `who_am_i` | 現在認証されているBoxユーザーの詳細な情報を返します。 |
+
+### Content Management
+
+Manage files and folders, perform searches, and handle content operations across your Box environment.
+
+#### ファイル操作
+
+| ツール                   | 説明                                                                                                  |
+| --------------------- | --------------------------------------------------------------------------------------------------- |
+| `get_file_content`    | Returns the content of a file stored in Box.                                                        |
+| `get_file_details`    | Gets comprehensive file information from Box including metadata, permissions, and version details.  |
+| `upload_file`         | Uploads a new file to Box.                                                                          |
+| `upload_file_version` | Uploads a new file version by providing the entire file contents to update an existing file in Box. |
+
+#### Folder operations
+
+| ツール                                | 説明                                                                                                      |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `create_folder`                    | Creates a new folder in Box.                                                                            |
+| `get_folder_details`               | Retrieves comprehensive folder information including metadata, permissions, and collaboration settings. |
+| `list_folder_content_by_folder_id` | フォルダ内のファイル、フォルダ、ウェブリンクのリストを取得します。                                                                       |
+
+#### 検索
+
+| ツール                      | 説明                                                                   |
+| ------------------------ | -------------------------------------------------------------------- |
+| `search_files_keyword`   | キーワードを使用してファイルを検索します。メタデータフィルタ、ファイル拡張子によるフィルタ処理、フィールドの選択がサポートされています。 |
+| `search_folders_by_name` | キーワードの照合を使用して、名前でBox内のフォルダを検索します。                                    |
+
+### Box AI
+
+Use AI-powered tools to ask questions, extract insights, and analyze content across files and hubs.
+
+| ツール                     | 説明                                                                   |
+| ----------------------- | -------------------------------------------------------------------- |
+| `ai_qa_hub`             | Box AIを使用してBox Hubに質問します。                                            |
+| `ai_qa_single_file`     | Box AIを使用して単一のファイルに質問します。                                            |
+| `ai_qa_multi_file`      | Box AIを使用して複数のファイルに質問します。                                            |
+| `ai_extract_freeform`   | Box AIを使用して、ファイルから自由形式でメタデータを抽出します。あらかじめ定義されたテンプレート構造は必要ありません。       |
+| `ai_extract_structured` | Box AIを使用して、ファイルから、カスタムフィールドの定義または既存のメタデータテンプレートに基づいて構造化メタデータを抽出します。 |
+
+### コラボレーション
+
+Enable team collaboration through comments, shared links, and collaboration management tools.
+
+| ツール          | 説明                                                                                         |
+| ------------ | ------------------------------------------------------------------------------------------ |
+| `list_tasks` | Lists all tasks associated with a specific file, including status, message, and due dates. |
+
+### Hub
+
+Create and manage Box Hubs for organizing collaborative content and resources around specific topics or projects.
+
+| ツール               | 説明                                                             |
+| ----------------- | -------------------------------------------------------------- |
+| `get_hub_details` | Retrieves detailed information about a specific hub.           |
+| `get_hub_items`   | Gets items (files and folders) associated with a specific hub. |
+| `list_hubs`       | Lists all hubs accessible to the authenticated user.           |
