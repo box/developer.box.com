@@ -16,7 +16,7 @@
   // The text on the link to refresh the page
   "refresh_notification.link_text": "更新",
   // Text to signify that more content is available byclicking this link or button
-  "messages.read_more": "もっと見る",
+  "messages.read_more": "詳細を確認",
   // Describes the base-resource variant
   "messages.resource_variant_descriptions.base": "このリソースにはAPIの使用時に発生する可能性があるいくつかのバリエーションがあります。\n\n**Base**バリアントに含まれるフィールドは、`fields`クエリパラメータで指定されたフィールドのほかに、そのパラメータを使用しているときに必ず返されるデフォルトのフィールドを表します。",
   // Describes the mini-resource variant
