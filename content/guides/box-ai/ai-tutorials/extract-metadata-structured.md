@@ -20,6 +20,29 @@ and get the result in the form of key-value pairs.
 As input, you can either create a structure using the `fields` parameter, or use an already defined metadata template.
 To learn more about creating templates, see [Creating metadata templates in the Admin Console][templates-console] or use the [metadata template API][templates-api].
 
+## Supported file formats
+
+The endpoint supports the following file formats:
+
+- PDF
+- TIFF
+- PNG
+- JPEG
+
+Box AI automatically applies optical character recognition (OCR) when processing image files (TIFF, PNG, JPEG) and scanned documents. This eliminates the need to convert images to PDF before extraction, saving time and simplifying your integration.
+
+## Supported languages
+
+Box AI can extract metadata from documents in the following languages:
+
+- English
+- Japanese
+- Chinese
+- Korean
+- Cyrillic-based languages (such as Russian, Ukrainian, Bulgarian, and Serbian)
+
+No additional configuration is required to use different languages or image formats. Box AI automatically detects the language and applies OCR when needed.
+
 ## Before you start
 
 Make sure you followed the steps listed in [getting started with Box AI][prereq] to create a platform app and authenticate.
