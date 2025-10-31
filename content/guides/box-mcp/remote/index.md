@@ -95,6 +95,8 @@ To add the remote Box MCP server in Amazon Quick Suite, follow these steps:
 
 For details, see Amazon Quick Suite documentation: [Model Context Protocol (MCP) integration](https://docs.aws.amazon.com/quicksuite/latest/userguide/mcp-integration.html).
 
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/S2kns2tYJjA?si=AWuXpvrjJY0J0qBb" title="Box remote MCP with Amazon Quick Suite" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Anthropic's Messages API
 
 Connect the remote Box MCP server with [Anthropic's Messages API](https://docs.anthropic.com/en/api/messages). Clone [this sample chat bot project](https://github.com/box-community/mcp-client-remote-mcp-react) to get started quickly. It allows you to have a conversation with an Anthropic model, which has access to tools provided by the Box remote MCP server.
@@ -110,6 +112,19 @@ To enable Box MCP for [Mistral AI’s Le Chat](https://chat.mistral.ai/chat), vi
 <ImageFrame noborder center>
   ![MCP](./img/mistral.gif)
 </ImageFrame>
+
+### GitHub Copilot
+
+To set up the Box MCP server with GitHub Copilot, go to the [overview page](https://github.com/mcp/box/mcp-server-box-remote) and click *Install MCP server*. You'll be redirected to the VS Code editor. Click *Install* and complete OAuth to grant access to Box. 
+
+You may need to manually enter your Client ID and Client Secret. When registering your OAuth application, make sure to include following redirect URIs:
+
+```curl
+http://127.0.0.1:33418
+https://vscode.dev/redirect
+```
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/Y1a16jhCVPc?si=MOutZC3_tGtpcJ7c" title="Box remote MCP with Github Copilot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Using Box AI Features with the MCP Server
 
