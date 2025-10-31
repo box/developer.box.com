@@ -34,11 +34,12 @@ Box AI automatically applies optical character recognition (OCR) when processing
 ## Supported languages
 
 Box AI can extract metadata from documents in the following languages:
-
+<!--alex ignore-->
 - English
 - Japanese
 - Chinese
 - Korean
+<!--alex enable-->
 - Cyrillic-based languages (such as Russian, Ukrainian, Bulgarian, and Serbian)
 
 No additional configuration is required to use different languages or image formats. Box AI automatically detects the language and applies OCR when needed.
