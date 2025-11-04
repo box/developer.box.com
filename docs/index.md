@@ -89,7 +89,7 @@ This build performs a few simple steps:
 2. It turns self closing HTML tags (`<Foo />`) into separate open and closing
    tags (`<Foo></Foo>`)
 3. It adds some extra information to each markdown file in the frontmatter
-4. it converts all the separate microcopy Yaml files into one big JSONP file
+4. It converts all the separate microcopy Yaml files into one big JSONP file
    (JSON with comments).
 
 ---
