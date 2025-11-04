@@ -37,7 +37,7 @@ For a full list of supported APIs, see the [Supported APIs][Supported APIs] guid
 Before using any of the Box Archive APIs, make sure you can access [Box Archive in Admin Console][Box Archive in Admin Console].
 Your Box Platform app must have the `GCM` and `Read and write all files and folders` [scopes][Scopes] enabled.
 If you plan to only view archives and not modify them, use the `Read all files and folders` instead of the `Read and write all files and folders` scope.
-Additionally, to assign [storage policy][Storage policy] during archive creation your enterprise must have access to Box Zones feature and your app must have `Manage users` scope.
+Additionally, to be able to assign [storage policy][Storage policy] during archive creation, your enterprise must have access to the Box Zones feature and your app must have the `Manage users` scope.
 
 <Message type='notice'>
 The `GCM` scope is not available in the Developer Console and needs to be enabled by contacting customer support.
