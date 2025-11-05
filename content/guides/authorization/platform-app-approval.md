@@ -10,6 +10,7 @@ required_guides:
 - authentication/jwt/jwt-setup
 alias_paths:
 - /guides/applications/custom-apps/app-approval
+- /guides/authorization/custom-app-approval
 ---
 
 # Platform App Approval

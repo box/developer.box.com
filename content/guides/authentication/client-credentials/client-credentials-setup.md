@@ -87,7 +87,7 @@ Click **Review and Submit** to send an email to your Box enterprise Admin for
 approval. More information on this process is available in our
 [authorization guide][app-auth].
 
-<CTA to='g://authorization/custom-app-approval'>
+<CTA to='g://authorization/platform-app-approval'>
   Learn how to authorize a Platform Application
 </CTA>
 

@@ -24,7 +24,7 @@ centered: false
   <Header centered>
     Try out interactive demos
   </Header>
-    Box AI API is available to all Enterprise Plus and Enterprise Advanced customers.
+  Box AI API is available to all customers Business and above.
 
   <TileGrid rows="4">
     <Tile type="ai" title="Get a summary" href="/ai-dev-zone-summary">
@@ -98,36 +98,42 @@ centered: false
     MCP Servers
   </Header>
   <p style="text-align: left; margin-left: 0;">
-    These resources will get you up and running with Box MCP Server.
+    These resources will get you up and running with Box MCP server.
   </p>
 
   <TileGrid rows="4">
-    <Tile type="mcp" title="Remote Box MCP Server"
+    <Tile type="mcp" title="Remote Box MCP server"
       href="/guides/box-mcp/remote">
-        The remote Box MCP Server allows third party AI systems to securely connect and interact with your content in Box.
+        The remote Box MCP server allows third party AI systems to securely connect and interact with your content in Box.
 
         <div>
           <strong style="background-color: #92e0c0">New</strong>
           <strong style="background-color: #e8e8e8">MCP</strong>
         </div>
     </Tile>
-    <Tile type="mcp" title="Self-hosted Box MCP Server"
+    <Tile type="mcp" title="Self-hosted Box MCP server"
       href="/guides/box-mcp/self-hosted">
         A Python Developer Community open source project. It integrates with the Box API to perform various operations such as file search, text extraction, AI-based querying, and data extraction.
 
         <strong style="background-color: #e8e8e8">MCP</strong>
     </Tile>
+    <Tile type="mcp" title="Build AI Apps with MCP Servers"
+      href="https://www.deeplearning.ai/short-courses/build-ai-apps-with-mcp-server-working-with-box-files/">
+        Join a short online course, built in partnership with Deeplearning.ai, and taught by Ben Kus, Box CTO.
+
+        <strong style="background-color: #e8e8e8">Short Course</strong>
+    </Tile>
     <Tile type="mcp" title="Box MCP server and Pydantic AI"
       href="https://medium.com/box-developer-blog/building-ai-powered-document-generation-with-box-mcp-and-pydantic-ai-48775b18ae32">
-        Use Box Doc Gen through the Box MCP server for AI-Powered Document Generation
+        Use Box Doc Gen through the Box MCP server for AI-Powered Document Generation.
 
         <div>
           <strong style="background-color: #e8e8e8">Tutorial</strong>
         </div>
     </Tile>
-    <Tile type="mcp" title="Box MCP Server and LangChain MCP Adapters"
+    <Tile type="mcp" title="Box MCP server and LangChain MCP Adapters"
       href="https://medium.com/box-developer-blog/using-an-existing-mcp-server-with-langchain-mcp-adapters-94cdd4af6d1b">
-        Turn Box MCP Server into a LangChain-compatible agent using the LangChain MCP Adapters.
+        Turn Box MCP server into a LangChain-compatible agent using the LangChain MCP Adapters.
 
         <div>
           <strong style="background-color: #e8e8e8">Tutorial</strong>
@@ -145,7 +151,7 @@ centered: false
   </p>
   <TileGrid rows="4">
     <Tile type="model" title="Manage agents with Box AI Studio API"
-      href="guides/ai-studio/getting-started-ai-studio/">
+      href="/guides/ai-studio/getting-started-ai-studio/">
         Create and manage custom AI agents with Box AI Studio API.
 
       <div>
@@ -188,12 +194,20 @@ centered: false
   </p>
   
   <TileGrid rows="4">
+    <Tile type="box-brown" title="LangChain.js"
+      href="https://www.npmjs.com/package/langchainjs-box">
+        Include Box content in your LLM workflows with Box loader for LangChain.js.
+
+        <div>
+          <strong style="background-color: #92e0c0">New</strong>
+          <strong style="background-color: #e8e8e8">Integration</strong>
+        </div>
+    </Tile>
     <Tile type="box-brown" title="Openflow Connector for Box"
       href="https://docs.snowflake.com/en/user-guide/data-integration/openflow/connectors/box/setup">
         Seamlessly connect unstructured content in Box with the powerful analytics capabilities of Snowflake, unlocking new insights and automating data-driven workflows.
 
         <div>
-          <strong style="background-color: #92e0c0">New</strong>
           <strong style="background-color: #e8e8e8">Integration</strong>
         </div>
     </Tile>
