@@ -12,13 +12,9 @@ alias_paths:
 
 # Get started with Box AI
 
-<Message type="notice">
-Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
-</Message>
-
 To implement Box AI API in your solutions, you need
 to make sure you have access to the functionality.
-You will also need a custom application with
+You will also need a platform application with
 enabled Box AI scope, and a developer token to
 authenticate your calls.
 
@@ -29,12 +25,12 @@ the Box AI APIs in your sandbox, request access
 from the Box AI team using [this form][form].
 </Message>
 
-## Create an application
+## Create a platform application
 
-First you need to create a custom application
+First you need to create a platform application
 you will use to make calls. To create
 an application, follow the guide
-on [creating custom apps][createapps].
+on [creating platform apps][createapps].
 
 ## Enable Box AI API access
 
@@ -86,8 +82,8 @@ calls.
 [token]: g://authentication/tokens/developer-tokens
 [scope]: g://api-calls/permissions-and-errors/scopes
 [oauthscopes]: g://api-calls/permissions-and-errors/scopes#scopes-oauth-2-authorization
-[createapps]: g://applications/app-types/custom-apps
+[createapps]: g://applications/app-types/platform-apps
 [postman]: g://tooling/postman
 [form]: https://forms.gle/Nsh3TwM3W8qg4U35A
 [authorization]: g://authorization
-[reauthorization]: g://authorization/custom-app-approval#re-authorization-on-changes
+[reauthorization]: g://authorization/platform-app-approval#re-authorization-on-changes

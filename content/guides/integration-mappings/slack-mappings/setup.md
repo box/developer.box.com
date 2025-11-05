@@ -33,7 +33,7 @@ If you encounter any errors, see the [troubleshooting guide][3].
 
 ## Create Box application
 
-1. Create a [custom app with OAuth authentication][4] in the [Box developer console][5]
+1. Create a [platform app with OAuth authentication][4] in the [Box developer console][5]
 2. Open the application and enable the **Manage enterprise properties** application scope under **Configuration** > **Required Access Scopes**.
 
 <Message info>
@@ -45,7 +45,7 @@ If you encounter any errors, see the [troubleshooting guide][3].
 
 To authorize your Integration Mappings requests:
 
-1. Navigate to the [custom app][7] that you have created as one of the prerequisites.
+1. Navigate to the [platform app][7] that you have created as one of the prerequisites.
 2. Generate a [developer token][8] and add it to the HTTP header of each request:
 
 ```bash
@@ -63,5 +63,5 @@ Authorization: Bearer {developer_token}
 [4]: g://authentication/oauth2/oauth2-setup
 [5]: https://app.box.com/developers/console
 [6]: e://get-integration-mappings-slack
-[7]: g://applications/app-types/custom-apps
+[7]: g://applications/app-types/platform-apps
 [8]: g://authentication/tokens/developer-tokens

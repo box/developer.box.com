@@ -21,7 +21,7 @@ to find out what a term means, this is your one stop page.
 | Box Command Line Interface | [Box CLI][CLI] | A user-friendly command line tool that allows both technical and non-technical users to leverage the Box API to perform routine or bulk actions. |
 | Box Custom Skill | Custom Skill, Box Skill | An application that performs custom processing for files uploaded to Box. Skills are designed to make it possible to use third-party machine learning services to automatically extract information from files uploaded to Box. |
 | [Box Embed][embed] | | An HTML-based framework that makes it possible to embed the Box Web App experience anywhere in the 3rd party applications. Box Embed provides the ability to upload, search, comment, share, tag, and edit files using Box Edit. |
-| [Box Platform][platform] | | An API-driven cloud content management and collaboration platform that provides developers with the tools and infrastructure to build custom applications, integrate workflows, and leverage powerful features for secure document storage, access control, versioning, metadata management, and real-time collaboration. |
+| [Box Platform][platform] | | An API-driven cloud content management and collaboration platform that provides developers with the tools and infrastructure to build platform applications, integrate workflows, and leverage powerful features for secure document storage, access control, versioning, metadata management, and real-time collaboration. |
 | [Box Sample Code Catalog][code-catalog] | | Allows developers and admins to search through code repositories of tools, automation scripts, self paced workshops, and demo apps in multiple programming languages. The catalog contains more that eighty open source repositories and guides. |
 | [Box Shield][shield] | | A security solution offered by Box that helps protect sensitive data, prevent unauthorized access, and detect potential threats through automated classification and proactive monitoring. |
 | [Box Skills][skills] | | Box Skills are AI-powered capabilities that enhance the functionality of Box by automatically extracting insights and metadata from content. |
@@ -38,7 +38,7 @@ to find out what a term means, this is your one stop page.
 | Collection | | A collection of items, including files and folders. The contents of a collection can be explored in a similar way to which the contents of a folder is explored. |
 | [Content Manager][content-manager] | | A feature in the Admin Console that allows you to: search for and download files and folders in your organization, browse by user to see the files and folders they can access, move files between folders, invite collaborators to folders, get shared links and modify access levels, and delete files and folders from any user’s trash. |
 | [Co-admin][co-admin] | | A user other than the main admin, who has a subset of administrative privileges. Co-admins can perform the same duties as the organization’s admin, but they cannot make changes to the Admin’s permissions or other co-admins' permissions. The default access levels for co-admins include only the ability to manage users and groups, but they can be modified on a per-user basis. |
-| [Custom App][custom-app] | | A tailored application that extends the functionality of Box by integrating with other tools and systems. It's used to streamline workflows and enhance collaboration. It can be created in the Developer Console and has several authentication methods available. |
+| [Platform App][custom-app] | | A tailored application that extends the functionality of Box by integrating with other tools and systems. It's used to streamline workflows and enhance collaboration. It can be created in the Developer Console and has several authentication methods available. |
 | Developer | Programmer | A skilled professional who designs, builds, and maintains software applications or systems and has access to the Developer Console. In Box, the developer can have an admin role. |
 | [Developer Console][dev-console] | | A portal that allows developers to create, debug, test, and monitor their applications by providing real-time insights into code execution and system performance. |
 | Enterprise | Repository, content store, file cabinet, Docbase, vault | Enterprise in Box is a comprehensive suite of tools and services provided by Box for large organizations, offering secure file storage, collaboration features, access controls, workflow automation, compliance enforcement, and analytics. It enables efficient document management and teamwork while ensuring data security within an enterprise setting. |
@@ -97,7 +97,7 @@ to find out what a term means, this is your one stop page.
 [shield]: https://www.box.com/en-gb/shield
 [skills]: g://skills
 [classification]: g://metadata/classifications
-[custom-app]: g://applications/app-types/custom-apps
+[custom-app]: g://applications/app-types/platform-apps
 [webhook]: g://webhooks
 [limited-app]: g://applications/app-types/limited-access-apps
 [service-account]: page://platform/user-types/#service-account

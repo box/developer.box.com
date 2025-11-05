@@ -24,12 +24,12 @@ When creating a
 within the Box Enterprise. A Service Account is similar in functionality to a
 co-admin within a Box Enterprise, and most useful to this use case, can own,
 copy, and collaborate other users on files and folders. More importantly, you
-don't have to use a Service Account strictly for developing custom applications
+don't have to use a Service Account strictly for developing platform applications
 for users, and instead, can use a Service Account in more of an automation
 capacity.
 
 <Message>
-  # Box Custom Application Requirements
+  # Box Platform Application Requirements
 
   When creating your JWT-based custom Box application for this recipe, you'll
   need to enable the following scopes: **Manage users**, **Manage groups**,

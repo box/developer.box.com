@@ -139,7 +139,7 @@ There are a few enterprise settings to be aware of when it comes to the Box API.
 ![Global Integration Settings](images/global_integration_settings.png)
 </ImageFrame>
 
-Custom applications fall into two categories: published and unpublished.
+Platform applications fall into two categories: published and unpublished.
 Published applications are found in the [Box Integrations][appcenter]. Box
 Admins decide whether published and unpublished application are enabled by
 default and therefore can be used without approval. The status of these settings
@@ -193,7 +193,7 @@ require enablement.
 [serviceaccount]: page://platform/user-types/#service-account
 [appusers]: page://platform/user-types/#app-user
 [mu]: page://platform/user-types/#managed-users
-[auth]: g://authorization/custom-app-approval
+[auth]: g://authorization/platform-app-approval
 [oauth]: g://authentication/oauth2
 [jwt]: g://authentication/jwt
 [ccg]: g://authentication/client-credentials

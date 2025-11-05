@@ -22,6 +22,7 @@ type. For more details, please refer to our [pricing comparison page][pcp].
 * Digital Business Suite: 50 GB
 * Digital Business Global Suite: 50 GB
 * Enterprise Plus: 150 GB
+* Enterprise Advanced: 500 GB
 
 To confirm the file size limit for your account, log into Box. Click on the
 circle in the top right corner and select **Account Settings** from the dropdown

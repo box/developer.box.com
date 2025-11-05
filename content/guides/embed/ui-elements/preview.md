@@ -1,5 +1,5 @@
 ---
-rank: 6
+rank: 8
 related_endpoints: []
 related_guides:
   - embed/ui-elements
@@ -410,15 +410,9 @@ The property `features: { activityFeed: { annotations: { enabled: true  } } } }
 
 ## Box AI for UI Elements
 
-<Message type='notice'>
-
-Box AI for UI Elements is a beta feature and
-it is available to **Enterprise Plus** customers.
-</Message>
-
 Box AI for UI Elements enhances the Content Preview UI Element
 with additional features, allowing the developers
-to add the Box Q&A AI functionality to their custom app.
+to add the Box Q&A AI functionality to their platform app.
 Enriched with Box AI features, the Preview UI element brings the following functionality:
 
 - Q&A and document summaries.
@@ -471,15 +465,15 @@ const suggestedQuestions = [
 ];
 
 preview.show(<FILE_ID>, <TOKEN>, {
-   container: '.preview-container',
-   contentAnswersProps={
-     show: true,
-     isCitationsEnabled: true,
-     isMarkdownEnabled: true,
-     isResetChatEnabled: true,
-     suggestedQuestions
-       }
-   hasHeader: true,
+    container: '.preview-container',
+    contentAnswersProps={
+      show: true,
+      isCitationsEnabled: true,
+      isMarkdownEnabled: true,
+      isResetChatEnabled: true,
+      suggestedQuestions
+    }
+    hasHeader: true,
 });
 ```
 

@@ -35,6 +35,10 @@ All the developer resources to help you get the most from Box products
 
 </Banner>
 
+<Centered wide>
+  <FeaturedBoard type="aiDevZone" />
+</Centered>
+
 <Centered wide id="start-with-box-platform" >
   <Header centered>
     I'm new to Box Platform. How do I start?
@@ -80,13 +84,13 @@ All the developer resources to help you get the most from Box products
 </Centered>
 
 <Centered wide>
-  <FeaturedBoard type="aiDevZone" />
+  <FeaturedBoard type="community" />
 </Centered>
 
 <section id="sdks-and-tools" style="background-color: #FBFBFB;">
   <div style="padding: 0 16px">
     <Header centered>
-      Browse by SDK and tools
+      Browse by SDK and developer tools
     </Header>
       Development with Box Platform is easy with SDKs,
       Box CLI, Postman collection,
@@ -98,29 +102,25 @@ All the developer resources to help you get the most from Box products
       href="/reference/">
       *Box API Reference*
     </Tile>
-    <Tile type="python" title="Python Gen SDK"
-    href="https://github.com/box/box-python-sdk-gen?tab=readme-ov-file#box-python-sdk-generated">
-      *box-python-sdk-gen*
+    <Tile type="python" title="Python SDK"
+    href="https://github.com/box/box-python-sdk#readme">
+      *box-python-sdk*
     </Tile>
     <Tile type="java" title="Box Java SDK"
     href="https://github.com/box/box-java-sdk#readme">
       *box-java-sdk*
     </Tile>
-    <Tile type="box-orange" title="TypeScript Gen SDK"
-    href="https://github.com/box/box-typescript-sdk-gen?tab=readme-ov-file#box-typescript-sdk-generated">
-      *box-typescript-sdk-gen*
+    <Tile type="box-orange" title="Node SDK"
+    href="https://github.com/box/box-node-sdk#readme">
+      *box-node-sdk*
     </Tile>
-    <Tile type="net" title="Box .NET Gen SDK"
-    href="https://github.com/box/box-dotnet-sdk-gen?tab=readme-ov-file#box-dotnet-sdk-generated">
-      *box-dotnet-sdk-gen*
+    <Tile type="net" title="Box .NET SDK"
+    href="https://github.com/box/box-windows-sdk-v2#readme">
+      *box-windows-sdk-v2*
     </Tile>
     <Tile type="tool" title="Box iOS SDK"
     href="https://github.com/box/box-ios-sdk#readme">
       *box-ios-sdk*
-    </Tile>
-    <Tile type="tool" title="Box Swift Gen SDK (beta)"
-    href="https://github.com/box/box-ios-sdk#readme">
-      *box-swift-sdk-gen*
     </Tile>
     <Tile type="tool" title="Postman collection"
       href="/guides/tooling/postman">
@@ -144,7 +144,7 @@ All the developer resources to help you get the most from Box products
 </section>
 
 <Centered wide>
-  <FeaturedBoard type="community" />
+  <FeaturedBoard type="sampleCode" />
 </Centered>
 
 <section id="additional-box-platform-concepts"
@@ -156,7 +156,7 @@ All the developer resources to help you get the most from Box products
       Want to learn more?
       Use these guides to discover supplementary information on the inner
       workings of Box Platform, broaden your understanding, and improve
-      your custom applications.
+      your platform applications.
   </div>
 
   <TileSlider>
@@ -199,10 +199,6 @@ All the developer resources to help you get the most from Box products
     Browse all guides
   </More>
 </section>
-
-<Centered wide>
-  <FeaturedBoard type="sampleCode" />
-</Centered>
 
 <Centered wide>
   <Header centered>
