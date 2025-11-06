@@ -84,4 +84,4 @@ Learn how to approve Platform Apps
 [jwt]: g://authentication/jwt
 [cc]: g://authentication/client-credentials
 [uie]: g://embed/ui-elements
-[users]: g;//getting-started/user-types/#managed-users/
+[users]: page://platform/user-types/#managed-users

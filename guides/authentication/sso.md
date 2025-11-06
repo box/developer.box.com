@@ -46,7 +46,7 @@ When SSO is enabled but not required, managed users will have the option to
 either:
 
 - log in with a Box username and password
-- log in with their SSO provider 
+- log in with their SSO provider
 
 When SSO is enabled and required, Box will force all managed users to log in
 with their enterprise's configured SSO provider. In this case, any
@@ -101,7 +101,7 @@ would require them to use SSO where needed.
 [admin-approval]: g://authorization/platform-app-approval
 [jwt]: g://authentication/jwt
 [oauth2]: g://authentication/oauth2
-[ccg]: g:///authentication/client-credentials
+[ccg]: g://authentication/client-credentials
 [la-app]: guide://applications/web-app-integrations
 [app_token]: g://authentication/app-token
 [platform_app]: g://applications/app-types/platform-apps
