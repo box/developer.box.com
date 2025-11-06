@@ -240,6 +240,22 @@ Box AI is powered by the following AI models. These models are integrated with B
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
 			</div>
 		</Tile>
+		<Tile type="model" title="ibm__llama_4_maverick" href="/guides/box-ai/ai-models/ibm-llama-4-maverick-model-card">
+			A natively multimodal model that utilizes a mixture-of-experts architecture for optimized resource use.
+			<div>
+				<strong style="background-color: #e8e8e8">Chat</strong>
+				<strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #fdfad8">Standard</strong>
+			</div>
+		</Tile>    
+    <Tile type="model" title="ibm__llama_4_scout" href="/guides/box-ai/ai-models/ibm-llama-4-scout-model-card">
+			A natively multimodal AI model that enables text and multimodal experiences.
+			<div>
+				<strong style="background-color: #e8e8e8">Chat</strong>
+				<strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #fdfad8">Standard</strong>
+			</div>
+		</Tile>
 		<Tile type="model" title="ibm__llama_3_2_90b_vision_instruct" href="/guides/box-ai/ai-models/ibm-llama-3-2-90b-vision-instruct-model-card">
 			A model built for document-level understanding, interpretation of charts and graphs, and captioning of images.
 			<div>
@@ -248,15 +264,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #fdfad8">Standard</strong>
 			</div>
 		</Tile>
-		<Tile type="model" title="ibm__llama_4_scout" href="/guides/box-ai/ai-models/ibm-llama-4-scout-model-card">
-			A natively multimodal AI model that enables text and multimodal experiences.
-			<div>
-				<strong style="background-color: #e8e8e8">Chat</strong>
-				<strong style="background-color: #e1ffe7">Available</strong>
-				<strong style="background-color: #fdfad8">Standard</strong>
-			</div>
-		</Tile>
-    		<Tile type="model" title="ibm__mistral_medium_2505" href="/guides/box-ai/ai-models/ibm-mistral-medium-3-model-card">
+    <Tile type="model" title="ibm__mistral_medium_2505" href="/guides/box-ai/ai-models/ibm-mistral-medium-3-model-card">
 			High-performance enterprise model for coding and advanced reasoning.
 			<div>
 				<strong style="background-color: #e8e8e8">Chat</strong>
