@@ -137,8 +137,20 @@ Box AI is powered by the following AI models. These models are integrated with B
         <strong style="background-color: #e1f8ff">DOD IL5</strong>        
 			</div>
 		</Tile>
+    <Tile type="gemini" title="google__gemini_2_5_flash_001" href="/guides/box-ai/ai-models/google-gemini-2-5-flash-001-model-card">
+		Gemini multimodal model offering well-round capabilites, including thinking capabilities.
+		  <div>
+		    <strong style="background-color: #e8e8e8">Default for Box AI Extract</strong>
+        <strong style="background-color: #e8e8e8">Chat</strong>
+		    <strong style="background-color: #e1ffe7">Available</strong>
+		    <strong style="background-color: #fdfad8">Standard</strong>
+        <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
+        <strong style="background-color: #e1f8ff">FedRAMP High</strong>
+        <strong style="background-color: #e1f8ff">DOD IL5</strong>            
+		</div>
+	</Tile>
 	<Tile type="gemini" title="google__gemini_2_0_flash_001" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-001-model-card">
-		Gemini multimodal model designed for optimal for high-volume, high-frequency tasks at scale.
+		Gemini multimodal model designed for optimal high-volume, high-frequency tasks at scale.
 		<div>
 		<strong style="background-color: #e8e8e8">Chat</strong>
 		<strong style="background-color: #e1ffe7">Available</strong>
@@ -151,7 +163,6 @@ Box AI is powered by the following AI models. These models are integrated with B
 	<Tile type="gemini" title="google__gemini_2_0_flash_lite_preview" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-lite-preview-02-05">
 			Gemini multimodal model designed to handle lightweight tasks.
 			<div>
-				<strong style="background-color: #e8e8e8">Default for Box AI Extract</strong>
 				<strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #fdfad8">Standard</strong>
