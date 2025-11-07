@@ -293,7 +293,7 @@ CodePenで実装例を確認してください。
 
 [scopes]: guide://api-calls/permissions-and-errors/scopes
 
-[box-app]: g:///applications/app-types
+[box-app]: g://applications/app-types
 
 [token]: g://authentication/tokens/developer-tokens
 
@@ -307,7 +307,7 @@ CodePenで実装例を確認してください。
 
 [get-template]: g://metadata/templates/get/#get-a-metadata-template-by-name
 
-[creating-templates-api]: g:///metadata/templates/create
+[creating-templates-api]: g://metadata/templates/create
 
 [appjs]: https://github.com/box-community/content-explorer-metadata/blob/main/src/App.js
 

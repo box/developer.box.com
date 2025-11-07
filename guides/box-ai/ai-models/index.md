@@ -12,7 +12,7 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 27
+total_steps: 28
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/ai-models/openai-gpt-5-model-card
@@ -802,9 +802,9 @@ FedRAMP Moderate
 
 </Tile>
 
-<Tile type="model" title="ibm__llama_3_2_90b_vision_instruct" href="/guides/box-ai/ai-models/ibm-llama-3-2-90b-vision-instruct-model-card">
+<Tile type="model" title="ibm__llama_4_maverick" href="/guides/box-ai/ai-models/ibm-llama-4-maverick-model-card">
 
-ドキュメントレベルの理解、図表やグラフの解釈、画像の見出し作成向けに構築されたモデルです。
+A natively multimodal model that utilizes a mixture-of-experts architecture for optimized resource use.
 
 <div>
 
@@ -833,6 +833,34 @@ FedRAMP Moderate
 <Tile type="model" title="ibm__llama_4_scout" href="/guides/box-ai/ai-models/ibm-llama-4-scout-model-card">
 
 テキストとマルチモーダルのエクスペリエンスを可能にする、ネイティブのマルチモーダルAIモデル。
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+利用可能
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+標準
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="model" title="ibm__llama_3_2_90b_vision_instruct" href="/guides/box-ai/ai-models/ibm-llama-3-2-90b-vision-instruct-model-card">
+
+ドキュメントレベルの理解、図表やグラフの解釈、画像の見出し作成向けに構築されたモデルです。
 
 <div>
 

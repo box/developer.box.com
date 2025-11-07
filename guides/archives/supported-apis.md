@@ -22,7 +22,7 @@ fullyTranslated: true
 ---
 # Box ArchiveでサポートされているAPI
 
-基本的なBox Archive APIを使用すると、アーカイブの作成、リスト取得、削除を実行できますが、他のAPIを使用してアーカイブやそのコンテンツを操作することもできます。このようなAPIの詳細なリストについては、以下の表を参照してください。
+The basic Box Archive APIs allow you to create, list, update and delete archives, but you can use other APIs to interact with an archive or its content. See the table below for the full list of those APIs.
 
 <Message type="notice">
 
@@ -32,35 +32,38 @@ fullyTranslated: true
 
 </Message>
 
-| APIエンドポイント                                                                   | 説明                                                                                                             |
-| ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| [`POST /archives`][Create archive]                                           | アーカイブを作成します。                                                                                                   |
-| [`GET /archives`][List archives]                                             | すべてのアーカイブのリストを取得します。                                                                                           |
-| [`DELETE /archives/:id`][Delete archive]                                     | アーカイブを削除します。                                                                                                   |
-| [`PUT /files/:id`][Update file]                                              | ファイルをアーカイブに追加したり、アーカイブから復元したり、アーカイブ内またはアーカイブ間で移動したりします。ファイルに対するその他の更新は許可されていません。有効にするには、カスタマーサポートに連絡する必要があります。 |
-| [`PUT /folders/:id`][Update folder]                                          | フォルダをアーカイブに追加したり、アーカイブから復元したり、アーカイブ内またはアーカイブ間で移動したりします。フォルダに対するその他の更新は許可されていません。有効にするには、カスタマーサポートに連絡する必要があります。 |
-| [`POST /files/content`][Upload file]                                         | ファイルをアーカイブまたはアーカイブ内のフォルダにアップロードします。有効にするには、カスタマーサポートに連絡する必要があります。                                              |
-| [`GET /files/:id/content`][Download file]                                    | ファイルをアーカイブまたはアーカイブ内のフォルダからダウンロードします。                                                                           |
-| [`POST /zip_downloads`][Download zip]                                        | アーカイブまたはアーカイブ内のフォルダのzipファイルをダウンロードします。                                                                         |
-| [`POST /folders`][Create folder within archive]                              | アーカイブ内にフォルダを作成します。有効にするには、カスタマーサポートに連絡する必要があります。                                                               |
-| [`GET /files/:id`][Get file details]                                         | アーカイブ内のファイルの詳細を取得します。                                                                                          |
-| [`GET /folders/:id`][Get folder details]                                     | アーカイブまたはアーカイブ内のフォルダの詳細を取得します。                                                                                  |
-| [`GET /folders/:id/items`][List folder items]                                | アーカイブまたはアーカイブ内のフォルダ内にある項目のリストを取得します。                                                                           |
-| [`POST /files/:id/copy`][Copy file]                                          | アーカイブ内のファイルを別のアーカイブにコピーします。                                                                                    |
-| [`POST /folders/:id/copy`][Copy folder]                                      | アーカイブ内のフォルダを別のアーカイブにコピーします。                                                                                    |
-| [`POST /files/:id/metadata/:scope/:template_key`][Create metadata on file]   | アーカイブ内のファイルにメタデータインスタンスを作成します。                                                                                 |
-| [`GET /files/:id/metadata/:scope/:template_key`][View metadata on file]      | アーカイブ内のファイルのメタデータインスタンスを表示します。                                                                                 |
-| [`GET /files/:id/metadata`][List metadata on file]                           | アーカイブ内のファイルのすべてのメタデータインスタンスのリストを取得します。                                                                         |
-| [`PUT /files/:id/metadata/:scope/:template_key`][Update metadata on file]    | アーカイブ内のファイルのメタデータインスタンスを更新します。                                                                                 |
-| [`DELETE /files/:id/metadata/:scope/:template_key`][Delete metadata on file] | アーカイブ内のファイルのメタデータインスタンスを削除します。                                                                                 |
-| [`POST securityClassification`][Create classification label on file]         | アーカイブ内のファイルに分類ラベルを作成します。                                                                                       |
-| [`GET securityClassification`][View classification label on file]            | アーカイブ内のファイルの分類ラベルを表示します。                                                                                       |
-| [`PUT securityClassification`][Update classification label on file]          | アーカイブ内のファイルの分類ラベルを更新します。                                                                                       |
-| [`DELETE securityClassification`][Delete classification label on file]       | アーカイブ内のファイルの分類ラベルを削除します。                                                                                       |
+| APIエンドポイント                                                                   | 説明                                                                                                                                                                                                                                                                |
+| ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`POST /archives`][Create archive]                                           | アーカイブを作成します。                                                                                                                                                                                                                                                      |
+| [`GET /archives`][List archives]                                             | すべてのアーカイブのリストを取得します。                                                                                                                                                                                                                                              |
+| [`PUT /archives/:id`][Update archive]                                        | Update an archive.                                                                                                                                                                                                                                                |
+| [`DELETE /archives/:id`][Delete archive]                                     | アーカイブを削除します。                                                                                                                                                                                                                                                      |
+| [`PUT /files/:id`][Update file]                                              | Add a file to an archive, restore a file from an archive, or move a file within/between archives. Other updates to the file are not allowed. Requires contacting customer support to enable.                                                                      |
+| [`PUT /folders/:id`][Update folder]                                          | Add a folder to an archive, restore a folder from an archive, move a folder within/between archives, or rename and change the description of a folder in an archive. Other updates to the folder are not allowed. Requires contacting customer support to enable. |
+| [`POST /files/content`][Upload file]                                         | Upload a file to an archive or to a folder within an archive. Requires contacting customer support to enable.                                                                                                                                                     |
+| [`GET /files/:id/content`][Download file]                                    | Download a file from an archive or from a folder within an archive.                                                                                                                                                                                               |
+| [`POST /zip_downloads`][Download zip]                                        | Download a zip file of an archive or of a folder within an archive.                                                                                                                                                                                               |
+| [`POST /folders`][Create folder within archive]                              | アーカイブ内にフォルダを作成します。有効にするには、カスタマーサポートに連絡する必要があります。                                                                                                                                                                                                                  |
+| [`GET /files/:id`][Get file details]                                         | アーカイブ内のファイルの詳細を取得します。                                                                                                                                                                                                                                             |
+| [`GET /folders/:id`][Get folder details]                                     | Get details of an archive or of a folder within an archive.                                                                                                                                                                                                       |
+| [`GET /folders/:id/items`][List folder items]                                | List items within an archive or items in a folder within an archive.                                                                                                                                                                                              |
+| [`POST /files/:id/copy`][Copy file]                                          | Copy a file to an archive.                                                                                                                                                                                                                                        |
+| [`POST /folders/:id/copy`][Copy folder]                                      | Copy a folder to an archive.                                                                                                                                                                                                                                      |
+| [`POST /files/:id/metadata/:scope/:template_key`][Create metadata on file]   | Create a metadata instance attached to a file within an archive.                                                                                                                                                                                                  |
+| [`GET /files/:id/metadata/:scope/:template_key`][View metadata on file]      | View a metadata instance attached to a file within an archive.                                                                                                                                                                                                    |
+| [`GET /files/:id/metadata`][List metadata on file]                           | List all metadata instances attached to a file within an archive.                                                                                                                                                                                                 |
+| [`PUT /files/:id/metadata/:scope/:template_key`][Update metadata on file]    | Update a metadata instance attached to a file within an archive.                                                                                                                                                                                                  |
+| [`DELETE /files/:id/metadata/:scope/:template_key`][Delete metadata on file] | Delete a metadata instance attached to a file within an archive.                                                                                                                                                                                                  |
+| [`POST securityClassification`][Create classification label on file]         | Create a classification label for a file within an archive.                                                                                                                                                                                                       |
+| [`GET securityClassification`][View classification label on file]            | View a classification label of a file within an archive.                                                                                                                                                                                                          |
+| [`PUT securityClassification`][Update classification label on file]          | Update a classification label for a file within an archive.                                                                                                                                                                                                       |
+| [`DELETE securityClassification`][Delete classification label on file]       | Delete a classification label from a file within an archive.                                                                                                                                                                                                      |
 
 [Create archive]: https://developer.box.com/reference/v2025.0/post-archives/
 
 [List archives]: https://developer.box.com/reference/v2025.0/get-archives/
+
+[Update archive]: https://developer.box.com/reference/v2025.0/put-archives-id/
 
 [Delete archive]: https://developer.box.com/reference/v2025.0/delete-archives-id/
 

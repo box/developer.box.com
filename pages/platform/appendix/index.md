@@ -26,8 +26,8 @@ fullyTranslated: true
 
 [arch_patterns]: page://platform/appendix/architecture-patterns
 
-[user_models]: page://platform/appendix//user-models
+[user_models]: page://platform/appendix/user-models
 
 [common_values]: page://platform/appendix/locating-values
 
-[branding]: page://platform/appendix/branding-guidelines/
+[branding]: page://platform/appendix/branding-guidelines

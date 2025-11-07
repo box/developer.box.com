@@ -39,7 +39,7 @@ fullyTranslated: true
 SSOが有効化されていても必須ではない場合、管理対象ユーザーは次のいずれかを選択できます。
 
 * Boxのユーザー名とパスワードを使用してログインする
-* SSOプロバイダを使用してログインする 
+* SSOプロバイダを使用してログインする
 
 SSOが有効化され、必須になっている場合、すべての管理対象ユーザーは、企業の構成済みSSOプロバイダでログインするよう強制されます。この場合、ログインを試みるユーザーは、SAMLを介して渡されるメールアドレスと一致するBoxアカウントを持っているだけでなく、SSO側で構成されている必要があります。
 
@@ -79,7 +79,7 @@ Skillsを使用した場合でも、スキルイベントをトリガーする�
 
 [oauth2]: g://authentication/oauth2
 
-[ccg]: g:///authentication/client-credentials
+[ccg]: g://authentication/client-credentials
 
 [la-app]: guide://applications/web-app-integrations
 

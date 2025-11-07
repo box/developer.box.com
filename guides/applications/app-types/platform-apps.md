@@ -81,4 +81,4 @@ Platformアプリの承認方法を確認する
 
 [uie]: g://embed/ui-elements
 
-[users]: g;//getting-started/user-types/#managed-users/
+[users]: page://platform/user-types/#managed-users
