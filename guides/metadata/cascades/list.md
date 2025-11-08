@@ -29,9 +29,9 @@ fullyTranslated: true
 
 </Samples>
 
-## ページ割り
+## ページネーション
 
-このAPIでは、[マーカーベースのページ割り][pagination]が使用されており、レスポンスの本文で、より多くのテンプレートを使用できることを示す`next_marker`値を返すことができます。
+このAPIでは、[マーカーベースのページネーション][pagination]が使用されており、レスポンスの本文で、より多くのテンプレートを使用できることを示す`next_marker`値を返すことができます。
 
 [get_policies]: e://get_metadata_cascade_policies
 

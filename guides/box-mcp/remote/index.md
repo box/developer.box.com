@@ -112,7 +112,7 @@ Amazon Quick SuiteでリモートBox MCPサーバーを追加するには、以�
 
 詳細については、Amazon Quick Suiteドキュメントの[Model Context Protocol (MCP) integration](https://docs.aws.amazon.com/quicksuite/latest/userguide/mcp-integration.html) (英語) を参照してください。
 
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/S2kns2tYJjA?si=AWuXpvrjJY0J0qBb" title="Box remote MCP with Amazon Quick Suite" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/S2kns2tYJjA?si=AWuXpvrjJY0J0qBb" title="BoxのリモートMCPとAmazon Quick Suite" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 
 </iframe>
 
@@ -138,9 +138,9 @@ Amazon Quick SuiteでリモートBox MCPサーバーを追加するには、以�
 
 ### GitHub Copilot
 
-To set up the Box MCP server with GitHub Copilot, go to the [overview page](https://github.com/mcp/box/mcp-server-box-remote) and click _Install MCP server_. You'll be redirected to the VS Code editor. Click _Install_ and complete OAuth to grant access to Box.
+GitHub Copilotを使用してBox MCPサーバーを設定するには、[概要ページ](https://github.com/mcp/box/mcp-server-box-remote)に移動して、\[_Install MCP server (MCPサーバーをインストール)_] をクリックします。VS Codeエディタにリダイレクトされたら、\[_Install (インストール)_] をクリックし、OAuthを完了してBoxへのアクセスを許可します。
 
-You may need to manually enter your Client ID and Client Secret. When registering your OAuth application, make sure to include following redirect URIs:
+手動でクライアントIDとクライアントシークレットを入力することが必要になる場合があります。OAuthアプリケーションの登録時に、次のリダイレクトURIを含めるようにしてください。
 
 ```curl
 http://127.0.0.1:33418
@@ -148,7 +148,7 @@ https://vscode.dev/redirect
 
 ```
 
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/Y1a16jhCVPc?si=MOutZC3_tGtpcJ7c" title="Box remote MCP with Github Copilot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/Y1a16jhCVPc?si=MOutZC3_tGtpcJ7c" title="BoxのリモートMCPとGithub Copilot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 
 </iframe>
 
@@ -158,36 +158,36 @@ https://vscode.dev/redirect
 
 ## 利用可能なツール
 
-The remote Box MCP server provides access to a comprehensive set of tools that enable AI agents to interact with Box content and features. These tools are organized by functional category to help you quickly identify the right capabilities for your use case.
+リモートBox MCPサーバーでは、AIエージェントがBoxのコンテンツや機能を操作できるようにする包括的な一連のツールへのアクセスを提供します。これらのツールは、ユースケースに適切な機能をすばやく特定できるように、機能カテゴリ別に分類されています。
 
-### User and authentication
+### ユーザーと認証
 
-Manage user authentication and retrieve information about the authenticated user.
+ユーザー認証を管理したり、認証済みユーザーに関する情報を取得したりします。
 
 | ツール        | 説明                           |
 | ---------- | ---------------------------- |
 | `who_am_i` | 現在認証されているBoxユーザーの詳細な情報を返します。 |
 
-### Content Management
+### コンテンツ管理
 
-Manage files and folders, perform searches, and handle content operations across your Box environment.
+ファイルやフォルダの管理、検索の実行、Box環境でのコンテンツ操作の処理を行います。
 
 #### ファイル操作
 
-| ツール                   | 説明                                                                                                  |
-| --------------------- | --------------------------------------------------------------------------------------------------- |
-| `get_file_content`    | Returns the content of a file stored in Box.                                                        |
-| `get_file_details`    | Gets comprehensive file information from Box including metadata, permissions, and version details.  |
-| `upload_file`         | Uploads a new file to Box.                                                                          |
-| `upload_file_version` | Uploads a new file version by providing the entire file contents to update an existing file in Box. |
+| ツール                   | 説明                                                           |
+| --------------------- | ------------------------------------------------------------ |
+| `get_file_content`    | Boxに保存されているファイルのコンテンツを返します。                                  |
+| `get_file_details`    | メタデータ、権限、バージョンの詳細など、Boxからファイルの包括的な情報を取得します。                  |
+| `upload_file`         | 新しいファイルをBoxにアップロードします。                                       |
+| `upload_file_version` | ファイルコンテンツ全体を提供してBox内の既存のファイルを更新することで、新しいファイルバージョンをアップロードします。 |
 
-#### Folder operations
+#### フォルダ操作
 
-| ツール                                | 説明                                                                                                      |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `create_folder`                    | Creates a new folder in Box.                                                                            |
-| `get_folder_details`               | Retrieves comprehensive folder information including metadata, permissions, and collaboration settings. |
-| `list_folder_content_by_folder_id` | フォルダ内のファイル、フォルダ、ウェブリンクのリストを取得します。                                                                       |
+| ツール                                | 説明                                       |
+| ---------------------------------- | ---------------------------------------- |
+| `create_folder`                    | Box内に新規フォルダを作成します。                       |
+| `get_folder_details`               | メタデータ、権限、コラボレーション設定など、フォルダの包括的な情報を取得します。 |
+| `list_folder_content_by_folder_id` | フォルダ内のファイル、フォルダ、ウェブリンクのリストを取得します。        |
 
 #### 検索
 
@@ -198,7 +198,7 @@ Manage files and folders, perform searches, and handle content operations across
 
 ### Box AI
 
-Use AI-powered tools to ask questions, extract insights, and analyze content across files and hubs.
+AIを活用したツールを使用して、質問、インサイトの抽出、ファイルやHubでのコンテンツの分析を行います。
 
 | ツール                     | 説明                                                                   |
 | ----------------------- | -------------------------------------------------------------------- |
@@ -210,18 +210,18 @@ Use AI-powered tools to ask questions, extract insights, and analyze content acr
 
 ### コラボレーション
 
-Enable team collaboration through comments, shared links, and collaboration management tools.
+コメント、共有リンク、コラボレーション管理ツールによるチームのコラボレーションを可能にします。
 
-| ツール          | 説明                                                                                         |
-| ------------ | ------------------------------------------------------------------------------------------ |
-| `list_tasks` | Lists all tasks associated with a specific file, including status, message, and due dates. |
+| ツール          | 説明                                                     |
+| ------------ | ------------------------------------------------------ |
+| `list_tasks` | 特定のファイルに関連付けられたすべてのタスク (ステータス、メッセージ、期日を含む) のリストを取得します。 |
 
 ### Hub
 
-Create and manage Box Hubs for organizing collaborative content and resources around specific topics or projects.
+特定のトピックやプロジェクトに関するコラボレーションコンテンツやリソースを整理するためのBox Hubsを作成および管理します。
 
-| ツール               | 説明                                                             |
-| ----------------- | -------------------------------------------------------------- |
-| `get_hub_details` | Retrieves detailed information about a specific hub.           |
-| `get_hub_items`   | Gets items (files and folders) associated with a specific hub. |
-| `list_hubs`       | Lists all hubs accessible to the authenticated user.           |
+| ツール               | 説明                                     |
+| ----------------- | -------------------------------------- |
+| `get_hub_details` | 特定のHubに関する詳細情報を取得します。                  |
+| `get_hub_items`   | 特定のHubに関連付けられた項目 (ファイルおよびフォルダ) を取得します。 |
+| `list_hubs`       | 認証済みユーザーがアクセス可能なすべてのHubのリストを取得します。     |

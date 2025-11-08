@@ -17,11 +17,11 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/4-pagination.md
 fullyTranslated: true
 ---
-# ページ割り
+# ページネーション
 
-検索APIでは、`offset`クエリパラメータと`limit`クエリパラメータを使用したオフセットベースのページ割りがサポートされます。マーカーベースのページ割りはサポートされません。
+検索APIでは、`offset`クエリパラメータと`limit`クエリパラメータを使用したオフセットベースのページネーションがサポートされます。マーカーベースのページネーションはサポートされません。
 
-## APIによるページ割り
+## APIによるページネーション
 
 検索結果の最初のページを取得するには、APIを`offset`パラメータを指定せずに呼び出すか、`offset`を`0`に設定して呼び出す必要があります。`limit`フィールドは省略可能です。
 
@@ -49,13 +49,13 @@ curl https://api.box.com/2.0/search?query=sales&offset=100&limit=100 \
 
 <CTA to="g://api-calls/pagination/offset-based">
 
-オフセットベースのページ割りの詳細を確認する
+オフセットベースのページネーションの詳細を確認する
 
 </CTA>
 
-## SDKによるページ割り
+## SDKによるページネーション
 
-Boxの各SDKには、APIによるページ割りのサポートが組み込まれています。以下のコードサンプルでは、検索APIでのページ割りの使用方法を示します。
+Boxの各SDKには、APIによるページネーションのサポートが組み込まれています。以下のコードサンプルでは、検索APIでのページネーションの使用方法を示します。
 
 <Tabs>
 

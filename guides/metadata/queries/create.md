@@ -86,7 +86,7 @@ curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
 
 ```
 
-このAPIはデフォルトで、ページあたり`20`個の項目を返しますが、マーカーベースのページ割りを使用すると、さらに多くの項目をリクエストできます。
+このAPIはデフォルトで、ページあたり`20`個の項目を返しますが、マーカーベースのページネーションを使用すると、さらに多くの項目をリクエストできます。
 
 <CTA to="g://metadata/queries/pagination">
 

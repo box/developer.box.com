@@ -1733,7 +1733,7 @@ JSON形式のジョブの詳細
 
 <td>
 
-* `marker (str, optional)`: ページ割りのマーカー。
+* `marker (str, optional)`: ページネーションのマーカー。
 * `limit (int, optional)`: 返される最大ジョブ数。
 
 </td>
@@ -1763,7 +1763,7 @@ JSON形式のジョブのリスト
 <td>
 
 * `batch_id (str)`: バッチの識別子。
-* `marker (str, optional)`: ページ割りのマーカー。
+* `marker (str, optional)`: ページネーションのマーカー。
 * `limit (int, optional)`: 返される最大ジョブ数。
 
 </td>
@@ -1820,7 +1820,7 @@ JSON形式のジョブのリスト
 
 <td>
 
-* `marker (str, optional)`: ページ割りのマーカー。
+* `marker (str, optional)`: ページネーションのマーカー。
 * `limit (int, optional)`: リストに取得するテンプレートの最大数。
 
 </td>
@@ -1907,7 +1907,7 @@ JSON形式のジョブのリスト
 
 * `template_id (str)`: テンプレートID。
 * `template_version_id (str, optional)`: バージョンID。
-* `marker (str, optional)`: ページ割りのマーカー。
+* `marker (str, optional)`: ページネーションのマーカー。
 * `limit (int, optional)`: 返される最大タグ数。
 
 </td>
@@ -1937,7 +1937,7 @@ JSON形式のジョブのリスト
 <td>
 
 * `template_id (str)`: テンプレートの識別子。
-* `marker (str, optional)`: ページ割りのマーカー。
+* `marker (str, optional)`: ページネーションのマーカー。
 * `limit (int, optional)`: リストに取得する最大ジョブ数。
 
 </td>

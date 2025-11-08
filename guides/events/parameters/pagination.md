@@ -24,9 +24,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/parameters/pagination.md
 fullyTranslated: true
 ---
-# ストリーム位置のページ割り
+# ストリーム位置のページネーション
 
-イベントストリームのページ割りは、`stream_position`パラメータの使用によって機能します。
+イベントストリームのページネーションは、`stream_position`パラメータの使用によって機能します。
 
 最初に、`stream_position`クエリパラメータを指定せずにリクエストを[`GET /events`](e://get_events) APIに送信します。
 

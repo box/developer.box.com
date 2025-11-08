@@ -46,7 +46,7 @@ Boxでは、`admin_logs`を使用してライブイベントを登録してい�
 * 同じ[`GET /events`][events-api] APIエンドポイントを共有する
 * 同じイベントペイロードを返す (イベントIDを使用して2つのストリームタイプでのイベントの重複排除が可能)
 * `event_type`によるフィルタが可能
-* `stream_position`を使用したイベントのページ割りが可能
+* `stream_position`を使用したイベントのページネーションが可能
 
 ## `admin_logs`から`admin_logs_streaming`への移行方法
 
@@ -78,7 +78,7 @@ curl https://api.box.com/2.0/events?stream_type=admin_logs&stream_position=16328
 
 ```
 
-### 3. これまでの結果のページ割りを行い、`admin_logs`イベントとの重複を排除します
+### 3. これまでの結果のページネーションを行い、`admin_logs`イベントとの重複を排除します
 
 ```curl
 curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=1632893855 \
