@@ -22,7 +22,7 @@ fullyTranslated: true
 ---
 # IBM Llama 4 Maverick
 
-**IBM Llama 4 Maverick** is a natively multimodal AI model using a mixture-of-experts architecture, designed for high-performance text and image understanding with support for 12 languages.
+**IBM Llama 4 Maverick**は、混合専門家アーキテクチャを使用したネイティブのマルチモーダルAIモデルで、12の言語に対応した、テキストと画像の高性能な理解のために設計されています。
 
 ## モデルの詳細
 
@@ -33,9 +33,9 @@ fullyTranslated: true
 | APIモデル名       | `ibm__llama_4_maverick`  | [Box AI APIでのモデルの上書き][overrides]に使用されるモデルの名前。APIを動作させるには、ユーザーがこの名前を正確に指定する必要があります。 |
 | ホスティングレイヤー    | **IBM**                  | LLMを安全にホストする、信頼できる組織。                                                              |
 | モデルプロバイダ      | **Meta**                 | このモデルを提供する組織。                                                                      |
-| リリース日         | **April 5th, 2025**      | モデルのリリース日。                                                                         |
+| リリース日         | **2025年4月5日**            | モデルのリリース日。                                                                         |
 | ナレッジカットオフ日    | **2024年8月**              | モデルが情報の更新を取得しなくなった日付。                                                              |
-| 入力コンテキストウィンドウ | **1m**                   | 入力コンテキストウィンドウでサポートされるトークン数。                                                        |
+| 入力コンテキストウィンドウ | **100万**                 | 入力コンテキストウィンドウでサポートされるトークン数。                                                        |
 | 出力トークンの最大数    | **指定なし**                 | 1回のリクエストでモデルが生成できるトークン数。                                                           |
 | 経験に基づいたスループット | **指定なし**                 | モデルが1秒あたりに生成できるトークン数。                                                              |
 | オープンソース       | **はい**                   | モデルのコードを一般公開するかどうかを指定します。                                                          |
@@ -43,7 +43,7 @@ fullyTranslated: true
 
 ## その他のドキュメント
 
-For additional information, see [official IBM Llama 4 Maverick documentation][IBM].
+詳細については、[IBM Llama 4 Maverickの公式ドキュメント][IBM]を参照してください。
 
 [overrides]: g://box-ai/ai-agents/ai-agent-overrides
 

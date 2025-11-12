@@ -40,11 +40,11 @@ Box Archiveを使用すると、アーカイブを作成および管理できま
 
 ## アーカイブはフォルダ
 
-Archives are a special type of folders. Box Archive APIs allow you to create, list, update and delete archives. However, there are other APIs that also work with archives or with content within archives. For a full list of supported APIs, see the [Supported APIs][Supported APIs] guide.
+アーカイブは、特別な種類のフォルダです。Box Archive APIを使用すると、アーカイブの作成、リスト取得、更新、削除を実行できます。ただし、アーカイブまたはアーカイブ内のコンテンツを操作する他のAPIも存在します。サポートされているAPIの詳細なリストについては、[サポートされているAPI][Supported APIs]ガイドを参照してください。
 
 ## 必須のスコープ
 
-Before using any of the Box Archive APIs, make sure you can access [Box Archive in Admin Console][Box Archive in Admin Console]. Your Box Platform app must have the `GCM` and `Read and write all files and folders` [scopes][Scopes] enabled. If you plan to only view archives and not modify them, use the `Read all files and folders` instead of the `Read and write all files and folders` scope. Additionally, to be able to assign [storage policy][Storage policy] to an archive during its creation, your enterprise must have access to the Box Zones feature and your app must have the `Manage users` scope.
+Box Archive APIのいずれかを使用する前に、[管理コンソール内のBox Archive][Box Archive in Admin Console]にアクセスできることを確認してください。Box Platformアプリでは、`GCM`および`Read and write all files and folders`[スコープ][Scopes]が有効になっている必要があります。アーカイブを表示するだけで、変更しない予定の場合は、`Read and write all files and folders`スコープではなく`Read all files and folders`スコープを使用してください。さらに、作成中のアーカイブに[ストレージポリシー][Storage policy]を割り当てられるようにするには、企業にBox Zones機能へのアクセス権限、アプリに`Manage users`スコープが必要になります。
 
 <Message type="notice">
 

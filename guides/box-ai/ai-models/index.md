@@ -804,7 +804,7 @@ FedRAMP Moderate
 
 <Tile type="model" title="ibm__llama_4_maverick" href="/guides/box-ai/ai-models/ibm-llama-4-maverick-model-card">
 
-A natively multimodal model that utilizes a mixture-of-experts architecture for optimized resource use.
+リソース使用の最適化のために混合専門家アーキテクチャを使用する、ネイティブのマルチモーダルモデル。
 
 <div>
 
