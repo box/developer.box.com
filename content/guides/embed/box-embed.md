@@ -91,7 +91,7 @@ allow="local-network-access; clipboard-read; clipboard-write"
 
 Without this attribute, embedded Box content might not work correctly with Tools, Device Trust, or the clipboard copy button.
 
-**Example**
+#### Example
 
 ```html
 <iframe 
