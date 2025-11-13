@@ -75,6 +75,7 @@ If you want to customize Box Embed even further, you can do it programmatically.
   width="{pixels}"
   height="{pixels}"
   frameborder="0"
+  allow="local-network-access; clipboard-read; clipboard-write"
   allowfullscreen
   webkitallowfullscreen
   msallowfullscreen>
@@ -83,28 +84,9 @@ If you want to customize Box Embed even further, you can do it programmatically.
 
 ### Browser permissions
 
-Starting with Chrome 142 and Edge 143, add the following attribute to the `<iframe>` element to enable clipboard and local network access:
-
-```html
-allow="local-network-access; clipboard-read; clipboard-write"
-```
+The `allow` attribute enables clipboard operations and local network access for Chrome 142+ and Edge 143+. While designed for these browser versions, this attribute can be safely included for all browsers. Other browsers will ignore it.
 
 Without this attribute, embedded Box content might not work correctly with Tools, Device Trust, or the clipboard copy button.
-
-#### Example
-
-```html
-<iframe 
-  src="https://app.box.com/embed/s/1234567890abcdefgheijklmsopqrs?sortColumn=date"   
-  width="800" 
-  height="600" 
-  frameborder="0" 
-  allow="local-network-access; clipboard-read; clipboard-write" 
-  allowfullscreen 
-  webkitallowfullscreen 
-  msallowfullscreen>
-</iframe>  
-```
 
 <Message type='notice'>
 The Embed Widget Link Generation Modal automatically includes this parameter in the generated code.
