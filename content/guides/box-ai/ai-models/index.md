@@ -79,6 +79,7 @@ Box AI is powered by the following AI models. These models are integrated with B
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
         <strong style="background-color: #e1f8ff">FedRAMP High</strong>
         <strong style="background-color: #e1f8ff">DOD IL2</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>
 			</div>
 		</Tile>
 		<Tile type="gpt" title="azure__openai__gpt_4_1" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-model-card">
@@ -89,7 +90,8 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
         <strong style="background-color: #e1f8ff">FedRAMP High</strong>
-        <strong style="background-color: #e1f8ff">DOD IL2</strong>     
+        <strong style="background-color: #e1f8ff">DOD IL2</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>     
 			</div>
 		</Tile>
 		<Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card">
@@ -100,7 +102,8 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #fdfad8">Standard</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
         <strong style="background-color: #e1f8ff">FedRAMP High</strong>
-        <strong style="background-color: #e1f8ff">DOD IL2</strong>        
+        <strong style="background-color: #e1f8ff">DOD IL2</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>        
 			</div>
 		</Tile>
 		<Tile type="gpt" title="azure__openai__gpt_4o" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-model-card">
@@ -112,7 +115,8 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
         <strong style="background-color: #e1f8ff">FedRAMP High</strong>
-        <strong style="background-color: #e1f8ff">DOD IL2</strong>        
+        <strong style="background-color: #e1f8ff">DOD IL2</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>        
 			</div>
 		</Tile>
 		<Tile type="gpt" title="azure__openai__text_embedding_ada_002" href="/guides/box-ai/ai-models/azure-text-embedding-ada-002-model-card">
@@ -123,7 +127,8 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #fdfad8">Standard</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
         <strong style="background-color: #e1f8ff">FedRAMP High</strong>
-        <strong style="background-color: #e1f8ff">DOD IL2</strong>        
+        <strong style="background-color: #e1f8ff">DOD IL2</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>        
 			</div>
 		</Tile>
 		<Tile type="gemini" title="google__gemini_2_5_pro" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-model-card">
@@ -134,7 +139,8 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
         <strong style="background-color: #e1f8ff">FedRAMP High</strong>
-        <strong style="background-color: #e1f8ff">DOD IL5</strong>              
+        <strong style="background-color: #e1f8ff">DOD IL5</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>        
 			</div>
 		</Tile>
 	<Tile type="gemini" title="google__gemini_2_0_flash_001" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-001-model-card">
@@ -145,7 +151,8 @@ Box AI is powered by the following AI models. These models are integrated with B
 		<strong style="background-color: #fdfad8">Standard</strong>
     <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
     <strong style="background-color: #e1f8ff">FedRAMP High</strong>
-    <strong style="background-color: #e1f8ff">DOD IL5</strong>                       
+    <strong style="background-color: #e1f8ff">DOD IL5</strong>
+    <strong style="background-color: #e1f8ff">ISMAP</strong>            
 		</div>
 	</Tile>
 	<Tile type="gemini" title="google__gemini_2_0_flash_lite_preview" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-lite-preview-02-05">
@@ -157,7 +164,8 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #fdfad8">Standard</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
         <strong style="background-color: #e1f8ff">FedRAMP High</strong>
-        <strong style="background-color: #e1f8ff">DOD IL5</strong>                               
+        <strong style="background-color: #e1f8ff">DOD IL5</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>                
 				</div>
 		</Tile>
 		<Tile type="model" title="aws__claude_4_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-5-sonnet-model-card">
@@ -167,6 +175,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>
 			</div>
 		</Tile> 
     <Tile type="model" title="aws__claude_4_5_haiku" href="/guides/box-ai/ai-models/aws-claude-4-5-haiku-model-card">
@@ -175,6 +184,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #fdfad8">Standard</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>
 			</div>
 		</Tile>    
 		<Tile type="model" title="aws__claude_4_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-5-sonnet-model-card">
@@ -184,6 +194,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>
 			</div>
 		</Tile>    
 		<Tile type="model" title="aws__claude_4_opus" href="/guides/box-ai/ai-models/aws-claude-4-opus-model-card">
@@ -193,6 +204,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>
 			</div>
 		</Tile>
 		<Tile type="model" title="aws__claude_3_7_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-7-sonnet-model-card">
@@ -202,6 +214,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>
 			</div>
 		</Tile>
 		<Tile type="model" title="aws__claude_3_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-5-sonnet-model-card">
@@ -211,6 +224,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>
 			</div>
 		</Tile>
 		<Tile type="model" title="aws__claude_3_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-sonnet-model-card">
@@ -220,6 +234,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>
 			</div>
 		</Tile>
 		<Tile type="model" title="aws__claude_3_haiku" href="/guides/box-ai/ai-models/aws-claude-3-haiku-model-card">
@@ -229,6 +244,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #fdfad8">Standard</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>
 			</div>
 		</Tile>
 		<Tile type="model" title="aws__titan_text_lite" href="/guides/box-ai/ai-models/aws-titan-text-lite-model-card">
@@ -238,6 +254,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #fdfad8">Standard</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>
 			</div>
 		</Tile>
 		<Tile type="model" title="ibm__llama_4_maverick" href="/guides/box-ai/ai-models/ibm-llama-4-maverick-model-card">
