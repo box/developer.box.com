@@ -18,21 +18,15 @@ The following SDKs and tools are developed and supported by Box.
 
 Here you will find a list of SDKs
 you can use to build your application.
-Separately, we have listed the next generation
-Python, Typescript, and .NET SDKs, which are the
-newest addition.
-.NET is still a beta feature, but we encourage
-you to give it a try and explore all the
-features they bring along.
 
 <Message type='notice'>
 The tables below list SDKs along with additional information
 telling you if the project is maintained and has API
 parity.
 
-**Maintained:** Fully maintained projects are actively developed by Box. They
-receive the latest security updates and new features. For support with these
-projects please visit GitHub or [our Platform support forum][forum].
+**Status:** Describes the current project status. To learn more about statuses visit [Box Open Source website][badges].
+Active projects are actively developed by Box. They receive the latest security updates and new features. For
+support with these projects please visit GitHub or [our Platform support forum][forum].
 
 **API Parity**: Projects with full API parity are actively updated with all
 platform functionality as this becomes available on the Box Platform. Projects
@@ -40,44 +34,20 @@ with partial API parity lack some functionality while we work on bringing
 these projects to full parity.
 </Message>
 
-### Next generation SDKs
-
-The latest generation Box Python SDK, Box Typescript
-SDK, .NET SDK, and Swift SDK are designed to elevate the developer
-experience and streamline your integration
-with the Box Content Cloud.
-
-<Message type='notice'>
-Swift SDK is in a Public Beta phase.
-</Message>
-
-Here's what you can expect from the new SDKs:
-
-- **Full API Support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
-- **Rapid API Updates**: The new auto-generation development approach allows for adding Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
-- **Embedded Documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
-- **Enhanced Convenience Methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers which help to ensure that you’re using variables correctly, and much more.
-
-| Platform                        | Maintained? | API Parity |
-| ------------------------------- | --------- | -------- |
-| [Python Gen SDK][pythongensdk]  |     Yes     |    Full    |
-| [Typescript Gen SDK][tsgensdk]  |     Yes     |    Full    |
-| [.NET SDK][dotnetgensdk]        |     Yes     |    Full    |
-| [Swift SDK][swiftgensdk] (Beta) |     Yes     |    Full    |
-
 ### SDKs
 
-The table lists Box SDKs that you can use
-when building your applications.
+The table lists Box SDKs that you can use when building your
+applications. For latest API support and features, use the next
+generation SDKs.
 
-| Platform                          |                                     Maintained?                                      | API Parity |
-| --------------------------------- | ------------------------------------------------------------------------------------ | ---------- |
-| [Java SDK][javasdk]               |                                         Yes                                          |    Full    |
-| [iOS Content SDK][iossdk]         |                                         Yes                                          |    Full    |
-| [Android Content SDK][androidsdk] |                                          No                                          |  Partial   |
-| [.NET SDK][dotnetsdk]             | Deprecated. Only critical security updates and bug fixes are implemented.            |    Full    |
-| [Python SDK][pythonsdk]           | Deprecated. Only critical security updates and bug fixes are implemented.            |    Full    |
-| [Node SDK][nodesdk]               | Deprecated. Only critical security updates and bug fixes are implemented.            |    Full    |
+| Platform                          | Status     | API Parity |
+| --------------------------------- | ---------- | ---------- |
+| [Java SDK][javasdk]               | Active     | Full       |
+| [iOS Content SDK][iossdk]         | Active     | Full       |
+| [.NET SDK][dotnetsdk]             | Active     | Full       |
+| [Python SDK][pythonsdk]           | Active     | Full       |
+| [Node SDK][nodesdk]               | Active     | Full       |
+| [Android Content SDK][androidsdk] | Deprecated | Partial    |
 
 <Message type='warning'>
 As of May 31, 2023 Android SDK is no
@@ -92,15 +62,34 @@ recommend using Java SDK to build apps on Android.
 Refer to [this][android-docs] documentation for more details.
 </Message>
 
+### Next Generation SDKs
+
+<Message type='warning'>
+  As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts.
+
+  Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
+
+  **All future development, including new features and updates, will be delivered through the Box core SDKs. The standalone generated artifact was introduced in the version `v10` of the Box core SDKs, and it is currently available as a separate branch.**
+
+  For more details, see our [SDK versioning strategy document][versioning].
+</Message>
+
+Here's what you can expect from `v10`:
+
+- **Full API support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
+- **Rapid API updates**: The new auto-generation development approach allows you to add Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
+- **Embedded documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
+- **Enhanced convenience methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers that help to ensure that you’re using variables correctly, and much more.
+
 ## Box CLI
 
-Box CLI is a user-friendly command line tool which
+Box CLI is a user-friendly command line tool that
 allows both technical and non-technical users to
 leverage Box API to perform routine or bulk actions.
 
-| Platform   | Maintained? | API Parity |
-| ---------- | ----------- | ---------- |
-| [CLI][cli] | Yes         | Full       |
+| Platform   | Status | API Parity |
+| ---------- | ------ | ---------- |
+| [CLI][cli] | Active | Full       |
 
 ## Postman Collection
 
@@ -137,6 +126,16 @@ this is what you are looking for, have a look at the
 [Box SDK for Salesforce][sf-sdk].
 </Message>
 
+## Box CLI
+
+Box CLI is a user-friendly command line tool that
+allows both technical and non-technical users to
+leverage Box API to perform routine or bulk actions.
+
+| Platform                          | Maintained?  | API Parity |
+| --------------------------------- | ----------- | ------- |
+| [CLI][cli]                        | Yes         | Full    |
+
 ## Official UI Libraries
 
 Extend your application with pre-built UI components to browse, share, and
@@ -152,7 +151,7 @@ preview files on Box.
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | iOS        | [Browse SDK][iosbrowsesdk], [Share SDK][iossharesdk], [Preview SDK][iospreviewsdk]                                                                                                    |
 | Android    | [Browse SDK](https://github.com/box/box-android-browse-sdk), [Share SDK](https://github.com/box/box-android-share-sdk), [Preview SDK](https://github.com/box/box-android-preview-sdk) |
-| Javascript | [Box UI Elements](guide://embed/ui-elements/)                                                                                                                                         |
+| Javascript | [Box UI Elements](g://embed/ui-elements)                                                                                                                                              |
 
 ## Unofficial & Community Tools
 
@@ -197,11 +196,9 @@ for these tools.
 [salesforcesdk]: https://github.com/box/box-salesforce-sdk
 [rubysdk]: https://github.com/cburnette/boxr
 [jssdk]: https://github.com/allenmichael/box-javascript-sdk
-[pythongensdk]: https://github.com/box/box-python-sdk-gen
-[tsgensdk]: https://github.com/box/box-typescript-sdk-gen
-[dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen
-[swiftgensdk]: https://github.com/box/box-swift-sdk-gen
 [postman]: https://postman.com
+[badges]: https://opensource.box.com/badges/
+[versioning]: g://tooling/sdks/sdk-versioning
 
 <!-- i18n-enable localize-links -->
 

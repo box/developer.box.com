@@ -16,7 +16,7 @@ with content the user associated with the Access Token either a collaborator on
 or owns. This can be further restricted by [downscoping][ds] a token.
 
 <Message warning>
-  Application scopes, application access, enabled advanced settings, user
+  Required access scopes, application access, enabled advanced settings, user
   permissions, and endpoint-specific restrictions all work together to determine
   which API calls will be successful. For example, even if a user has
   collaborator access to a folder, a call to get information about the folder
@@ -38,9 +38,9 @@ Token.
 
 | Box Application Type                  | How to get Access Token                          |
 | ------------------------------------- | ------------------------------------------------ |
-| Custom App + OAuth 2.0                | [Explicit user grant][oauth2-with-sdk]           |
-| Custom App + JWT                      | [Exchange a JWT assertion][jwt-with-sdk]         |
-| Custom App + Client Credentials Grant | [Use client ID and client secret][clientcred]    |
+| Platform App + OAuth 2.0                | [Explicit user grant][oauth2-with-sdk]           |
+| Platform App + JWT                      | [Exchange a JWT assertion][jwt-with-sdk]         |
+| Platform App + Client Credentials Grant | [Use client ID and client secret][clientcred]    |
 | Limited Access App + App Token        | Configure token in [Developer Console][devcon]   |
 | Custom Skill                          | Access Token in event payload                    |
 

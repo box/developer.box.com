@@ -42,27 +42,30 @@ files:
     733459462002:
       name: Sample_document_short.pdf
       description: Document
-  go_back_button: AI Dev Zone
+  go_back_button: Box AI Developer Zone
 
 sample_code:
   summary:
     headline: Box AI API
     paragraph: Use this endpoint to integrate
      the document summary into your application.
-    pricing: Box AI API is available in public beta to all
-      Enterprise Plus customers.
+    pricing: This endpoint is available to all
+      customers Business and above.
   metadata:
-    headline: Box Metadata Suggestions API
-    paragraph: Use this endpoint to integrate
-     document metadata suggestions into
-     your application.
-    pricing: Pricing and packaging to be announced.
-  qa:
-    headline: Box AI API
-    paragraph: Use this endpoint to integrate
-     document Q&A into your application.
-    pricing: Box AI API is available in public beta to all
-      Enterprise Plus customers.
+    headline: Box AI API - extract structured
+    paragraph: Use this endpoint to add
+     document structured metadata extraction to
+     your applications. Pass a Box metadata template
+     ID or your own metadata structure as a parameter.
+    pricing: This endpoint is available to all
+      customers Business and above.
+  metadata-unstructured:
+    headline: Box AI API - extract
+    paragraph: Use this endpoint to add
+     document freeform metadata extraction to
+     your applications. The endpoint allows various prompt formats.
+    pricing: This endpoint is available to all
+      customers Business and above.
   developer_console:
     headline: Box Developer Console
     cta: Get started
@@ -78,16 +81,19 @@ side_panel:
   summary:
     title: Document summary
     cta: Learn more
-    url: /guides/box-ai/ask-questions/
+    url: /guides/box-ai/ai-tutorials/ask-questions/
   metadata:
+    title: Structured metadata extraction
+    cta: Learn more
+    url: /reference/post-ai-extract-structured/
+  metadata-unstructured:
     title: Metadata extraction
     cta: Learn more
-    url:
-      https://medium.com/box-developer-blog/box-ai-driven-metadata-extraction-4af9f52feb83
+    url: /reference/post-ai-extract/
   qa:
     title: Document Q&A
     cta: Learn more
-    url: /guides/box-ai/
+    url: /guides/box-ai/ai-tutorials/generate-text/
   tab_demo: Demo
   tab_sample_code: Sample code
   filtersError: Select the tone of voice and length to generate
@@ -110,6 +116,12 @@ document_metadata:
   extract: Extract
   error: Try again
 
+document_unstructured_metadata:
+  placeholder: Select value
+  instruction: Select the initial prompt format
+  input_type: Input type
+  error: Try again
+
 summary_filters:
   formal: Formal
   casual: Casual
@@ -119,3 +131,8 @@ summary_filters:
   sentence: One sentence
   paragraph: One paragraph
   characters: 500 characters
+
+unstructured_metadata_filters:
+  json: JSON
+  natural: Natural language
+  other: Other

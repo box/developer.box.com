@@ -22,7 +22,7 @@ the following:
 - [Errors][errors]: This page lists out all the error codes you can receive
 
 [devconsole]: https://cloud.app.box.com/developers/console
-[arch_patterns]:page://platform/appendix/architecture-patterns/
-[user_models]:page://platform/appendix//user-models/
-[common_values]:page://platform/appendix/locating-values/
-[errors]: g://api-calls/permissions-and-errors/common-errors/
+[arch_patterns]: page://platform/appendix/architecture-patterns
+[user_models]: page://platform/appendix/user-models
+[common_values]: page://platform/appendix/locating-values
+[errors]: g://api-calls/permissions-and-errors/common-errors

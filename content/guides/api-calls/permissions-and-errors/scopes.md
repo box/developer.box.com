@@ -199,7 +199,7 @@ enabled.
 
 |                       |                            |
 | --------------------- | -------------------------- |
-| **OAuth Scope**       | `AI.readwrite`  |
+| **OAuth Scope**       | `ai.readwrite`  |
 | **Application Scope** | Manage AI  |
 
 Gives an application permission to send requests to
@@ -263,9 +263,11 @@ calls are made.
 | **OAuth Scope**       | `enterprise_content`   |
 | **Application Scope** | Global Content Manager |
 
-Allows Admins and [Service Accounts][sa] to retrieve any content within their
-enterprise without having explicit ownership or collaboration permission.
-This scope is also required to manage retention policies and legal holds.
+Allows Admins, [Co-Admins][ca], and [Service Accounts][sa] to retrieve any content
+they do not own or are not collaborators on within their enterprise, based on
+their enterprise settings. 
+
+This scope is required to manage the retention policies and legal holds.
 
 <Message type='danger'>
   # Side effects
@@ -311,33 +313,33 @@ The standard OAuth scopes are also supported when downscoping.
 
 | OAuth Scope                    | Description                                        |
 | ------------------------------ | -------------------------------------------------- |
-| `root_readonly`                | Read all files and folders stored in Box           |
-| `root_readwrite`               | Read and write all files and folders stored in Box |
+| `ai.readwrite` | Manage AI API|
 | `manage_managed_users`         | Manage managed users                               |
 | `manage_app_users`             | Manage app users                                   |
+| `manage_data_retention`        | Manage retention policies                          |
+| `manage_enterprise_properties` | Manage enterprise properties                       |
 | `manage_groups`                | Manage groups                                      |
 | `manage_webhook`               | Manage webhooks                                    |
-| `manage_enterprise_properties` | Manage enterprise properties                       |
-| `manage_data_retention`        | Manage retention policies                          |
 | `sign_requests.readwrite`      | Manage sign requests                               |
 
 <!-- i18n-enable localize-links -->
 [console]: https://app.box.com/developers/console
 [ui-elements]: https://github.com/box/box-ui-elements
 [pricing]: https://www.box.com/pricing/platform
-[reference]: https://developer.box.com/reference
+[reference]: page://reference
 <!-- i18n-disable localize-links -->
 [at]: g://authentication/tokens
 [security]: g://security
 [jwt]: g://authentication/jwt
-[mu]:page://platform/user-types/#managed-users
+[mu]: page://platform/user-types/#managed-users
 [au]: g://authentication/jwt/as-user
 [uat]: g://authentication/jwt/user-access-tokens
 [appaccess]: g://authentication/jwt/jwt-setup/#application-access
-[appu]:page://platform/user-types/#app-user
+[appu]: page://platform/user-types/#app-user
 <!-- i18n-enable localize-links -->
 [governance]: https://www.box.com/security/governance-and-compliance
 <!-- i18n-disable localize-links -->
 [suppress]: g://api-calls/suppress-notifications
 [ds]: g://authentication/tokens/downscope
-[sa]:page://platform/user-types/#service-account
+[sa]: page://platform/user-types/#service-account
+[ca]: https://support.box.com/hc/en-us/articles/1500005433721-Users-Groups-Settings#h_01GSE1DYJKTY9EXEWJEDKFHCNV

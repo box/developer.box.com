@@ -24,7 +24,7 @@ created in the [Developer Console][console] and with API.
 <Message type='warning'>
   V2 webhooks can be created only when the scope **Manage Webhooks**
   is selected and the application is authorized. See more about
-  [application scopes][1] and [authorization][2].
+  [Required Access Scopes][1] and [authorization][2].
 </Message>
 
 To create a webhook follow the steps below.
@@ -100,5 +100,5 @@ You can find a list of available triggers [in this guide][4].
 [2]: g://authorization
 [3]: e://post_webhooks
 [4]: g://webhooks/triggers
-[sa]:page://platform/user-types/#service-account
+[sa]: page://platform/user-types/#service-account
 [console]: https://app.box.com/developers/console

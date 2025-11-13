@@ -18,7 +18,7 @@ This project has a few prerequisites.
     installed with `Homebrew` using `brew install docker-compose`.
 * When not using Docker
   * [`Node.js`](https://nodejs.org/) for compilation and linting of the API
-    specification. Ideally Node 12 or above.
+    specification. Ideally Node 18 or above.
   * [`Yarn`](https://yarnpkg.com/) is the Node package manager for this project.
     It can be installed with `npm i -g yarn` if Node is installed.
   * [`YamlLint`](https://github.com/adrienverge/yamllint) is the linter to validate
@@ -45,7 +45,7 @@ docker-compose up --build
 
 ## Run with Node
 
-To run with Node directly, make sure you have Node 14 or higher installed.
+To run with Node directly, make sure you have Node 18 or higher installed.
 
 ```sh
 yarn install
@@ -55,7 +55,7 @@ yarn start
 ## Lint and validate the tests
 
 With the dependencies installed, it is possible to lint the markdown and
-microocopy. Linting validates the markdown is valid, has no spelling
+microcopy. Linting validates the markdown is valid, has no spelling
 mistakes, and that  there are no obvious incorrect links.
 
 ```sh
@@ -69,7 +69,7 @@ Additionally, each of the lint steps can be run individually.
 lint:markdown # runs markdownlint to validate the markdown syntax
 lint:spelling:interactive # validates the spelling of the files
 lint:alex # validates that none of the text includes any insensitive content
-lint:yaml # validates that the microcopy files are valuid Yaml
+lint:yaml # validates that the microcopy files are valid Yaml
 lint:links # runs some basic linting on the links in the guides
 ```
 
@@ -86,10 +86,10 @@ yarn build
 This build performs a few simple steps:
 
 1. It reformats the markdown to add extra spacing around HTML/React tags
-2. It turns self closing HTML tags (`<Foo />`) into sperate open and closing
+2. It turns self closing HTML tags (`<Foo />`) into separate open and closing
    tags (`<Foo></Foo>`)
 3. It adds some extra information to each markdown file in the frontmatter
-4. it converts all the seperate microcopy Yaml files into one big JSONP file
+4. It converts all the separate microcopy Yaml files into one big JSONP file
    (JSON with comments).
 
 ---

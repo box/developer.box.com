@@ -13,7 +13,7 @@ alias_paths:
 
 <!--alex ignore executed-->
 
-The Box CLI is a user-friendly command line tool which allows both technical and
+The Box CLI is a user-friendly command line tool that allows both technical and 
 non-technical users to leverage the Box API to perform routine or bulk actions.
 There is no need to write any code, as these actions are executed through a set
 of [commands][commands].
@@ -36,9 +36,9 @@ This guide will take you through the following steps.
 </Next>
 
 [commands]: https://github.com/box/boxcli#command-topics
-[one]: g://cli/quick-start/create-oauth-app/
-[two]: g://cli/quick-start/install-and-configure/
-[three]: g://cli/quick-start/build-commands-help/
-[four]: g://cli/quick-start/options-and-bulk-commands/
-[five]: g://cli/quick-start/powershell-script-templates/
-[six]: g://cli/quick-start/next-steps/
+[one]: g://cli/quick-start/create-oauth-app
+[two]: g://cli/quick-start/install-and-configure
+[three]: g://cli/quick-start/build-commands-help
+[four]: g://cli/quick-start/options-and-bulk-commands
+[five]: g://cli/quick-start/powershell-script-templates
+[six]: g://cli/quick-start/next-steps

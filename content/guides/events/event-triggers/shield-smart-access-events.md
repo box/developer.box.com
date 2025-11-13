@@ -355,9 +355,9 @@ The `additional_details` payload will provide the following details:
   `SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED` event.
 </Message>
 
-## Application Restriction
+## Integration Restriction
 
-If a 3rd-party application, including published custom applications with which
+If a 3rd-party application, including published platform applications with which
 your organization is integrated, is restricted from downloading a file or a
 folder, an event is produced within the [enterprise event][events] stream.
 These events follow the standard event object schema, with the `event_type`
@@ -391,7 +391,7 @@ following details:
 }
 ```
 
-For custom applications, the `additional_details` payload will provide the
+For platform applications, the `additional_details` payload will provide the
 following details:
 
 ```json
@@ -468,4 +468,4 @@ The `additional_details` payload will provide the following details:
 [smartaccess]: https://support.box.com/hc/en-us/articles/7711416297747-About-Smart-Access
 [monitoringmode]: https://support.box.com/hc/en-us/articles/14596333776403-Shield-Access-Policy-Settings
 <!-- i18n-disable localize-links -->
-[events]: g://events/enterprise-events/for-enterprise/
+[events]: g://events/enterprise-events/for-enterprise

@@ -20,7 +20,7 @@ verify your application's identity using a client ID and client secret.
 
 ## Prerequisites
 
-- A Custom Application using Server Authentication (with Client Credentials Grant) authentication in the Box [Developer Console][devconsole]
+- A Platform Application using Server Authentication (with Client Credentials Grant) authentication in the Box [Developer Console][devconsole]
 - [2FA][2fa] enabled on your Box account for viewing and copying the application's client secret from the configuration tab
 - The application is [authorized][auth] in the Box Admin Console
 
@@ -46,12 +46,23 @@ If you would like to authenticate as the application's [Service Account][sa]:
 - set `box_subject_type` to `enterprise`
 - set `box_subject_id` to the enterprise ID
 
-If you would like to authenticate as a Managed User:
+<Samples id='x_auth' variant='with_client_credentials' ></Samples>
+
+If you would like to authenticate as an admin or a managed user:
 
 - set `box_subject_type` to `user`
 - set `box_subject_id` to the user ID
+- enable **App + Enterprise Access** and **Generate User Access Tokens** Box [Developer Console][devconsole]
 
-<Samples id='x_auth' variant='with_client_credentials' ></Samples>
+<Samples id='x_auth' variant='with_ccg_admin_managed_user' ></Samples>
+
+If you would like to authenticate as any application user:
+
+- set `box_subject_type` to `user`
+- set `box_subject_id` to the user ID
+- enable **Generate User Access Tokens** in the Box [Developer Console][devconsole]
+
+<Samples id='x_auth' variant='with_ccg_app_user' ></Samples>
 
 ## Common Errors
 
@@ -69,7 +80,13 @@ This error indicates either:
 
 - the client ID and client secret passed are incorrect or are not for the same application,
 
-- the `box_subject_id` cannot be used based on the selected [application access][aa]. For example, if you send in a `box_subject_type` of `enterprise` and your application is configured for App Access Only, the `grant credentials are invalid` error will be returned,
+- the `box_subject_id` cannot be used based on the selected [application access][aa].
+
+<Message warning>
+
+A CCG app with App Access Only can send in the `box_subject_type` of `enterprise` to authenticate as its service account, but it can't authenticate as a managed user or an admin.
+
+</Message>
 
 - to use a `box_subject_type` of `user`, your application should be configured to generate user access tokens in the **Advanced Features** section of the **Configuration tab**.
 
@@ -88,8 +105,8 @@ Once you make changes to the app settings, don't forget to [reauthorize][reauth]
 <!-- i18n-disable localize-links -->
 
 [devconsole]: https://app.box.com/developers/console
-[accesstoken]: e://post-oauth2-token/
-[sa]: page://platform/user-types/#service-account/
+[accesstoken]: e://post-oauth2-token
+[sa]: page://platform/user-types/#service-account
 [auth]: g://authorization
 [aa]: g://authentication/client-credentials/client-credentials-setup/#application-access
-[reauth]: g://authorization/custom-app-approval#re-authorization-on-changes
+[reauth]: g://authorization/platform-app-approval#re-authorization-on-changes

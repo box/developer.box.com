@@ -61,6 +61,17 @@ webhook-tester:
 Once created, lint the page using `yarn lint`. Any spelling mistakes or broken
 links should pop up automatically.
 
+## Important notes
+
+If a microcopy entry contains formatting elements like backticks ``` `something` ``` or asterisks ``` **something** ``` it will be automatically htmlified. To avoid that, the entry path have to contain `__raw__` segment, for example:
+
+```yml
+notice:
+  __raw__:
+    // additional_info: Notice with additional info with link
+    additional_info: For more details, see **[Start here](g://getting-started)**.
+```
+
 ---
 
 [**Next:** Contributing a pull request](./pull-request.md)

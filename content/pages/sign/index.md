@@ -42,9 +42,9 @@ your users.  -->
 Let's get started!
 
 [sign]: https://www.box.com/esignature
-[quick-start]:page://sign/quick-start
-[request-options]:page://sign/request-options
-[technical-use-cases]:page://sign/technical-use-cases
+[quick-start]: page://sign/quick-start
+[request-options]: page://sign/request-options
+[technical-use-cases]: page://sign/technical-use-cases
 
 <!--
 <Tabs>

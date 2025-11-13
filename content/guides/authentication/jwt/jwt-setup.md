@@ -5,8 +5,8 @@ related_guides:
   - authentication/jwt
 required_guides:
   - authentication/select
-  - applications/app-types/custom-apps
-  - authorization/custom-app-approval
+  - applications/app-types/platform-apps
+  - authorization/platform-app-approval
 related_resources: []
 alias_paths:
   - /docs/setting-up-a-jwt-app
@@ -18,7 +18,7 @@ alias_paths:
 
 # Setup with JWT
 
-A Custom App can be set up to use server-side authentication with
+A Platform App can be set up to use server-side authentication with
 [JWT][jwt].
 
 <CTA to='g://authentication/jwt'>
@@ -27,7 +27,7 @@ A Custom App can be set up to use server-side authentication with
 
 ## Prerequisites
 
-To set up a Custom App using server-side authentication, you will need to ensure
+To set up a Platform App using server-side authentication, you will need to ensure
 you have access the [Developer Console][devconsole] from your Box enterprise
 account. Alternatively, you may sign up for a [developer account][devaccount].
 
@@ -36,11 +36,11 @@ account. Alternatively, you may sign up for a [developer account][devaccount].
 ### Navigate to the Developer Console
 
 Log into Box and go to the [Developer Console][devconsole].
-Select **Create New App**.
+Select **Create Platform App**.
 
 ### Select application type
 
-Select **Custom App** from the list of application types. A modal will appear to
+Select **Platform App** from the list of application types. A modal will appear to
 prompt a selection for the next step.
 
 <ImageFrame border>
@@ -65,7 +65,7 @@ Use the drop-down list to select the app's purpose. Depending on the option chos
 ### Select application authentication
 
 Select **Server Authentication (with JWT)** if you would like to verify
-application identity [with a key pair][kp] and confirm with **Create App**.
+application identity [with a key pair][kp] and confirm with **Create Platform App**.
 
 <Message warning>
 Once you make a selection, you will not be able to change to a different
@@ -83,7 +83,7 @@ authentication method without creating a new application.
   (Client Credentials Grant) as your authentication method.
 </Message>
 
-Once a Custom App is created leveraging Server Authentication with JWT, a key
+Once a Platform App is created leveraging Server Authentication with JWT, a key
 pair can be generated via the configuration tab within the
 [Developer Console][devconsole]. Alternatively, you can generate your
 own and supply Box with the public key. Regardless of the method you select,
@@ -159,8 +159,8 @@ Click **Review and Submit** to send an email to your Box enterprise Admin for
 approval. More information on this process is available in our
 [support article for app authorization][app-auth].
 
-<CTA to='g://authorization/custom-app-approval'>
-  Learn how to authorize a Custom Application
+<CTA to='g://authorization/platform-app-approval'>
+  Learn how to authorize a Platform Application
 </CTA>
 
 ## Basic configuration

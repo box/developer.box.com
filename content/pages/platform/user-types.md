@@ -81,7 +81,9 @@ Admin Console.
 A Service Account provides developers with a programmatic authentication
 mechanism for server-side integrations with Box. In other words, an application
 can authenticate to Box as the service, which is represented by a Service
-Account user. A Service Account can then be used to create other application
+Account user. Service Accounts are only accessible with the API, meaning they do not have login credentials.
+
+A Service Account can then be used to create other application
 specific users, called App Users described further below.
 
 <ImageFrame center>
@@ -194,7 +196,7 @@ Account.
 
 A Service Account is also automatically generated when a Limited Access App is
 created in the [Developer Console][dc]. This Service Account has some additional
-restrictions that a Service Account associated with a Custom App does not.
+restrictions that a Service Account associated with a Platform App does not.
 
 - All content used within the Limited Access App must be uploaded and owned by the Service Account
 - The Service Account can not access any other user's information or content
@@ -242,7 +244,7 @@ store the data in unique Box user accounts.
 App Users cannot see or interact any content in the folder tree of the Service
 Account unless explicitly added as a collaborator. Again, because App Users does
 not have login credentials, they cannot access content outside of the
-Custom Application.
+platform application.
 
 ### UI Access
 
@@ -281,7 +283,7 @@ or as a service account, you can make subsequent calls impersonating another
 user. This is useful in automating administrative tasks like folder
 reorganization or employee provisioning. In order to make `as-user` calls,
 the appropriate scope must be added to the application when creating it
-in the developer console. For example, in an OAuth 2.0 custom app, you
+in the developer console. For example, in an OAuth 2.0 platform app, you
 would need to turn on this switch.
 
 <ImageFrame center>
@@ -295,11 +297,11 @@ would need to turn on this switch.
 </Next>
 
 [dc]: https://app.box.com/developers/console
-[auth]: g://authorization/custom-app-approval/
-[scopes]: g://api-calls/permissions-and-errors/scopes/
-[collabapi]: e://post-collaborations/
-[getuser]: e://get-users-me/
-[updateuser]: e://put-users-id/
+[auth]: g://authorization/platform-app-approval
+[scopes]: g://api-calls/permissions-and-errors/scopes
+[collabapi]: e://post-collaborations
+[getuser]: e://get-users-me
+[updateuser]: e://put-users-id
 [createuser]: e://post-users
 [events]: e://get-events/
 [mu]: https://support.box.com/hc/en-us/articles/32209778850067-About-Managed-Users

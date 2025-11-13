@@ -35,39 +35,9 @@ All the developer resources to help you get the most from Box products
 
 </Banner>
 
-<!-- <Centered wide>
-  <Header to='/guides' centered>
-    Guides
-  </Header>
-  <GuidesList>
-    Get started, learn tips and tricks, and discover how to use the Box
-    Platform API with our comprehensive guides. Here are six of the most used
-    guides to get you started.
-
-    <GuideList href='/guides/authentication/'>
-      Authentication
-    </GuideList>
-    <GuideList href='/guides/cli/quick-start/'>
-      CLI Quick Start
-    </GuideList>
-    <GuideList href='/guides/tooling/postman/quick-start/'>
-      Postman Quick Start
-    </GuideList>
-    <GuideList href='/guides/api-calls/permissions-and-errors/common-errors/'>
-      Common Errors
-    </GuideList>
-    <GuideList href='/guides/api-calls/pagination/offset-based/'>
-      API Pagination
-    </GuideList>
-    <GuideList href='/guides/embed/ui-elements/'>
-      UI Elements
-    </GuideList>
-  </GuidesList>
-
-  <More to='/guides' right>
-    More Guides
-  </More>
-</Centered> -->
+<Centered wide>
+  <FeaturedBoard type="aiDevZone" />
+</Centered>
 
 <Centered wide id="start-with-box-platform" >
   <Header centered>
@@ -76,7 +46,7 @@ All the developer resources to help you get the most from Box products
     We got you covered! Follow these steps to build
     new applications and discover Box Platform capabilities.
 
-  <TileGrid>
+  <TileGrid rows="3">
     <Tile type="users" title="1. Explore user types"
       href="platform/user-types/">
       Box Platform covers many use cases
@@ -95,28 +65,17 @@ All the developer resources to help you get the most from Box products
       Credentials, and App Token authentication. Learn more and
       select the method that applies to your app.
     </Tile>
-    <Tile type="cli" title="4. Set up Box CLI"
-      href="/guides/cli/quick-start/">
-      Optionally, follow the Box CLI quickstart
-      guide to have an API testing space. It takes less than
-      five minutes to start developing!
-    </Tile>
-    <Tile type="architecture" title="5. Create an architecture pattern"
-      href="/platform/appendix/architecture-patterns/">
-      We always recommend putting pen to paper and drawing out your solution.
-      Have a look at the most common architecture patterns to get inspired!
-    </Tile>
-    <Tile type="create" title="6. Create the application"
+    <Tile type="create" title="4. Create the application"
       href="https://app.box.com/developers/console">
       Now, you can start building! Launch the Developer Console and create an
       application of your choice.
     </Tile>
-    <Tile type="authorize" title="7. Authorize the application"
+    <Tile type="authorize" title="5. Authorize the application"
       href="/guides/authorization/">
       Read about the authorization requirements you have to
       fulfill to start using you app.
     </Tile>
-    <Tile type="code" title="8. Start coding"
+    <Tile type="code" title="6. Start coding"
       href="#sdks-and-tools">
       Finally, explore our developer toolkit: API Reference,
       SDKS, Box CLI, Postman Collection, Box UI Elements and much more!
@@ -125,13 +84,13 @@ All the developer resources to help you get the most from Box products
 </Centered>
 
 <Centered wide>
-  <FeaturedBoard type="aiDevZone" />
+  <FeaturedBoard type="community" />
 </Centered>
 
 <section id="sdks-and-tools" style="background-color: #FBFBFB;">
   <div style="padding: 0 16px">
     <Header centered>
-      Browse by SDK and tools
+      Browse by SDK and developer tools
     </Header>
       Development with Box Platform is easy with SDKs,
       Box CLI, Postman collection,
@@ -143,23 +102,23 @@ All the developer resources to help you get the most from Box products
       href="/reference/">
       *Box API Reference*
     </Tile>
-    <Tile type="java" title="Java SDK"
-    href="https://github.com/box/box-java-sdk#readme">
-      *box-java-sdk*
-    </Tile>
     <Tile type="python" title="Python SDK"
     href="https://github.com/box/box-python-sdk#readme">
       *box-python-sdk*
     </Tile>
-    <Tile type="node" title="Node.js SDK"
-    href="https://github.com/box/box-node-sdk#readme">
-      *box-node-js-sdk*
+    <Tile type="java" title="Box Java SDK"
+    href="https://github.com/box/box-java-sdk#readme">
+      *box-java-sdk*
     </Tile>
-    <Tile type="net" title=".NET SDK"
+    <Tile type="box-orange" title="Node SDK"
+    href="https://github.com/box/box-node-sdk#readme">
+      *box-node-sdk*
+    </Tile>
+    <Tile type="net" title="Box .NET SDK"
     href="https://github.com/box/box-windows-sdk-v2#readme">
       *box-windows-sdk-v2*
     </Tile>
-    <Tile type="tool" title="iOS SDK"
+    <Tile type="tool" title="Box iOS SDK"
     href="https://github.com/box/box-ios-sdk#readme">
       *box-ios-sdk*
     </Tile>
@@ -184,44 +143,8 @@ All the developer resources to help you get the most from Box products
   </More>
 </section>
 
-<!-- <Dark>
-  <Centered wide>
-    <Header to='/sdks-and-tools' centered>
-      SDKS & Tools
-    </Header>
-    <SDKS>
-      Development with Box Platform is made easier with SDKs for your
-      programming language, a command line interface, front-end UI elements,
-      and much more.
-
-      <SDK language='python' href='https://github.com/box/box-python-sdk'>
-        Python SDK
-      </SDK>
-      <SDK language='java' href='https://github.com/box/box-java-sdk'>
-        Java SDK
-      </SDK>
-      <SDK language='node' href='https://github.com/box/box-node-sdk'>
-        Node SDK
-      </SDK>
-      <SDK language='dotnet' href='https://github.com/box/box-windows-sdk'>
-        Windows .NET SDK
-      </SDK>
-      <SDK language='cli' href='https://github.com/box/boxcli'>
-        Box CLI
-      </SDK>
-      <SDK language='uielements' href='https://github.com/box/box-ui-elements'>
-        UI Elements
-      </SDK>
-    </SDKS>
-
-    <More to='/sdks-and-tools' right>
-      More SDKs & Tools
-    </More>
-  </Centered>
-</Dark> -->
-
 <Centered wide>
-  <FeaturedBoard type="community" />
+  <FeaturedBoard type="sampleCode" />
 </Centered>
 
 <section id="additional-box-platform-concepts"
@@ -233,7 +156,7 @@ All the developer resources to help you get the most from Box products
       Want to learn more?
       Use these guides to discover supplementary information on the inner
       workings of Box Platform, broaden your understanding, and improve
-      your custom applications.
+      your platform applications.
   </div>
 
   <TileSlider>
@@ -276,10 +199,6 @@ All the developer resources to help you get the most from Box products
     Browse all guides
   </More>
 </section>
-
-<Centered wide>
-  <FeaturedBoard type="sampleCode" />
-</Centered>
 
 <Centered wide>
   <Header centered>

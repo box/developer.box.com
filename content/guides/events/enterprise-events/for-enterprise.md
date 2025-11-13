@@ -107,6 +107,8 @@ exhaustive, so it is possible events appear that are not listed.
 | `APPLICATION_CREATED`                          | A new application is created in the Box Developer Console                                       |
 | `APPLICATION_PUBLIC_KEY_ADDED`                 | An application public key is added.                                                             |
 | `APPLICATION_PUBLIC_KEY_DELETED`               | An application public key is deleted.                                                           |
+| `BOX_AI_USER_REQUEST` | User asks Box AI a question or makes a request |
+| `BOX_AI_USER_FAILED_REQUEST` | The question or request returns an error |
 | `CHANGE_ADMIN_ROLE`                            | When an admin role changes for a user                                                           |
 | `CHANGE_FOLDER_PERMISSION`                     | Edit the permissions on a folder                                                                |
 | `COLLABORATION_ACCEPT`                         | Accepted invites                                                                                |
@@ -123,6 +125,9 @@ exhaustive, so it is possible events appear that are not listed.
 | `COMMENT_CREATE`                               | A comment is created on a file                                                                  |
 | `COMMENT_DELETE`                               | A comment is deleted on a file                                                                  |
 | `CONTENT_ACCESS`                               | A file is accessed by an authorized end user or programmatically by a Box application           |
+| `CONTENT_RECOVERY_REPORT_CREATE` | A Content Recovery report is created |
+| `CONTENT_RECOVERY_REPORT_DELETE` | A Content Recovery report is deleted  |
+| `CONTENT_RECOVERY_REPORT_INITIATE` | A Content Recovery report is initiated |
 | `CONTENT_WORKFLOW_ABNORMAL_DOWNLOAD_ACTIVITY`  | A policy set in the Admin console is triggered                                                  |
 | `CONTENT_WORKFLOW_AUTOMATION_ADD`              | An automation is added                                                                          |
 | `CONTENT_WORKFLOW_AUTOMATION_DELETE`           | An automation is deleted                                                                        |
@@ -139,6 +144,12 @@ exhaustive, so it is possible events appear that are not listed.
 | `DOWNLOAD`                                     | Downloaded                                                                                      |
 | `EDIT`                                         | Edited                                                                                          |
 | `EDIT_USER`                                    | Edited user                                                                                     |
+| `EDR_CROWDSTRIKE_DEVICE_DETECTED`                                    | Device detected by the CrowdStrike Falcon platform                                                                                     |
+| `EDR_CROWDSTRIKE_NO_BOX_TOOLS`                                    | Box Tools package not detected on device with CrowdStrike Falcon platform support                                                                           |
+| `EDR_CROWDSTRIKE_BOX_TOOLS_OUTDATED`                                    | Box Tools package outdated on device with CrowdStrike Falcon platform support                                                                                     |
+| `EDR_CROWDSTRIKE_DRIVE_OUTDATED`                                    | Box Drive application outdated on device with CrowdStrike Falcon platform support                                                                                     |
+| `EDR_CROWDSTRIKE_ACCESS_ALLOWED_NO_CROWDSTRIKE_DEVICE`                                    | Access allowed to a device not identified by the CrowdStrike Falcon platform                                                                                   |
+| `EDR_CROWDSTRIKE_ACCESS_REVOKED`                                    | Access revoked to a device identified by the CrowdStrike Falcon platform                                                                                     |
 | `EMAIL_ALIAS_CONFIRM`                          | A user email alias is confirmed                                                                 |
 | `EMAIL_ALIAS_REMOVE`                           | A user email alias is removed                                                                   |
 | `ENABLE_MULTI_FACTOR_AUTH`                           | When multifactor authentication has been enabled                      |
@@ -157,6 +168,7 @@ exhaustive, so it is possible events appear that are not listed.
 | `GROUP_EDITED`                                 | Edited group                                                                                    |
 | `GROUP_REMOVE_ITEM`                            | Folders were removed from a group in the Admin console                                          |
 | `GROUP_REMOVE_USER`                            | Removed user from group                                                                         |
+| `ITEM_EMAIL_SEND` | An email is sent to a collaborator on an item |
 | `ITEM_MODIFY`                                  | Item is modified                                                                                |
 | `ITEM_OPEN`                                    | Item is opened                                                                                  |
 | `ITEM_SHARED_UPDATE`                           | Share links settings updated                                                                    |
@@ -185,6 +197,7 @@ exhaustive, so it is possible events appear that are not listed.
 | `RETENTION_POLICY_ASSIGNMENT_ADD`              | A retention policy assignment is added                                                          |
 | `SHARE`                                        | Enabled shared links                                                                            |
 | `SHARE_EXPIRATION`                             | Set shared link expiration                                                                      |
+| `SHARED_LINK_SEND` | An email is sent with a shared link and an optional message |
 | `SHARED_LINK_REDIRECT_OUT_OF_SHARED_CONTEXT`   | Shared link causes a redirect                                                                   |
 | `SHIELD_ALERT`                                 | Shield detected an anomalous  download, session, location, or malicious content based on enterprise Shield rules. See [shield alert events][shield-events] for more information. |
 | `SHIELD_DOWNLOAD_BLOCKED`                                 | End user blocked from downloading a file based on a shield access policy |

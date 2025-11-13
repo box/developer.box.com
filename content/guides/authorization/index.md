@@ -1,7 +1,7 @@
 ---
 rank: 25
 required_guides:
-- authorization/custom-app-approval
+- authorization/platform-app-approval
 - authorization/limited-access-approval
 - authorization/custom-skill-approval
 ---
@@ -33,16 +33,16 @@ Admin authorization based on enabled enterprise settings.
 Subsequent steps are required if any of the following enterprise settings are
 enabled:
 
-- Disable published apps by default
+- Disable published third party apps by default
 - Disable unpublished apps by default
-- Require manual admin authorization for transactional access apps
+- Require manual Admin authorization for Limited Access Apps
 
 These [settings][setting] can be found by navigating to:
 
-**Admin Console** > **Apps** > **Custom Apps** > click the ⚙ icon
+**Admin Console** > **Integrations** > **Platform Apps Manager** > **Platform Apps Settings** button.
 
 <Message tip>
-  Published apps are any applications that can be found in our App Center.
+  Published Platform Apps are any applications that can be found under Integrations.
 </Message>
 
 ## Required actions
@@ -51,7 +51,7 @@ To see what steps an Admin must complete for a given app, review the following
 scenarios.
 
 <!--alex ignore-->
-**Disable published apps by default**:
+**Disable published third party apps by default**:
 
 | Authentication Method                            | Enabled                                     | Disabled
 | ------------------------------------------------ | ------------------------------------------- | -------------- |
@@ -64,19 +64,19 @@ scenarios.
 
 | Authentication Method                            | Enabled                                                                             | Disabled
 | ------------------------------------------------ | ----------------------------------------------------------------------------------- | --------------------------------------- |
-|[OAuth 2.0][standauth]                            | Enable in **Apps** > **Custom Apps Manager** > **User Authentication Apps** > **Add App** | Ready for use                           |
-|[Server Authentication (with JWT)][jwt]           | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** > **Add App** | Authorize in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** > **Add App** |
-|[Server Authentication (client credentials)][cc]  | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** | Authorize in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** > **Add App** |
-|[App Token Authentication][apptoken]              | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** > **Server Authentication Apps** > **Add App** | Ready for use                           |
+|[OAuth 2.0][standauth]                            | Enable in **Integrations** > **Platform Apps Manager** > **User Authentication Apps** > Select Platform App > Use **More** menu to enable the app. | Ready for use                           |
+|[Server Authentication (with JWT)][jwt]           | Authorize and enable in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** Select Platform App > Use **More** menu to authorize the app. | Authorize in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** > Select Platform App > Use **More** menu to authorize the app. |
+|[Server Authentication (client credentials)][cc]  | Authorize and enable in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** > Select Platform App > Use **More** menu to authorize the app.| Authorize in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** > Select Platform App > Use **More** menu to enable the app. |
+|[App Token Authentication][apptoken]              | Authorize and enable in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** > **Server Authentication Apps** > Select Platform App > Use **More** menu to enable the app. | Ready for use                           |
 
-**Require manual admin authorization for transactional access apps**:
+**Require manual Admin authorization for Limited Access Apps**:
 
 | Authentication Method                            | Enabled                                                                  | Disabled                                             |
 | ------------------------------------------------ | ------------------------------------------------------------------------ | ---------------------------------------------------- |
 |[OAuth 2.0][standauth]                            | N/A                                                                      | N/A                                                  |
 |[Server Authentication (with JWT)][jwt]           | N/A                                                                      | N/A                                                  |
 |[Server Authentication (client credentials)][cc]  | N/A                                                                      | N/A                                                  |
-|[App Token Authentication][apptoken]              | Authorize in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** | Automatically authorized and enabled upon creation   |
+|[App Token Authentication][apptoken]              | Authorize in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** Select Platform App > Use **More** menu to authorize the app. | Automatically authorized and enabled upon creation   |
 
 <!--alex enable-->
 
@@ -86,7 +86,7 @@ scenarios.
 <!-- i18n-disable localize-links -->
 [sa]: page://platform/user-types/#service-account
 [scopes]: g://api-calls/permissions-and-errors/scopes
-[ag]: g://applications/app-center
+[ag]: g://applications/integrations
 [standauth]: g://authentication/oauth2
 [jwt]: g://authentication/jwt
 [cc]: g://authentication/client-credentials

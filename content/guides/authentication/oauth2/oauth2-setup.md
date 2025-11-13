@@ -6,7 +6,7 @@ related_guides:
   - authentication/oauth2/oauth2-setup
 required_guides:
   - authentication/select
-  - applications/app-types/custom-apps
+  - applications/app-types/platform-apps
 related_resources: []
 alias_paths:
   - /docs/setting-up-an-oauth-app
@@ -15,7 +15,7 @@ alias_paths:
 
 # Setup with OAuth 2.0
 
-A Custom App can be set up to use client-side [OAuth 2.0][oauth2] authentication.
+A Platform App can be set up to use client-side [OAuth 2.0][oauth2] authentication.
 
 <CTA to='g://authentication/oauth2'>
   Learn how OAuth 2.0 authentication works
@@ -23,7 +23,7 @@ A Custom App can be set up to use client-side [OAuth 2.0][oauth2] authentication
 
 ## Prerequisites
 
-To set up a Custom App using OAuth 2.0 authentication, you will need to ensure
+To set up a Platform App using OAuth 2.0 authentication, you will need to ensure
 you have access the [Developer Console][devconsole] from your Box enterprise
 account. Alternatively, you may sign up for a [developer account][devaccount].
 
@@ -32,11 +32,11 @@ account. Alternatively, you may sign up for a [developer account][devaccount].
 ### Navigate to the Developer Console
 
 Log into Box and go to the
-[Developer Console][devconsole]. Select **Create New App**.
+[Developer Console][devconsole]. Select **Create Platform App**.
 
 ### Select application type
 
-Select **Custom App** from the list of application types. A modal will appear to
+Select **Platform App** from the list of application types. A modal will appear to
 prompt a selection for the next step.
 
 <ImageFrame border>

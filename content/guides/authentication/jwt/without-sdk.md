@@ -41,7 +41,7 @@ using a public and private key pair.
 
 ### Prerequisites
 
-- A Custom Application using JWT authentication within the [Developer Console][devconsole]
+- A Platform Application using JWT authentication within the [Developer Console][devconsole]
 - A private key configuration file named `config.json`, which can be downloaded from the configuration tab of the [Developer Console][devconsole]
 - Ensure your application is [authorized][auth] within the Box Admin Console
 

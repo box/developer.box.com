@@ -1,5 +1,5 @@
 ---
-rank: 4
+rank: 7
 related_endpoints: []
 related_guides:
   - embed/ui-elements
@@ -39,7 +39,7 @@ either through NPM or the Box CDN.
 
 ## Box Edit
 
-Box Edit requires additional setup in order to be integrated into a custom
+Box Edit requires additional setup in order to be integrated into a platform
 application. Box Edit uses the desktop application [Box Tools][tools] in order
 to open content locally.
 
@@ -76,7 +76,7 @@ to your application in the developer console.
 
 Once your application has been activated for API calls it will need to be
 reauthorized in your enterprise. The steps for performing these actions are
-available [here](g://authorization/custom-app-approval).
+available [here](g://authorization/platform-app-approval).
 
 ## List available integrations
 
@@ -146,7 +146,7 @@ curl -X GET \
 To add an app integration to a valid app user, three pieces of information are
 required:
 
-- A valid [Service Account](page://platform/user-types/#service-account/) Access Token.
+- A valid [Service Account](page://platform/user-types/#service-account) Access Token.
 - The ID of the app user to be assigned the integration
 - The ID of the app integration to assign to the user
 
@@ -401,4 +401,4 @@ using `openWith.addListener('execute', callback)` and
 <!-- i18n-enable localize-links -->
 [safari]: https://support.box.com/hc/en-us/articles/360043697334-Installing-Box-Tools
 <!-- i18n-disable localize-links -->
-[service-account]: page://platform/user-types/#service-account/
+[service-account]: page://platform/user-types/#service-account

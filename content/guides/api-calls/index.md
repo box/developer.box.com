@@ -8,7 +8,7 @@ alias_paths:
 
 # API Calls
 
-The Box API is a restful API that attempts to follow common HTTP standards
+The Box API is a restful API that follow common HTTP standards
 where possible. The following guides take a look at some of the useful
 features and common mistakes that a developer can encounter when working with
 these APIs.
