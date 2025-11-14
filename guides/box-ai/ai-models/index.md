@@ -12,7 +12,7 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 29
+total_steps: 30
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/ai-models/openai-gpt-5-1-model-card
@@ -423,7 +423,7 @@ DOD IL5
 
 </Tile>
 
-<Tile type="gemini" title="google__gemini_2_5_flash_001" href="/guides/box-ai/ai-models/google-gemini-2-5-flash-001-model-card">
+<Tile type="gemini" title="google__gemini_2_5_flash" href="/guides/box-ai/ai-models/google-gemini-2-5-flash-model-card">
 
 Gemini multimodal model offering well-round capabilites, including thinking capabilities.
 <div>
