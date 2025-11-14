@@ -89,7 +89,7 @@ The `allow` attribute enables clipboard operations and local network access for 
 Without this attribute, embedded Box content might not work correctly with Tools, Device Trust, or the clipboard copy button.
 
 <Message type='notice'>
-The Embed Widget Link Generation Modal automatically includes this parameter in the generated code.
+The Embed Widget Link Generation modal automatically includes this parameter in the generated code.
 </Message>
 
 ### Finding your shared link value
