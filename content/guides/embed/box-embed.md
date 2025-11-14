@@ -84,12 +84,12 @@ If you want to customize Box Embed even further, you can do it programmatically.
 
 ### Browser permissions
 
-The `allow` attribute enables clipboard operations and local network access for Chrome 142+ and Edge 143+. While designed for these browser versions, this attribute can be safely included for all browsers. Other browsers will ignore it.
+The `allow` attribute enables clipboard operations and local network access for Google Chrome 142 and above and Microsoft Edge 143 and above. While designed for these browser versions, this attribute can be safely included for all browsers. Other browsers will ignore it.
 
-Without this attribute, embedded Box content might not work correctly with Tools, Device Trust, or the clipboard copy button.
+Without this attribute, embedded Box content might not work correctly with Box Tools, Device Trust, or the clipboard copy button.
 
 <Message type='notice'>
-The Embed Widget Link Generation Modal automatically includes this parameter in the generated code.
+The Embed Widget Link Generation modal automatically includes this parameter in the generated code.
 </Message>
 
 ### Finding your shared link value
