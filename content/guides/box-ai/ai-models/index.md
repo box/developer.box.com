@@ -137,7 +137,7 @@ Box AI is powered by the following AI models. These models are integrated with B
         <strong style="background-color: #e1f8ff">DOD IL5</strong>        
 			</div>
 		</Tile>
-    <Tile type="gemini" title="google__gemini_2_5_flash_001" href="/guides/box-ai/ai-models/google-gemini-2-5-flash-001-model-card">
+    <Tile type="gemini" title="google__gemini_2_5_flash_001" href="/guides/box-ai/ai-models/google-gemini-2-5-flash-model-card">
 		Gemini multimodal model offering well-round capabilites, including thinking capabilities.
 		  <div>
 		    <strong style="background-color: #e8e8e8">Default for Box AI Extract</strong>
