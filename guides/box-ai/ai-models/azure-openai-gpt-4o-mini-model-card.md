@@ -1,5 +1,5 @@
 ---
-rank: 7
+rank: 8
 related_guides:
   - box-ai/ai-tutorials/ask-questions
   - box-ai/ai-tutorials/generate-text

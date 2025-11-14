@@ -15,7 +15,7 @@ total_steps: 33
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
 next_page_id: box-ai/ai-models/google-textembedding-gecko-model-card
-previous_page_id: box-ai/ai-models/google-text-bison-model-card
+previous_page_id: box-ai/ai-models/azure-text-embedding-ada-002-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/google-text-unicorn-model-card.md
 ---

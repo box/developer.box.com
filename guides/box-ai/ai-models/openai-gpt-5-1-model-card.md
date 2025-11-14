@@ -14,7 +14,7 @@ type: guide
 total_steps: 33
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
-next_page_id: box-ai/ai-models/openai-gpt-o3-model-card
+next_page_id: box-ai/ai-models/openai-gpt-5-model-card
 previous_page_id: box-ai/ai-models
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/openai-gpt-5-1-model-card.md

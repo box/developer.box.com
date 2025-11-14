@@ -1,5 +1,5 @@
 ---
-rank: 8
+rank: 9
 related_guides:
   - box-ai/ai-tutorials/ask-questions
   - box-ai/ai-tutorials/generate-text
@@ -14,7 +14,7 @@ type: guide
 total_steps: 33
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
-next_page_id: box-ai/ai-models/google-text-bison-model-card
+next_page_id: box-ai/ai-models/google-text-unicorn-model-card
 previous_page_id: box-ai/ai-models/azure-openai-gpt-4o-mini-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/azure-text-embedding-ada-002-model-card.md
