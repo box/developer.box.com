@@ -25,8 +25,14 @@ source_url: >-
 ---
 # Extract metadata from file (freeform)
 
-Box AI API allows you to query a document or image and extract metadata based on a provided prompt.
+Box AI API allows you to query a document and extract metadata based on a provided prompt.
 **Freeform** means that the prompt can include a stringified version of formats such as JSON or XML, or even plain text.
+
+<Message type="notice">
+
+The **Extract metadata (freeform)** endpoint doesn't support OCR. To extract metadata from image files (TIFF, PNG, JPEG) or documents in languages other than English, use the [Extract metadata (structured)][structured-endpoint] endpoint.
+
+</Message>
 
 ## Before you start
 
@@ -166,3 +172,4 @@ The response includes the `fields` present in the file, along with their values:
 [model-param]: r://ai_agent_text_gen#param_basic_gen_model
 [prompt-param]: r://ai_agent_text_gen#param_basic_gen_prompt_template
 [overrides]: g://box-ai/ai-agents/ai-agent-overrides
+[structured-endpoint]: g://box-ai/ai-tutorials/extract-metadata-structured
