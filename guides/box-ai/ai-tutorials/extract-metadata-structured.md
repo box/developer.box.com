@@ -29,6 +29,36 @@ fullyTranslated: true
 
 Box AI APIを使用すると、指定したファイルからメタデータを抽出し、結果をキー/値ペアの形式で取得することができます。入力には、`fields`パラメータを使用して構造を作成するか、すでに定義済みのメタデータテンプレートを使用できます。テンプレートの作成の詳細については、[メタデータテンプレートのカスタマイズ][templates-console]を参照するか、[メタデータテンプレートAPI][templates-api]を使用してください。
 
+## Supported file formats
+
+The endpoint supports the following file formats:
+
+* PDF
+* TIFF
+* PNG
+* JPEG
+
+Box AI automatically applies optical character recognition (OCR) when processing image files (TIFF, PNG, JPEG) and scanned documents. This eliminates the need to convert images to PDF before extraction, saving time and simplifying your integration.
+
+## サポートされている言語
+
+Box AI can extract metadata from documents in the following languages:
+
+<!--alex ignore-->
+
+* English
+
+* 日本語
+
+* Chinese
+
+* 韓国語
+  <!--alex enable-->
+
+* Cyrillic-based languages (such as Russian, Ukrainian, Bulgarian, and Serbian)
+
+No additional configuration is required to use different languages or image formats. Box AI automatically detects the language and applies OCR when needed.
+
 ## 開始する前に
 
 Platformアプリを作成して認証するには、[Box AIの使い方][prereq]に記載されている手順に従っていることを確認してください。

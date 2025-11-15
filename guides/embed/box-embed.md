@@ -89,12 +89,25 @@ Box Embedをさらにカスタマイズする場合は、プログラムを使�
   width="{pixels}"
   height="{pixels}"
   frameborder="0"
+  allow="local-network-access; clipboard-read; clipboard-write"
   allowfullscreen
   webkitallowfullscreen
-  msallowfullscreen
-></iframe>
+  msallowfullscreen>
+</iframe>
 
 ```
+
+### Browser permissions
+
+The `allow` attribute enables clipboard operations and local network access for Google Chrome 142 and above and Microsoft Edge 143 and above. While designed for these browser versions, this attribute can be safely included for all browsers. Other browsers will ignore it.
+
+Without this attribute, embedded Box content might not work correctly with Box Tools, Device Trust, or the clipboard copy button.
+
+<Message type="notice">
+
+The Embed Widget Link Generation modal automatically includes this parameter in the generated code.
+
+</Message>
 
 ### 共有リンクの値の検索
 

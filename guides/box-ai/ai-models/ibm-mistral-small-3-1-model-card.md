@@ -11,7 +11,7 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/ibm-mistral-small-3-1-model-card
 type: guide
-total_steps: 28
+total_steps: 30
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
 next_page_id: box-ai/ai-models/xai-grok-3-beta-model-card
@@ -39,6 +39,7 @@ fullyTranslated: true
 | 出力トークンの最大数    | **指定なし**                                   | 1回のリクエストでモデルが生成できるトークン数。                                                           |
 | 経験に基づいたスループット | **150**                                    | モデルが1秒あたりに生成できるトークン数。                                                              |
 | オープンソース       | **はい**                                     | モデルのコードを一般公開するかどうかを指定します。                                                          |
+| 知的財産侵害からの保護   | **いいえ**                                    | このモデルの使用には、Boxによる知的財産権の保証または保護は伴いません。このモデルの出力を使用することで発生する可能性もある知的財産の問題を考慮してください。   |
 
 ## その他のドキュメント
 

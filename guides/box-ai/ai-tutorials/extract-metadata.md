@@ -26,7 +26,13 @@ fullyTranslated: true
 ---
 # ファイルからメタデータを抽出する (自由形式)
 
-Box AI APIを使用すると、ドキュメントまたは画像に対してクエリを実行し、指定したプロンプトに基づいてメタデータを抽出できます。**自由形式**とは、JSONやXMLなどの形式の文字列化バージョン、またはプレーンテキストをプロンプトに含めることができるという意味です。
+Box AI APIを使用すると、ドキュメントを照会し、指定したプロンプトに基づいてメタデータを抽出できます。**自由形式**とは、JSONやXMLなどの形式の文字列化バージョン、またはプレーンテキストをプロンプトに含めることができるという意味です。
+
+<Message type="notice">
+
+The **Extract metadata (freeform)** endpoint doesn't support OCR. To extract metadata from image files (TIFF, PNG, JPEG) or documents in languages other than English, use the [Extract metadata (structured)][structured-endpoint] endpoint.
+
+</Message>
 
 ## 開始する前に
 
@@ -175,3 +181,5 @@ curl --location 'https://api.box.com/2.0/ai/extract' \
 [prompt-param]: r://ai_agent_text_gen#param_basic_gen_prompt_template
 
 [overrides]: g://box-ai/ai-agents/ai-agent-overrides
+
+[structured-endpoint]: g://box-ai/ai-tutorials/extract-metadata-structured
