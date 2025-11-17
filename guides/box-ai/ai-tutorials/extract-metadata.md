@@ -30,7 +30,7 @@ Box AI APIを使用すると、ドキュメントを照会し、指定したプ�
 
 <Message type="notice">
 
-The **Extract metadata (freeform)** endpoint doesn't support OCR. To extract metadata from image files (TIFF, PNG, JPEG) or documents in languages other than English, use the [Extract metadata (structured)][structured-endpoint] endpoint.
+**メタデータを抽出 (自由形式)** エンドポイントはOCRをサポートしていません。英語以外の言語の画像ファイル (TIFF、PNG、JPEG) またはドキュメントからメタデータを抽出するには、[メタデータを抽出 (構造化)][structured-endpoint] エンドポイントを使用してください。
 
 </Message>
 

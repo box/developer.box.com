@@ -97,15 +97,15 @@ Box Embedをさらにカスタマイズする場合は、プログラムを使�
 
 ```
 
-### Browser permissions
+### ブラウザの権限
 
-The `allow` attribute enables clipboard operations and local network access for Google Chrome 142 and above and Microsoft Edge 143 and above. While designed for these browser versions, this attribute can be safely included for all browsers. Other browsers will ignore it.
+Google Chrome 142以上およびMicrosoft Edge 143以上では、`allow`属性を使用して、クリップボードの操作やローカルネットワークへのアクセスを有効にします。この属性は、これらのブラウザバージョン用に設計されていますが、すべてのブラウザに対して安全に含めることができます。他のブラウザでは無視されます。
 
-Without this attribute, embedded Box content might not work correctly with Box Tools, Device Trust, or the clipboard copy button.
+この属性がないと、埋め込まれたBoxコンテンツは、Box Tools、デバイストラスト、またはクリップボードのコピーボタンで機能しない可能性があります。
 
 <Message type="notice">
 
-The Embed Widget Link Generation modal automatically includes this parameter in the generated code.
+埋め込みウィジェットのリンク生成ウィンドウでは、生成されたコードに自動的にこのパラメータが含まれます。
 
 </Message>
 

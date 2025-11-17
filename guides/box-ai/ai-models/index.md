@@ -78,7 +78,7 @@ Box AIには以下のモデルが搭載されています。Box AIと統合さ�
 
 <Tile type="gpt" title="openai__gpt_5_1" href="/guides/box-ai/ai-models/openai-gpt-5-1-model-card">
 
-A multimodal model with enterprise-grade performance and adaptive reasoning.
+エンタープライズグレードのパフォーマンスと適応的推論を備えたマルチモーダルモデル。
 
 <div>
 
@@ -434,7 +434,7 @@ DOD IL5
 
 <Tile type="gemini" title="google__gemini_2_5_flash" href="/guides/box-ai/ai-models/google-gemini-2-5-flash-model-card">
 
-Gemini multimodal model offering well-round capabilites, including thinking capabilities.
+思考機能などの豊富な機能が備わっている、Geminiマルチモーダルモデル。
 
 <div>
 
@@ -486,7 +486,7 @@ DOD IL5
 
 <Tile type="gemini" title="google__gemini_2_0_flash_001" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-001-model-card">
 
-Gemini multimodal model designed for optimal high-volume, high-frequency tasks at scale.
+大規模で大量かつ高頻度のタスクに最適になるよう設計されたGeminiマルチモーダルモデル。
 
 <div>
 
