@@ -11,10 +11,10 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/google-textembedding-gecko-002-model-card
 type: guide
-total_steps: 34
+total_steps: 35
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
-next_page_id: box-ai/ai-models/google-textembedding-gecko-003-model-card
+next_page_id: box-ai/ai-models/google-gemini-3-pro-model-card
 previous_page_id: box-ai/ai-models/google-textembedding-gecko-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/google-textembedding-gecko-002-model-card.md
