@@ -188,6 +188,12 @@ DOD IL2
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+ISMAP
+
+</strong>
+
 </div>
 
 </Tile>
@@ -233,6 +239,12 @@ DOD IL2
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+ISMAP
+
+</strong>
+
 </div>
 
 </Tile>
@@ -275,6 +287,12 @@ FedRAMP High
 <strong style="background-color: #e1f8ff">
 
 DOD IL2
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+ISMAP
 
 </strong>
 
@@ -329,6 +347,12 @@ DOD IL2
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+ISMAP
+
+</strong>
+
 </div>
 
 </Tile>
@@ -374,6 +398,12 @@ DOD IL2
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+ISMAP
+
+</strong>
+
 </div>
 
 </Tile>
@@ -416,6 +446,12 @@ FedRAMP High
 <strong style="background-color: #e1f8ff">
 
 DOD IL5
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+ISMAP
 
 </strong>
 
@@ -470,6 +506,12 @@ DOD IL5
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+ISMAP
+
+</strong>
+
 </div>
 
 </Tile>
@@ -512,6 +554,12 @@ FedRAMP High
 <strong style="background-color: #e1f8ff">
 
 DOD IL5
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+ISMAP
 
 </strong>
 
@@ -560,6 +608,12 @@ DOD IL5
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+ISMAP
+
+</strong>
+
 </div>
 
 </Tile>
@@ -593,6 +647,12 @@ FedRAMP Moderate
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+ISMAP
+
+</strong>
+
 </div>
 
 </Tile>
@@ -617,6 +677,18 @@ Available
 <strong style="background-color: #fdfad8">
 
 Standard
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+ISMAP
 
 </strong>
 
@@ -653,6 +725,12 @@ FedRAMP Moderate
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+ISMAP
+
+</strong>
+
 </div>
 
 </Tile>
@@ -683,6 +761,12 @@ Premium
 <strong style="background-color: #e1f8ff">
 
 FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+ISMAP
 
 </strong>
 
@@ -719,6 +803,12 @@ FedRAMP Moderate
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+ISMAP
+
+</strong>
+
 </div>
 
 </Tile>
@@ -749,6 +839,12 @@ Premium
 <strong style="background-color: #e1f8ff">
 
 FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+ISMAP
 
 </strong>
 
@@ -785,6 +881,12 @@ FedRAMP Moderate
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+ISMAP
+
+</strong>
+
 </div>
 
 </Tile>
@@ -818,6 +920,12 @@ FedRAMP Moderate
 
 </strong>
 
+<strong style="background-color: #e1f8ff">
+
+ISMAP
+
+</strong>
+
 </div>
 
 </Tile>
@@ -848,6 +956,12 @@ Standard
 <strong style="background-color: #e1f8ff">
 
 FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+ISMAP
 
 </strong>
 
