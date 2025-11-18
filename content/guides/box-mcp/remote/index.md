@@ -142,7 +142,7 @@ Manage user authentication and retrieve information about the authenticated user
 | ---- | ---------- |
 | `who_am_i`| Returns detailed information about the currently authenticated Box user.|
 
-### Content Management
+### Content management
 
 Manage files and folders, perform searches, and handle content operations across your Box environment.
 
@@ -152,6 +152,7 @@ Manage files and folders, perform searches, and handle content operations across
 | ---- | ---------- |
 | `get_file_content` | Returns the content of a file stored in Box. |
 | `get_file_details` | Gets comprehensive file information from Box including metadata, permissions, and version details. |
+| `update_file_properties` | Updates file properties, including name, description, tags, and collections. |
 | `upload_file` | Uploads a new file to Box. |
 | `upload_file_version` | Uploads a new file version by providing the entire file contents to update an existing file in Box. |
 
@@ -162,6 +163,7 @@ Manage files and folders, perform searches, and handle content operations across
 | `create_folder` | Creates a new folder in Box. |
 | `get_folder_details` | Retrieves comprehensive folder information including metadata, permissions, and collaboration settings. |
 | `list_folder_content_by_folder_id`| Lists files, folders, and web links in a folder. |
+| `update_folder_properties` | Updates folder properties, including name, description, tags, and collections. |
 
 #### Search
 
@@ -188,14 +190,20 @@ Enable team collaboration through comments, shared links, and collaboration mana
 
 | Tool | Description|
 | ---- | ---------- |
+| `create_file_comment` | Creates a new comment on a specific file. |
+| `list_file_comments` | Lists all comments on a specific file. |
 | `list_tasks` | Lists all tasks associated with a specific file, including status, message, and due dates. |
 
 ### Hubs
 
 Create and manage Box Hubs for organizing collaborative content and resources around specific topics or projects.
 
-| Tool | Description|
+| Tool | Description |
 | ---- | ---------- |
+| `add_items_to_hub` | Adds files, folders, or web links to a specific hub. |
+| `copy_hub` | Creates a copy of an existing hub with all its structure and settings. The original hub remains unmodified. |
+| `create_hub` | Creates a new hub. |
 | `get_hub_details` | Retrieves detailed information about a specific hub. |
 | `get_hub_items` | Gets items (files and folders) associated with a specific hub. |
 | `list_hubs` | Lists all hubs accessible to the authenticated user. |
+| `update_hub` | Updates the title and description of a specific hub. |
