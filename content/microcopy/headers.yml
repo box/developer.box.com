@@ -240,20 +240,24 @@ secondary:
     // display: |-
       A boolean that determines whether to show the orange notification bar
       in the header. Must be "true" or "false"
-    display: "false"
+    display: "true"
 
     // message: |-
       The content of the notification
     message: >
-      Join BoxWorks 2024 to discover what's possible with content and AI!
+      A beta version of the new Box developer documentation site is
+      launching soon! Updated Developer Guides, modern
+      API Reference, and AI-powered search are on the
+      way to help you build with Box faster.
+      Stay tuned for more updates.
 
-    // href: |-
-      The link to navigate to when the CTA is clicked
-    href: "https://boxworks.box.com/boxworks"
+    # // href: |-
+    #   The link to navigate to when the CTA is clicked
+    # href: "https://boxworks.box.com/boxworks"
 
-    // cta: |-
-      The text of the CTA
-    cta: Register now!
+    # // cta: |-
+    #   The text of the CTA
+    # cta: Register now!
 
     // ttl: |-
       The number of seconds to display the message. Should always
