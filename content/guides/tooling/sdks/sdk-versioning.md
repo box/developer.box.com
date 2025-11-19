@@ -123,11 +123,11 @@ Follow detailed migration guides to migrate from the Box Next Generation SDKs to
 [python-repo]: https://github.com/box/box-python-sdk
 [ios-repo]: https://github.com/box/box-ios-sdk
 
-[java-v10]: https://github.com/box/box-java-sdk/tree/sdk-gen
-[ios-v10]: https://github.com/box/box-ios-sdk/tree/sdk-gen
-[node-v10]: https://github.com/box/box-node-sdk/tree/sdk-gen
-[python-v10]: https://github.com/box/box-python-sdk/tree/sdk-gen
-[windows-v10]: https://github.com/box/box-windows-sdk-v2/tree/sdk-gen
+[java-v10]: https://github.com/box/box-java-sdk/tree/main
+[ios-v10]: https://github.com/box/box-ios-sdk/tree/main
+[node-v10]: https://github.com/box/box-node-sdk/tree/main
+[python-v10]: https://github.com/box/box-python-sdk/tree/main
+[windows-v10]: https://github.com/box/box-windows-sdk-v2/tree/main
 
 [python-combined]: https://github.com/box/box-python-sdk/tree/combined-sdk
 [java-combined]: https://github.com/box/box-java-sdk/tree/combined-sdk
