@@ -315,13 +315,9 @@
   // A short title for the dropdown to select an support menu item
   "headers.secondary.dropdowns.additional_resources": "その他のリソース",
   // A boolean that determines whether to show the orange notification barin the header. Must be "true" or "false"
-  "headers.secondary.notifications.display": "false",
+  "headers.secondary.notifications.display": "true",
   // The content of the notification
   "headers.secondary.notifications.message": "BoxWorks 2024でコンテンツとAIの可能性について紹介します。",
-  // The link to navigate to when the CTA is clicked
-  "headers.secondary.notifications.href": "https:\/\/boxworks.box.com\/boxworks",
-  // The text of the CTA
-  "headers.secondary.notifications.cta": "詳細を表示",
   // The number of seconds to display the message. Should alwaysbe 0 unless you want to autohide.
   "headers.secondary.notifications.ttl": "0",
   // Label for the log in button
