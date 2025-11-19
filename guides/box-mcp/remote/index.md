@@ -168,26 +168,28 @@ https://vscode.dev/redirect
 | ---------- | ---------------------------- |
 | `who_am_i` | 現在認証されているBoxユーザーの詳細な情報を返します。 |
 
-### コンテンツ管理
+### Content management
 
 ファイルやフォルダの管理、検索の実行、Box環境でのコンテンツ操作の処理を行います。
 
 #### ファイル操作
 
-| ツール                   | 説明                                                           |
-| --------------------- | ------------------------------------------------------------ |
-| `get_file_content`    | Boxに保存されているファイルのコンテンツを返します。                                  |
-| `get_file_details`    | メタデータ、権限、バージョンの詳細など、Boxからファイルの包括的な情報を取得します。                  |
-| `upload_file`         | 新しいファイルをBoxにアップロードします。                                       |
-| `upload_file_version` | ファイルコンテンツ全体を提供してBox内の既存のファイルを更新することで、新しいファイルバージョンをアップロードします。 |
+| ツール                      | 説明                                                                           |
+| ------------------------ | ---------------------------------------------------------------------------- |
+| `get_file_content`       | Boxに保存されているファイルのコンテンツを返します。                                                  |
+| `get_file_details`       | メタデータ、権限、バージョンの詳細など、Boxからファイルの包括的な情報を取得します。                                  |
+| `update_file_properties` | Updates file properties, including name, description, tags, and collections. |
+| `upload_file`            | 新しいファイルをBoxにアップロードします。                                                       |
+| `upload_file_version`    | ファイルコンテンツ全体を提供してBox内の既存のファイルを更新することで、新しいファイルバージョンをアップロードします。                 |
 
 #### フォルダ操作
 
-| ツール                                | 説明                                       |
-| ---------------------------------- | ---------------------------------------- |
-| `create_folder`                    | Box内に新規フォルダを作成します。                       |
-| `get_folder_details`               | メタデータ、権限、コラボレーション設定など、フォルダの包括的な情報を取得します。 |
-| `list_folder_content_by_folder_id` | フォルダ内のファイル、フォルダ、ウェブリンクのリストを取得します。        |
+| ツール                                | 説明                                                                             |
+| ---------------------------------- | ------------------------------------------------------------------------------ |
+| `create_folder`                    | Box内に新規フォルダを作成します。                                                             |
+| `get_folder_details`               | メタデータ、権限、コラボレーション設定など、フォルダの包括的な情報を取得します。                                       |
+| `list_folder_content_by_folder_id` | フォルダ内のファイル、フォルダ、ウェブリンクのリストを取得します。                                              |
+| `update_folder_properties`         | Updates folder properties, including name, description, tags, and collections. |
 
 #### 検索
 
@@ -212,16 +214,22 @@ AIを活用したツールを使用して、質問、インサイトの抽出、
 
 コメント、共有リンク、コラボレーション管理ツールによるチームのコラボレーションを可能にします。
 
-| ツール          | 説明                                                     |
-| ------------ | ------------------------------------------------------ |
-| `list_tasks` | 特定のファイルに関連付けられたすべてのタスク (ステータス、メッセージ、期日を含む) のリストを取得します。 |
+| ツール                   | 説明                                                     |
+| --------------------- | ------------------------------------------------------ |
+| `create_file_comment` | Creates a new comment on a specific file.              |
+| `list_file_comments`  | Lists all comments on a specific file.                 |
+| `list_tasks`          | 特定のファイルに関連付けられたすべてのタスク (ステータス、メッセージ、期日を含む) のリストを取得します。 |
 
 ### Hub
 
 特定のトピックやプロジェクトに関するコラボレーションコンテンツやリソースを整理するためのBox Hubsを作成および管理します。
 
-| ツール               | 説明                                     |
-| ----------------- | -------------------------------------- |
-| `get_hub_details` | 特定のHubに関する詳細情報を取得します。                  |
-| `get_hub_items`   | 特定のHubに関連付けられた項目 (ファイルおよびフォルダ) を取得します。 |
-| `list_hubs`       | 認証済みユーザーがアクセス可能なすべてのHubのリストを取得します。     |
+| ツール                | 説明                                                                                                          |
+| ------------------ | ----------------------------------------------------------------------------------------------------------- |
+| `add_items_to_hub` | Adds files, folders, or web links to a specific hub.                                                        |
+| `copy_hub`         | Creates a copy of an existing hub with all its structure and settings. The original hub remains unmodified. |
+| `create_hub`       | Creates a new hub.                                                                                          |
+| `get_hub_details`  | 特定のHubに関する詳細情報を取得します。                                                                                       |
+| `get_hub_items`    | 特定のHubに関連付けられた項目 (ファイルおよびフォルダ) を取得します。                                                                      |
+| `list_hubs`        | 認証済みユーザーがアクセス可能なすべてのHubのリストを取得します。                                                                          |
+| `update_hub`       | Updates the title and description of a specific hub.                                                        |
