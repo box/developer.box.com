@@ -100,7 +100,7 @@ If you have an existing application that you don't plan to change:
 
 As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts. Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
 
-**All future development, including new features and updates, will be delivered through the Box core SDKs. The standalone generated artifact was introduced in the version `v10` of the Box core SDKs, and it is currently available as a separate branch.**
+**All future development, including new features and updates, will be delivered through the Box core SDKs. The standalone generated artifact was introduced in the version `v10` of the Box core SDKs.**
 
 | Repository name | Artifact name |  Note  |
 |------|---------------|--------|
@@ -150,11 +150,11 @@ Follow detailed migration guides to migrate from the Box Next Generation SDKs to
 [python-repo]: https://github.com/box/box-python-sdk
 [ios-repo]: https://github.com/box/box-ios-sdk
 
-[java-v10]: https://github.com/box/box-java-sdk/tree/sdk-gen
-[ios-v10]: https://github.com/box/box-ios-sdk/tree/sdk-gen
-[node-v10]: https://github.com/box/box-node-sdk/tree/sdk-gen
-[python-v10]: https://github.com/box/box-python-sdk/tree/sdk-gen
-[windows-v10]: https://github.com/box/box-windows-sdk-v2/tree/sdk-gen
+[java-v10]: https://github.com/box/box-java-sdk/tree/main
+[ios-v10]: https://github.com/box/box-ios-sdk/tree/main
+[node-v10]: https://github.com/box/box-node-sdk/tree/main
+[python-v10]: https://github.com/box/box-python-sdk/tree/main
+[windows-v10]: https://github.com/box/box-windows-sdk-v2/tree/main
 
 [python-combined]: https://github.com/box/box-python-sdk/tree/combined-sdk
 [java-combined]: https://github.com/box/box-java-sdk/tree/combined-sdk

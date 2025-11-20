@@ -36,5 +36,5 @@ Check the [migration guide][migration] to learn how to switch from the Box Next 
 For more details, see our [SDK versioning strategy document][versioning].
 
 [versioning]: g://tooling/sdks/sdk-versioning
-[sdk-branch]: https://github.com/box/box-java-sdk/tree/sdk-gen
-[migration]: https://github.com/box/box-java-sdk/blob/sdk-gen/migration-guides/from-box-java-sdk-gen-v0-to-box-java-sdk.md
+[sdk-branch]: https://github.com/box/box-java-sdk/tree/main
+[migration]: https://github.com/box/box-java-sdk/blob/main/migration-guides/from-box-java-sdk-gen-v0-to-box-java-sdk.md
