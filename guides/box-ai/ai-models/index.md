@@ -109,19 +109,19 @@ A multimodal model with advanced reasoning and long-context understanding.
 
 <strong style="background-color: #e8e8e8">
 
-Default for Box AI for Hubs
+Default for Box AI Advanced Agent for Hubs
 
 </strong>
 
 <strong style="background-color: #e8e8e8">
 
-Default for Box AI for Documents
+Default for Box AI Advanced Agent for Documents
 
 </strong>
 
 <strong style="background-color: #e8e8e8">
 
-Default for Box AI for Notes Q&A
+Default for Box AI Advanced Agent for Notes Q&A
 
 </strong>
 
@@ -140,57 +140,6 @@ Available
 <strong style="background-color: #f8d59b">
 
 Premium
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="gpt" title="azure__openai__gpt_4_1_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card">
-
-A multimodal model designed to handle lightweight tasks.
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-Chat
-
-</strong>
-
-<strong style="background-color: #e1ffe7">
-
-Available
-
-</strong>
-
-<strong style="background-color: #fdfad8">
-
-Standard
-
-</strong>
-
-<strong style="background-color: #e1f8ff">
-
-FedRAMP Moderate
-
-</strong>
-
-<strong style="background-color: #e1f8ff">
-
-FedRAMP High
-
-</strong>
-
-<strong style="background-color: #e1f8ff">
-
-DOD IL2
-
-</strong>
-
-<strong style="background-color: #e1f8ff">
-
-ISMAP
 
 </strong>
 
@@ -249,7 +198,7 @@ ISMAP
 
 </Tile>
 
-<Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card">
+<Tile type="gpt" title="azure__openai__gpt_4_1_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card">
 
 A multimodal model designed to handle lightweight tasks.
 <div>
@@ -357,6 +306,57 @@ ISMAP
 
 </Tile>
 
+<Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card">
+
+A multimodal model designed to handle lightweight tasks.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Chat
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+Available
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+Standard
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+ISMAP
+
+</strong>
+
+</div>
+
+</Tile>
+
 <Tile type="gpt" title="azure__openai__text_embedding_ada_002" href="/guides/box-ai/ai-models/azure-text-embedding-ada-002-model-card">
 
 A most capable 2nd generation text embedding model. Skilled in text search, code search, and sentence similarity.
@@ -419,9 +419,9 @@ Chat
 
 </strong>
 
-<strong style="background-color: #e1ffe7">
+<strong style="background-color: #f0e2ff">
 
-Available
+Beta
 
 </strong>
 
