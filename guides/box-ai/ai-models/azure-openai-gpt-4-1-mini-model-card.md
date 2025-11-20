@@ -1,5 +1,5 @@
 ---
-rank: 6
+rank: 7
 related_guides:
   - box-ai/ai-tutorials/ask-questions
   - box-ai/ai-tutorials/generate-text
@@ -11,17 +11,17 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card
 type: guide
-total_steps: 31
+total_steps: 30
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
-next_page_id: box-ai/ai-models/azure-openai-gpt-4o-model-card
+next_page_id: box-ai/ai-models/azure-openai-gpt-4o-mini-model-card
 previous_page_id: box-ai/ai-models/azure-openai-gpt-4-1-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card.md
 ---
-# Azure OpenAI GPT-4.1 Mini
+# Azure OpenAI GPT-4.1 mini
 
-**Azure OpenAI GPT-4.1 Mini** is a multimodal model designed to handle lightweight tasks.
+**Azure OpenAI GPT-4.1 mini** is a multimodal model designed to handle lightweight tasks.
 
 ## Model details
 

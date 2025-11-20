@@ -1,5 +1,5 @@
 ---
-rank: 17
+rank: 18
 related_guides:
   - box-ai/ai-tutorials/ask-questions
   - box-ai/ai-tutorials/generate-text
@@ -11,11 +11,11 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/google-gemini-2-0-flash-lite-preview-02-05
 type: guide
-total_steps: 31
+total_steps: 30
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
-next_page_id: box-ai/ai-models/google-gemini-2-0-flash-001-model-card
-previous_page_id: box-ai/ai-models/google-gemini-2-5-flash-model-card
+next_page_id: box-ai/ai-models/aws-claude-4-5-sonnet-model-card
+previous_page_id: box-ai/ai-models/google-gemini-2-0-flash-001-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/google-gemini-2-0-flash-lite-preview-02-05.md
 ---

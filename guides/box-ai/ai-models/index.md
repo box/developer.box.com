@@ -12,7 +12,7 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 31
+total_steps: 30
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/ai-models/openai-gpt-5-1-model-card
@@ -140,6 +140,51 @@ Available
 <strong style="background-color: #f8d59b">
 
 Premium
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="gpt" title="openai__gpt_5_mini" href="/guides/box-ai/ai-models/openai-gpt-5-mini-model-card">
+
+A model designed for well-defined tasks and precise prompts.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Default for Box AI for Hubs
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
+Default for Box AI for Documents
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
+Default for Box AI for Notes Q&A
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
+Chat
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+Available
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+Standard
 
 </strong>
 
