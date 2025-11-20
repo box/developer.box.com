@@ -201,7 +201,6 @@ Create and manage Box Hubs for organizing collaborative content and resources ar
 | Tool | Description |
 | ---- | ---------- |
 | `add_items_to_hub` | Adds files, folders, or web links to a specific hub. |
-| `copy_hub` | Creates a copy of an existing hub with all its structure and settings. The original hub remains unmodified. |
 | `create_hub` | Creates a new hub. |
 | `get_hub_details` | Retrieves detailed information about a specific hub. |
 | `get_hub_items` | Gets items (files and folders) associated with a specific hub. |
