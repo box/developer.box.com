@@ -23,5 +23,5 @@ Check the [migration guide][migration] to learn how to switch from the Box Next 
 For more details, see our [SDK versioning strategy document][versioning].
 
 [versioning]: g://tooling/sdks/sdk-versioning
-[sdk-branch]: https://github.com/box/box-windows-sdk-v2/tree/sdk-gen
-[migration]: https://github.com/box/box-windows-sdk-v2/blob/sdk-gen/migration-guides/from-dotnet-sdk-gen-v1-to-box-windows-sdk.md
+[sdk-branch]: https://github.com/box/box-windows-sdk-v2/tree/main
+[migration]: https://github.com/box/box-windows-sdk-v2/blob/main/migration-guides/from-dotnet-sdk-gen-v1-to-box-windows-sdk.md
