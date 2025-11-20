@@ -144,11 +144,7 @@ Box AI is powered by the following AI models. These models are integrated with B
     <div>
 				<strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #f0e2ff">Beta</strong>
-				<strong style="background-color: #f8d59b">Premium</strong>
-        <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
-        <strong style="background-color: #e1f8ff">FedRAMP High</strong>
-        <strong style="background-color: #e1f8ff">DOD IL5</strong>
-        <strong style="background-color: #e1f8ff">ISMAP</strong>        
+				<strong style="background-color: #f8d59b">Premium</strong>       
 			</div>
 		</Tile>
 		<Tile type="gemini" title="google__gemini_2_5_pro" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-model-card">
