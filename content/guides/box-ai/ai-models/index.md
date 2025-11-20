@@ -143,7 +143,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 		A natively multimodal model for complex tasks with a 1 million token context window.
     <div>
 				<strong style="background-color: #e8e8e8">Chat</strong>
-				<strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #f0e2ff">Beta</strong>
 				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
         <strong style="background-color: #e1f8ff">FedRAMP High</strong>
