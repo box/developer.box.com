@@ -11,11 +11,11 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/google-text-bison-32-model-card
 type: guide
-total_steps: 35
+total_steps: 36
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
-next_page_id: box-ai/ai-models/azure-text-embedding-ada-002-model-card
-previous_page_id: box-ai/ai-models/azure-openai-gpt-4o-model-card
+next_page_id: box-ai/ai-models/google-text-bison-model-card
+previous_page_id: box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/google-text-bison-32-model-card.md
 ---
