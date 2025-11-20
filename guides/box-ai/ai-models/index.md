@@ -453,33 +453,6 @@ ISMAP
 
 </Tile>
 
-<Tile type="gemini" title="google__gemini_3_pro" href="/guides/box-ai/ai-models/google-gemini-3-pro-model-card">
-
-A natively multimodal model for complex tasks with a 1 million token context window.
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-Chat
-
-</strong>
-
-<strong style="background-color: #f0e2ff">
-
-Beta
-
-</strong>
-
-<strong style="background-color: #f8d59b">
-
-Premium
-
-</strong>
-
-</div>
-
-</Tile>
-
 <Tile type="gemini" title="google__gemini_2_5_pro" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-model-card">
 
 Gemini multimodal model with a 1 million token context window and advanced reasoning capabilities.
@@ -1183,6 +1156,33 @@ Standard
 Certain Box AI customers may enable additional AI models upon their request and/or otherwise made available to them through their admin console. Use of these models may be subject to additional terms. By selecting a customer-enabled model, customer acknowledges that their data may be processed by additional [subprocessors][subprocessors] of their choice.
 
 <TileGrid rows="2">
+
+<Tile type="gemini" title="google__gemini_3_pro" href="/guides/box-ai/ai-models/google-gemini-3-pro-model-card">
+
+A natively multimodal model for complex tasks with a 1 million token context window.
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+Chat
+
+</strong>
+
+<strong style="background-color: #f0e2ff">
+
+Beta
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+Premium
+
+</strong>
+
+</div>
+
+</Tile>
 
 <Tile type="model" title="xai__grok_3_beta" href="/guides/box-ai/ai-models/xai-grok-3-beta-model-card">
 
