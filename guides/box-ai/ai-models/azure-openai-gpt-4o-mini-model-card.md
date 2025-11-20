@@ -19,15 +19,15 @@ previous_page_id: box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card.md
 ---
-# Azure OpenAI GPT-4o Mini
+# Azure OpenAI GPT-4o mini
 
-**Azure OpenAI GPT-4o Mini** is a multimodal model designed to handle lightweight tasks.
+**Azure OpenAI GPT-4o mini** is a multimodal model designed to handle lightweight tasks.
 
 ## Model details
 
 | Item  | Value | Description |
 |-----------|----------|----------|
-|Model name|**GPT-4o Mini**| The name of the model. |
+|Model name|**GPT-4o mini**| The name of the model. |
 | Model category | Standard | The category of the model - standard or premium. |
 |API model name|`azure__openai__gpt_4o_mini`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer| **Microsoft Azure** | The trusted organization that securely hosts LLM. |

@@ -19,9 +19,9 @@ previous_page_id: box-ai/ai-models/azure-openai-gpt-4-1-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card.md
 ---
-# Azure OpenAI GPT-4.1 Mini
+# Azure OpenAI GPT-4.1 mini
 
-**Azure OpenAI GPT-4.1 Mini** is a multimodal model designed to handle lightweight tasks.
+**Azure OpenAI GPT-4.1 mini** is a multimodal model designed to handle lightweight tasks.
 
 ## Model details
 
