@@ -11,10 +11,10 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/azure-text-embedding-ada-002-model-card
 type: guide
-total_steps: 30
+total_steps: 31
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
-next_page_id: box-ai/ai-models/google-gemini-2-5-pro-model-card
+next_page_id: box-ai/ai-models/google-gemini-3-pro-model-card
 previous_page_id: box-ai/ai-models/azure-openai-gpt-4o-mini-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/azure-text-embedding-ada-002-model-card.md
