@@ -23,5 +23,5 @@ Check the [migration guide][migration] to learn how to switch from the Box Next 
 For more details, see our [SDK versioning strategy document][versioning].
 
 [versioning]: g://tooling/sdks/sdk-versioning
-[migration]: https://github.com/box/box-python-sdk/blob/sdk-gen/migration-guides/from-box-python-sdk-gen-v1-to-box-python-sdk.md
-[sdk-branch]: https://github.com/box/box-python-sdk/tree/sdk-gen
+[migration]: https://github.com/box/box-python-sdk/blob/main/migration-guides/from-box-python-sdk-gen-v1-to-box-python-sdk.md
+[sdk-branch]: https://github.com/box/box-python-sdk/tree/main
