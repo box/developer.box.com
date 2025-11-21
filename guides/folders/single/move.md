@@ -49,7 +49,7 @@ on any of the locked folders.
 ## Moving a subfolder to a private folder
 
 When you attempt to move a collaborated subfolder
-to a private one, you will get the [`cannot_make_collaborated_subfolder_private`](../../api-calls/permissions-and-errors/common-errors.md#400-bad-request) error.
+to a private one, you will get the [`cannot_make_collaborated_subfolder_private`](g://api-calls/permissions-and-errors/common-errors/#400-bad-request) error.
 In such a case, specify the ID of the user that folder
 belongs to setting the `owned_by.id` parameter in the request:
 
