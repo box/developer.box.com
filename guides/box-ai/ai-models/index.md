@@ -460,6 +460,12 @@ Gemini multimodal model with a 1 million token context window and advanced reaso
 
 <strong style="background-color: #e8e8e8">
 
+Default for Box AI Enhanced Extract
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
 Chat
 
 </strong>
@@ -511,7 +517,7 @@ Gemini multimodal model offering well-round capabilites, including thinking capa
 
 <strong style="background-color: #e8e8e8">
 
-Default for Box AI Extract
+Default for Box AI Standard Extract
 
 </strong>
 
