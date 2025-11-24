@@ -153,6 +153,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 		<Tile type="gemini" title="google__gemini_2_5_pro" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-model-card">
 		Gemini multimodal model with a 1 million token context window and advanced reasoning capabilities.
 			<div>
+        <strong style="background-color: #e8e8e8">Default for Box AI Enhanced Extract</strong>
 				<strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #f8d59b">Premium</strong>
@@ -165,7 +166,7 @@ Box AI is powered by the following AI models. These models are integrated with B
     <Tile type="gemini" title="google__gemini_2_5_flash" href="/guides/box-ai/ai-models/google-gemini-2-5-flash-model-card">
 		Gemini multimodal model offering well-round capabilites, including thinking capabilities.
 		  <div>
-		    <strong style="background-color: #e8e8e8">Default for Box AI Extract</strong>
+		    <strong style="background-color: #e8e8e8">Default for Box AI Standard Extract</strong>
         <strong style="background-color: #e8e8e8">Chat</strong>
 		    <strong style="background-color: #e1ffe7">Available</strong>
 		    <strong style="background-color: #fdfad8">Standard</strong>
