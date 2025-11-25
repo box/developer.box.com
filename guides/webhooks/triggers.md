@@ -75,7 +75,7 @@ available for folders.
 | `SIGN_REQUEST.DECLINED` | A sign request is declined. | Yes | Yes |
 | `SIGN_REQUEST.EXPIRED` | A sign request is expired. | Yes | Yes |
 | `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED` | A signer's email is bounced. | Yes | Yes |
-| `SIGN_REQUEST.SIGNER_SIGNED` | A sign request is signed. | Yes | Yes |
+| `SIGN_REQUEST.SIGNER_SIGNED` | A sign request is signed by a particular signer. | Yes | Yes |
 | `SIGN_REQUEST.SIGNATURE_REQUESTED` | A signature is requested from a signer. | Yes | Yes |
 | `SIGN_REQUEST.ERROR_FINALIZING` | An error occurred while finalizing a sign request. | Yes | Yes |
 | `WEBHOOK.DELETED` | A webhook is deleted. | No | No |
