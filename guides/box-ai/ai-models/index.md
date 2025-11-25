@@ -127,24 +127,6 @@ Default for Box AI Advanced Agent for Notes Q&A
 
 <strong style="background-color: #e8e8e8">
 
-Default for Box AI Advanced Agent for Hubs
-
-</strong>
-
-<strong style="background-color: #e8e8e8">
-
-Default for Box AI Advanced Agent for Documents
-
-</strong>
-
-<strong style="background-color: #e8e8e8">
-
-Default for Box AI Advanced Agent for Notes Q&A
-
-</strong>
-
-<strong style="background-color: #e8e8e8">
-
 Chat
 
 </strong>
@@ -260,8 +242,6 @@ ISMAP
 </div>
 
 </Tile>
-
-<Tile type="gpt" title="azure__openai__gpt_4_1_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card">
 
 <Tile type="gpt" title="azure__openai__gpt_4_1_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card">
 
