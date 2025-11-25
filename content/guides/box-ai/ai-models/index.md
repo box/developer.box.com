@@ -163,18 +163,6 @@ Box AI is powered by the following AI models. These models are integrated with B
         <strong style="background-color: #e1f8ff">ISMAP</strong>        
 			</div>
 		</Tile>
-    <Tile type="gemini" title="google__gemini_3_pro" href="/guides/box-ai/ai-models/google-gemini-3-pro-model-card">
-		A natively multimodal model for complex tasks with a 1 million token context window.
-    <div>
-				<strong style="background-color: #e8e8e8">Chat</strong>
-				<strong style="background-color: #f0e2ff">Beta</strong>
-				<strong style="background-color: #f8d59b">Premium</strong>
-        <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
-        <strong style="background-color: #e1f8ff">FedRAMP High</strong>
-        <strong style="background-color: #e1f8ff">DOD IL5</strong>
-        <strong style="background-color: #e1f8ff">ISMAP</strong>        
-			</div>
-		</Tile>
 		<Tile type="gemini" title="google__gemini_2_5_pro" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-model-card">
 		Gemini multimodal model with a 1 million token context window and advanced reasoning capabilities.
 			<div>
