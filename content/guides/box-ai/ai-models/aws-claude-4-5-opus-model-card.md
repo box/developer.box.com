@@ -9,7 +9,7 @@ related_guides:
 ---
 # AWS Claude Opus 4.5
 
-The **AWS Claude Opus 4.5** model is designed for developers building sophisticated AI agents that can reason, plan, and execute complex tasks with minimal oversight. 
+The **AWS Claude Opus 4.5** model is designed for developers building sophisticated AI agents that can reason, plan, and perform complex tasks with minimal oversight. 
 
 ## Model details
 
