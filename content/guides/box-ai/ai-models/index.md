@@ -73,9 +73,6 @@ Box AI is powered by the following AI models. These models are integrated with B
       	<strong style="background-color: #e8e8e8">Default for Box AI Advanced Agent for Hubs</strong>
 				<strong style="background-color: #e8e8e8">Default for Box AI Advanced Agent for Documents</strong>
 				<strong style="background-color: #e8e8e8">Default for Box AI Advanced Agent for Notes Q&A</strong>
-      	<strong style="background-color: #e8e8e8">Default for Box AI Advanced Agent for Hubs</strong>
-				<strong style="background-color: #e8e8e8">Default for Box AI Advanced Agent for Documents</strong>
-				<strong style="background-color: #e8e8e8">Default for Box AI Advanced Agent for Notes Q&A</strong>
    			<strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #f8d59b">Premium</strong>
