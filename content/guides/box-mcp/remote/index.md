@@ -150,7 +150,6 @@ This integration is currently in preview and the customer experience may change.
 
 </Message>
 
-
 ### Using Box AI Features with the MCP Server
 
 When you use Box AI in third-party applications, you can achieve the best experience and highest quality results by accessing the applications through the Box MCP server. This ensures full functionality, improved performance, and a seamless user experience.
