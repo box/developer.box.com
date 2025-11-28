@@ -233,4 +233,4 @@ Create and manage Box Hubs for organizing collaborative content and resources ar
 
 ## Feedback
 
-To share feedback or ask questions about Box MCP server, visit the [Box AI API section](https://community.box.com/box-ai-api-8) of the Box Developer Community forum.
+To share feedback or ask questions about Box MCP server, visit the [Box AI API thread](https://community.box.com/box-ai-api-8) of the Box Developer Community forum.
