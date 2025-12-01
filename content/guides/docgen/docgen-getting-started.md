@@ -12,7 +12,7 @@ related_guides:
 
 # Get started with Box Doc Gen
 
-To start generating documents with Box Doc Gen API you will need a custom application and a developer token to
+To start generating documents with Box Doc Gen API you will need a platform application and a developer token to
 authenticate your calls. You also need a Doc Gen template that will serve as an input source for your document.
 
 ## Enable Box Doc Gen
@@ -29,12 +29,12 @@ To use Box Doc Gen API to generate documents, a Box Doc Gen template must alread
 * Install the [Box Doc Gen Template Creator add-in for Microsoft Word][template-addin].
 * Create a Box Doc Gen template [using a JSON file][json-template] or manually create [template tags][template-tags].
 
-## Create a custom application
+## Create a platform application
 
-First you need to create a custom application
+First you need to create a platform application
 you will use to make calls. To create
 an application, follow the guide
-on [creating custom apps][createapps].
+on [creating platform apps][createapps].
 
 ## Generate a developer token
 
@@ -62,6 +62,32 @@ After you generate the token, you can use it in cURL
 or other clients, such as [Postman][postman], to make
 calls.
 
+## Use webhooks 
+
+You can create webhooks to monitor Doc Gen events and automate your business process or workflow.
+
+Follow the instructions for [adding webhooks][webhooks]. Your content type is your Doc Gen template file or folder.
+
+The supported [events][events] are:
+
+* `DOCGEN_DOCUMENT_GENERATION_STARTED`
+* `DOCGEN_DOCUMENT_GENERATION_SUCCEEDED` 
+* `DOCGEN_DOCUMENT_GENERATION_FAILED`
+
+![Doc Gen event triggers](./images/docgen-triggers.png)
+
+Information that is posted in a notification:
+
+* Trigger name.
+* Webhook trigger timestamp.
+* Template file ID.
+* Template file version ID.
+* Template file name.
+* Destination folder.
+* Generated file ID (if the document generation process succeeds).
+* Output type (DOCX or PDF).
+* Reason (if the document generation process fails).
+
 [token]: g://authentication/tokens/developer-tokens
 [createapps]: g://applications/app-types/platform-apps
 [postman]: g://tooling/postman
@@ -69,3 +95,5 @@ calls.
 [template-addin]: https://support.box.com/hc/en-us/articles/36587535449747-Installing-Box-Doc-Gen-Add-in
 [template-tags]: https://support.box.com/hc/en-us/articles/36151895655059-Creating-A-Box-Doc-Gen-Template-Manually
 [json-template]: https://support.box.com/hc/en-us/articles/36148012877843-Creating-a-Box-Doc-Gen-Template-using-JSON-data
+[webhooks]: g://webhooks/v2/create-v2/
+[events]: g://webhooks/triggers

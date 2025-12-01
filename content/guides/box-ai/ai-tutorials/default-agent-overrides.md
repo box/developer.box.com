@@ -19,7 +19,7 @@ alias_paths:
 
 ## Before you start
 
-Make sure you followed the steps listed in [getting started with Box AI][prereq] to create a custom app and authenticate.
+Make sure you followed the steps listed in [getting started with Box AI][prereq] to create a platform app and authenticate.
 To get more context, read about [agent overrides][agent-overrides].
 
 ## Override prompt

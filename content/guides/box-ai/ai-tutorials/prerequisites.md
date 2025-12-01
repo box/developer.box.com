@@ -14,7 +14,7 @@ alias_paths:
 
 To implement Box AI API in your solutions, you need
 to make sure you have access to the functionality.
-You will also need a custom application with
+You will also need a platform application with
 enabled Box AI scope, and a developer token to
 authenticate your calls.
 
@@ -25,12 +25,12 @@ the Box AI APIs in your sandbox, request access
 from the Box AI team using [this form][form].
 </Message>
 
-## Create a custom application
+## Create a platform application
 
-First you need to create a custom application
+First you need to create a platform application
 you will use to make calls. To create
 an application, follow the guide
-on [creating custom apps][createapps].
+on [creating platform apps][createapps].
 
 ## Enable Box AI API access
 
@@ -86,4 +86,4 @@ calls.
 [postman]: g://tooling/postman
 [form]: https://forms.gle/Nsh3TwM3W8qg4U35A
 [authorization]: g://authorization
-[reauthorization]: g://authorization/custom-app-approval#re-authorization-on-changes
+[reauthorization]: g://authorization/platform-app-approval#re-authorization-on-changes

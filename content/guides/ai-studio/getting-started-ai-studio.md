@@ -21,7 +21,7 @@ To start creating custom AI agents with AI studio you need a platform
 application with enabled Box AI scope and a developer token to
 authenticate your calls.
 
-## Create a custom application
+## Create a platform application
 
 First you need to create a platform application you will use to make calls. To
 create an application, follow the guide on [creating platform apps][createapps].
@@ -80,4 +80,4 @@ calls.
 [createapps]: g://applications/app-types/platform-apps
 [postman]: g://tooling/postman
 [authorization]: g://authorization
-[reauthorization]: g://authorization/custom-app-approval#re-authorization-on-changes
+[reauthorization]: g://authorization/platform-app-approval#re-authorization-on-changes

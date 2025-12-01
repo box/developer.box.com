@@ -1,5 +1,5 @@
 ---
-rank: 3
+rank: 4
 related_endpoints: []
 related_guides:
   - authentication/jwt
@@ -11,17 +11,9 @@ related_resources: []
 alias_paths: []
 ---
 
-# Install Python SDK (Deprecated)
+# Install Python SDK
 
 You can use Box Python SDK to call Box APIs in a Python project.
-
-<Message type='notice'>
- [Python SDK](https://github.com/box/box-python-sdk)
- is currently in maintenance mode and will be deprecated soon.
- This means only critical security updates and bug fixes will be
- implemented.
- It is recommended to use the [auto-generated Python SDK][python-gen].
-</Message>
 
 <CTA to="https://github.com/box/box-python-sdk">
   Learn more about Python SDK on GitHub
@@ -46,4 +38,4 @@ pip install "boxsdk[jwt]"
 
 [pip]: https://pypi.org/project/pip/
 [jwt]: g://authentication/jwt
-[python-gen]: g://tooling/sdks/python-gen
+[versioning]: g://tooling/sdks/sdk-versioning

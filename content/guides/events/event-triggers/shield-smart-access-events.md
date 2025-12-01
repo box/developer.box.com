@@ -357,7 +357,7 @@ The `additional_details` payload will provide the following details:
 
 ## Integration Restriction
 
-If a 3rd-party application, including published custom applications with which
+If a 3rd-party application, including published platform applications with which
 your organization is integrated, is restricted from downloading a file or a
 folder, an event is produced within the [enterprise event][events] stream.
 These events follow the standard event object schema, with the `event_type`
@@ -391,7 +391,7 @@ following details:
 }
 ```
 
-For custom applications, the `additional_details` payload will provide the
+For platform applications, the `additional_details` payload will provide the
 following details:
 
 ```json

@@ -10,6 +10,7 @@ required_guides:
 - authentication/jwt/jwt-setup
 alias_paths:
 - /guides/applications/custom-apps/app-approval
+- /guides/authorization/custom-app-approval
 ---
 
 # Platform App Approval
@@ -31,7 +32,7 @@ the authorization and enablement status of your application.
 ## Approval Notifications
 
 A semi-automated process to submit an app approval is available in the Developer
-Console for all custom application types.
+Console for all platform application types.
 
 ### Server authentication apps
 

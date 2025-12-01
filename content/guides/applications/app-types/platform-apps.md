@@ -6,6 +6,7 @@ alias_paths:
   - /docs/partner-integrations
   - /docs/getting-started-box-platform
   - /docs/box-platform
+  - /guides/applications/custom-apps
 related_guides:
   - authentication/oauth2
   - authentication/jwt
@@ -60,7 +61,7 @@ Example use cases for a Platform App include:
 
 Platform Apps may require approval before use.
 
-<CTA to='g://authorization/custom-app-approval'>
+<CTA to='g://authorization/platform-app-approval'>
   Learn how to approve Platform Apps
 </CTA>
 
@@ -68,4 +69,4 @@ Platform Apps may require approval before use.
 [jwt]: g://authentication/jwt
 [cc]: g://authentication/client-credentials
 [uie]: g://embed/ui-elements
-[users]: g;//getting-started/user-types/#managed-users/
+[users]: page://platform/user-types/#managed-users

@@ -16,7 +16,7 @@ related_guides:
 
 Box AI API allows you to use Box AI
 functionality
-in your custom applications. For example, you can
+in your platform applications. For example, you can
 implement Box AI question and answer
 functionality in your third party application,
 or generate content right in
@@ -28,7 +28,7 @@ Box AI API provides a number of capabilities
 designed to help you leverage Large Language Models (LLMs)
 in your application workflows.
 
-Currently, you can ask Box AI to answer
+You can ask Box AI to answer
 user questions, summarize the document content,
 or generate text you can use in your documents.
 You can also use Box AI to extract metadata from the
@@ -74,8 +74,18 @@ For details, see [Box AI for Notes][boxainotes].
 
 The [`POST /2.0/ai/extract`][extract] and [`POST /2.0/ai/extract_structured`][extract-structured] endpoints allow you to extract data from the provided input and return them in a form of key-value pairs.
 
-* Use the `extract_structured` endpoint to extract data according to a pre-defined structure obtained from the metadata template, or a set of fields.
+* Use the `extract_structured` endpoint to extract data according to a pre-defined structure obtained from the metadata template, or a set of fields. Use it for shorter documents
+	* Use the Enhanced Extract Agent for long, complex documents
 * Use the `extract` endpoint to extract data from a file using a prompt that can include a stringified version of formats such as JSON or XML, or even plain text.
+
+#### Enhanced Extract Agent
+
+The Enhanced Extract Agent is designed to extract key-value pairs from complex documents. It converts the unstructured content into metadata for easier discovery and search. 
+
+You can [use the agent][eea-tutorial] through the Box AI API and turn unstructured data into structured output to use in production databases, third party systems, or analytics.
+
+The Enhanced Extract Agent uses Gemini 2.5 Pro to provide a chain-of-thought reasoning and returns both the extracted values and a reasoning behind
+its answer.
 
 ### Configuration overrides
 
@@ -87,7 +97,7 @@ For details, see [AI agent default configuration][agent-default].
 
 Box AI for UI Elements is available in Content Preview
 allows asking questions about documents directly
-within custom applications.
+within platform applications.
 Check out how to use the [Box AI for UI Elements][boxaielement]
 to embed Box AI functionality in your projects.
 
@@ -126,3 +136,4 @@ better results for this language.
 [agent-default]: g://box-ai/ai-agents/get-agent-default-config
 [extract]: e://post_ai_extract
 [extract-structured]: e://post_ai_extract_structured
+[eea-tutorial]: g://box-ai/ai-tutorials/extract-metadata-structured#

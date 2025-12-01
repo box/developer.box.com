@@ -15,7 +15,7 @@ alias_paths:
 # Ask questions to Box AI
 
 <Message type="notice">
-Box AI API is available to all Enterprise Plus and Enterprise Advanced customers.
+Box AI API is available to all customers Business and above.
 
 </Message>
 
@@ -28,7 +28,7 @@ you can ask Box AI to summarize the content.
 
 ## Before you start
 
-Make sure you followed the steps listed in [getting started with Box AI][prereq] to create a custom app and authenticate.
+Make sure you followed the steps listed in [getting started with Box AI][prereq] to create a platform app and authenticate.
 
 ## Send a request
 

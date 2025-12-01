@@ -14,113 +14,72 @@ alias_paths: []
 
 The following file types are supported by the representation API.
 
-## Audio
+## 3D Graphics and Modeling Files
 
-| File Type  | PDF Support? | Thumbnails? | Text? |
-| ---------- | ------------ | ----------- | ----------- |
-| `.aac` | No | Yes | No |
-| `.aif` | No | Yes | No |
-| `.aifc` | No | Yes | No |
-| `.aiff` | No | Yes | No |
-| `.amr` | No | Yes | No |
-| `.au` | No | Yes | No |
-| `.flac` | No | Yes | No |
-| `.m4a` | No | Yes | No |
-| `.mp3` | No | Yes | No |
-| `.ogg` | No | Yes | No |
-| `.ra` | No | Yes | No |
-| `.wav` | No | Yes | No |
-| `.wma` | No | Yes | No |
-
-## CAD
-
-| File Type  | PDF Support? | Thumbnails? | Text? |
-| --- | --- | --- | --- |
+| File Type | PDF Support? | Thumbnails? | Text? |
+| --------- | ------------ | ----------- | ----- |
 | `.3ds` | No | No | No |
 | `.box3d` | No | No | No |
 | `.dae` | No | No | No |
-| `.dwg` | No | No | No |
-| `.dxf` | No | No | No |
 | `.fbx` | No | No | No |
 | `.mtl` | No | No | No |
 | `.obj` |  No | No | No |
 | `.ply` | No | No | No |
 | `.stl` | No | No | No |
 
-## Document
+## Audio
 
-| File Type  | PDF Support? | Thumbnails? | Text? |
-| ---------- | ------------ | ----------- | ----- |
-| `.as` | Yes | Yes | Yes |
-| `.as3` | Yes | Yes | Yes |
-| `.asm` | Yes | Yes | Yes |
-| `.bat` | Yes | Yes | Yes |
-| `.boxnote` | Yes | Yes | Yes |
-| `.c` | Yes | Yes | Yes |
-| `.cc` | Yes | Yes | Yes |
-| `.cmake` | Yes | Yes | Yes |
-| `.cpp` | Yes | Yes | Yes |
-| `.cs` | Yes | Yes | Yes |
-| `.css` | Yes | Yes | Yes |
-| `.cxx` | Yes | Yes | Yes |
-| `.diff` | Yes | Yes | Yes |
+| File Type | PDF Support? | Thumbnails? | Text? |
+| --------- | ------------ | ----------- | ----- |
+| `.aac` | No | No | No |
+| `.aif` | No | No | No |
+| `.aifc` | No | No | No |
+| `.aiff` | No | No | No |
+| `.amr` | No | No | No |
+| `.au` | No | No | No |
+| `.flac` | No | No | No |
+| `.m4a` | No | No | No |
+| `.mp3` | No | No | No |
+| `.ogg` | No | Yes | No |
+| `.ra` | No | No | No |
+| `.wav` | No | No | No |
+| `.wma` | No | No | No |
+
+## CAD
+
+| File Type | PDF Support? | Thumbnails? | Text? |
+| --------- | ------------ | ----------- | ----- |
+| `.dwg` | Yes | Yes | No |
+
+## Documents
+
+| File Type | PDF Support? | Thumbnails? | Text? |
+| --------- | ------------ | ----------- | ----- |
+| `.boxnote` | No | No | Yes |
 | `.doc` | Yes | Yes | Yes |
 | `.docx` | Yes | Yes | Yes |
-| `.eml` | Yes | Yes | Yes |
-| `.erb` | Yes | Yes | Yes |
-| `.groovy`| Yes | Yes | Yes |
-|  `.h` | Yes | Yes | Yes |
-| `.haml` | Yes | Yes | Yes |
-| `.hh` | Yes | Yes | Yes |
-| `.hpp` | Yes | Yes | Yes |
-| `.htm` | Yes | Yes | Yes |
-| `.html` | Yes | Yes | Yes |
-| `.java` | Yes | Yes | Yes |
-| `.js` | Yes | Yes | Yes |
-| `.json` | Yes | Yes | Yes |
-| `.jww` | Yes | Yes | Yes |
-| `.less` | Yes | Yes | Yes |
-| `.log` | Yes | Yes | Yes |
-| `.m` | Yes | Yes | Yes |
-| `.make` | Yes | Yes | Yes |
-| `.md` | Yes | Yes | Yes |
-| `.ml` | Yes | Yes | Yes |
-| `.msg` | Yes | Yes | Yes |
-| `.olk14Message` | Yes | Yes | Yes |
+| `.gdoc` | Yes | Yes | Yes |
+| `.html` | Yes | No | Yes |
+| `.msg` | Yes | No | Yes |
+| `.odt` | Yes | Yes | Yes |
+| `.pages` | Yes | Yes | No |
 | `.pdf` | Yes | Yes | Yes |
-| `.php` | Yes | Yes | Yes |
-| `.pl` | Yes | Yes | Yes |
-| `.properties` | Yes | Yes | Yes |
-| `.py` | Yes | Yes | Yes |
-| `.rb` | Yes | Yes | Yes |
-| `.rst` | Yes | Yes | Yes |
-| `.sass` | Yes | Yes | Yes |
-| `.scala` | Yes | Yes | Yes |
-| `.scm` | Yes | Yes | Yes |
-| `.script` | Yes | Yes | Yes |
-| `.sh` | Yes | Yes | Yes |
-| `.sml` | Yes | Yes | Yes |
-| `.sql` | Yes | Yes | Yes |
-| `.vb` | Yes | Yes | Yes |
-| `.vi` | Yes | Yes | Yes |
-| `.vim` | Yes | Yes | Yes |
+| `.rtf` | Yes | Yes | Yes |
 | `.wpd` | Yes | Yes | Yes |
-| `.xhtml` | Yes | Yes | Yes |
-| `.xml` | Yes | Yes | Yes |
-| `.xsd` | Yes | Yes | Yes |
-| `.xsl` | Yes | Yes | Yes |
+| `.xhtml` | Yes | No | Yes |
+| `.xml` | Yes | No | Yes |
+| `.xsd` | Yes | No | Yes |
+| `.xsl` | Yes | No | Yes |
 | `.xbd` | Yes | Yes | Yes |
 | `.xdw` | Yes | Yes | Yes |
-| `.pyc` | Yes | Yes | Yes |
 
 ## Drawing
 
 | File Type | PDF Support? | Thumbnails? | Text? |
-| --- | --- | ---| --- |
+| --------- | ------------ | ----------- | ----- |
 | `.ai` | No | Yes | No |
-| `.boxcanvas` | No | Yes | No |
-| `.indd` | No | Yes | No |
-| `.odg` | No | Yes | No |
+| `.boxcanvas` | No | No | Yes |
+| `.indd` | Yes | Yes | No |
 | `.psd` | No | Yes | No |
 | `.svg` | No | Yes | No |
 
@@ -128,44 +87,44 @@ The following file types are supported by the representation API.
 
 | File Type | PDF Support? | Thumbnails? | Text? |
 | --------- | ------------ | ----------- | ----- |
-| `.arw`    | No           | Yes         | No    |
 | `.bmp`    | No           | Yes         | No    |
 | `.cr2`    | No           | Yes         | No    |
+| `.crw`    | No           | Yes         | No    |
 | `.dcm`    | No           | Yes         | No    |
 | `.dicm`   | No           | Yes         | No    |
 | `.dicom`  | No           | Yes         | No    |
 | `.dng`    | No           | Yes         | No    |
 | `.eps`    | No           | Yes         | No    |
-| `.exr`    | No           | Yes         | No    |
 | `.gif`    | No           | Yes         | No    |
 | `.heic`   | No           | Yes         | No    |
-| `.indd`   | No           | Yes         | No    |
-| `.indml`  | No           | Yes         | No    |
-| `.indt`   | No           | Yes         | No    |
-| `.inx`    | No           | Yes         | No    |
+| `.indd`   | Yes          | Yes         | No    |
+| `.idml`   | Yes          | Yes         | No    |
+| `.indt`   | Yes          | Yes         | No    |
+| `.inx`    | Yes          | Yes         | No    |
 | `.jpeg`   | No           | Yes         | No    |
 | `.jpg`    | No           | Yes         | No    |
 | `.nef`    | No           | Yes         | No    |
 | `.png`    | No           | Yes         | No    |
+| `.ps`     | No           | Yes         | No    |
+| `.psd`    | No           | Yes         | No    |
+| `.raf`    | No           | Yes         | No    |
+| `.raw`    | No           | Yes         | No    |
 | `.svg`    | No           | Yes         | No    |
+| `.svs`    | No           | Yes         | No    |
 | `.tif`    | No           | Yes         | No    |
 | `.tiff`   | No           | Yes         | No    |
 | `.tga`    | No           | Yes         | No    |
-| `.svs`    | No           | Yes         | No    |
+| `.webp`   | No           | Yes         | No    |
 
 ## Presentation
 
 | File Type  | PDF Support? | Thumbnails? | Text? |
 | ---------- | ------------ | ----------- | ----- |
-| `.fodp`    | Yes          | Yes         | Yes   |
 | `.gslide`  | Yes          | Yes         | Yes   |
 | `.gslides` | Yes          | Yes         | Yes   |
-| `.key`     | Yes          | Yes         | Yes   |
-| `.keynote` | Yes          | Yes         | Yes   |
+| `.key`     | Yes          | Yes         | No    |
 | `.odp`     | Yes          | Yes         | Yes   |
 | `.otp`     | Yes          | Yes         | Yes   |
-| `.pez`     | Yes          | Yes         | Yes   |
-| `.pot`     | Yes          | Yes         | Yes   |
 | `.ppt`     | Yes          | Yes         | Yes   |
 | `.pptx`    | Yes          | Yes         | Yes   |
 
@@ -174,15 +133,66 @@ The following file types are supported by the representation API.
 | File Type  | PDF Support? | Thumbnails? | Text? |
 | ---------- | ------------ | ----------- | ----- |
 | `.csv` | Yes | Yes | Yes |
-| `.fods` | Yes | Yes | Yes |
 | `.gsheet` | Yes | Yes | Yes |
-| `.numbers` | Yes | Yes | Yes |
+| `.numbers` | Yes | Yes | No |
 | `.ods` | Yes | Yes | Yes |
 | `.tsv` | Yes | Yes | Yes |
 | `.xls` | Yes | Yes | Yes |
-| `xlsm` | Yes | Yes | Yes |
-| `xlsx` | Yes | Yes | Yes |
-| `xlsb` | Yes | Yes | Yes |
+| `.xlsm` | Yes | Yes | Yes |
+| `.xlsx` | Yes | Yes | Yes |
+
+## Text-Based Files
+
+| File Type  | PDF Support? | Thumbnails? | Text? |
+| ---------- | ------------ | ----------- | ----- |
+| `.as` | Yes | No | Yes |
+| `.as3` | Yes | No | Yes |
+| `.asm` | Yes | No | Yes |
+| `.bat` | Yes | No | Yes |
+| `.c` | Yes | No | Yes |
+| `.cc` | Yes | No | Yes |
+| `.cmake` | Yes | No | Yes |
+| `.cpp` | Yes | No | Yes |
+| `.cs` | Yes | No | Yes |
+| `.css` | Yes | No | Yes |
+| `.cxx` | Yes | No | Yes |
+| `.diff` | Yes | No | Yes |
+| `.erb` | Yes | No | Yes |
+| `.fdx` | Yes | No | Yes |
+| `.groovy`| Yes | No | Yes |
+| `.h` | Yes | No | Yes |
+| `.haml` | Yes | No | Yes |
+| `.hh` | Yes | No | Yes |
+| `.java` | Yes | No | Yes |
+| `.js` | Yes | No | Yes |
+| `.json` | Yes | No | Yes |
+| `.less` | Yes | No | Yes |
+| `.log` | Yes | No | Yes |
+| `.m` | Yes | No | Yes |
+| `.make` | Yes | No | Yes |
+| `.md` | Yes | No | Yes |
+| `.ml` | Yes | No | Yes |
+| `.mm` | Yes | No | Yes |
+| `.php` | Yes | No | Yes |
+| `.pl` | Yes | No | Yes |
+| `.plist` | Yes | No | Yes |
+| `.properties` | Yes | No | Yes |
+| `.py` | Yes | No | Yes |
+| `.rb` | Yes | No | Yes |
+| `.rst` | Yes | No | Yes |
+| `.sass` | Yes | No | Yes |
+| `.scala` | Yes | No | Yes |
+| `.scm` | Yes | No | Yes |
+| `.script` | Yes | No | Yes |
+| `.sh` | Yes | No | Yes |
+| `.sml` | Yes | No | Yes |
+| `.sql` | Yes | No | Yes |
+| `.txt` | Yes | No | Yes |
+| `.vi` | Yes | No | Yes |
+| `.vim` | Yes | No | Yes |
+| `.vtt` | Yes | No | Yes |
+| `.webdoc`| Yes | No | Yes |
+| `.yaml` | Yes | No | Yes |
 
 ## Video
 
@@ -191,17 +201,18 @@ The following file types are supported by the representation API.
 | `.3g2` | No | Yes | No |
 | `.3gp` | No | Yes | No |
 | `.avi` | No | Yes | No |
-| `.fla` | No | Yes | No |
 | `.flv` | No | Yes | No |
-| `m2v` | No | Yes | No |
+| `.m2v` | No | Yes | No |
 | `.m2ts` | No | Yes | No |
 | `.m4v` | No | Yes | No |
 | `.mkv` | No | Yes | No |
 | `.mov` | No | Yes | No |
+| `.mp4` | No | Yes | No |
 | `.mpeg` | No | Yes | No |
 | `.mpg` | No | Yes | No |
 | `.mts` | No | Yes | No |
-| `.swf` | No | Yes | No |
 | `.ogg` | No | Yes | No |
 | `.qt` | No | Yes | No |
 | `.ts` | No | Yes | No |
+| `.swf` | No | Yes | No |
+| `.wmv` | No | Yes | No |
