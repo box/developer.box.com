@@ -205,7 +205,7 @@ Notification Email: []
 [keypair]: g://authentication/jwt/jwt-setup/#public-and-private-key-pair
 [sa]: page://platform/user-types/#service-account
 [scopes]: g://api-calls/permissions-and-errors/scopes
-[ag]: g://authorization/custom-app-approval
+[ag]: g://authorization/platform-app-approval
 <!-- i18n-enable localize-links -->
 [blogpost]: https://medium.com/box-developer-blog/box-api-understanding-security-9fcad7b1d72e
 <!-- i18n-disable localize-links -->

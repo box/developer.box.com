@@ -10,6 +10,7 @@ related_guides:
   - box-ai/ai-tutorials/extract-metadata
 alias_paths:
   - guides/box-ai/extract-metadata-structured
+  - guides/extract-metadata
 ---
 
 # Extract metadata from file (structured)
@@ -18,6 +19,30 @@ With Box AI API, you can extract metadata from the provided file
 and get the result in the form of key-value pairs.
 As input, you can either create a structure using the `fields` parameter, or use an already defined metadata template.
 To learn more about creating templates, see [Creating metadata templates in the Admin Console][templates-console] or use the [metadata template API][templates-api].
+
+## Supported file formats
+
+The endpoint supports the following file formats:
+
+- PDF
+- TIFF
+- PNG
+- JPEG
+
+Box AI automatically applies optical character recognition (OCR) when processing image files (TIFF, PNG, JPEG) and scanned documents. This eliminates the need to convert images to PDF before extraction, saving time and simplifying your integration.
+
+## Supported languages
+
+Box AI can extract metadata from documents in the following languages:
+<!--alex ignore-->
+- English
+- Japanese
+- Chinese
+- Korean
+<!--alex enable-->
+- Cyrillic-based languages (such as Russian, Ukrainian, Bulgarian, and Serbian)
+
+No additional configuration is required to use different languages or image formats. Box AI automatically detects the language and applies OCR when needed.
 
 ## Before you start
 
@@ -174,6 +199,72 @@ The response lists the fields included in the metadata template and their values
 }
 ```
 
+### Enhanced Extract Agent
+
+To use the Enhanced Extract Agent, specify the `ai_agent` object as follows:
+
+```bash
+{
+  "ai_agent": {
+    "type": "ai_agent_id", 
+    "id": "enhanced_extract_agent"
+  }
+}
+```
+
+To extract data using the Enhanced Extract Agent you need one of the following:
+
+- [Inline field definitions][inline-field] (best when fields change frequently)
+- [Metadata template][metadata-template] (best when fields stay consistent)
+
+See the sample code snippet using Box Python SDK:
+
+```Python
+from box_sdk_gen import (
+    AiAgentReference,
+    AiAgentReferenceTypeField,
+    AiItemBase,
+    AiItemBaseTypeField,
+    BoxClient,
+    BoxCCGAuth,
+    CCGConfig,
+    CreateAiExtractStructuredMetadataTemplate
+)
+
+# Create your client credentials grant config from the developer console
+ccg_config = CCGConfig(
+    client_id="my_box_client_id", # replace with your client id
+    client_secret="my_box_client_secret", # replace with your client secret
+    user_id="my_box_user_id", # replace with the box user id that has access
+                              # to the file you are referencing
+)
+auth = BoxCCGAuth(config=ccg_config)
+client = BoxClient(auth=auth)
+# Create the agent config referencing the enhanced extract agent
+enhanced_extract_agent_config = AiAgentReference(
+    id="enhanced_extract_agent",
+    type=AiAgentReferenceTypeField.AI_AGENT_ID
+)
+# Use the Box SDK to call the extract_structured endpoint
+box_ai_response = client.ai.create_ai_extract_structured(
+    # Create the items array containing the file information to extract from
+    items=[
+        AiItemBase(
+            id="my_box_file_id", # replace with the file id
+            type=AiItemBaseTypeField.FILE
+        )
+    ],
+    # Reference the Box Metadata template 
+    metadata_template=CreateAiExtractStructuredMetadataTemplate(
+        template_key="InvoicePO",
+        scope="enterprise"
+    ),
+    # Attach the agent config you created earlier
+    ai_agent=enhanced_extract_agent_config,
+)
+print(f"box_ai_response: {box_ai_response.answer}")
+```
+
 [prereq]: g://box-ai/ai-tutorials/prerequisites
 [agent]: e://get_ai_agent_default
 [model-param]: r://ai_agent_text_gen#param_basic_gen_model
@@ -183,3 +274,5 @@ The response lists the fields included in the metadata template and their values
 [overrides]: g://box-ai/ai-agents/ai-agent-overrides
 [changelog]: page://changelog
 [blog]: https://medium.com/box-developer-blog
+[inline-field]: #use-fields-parameter
+[metadata-template]: #use-metadata-template

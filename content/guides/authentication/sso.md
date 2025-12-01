@@ -21,7 +21,7 @@ being built.
 
 ## Platform Apps with Client-side Authentication
 
-When users authenticate with a [Platform App][custom_app] configured to use
+When users authenticate with a [Platform App][platform_app] configured to use
 [OAuth 2.0][oauth2] Box will detect if the enterprise is configured to use SSO.
 If it is, Box will redirect the user to their browser and display the
 enterprise's configured SSO log-in screen.
@@ -35,7 +35,7 @@ When SSO is enabled but not required, managed users will have the option to
 either:
 
 - log in with a Box username and password
-- log in with their SSO provider 
+- log in with their SSO provider
 
 When SSO is enabled and required, Box will force all managed users to log in
 with their enterprise's configured SSO provider. In this case, any
@@ -49,7 +49,7 @@ having a Box account matching the email address passed via SAML.
 
 ## Platform Apps with Server-side Authentication
 
-For [Platform Apps][custom_app] that use [JWT][jwt] or
+For [Platform Apps][platform_app] that use [JWT][jwt] or
 [Client Credentials Grant][ccg] and
 [Limited Access Apps][la-app] that use [App Token][app_token] authentication,
 SSO is not used to authenticate with Box.
@@ -83,12 +83,12 @@ therefore SSO is not involved.
 </Message>
 
 [mu]: page://platform/user-types/#managed-users
-[admin-approval]: g://authorization/custom-app-approval
+[admin-approval]: g://authorization/platform-app-approval
 [jwt]: g://authentication/jwt
 [oauth2]: g://authentication/oauth2
-[ccg]: g:///authentication/client-credentials
+[ccg]: g://authentication/client-credentials
 [la-app]: guide://applications/web-app-integrations
 [app_token]: g://authentication/app-token
-[custom_app]: g://applications/app-types/platform-apps
+[platform_app]: g://applications/app-types/platform-apps
 [custom_skills]: g://applications/app-types/custom-skills
 [jwt]: g://authentication/jwt/jwt-setup

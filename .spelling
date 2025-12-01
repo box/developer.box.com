@@ -312,6 +312,7 @@ FIPS
 OpenAI
 XCode
 embeddings
+GPT-5
 GPT-4
 GPT-3
 freeform
@@ -362,3 +363,7 @@ Kus
 multiselect
 add-ons
 65k
+cybersecurity
+SObject
+WatsonX
+400k

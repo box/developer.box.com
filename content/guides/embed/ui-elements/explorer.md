@@ -20,7 +20,7 @@ renders the content in a folder view, similar to the main Box web application.
 Users can then navigate through the folder hierarchy and perform file operations
 like rename, delete, and share.
 
-Content Explorer comes with a metadata view that uses
+Content Explorer comes with a [metadata view][explorer-metadata] that uses
 metadata query to find files and folders based
 on their metadata. The data is then displayed in the embedded view.
 
@@ -265,7 +265,7 @@ more, see [Dedicated Scopes for Box UI Elements][scopes].
 
 You can expand the actions in the **More Options** menu for files and folders in Content Explorer and Content Picker. Your custom options show when user clicks the ellipsis button.
 
-To customize the **More Options** menu, pass an array of custom actions to `itemActions`. 
+To customize the **More Options** menu, pass an array of custom actions to `itemActions`.
 
 ```js
 contentExplorer.show(configData.FOLDER_ID, configData.ACCESS_TOKEN, {
@@ -298,8 +298,8 @@ const customActions = [
 See the implemented examples in CodePen:
 
 <iframe height="560"
-scrolling="no" 
-title="Box custom icons" 
+scrolling="no"
+title="Box custom icons"
 src="https://codepen.io/box-platform/embed/EaaMMKQ?default-tab=html%2Cresult" frameborder="no"
 allowtransparency="true"
 allowfullscreen="true"
@@ -308,13 +308,14 @@ style="width: 100%;"
 
 [downscope]: guide://authentication/tokens/downscope
 [scopes]: guide://api-calls/permissions-and-errors/scopes
-[box-app]: g:///applications/app-types
+[box-app]: g://applications/app-types
 [token]: g://authentication/tokens/developer-tokens
 [templates]: g://metadata/templates
 [metadata-project]: https://github.com/box-community/content-explorer-metadata/tree/main
 [apply-templates]: https://support.box.com/hc/en-us/articles/360044196173-Using-Metadata
 [metadata-query]: g://metadata/queries
 [get-template]: g://metadata/templates/get/#get-a-metadata-template-by-name
-[creating-templates-api]: g:///metadata/templates/create
+[creating-templates-api]: g://metadata/templates/create
 [appjs]: https://github.com/box-community/content-explorer-metadata/blob/main/src/App.js
 [blogpost]: https://medium.com/box-developer-blog/metadata-view-in-box-content-explorer-4978e47e97e9
+[explorer-metadata]: g://embed/ui-elements/explorer-metadata-v2

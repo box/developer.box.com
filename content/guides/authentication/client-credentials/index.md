@@ -109,4 +109,4 @@ Once you make changes to the app settings, don't forget to [reauthorize][reauth]
 [sa]: page://platform/user-types/#service-account
 [auth]: g://authorization
 [aa]: g://authentication/client-credentials/client-credentials-setup/#application-access
-[reauth]: g://authorization/custom-app-approval#re-authorization-on-changes
+[reauth]: g://authorization/platform-app-approval#re-authorization-on-changes

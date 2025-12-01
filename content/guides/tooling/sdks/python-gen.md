@@ -1,9 +1,6 @@
 ---
-rank: 3
+rank: 8
 related_endpoints: []
-related_guides:
-  - authentication/jwt
-  - authentication/oauth2
 related_pages:
   - sdks-and-tools
 required_guides: []
@@ -11,32 +8,20 @@ related_resources: []
 alias_paths: []
 ---
 
-# Install Python SDK (Generated)
+# Deprecated Box Next Gen Python SDK
 
-You can use the **auto-generated** Box Python SDK to call Box APIs in a Python project.
-This [next generation SDK][next-gen] brings along new functionality to designed to elevate the developer experience and streamline your integration with the Box Content Cloud.
+<Message type='warning'>
+  As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts.
 
-<CTA to="https://github.com/box/box-python-sdk-gen">
-  Learn more about auto-generated Python SDK on GitHub
-</CTA>
+  Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
 
-## Installation
+  **All future development, including new features and updates, will be delivered through the Box core SDKs. The standalone generated artifact was introduced in the version `v10` of the Box core SDKs, and it is currently available as a separate [branch][sdk-branch].**
+</Message>
 
-To install the auto-generated Python SDK run the following command from your terminal window or command prompt using [pip][pip].
+Check the [migration guide][migration] to learn how to switch from the Box Next Generation SDK to the Box core SDK `v10`.
 
-```shell
-pip install box-sdk-gen
-```
+For more details, see our [SDK versioning strategy document][versioning].
 
-## JWT application
-
-When working with a Box App that uses server-side [JWT authentication][jwt], install the following additional module:
-
-```shell
-pip install "box-sdk-gen[jwt]"
-```
-
-[pip]: https://pypi.org/project/pip/
-[jwt]: g://authentication/jwt
-[next-gen]: g://tooling/sdks#next-generation-sdks
-[py-gen]: https://github.com/box/box-python-sdk-gen
+[versioning]: g://tooling/sdks/sdk-versioning
+[migration]: https://github.com/box/box-python-sdk/blob/main/migration-guides/from-box-python-sdk-gen-v1-to-box-python-sdk.md
+[sdk-branch]: https://github.com/box/box-python-sdk/tree/main

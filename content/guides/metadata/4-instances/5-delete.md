@@ -15,8 +15,8 @@ related_guides:
 
 # Remove metadata from an item
 
-Removing an instance of a metadata template assigned to a file or
-folder can be done using the item's `id`, and the template's `templateKey`
+To remove an instance of a metadata template assigned to a file or
+folder, use the item's `id`, and the template's `templateKey`
 and `scope`.
 
 <Message>
@@ -28,21 +28,21 @@ and `scope`.
 
 </Message>
 
-## Remove metadata from an file
+## Remove metadata from a file
 
-Deleting an instance of a metadata template from a file be achieved by calling
-the [`DELETE /files/:file_id/metadata/:templateKey/schema`][e_on_file] API.
+To delete an instance of a metadata template from a file, call
+the [`DELETE /files/:file_id/metadata/:templateKey/schema`][e_on_file] API endpoint.
 
 <Samples id="delete_files_id_metadata_id_id" />
 
 This API returns a `204 No Content` API response with no response body when
 the instance has been successfully removed from the file.
 
-## Remove metadata from an folder
+## Remove metadata from a folder
 
-Deleting an instance of a metadata template from a folder be achieved by calling
+To delete an instance of a metadata template, call
 the [`DELETE /folders/:folder_id/metadata/:templateKey/schema`][e_on_folder]
-API.
+API endpoint.
 
 <Samples id="delete_folders_id_metadata_id_id" />
 

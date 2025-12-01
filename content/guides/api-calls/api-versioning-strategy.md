@@ -110,7 +110,7 @@ For details on possible errors, see [versioning errors](g://api-calls/permission
 
 ## How Box SDK versioning works
 
-The versioning strategy applies only to [next generation generated SDKs](page://sdks-and-tools/#next-generation-sdks).
+The versioning strategy applies only to [generated SDKs](page://sdks-and-tools/#next-generation-sdks).
 
 Box SDKs support the **All Versions In** SDK approach.
 This means that every release of SDK provides access to all endpoints in any version which is currently live. All generated SDKs use manager's approach - they group all endpoints with the same domain in one manager.
