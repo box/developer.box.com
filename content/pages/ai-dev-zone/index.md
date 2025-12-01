@@ -24,7 +24,7 @@ centered: false
   <Header centered>
     Try out interactive demos
   </Header>
-    Box AI API is available to all Enterprise Plus and Enterprise Advanced customers.
+  Box AI API is available to all customers Business and above.
 
   <TileGrid rows="4">
     <Tile type="ai" title="Get a summary" href="/ai-dev-zone-summary">
@@ -117,9 +117,15 @@ centered: false
 
         <strong style="background-color: #e8e8e8">MCP</strong>
     </Tile>
+    <Tile type="mcp" title="Build AI Apps with MCP Servers"
+      href="https://www.deeplearning.ai/short-courses/build-ai-apps-with-mcp-server-working-with-box-files/">
+        Join a short online course, built in partnership with Deeplearning.ai, and taught by Ben Kus, Box CTO.
+
+        <strong style="background-color: #e8e8e8">Short Course</strong>
+    </Tile>
     <Tile type="mcp" title="Box MCP server and Pydantic AI"
       href="https://medium.com/box-developer-blog/building-ai-powered-document-generation-with-box-mcp-and-pydantic-ai-48775b18ae32">
-        Use Box Doc Gen through the Box MCP server for AI-Powered Document Generation
+        Use Box Doc Gen through the Box MCP server for AI-Powered Document Generation.
 
         <div>
           <strong style="background-color: #e8e8e8">Tutorial</strong>
@@ -188,12 +194,20 @@ centered: false
   </p>
   
   <TileGrid rows="4">
+    <Tile type="box-brown" title="LangChain.js"
+      href="https://www.npmjs.com/package/langchainjs-box">
+        Include Box content in your LLM workflows with Box loader for LangChain.js.
+
+        <div>
+          <strong style="background-color: #92e0c0">New</strong>
+          <strong style="background-color: #e8e8e8">Integration</strong>
+        </div>
+    </Tile>
     <Tile type="box-brown" title="Openflow Connector for Box"
       href="https://docs.snowflake.com/en/user-guide/data-integration/openflow/connectors/box/setup">
         Seamlessly connect unstructured content in Box with the powerful analytics capabilities of Snowflake, unlocking new insights and automating data-driven workflows.
 
         <div>
-          <strong style="background-color: #92e0c0">New</strong>
           <strong style="background-color: #e8e8e8">Integration</strong>
         </div>
     </Tile>

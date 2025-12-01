@@ -22,7 +22,7 @@ categories:
         // text: Text for a link to the Platform blog
         text: Developer Blog
         // url: A link to our developer blog
-        url: https://medium.com/box-developer-blog
+        url: https://blog.box.com/category/developer
 
       newsletter:
         // text: Text for a link to the newsletter page
@@ -66,12 +66,6 @@ categories:
     title: Tooling
 
     links:
-      ts_gen_sdk:
-        // text: Text for link to the TypeScript SDK (Generated)
-        text: TypeScript SDK (Generated)
-        // url: link to the TypeScript SDK (Generated)
-        url: https://github.com/box/box-typescript-sdk-gen
-
       java_sdk:
         // text: Text for link to the Java SDK
         text: Java SDK
@@ -84,35 +78,11 @@ categories:
         // url: link to the Python SDK
         url: https://github.com/box/box-python-sdk
 
-      python_gen_sdk:
-        // text: Text for link to the Python SDK (Generated)
-        text: Python SDK (Generated)
-        // url: link to the Python SDK (Generated)
-        url: https://github.com/box/box-python-sdk-gen
-
       dotnet_sdk:
         // text: Text for link to the .NET SDK
         text: .NET SDK
         // url: link to the .Net SDK
         url: https://github.com/box/box-windows-sdk-v2
-
-      swift_gen_sdk:
-        // text: Text for link to the Swift SDK (Generated)
-        text: Swift SDK (Generated)
-        // url: link to the Swift SDK (Generated)
-        url: https://github.com/box/box-swift-sdk-gen
-
-      java_gen_sdk:
-        // text: Text for link to the Java SDK (Generated)
-        text: Java SDK (Generated)
-        // url: link to the Java SDK (Generated)
-        url: https://github.com/box/box-java-sdk-gen
-
-      dotnet_gen_sdk:
-        // text: Text for link to the .NET (Generated) SDK
-        text: .NET SDK (Generated)
-        // url: link to the .Net SDK (Generated)
-        url: https://github.com/box/box-dotnet-sdk-gen
 
       node_sdk:
         // text: Text for link to the Node SDK

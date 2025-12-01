@@ -1,5 +1,5 @@
 ---
-rank: 4
+rank: 5
 related_endpoints:
   - get-metadata-templates-id
 related_guides:
@@ -12,11 +12,14 @@ alias_paths:
   - /docs/content-explorer
 ---
 
-# Content Explorer - metadata view
+# Content Explorer - metadata view v1
 
-With Content Explorer you can also display files based on their metadata.
-The metadata view uses [metadata template][template] and [metadata query][metadata-query] to
-find the data you want to display.
+<Message type='notice'>
+The `v1` of the metadata view Content Explorer has reached end of support. While `v1` remains available in the `24.0.0` package, it will no longer receive bug fixes or new features. Follow the migration guide and switch to the `v2` metadata view of Content Explorer in order to receive the newest features.
+</Message>
+
+With Content Explorer you can display files and folders based on their metadata.
+The metadata view uses [metadata template][template] and [metadata query][metadata-query] to find the data you want to display.
 
 ![Metadata view](./images/explorer-view.png)
 
@@ -82,7 +85,7 @@ defined in the sample project. Examples of these parameters are available in the
 | --- | --- |
 | `defaultView` | A required prop to paint the metadata view. If it's not provided, you get the regular file view. |
 | `fieldsToShow` | Add or hide specific metadata columns to display in the Content Explorer. |
-|`metadataQuery` | Provides a way to find files by searching for the metadata attached to them. For additional information on metadata queries, see [this guide][metadata-query]. |
+|`metadataQuery` | Provides a way to find files and folders by searching for the metadata attached to them. For additional information on metadata queries, see [this guide][metadata-query]. |
 
 3. Pass the required parameters to the Content Explorer component.
 
@@ -178,12 +181,12 @@ Keys are based on the display names.
 
 [terminology]: g://metadata/#metadata-terminology
 [template]: r://get-metadata-templates-id
-[explorer]: g:///embed/ui-elements/explorer
+[explorer]: g://embed/ui-elements/explorer
 [blogpost]: https://medium.com/box-developer-blog/metadata-view-in-box-content-explorer-4978e47e97e9
-[creating-templates-api]: g:///metadata/templates/create
+[creating-templates-api]: g://metadata/templates/create
 [creating-templates-ui]: https://support.box.com/hc/en-us/articles/360044194033-Customizing-Metadata-Templates
 [appjs]: https://github.com/box-community/content-explorer-metadata/blob/main/src/App.js
-[box-app]: g:///applications/app-types
+[box-app]: g://applications/app-types
 [token]: g://authentication/tokens/developer-tokens
 [apply-templates]: https://support.box.com/hc/en-us/articles/360044196173-Using-Metadata
 [metadata-project]: https://github.com/box-community/content-explorer-metadata/tree/main
