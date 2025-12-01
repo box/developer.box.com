@@ -317,7 +317,7 @@
   // A boolean that determines whether to show the orange notification barin the header. Must be "true" or "false"
   "headers.secondary.notifications.display": "true",
   // The content of the notification
-  "headers.secondary.notifications.message": "BoxWorks 2024でコンテンツとAIの可能性について紹介します。",
+  "headers.secondary.notifications.message": "Box Developerドキュメントの新しいベータ版サイトがまもなくリリースされる予定です。最新の開発者向けガイド、APIリファレンス、AI搭載の検索により、Boxを使用した迅速な開発をサポートします。更新情報については今しばらくお待ちください。",
   // The number of seconds to display the message. Should alwaysbe 0 unless you want to autohide.
   "headers.secondary.notifications.ttl": "0",
   // Label for the log in button
