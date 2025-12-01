@@ -15,7 +15,7 @@ total_steps: 30
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
 next_page_id: box-ai/ai-models/aws-claude-4-5-haiku-model-card
-previous_page_id: box-ai/ai-models/google-gemini-1-5-flash-001-model-card
+previous_page_id: box-ai/ai-models/google-gemini-2-0-flash-lite-preview-02-05
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/aws-claude-4-5-sonnet-model-card.md
 fullyTranslated: true

@@ -38,6 +38,6 @@ Boxの次世代SDKからBoxコアSDK `v10`への切り替え方法について�
 
 [versioning]: g://tooling/sdks/sdk-versioning
 
-[migration]: https://github.com/box/box-python-sdk/blob/sdk-gen/migration-guides/from-box-python-sdk-gen-v1-to-box-python-sdk.md
+[migration]: https://github.com/box/box-python-sdk/blob/main/migration-guides/from-box-python-sdk-gen-v1-to-box-python-sdk.md
 
-[sdk-branch]: https://github.com/box/box-python-sdk/tree/sdk-gen
+[sdk-branch]: https://github.com/box/box-python-sdk/tree/main

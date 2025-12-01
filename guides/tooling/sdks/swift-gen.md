@@ -39,6 +39,6 @@ Boxの次世代SDKからBoxコアSDK `v10`への切り替え方法について�
 
 [versioning]: g://tooling/sdks/sdk-versioning
 
-[migration]: https://github.com/box/box-ios-sdk/blob/sdk-gen/migration-guides/from-box-swift-sdk-gen-v0-to-box-ios-sdk.md
+[migration]: https://github.com/box/box-ios-sdk/blob/main/migration-guides/from-box-swift-sdk-gen-v0-to-box-ios-sdk.md
 
-[sdk-branch]: https://github.com/box/box-ios-sdk/tree/sdk-gen
+[sdk-branch]: https://github.com/box/box-ios-sdk/tree/main

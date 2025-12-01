@@ -112,6 +112,52 @@ Box AIには以下のモデルが搭載されています。Box AIと統合さ�
 
 <strong style="background-color: #e8e8e8">
 
+Default for Box AI Advanced Agent for Hubs
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
+Default for Box AI Advanced Agent for Documents
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
+Default for Box AI Advanced Agent for Notes Q&A
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+利用可能
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+プレミアム
+
+</strong>
+
+</div>
+
+</Tile>
+
+<Tile type="gpt" title="openai__gpt_5_mini" href="/guides/box-ai/ai-models/openai-gpt-5-mini-model-card">
+
+A model designed for well-defined tasks and precise prompts.
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
 Box AI for Hubsのデフォルト
 
 </strong>
@@ -140,61 +186,9 @@ Box AI for NotesのQ&Aのデフォルト
 
 </strong>
 
-<strong style="background-color: #f8d59b">
-
-プレミアム
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="gpt" title="azure__openai__gpt_4_1_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card">
-
-軽量のタスクを処理するように設計されたマルチモーダルモデル。
-
-<div>
-
-<strong style="background-color: #e8e8e8">
-
-チャット
-
-</strong>
-
-<strong style="background-color: #e1ffe7">
-
-利用可能
-
-</strong>
-
 <strong style="background-color: #fdfad8">
 
 標準
-
-</strong>
-
-<strong style="background-color: #e1f8ff">
-
-FedRAMP Moderate
-
-</strong>
-
-<strong style="background-color: #e1f8ff">
-
-FedRAMP High
-
-</strong>
-
-<strong style="background-color: #e1f8ff">
-
-DOD IL2
-
-</strong>
-
-<strong style="background-color: #e1f8ff">
-
-ISMAP
 
 </strong>
 
@@ -254,7 +248,7 @@ ISMAP
 
 </Tile>
 
-<Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card">
+<Tile type="gpt" title="azure__openai__gpt_4_1_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card">
 
 軽量のタスクを処理するように設計されたマルチモーダルモデル。
 
@@ -364,6 +358,58 @@ ISMAP
 
 </Tile>
 
+<Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card">
+
+軽量のタスクを処理するように設計されたマルチモーダルモデル。
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+利用可能
+
+</strong>
+
+<strong style="background-color: #fdfad8">
+
+標準
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP Moderate
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+FedRAMP High
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+DOD IL2
+
+</strong>
+
+<strong style="background-color: #e1f8ff">
+
+ISMAP
+
+</strong>
+
+</div>
+
+</Tile>
+
 <Tile type="gpt" title="azure__openai__text_embedding_ada_002" href="/guides/box-ai/ai-models/azure-text-embedding-ada-002-model-card">
 
 最も優れた第2世代のテキスト埋め込みモデル。テキスト検索、コード検索、文の類似性判定に優れています。
@@ -424,6 +470,12 @@ ISMAP
 
 <strong style="background-color: #e8e8e8">
 
+Default for Box AI Enhanced Extract
+
+</strong>
+
+<strong style="background-color: #e8e8e8">
+
 チャット
 
 </strong>
@@ -476,7 +528,7 @@ ISMAP
 
 <strong style="background-color: #e8e8e8">
 
-Box AI Extractのデフォルト
+Default for Box AI Standard Extract
 
 </strong>
 
@@ -1137,6 +1189,34 @@ ISMAP
 Box AIの一部の顧客は、リクエストに応じて追加のAIモデルを有効にしたり、管理コンソールから利用できる追加のAIモデルを有効にしたりすることができます。これらのモデルの使用は、追加の条件の対象になる場合があります。顧客希望で有効化できるモデルを選択すると、顧客は、選択した追加の[サブプロセッサ][subprocessors]によって自身のデータが処理される可能性があることに同意したことになります。
 
 <TileGrid rows="2">
+
+<Tile type="gemini" title="google__gemini_3_pro" href="/guides/box-ai/ai-models/google-gemini-3-pro-model-card">
+
+A natively multimodal model for complex tasks with a 1 million token context window.
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
+<strong style="background-color: #f0e2ff">
+
+ベータ
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+プレミアム
+
+</strong>
+
+</div>
+
+</Tile>
 
 <Tile type="model" title="xai__grok_3_beta" href="/guides/box-ai/ai-models/xai-grok-3-beta-model-card">
 

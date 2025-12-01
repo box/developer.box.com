@@ -70,7 +70,7 @@ Boxで開発およびサポートされているSDKおよびツールは以下�
 
 既存のコードは、変更しなくても引き続き動作します。Boxの次世代SDKをベースにしたアプリケーションは影響なく引き続きご利用いただけますが、新機能、更新、バグ修正は提供されなくなります。
 
-**新機能や更新を含む、今後の開発はすべて、BoxコアSDKを通じて提供されます。スタンドアロンの生成されたアーティファクトは、BoxコアSDKのバージョン`v10`で導入されました。これは、現在、個別のブランチとして提供されています。**
+**All future development, including new features and updates, will be delivered through the Box core SDKs. The standalone generated artifact was introduced in the version `v10` of the Box core SDKs.**
 
 詳細については、[SDKのバージョン戦略に関するドキュメント][versioning]を参照してください。
 

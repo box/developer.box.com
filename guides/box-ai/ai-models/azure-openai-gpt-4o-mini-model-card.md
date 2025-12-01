@@ -1,5 +1,5 @@
 ---
-rank: 8
+rank: 9
 related_guides:
   - box-ai/ai-tutorials/ask-questions
   - box-ai/ai-tutorials/generate-text
@@ -20,15 +20,15 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card.md
 fullyTranslated: true
 ---
-# Azure OpenAI GPT-4o Mini
+# Azure OpenAI GPT-4o mini
 
-**Azure OpenAI GPT-4o Mini**は、軽量のタスクを処理するように設計されたマルチモーダルモデルです。
+**Azure OpenAI GPT-4o mini** is a multimodal model designed to handle lightweight tasks.
 
 ## モデルの詳細
 
 | 項目            | 値                            | 説明                                                                                 |
 | ------------- | ---------------------------- | ---------------------------------------------------------------------------------- |
-| モデル名          | **GPT-4o Mini**              | モデルの名前。                                                                            |
+| モデル名          | **GPT-4o mini**              | モデルの名前。                                                                            |
 | モデルのカテゴリ      | 標準                           | モデルのカテゴリ - 標準またはプレミアム。                                                             |
 | APIモデル名       | `azure__openai__gpt_4o_mini` | [Box AI APIでのモデルの上書き][overrides]に使用されるモデルの名前。APIを動作させるには、ユーザーがこの名前を正確に指定する必要があります。 |
 | ホスティングレイヤー    | **Microsoft Azure**          | LLMを安全にホストする、信頼できる組織。                                                              |

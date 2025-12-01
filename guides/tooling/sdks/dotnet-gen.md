@@ -38,6 +38,6 @@ Boxの次世代SDKからBoxコアSDK `v10`への切り替え方法について�
 
 [versioning]: g://tooling/sdks/sdk-versioning
 
-[sdk-branch]: https://github.com/box/box-windows-sdk-v2/tree/sdk-gen
+[sdk-branch]: https://github.com/box/box-windows-sdk-v2/tree/main
 
-[migration]: https://github.com/box/box-windows-sdk-v2/blob/sdk-gen/migration-guides/from-dotnet-sdk-gen-v1-to-box-windows-sdk.md
+[migration]: https://github.com/box/box-windows-sdk-v2/blob/main/migration-guides/from-dotnet-sdk-gen-v1-to-box-windows-sdk.md

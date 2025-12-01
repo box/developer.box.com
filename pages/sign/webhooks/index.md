@@ -25,7 +25,7 @@ Sign Webhookを使用すると、Box Signの署名リクエストに伴って発
 
 署名リクエストが非同期処理で、署名者はいつでも (場合によってはアプリケーション外部でも) 署名リクエストを操作できるので、これは特に重要になります。
 
-## Sign関連のイベント
+## Sign-related events
 
 WebhookをトリガーできるBox Sign関連のイベントがあります。Boxイベントの大半と同様、リスナーはフォルダレベルまたはドキュメントレベルで設定されます。
 
@@ -37,6 +37,6 @@ WebhookをトリガーできるBox Sign関連のイベントがあります。Bo
 * `SIGN_REQUEST.DECLINED`: 署名リクエストが拒否された。
 * `SIGN_REQUEST.EXPIRED`: 署名リクエストの有効期限が切れた。
 * `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED`: 署名者のメールが差し戻された。
-* `SIGN_REQUEST.SIGNER_SIGNED`: 署名リクエストが署名された。
+* `SIGN_REQUEST.SIGNER_SIGNED`, when the signature request is signed by a particular signer.
 * `SIGN_REQUEST.SIGNATURE_REQUESTED`: 署名が署名者にリクエストされた。
 * `SIGN_REQUEST.ERROR_FINALIZING`: 署名リクエストを処理できなかった。

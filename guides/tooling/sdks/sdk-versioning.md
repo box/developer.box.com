@@ -101,7 +101,7 @@ BoxコアSDKと次世代SDKの両方を利用している既存のアプリケ�
 
 日本時間2025年9月18日をもって、Boxの次世代SDKは、個別のアーティファクトとしてサポートされなくなりました。既存のコードは、変更しなくても引き続き動作します。Boxの次世代SDKをベースにしたアプリケーションは影響なく引き続きご利用いただけますが、新機能、更新、バグ修正は提供されなくなります。
 
-**新機能や更新を含む、今後の開発はすべて、BoxコアSDKを通じて提供されます。スタンドアロンの生成されたアーティファクトは、BoxコアSDKのバージョン`v10`で導入されました。これは、現在、個別のブランチとして提供されています。**
+**All future development, including new features and updates, will be delivered through the Box core SDKs. The standalone generated artifact was introduced in the version `v10` of the Box core SDKs.**
 
 | リポジトリ名                   | アーティファクト名                | 注                                                         |
 | ------------------------ | ------------------------ | --------------------------------------------------------- |
@@ -155,15 +155,15 @@ Boxの次世代SDKからBoxコアSDK `v10`以上に移行するには、以下�
 
 [ios-repo]: https://github.com/box/box-ios-sdk
 
-[java-v10]: https://github.com/box/box-java-sdk/tree/sdk-gen
+[java-v10]: https://github.com/box/box-java-sdk/tree/main
 
-[ios-v10]: https://github.com/box/box-ios-sdk/tree/sdk-gen
+[ios-v10]: https://github.com/box/box-ios-sdk/tree/main
 
-[node-v10]: https://github.com/box/box-node-sdk/tree/sdk-gen
+[node-v10]: https://github.com/box/box-node-sdk/tree/main
 
-[python-v10]: https://github.com/box/box-python-sdk/tree/sdk-gen
+[python-v10]: https://github.com/box/box-python-sdk/tree/main
 
-[windows-v10]: https://github.com/box/box-windows-sdk-v2/tree/sdk-gen
+[windows-v10]: https://github.com/box/box-windows-sdk-v2/tree/main
 
 [python-combined]: https://github.com/box/box-python-sdk/tree/combined-sdk
 

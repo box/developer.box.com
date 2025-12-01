@@ -1,5 +1,5 @@
 ---
-rank: 6
+rank: 7
 related_guides:
   - box-ai/ai-tutorials/ask-questions
   - box-ai/ai-tutorials/generate-text
@@ -20,9 +20,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card.md
 fullyTranslated: true
 ---
-# Azure OpenAI GPT-4.1 Mini
+# Azure OpenAI GPT-4.1 mini
 
-**Azure OpenAI GPT-4.1 Mini**は、軽量のタスクを処理するように設計されたマルチモーダルモデルです。
+**Azure OpenAI GPT-4.1 mini** is a multimodal model designed to handle lightweight tasks.
 
 ## モデルの詳細
 

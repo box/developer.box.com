@@ -40,7 +40,7 @@ fullyTranslated: true
 
 ## 非公開フォルダへのサブフォルダの移動
 
-コラボレーションサブフォルダを非公開サブフォルダに移動しようとすると、[`cannot_make_collaborated_subfolder_private`](../../api-calls/permissions-and-errors/common-errors.md#400-bad-request)エラーが発生します。そのような場合は、次のようにリクエストに`owned_by.id`パラメータを設定し、そのフォルダが属しているユーザーのIDを指定します。
+コラボレーションサブフォルダを非公開サブフォルダに移動しようとすると、[`cannot_make_collaborated_subfolder_private`](g://api-calls/permissions-and-errors/common-errors/#400-bad-request)エラーが発生します。そのような場合は、次のようにリクエストに`owned_by.id`パラメータを設定し、そのフォルダが属しているユーザーのIDを指定します。
 
 <Samples id="put_folders_id" variant="move_private">
 

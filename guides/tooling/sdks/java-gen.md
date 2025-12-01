@@ -38,6 +38,6 @@ Boxの次世代SDKからBoxコアSDK `v10`への切り替え方法について�
 
 [versioning]: g://tooling/sdks/sdk-versioning
 
-[sdk-branch]: https://github.com/box/box-java-sdk/tree/sdk-gen
+[sdk-branch]: https://github.com/box/box-java-sdk/tree/main
 
-[migration]: https://github.com/box/box-java-sdk/blob/sdk-gen/migration-guides/from-box-java-sdk-gen-v0-to-box-java-sdk.md
+[migration]: https://github.com/box/box-java-sdk/blob/main/migration-guides/from-box-java-sdk-gen-v0-to-box-java-sdk.md

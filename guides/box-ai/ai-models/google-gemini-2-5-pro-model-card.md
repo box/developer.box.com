@@ -15,7 +15,7 @@ total_steps: 30
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
 next_page_id: box-ai/ai-models/google-gemini-2-5-flash-model-card
-previous_page_id: box-ai/ai-models/azure-text-embedding-ada-002-model-card
+previous_page_id: box-ai/ai-models/google-gemini-3-pro-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/google-gemini-2-5-pro-model-card.md
 fullyTranslated: true

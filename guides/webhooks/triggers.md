@@ -54,7 +54,7 @@ fullyTranslated: true
 | `FILE.LOCKED`                          | ファイルがロックされる。                                                | はい         | はい         |
 | `FILE.UNLOCKED`                        | ファイルのロックが解除される。                                             | はい         | はい         |
 | `FILE.RENAMED`                         | ファイル名が変更される。                                                | はい         | はい         |
-| `FOLDER.CREATED`                       | フォルダが作成される                                                  | いいえ        | はい         |
+| `FOLDER.CREATED`                       | A folder is created.                                        | いいえ        | はい         |
 | `FOLDER.RENAMED`                       | フォルダ名が変更される。                                                | いいえ        | はい         |
 | `FOLDER.DOWNLOADED`                    | フォルダがダウンロードされる。                                             | いいえ        | はい         |
 | `FOLDER.RESTORED`                      | フォルダがごみ箱から復元される。                                            | いいえ        | はい         |
@@ -74,6 +74,9 @@ fullyTranslated: true
 | `SIGN_REQUEST.DECLINED`                | 署名リクエストが拒否される。                                              | はい         | はい         |
 | `SIGN_REQUEST.EXPIRED`                 | 署名リクエストの有効期限が切れる。                                           | はい         | はい         |
 | `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED`    | 署名者のメールが差し戻される。                                             | はい         | はい         |
+| `SIGN_REQUEST.SIGNER_SIGNED`           | A sign request is signed by a particular signer.            | はい         | はい         |
+| `SIGN_REQUEST.SIGNATURE_REQUESTED`     | A signature is requested from a signer.                     | はい         | はい         |
+| `SIGN_REQUEST.ERROR_FINALIZING`        | An error occurred while finalizing a sign request.          | はい         | はい         |
 | `WEBHOOK.DELETED`                      | Webhookが削除される。                                              | いいえ        | いいえ        |
 
 <!-- | `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED` | A sign request recipient email notification was not delivered | -->
