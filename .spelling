@@ -300,6 +300,7 @@ invocable
 analytics
 ClientID
 chatbot
+chatbots
 OAuth2
 LLMs
 npm
