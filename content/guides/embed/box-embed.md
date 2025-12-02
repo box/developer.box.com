@@ -11,7 +11,7 @@ alias_paths:
 # Box Embed
 
 Box Embed is a HTML-based framework that allows embedding the entire
-Box Web App experience in a custom-made application. Box Embed provides the ability to upload, search, comment, share, tag, and edit files using Box Edit.
+Box Web App experience in a custom-made application. Box Embed provides the ability to upload, search, comment, share, tag, and edit files using Box Edit. You can also embed Box Hubs AI Chat for a focused chatbot experience.
 
 ## Before you start
 
@@ -33,8 +33,12 @@ To fetch the Box Embed widget code from the Box web app, perform the following s
 ### Hubs
 
 1. Navigate to the chosen Hub. 
-2. Click on the ellipsis menu in the top right corner. 
+2. Click on the ellipsis menu in the upper-right corner. 
 3. Click **Embed Hub**.
+
+<Message type='notice'>
+You can also embed only the AI chat interface from a Box Hub. Users can ask questions and get AI-powered answers based on the hub's files, without accessing navigation or file browsing features. For more information, see the [Box Hubs AI Chat embedding][6] section.
+</Message>
 
 ### Notes
 
@@ -54,9 +58,14 @@ To fetch the Box Embed widget code from the Box web app, perform the following s
 
 In the next step, configure the parameters of an embeddable element.
 
-| Files | Folders  | Hubs  | Notes | Apps | 
-|----------|----------|------------------------| --- | --- |
-| Size of the widget.| Size of the widget, sorting of the files in a folder, hiding the navigation path and sidebar. | Size of the widget,  hiding the parent navigation path and sidebar. | Size of the widget, skipping cloud game (results in note being in read only mode), hiding notes navigation. | Size of the widget. |
+| Element Type | Configuration Options |
+|--------------|----------------------|
+| Files | Size of the widget. |
+| Folders | Size of the widget, sorting of the files in a folder, hiding the navigation path and sidebar. |
+| Hubs | Size of the widget, hiding the parent navigation path and sidebar. |
+| Hubs AI Chat | Chat mode: button or widget. |
+| Notes | Size of the widget, skipping cloud game (results in note being in read only mode), hiding notes navigation. |
+| Apps | Size of the widget. |
 
 <ImageFrame border>
   ![Box Embed Configuration](./embed-configuration.png)
@@ -160,6 +169,41 @@ within an `<iframe>`:
 * `mozallowfullscreen`
 * `oallowfullscreen`
 * `msallowfullscreen`
+
+## Box Hubs AI Chat embedding
+
+In addition to embedding the complete Box Hub experience, you can embed only the AI-powered chat interface. This mode provides a focused chatbot experience powered by the files within a specific hub, without navigation or content browsing options.
+
+### Prerequisites
+
+To embed a hub in AI Chat mode:
+
+* The hub must have Box AI enabled.
+* Users must be authenticated to interact with the chatbot.
+* Users need at least Viewer [permissions][5] on the hub.
+
+### Creating an AI Chat embed
+
+1. Navigate to the hub that will serve as the knowledge source for the AI Chat.
+2. Click the ellipsis menu in the upper-right corner.
+3. Click **Embed Hub**.
+4. Select the **Hub AI Chat** tab.
+5. Select chat mode:
+
+    * **Chat button**: The AI chat widget opens after the user clicks the button.
+    * **Chat widget**: The AI chat widget is embedded directly on page load.
+
+6. Copy the embed code.
+
+### Parameters
+
+The AI Chat embed mode supports the following URL parameters:
+
+| Parameter | Description |
+|-----------|-------------|
+| `hub-id` | The ID of the hub that powers the chatbot. |
+| `custom-box-domain` | For Box instances with custom domains. |
+| `button-text` | Custom text to display on the chat button (chat button mode only). |
 
 ## Expiring embed links
 
@@ -278,3 +322,4 @@ and **print** options might not show in mobile browsers.
 [4]: e://put-folders-id--add-shared-link
 [5]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
 [cloud-game]: https://support.box.com/hc/en-us/articles/360043691034-How-Does-Box-Prevent-Clickjacking
+[6]: g://embed/box-embed/#box-hubs-ai-chat-embedding
