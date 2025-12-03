@@ -244,7 +244,6 @@ When using the **Chat widget** mode, the generated `iframe` supports the followi
 |-----------|----------|-------------|
 | `hub-id` | Yes | The ID of the hub that powers the chatbot. |
 | `custom-box-domain` | No | For Box instances with custom domains. |
-| `button-text` | No | Custom text to display on the chat button (chat button mode only). |
 
 ## Expiring embed links
 
