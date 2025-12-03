@@ -19,7 +19,7 @@ There is no need to write any code, as these actions are executed through a set
 of [commands][commands].
 
 <div style="position: relative; width: 100%; padding-bottom: 56.25%">
-<iframe src="https://www.youtube.com/embed/whxT3Bdx3E0" 
+<iframe src="https://www.youtube-nocookie.com/embed/whxT3Bdx3E0" 
         title="Get started using the Box CLI in less than five minutes" frameborder="0" allowfullscreen
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         style="position: absolute; width: 100%; height: 100%;">
