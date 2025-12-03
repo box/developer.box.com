@@ -196,7 +196,7 @@ To embed a hub in AI Chat mode:
 6. Copy the embed code.
 
 <Message type='notice'>
-If you experience issues with the Box Hubs AI Chat embedding, regenerate the embed code to get the latest version by repeating steps 1-6 above.
+If you experience issues with the Box Hubs AI Chat embedding, regenerate the embed code to get the latest version of the script by repeating steps 1-6 above.
 </Message>
 
 ### Chat button
@@ -216,17 +216,29 @@ The **Chat button** mode supports the following parameters:
 | `data-button-text` | No | Custom text to display on the chat button. Default: `Box AI`. This value is also used for the button's area label for accessibility. |
 | `data-shared-link` | No | Optional shared link for hub access. If not provided, the chat loads only for users who are collaborators on the hub. |
 
+The following example shows a fully configured chat button with all available parameters:
+
+```html
+<script 
+  src="https://cdn01.boxcdn.net/embeddable-ai-chat-script/2.7.0/box_integrations_ai_chat_button.js" 
+  data-hub-id="123456789" 
+  data-custom-box-domain="mycompanydomain.app.box.com" 
+  data-shared-link="abcdefghijklmnopqrst123" 
+  data-button-text="Ask our HR chatbot">
+</script>
+```
+
 ### Chat widget
 
 In **Chat widget** mode, the AI chat widget is embedded directly on page load. It is generated as an `iframe` and displays the full chat interface immediately.
 
-<ImageFrame center width="400" border>
+<ImageFrame shadow>
   ![Chat widget mode](./chat-widget.png)
 </ImageFrame>
 
 #### Chat widget parameters
 
-The **Chat button** mode supports the following parameters:
+When using the **Chat widget** mode, the generated `iframe` supports the following AI Chat-specific parameters in addition to standard `iframe` attributes:
 
 | Parameter | Required | Description |
 |-----------|----------|-------------|
