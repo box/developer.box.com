@@ -28,7 +28,7 @@ Box Web App experience in a custom-made application. Box Embed provides the abil
 
 To create a widget, you need to:
 
-* Set an embeddable element, such as a **folder**, **file**, **Hub**, **note**, or **app** for sharing. 
+* Set an embeddable element, such as a folder, file, hub, note, or app for sharing. 
 * Have at least **Viewer** [permissions][5].
 
 ## Using web app
@@ -43,25 +43,25 @@ To fetch the Box Embed widget code from the Box web app, perform the following s
 
 ### Hubs
 
-1. Navigate to the chosen Hub. 
+1. Navigate to the chosen hub. 
 2. Click on the ellipsis menu in the upper-right corner. 
 3. Click **Embed Hub**.
 
 <Message type='notice'>
 
-You can also embed only the AI chat interface from a Box Hub. Users can ask questions and get AI-powered answers based on the hub's files, without accessing navigation or file browsing features. For more information, see the [Box Hubs AI Chat embedding][6] section.
+You can also embed only the AI chat interface from a hub. Users can ask questions and get AI-powered answers based on the hub's files, without accessing navigation or file browsing features. For more information, see the [Box Hubs AI Chat embedding][6] section.
 
 </Message>
 
 ### Notes
 
-1. Navigate to the chosen Box Note.
+1. Navigate to the chosen note.
 2. Click on the ellipsis menu.
 3. Click **Embed Box Note**.
 
 ### Apps
 
-1. Navigate to the chosen Box App or Box App View.
+1. Navigate to the chosen app or Box App View.
 2. Click on the ellipsis menu.
 3. Click **Embed**.
 
@@ -162,8 +162,8 @@ You can also set the page to Root Folder/All Files page. Set the URL to
 Next, you will want to choose your view customization options. The following is
 a list of optional parameters you can configure.
 
-|                       |                                                                                              |
-| --------------------- | -------------------------------------------------------------------------------------------- |
+|    |    |
+| -- | -- |
 | `hideHubsGallery` | Hide or show navigation chevron button to go back to Hubs gallery. Can be `true` or `false` (default).                         |
 | `hideNavigationControls` | Hide or show navigation controls in Box Notes.|
 | `showItemFeedActions` | Hide or show file comments or tasks. Can be `true` (default) or `false`.                         |
@@ -213,20 +213,57 @@ To embed a hub in AI Chat mode:
 4. Select the **Hub AI Chat** tab.
 5. Select chat mode:
 
-    * **Chat button**: The AI chat widget opens after the user clicks the button.
-    * **Chat widget**: The AI chat widget is embedded directly on page load.
+    * [Chat button][7]
+    * [Chat widget][8]
 
 6. Copy the embed code.
 
-### Parameters
+<Message type='notice'>
 
-The AI Chat embed mode supports the following URL parameters:
+If you experience issues with the Box Hubs AI Chat embedding, regenerate the embed code to get the latest version by repeating steps 1-6 above.
 
-| Parameter | Description |
-|-----------|-------------|
-| `hub-id` | The ID of the hub that powers the chatbot. |
-| `custom-box-domain` | For Box instances with custom domains. |
-| `button-text` | Custom text to display on the chat button (chat button mode only). |
+</Message>
+
+### Chat button
+
+In **Chat button** mode, the AI chat widget opens after the user clicks the button. It is generated as a Box-hosted `script` and displays a floating chat button on your page.
+
+<ImageFrame border>
+
+![Chat button mode](./chat-button.png)
+
+</ImageFrame>
+
+#### Chat button parameters
+
+The **Chat button** mode supports the following parameters:
+
+| Parameter | Required | Description |
+|-----------|----------|-------------|
+| `data-hub-id` | Yes | The ID of the hub that powers the chatbot. |
+| `data-custom-box-domain` | No | For Box instances with custom domains. Default: `app.box.com`. Example: `mycompanydomain.app.box.com`. |
+| `data-button-text` | No | Custom text to display on the chat button. Default: `Box AI`. This value is also used for the button's area label for accessibility. |
+| `data-shared-link` | No | Optional shared link for hub access. If not provided, the chat loads only for users who are collaborators on the hub. |
+
+### Chat widget
+
+In **Chat widget** mode, the AI chat widget is embedded directly on page load. It is generated as an `iframe` and displays the full chat interface immediately.
+
+<ImageFrame border>
+
+![Chat widget mode](./chat-widget.png)
+
+</ImageFrame>
+
+#### Chat widget parameters
+
+The **Chat button** mode supports the following parameters:
+
+| Parameter | Required | Description |
+|-----------|----------|-------------|
+| `hub-id` | Yes | The ID of the hub that powers the chatbot. |
+| `custom-box-domain` | No | For Box instances with custom domains. |
+| `button-text` | No | Custom text to display on the chat button (chat button mode only). |
 
 ## Expiring embed links
 
@@ -298,9 +335,9 @@ would look something like this.
 https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
 ```
 
-|                   |                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `showDownload`    | Shows the download button in the embedded header bar if the viewer has permissions to download the file. Document file types will also show a print button since print and download are governed by the same permissions. Defaults to `false`.                                                                                                                                                                                              |
+|     |     |
+| --- | --- |
+| `showDownload` | Shows the download button in the embedded header bar if the viewer has permissions to download the file. Document file types will also show a print button since print and download are governed by the same permissions. Defaults to `false`. |
 | `showAnnotations` | Enables users with permission Preview and above to annotate document and image previews. Also shows annotations that are already on the document. To learn more about the file types that annotations is available on as well as the types of annotations, you can refer to our Annotations page. Annotations are available today on web browsers only. On mobile browsers, users will be able to view annotations but not create new ones. |
 
 ## Cloud game
@@ -349,3 +386,5 @@ and **print** options might not show in mobile browsers.
 [5]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
 [cloud-game]: https://support.box.com/hc/en-us/articles/360043691034-How-Does-Box-Prevent-Clickjacking
 [6]: g://embed/box-embed/#box-hubs-ai-chat-embedding
+[7]: g://embed/box-embed/#chat-button
+[8]: g://embed/box-embed/#chat-widget
