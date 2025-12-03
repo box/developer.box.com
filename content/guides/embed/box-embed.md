@@ -203,9 +203,8 @@ If you experience issues with the Box Hubs AI Chat embedding, regenerate the emb
 
 In **Chat button** mode, the AI chat widget opens after the user clicks the button. It is generated as a Box-hosted `script` and displays a floating chat button on your page.
 
-<ImageFrame border>
   ![Chat button mode](./chat-button.png)
-</ImageFrame>
+
 
 #### Chat button parameters
 
@@ -222,7 +221,7 @@ The **Chat button** mode supports the following parameters:
 
 In **Chat widget** mode, the AI chat widget is embedded directly on page load. It is generated as an `iframe` and displays the full chat interface immediately.
 
-<ImageFrame border>
+<ImageFrame center width="400" border>
   ![Chat widget mode](./chat-widget.png)
 </ImageFrame>
 
