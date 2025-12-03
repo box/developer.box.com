@@ -205,7 +205,6 @@ In **Chat button** mode, the AI chat widget opens after the user clicks the butt
 
   ![Chat button mode](./chat-button.png)
 
-
 #### Chat button parameters
 
 The **Chat button** mode supports the following parameters:
