@@ -35,6 +35,7 @@ Shieldによって生成される可能性があるアラートは以下のと�
 2. 不審なセッション
 3. 異常なダウンロード
 4. 悪意のあるコンテンツ
+5. Ransomware activity (part of Shield Pro)
 
 Shieldの脅威検出アラートイベントはすべて、[Enterprise Event][events] Stream内で生成されます。これらのイベントは標準のイベントオブジェクトスキーマに従い、`event_type`値は`SHIELD_ALERT`に設定されます。
 
@@ -332,6 +333,77 @@ Sessions`値によって識別できます。
     "link": "https://app.box.com/master/shield/alerts/2398",
     "created_at": "2019-12-20T11:37:15-08:00"
   }
+}
+
+```
+
+### Ransomware activity alert
+
+<!--alex ignore-->
+
+A ransomware activity alert is produced when Box Shield identifies suspicious file extensions that may be indicative of a ransomware attack. It can be identified by the Ransomware Activity value within `additional_details.shield_alert.rule_category`.
+
+`additional_details`ペイロードは以下の詳細を示します。
+
+<!--alex enable-->
+
+```json
+{
+  "source": null,
+  "created_by": {
+    "type": "user",
+    "id": "2",
+    "name": "Unknown User",
+    "login": ""
+    },
+    "action_by": null,
+    "created_at": "2025-08-19T10:44:26-07:00",
+    "event_id": "5b508973-0e48-4bc1-80b2-a05b5382eb37",
+    "event_type": "SHIELD_ALERT",
+    "ip_address": "1.2.3.4",
+    "type": "event",
+    "session_id": null,
+    "additional_details": {
+      "shield_alert": {
+        "rule_category": "Ransomware Activity",
+        "rule_id": "1234",
+        "rule_name": "Ransomware Detection",
+        "rule_response_action": null,
+          "risk_score": 100,
+          "alert_summary": {
+          "total_files_affected": 42,
+          "ip_details": [
+            {
+             "ip": "1.2.3.4",
+             "registrant": "Microsoft Corporation",
+             "latitude": "37.5555",
+             "longitude": "-120.6789",
+             "city_name": "San Jose",
+             "region_name": "California",
+             "country_code": "US"
+            }
+           ],
+           "suspicious_file_extensions": [
+            "lockbit"
+           ],
+           "anomaly_period": {
+            "date_range": {
+             "start_date": "2009-02-13T23:31:30Z",
+             "end_date": "2009-02-13T23:31:30Z"
+            }
+          }
+        },
+        "alert_id": 1234,
+        "priority": "medium",
+        "user": {
+         "id": 8167630149,
+         "name": "Some user",
+         "email": "Some@user.com"
+        },
+        "link": "https://app.box.com/master/shield/alerts/1234",
+        "created_at": "2025-08-19T10:44:26-07:00"
+     }
+   }
 }
 
 ```
