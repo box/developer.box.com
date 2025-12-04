@@ -206,3 +206,13 @@ Create and manage Box Hubs for organizing collaborative content and resources ar
 | `get_hub_items` | Gets items (files and folders) associated with a specific hub. |
 | `list_hubs` | Lists all hubs accessible to the authenticated user. |
 | `update_hub` | Updates the title and description of a specific hub. |
+
+### Doc Gen
+
+Automate document generation by using templates with placeholder tags to create customized documents at scale.
+
+| Tool | Description |
+| ---- | ---------- |
+| `get_docgen_template_by_id` | Retrieves details about a Doc Gen template. |
+| `list_docgen_templates` | Lists all Box Doc Gen templates available to the authenticated user.  |
+| `create_docgen_batch` | Generates documents from a Doc Gen template by filling placeholder tags with provided data. |
