@@ -22,7 +22,7 @@ fullyTranslated: true
 ---
 # Azure OpenAI GPT-4o mini
 
-**Azure OpenAI GPT-4o mini** is a multimodal model designed to handle lightweight tasks.
+**Azure OpenAI GPT-4o mini**は、軽量のタスクを処理するように設計されたマルチモーダルモデルです。
 
 ## モデルの詳細
 

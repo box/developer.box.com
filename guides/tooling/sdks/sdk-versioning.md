@@ -101,7 +101,7 @@ BoxコアSDKと次世代SDKの両方を利用している既存のアプリケ�
 
 日本時間2025年9月18日をもって、Boxの次世代SDKは、個別のアーティファクトとしてサポートされなくなりました。既存のコードは、変更しなくても引き続き動作します。Boxの次世代SDKをベースにしたアプリケーションは影響なく引き続きご利用いただけますが、新機能、更新、バグ修正は提供されなくなります。
 
-**All future development, including new features and updates, will be delivered through the Box core SDKs. The standalone generated artifact was introduced in the version `v10` of the Box core SDKs.**
+**新機能や更新を含む、今後の開発はすべて、BoxコアSDKを通じて提供されます。スタンドアロンの生成されたアーティファクトは、BoxコアSDKのバージョン`v10`で導入されました。**
 
 | リポジトリ名                   | アーティファクト名                | 注                                                         |
 | ------------------------ | ------------------------ | --------------------------------------------------------- |

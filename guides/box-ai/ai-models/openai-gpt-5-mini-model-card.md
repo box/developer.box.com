@@ -22,7 +22,7 @@ fullyTranslated: true
 ---
 # OpenAI GPT-5 mini
 
-**OpenAI GPT-5 mini** is a faster, more cost-efficient version of GPT-5 ideal for well-defined tasks and precise prompts.
+**OpenAI GPT-5 mini**は、明確に定義されたタスクや正確なプロンプトに適している、GPT-5の高速かつコスト効率のよいバージョンです。
 
 ## モデルの詳細
 
@@ -34,7 +34,7 @@ fullyTranslated: true
 | ホスティングレイヤー    | **OpenAI**           | LLMを安全にホストする、信頼できる組織。                                                              |
 | モデルプロバイダ      | **OpenAI**           | このモデルを提供する組織。                                                                      |
 | リリース日         | **2025年8月7日**        | モデルのリリース日。                                                                         |
-| ナレッジカットオフ日    | **May 31st, 2024**   | モデルが情報の更新を取得しなくなった日付。                                                              |
+| ナレッジカットオフ日    | **2024年5月31日**       | モデルが情報の更新を取得しなくなった日付。                                                              |
 | 入力コンテキストウィンドウ | **400,000トークン**      | 入力コンテキストウィンドウでサポートされるトークン数。                                                        |
 | 出力トークンの最大数    | **128,000トークン**      | 1回のリクエストでモデルが生成できるトークン数。                                                           |
 | 経験に基づいたスループット | **指定なし**             | モデルが1秒あたりに生成できるトークン数。                                                              |
@@ -42,7 +42,7 @@ fullyTranslated: true
 
 ## その他のドキュメント
 
-For additional information, see [official OpenAI GPT-5 mini documentation][openai-gpt-5-mini-model].
+詳細については、[OpenAI GPT-5 miniの公式ドキュメント][openai-gpt-5-mini-model]を参照してください。
 
 [openai-gpt-5-mini-model]: https://platform.openai.com/docs/models/gpt-5-mini
 

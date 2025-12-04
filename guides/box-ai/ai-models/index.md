@@ -112,19 +112,19 @@ Box AIには以下のモデルが搭載されています。Box AIと統合さ�
 
 <strong style="background-color: #e8e8e8">
 
-Default for Box AI Advanced Agent for Hubs
+Box AI for Hubsの高度なエージェントのデフォルト
 
 </strong>
 
 <strong style="background-color: #e8e8e8">
 
-Default for Box AI Advanced Agent for Documents
+Box AI for Documentsの高度なエージェントのデフォルト
 
 </strong>
 
 <strong style="background-color: #e8e8e8">
 
-Default for Box AI Advanced Agent for Notes Q&A
+Box AI for Notes Q&Aの高度なエージェントのデフォルト
 
 </strong>
 
@@ -152,7 +152,7 @@ Default for Box AI Advanced Agent for Notes Q&A
 
 <Tile type="gpt" title="openai__gpt_5_mini" href="/guides/box-ai/ai-models/openai-gpt-5-mini-model-card">
 
-A model designed for well-defined tasks and precise prompts.
+明確に定義されたタスクや正確なプロンプト向けに設計されたモデル。
 
 <div>
 
@@ -170,7 +170,7 @@ Box AI for Documentsのデフォルト
 
 <strong style="background-color: #e8e8e8">
 
-Box AI for NotesのQ&Aのデフォルト
+Box AI for Notes Q&Aのデフォルト
 
 </strong>
 
@@ -470,7 +470,7 @@ ISMAP
 
 <strong style="background-color: #e8e8e8">
 
-Default for Box AI Enhanced Extract
+Box AI抽出 (強化) のデフォルト
 
 </strong>
 
@@ -528,7 +528,7 @@ ISMAP
 
 <strong style="background-color: #e8e8e8">
 
-Default for Box AI Standard Extract
+Box AI抽出 (標準) のデフォルト
 
 </strong>
 
@@ -1192,7 +1192,7 @@ Box AIの一部の顧客は、リクエストに応じて追加のAIモデルを
 
 <Tile type="gemini" title="google__gemini_3_pro" href="/guides/box-ai/ai-models/google-gemini-3-pro-model-card">
 
-A natively multimodal model for complex tasks with a 1 million token context window.
+100万トークンのコンテキストウィンドウが備わっている、複雑なタスク向けのネイティブのマルチモーダルモデル。
 
 <div>
 

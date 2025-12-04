@@ -21,7 +21,7 @@ fullyTranslated: true
 
 <Trigger option="postman.downloaded" value="win32,win64,osx,linux64">
 
-[Download the appropriate version for your operating system][downloads]
+[お使いのオペレーティングシステムに適切なバージョンのダウンロード][downloads]
 
 </Trigger>
 

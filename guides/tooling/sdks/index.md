@@ -65,7 +65,7 @@ Boxには、アプリケーションの作成に使用できる一連のSDKが�
 
 Boxでは、業界のベストプラクティスに従って、プログラミング言語ごとにBoxの次世代SDKとBoxコアSDKを1つのパッケージに統合します。これにより、移行作業がさらに容易になり、手動で管理されていたBoxコアSDKを引き続き使用している既存のアプリケーションに新機能をシームレスに追加できるようになります。
 
-**All future development, including new features and updates, will be delivered through the Box core SDKs. The standalone generated artifact was introduced in the version `v10` of the Box core SDKs.**
+**新機能や更新を含む、今後の開発はすべて、BoxコアSDKを通じて提供されます。スタンドアロンの生成されたアーティファクトは、BoxコアSDKのバージョン`v10`で導入されました。**
 
 詳細については、[SDKのバージョン戦略に関するドキュメント][versioning]を参照してください。
 

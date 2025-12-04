@@ -22,7 +22,7 @@ fullyTranslated: true
 ---
 # Google Gemini 3 Pro
 
-**Google Gemini 3 Pro** is a natively multimodal model for complex tasks, which can comprehend vast datasets and solve challenging problems by processing different information sources, including text, audio, images, video, and entire code repositories.
+**Google Gemini 3 Pro**は、複雑なタスク向けのネイティブのマルチモーダルモデルです。このモデルは、テキスト、音声、画像、動画、コードリポジトリ全体を含むさまざまな情報源を処理することにより、膨大なデータセットを理解して困難な問題を解決できます。
 
 ## モデルの詳細
 
@@ -33,7 +33,7 @@ fullyTranslated: true
 | APIモデル名       | `google__gemini_3_pro`  | [Box AI APIでのモデルの上書き][overrides]に使用されるモデルの名前。APIを動作させるには、ユーザーがこの名前を正確に指定する必要があります。 |
 | ホスティングレイヤー    | **Google**              | LLMを安全にホストする、信頼できる組織。                                                              |
 | モデルプロバイダ      | **Google**              | このモデルを提供する組織。                                                                      |
-| リリース日         | **November 18th, 2025** | モデルのリリース日。                                                                         |
+| リリース日         | **2025年11月18日**         | モデルのリリース日。                                                                         |
 | ナレッジカットオフ日    | **2025年1月**             | モデルが情報の更新を取得しなくなった日付。                                                              |
 | 入力コンテキストウィンドウ | **100万トークン**            | 入力コンテキストウィンドウでサポートされるトークン数。                                                        |
 | 出力トークンの最大数    | **65,000トークン**          | 1回のリクエストでモデルが生成できるトークン数。                                                           |
@@ -42,7 +42,7 @@ fullyTranslated: true
 
 ## その他のドキュメント
 
-For additional information, see [official Google Gemini 3 Pro documentation][vertex-ai-gemini-3-pro].
+詳細については、[Google Gemini 3 Proの公式ドキュメント][vertex-ai-gemini-3-pro]を参照してください。
 
 [vertex-ai-gemini-3-pro]: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/3-pro
 
