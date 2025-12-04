@@ -244,7 +244,7 @@ In **Chat widget** mode, the AI chat widget is embedded directly on the page usi
 |-----------|-------------|
 | `hubId` | The ID of the hub that powers the chatbot. |
 | `sharedLink` | The shared link hash for hub access. If not provided, the chat loads only for users who are collaborators on the hub. |
-| `showCloseButton` | Whether to show the [X (close) button][9]. Set to `false` if you want to implement custom opening/closing logic. Default: `true`. |
+| `showCloseButton` | Whether to show the [X (close) button][9] in the chat interface. When set to `true`, the close button is displayed. When a user clicks this button, Box generates an event that is sent to the parent web application, enabling you to implement custom closing logic based on the user interaction. |
 
 The following example shows a fully configured chat widget with all available parameters:
 
