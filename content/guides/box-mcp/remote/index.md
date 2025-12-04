@@ -231,6 +231,12 @@ Create and manage Box Hubs for organizing collaborative content and resources ar
 | `list_hubs` | Lists all hubs accessible to the authenticated user. |
 | `update_hub` | Updates the title and description of a specific hub. |
 
-## Feedback
+### Doc Gen
 
-To share feedback or ask questions about Box MCP server, visit the [Box AI API section](https://community.box.com/box-ai-api-8) of the Box Developer Community forum.
+Automate document generation by using templates with placeholder tags to create customized documents at scale.
+
+| Tool | Description |
+| ---- | ---------- |
+| `get_docgen_template_by_id` | Retrieves details about a Doc Gen template. |
+| `list_docgen_templates` | Lists all Box Doc Gen templates available to the authenticated user.  |
+| `create_docgen_batch` | Generates documents from a Doc Gen template by filling placeholder tags with provided data. |
