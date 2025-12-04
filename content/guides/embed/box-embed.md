@@ -176,11 +176,11 @@ In addition to embedding the complete Box Hub experience, you can embed only the
 
 ### Prerequisites
 
-To embed a hub in AI Chat mode:
+To access a hub embedded in AI Chat mode:
 
-* The hub must have Box AI enabled.
-* Users must be authenticated to interact with the chatbot.
-* Users need at least Viewer [permissions][5] on the hub.
+* The enterprise that owns the hub must have Box AI for Hubs enabled.
+* The user must be authenticated and have Box AI for Hubs enabled at their enterprise.
+* The user needs at least Viewer [permissions][5] on the hub.
 
 ### Creating an AI Chat embed
 
@@ -238,12 +238,63 @@ In **Chat widget** mode, the AI chat widget is embedded directly on page load. I
 
 #### Chat widget parameters
 
-When using the **Chat widget** mode, the generated `iframe` supports the following AI Chat-specific parameters in addition to standard `iframe` attributes:
+In **Chat widget** mode, the AI chat widget is embedded directly on the page using an `iframe`. You can customize the behavior by adding URL parameters to the iframe's `src` attribute:
 
-| Parameter | Required | Description |
-|-----------|----------|-------------|
-| `hub-id` | Yes | The ID of the hub that powers the chatbot. |
-| `custom-box-domain` | No | For Box instances with custom domains. |
+| Parameter | Description |
+|-----------|-------------|
+| `hubId` | The ID of the hub that powers the chatbot. |
+| `sharedLink` | The shared link hash for hub access. If not provided, the chat loads only for users who are collaborators on the hub. |
+| `showCloseButton` | Whether to show the [X (close) button][9]. Set to `false` if you want to implement custom opening/closing logic. Default: `true`. |
+
+The following example shows a fully configured chat widget with all available parameters:
+
+```html
+<iframe 
+  src="https://yourcompanydomain.app.box.com/ai-chat?hubId=123456789&sharedLink=abcdefghijklmnop123&showCloseButton=false" 
+  width="800" 
+  height="550" 
+  frameBorder="0" 
+  allow="local-network-access; clipboard-read; clipboard-write;" 
+  allowfullscreen 
+  webkitallowfullscreen 
+  msallowfullscreen>
+</iframe>
+```
+
+#### Using the close button
+
+When embedding the Box AI chat directly via an `iframe` (without using the provided script), you can enable a close button within the chat interface that communicates with your parent application via `postMessage`.
+
+##### Enabling the close button
+
+To display a close button (✕) in the corner of the iframe, add the `showCloseButton=true` query parameter to your `iframe` URL as follows:
+`https://app.box.com/ai-chat?hubId=YOUR_HUB_ID&showCloseButton=true`
+
+##### How it works
+
+1. When `showCloseButton=true` is set, an X button appears in the corner of the chat iframe.
+2. When a user clicks this button, the iframe sends a `postMessage` event to the parent window.
+3. The event contains `event.data.type` set to `"BOX_AI_CHAT_CLOSE"`.
+4. Your hosting application listens for this event and handles the closing logic.
+
+##### Implementation example
+
+```javascript
+window.addEventListener('message', (event) => {
+    // Optional: validate origin is from Box for additional security
+    // if (event.origin !== 'https://app.box.com') return;
+
+    if (event.data && event.data.type === 'BOX_AI_CHAT_CLOSE') {
+        closeChat();
+    }
+});
+```
+
+##### Event reference
+
+| Property | Value | Description |
+|----------|-------|-------------|
+| `event.data.type` | `"BOX_AI_CHAT_CLOSE"` | Indicates the user clicked the close button in the chat iframe. |
 
 ## Expiring embed links
 
@@ -365,3 +416,4 @@ and **print** options might not show in mobile browsers.
 [6]: g://embed/box-embed/#box-hubs-ai-chat-embedding
 [7]: g://embed/box-embed/#chat-button
 [8]: g://embed/box-embed/#chat-widget
+[9]: g://embed/box-embed/#using-the-close-button
