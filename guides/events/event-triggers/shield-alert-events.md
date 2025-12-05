@@ -35,7 +35,7 @@ Shieldによって生成される可能性があるアラートは以下のと�
 2. 不審なセッション
 3. 異常なダウンロード
 4. 悪意のあるコンテンツ
-5. Ransomware activity (part of Shield Pro)
+5. ランサムウェアアクティビティ (Shield Proの一部)
 
 Shieldの脅威検出アラートイベントはすべて、[Enterprise Event][events] Stream内で生成されます。これらのイベントは標準のイベントオブジェクトスキーマに従い、`event_type`値は`SHIELD_ALERT`に設定されます。
 
@@ -337,11 +337,11 @@ Sessions`値によって識別できます。
 
 ```
 
-### Ransomware activity alert
+### ランサムウェアアクティビティアラート
 
 <!--alex ignore-->
 
-A ransomware activity alert is produced when Box Shield identifies suspicious file extensions that may be indicative of a ransomware attack. It can be identified by the Ransomware Activity value within `additional_details.shield_alert.rule_category`.
+ランサムウェアアクティビティアラートは、ランサムウェア攻撃を示す可能性がある不審なファイル拡張子がBox Shieldで識別された場合に生成されます。これは、`additional_details.shield_alert.rule_category`内のRansomware Activity値によって識別できます。
 
 `additional_details`ペイロードは以下の詳細を示します。
 

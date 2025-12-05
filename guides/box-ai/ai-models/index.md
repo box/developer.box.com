@@ -112,19 +112,19 @@ Box AIには以下のモデルが搭載されています。Box AIと統合さ�
 
 <strong style="background-color: #e8e8e8">
 
-Box AI for Hubsの高度なエージェントのデフォルト
+Box AI for HubsのBox AI Advancedのデフォルト
 
 </strong>
 
 <strong style="background-color: #e8e8e8">
 
-Box AI for Documentsの高度なエージェントのデフォルト
+Box AI for DocumentsのBox AI Advancedのデフォルト
 
 </strong>
 
 <strong style="background-color: #e8e8e8">
 
-Box AI for Notes Q&Aの高度なエージェントのデフォルト
+Box AI for Notes Q&AのBox AI Advancedのデフォルト
 
 </strong>
 
@@ -470,7 +470,7 @@ ISMAP
 
 <strong style="background-color: #e8e8e8">
 
-Box AI抽出 (強化) のデフォルト
+Box AI抽出エージェント (強化) のデフォルト
 
 </strong>
 
@@ -528,7 +528,7 @@ ISMAP
 
 <strong style="background-color: #e8e8e8">
 
-Box AI抽出 (標準) のデフォルト
+Box AI抽出エージェント (標準) のデフォルト
 
 </strong>
 
