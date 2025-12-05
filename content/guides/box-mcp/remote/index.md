@@ -244,3 +244,7 @@ Automate document generation by using templates with placeholder tags to create 
 | `get_docgen_template_by_id` | Retrieves details about a Doc Gen template. |
 | `list_docgen_templates` | Lists all Box Doc Gen templates available to the authenticated user.  |
 | `create_docgen_batch` | Generates documents from a Doc Gen template by filling placeholder tags with provided data. |
+
+## Feedback
+
+To share feedback or ask questions about Box MCP server, visit the [Box AI API thread](https://community.box.com/box-ai-api-8) of the Box Developer Community forum.
