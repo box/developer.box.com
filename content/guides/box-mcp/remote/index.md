@@ -142,7 +142,7 @@ Box enables agentic enterprise support with OpenAI AgentKit. For more informatio
 
 ### Windows
 
-Box MCP server is available for Windows. For more information, visit the [Windows Agentic page](https://developer.microsoft.com/en-us/windows/agentic/).
+Box MCP server is available for Windows. For more information, visit the [Windows Agentic](https://developer.microsoft.com/en-us/windows/agentic/) and [MCP servers on Windows overview](https://learn.microsoft.com/en-us/windows/ai/mcp/servers/mcp-server-overview) pages.
 
 <Message type='notice'>
 
