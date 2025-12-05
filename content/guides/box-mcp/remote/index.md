@@ -170,6 +170,7 @@ Manage files and folders, perform searches, and handle content operations across
 | Tool | Description|
 | ---- | ---------- |
 | `search_files_keyword`| Searches for files using keywords. Supports metadata filters, file extension filtering, and field selection.|
+| `search_files_metadata` | Searches for files using SQL-like metadata queries. Supports complex filtering with parameters, field selection, and folder scoping. |
 | `search_folders_by_name`| Searches for folders within Box by name using keyword matching.|
 
 ### Box AI
@@ -183,6 +184,7 @@ Use AI-powered tools to ask questions, extract insights, and analyze content acr
 | `ai_qa_multi_file`| Asks a question to multiple files using Box AI.|
 | `ai_extract_freeform`| Extracts metadata from files using Box AI in freeform format without requiring predefined template structures.|
 | `ai_extract_structured`| Extracts structured metadata from files using Box AI based on either custom fields definition or an existing metadata template.|
+| `ai_extract_structured_from_fields_enhanced` | Extracts structured metadata from files using Box AI Enhanced Extract Agent based on custom field definitions. |
 
 ### Collaboration
 
@@ -191,6 +193,7 @@ Enable team collaboration through comments, shared links, and collaboration mana
 | Tool | Description|
 | ---- | ---------- |
 | `create_file_comment` | Creates a new comment on a specific file. |
+| `list_item_collaborations` | List all existing collaborations on an item. |
 | `list_file_comments` | Lists all comments on a specific file. |
 | `list_tasks` | Lists all tasks associated with a specific file, including status, message, and due dates. |
 
@@ -201,6 +204,7 @@ Create and manage Box Hubs for organizing collaborative content and resources ar
 | Tool | Description |
 | ---- | ---------- |
 | `add_items_to_hub` | Adds files, folders, or web links to a specific hub. |
+| `copy_hub` | Creates a copy of an existing Box Hub with all its structure and settings. The original hub remains unmodified. |
 | `create_hub` | Creates a new hub. |
 | `get_hub_details` | Retrieves detailed information about a specific hub. |
 | `get_hub_items` | Gets items (files and folders) associated with a specific hub. |
