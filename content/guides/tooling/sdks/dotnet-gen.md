@@ -1,9 +1,6 @@
 ---
-rank: 1
+rank: 9
 related_endpoints: []
-related_guides:
- - authentication/jwt
- - authentication/oauth2
 related_pages:
  - sdks-and-tools
 required_guides: []
@@ -11,23 +8,20 @@ related_resources: []
 alias_paths: []
 ---
 
-# Install .NET SDK (Generated)
+# Deprecated Box Next Gen .NET SDK
 
-You can use Box .NET SDK to call Box APIs in a .NET
-project.
+<Message type='warning'>
+  As of September 17, 2025 Box Next Generation SDKs are no longer supported as separate artifacts.
 
-The SDK is available for both .NET Framework 4.5 and .NET Core 1.0 or
-above. The installation of the SDK depends on the framework used.
+  Don’t worry, your existing code will continue to work without changes. You can still use your applications based on Box Next Generation SDKs with no impact, but you won't receive new features, updates, or bug fixes.
 
-<CTA to="https://github.com/box/box-dotnet-sdk-gen">
-  Learn more about .NET SDK on GitHub
-</CTA>
+  All future development, including new features and updates, will be delivered through the Box core SDKs. The standalone generated artifact was introduced in the version `v10` of the Box core SDKs, and it is currently available as a separate [branch][sdk-branch].
+</Message>
 
-To install the .NET SDK in the .NET framework, run the following command using
-the [Nuget][nuget] package manager.
+Check the [migration guide][migration] to learn how to switch from the Box Next Generation SDK to the Box core SDK `v10`.
 
-```shell
-PM> Install-Package Box.Sdk.Gen
-```
+For more details, see our [SDK versioning strategy document][versioning].
 
-[nuget]: https://www.nuget.org/
+[versioning]: g://tooling/sdks/sdk-versioning
+[sdk-branch]: https://github.com/box/box-windows-sdk-v2/tree/main
+[migration]: https://github.com/box/box-windows-sdk-v2/blob/main/migration-guides/from-dotnet-sdk-gen-v1-to-box-windows-sdk.md

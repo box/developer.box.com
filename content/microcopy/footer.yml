@@ -22,7 +22,7 @@ categories:
         // text: Text for a link to the Platform blog
         text: Developer Blog
         // url: A link to our developer blog
-        url: https://medium.com/box-developer-blog
+        url: https://blog.box.com/category/developer
 
       newsletter:
         // text: Text for a link to the newsletter page
@@ -49,14 +49,14 @@ categories:
         url: https://github.com/box-community
 
       ai_dev_zone:
-        // text: Text for a link to the AI Dev Zone
+        // text: Text for a link to the AI Developer Zone
         text: AI Developer Zone
         // url: Link to the AI Dev Zone
         url: /ai-dev-zone/
 
       sample_code_catalog:
         // text: Text for a link to the sample code catalog
-        text: Community GitHub
+        text: Sample Code Catalog
         // url: Link to the sample code catalog
         url: /sample-code/
 
@@ -66,12 +66,6 @@ categories:
     title: Tooling
 
     links:
-      ts_gen_sdk:
-        // text: Text for link to the TypeScript SDK (Generated)
-        text: TypeScript SDK (Generated)
-        // url: link to the TypeScript SDK (Generated)
-        url: https://github.com/box/box-typescript-sdk-gen
-
       java_sdk:
         // text: Text for link to the Java SDK
         text: Java SDK
@@ -84,35 +78,11 @@ categories:
         // url: link to the Python SDK
         url: https://github.com/box/box-python-sdk
 
-      python_gen_sdk:
-        // text: Text for link to the Python SDK (Generated)
-        text: Python SDK (Generated)
-        // url: link to the Python SDK (Generated)
-        url: https://github.com/box/box-python-sdk-gen
-
       dotnet_sdk:
         // text: Text for link to the .NET SDK
         text: .NET SDK
         // url: link to the .Net SDK
         url: https://github.com/box/box-windows-sdk-v2
-
-      swift_gen_sdk:
-        // text: Text for link to the Swift SDK (Generated)
-        text: Swift SDK (Generated)
-        // url: link to the Swift SDK (Generated)
-        url: https://github.com/box/box-swift-sdk-gen
-
-      java_gen_sdk:
-        // text: Text for link to the Java SDK (Generated)
-        text: Java SDK (Generated)
-        // url: link to the Java SDK (Generated)
-        url: https://github.com/box/box-java-sdk-gen
-
-      dotnet_gen_sdk:
-        // text: Text for link to the .NET (Generated) SDK
-        text: .NET SDK (Generated)
-        // url: link to the .Net SDK (Generated)
-        url: https://github.com/box/box-dotnet-sdk-gen
 
       node_sdk:
         // text: Text for link to the Node SDK
@@ -148,31 +118,13 @@ categories:
         // text: Text for link to our llms-full.txt file
         text: llms-full.txt
         // url: Link to our llms-full.txt file
-        url: /llms-full.txt/
+        url: /llms-full.txt
 
-      guides_llms:
-        // text: Text for link to our Guides llms.txt file
-        text: Guides llms.txt
-        // url: Link to our Guides llms.txt file
-        url: /guides/llms.txt/
-
-      api_reference_llms:
-        // text: Text for link to our API Reference llms.txt file
-        text: API Reference llms.txt
-        // url: Link to our API Reference llms.txt file
-        url: /reference/llms.txt/
-
-      platform_llms:
-        // text: Text for link to our Platform llms.txt file
-        text: Platform llms.txt
-        // url: Link to our Platform llms.txt file
-        url: /platform/llms.txt/
-
-      ai_dev_zone_llms:
-        // text: Text for link to our AI Dev Zone llms.txt file
-        text: AI Dev Zone llms.txt
-        // url: Link to our AI Developer Zone llms.txt file
-        url: /ai-dev-zone/llms.txt/
+      llms_links:
+        // text: Text for link to our llms.txt file
+        text: llms.txt
+        // url: Link to our llms.txt file
+        url: /llms.txt
 
   support:
     // title: |-

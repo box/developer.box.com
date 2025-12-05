@@ -50,7 +50,7 @@ sample_code:
     paragraph: Use this endpoint to integrate
      the document summary into your application.
     pricing: This endpoint is available to all
-      Enterprise Plus and Enterprise Advanced customers.
+      customers Business and above.
   metadata:
     headline: Box AI API - extract structured
     paragraph: Use this endpoint to add
@@ -58,14 +58,14 @@ sample_code:
      your applications. Pass a Box metadata template
      ID or your own metadata structure as a parameter.
     pricing: This endpoint is available to all
-      Enterprise Plus and Enterprise Advanced customers.
+      customers Business and above.
   metadata-unstructured:
     headline: Box AI API - extract
     paragraph: Use this endpoint to add
      document freeform metadata extraction to
      your applications. The endpoint allows various prompt formats.
     pricing: This endpoint is available to all
-      Enterprise Plus and Enterprise Advanced customers.
+      customers Business and above.
   developer_console:
     headline: Box Developer Console
     cta: Get started

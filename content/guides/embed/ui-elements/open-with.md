@@ -1,5 +1,5 @@
 ---
-rank: 5
+rank: 7
 related_endpoints: []
 related_guides:
   - embed/ui-elements
@@ -39,7 +39,7 @@ either through NPM or the Box CDN.
 
 ## Box Edit
 
-Box Edit requires additional setup in order to be integrated into a custom
+Box Edit requires additional setup in order to be integrated into a platform
 application. Box Edit uses the desktop application [Box Tools][tools] in order
 to open content locally.
 
@@ -76,7 +76,7 @@ to your application in the developer console.
 
 Once your application has been activated for API calls it will need to be
 reauthorized in your enterprise. The steps for performing these actions are
-available [here](g://authorization/custom-app-approval).
+available [here](g://authorization/platform-app-approval).
 
 ## List available integrations
 
