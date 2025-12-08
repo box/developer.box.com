@@ -17,6 +17,6 @@ assignees: cbetta
 <!-- Replace this text with a description of what question you have -->
 <!-- Please include as much detail as possible -->
 
-[api-docs]: https://developer.box.com/
+[api-docs]: page
 [dev-forums]: https://community.box.com/
 [github-repo]: https://github.com/box/developer.box.com/search?type=Issues
