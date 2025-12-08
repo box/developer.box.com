@@ -81,7 +81,7 @@ retry-after: 100
   "type": "error",
   "status": 429,
   "code": "rate_limit_exceeded",
-  "help_url": "g://api-calls/permissions-and-errors/common-errors",
+  "help_url": "https://developer.box.com/api-calls/permissions-and-errors/common-errors",
   "message": "Request rate limit exceeded, please try again later",
   "request_id": "abcdef123456"
 }
@@ -95,5 +95,5 @@ Please see the [Client Error resource](resource://client_error) for more details
   exponential back-off strategy for retrying API calls.
 </Message>
 
-[search]: e://get_search
+[search]: e://get-search
 [pricing]: https://www.box.com/pricing

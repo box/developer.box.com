@@ -41,16 +41,16 @@ If you have any questions, checkout our [forum][forum-link].
 
 [learn]: page://platform
 <!-- i18n-enable localize-links -->
-[box-platform-101]: page://platform/box-platform-101
-[use-case]: page://platform/use-cases
-[user-types]: page://platform/user-types
-[application-types]: page://platform/application-types
-[authentication]: page://platform/authentication-methods
-[support]: page://platform/support
-[tooling]: page://platform/tools
+[box-platform-101]: pages/platform/box-platform-101
+[use-case]: pages/platform/use-cases
+[user-types]: pages/platform/user-types
+[application-types]: pages/platform/application-types
+[authentication]: pages/platform/authentication-methods
+[support]: pages/platform/support
+[tooling]: pages/platform/tools
 [box-app]: g://getting-started/first-application
-[endpoints]: page://reference
-[cv]: page://platform/appendix/locating-values
+[endpoints]: page/api-reference
+[cv]: pages/platform/appendix/locating-values
 [publish-app]: g://getting-started/publish-app
 <!-- i18n-disable localize-links -->
 [forum-link]: https://forum.box.com
