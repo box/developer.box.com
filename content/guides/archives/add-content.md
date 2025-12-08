@@ -24,8 +24,8 @@ The `id` parameter is the ID of the file/folder you want to add to the archive.
 To specify the destination, use the `parent.id` [parameter][Update parent id of folder] in the request body.
 This can be either an ID of an archive or the ID of a folder that is inside an archive.
 
-[Create Archive]: https://developer.box.com/reference/v2025.0/post-archives/
+[Create Archive]: e://post-archives
 [Update file]: e://put-files-id
-[Update parent id of file]: https://developer.box.com/reference/put-files-id/#param-parent-id
+[Update parent id of file]: e://put-files-id/#param-parent-id
 [Update folder]: e://put-folders-id
-[Update parent id of folder]: https://developer.box.com/reference/put-folders-id/#param-parent-id
+[Update parent id of folder]: e://put-folders-id/#param-parent-id
