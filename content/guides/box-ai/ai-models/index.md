@@ -70,23 +70,23 @@ Box AI is powered by the following AI models. These models are integrated with B
     <Tile type="gpt" title="openai__gpt_5" href="/guides/box-ai/ai-models/openai-gpt-5-model-card">
 			A multimodal model with advanced reasoning and long-context understanding.
    		<div>
-      	<strong style="background-color: #e8e8e8">Default for Box AI for Hubs</strong>
-				<strong style="background-color: #e8e8e8">Default for Box AI for Documents</strong>
-				<strong style="background-color: #e8e8e8">Default for Box AI for Notes Q&A</strong>
+      	<strong style="background-color: #e8e8e8">Default for Box AI Advanced Agent for Hubs</strong>
+				<strong style="background-color: #e8e8e8">Default for Box AI Advanced Agent for Documents</strong>
+				<strong style="background-color: #e8e8e8">Default for Box AI Advanced Agent for Notes Q&A</strong>
    			<strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #f8d59b">Premium</strong>
 			</div>
-		</Tile>   
-		<Tile type="gpt" title="azure__openai__gpt_4_1_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card">
-			A multimodal model designed to handle lightweight tasks.
-			<div>
-				<strong style="background-color: #e8e8e8">Chat</strong>
+		</Tile>
+    <Tile type="gpt" title="openai__gpt_5_mini" href="/guides/box-ai/ai-models/openai-gpt-5-mini-model-card">
+			A model designed for well-defined tasks and precise prompts.
+   		<div>
+        <strong style="background-color: #e8e8e8">Default for Box AI for Hubs</strong>
+				<strong style="background-color: #e8e8e8">Default for Box AI for Documents</strong>
+				<strong style="background-color: #e8e8e8">Default for Box AI for Notes Q&A</strong> 
+   			<strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #e1ffe7">Available</strong>
-				<strong style="background-color: #fdfad8">Standard</strong>
-        <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
-        <strong style="background-color: #e1f8ff">FedRAMP High</strong>
-        <strong style="background-color: #e1f8ff">DOD IL2</strong>
+				<strong style="background-color: #fdfad8">Standard</strong>       
 			</div>
 		</Tile>
 		<Tile type="gpt" title="azure__openai__gpt_4_1" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-model-card">
@@ -97,10 +97,11 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
         <strong style="background-color: #e1f8ff">FedRAMP High</strong>
-        <strong style="background-color: #e1f8ff">DOD IL2</strong>     
+        <strong style="background-color: #e1f8ff">DOD IL2</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>     
 			</div>
 		</Tile>
-		<Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card">
+    		<Tile type="gpt" title="azure__openai__gpt_4_1_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card">
 			A multimodal model designed to handle lightweight tasks.
 			<div>
 				<strong style="background-color: #e8e8e8">Chat</strong>
@@ -108,7 +109,8 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #fdfad8">Standard</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
         <strong style="background-color: #e1f8ff">FedRAMP High</strong>
-        <strong style="background-color: #e1f8ff">DOD IL2</strong>        
+        <strong style="background-color: #e1f8ff">DOD IL2</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>
 			</div>
 		</Tile>
 		<Tile type="gpt" title="azure__openai__gpt_4o" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-model-card">
@@ -120,7 +122,20 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
         <strong style="background-color: #e1f8ff">FedRAMP High</strong>
-        <strong style="background-color: #e1f8ff">DOD IL2</strong>        
+        <strong style="background-color: #e1f8ff">DOD IL2</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>        
+			</div>
+		</Tile>
+    		<Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card">
+			A multimodal model designed to handle lightweight tasks.
+			<div>
+				<strong style="background-color: #e8e8e8">Chat</strong>
+				<strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #fdfad8">Standard</strong>
+        <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
+        <strong style="background-color: #e1f8ff">FedRAMP High</strong>
+        <strong style="background-color: #e1f8ff">DOD IL2</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>        
 			</div>
 		</Tile>
 		<Tile type="gpt" title="azure__openai__text_embedding_ada_002" href="/guides/box-ai/ai-models/azure-text-embedding-ada-002-model-card">
@@ -131,30 +146,34 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #fdfad8">Standard</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
         <strong style="background-color: #e1f8ff">FedRAMP High</strong>
-        <strong style="background-color: #e1f8ff">DOD IL2</strong>        
+        <strong style="background-color: #e1f8ff">DOD IL2</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>        
 			</div>
 		</Tile>
 		<Tile type="gemini" title="google__gemini_2_5_pro" href="/guides/box-ai/ai-models/google-gemini-2-5-pro-model-card">
 		Gemini multimodal model with a 1 million token context window and advanced reasoning capabilities.
 			<div>
+        <strong style="background-color: #e8e8e8">Default for Box AI Enhanced Extract</strong>
 				<strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
         <strong style="background-color: #e1f8ff">FedRAMP High</strong>
-        <strong style="background-color: #e1f8ff">DOD IL5</strong>        
+        <strong style="background-color: #e1f8ff">DOD IL5</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>        
 			</div>
 		</Tile>
     <Tile type="gemini" title="google__gemini_2_5_flash" href="/guides/box-ai/ai-models/google-gemini-2-5-flash-model-card">
 		Gemini multimodal model offering well-round capabilites, including thinking capabilities.
 		  <div>
-		    <strong style="background-color: #e8e8e8">Default for Box AI Extract</strong>
+		    <strong style="background-color: #e8e8e8">Default for Box AI Standard Extract</strong>
         <strong style="background-color: #e8e8e8">Chat</strong>
 		    <strong style="background-color: #e1ffe7">Available</strong>
 		    <strong style="background-color: #fdfad8">Standard</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
         <strong style="background-color: #e1f8ff">FedRAMP High</strong>
-        <strong style="background-color: #e1f8ff">DOD IL5</strong>            
+        <strong style="background-color: #e1f8ff">DOD IL5</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>            
 		</div>
 	</Tile>
 	<Tile type="gemini" title="google__gemini_2_0_flash_001" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-001-model-card">
@@ -165,7 +184,8 @@ Box AI is powered by the following AI models. These models are integrated with B
 		<strong style="background-color: #fdfad8">Standard</strong>
     <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
     <strong style="background-color: #e1f8ff">FedRAMP High</strong>
-    <strong style="background-color: #e1f8ff">DOD IL5</strong>            
+    <strong style="background-color: #e1f8ff">DOD IL5</strong>
+    <strong style="background-color: #e1f8ff">ISMAP</strong>            
 		</div>
 	</Tile>
 	<Tile type="gemini" title="google__gemini_2_0_flash_lite_preview" href="/guides/box-ai/ai-models/google-gemini-2-0-flash-lite-preview-02-05">
@@ -176,7 +196,8 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #fdfad8">Standard</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
         <strong style="background-color: #e1f8ff">FedRAMP High</strong>
-        <strong style="background-color: #e1f8ff">DOD IL5</strong>                
+        <strong style="background-color: #e1f8ff">DOD IL5</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>                
 				</div>
 		</Tile>
 		<Tile type="model" title="aws__claude_4_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-5-sonnet-model-card">
@@ -186,6 +207,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>
 			</div>
 		</Tile> 
     <Tile type="model" title="aws__claude_4_5_haiku" href="/guides/box-ai/ai-models/aws-claude-4-5-haiku-model-card">
@@ -194,6 +216,8 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #e8e8e8">Chat</strong>
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #fdfad8">Standard</strong>
+        <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>
 			</div>
 		</Tile>    
 		<Tile type="model" title="aws__claude_4_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-5-sonnet-model-card">
@@ -203,6 +227,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>
 			</div>
 		</Tile>    
 		<Tile type="model" title="aws__claude_4_opus" href="/guides/box-ai/ai-models/aws-claude-4-opus-model-card">
@@ -212,6 +237,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>
 			</div>
 		</Tile>
 		<Tile type="model" title="aws__claude_3_7_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-7-sonnet-model-card">
@@ -221,6 +247,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>
 			</div>
 		</Tile>
 		<Tile type="model" title="aws__claude_3_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-5-sonnet-model-card">
@@ -230,6 +257,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>
 			</div>
 		</Tile>
 		<Tile type="model" title="aws__claude_3_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-sonnet-model-card">
@@ -239,6 +267,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #f8d59b">Premium</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>
 			</div>
 		</Tile>
 		<Tile type="model" title="aws__claude_3_haiku" href="/guides/box-ai/ai-models/aws-claude-3-haiku-model-card">
@@ -248,6 +277,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #fdfad8">Standard</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>
 			</div>
 		</Tile>
 		<Tile type="model" title="aws__titan_text_lite" href="/guides/box-ai/ai-models/aws-titan-text-lite-model-card">
@@ -257,6 +287,7 @@ Box AI is powered by the following AI models. These models are integrated with B
 				<strong style="background-color: #e1ffe7">Available</strong>
 				<strong style="background-color: #fdfad8">Standard</strong>
         <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>
 			</div>
 		</Tile>
 		<Tile type="model" title="ibm__llama_4_maverick" href="/guides/box-ai/ai-models/ibm-llama-4-maverick-model-card">
@@ -306,6 +337,14 @@ Box AI is powered by the following AI models. These models are integrated with B
 Certain Box AI customers may enable additional AI models upon their request and/or otherwise made available to them through their admin console. Use of these models may be subject to additional terms. By selecting a customer-enabled model, customer acknowledges that their data may be processed by additional [subprocessors][subprocessors] of their choice.
 
 <TileGrid rows="2">
+    <Tile type="gemini" title="google__gemini_3_pro" href="/guides/box-ai/ai-models/google-gemini-3-pro-model-card">
+		A natively multimodal model for complex tasks with a 1 million token context window.
+    <div>
+				<strong style="background-color: #e8e8e8">Chat</strong>
+				<strong style="background-color: #f0e2ff">Beta</strong>
+				<strong style="background-color: #f8d59b">Premium</strong>       
+			</div>
+		</Tile>
 		<Tile type="model" title="xai__grok_3_beta" href="/guides/box-ai/ai-models/xai-grok-3-beta-model-card">
 			A model that excels at enterprise use cases like data extraction, coding, and text summarization.
 			<div>
