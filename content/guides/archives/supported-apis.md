@@ -48,10 +48,10 @@ When contacting customer support, specify the user ID you plan to use those APIs
 | [`PUT securityClassification`][Update classification label on file]          | Update a classification label for a file within an archive.                                                                                                                                                                                                       |
 | [`DELETE securityClassification`][Delete classification label on file]       | Delete a classification label from a file within an archive.                                                                                                                                                                                                      |
 
-[Create archive]: e://post-archives
-[List archives]: e://get-archives
-[Update archive]: e://put-archives-id
-[Delete archive]: e://delete-archives-id/
+[Create archive]: e://v2025.0/post-archives
+[List archives]: e://v2025.0/get-archives
+[Update archive]: e://v2025.0/put-archives-id
+[Delete archive]: e://v2025.0/delete-archives-id
 [Update file]: e://put-files-id
 [Update folder]: e://put-folders-id
 [Upload file]: e://post-files-content

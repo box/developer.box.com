@@ -81,7 +81,7 @@ retry-after: 100
   "type": "error",
   "status": 429,
   "code": "rate_limit_exceeded",
-  "help_url": "https://developer.box.com/api-calls/permissions-and-errors/common-errors",
+  "help_url": "https://developer.box.com/guides/api-calls/permissions-and-errors/common-errors",
   "message": "Request rate limit exceeded, please try again later",
   "request_id": "abcdef123456"
 }
