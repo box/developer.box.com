@@ -84,7 +84,8 @@ If you want to customize Box Embed even further, you can do it programmatically.
   width="{pixels}"
   height="{pixels}"
   frameborder="0"
-  allow="local-network-access; clipboard-read; clipboard-write"
+  <!-- Optionally replace * with your enterprise-specific domain (for example, mycompanydomain.app.box.com) -->
+  allow="local-network-access *; clipboard-read *; clipboard-write *" 
   allowfullscreen
   webkitallowfullscreen
   msallowfullscreen>
@@ -220,7 +221,7 @@ The following example shows a fully configured chat button with all available pa
 
 ```html
 <script 
-  src="https://cdn01.boxcdn.net/embeddable-ai-chat-script/2.7.0/box_integrations_ai_chat_button.js" 
+  src="https://cdn01.boxcdn.net/embeddable-ai-chat-script/2.8.0/box_integrations_ai_chat_button.js" 
   data-hub-id="123456789" 
   data-custom-box-domain="mycompanydomain.app.box.com" 
   data-shared-link="abcdefghijklmnopqrst123" 
@@ -254,7 +255,8 @@ The following example shows a fully configured chat widget with all available pa
   width="800" 
   height="550" 
   frameBorder="0" 
-  allow="local-network-access; clipboard-read; clipboard-write;" 
+  <!-- Optionally replace * with your enterprise-specific domain (for example, mycompanydomain.app.box.com) -->  
+  allow="local-network-access *; clipboard-read *; clipboard-write *"  
   allowfullscreen 
   webkitallowfullscreen 
   msallowfullscreen>
