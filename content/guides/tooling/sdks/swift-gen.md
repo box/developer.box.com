@@ -24,5 +24,5 @@ Check the [migration guide][migration] to learn how to switch from the Box Next 
 For more details, see our [SDK versioning strategy document][versioning].
 
 [versioning]: g://tooling/sdks/sdk-versioning
-[migration]: https://github.com/box/box-ios-sdk/blob/sdk-gen/migration-guides/from-box-swift-sdk-gen-v0-to-box-ios-sdk.md
-[sdk-branch]: https://github.com/box/box-ios-sdk/tree/sdk-gen
+[migration]: https://github.com/box/box-ios-sdk/blob/main/migration-guides/from-box-swift-sdk-gen-v0-to-box-ios-sdk.md
+[sdk-branch]: https://github.com/box/box-ios-sdk/tree/main

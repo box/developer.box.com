@@ -1,5 +1,5 @@
 ---
-rank: 5
+rank: 7
 related_guides:
   - box-ai/ai-tutorials/ask-questions
   - box-ai/ai-tutorials/generate-text
@@ -7,9 +7,9 @@ related_guides:
   - box-ai/ai-tutorials/extract-metadata-structured
   - box-ai/ai-agents/get-agent-default-config
 ---
-# Azure OpenAI GPT-4.1 Mini
+# Azure OpenAI GPT-4.1 mini
 
-**Azure OpenAI GPT-4.1 Mini** is a multimodal model designed to handle lightweight tasks.
+**Azure OpenAI GPT-4.1 mini** is a multimodal model designed to handle lightweight tasks.
 
 ## Model details
 
