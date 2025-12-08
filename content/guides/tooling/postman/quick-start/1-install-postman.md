@@ -9,7 +9,7 @@ To use the **Box Postman Collection** you will need to have the
 Postman is available for Windows, Mac, and Linux environments.
 
 <Trigger option='postman.downloaded' value='win32,win64,osx,linux64'>
-  [Download the appropriate version for you operating system][downloads]
+  [Download the appropriate version for your operating system][downloads]
 </Trigger>
 
 Next, install Postman on your machine and (optionally)
