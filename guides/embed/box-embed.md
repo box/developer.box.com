@@ -22,13 +22,13 @@ source_url: >-
 # Box Embed
 
 Box Embed is a HTML-based framework that allows embedding the entire
-Box Web App experience in a custom-made application. Box Embed provides the ability to upload, search, comment, share, tag, and edit files using Box Edit.
+Box Web App experience in a custom-made application. Box Embed provides the ability to upload, search, comment, share, tag, and edit files using Box Edit. You can also embed Box Hubs AI Chat for a focused chatbot experience.
 
 ## Before you start
 
 To create a widget, you need to:
 
-* Set an embeddable element, such as a **folder**, **file**, **Hub**, **note**, or **app** for sharing. 
+* Set an embeddable element, such as a folder, file, hub, note, or app for sharing. 
 * Have at least **Viewer** [permissions][5].
 
 ## Using web app
@@ -43,19 +43,25 @@ To fetch the Box Embed widget code from the Box web app, perform the following s
 
 ### Hubs
 
-1. Navigate to the chosen Hub. 
-2. Click on the ellipsis menu in the top right corner. 
+1. Navigate to the chosen hub. 
+2. Click on the ellipsis menu in the upper-right corner. 
 3. Click **Embed Hub**.
+
+<Message type='notice'>
+
+You can also embed only the AI chat interface from a hub. Users can ask questions and get AI-powered answers based on the hub's files, without accessing navigation or file browsing features. For more information, see the [Box Hubs AI Chat embedding][6] section.
+
+</Message>
 
 ### Notes
 
-1. Navigate to the chosen Box Note.
+1. Navigate to the chosen note.
 2. Click on the ellipsis menu.
 3. Click **Embed Box Note**.
 
 ### Apps
 
-1. Navigate to the chosen Box App or Box App View.
+1. Navigate to the chosen app or Box App View.
 2. Click on the ellipsis menu.
 3. Click **Embed**.
 
@@ -67,9 +73,14 @@ To fetch the Box Embed widget code from the Box web app, perform the following s
 
 In the next step, configure the parameters of an embeddable element.
 
-| Files | Folders  | Hubs  | Notes | Apps |
-|----------|----------|------------------------| --- | --- |
-| Size of the widget.| Size of the widget, sorting of the files in a folder, hiding the navigation path and sidebar. | Size of the widget,  hiding the parent navigation path and sidebar. | Size of the widget, skipping cloud game (results in note being in read only mode), hiding notes navigation. | Size of the widget. |
+| Element Type | Configuration Options |
+|--------------|----------------------|
+| Files | Size of the widget. |
+| Folders | Size of the widget, sorting of the files in a folder, hiding the navigation path and sidebar. |
+| Hubs | Size of the widget, hiding the parent navigation path and sidebar. |
+| Hubs AI Chat | Chat mode: button or widget. |
+| Notes | Size of the widget, skipping cloud game (results in note being in read only mode), hiding notes navigation. |
+| Apps | Size of the widget. |
 
 <ImageFrame border>
 
@@ -90,7 +101,8 @@ If you want to customize Box Embed even further, you can do it programmatically.
   width="{pixels}"
   height="{pixels}"
   frameborder="0"
-  allow="local-network-access; clipboard-read; clipboard-write"
+  <!-- Optionally replace * with your enterprise-specific domain (for example, mycompanydomain.app.box.com) -->
+  allow="local-network-access *; clipboard-read *; clipboard-write *" 
   allowfullscreen
   webkitallowfullscreen
   msallowfullscreen>
@@ -151,8 +163,8 @@ You can also set the page to Root Folder/All Files page. Set the URL to
 Next, you will want to choose your view customization options. The following is
 a list of optional parameters you can configure.
 
-|                       |                                                                                              |
-| --------------------- | -------------------------------------------------------------------------------------------- |
+|    |    |
+| -- | -- |
 | `hideHubsGallery` | Hide or show navigation chevron button to go back to Hubs gallery. Can be `true` or `false` (default).                         |
 | `hideNavigationControls` | Hide or show navigation controls in Box Notes.|
 | `showItemFeedActions` | Hide or show file comments or tasks. Can be `true` (default) or `false`.                         |
@@ -181,6 +193,137 @@ within an `<iframe>`:
 * `mozallowfullscreen`
 * `oallowfullscreen`
 * `msallowfullscreen`
+
+## Box Hubs AI Chat embedding
+
+In addition to embedding the complete Box Hub experience, you can embed only the AI-powered chat interface. This mode provides a focused chatbot experience powered by the files within a specific hub, without navigation or content browsing options.
+
+### Prerequisites
+
+To access a hub embedded in AI Chat mode:
+
+* The enterprise that owns the hub must have Box AI for Hubs enabled.
+* The user must be authenticated and have Box AI for Hubs enabled at their enterprise.
+* The user needs at least Viewer [permissions][5] on the hub.
+
+### Creating an AI Chat embed
+
+1. Navigate to the hub that will serve as the knowledge source for the AI Chat.
+2. Click the ellipsis menu in the upper-right corner.
+3. Click **Embed Hub**.
+4. Select the **Hub AI Chat** tab.
+5. Select chat mode:
+
+    * [Chat button][7]
+    * [Chat widget][8]
+
+6. Copy the embed code.
+
+<Message type='notice'>
+
+If you experience issues with the Box Hubs AI Chat embedding, regenerate the embed code to get the latest version of the script by repeating steps 1-6 above.
+
+</Message>
+
+### Chat button
+
+In **Chat button** mode, the AI chat widget opens after the user clicks the button. It is generated as a Box-hosted `script` and displays a floating chat button on your page.
+
+![Chat button mode](./chat-button.png)
+
+#### Chat button parameters
+
+The **Chat button** mode supports the following parameters:
+
+| Parameter | Required | Description |
+|-----------|----------|-------------|
+| `data-hub-id` | Yes | The ID of the hub that powers the chatbot. |
+| `data-custom-box-domain` | No | For Box instances with custom domains. Default: `app.box.com`. Example: `mycompanydomain.app.box.com`. |
+| `data-button-text` | No | Custom text to display on the chat button. Default: `Box AI`. This value is also used for the button's area label for accessibility. |
+| `data-shared-link` | No | Optional shared link for hub access. If not provided, the chat loads only for users who are collaborators on the hub. |
+
+The following example shows a fully configured chat button with all available parameters:
+
+```html
+<script 
+  src="https://cdn01.boxcdn.net/embeddable-ai-chat-script/2.8.0/box_integrations_ai_chat_button.js" 
+  data-hub-id="123456789" 
+  data-custom-box-domain="mycompanydomain.app.box.com" 
+  data-shared-link="abcdefghijklmnopqrst123" 
+  data-button-text="Ask our HR chatbot">
+</script>
+```
+
+### Chat widget
+
+In **Chat widget** mode, the AI chat widget is embedded directly on page load. It is generated as an `iframe` and displays the full chat interface immediately.
+
+<ImageFrame shadow>
+
+![Chat widget mode](./chat-widget.png)
+
+</ImageFrame>
+
+#### Chat widget parameters
+
+In **Chat widget** mode, the AI chat widget is embedded directly on the page using an `iframe`. You can customize the behavior by adding URL parameters to the iframe's `src` attribute:
+
+| Parameter | Description |
+|-----------|-------------|
+| `hubId` | The ID of the hub that powers the chatbot. |
+| `sharedLink` | The shared link hash for hub access. If not provided, the chat loads only for users who are collaborators on the hub. |
+| `showCloseButton` | Whether to show the [X (close) button][9] in the chat interface. When set to `true`, the close button is displayed. When a user clicks this button, Box generates an event that is sent to the parent web application, enabling you to implement custom closing logic based on the user interaction. |
+
+The following example shows a fully configured chat widget with all available parameters:
+
+```html
+<iframe 
+  src="https://yourcompanydomain.app.box.com/ai-chat?hubId=123456789&sharedLink=abcdefghijklmnop123&showCloseButton=false" 
+  width="800" 
+  height="550" 
+  frameBorder="0" 
+  <!-- Optionally replace * with your enterprise-specific domain (for example, mycompanydomain.app.box.com) -->  
+  allow="local-network-access *; clipboard-read *; clipboard-write *"  
+  allowfullscreen 
+  webkitallowfullscreen 
+  msallowfullscreen>
+</iframe>
+```
+
+#### Using the close button
+
+When embedding the Box AI chat directly with `iframe` (without using the provided script), you can enable a close button within the chat interface that communicates with your parent application through `postMessage`.
+
+##### Enabling the close button
+
+To display a close button (✕) in the corner of the iframe, add the `showCloseButton=true` query parameter to your `iframe` URL as follows:
+`https://app.box.com/ai-chat?hubId=YOUR_HUB_ID&showCloseButton=true`
+
+##### How it works
+
+1. When `showCloseButton=true` is set, an X button appears in the corner of the chat iframe.
+2. When a user clicks this button, the iframe sends a `postMessage` event to the parent window.
+3. The event contains `event.data.type` set to `"BOX_AI_CHAT_CLOSE"`.
+4. Your hosting application listens for this event and handles the closing logic.
+
+##### Implementation example
+
+```javascript
+window.addEventListener('message', (event) => {
+    // Optional: validate origin is from Box for additional security
+    // if (event.origin !== 'https://app.box.com') return;
+
+    if (event.data && event.data.type === 'BOX_AI_CHAT_CLOSE') {
+        closeChat();
+    }
+});
+```
+
+##### Event reference
+
+| Property | Value | Description |
+|----------|-------|-------------|
+| `event.data.type` | `"BOX_AI_CHAT_CLOSE"` | Indicates the user clicked the close button in the chat iframe. |
 
 ## Expiring embed links
 
@@ -252,9 +395,9 @@ would look something like this.
 https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
 ```
 
-|                   |                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `showDownload`    | Shows the download button in the embedded header bar if the viewer has permissions to download the file. Document file types will also show a print button since print and download are governed by the same permissions. Defaults to `false`.                                                                                                                                                                                              |
+|     |     |
+| --- | --- |
+| `showDownload` | Shows the download button in the embedded header bar if the viewer has permissions to download the file. Document file types will also show a print button since print and download are governed by the same permissions. Defaults to `false`. |
 | `showAnnotations` | Enables users with permission Preview and above to annotate document and image previews. Also shows annotations that are already on the document. To learn more about the file types that annotations is available on as well as the types of annotations, you can refer to our Annotations page. Annotations are available today on web browsers only. On mobile browsers, users will be able to view annotations but not create new ones. |
 
 ## Cloud game
@@ -302,3 +445,7 @@ and **print** options might not show in mobile browsers.
 [4]: e://put-folders-id--add-shared-link
 [5]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
 [cloud-game]: https://support.box.com/hc/en-us/articles/360043691034-How-Does-Box-Prevent-Clickjacking
+[6]: g://embed/box-embed/#box-hubs-ai-chat-embedding
+[7]: g://embed/box-embed/#chat-button
+[8]: g://embed/box-embed/#chat-widget
+[9]: g://embed/box-embed/#using-the-close-button
