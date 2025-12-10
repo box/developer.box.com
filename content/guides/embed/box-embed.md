@@ -265,7 +265,7 @@ The following example shows a fully configured chat widget with all available pa
 
 #### Using the close button
 
-When embedding the Box AI chat directly with `iframe` (without using the provided script), you can enable a close button within the chat interface that communicates with your parent application via `postMessage`.
+When embedding the Box AI chat directly with `iframe` (without using the provided script), you can enable a close button within the chat interface that communicates with your parent application through `postMessage`.
 
 ##### Enabling the close button
 
