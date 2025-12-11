@@ -22,13 +22,13 @@ fullyTranslated: true
 ---
 # Box Embed
 
-Box EmbedはHTMLベースのフレームワークで、これにより、独自に作成したアプリケーションにBoxウェブアプリの機能全体を埋め込むことができます。Box Embedを使用すると、ファイルのアップロード、検索、コメント付け、共有、タグ付けに加え、Box Editを使用したファイルの編集も可能になります。
+Box Embed is a HTML-based framework that allows embedding the entire Box Web App experience in a custom-made application. Box Embed provides the ability to upload, search, comment, share, tag, and edit files using Box Edit. You can also embed Box Hubs AI Chat for a focused chatbot experience.
 
 ## 開始する前に
 
 ウィジェットを作成するには、以下のことが必要です。
 
-* 共有用の埋め込み可能な要素 (**フォルダ**、**ファイル**、**Hub**、**メモ**、**アプリ**など) を設定する。 
+* Set an embeddable element, such as a folder, file, hub, note, or app for sharing. 
 * **ビューアー**以上の[権限][5]がある。
 
 ## ウェブアプリの使用
@@ -43,19 +43,25 @@ BoxウェブアプリからBox埋め込みウィジェットのコードを取�
 
 ### Hub
 
-1. 選択したHubに移動します。 
-2. 右上にある省略記号メニューをクリックします。 
+1. Navigate to the chosen hub. 
+2. Click on the ellipsis menu in the upper-right corner. 
 3. \[**Hubを埋め込む**] をクリックします。
+
+<Message type="notice">
+
+You can also embed only the AI chat interface from a hub. Users can ask questions and get AI-powered answers based on the hub's files, without accessing navigation or file browsing features. For more information, see the [Box Hubs AI Chat embedding][6] section.
+
+</Message>
 
 ### メモ
 
-1. 選択したBox Noteに移動します。
+1. Navigate to the chosen note.
 2. 省略記号メニューをクリックします。
 3. \[**埋め込みウィジェット**] をクリックします。
 
 ### アプリ
 
-1. 選択したBoxアプリまたはBoxアプリビューに移動します。
+1. Navigate to the chosen app or Box App View.
 2. 省略記号メニューをクリックします。
 3. \[**埋め込む**] をクリックします。
 
@@ -67,9 +73,14 @@ BoxウェブアプリからBox埋め込みウィジェットのコードを取�
 
 次の手順では、埋め込み可能な要素のパラメータを構成します。
 
-| ファイル       | フォルダ                                            | Hub                              | メモ                                                                    | アプリ        |
-| ---------- | ----------------------------------------------- | -------------------------------- | --------------------------------------------------------------------- | ---------- |
-| ウィジェットのサイズ | ウィジェットのサイズ、フォルダ内のファイルの並べ替え、ナビゲーションパスとサイドバーの非表示。 | ウィジェットのサイズ、親のナビゲーションパスとサイドバーの非表示 | ウィジェットのサイズ、クラウド (雲) ゲームのスキップ (その結果、メモは読み取り専用モードになります)、メモのナビゲーションの非表示。 | ウィジェットのサイズ |
+| Element Type | Configuration Options                                                 |
+| ------------ | --------------------------------------------------------------------- |
+| ファイル         | ウィジェットのサイズ                                                            |
+| フォルダ         | ウィジェットのサイズ、フォルダ内のファイルの並べ替え、ナビゲーションパスとサイドバーの非表示。                       |
+| Hub          | ウィジェットのサイズ、親のナビゲーションパスとサイドバーの非表示                                      |
+| Hubs AI Chat | Chat mode: button or widget.                                          |
+| メモ           | ウィジェットのサイズ、クラウド (雲) ゲームのスキップ (その結果、メモは読み取り専用モードになります)、メモのナビゲーションの非表示。 |
+| アプリ          | ウィジェットのサイズ                                                            |
 
 <ImageFrame border>
 
@@ -89,7 +100,8 @@ Box Embedをさらにカスタマイズする場合は、プログラムを使�
   width="{pixels}"
   height="{pixels}"
   frameborder="0"
-  allow="local-network-access; clipboard-read; clipboard-write"
+  <!-- Optionally replace * with your enterprise-specific domain (for example, mycompanydomain.app.box.com) -->
+  allow="local-network-access *; clipboard-read *; clipboard-write *" 
   allowfullscreen
   webkitallowfullscreen
   msallowfullscreen>
@@ -173,6 +185,143 @@ Box Embedスニペットの全画面表示機能を有効にするために、�
 * `mozallowfullscreen`
 * `oallowfullscreen`
 * `msallowfullscreen`
+
+## Box Hubs AI Chat embedding
+
+In addition to embedding the complete Box Hub experience, you can embed only the AI-powered chat interface. This mode provides a focused chatbot experience powered by the files within a specific hub, without navigation or content browsing options.
+
+### 前提条件
+
+To access a hub embedded in AI Chat mode:
+
+* The enterprise that owns the hub must have Box AI for Hubs enabled.
+* The user must be authenticated and have Box AI for Hubs enabled at their enterprise.
+* The user needs at least Viewer [permissions][5] on the hub.
+
+### Creating an AI Chat embed
+
+1. Navigate to the hub that will serve as the knowledge source for the AI Chat.
+
+2. Click the ellipsis menu in the upper-right corner.
+
+3. \[**Hubを埋め込む**] をクリックします。
+
+4. Select the **Hub AI Chat** tab.
+
+5. Select chat mode:
+
+   * [Chat button][7]
+   * [Chat widget][8]
+
+6. Copy the embed code.
+
+<Message type="notice">
+
+If you experience issues with the Box Hubs AI Chat embedding, regenerate the embed code to get the latest version of the script by repeating steps 1-6 above.
+
+</Message>
+
+### Chat button
+
+In **Chat button** mode, the AI chat widget opens after the user clicks the button. It is generated as a Box-hosted `script` and displays a floating chat button on your page.
+
+![Chat button mode](./chat-button.png)
+
+#### Chat button parameters
+
+The **Chat button** mode supports the following parameters:
+
+| パラメータ                    | 必須  | 説明                                                                                                                                   |
+| ------------------------ | --- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `data-hub-id`            | はい  | The ID of the hub that powers the chatbot.                                                                                           |
+| `data-custom-box-domain` | いいえ | For Box instances with custom domains. Default: `app.box.com`. Example: `mycompanydomain.app.box.com`.                               |
+| `data-button-text`       | いいえ | Custom text to display on the chat button. Default: `Box AI`. This value is also used for the button's area label for accessibility. |
+| `data-shared-link`       | いいえ | Optional shared link for hub access. If not provided, the chat loads only for users who are collaborators on the hub.                |
+
+The following example shows a fully configured chat button with all available parameters:
+
+```html
+<script 
+  src="https://cdn01.boxcdn.net/embeddable-ai-chat-script/2.8.0/box_integrations_ai_chat_button.js" 
+  data-hub-id="123456789" 
+  data-custom-box-domain="mycompanydomain.app.box.com" 
+  data-shared-link="abcdefghijklmnopqrst123" 
+  data-button-text="Ask our HR chatbot">
+</script>
+
+```
+
+### Chat widget
+
+In **Chat widget** mode, the AI chat widget is embedded directly on page load. It is generated as an `iframe` and displays the full chat interface immediately.
+
+<ImageFrame shadow>
+
+![Chat widget mode](./chat-widget.png)
+
+</ImageFrame>
+
+#### Chat widget parameters
+
+In **Chat widget** mode, the AI chat widget is embedded directly on the page using an `iframe`. You can customize the behavior by adding URL parameters to the iframe's `src` attribute:
+
+| パラメータ             | 説明                                                                                                                                                                                                                                                                                                   |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `hubId`           | The ID of the hub that powers the chatbot.                                                                                                                                                                                                                                                           |
+| `sharedLink`      | The shared link hash for hub access. If not provided, the chat loads only for users who are collaborators on the hub.                                                                                                                                                                                |
+| `showCloseButton` | Whether to show the [X (close) button][9] in the chat interface. When set to `true`, the close button is displayed. When a user clicks this button, Box generates an event that is sent to the parent web application, enabling you to implement custom closing logic based on the user interaction. |
+
+The following example shows a fully configured chat widget with all available parameters:
+
+```html
+<iframe 
+  src="https://yourcompanydomain.app.box.com/ai-chat?hubId=123456789&sharedLink=abcdefghijklmnop123&showCloseButton=false" 
+  width="800" 
+  height="550" 
+  frameBorder="0" 
+  <!-- Optionally replace * with your enterprise-specific domain (for example, mycompanydomain.app.box.com) -->  
+  allow="local-network-access *; clipboard-read *; clipboard-write *"  
+  allowfullscreen 
+  webkitallowfullscreen 
+  msallowfullscreen>
+</iframe>
+
+```
+
+#### Using the close button
+
+When embedding the Box AI chat directly with `iframe` (without using the provided script), you can enable a close button within the chat interface that communicates with your parent application through `postMessage`.
+
+##### Enabling the close button
+
+To display a close button (✕) in the corner of the iframe, add the `showCloseButton=true` query parameter to your `iframe` URL as follows: `https://app.box.com/ai-chat?hubId=YOUR_HUB_ID&showCloseButton=true`
+
+##### How it works
+
+1. When `showCloseButton=true` is set, an X button appears in the corner of the chat iframe.
+2. When a user clicks this button, the iframe sends a `postMessage` event to the parent window.
+3. The event contains `event.data.type` set to `"BOX_AI_CHAT_CLOSE"`.
+4. Your hosting application listens for this event and handles the closing logic.
+
+##### Implementation example
+
+```javascript
+window.addEventListener('message', (event) => {
+    // Optional: validate origin is from Box for additional security
+    // if (event.origin !== 'https://app.box.com') return;
+
+    if (event.data && event.data.type === 'BOX_AI_CHAT_CLOSE') {
+        closeChat();
+    }
+});
+
+```
+
+##### Event reference
+
+| プロパティ             | 値                     | 説明                                                              |
+| ----------------- | --------------------- | --------------------------------------------------------------- |
+| `event.data.type` | `"BOX_AI_CHAT_CLOSE"` | Indicates the user clicked the close button in the chat iframe. |
 
 ## 有効期限付き埋め込みリンク
 
@@ -286,3 +435,11 @@ Box Embedは、モバイルブラウザ向けには最適化されていない�
 [5]: https://support.box.com/hc/ja/articles/360044196413-コラボレータの権限レベルについて
 
 [cloud-game]: https://support.box.com/hc/ja/articles/360043691034-Boxはどのようにしてクリックジャッキングを防止していますか
+
+[6]: g://embed/box-embed/#box-hubs-ai-chat-embedding
+
+[7]: g://embed/box-embed/#chat-button
+
+[8]: g://embed/box-embed/#chat-widget
+
+[9]: g://embed/box-embed/#using-the-close-button
