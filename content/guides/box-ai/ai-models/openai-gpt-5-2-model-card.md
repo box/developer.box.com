@@ -29,7 +29,7 @@ related_guides:
 
 ## Additional documentation
 
-For additional information, see [official OpenAI GPT-5 documentation][openai-gpt-5-model].
+For additional information, see [official OpenAI GPT-5.2 documentation][openai-gpt-5-model].
 
 [openai-gpt-5-model]: https://platform.openai.com/docs/models/gpt-5.2
 [overrides]: g://box-ai/ai-agents/ai-agent-overrides
