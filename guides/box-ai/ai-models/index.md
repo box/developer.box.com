@@ -12,10 +12,10 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 30
+total_steps: 31
 sibling_id: box-ai
 parent_id: box-ai
-next_page_id: box-ai/ai-models/openai-gpt-5-1-model-card
+next_page_id: box-ai/ai-models/openai-gpt-5-2-model-card
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/index.md
@@ -75,6 +75,34 @@ APIコールで`model`パラメータを使用する際は、各タイルおよ�
 Box AIには以下のモデルが搭載されています。Box AIと統合されているこれらのモデルは、エンタープライズグレードの標準に準拠しながら、さまざまなユースケースを支援します。各モデルの機能、対象のアプリケーション、利用に関して該当するガイドラインなどの情報については、以下をご確認ください。
 
 <TileGrid rows="2">
+
+<Tile type="gpt" title="openai__gpt_5_2" href="/guides/box-ai/ai-models/openai-gpt-5-2-model-card">
+
+A multimodal model for coding and agentic tasks across industries.
+
+<div>
+
+<strong style="background-color: #e8e8e8">
+
+チャット
+
+</strong>
+
+<strong style="background-color: #e1ffe7">
+
+利用可能
+
+</strong>
+
+<strong style="background-color: #f8d59b">
+
+プレミアム
+
+</strong>
+
+</div>
+
+</Tile>
 
 <Tile type="gpt" title="openai__gpt_5_1" href="/guides/box-ai/ai-models/openai-gpt-5-1-model-card">
 
