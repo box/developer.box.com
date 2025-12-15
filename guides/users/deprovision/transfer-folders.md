@@ -105,9 +105,9 @@ file or folder ID being transferred, using the
 [get collaboration endpoint](e://get_collaborations_id). Capture the
 collaboration ID.
 
-<Sample id='get_collaborations_id' >
+<Samples id='get_collaborations_id' >
 
-</Sample>
+</Samples>
 
 ### Remove Transfer From User as Owner
 
@@ -118,9 +118,9 @@ file or folder, which is accomplished using the
 Making call as the `transfer_to_user` account, remove the `transfer_from_user`
 as a collaborator on the file or folder.
 
-<Sample id='delete_collaborations_id' >
+<Samples id='delete_collaborations_id' >
 
-</Sample>
+</Samples>
 
 The file or folder is now owned by the `transfer_to_user` account, and the
 `transfer_from_user` account no longer has access.
