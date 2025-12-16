@@ -83,9 +83,9 @@ Box内でこれを実行するのに使用される一般的な方法は以下�
 
 `transfer_to_user`アカウントとして呼び出しを実行し、[コラボレーションを取得エンドポイント](e://get_collaborations_id)を使用して、転送するファイルまたはフォルダのIDのコラボレーションを取得します。コラボレーションIDをキャプチャします。
 
-<Sample id="get_collaborations_id">
+<Samples id="get_collaborations_id">
 
-</Sample>
+</Samples>
 
 ### 転送元ユーザーを所有者として削除
 
@@ -93,8 +93,8 @@ Box内でこれを実行するのに使用される一般的な方法は以下�
 
 `transfer_to_user`アカウントとして呼び出しを実行し、ファイルまたはフォルダのコラボレータとして`transfer_from_user`を削除します。
 
-<Sample id="delete_collaborations_id">
+<Samples id="delete_collaborations_id">
 
-</Sample>
+</Samples>
 
 これにより、ファイルまたはフォルダの所有者は`transfer_to_user`アカウントになり、`transfer_from_user`アカウントはアクセスできなくなります。

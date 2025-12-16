@@ -78,7 +78,7 @@ Box AIには以下のモデルが搭載されています。Box AIと統合さ�
 
 <Tile type="gpt" title="openai__gpt_5_2" href="/guides/box-ai/ai-models/openai-gpt-5-2-model-card">
 
-A multimodal model for coding and agentic tasks across industries.
+業界を越えたコーディングやエージェント型タスク向けのマルチモーダルモデル。
 
 <div>
 
