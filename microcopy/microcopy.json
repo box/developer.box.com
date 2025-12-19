@@ -315,7 +315,7 @@
   // A short title for the dropdown to select an support menu item
   "headers.secondary.dropdowns.additional_resources": "Additional Resources",
   // A boolean that determines whether to show the orange notification barin the header. Must be "true" or "false"
-  "headers.secondary.notifications.display": "true",
+  "headers.secondary.notifications.display": "false",
   // The content of the notification
   "headers.secondary.notifications.message": "A beta version of the new Box developer documentation site is launching soon! Updated Developer Guides, modern API Reference, and AI-powered search are on the way to help you build with Box faster. Stay tuned for more updates.\n",
   // The number of seconds to display the message. Should alwaysbe 0 unless you want to autohide.
