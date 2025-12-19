@@ -109,7 +109,7 @@ Box AI is powered by the following AI models. These models are integrated with B
         <strong style="background-color: #e1f8ff">ISMAP</strong>     
 			</div>
 		</Tile>
-    		<Tile type="gpt" title="azure__openai__gpt_4_1_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card">
+    <Tile type="gpt" title="azure__openai__gpt_4_1_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4-1-mini-model-card">
 			A multimodal model designed to handle lightweight tasks.
 			<div>
 				<strong style="background-color: #e8e8e8">Chat</strong>
@@ -208,6 +208,16 @@ Box AI is powered by the following AI models. These models are integrated with B
         <strong style="background-color: #e1f8ff">ISMAP</strong>                
 				</div>
 		</Tile>
+		<Tile type="model" title="aws__claude_4_5_opus" href="/guides/box-ai/ai-models/aws-claude-4-5-opus-model-card">
+			A premium model combining maximum intelligence with practical performance.
+			<div>
+				<strong style="background-color: #e8e8e8">Chat</strong>
+				<strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #f8d59b">Premium</strong>
+        <strong style="background-color: #e1f8ff">FedRAMP Moderate</strong>
+        <strong style="background-color: #e1f8ff">ISMAP</strong>
+			</div>
+		</Tile>     
 		<Tile type="model" title="aws__claude_4_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-4-5-sonnet-model-card">
 			A model that excels at complex agents, coding, and autonomous multi-step workflows.
 			<div>
