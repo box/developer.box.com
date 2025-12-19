@@ -59,6 +59,14 @@ Models offered in **Beta** mode have not been fully performance-tested at scale 
 Box AI is powered by the following AI models. These models are integrated with Box AI to facilitate various use cases while adhering to enterprise grade standards. Below, you’ll find information about each model, including its capabilities, intended applications, and applicable usage guidelines.
 
 <TileGrid rows="2">
+    <Tile type="gpt" title="openai__gpt_5_2" href="/guides/box-ai/ai-models/openai-gpt-5-2-model-card">
+			A multimodal model for coding and agentic tasks across industries.
+   		<div>
+   			<strong style="background-color: #e8e8e8">Chat</strong>
+				<strong style="background-color: #e1ffe7">Available</strong>
+				<strong style="background-color: #f8d59b">Premium</strong>
+			</div>
+		</Tile> 
     <Tile type="gpt" title="openai__gpt_5_1" href="/guides/box-ai/ai-models/openai-gpt-5-1-model-card">
 			A multimodal model with enterprise-grade performance and adaptive reasoning.
    		<div>
