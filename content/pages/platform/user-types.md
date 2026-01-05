@@ -25,14 +25,18 @@ alias_paths:
 # User Types
 
 A critical part of planning and developing an application is understanding the
-types of users involved. There are four main types of users: managed (internal
-and external), admin, service account, and app users. Let's take a closer look
-at the differences.
+types of users involved. There are four main types of users in Box: 
+- managed (internal and external), 
+- admin, 
+- service account, 
+- app users. 
+
+Let's take a closer look at the differences.
 
 <Message>
   # What type of user does my application use?
 
-The type of user an application is authenticated as is dependent on the
+The type of user an application is authenticated as depends on the
 type of application created, as well as the type of authentication used to
 create an Access Token.
 
@@ -42,16 +46,14 @@ create an Access Token.
 
 The Box Admin is the principal Box account administrator. They can make
 additional co-admins with similar or more restrictive administrative
-privileges. Admins and Co-Admins
-can directly edit, delete, enforce security settings, and run reports against
-these users via the Admin Console.
+privileges. Admins and Co-Admins can directly edit, delete, enforce
+security settings, and run reports against users in the Admin Console.
 
 ## Managed Users
 
-Each Box enterprise is assigned a unique enterprise ID. Managed Users are any
-users that belong to one enterprise ID.  Managed Users consume a standard Box
-license and often, but not
-always, share the same email domain.
+Each Box enterprise is assigned a unique enterprise ID. [Managed Users][mu] are
+any users that belong to one enterprise ID. Managed Users consume a standard
+Box license and often, but not always, share the same email domain.
 
 <Message>
   # Log in as Admin User
@@ -61,13 +63,13 @@ properly operate and therefore require an Admin to log in.
 
 An example of this would be a security application that monitors enterprise
 events and takes action on suspicious events. The events endpoint can only
-be used by Admins or a Co-Admin with permission to access reporting.
+be used by Admins or Co-Admins with permissions to access reporting.
 
 </Message>
 
 ## External Users
 
-An externally managed user, or External User, is a Managed
+An externally managed user, or [External User][eu], is a Managed
 User that belongs to a different enterprise ID. External users are often
 encountered when they are collaborated in on content owned by a Managed User of
 the application's enterprise, or when they authorize an OAuth 2.0 application.
@@ -301,7 +303,10 @@ would need to turn on this switch.
 [getuser]: e://get-users-me
 [updateuser]: e://put-users-id
 [createuser]: e://post-users
-[events]: e://get-events
+[events]: e://get-events/
+[mu]: https://support.box.com/hc/en-us/articles/32209778850067-About-Managed-Users
+[eu]: https://support.box.com/hc/en-us/articles/32132489860115-About-External-Users
+[uu]: https://support.box.com/hc/en-us/articles/32138574148499-About-Unmanaged-Users
 <!-- i18n-enable localize-links -->
 [cm]: https://support.box.com/hc/en-us/articles/360044197333-Using-the-Content-Manager
 [uag-tab]: https://support.box.com/hc/en-us/articles/360043695714-Admin-Console-Guide
