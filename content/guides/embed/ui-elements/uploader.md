@@ -169,6 +169,7 @@ uploader.removeAllListeners();
 | `complete` | `Array<File>` | Will be fired when all uploads in the current view are complete. Event data will be an array of File Object.                                      |
 | `upload`   | File          | Fired when a single file is successfully uploaded. Event data will be a File Object.                                                              |
 | `error`    | Object        | Fired when a single file has an upload error. Event data will be an object with properties file from the File Web API and the error object error. |
+| `onBeforeUpload`    | `Array<File>`        | Fired after user selected files to upload. Should allow for validation of said files but the return of `boolean` or `Array<File> or Array<never> or ''` doesn't seem to work.|
 
 ## Scopes
 
