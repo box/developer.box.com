@@ -1,5 +1,4 @@
 ---
-title: "Platform App"
 rank: 20
 alias_paths:
   - /docs/custom-applications
@@ -14,6 +13,8 @@ related_guides:
   - authentication/client-credentials
 ---
 
+# Platform App
+
 Platform App typically presents Box functionality to a user through a
 custom interface. Box offers pre-built, customizable user interface components,
 known as [UI Elements][uie], for functionalities like browsing, searching, and
@@ -24,7 +25,7 @@ previewing content.
 Platform Apps support [OAuth 2.0][oauth2], [JWT][jwt], and
 [Client Credentials Grant][cc] authentication methods.
 
-👉 **[Learn more about authentication methods](/guides/authentication/select)**
+👉 **[Learn more about authentication methods](https://staging.developer.box.com/guides/authentication/select/)**
 
 ## When to use
 
@@ -56,13 +57,13 @@ Example use cases include:
 
 Platform Apps may require approval before use.
 
-👉 **[Learn how to approve Platform Apps](/guides/authorization/platform-app-approval)**
+👉 **[Learn how to approve Platform Apps](https://developer.box.com/guides/authorization/platform-app-approval/)**
 
 ## Related guides
 
-- **[OAuth 2.0 Auth](/guides/authentication/oauth2/index)** — GUIDE
-- **[JWT Auth](/guides/authentication/jwt/index)** — GUIDE
-- **[Client Credentials Grant](/guides/authentication/client-credentials/index)** — GUIDE
+- **[OAuth 2.0 Auth](https://developer.box.com/guides/authentication/oauth2/)** 
+- **[JWT Auth](https://developer.box.com/guides/authentication/jwt/)**
+- **[Client Credentials Grant](https://developer.box.com/guides/authentication/client-credentials/index)**
 
 [oauth2]: /guides/authentication/oauth2
 [jwt]: /guides/authentication/jwt

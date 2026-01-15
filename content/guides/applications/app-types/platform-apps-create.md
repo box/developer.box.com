@@ -1,5 +1,4 @@
 ---
-title: "Create a Platform App"
 rank: 10
 related_endpoints: []
 related_guides:
@@ -10,6 +9,8 @@ alias_paths:
   - /docs/use-case-recipes
   - /v2/docs/box-api-recipes
 ---
+
+# Create a Platform App
 
 A Platform App allows for interaction with our 150+ endpoints.
 For example, downloading/uploading, searching, applying metadata, and more.
@@ -68,7 +69,7 @@ Depending on the authentication method you choose, you need to specify further d
 
 ## Related guides
 
-- **[Select Auth Method](/guides/authentication/select)** — GUIDE
+- **[Select Auth Method](https://developer.box.com/guides/authentication/select/)**
 
 [dev-console]: https://app.box.com/developers/console
 [integrations]: /guides/applications/integrations
