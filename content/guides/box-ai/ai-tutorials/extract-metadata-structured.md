@@ -276,3 +276,4 @@ print(f"box_ai_response: {box_ai_response.answer}")
 [blog]: https://medium.com/box-developer-blog
 [inline-field]: #use-fields-parameter
 [metadata-template]: #use-metadata-template
+[autofill-metadata]: https://support.box.com/hc/en-us/articles/360044196173-Using-Metadata#h_01JJSRYKDKXHGJT9ZHCW1E9RX5
