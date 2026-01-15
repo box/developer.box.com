@@ -14,8 +14,6 @@ related_guides:
   - authentication/client-credentials
 ---
 
-import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
-
 Platform App typically presents Box functionality to a user through a
 custom interface. Box offers pre-built, customizable user interface components,
 known as [UI Elements][uie], for functionalities like browsing, searching, and
@@ -26,15 +24,15 @@ previewing content.
 Platform Apps support [OAuth 2.0][oauth2], [JWT][jwt], and
 [Client Credentials Grant][cc] authentication methods.
 
-<Card href="/guides/authentication/select" arrow title="Learn more about authentication methods"/>
+👉 **[Learn more about authentication methods](/guides/authentication/select)**
 
 ## When to use
 
 Use a Platform App when you want to:
 
-- Use [OAuth 2.0][oauth2], [JWT][jwt] or [Client Credentials Grant][cc] for authentication.
+- Use [OAuth 2.0][oauth2], [JWT][jwt] or [Client Credentials Grant][cc] for authentication
 - Upload and download files
-- Access both your own files and files owned by [managed or external users][users].
+- Access both your own files and files owned by [managed or external users][users]
 - List the application in the Box Integrations
 - Provide integration into the Box Web App
 
@@ -44,33 +42,30 @@ Example use cases include:
 
 - A file vault in an application that allows an end user to access files that have been shared with them, while also providing access for employees to the same files through the Box Web app.
 
-  An example of this is financial advisor sharing statements and investment
+  An example of this is a financial advisor sharing statements and investment
   prospectuses with investors that can be viewed and commented on within a
   platform application.
 
 - A file upload feature in an application that allows an end user to submit and upload files from within a custom-built application to Box. These uploads then initiate a business process with the Box Web app.
 
   An example of this is a candidate submitting a PDF of a resume to a
-  recruiting portal then can then be routed to an appropriate employee for
+  recruiting portal, which can then be routed to an appropriate employee for
   review.
 
 ## Approval
 
 Platform Apps may require approval before use.
 
-<Card href="/guides/authorization/platform-app-approval" arrow title="Learn how to approve Platform Apps"/>
+👉 **[Learn how to approve Platform Apps](/guides/authorization/platform-app-approval)**
+
+## Related guides
+
+- **[OAuth 2.0 Auth](/guides/authentication/oauth2/index)** — GUIDE
+- **[JWT Auth](/guides/authentication/jwt/index)** — GUIDE
+- **[Client Credentials Grant](/guides/authentication/client-credentials/index)** — GUIDE
 
 [oauth2]: /guides/authentication/oauth2
 [jwt]: /guides/authentication/jwt
 [cc]: /guides/authentication/client-credentials
 [uie]: /guides/embed/ui-elements
 [users]: /platform/user-types/#managed-users/
-
-<RelatedLinks
-  title="RELATED GUIDES"
-  items={[
-    { label: "OAuth 2.0 Auth", href: "/guides/authentication/oauth2/index", badge: "GUIDE" },
-    { label: "JWT Auth", href: "/guides/authentication/jwt/index", badge: "GUIDE" },
-    { label: "Client Credentials Grant", href: "/guides/authentication/client-credentials/index", badge: "GUIDE" }
-  ]}
-/>
