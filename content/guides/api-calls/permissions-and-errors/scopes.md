@@ -342,4 +342,3 @@ The standard OAuth scopes are also supported when downscoping.
 [suppress]: g://api-calls/suppress-notifications
 [ds]: g://authentication/tokens/downscope
 [sa]: page://platform/user-types/#service-account
-[ca]: https://support.box.com/hc/en-us/articles/1500005433721-Users-Groups-Settings#h_01GSE1DYJKTY9EXEWJEDKFHCNV
