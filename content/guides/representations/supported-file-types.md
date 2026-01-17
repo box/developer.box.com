@@ -140,7 +140,6 @@ The following file types are supported by the representation API.
 | `.xls` | Yes | Yes | Yes |
 | `.xlsm` | Yes | Yes | Yes |
 | `.xlsx` | Yes | Yes | Yes |
-| `.xlsb` | Yes | Yes | Yes |
 
 ## Text-Based Files
 

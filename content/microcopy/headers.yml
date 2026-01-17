@@ -112,7 +112,7 @@ primary:
       text: Box Developer Blog
 
       // url: The URL to Medium bev blog
-      url: https://medium.com/box-developer-blog
+      url: https://blog.box.com/category/developer
 
   buttons:
     dashboard:
@@ -171,19 +171,19 @@ primary:
 
   connect_featured:
     tag:
-      text: Event
+      text: Workshop
 
     title:
-      text: BoxWorks Content + AI
+      text: Build AI Apps with MCP Servers
 
     details:
       text: |-
-        Learn how to use Box MCP server, dive into Box AI APIs,
-        and discover enhanced metadata extraction with agents.
+        Join a short online course, built in partnership with
+        Deeplearning.ai, and taught by Ben Kus, Box CTO.
 
     cta:
       text: |-
-        Register now
+        Enroll for free
 
 secondary:
   images:
@@ -245,15 +245,19 @@ secondary:
     // message: |-
       The content of the notification
     message: >
-      Join BoxWorks 2024 to discover what's possible with content and AI!
+      A beta version of the new Box developer documentation site is
+      launching soon! Updated Developer Guides, modern
+      API Reference, and AI-powered search are on the
+      way to help you build with Box faster.
+      Stay tuned for more updates.
 
-    // href: |-
-      The link to navigate to when the CTA is clicked
-    href: "https://boxworks.box.com/boxworks"
+    # // href: |-
+    #   The link to navigate to when the CTA is clicked
+    # href: "https://boxworks.box.com/boxworks"
 
-    // cta: |-
-      The text of the CTA
-    cta: Register now!
+    # // cta: |-
+    #   The text of the CTA
+    # cta: Register now!
 
     // ttl: |-
       The number of seconds to display the message. Should always

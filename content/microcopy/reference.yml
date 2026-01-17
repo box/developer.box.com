@@ -165,19 +165,19 @@ environments:
   // node: |-
     A label for Node JS
     code sample - DO NOT TRANSLATE
-  node: Node v3
+  node: Node v4
   // dotnet: |-
     A label for .NET
     code sample - DO NOT TRANSLATE
-  dotnet: .NET v5
+  dotnet: .NET v6
   // java: |-
     A label for Java
     code sample - DO NOT TRANSLATE
-  java: Java v4
+  java: Java v5
   // python: |-
     A label for Python
     code sample - DO NOT TRANSLATE
-  python: Python v3
+  python: Python v4
   // cli: |-
     A label for command line interface
     code sample - DO NOT TRANSLATE
@@ -188,7 +188,7 @@ environments:
   curl: cURL
   // ios: |-
     A label for iOS code sample - DO NOT TRANSLATE
-  ios: iOS v5
+  ios: iOS v6
   // ts_gen: |-
     A label for TypeScript code sample
     from auto-generated SDK - DO NOT TRANSLATE
