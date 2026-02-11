@@ -38,6 +38,8 @@ When contacting customer support, specify the user ID you plan to use those APIs
 | [`GET /folders/:id/items`][List folder items]                                | List items within an archive or items in a folder within an archive.                                                                                                                                                                                              |
 | [`POST /files/:id/copy`][Copy file]                                          | Copy a file to an archive.                                                                                                                                                                                                                                        |
 | [`POST /folders/:id/copy`][Copy folder]                                      | Copy a folder to an archive.                                                                                                                                                                                                                                      |
+| [`DELETE /files/:id`][Delete file]                                           | Permanently delete file within an archive.                                                                                                                                                                                                                        |
+| [`DELETE /folders/:id`][Delete folder]                                       | Permanently delete folder within an archive. Requires contacting customer support to enable.                                                                                                                                                                      |
 | [`POST /files/:id/metadata/:scope/:template_key`][Create metadata on file]   | Create a metadata instance attached to a file within an archive.                                                                                                                                                                                                  |
 | [`GET /files/:id/metadata/:scope/:template_key`][View metadata on file]      | View a metadata instance attached to a file within an archive.                                                                                                                                                                                                    |
 | [`GET /files/:id/metadata`][List metadata on file]                           | List all metadata instances attached to a file within an archive.                                                                                                                                                                                                 |
@@ -63,6 +65,8 @@ When contacting customer support, specify the user ID you plan to use those APIs
 [List folder items]: e://get-folders-id-items
 [Copy file]: e://post-files-id-copy
 [Copy folder]: e://post-folders-id-copy
+[Delete file]: e://delete-files-id
+[Delete folder]: e://delete-folders-id
 [Create metadata on file]: e://post-files-id-metadata-id-id
 [View metadata on file]: e://get-files-id-metadata-id-id
 [List metadata on file]: e://get-files-id-metadata
