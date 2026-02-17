@@ -341,7 +341,7 @@ Salesforce
 
 <Tile type="model" title="BoxとOpenAIを使用したマルチエージェントワークフロー" href="https://medium.com/box-developer-blog/building-multi-agent-workflows-with-openais-new-sdk-and-box-3e3c81cf4715">
 
-OpenAI Responses APIとBoxエージェントを使用して、Boxインスタンスからエージェント型ワークフローに非構造化データを追加します。
+OpenAI Responses APIとBox Agentを使用して、Boxインスタンスからエージェント型ワークフローに非構造化データを追加します。
 
 <div>
 

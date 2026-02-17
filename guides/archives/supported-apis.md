@@ -49,6 +49,8 @@ fullyTranslated: true
 | [`GET /folders/:id/items`][List folder items]                                | アーカイブ内の項目またはアーカイブ内のフォルダにある項目のリストを取得します。                                                                                                 |
 | [`POST /files/:id/copy`][Copy file]                                          | ファイルをアーカイブにコピーします。                                                                                                                      |
 | [`POST /folders/:id/copy`][Copy folder]                                      | フォルダをアーカイブにコピーします。                                                                                                                      |
+| [`DELETE /files/:id`][Delete file]                                           | Permanently delete a file within an archive.                                                                                            |
+| [`DELETE /folders/:id`][Delete folder]                                       | Permanently delete a folder within an archive. Requires contacting customer support to enable.                                          |
 | [`POST /files/:id/metadata/:scope/:template_key`][Create metadata on file]   | アーカイブ内のファイルに追加されるメタデータインスタンスを作成します。                                                                                                     |
 | [`GET /files/:id/metadata/:scope/:template_key`][View metadata on file]      | アーカイブ内のファイルに追加されるメタデータインスタンスを表示します。                                                                                                     |
 | [`GET /files/:id/metadata`][List metadata on file]                           | アーカイブ内のファイルに追加されるすべてのメタデータインスタンスのリストを取得します。                                                                                             |
@@ -88,6 +90,10 @@ fullyTranslated: true
 [Copy file]: e://post-files-id-copy
 
 [Copy folder]: e://post-folders-id-copy
+
+[Delete file]: e://delete-files-id
+
+[Delete folder]: e://delete-folders-id
 
 [Create metadata on file]: e://post-files-id-metadata-id-id
 
