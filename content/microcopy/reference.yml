@@ -179,12 +179,12 @@ environments:
     code sample - DO NOT TRANSLATE
   python: Python v4
   // cli: |-
-    A label for command line interface
-    code sample - DO NOT TRANSLATE
+    Describes the command line interface when
+    selecting a code sample - DO NOT TRANSLATE
   cli: CLI
   // curl: |-
-    A label for cURL
-    code sample
+    Describes the cURL tool when
+    selecting a code sample
   curl: cURL
   // ios: |-
     A label for iOS code sample - DO NOT TRANSLATE

@@ -342,6 +342,8 @@ unpublish
 sanitization
 checkboxes
 strikethrough
+differentiators
+sanitization
 theming
 Agentforce
 DocGen
@@ -359,6 +361,7 @@ subprocessors
 SVG
 SVGs
 px
+Kus
 natively
 Kus
 multiselect
@@ -368,3 +371,5 @@ cybersecurity
 SObject
 WatsonX
 400k
+Groq
+AgentKit

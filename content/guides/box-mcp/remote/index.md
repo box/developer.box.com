@@ -59,22 +59,6 @@ To connect to Box from the AI Agent platform, you need to:
   )
 ```
 
-### Claude
-
-To start using the remote Box MCP server in [Claude](https://claude.ai/directory), go to Claude app settings and click *Connectors*. Within this view click *Browse connectors* and choose Box. Ensure to grant Claude access to Box.
-
-See a demo video that showcases how to connect Box MCP with the Claude desktop app.
-
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/OJVjXZkPd54?si=PSiV6aKkUnL7CXoG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-### Copilot Studio
-
-To add the remote Box MCP server, follow the instructions provided by the Copilot Studio side. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp#add-tools-from-an-existing-mcp-connector-to-an-agent).
-
-### Azure API Center
-
-To add the remote Box MCP server in Azure API Center's Enterprise Registry, follow the instructions provided by Azure. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Azure API Center's Enterprise Registry](https://learn.microsoft.com/en-us/azure/api-center/register-discover-mcp-server).
-
 ### Amazon Quick Suite
 
 To add the remote Box MCP server in Amazon Quick Suite, follow these steps:
@@ -105,13 +89,21 @@ Watch a video that features a demo project, a React based chat bot that leverage
 
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/Rcn8p-nLJtI?si=dWsMnE6reTE-aKQw" title="Box remote MCP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Mistral AI’s Le Chat
+### Azure API Center
 
-To enable Box MCP for [Mistral AI’s Le Chat](https://chat.mistral.ai/chat), visit [connectors page](https://chat.mistral.ai/connections), click *Connect* and grant access to Box. Alternatively, directly form the chat view, click *Tools* and choose Box.
+To add the remote Box MCP server in Azure API Center's Enterprise Registry, follow the instructions provided by Azure. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Azure API Center's Enterprise Registry](https://learn.microsoft.com/en-us/azure/api-center/register-discover-mcp-server).
 
-<ImageFrame noborder center>
-  ![MCP](./img/mistral.gif)
-</ImageFrame>
+### Claude
+
+To start using the remote Box MCP server in [Claude](https://claude.ai/directory), go to Claude app settings and click *Connectors*. Within this view click *Browse connectors* and choose Box. Ensure to grant Claude access to Box.
+
+See a demo video that showcases how to connect Box MCP with the Claude desktop app.
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/OJVjXZkPd54?si=PSiV6aKkUnL7CXoG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Copilot Studio
+
+To add the remote Box MCP server, follow the instructions provided by the Copilot Studio side. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp#add-tools-from-an-existing-mcp-connector-to-an-agent).
 
 ### GitHub Copilot
 
@@ -125,6 +117,38 @@ https://vscode.dev/redirect
 ```
 
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/Y1a16jhCVPc?si=MOutZC3_tGtpcJ7c" title="Box remote MCP with Github Copilot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Groq
+
+To integrate Box MCP server with Groq, follow the tutorial available in the [Groq API Cookbook](https://github.com/groq/groq-api-cookbook/tree/main/tutorials/03-mcp/mcp-box). This tutorial provides step-by-step instructions for setting up and using Box MCP with Groq.
+
+Watch a [video demonstration](https://groq.enterprise.slack.com/files/U089GJTGFFA/F09QXEZ3V17/groq_box_mcp_tutorial__1.mp4) of the Groq and Box MCP integration.
+
+### Microsoft Foundry Tools
+
+Box is available in the Microsoft Foundry Tools catalog. To add the remote Box MCP server, refer to the official Microsoft documentation: [Discover tools in the Microsoft Foundry Tools](https://learn.microsoft.com/en-us/azure/ai-foundry/agents/concepts/tool-catalog?view=foundry).
+
+### Mistral AI’s Le Chat
+
+To enable Box MCP for [Mistral AI’s Le Chat](https://chat.mistral.ai/chat), visit [connectors page](https://chat.mistral.ai/connections), click *Connect* and grant access to Box. Alternatively, directly form the chat view, click *Tools* and choose Box.
+
+<ImageFrame noborder center>
+  ![MCP](./img/mistral.gif)
+</ImageFrame>
+
+### OpenAI AgentKit
+
+Box enables agentic enterprise support with OpenAI AgentKit. For more information and a demonstration, see the [Box blog post](https://blog.box.com/box-enables-agentic-enterprise-support-openais-new-agentkit).
+
+### Windows
+
+Box MCP server is available for Windows. For more information, visit the [Windows Agentic page](https://developer.microsoft.com/en-us/windows/agentic/).
+
+<Message type='notice'>
+
+This integration is currently in preview and the customer experience may change.
+
+</Message>
 
 ### Using Box AI Features with the MCP Server
 
@@ -170,6 +194,7 @@ Manage files and folders, perform searches, and handle content operations across
 | Tool | Description|
 | ---- | ---------- |
 | `search_files_keyword`| Searches for files using keywords. Supports metadata filters, file extension filtering, and field selection.|
+| `search_files_metadata` | Searches for files using SQL-like metadata queries. Supports complex filtering with parameters, field selection, and folder scoping. |
 | `search_folders_by_name`| Searches for folders within Box by name using keyword matching.|
 
 ### Box AI
@@ -183,6 +208,7 @@ Use AI-powered tools to ask questions, extract insights, and analyze content acr
 | `ai_qa_multi_file`| Asks a question to multiple files using Box AI.|
 | `ai_extract_freeform`| Extracts metadata from files using Box AI in freeform format without requiring predefined template structures.|
 | `ai_extract_structured`| Extracts structured metadata from files using Box AI based on either custom fields definition or an existing metadata template.|
+| `ai_extract_structured_from_fields_enhanced` | Extracts structured metadata from files using Box AI Enhanced Extract Agent based on custom field definitions. |
 
 ### Collaboration
 
@@ -191,6 +217,7 @@ Enable team collaboration through comments, shared links, and collaboration mana
 | Tool | Description|
 | ---- | ---------- |
 | `create_file_comment` | Creates a new comment on a specific file. |
+| `list_item_collaborations` | List all existing collaborations on an item. |
 | `list_file_comments` | Lists all comments on a specific file. |
 | `list_tasks` | Lists all tasks associated with a specific file, including status, message, and due dates. |
 
@@ -201,8 +228,23 @@ Create and manage Box Hubs for organizing collaborative content and resources ar
 | Tool | Description |
 | ---- | ---------- |
 | `add_items_to_hub` | Adds files, folders, or web links to a specific hub. |
+| `copy_hub` | Creates a copy of an existing Box Hub with all its structure and settings. The original hub remains unmodified. |
 | `create_hub` | Creates a new hub. |
 | `get_hub_details` | Retrieves detailed information about a specific hub. |
 | `get_hub_items` | Gets items (files and folders) associated with a specific hub. |
 | `list_hubs` | Lists all hubs accessible to the authenticated user. |
 | `update_hub` | Updates the title and description of a specific hub. |
+
+### Doc Gen
+
+Automate document generation by using templates with placeholder tags to create customized documents at scale.
+
+| Tool | Description |
+| ---- | ---------- |
+| `get_docgen_template_by_id` | Retrieves details about a Doc Gen template. |
+| `list_docgen_templates` | Lists all Box Doc Gen templates available to the authenticated user.  |
+| `create_docgen_batch` | Generates documents from a Doc Gen template by filling placeholder tags with provided data. |
+
+## Feedback
+
+To share feedback or ask questions about Box MCP server, visit the [Box AI API thread](https://community.box.com/box-ai-api-8) of the Box Developer Community forum.
