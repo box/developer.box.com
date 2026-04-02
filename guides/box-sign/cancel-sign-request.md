@@ -18,9 +18,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-sign/cancel-sign-request.md
 fullyTranslated: true
 ---
-# Box Signのリクエストのキャンセル
+# Box Signリクエストのキャンセル
 
-Box Signのリクエストは、まだ署名も拒否もされていない場合、[Box Signのリクエストをキャンセルエンドポイント][cancel]を使用してキャンセルできます。未署名の署名者は、ドキュメントに署名できなくなります。
+Box Signリクエストは、まだ署名も拒否もされていない場合、[Box Signリクエストをキャンセルエンドポイント][cancel]を使用してキャンセルできます。未署名の署名者は、ドキュメントに署名できなくなります。
 
 リクエストをキャンセルできるのは、そのリクエストを作成したユーザー (リクエスト送信者) のみです。リクエストは、拒否された場合、全員が署名済みの場合、ドキュメントがまだ変換中の場合は、キャンセルできません。
 
