@@ -105,6 +105,10 @@ for solution to common errors encountered when working with the Box APIs.
 | **Error**    | `invalid_grant` |
 | **Message**  | `kid` invalid, unable to lookup correct key. |
 | **Solution** | The key ID (`kid`) in the JWT header must match a public key registered for the application (for example, the `publicKeyID` in your configuration). Confirm you are using the correct configuration file, or generate a new RSA keypair in the Developer Console and update your app to use it. |
+| | |
+| **Error**    | `invalid_grant` |
+| **Message**  | Current date time must be before the expiration date time listed in the 'exp' claim. |
+| **Solution** | This error occurs when the Unix time on your local machine and the Box server are out of sync. To fix this error, update the Unix time on your machine to match a synchronized time server, then try the request again. |
 | |  |
 | **Error**    | `cannot_make_collaborated_subfolder_private` |
 | **Message**  | Cannot move a collaborated subfolder to a private folder unless the new owner is explicitly specified. |
@@ -129,10 +133,6 @@ for solution to common errors encountered when working with the Box APIs.
 | **Error**    | `invalid_grant`   |
 | **Message**  | Verify the authorization code is set correctly in your request, or your application likely needs to get a new authorization code.  |
 | **Solution** | The authorization code supplied in the API request is missing or no longer valid. Possible solutions are to verify that the access token is added correctly in the request. If correctly set, the access token may have expired. Attempt to refresh the access token or fetch a new one.  |
-| | |
-| **Error**    | `invalid_grant` |
-| **Message**  | Current date time must be before the expiration date time listed in the 'exp' claim. |
-| **Solution** | This error occurs when the Unix time on your local machine and the Box server are out of sync. To fix this error, update the Unix time on your machine to match a synchronized time server, then try the request again. |
 |  |  |
 | **Error**    | `invalid_limit` |
 | **Message**  | Limit is not a valid number |
