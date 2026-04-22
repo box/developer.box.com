@@ -66,7 +66,7 @@ for solution to common errors encountered when working with the Box APIs.
 | **Message**  | The client credentials are invalid. |
 | **Solution** | Verify the Client ID and Client Secret in the token request match the Developer Console.|
 | | |
-| **Error**    | `invalid_credentials` |
+| **Error**    | `invalid_grant` |
 | **Message**  | Invalid refresh token |
 | **Solution** | The refresh token may be invalid, revoked, or expired. Correct your application's refresh-token handling and obtain a new token pair through the OAuth 2.0 authorization flow if needed. |
 | | |
