@@ -60,7 +60,7 @@ for solution to common errors encountered when working with the Box APIs.
 | | |
 | **Error**    | `unauthorized_client` |
 | **Message**  | This app is not authorized by the enterprise admin. |
-| **Solution** | Server authentication applications using JWT or Client Credentials Grant must be authorized by a Box Admin before use. Follow the steps in [Platform App Approval](guide://authorization/platform-app-approval) to complete authorization. |
+| **Solution** | Server authentication applications using JWT or Client Credentials Grant must be authorized by a Box Admin before use. Follow the steps in <Link href="/guides/authorization/platform-app-approval">Platform App Approval</Link>. |
 | | |
 | **Error**    | `invalid_client` |
 | **Message**  | The client credentials are invalid. |
