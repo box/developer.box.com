@@ -200,6 +200,10 @@ for solution to common errors encountered when working with the Box APIs.
 | **Error**    | `unauthorized`  |
 | **Message**  | Unauthorized    |
 | **Solution** | Authorization token is not authorized, check extended error message in body for more details. |
+|  |  |
+| **Error**    | `invalid_token`  |
+| **Message**  | The access token provided is invalid. |
+| **Solution** | The access token may be incorrect, corrupted, or expired—for example, because of a typo, using a token from another environment, or revocation or deletion. Obtain a new access token from the token endpoint. For OAuth 2.0 auth, you can refresh an expired access token; see [Refresh a token](https://developer.box.com/guides/authentication/tokens/refresh). |
 
 ### 403 Forbidden
 
