@@ -64,7 +64,7 @@ for solution to common errors encountered when working with the Box APIs.
 | | |
 | **Error**    | `invalid_client` |
 | **Message**  | The client credentials are invalid. |
-| **Solution** | Verify the Client ID and Client Secret in the token request match the Developer Console.|
+| **Solution** | Verify the Client ID and Client Secret in the token request match the values in the Developer Console.|
 | | |
 | **Error**    | `invalid_grant` |
 | **Message**  | Invalid refresh token |
