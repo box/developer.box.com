@@ -72,7 +72,7 @@ for solution to common errors encountered when working with the Box APIs.
 | | |
 | **Error**    | `invalid_request` |
 | **Message**  | The grant type is unauthorized for this client_id. |
-| **Solution** | You may be requesting a token using standard OAuth 2.0 while the app is configured for Server Authentication (JWT), or the opposite. Use the token request type that matches your app's authentication method. See [The grant type is unauthorized for this client_id](https://support.box.com/hc/en-us/articles/360044193033-API-Authentication-The-grant-type-is-unauthorized-for-this-client-id). |
+| **Solution** | You may be requesting a token using standard OAuth 2.0 while the app is configured for Server Authentication (JWT), or vice versa. Use the token request type that matches your app's authentication method. See [The grant type is unauthorized for this client_id](https://support.box.com/hc/en-us/articles/360044193033-API-Authentication-The-grant-type-is-unauthorized-for-this-client-id). |
 | | |
 | **Error**    | `invalid_request` |
 | **Message**  | Invalid `grant_type` parameter or parameter missing. |
