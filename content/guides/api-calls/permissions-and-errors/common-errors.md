@@ -60,7 +60,7 @@ for solution to common errors encountered when working with the Box APIs.
 | | |
 | **Error**    | `unauthorized_client` |
 | **Message**  | This app is not authorized by the enterprise admin. |
-| **Solution** | Server authentication applications using JWT or Client Credentials Grant must be authorized by a Box Admin before use. Follow the steps in [Platform App Approval](https://developer.box.com/guides/authorization/platform-app-approval) to complete authorization.|
+| **Solution** | Server authentication applications using JWT or Client Credentials Grant must be authorized by a Box Admin before use. Follow the steps in [Platform App Approval](guide://authorization/platform-app-approval) to complete authorization. |
 | | |
 | **Error**    | `invalid_client` |
 | **Message**  | The client credentials are invalid. |
@@ -203,7 +203,7 @@ for solution to common errors encountered when working with the Box APIs.
 |  |  |
 | **Error**    | `invalid_token`  |
 | **Message**  | The access token provided is invalid. |
-| **Solution** | The access token may be incorrect, corrupted, or expired—for example, because of a typo, using a token from another environment, or revocation or deletion. Obtain a new access token from the token endpoint. For OAuth 2.0 auth, you can refresh an expired access token; see [Refresh a token](https://developer.box.com/guides/authentication/tokens/refresh). |
+| **Solution** | The access token may be incorrect, corrupted, or expired—for example, because of a typo, using a token from another environment, or revocation or deletion. Obtain a new access token from the token endpoint. For OAuth 2.0 auth, you can refresh an expired access token; see [Refresh a token](guide://authentication/tokens/refresh). |
 
 ### 403 Forbidden
 
