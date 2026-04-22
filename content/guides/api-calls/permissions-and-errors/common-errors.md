@@ -129,10 +129,6 @@ for solution to common errors encountered when working with the Box APIs.
 | **Error**   | `invalid_collaboration_item` |
 | **Message**  | Item type must be specified and set to 'folder'  |
 | **Solution** | The `item.type` field of the collaboration item should be set to folder.|
-| | |
-| **Error**    | `invalid_grant`   |
-| **Message**  | Verify the authorization code is set correctly in your request, or your application likely needs to get a new authorization code.  |
-| **Solution** | The authorization code supplied in the API request is missing or no longer valid. Possible solutions are to verify that the access token is added correctly in the request. If correctly set, the access token may have expired. Attempt to refresh the access token or fetch a new one.  |
 |  |  |
 | **Error**    | `invalid_limit` |
 | **Message**  | Limit is not a valid number |
