@@ -203,7 +203,7 @@ for solution to common errors encountered when working with the Box APIs.
 |  |  |
 | **Error**    | `invalid_token`  |
 | **Message**  | The access token provided is invalid. |
-| **Solution** | The access token may be incorrect, corrupted, or expired—for example, because of a typo, using a token from another environment, or revocation or deletion. Obtain a new access token from the token endpoint. For OAuth 2.0 auth, you can refresh an expired access token; see [Refresh a token](guide://authentication/tokens/refresh). |
+| **Solution** | The access token may be incorrect, corrupted, or expired—for example, because of a typo, using a token from another environment, or revocation or deletion. Obtain a new access token from the token endpoint. For OAuth 2.0 auth, you can refresh an expired access token; see <Link href="/guides/authentication/tokens/refresh">Refresh a token</Link>. |
 
 ### 403 Forbidden
 
