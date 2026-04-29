@@ -40,11 +40,11 @@ Boxには、アプリケーションの作成に使用できる一連のSDKが�
 
 | プラットフォーム                          | メンテナンスの有無 | APIパリティ |
 | --------------------------------- | --------- | ------- |
-| [Java SDK][javasdk]               | はい        | Full    |
-| [iOS Content SDK][iossdk]         | はい        | Full    |
-| [.NET SDK][dotnetsdk]             | はい        | Full    |
-| [Python SDK][pythonsdk]           | はい        | Full    |
-| [Node SDK][nodesdk]               | はい        | Full    |
+| [Java SDK][javasdk]               | あり        | Full    |
+| [iOS Content SDK][iossdk]         | あり        | Full    |
+| [.NET SDK][dotnetsdk]             | あり        | Full    |
+| [Python SDK][pythonsdk]           | あり        | Full    |
+| [Node SDK][nodesdk]               | あり        | Full    |
 | [Android Content SDK][androidsdk] | いいえ       | Full    |
 
 <Message type="warning">

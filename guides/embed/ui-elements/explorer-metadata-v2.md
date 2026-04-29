@@ -198,9 +198,9 @@ export default ContentExplorerContainer;
 
 | プロパティ           | 型       | 必須  | 説明                                                                         |
 | --------------- | ------- | --- | -------------------------------------------------------------------------- |
-| `id`            | string  | はい  | 次の形式のメタデータフィールド識別子: `metadata.<scope>.<templateKey>.<field>`               |
-| `textValue`     | string  | はい  | 列ヘッダーの表示名。                                                                 |
-| `type`          | string  | はい  | Boxメタデータフィールドのタイプ (`string`、`number`、`date`、`singleSelect`、`multiSelect`)。 |
+| `id`            | string  | あり  | 次の形式のメタデータフィールド識別子: `metadata.<scope>.<templateKey>.<field>`               |
+| `textValue`     | string  | あり  | 列ヘッダーの表示名。                                                                 |
+| `type`          | string  | あり  | Boxメタデータフィールドのタイプ (`string`、`number`、`date`、`singleSelect`、`multiSelect`)。 |
 | `allowsSorting` | boolean | いいえ | 列ヘッダーの並べ替えを有効にします。                                                         |
 | `minWidth`      | number  | いいえ | 列の幅の最小値 (ピクセル単位)。                                                          |
 | `maxWidth`      | number  | いいえ | 列の幅の最大値 (ピクセル単位)。                                                          |

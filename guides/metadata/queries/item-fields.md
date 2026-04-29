@@ -26,14 +26,14 @@ fullyTranslated: true
 
 | フィールド名                      | 説明                                                            | 並べ替え |
 | --------------------------- | ------------------------------------------------------------- | ---- |
-| `item.type`                 | 項目のタイプ: `file`または`folder`                                     | はい   |
-| `item.name`                 | 項目の名前                                                         | はい   |
-| `item.description`          | 項目の説明                                                         | はい   |
-| `item.extension`            | ファイル拡張子 (`pdf`、`jpeg`、`xlsx`、`txt`、`xls`、`png`、`log`、`csv`など) | はい   |
-| `item.owned_by`             | 項目の所有者 (例: `user_123`)                                        | はい   |
-| `item.owner_enterprise_id`  | 項目所有者のEnterprise ID (例: `1234`)                               | はい   |
-| `item.created_at`           | Boxで項目が作成された日時                                                | はい   |
-| `item.modified_at`          | Boxで項目が最後に更新された日時                                             | はい   |
-| `item.content_created_at`   | 項目が最初に作成された日時 (この日時は項目がBoxにアップロードされた時点よりも前になる場合があります)         | はい   |
-| `item.content_modified_at`  | 項目が最後に更新された日時 (この日時は項目がBoxにアップロードされた時点よりも前になる場合があります)         | はい   |
+| `item.type`                 | 項目のタイプ: `file`または`folder`                                     | あり   |
+| `item.name`                 | 項目の名前                                                         | あり   |
+| `item.description`          | 項目の説明                                                         | あり   |
+| `item.extension`            | ファイル拡張子 (`pdf`、`jpeg`、`xlsx`、`txt`、`xls`、`png`、`log`、`csv`など) | あり   |
+| `item.owned_by`             | 項目の所有者 (例: `user_123`)                                        | あり   |
+| `item.owner_enterprise_id`  | 項目所有者のEnterprise ID (例: `1234`)                               | あり   |
+| `item.created_at`           | Boxで項目が作成された日時                                                | あり   |
+| `item.modified_at`          | Boxで項目が最後に更新された日時                                             | あり   |
+| `item.content_created_at`   | 項目が最初に作成された日時 (この日時は項目がBoxにアップロードされた時点よりも前になる場合があります)         | あり   |
+| `item.content_modified_at`  | 項目が最後に更新された日時 (この日時は項目がBoxにアップロードされた時点よりも前になる場合があります)         | あり   |
 | `item.quick_search_content` | 項目名、説明、メタデータのフィールド全体でのファイルコンテンツ検索                             | いいえ  |

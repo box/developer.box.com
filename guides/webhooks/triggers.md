@@ -32,51 +32,51 @@ fullyTranslated: true
 
 | イベント                                   | トリガー                                                        | ファイルに使用可能か | フォルダに使用可能か |
 | -------------------------------------- | ----------------------------------------------------------- | ---------- | ---------- |
-| `COLLABORATION.CREATED`                | コラボレーションが作成される。                                             | いいえ        | はい         |
-| `COLLABORATION.ACCEPTED`               | コラボレーションが承認される。                                             | いいえ        | はい         |
-| `COLLABORATION.REJECTED`               | コラボレーションが拒否される。                                             | いいえ        | はい         |
-| `COLLABORATION.REMOVED`                | コラボレーションが削除される。                                             | いいえ        | はい         |
-| `COLLABORATION.UPDATED`                | コラボレーションが更新される。                                             | いいえ        | はい         |
-| `COMMENT.CREATED`                      | コメントオブジェクトが作成される。                                           | はい         | はい         |
-| `COMMENT.UPDATED`                      | コメントオブジェクトが編集される。                                           | はい         | はい         |
-| `COMMENT.DELETED`                      | コメントオブジェクトが削除される。                                           | はい         | はい         |
-| `DOCGEN_DOCUMENT_GENERATION_FAILED`    | Doc Genがドキュメントの生成に失敗しました。                                   | はい         | いいえ        |
-| `DOCGEN_DOCUMENT_GENERATION_STARTED`   | Doc Genがドキュメントの作成を開始しました。                                   | はい         | いいえ        |
-| `DOCGEN_DOCUMENT_GENERATION_SUCCEEDED` | Doc Genがドキュメントの作成に成功しました。                                   | はい         | いいえ        |
-| `FILE.UPLOADED`                        | ファイルがこのフォルダにアップロードまたは移動される。                                 | いいえ        | はい         |
-| `FILE.PREVIEWED`                       | ファイルがプレビューされる。                                              | はい         | はい         |
-| `FILE.DOWNLOADED`                      | ファイルがダウンロードされる。                                             | はい         | はい         |
-| `FILE.TRASHED`                         | ファイルがごみ箱に移動される。                                             | はい         | はい         |
-| `FILE.DELETED`                         | ファイルが完全に削除される。                                              | はい         | はい         |
-| `FILE.RESTORED`                        | ファイルがごみ箱から復元される。                                            | はい         | はい         |
-| `FILE.COPIED`                          | ファイルがコピーされる。                                                | はい         | はい         |
-| `FILE.MOVED`                           | ファイルが別のフォルダに移動される。                                          | はい         | はい         |
-| `FILE.LOCKED`                          | ファイルがロックされる。                                                | はい         | はい         |
-| `FILE.UNLOCKED`                        | ファイルのロックが解除される。                                             | はい         | はい         |
-| `FILE.RENAMED`                         | ファイル名が変更される。                                                | はい         | はい         |
-| `FOLDER.CREATED`                       | フォルダが作成される。                                                 | いいえ        | はい         |
-| `FOLDER.RENAMED`                       | フォルダ名が変更される。                                                | いいえ        | はい         |
-| `FOLDER.DOWNLOADED`                    | フォルダがダウンロードされる。                                             | いいえ        | はい         |
-| `FOLDER.RESTORED`                      | フォルダがごみ箱から復元される。                                            | いいえ        | はい         |
-| `FOLDER.DELETED`                       | フォルダが完全に削除される。                                              | いいえ        | はい         |
-| `FOLDER.COPIED`                        | フォルダがコピーされる。                                                | いいえ        | はい         |
-| `FOLDER.MOVED`                         | フォルダが別のフォルダに移動される。                                          | いいえ        | はい         |
-| `FOLDER.TRASHED`                       | フォルダがごみ箱に移動される。                                             | いいえ        | はい         |
-| `METADATA_INSTANCE.CREATED`            | ファイルまたはフォルダに新しいメタデータテンプレートインスタンスが関連付けられる。                   | はい         | はい         |
-| `METADATA_INSTANCE.UPDATED`            | ファイルまたはフォルダに関連付けられている既存のメタデータテンプレートインスタンスの属性 (値) が更新/削除される。 | はい         | はい         |
-| `METADATA_INSTANCE.DELETED`            | ファイルまたはフォルダに関連付けられている既存のメタデータテンプレートインスタンスが削除される。            | はい         | はい         |
-| `SHARED_LINK.DELETED`                  | 共有リンクが削除される。                                                | はい         | はい         |
-| `SHARED_LINK.CREATED`                  | 共有リンクが作成される。                                                | はい         | はい         |
-| `SHARED_LINK.UPDATED`                  | 共有リンクが更新される。                                                | はい         | はい         |
-| `TASK_ASSIGNMENT.CREATED`              | タスクの作成                                                      | はい         | はい         |
-| `TASK_ASSIGNMENT.UPDATED`              | タスク割り当てが変更される。                                              | はい         | はい         |
-| `SIGN_REQUEST.COMPLETED`               | 署名リクエストが完了する。                                               | はい         | はい         |
-| `SIGN_REQUEST.DECLINED`                | 署名リクエストが拒否される。                                              | はい         | はい         |
-| `SIGN_REQUEST.EXPIRED`                 | 署名リクエストの有効期限が切れる。                                           | はい         | はい         |
-| `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED`    | 署名者のメールが差し戻される。                                             | はい         | はい         |
-| `SIGN_REQUEST.SIGNER_SIGNED`           | 署名リクエストが特定の署名者によって署名される。                                    | はい         | はい         |
-| `SIGN_REQUEST.SIGNATURE_REQUESTED`     | 署名者に対して署名がリクエストされる。                                         | はい         | はい         |
-| `SIGN_REQUEST.ERROR_FINALIZING`        | 署名リクエストの確定時にエラーが発生する。                                       | はい         | はい         |
+| `COLLABORATION.CREATED`                | コラボレーションが作成される。                                             | いいえ        | あり         |
+| `COLLABORATION.ACCEPTED`               | コラボレーションが承認される。                                             | いいえ        | あり         |
+| `COLLABORATION.REJECTED`               | コラボレーションが拒否される。                                             | いいえ        | あり         |
+| `COLLABORATION.REMOVED`                | コラボレーションが削除される。                                             | いいえ        | あり         |
+| `COLLABORATION.UPDATED`                | コラボレーションが更新される。                                             | いいえ        | あり         |
+| `COMMENT.CREATED`                      | コメントオブジェクトが作成される。                                           | あり         | あり         |
+| `COMMENT.UPDATED`                      | コメントオブジェクトが編集される。                                           | あり         | あり         |
+| `COMMENT.DELETED`                      | コメントオブジェクトが削除される。                                           | あり         | あり         |
+| `DOCGEN_DOCUMENT_GENERATION_FAILED`    | Doc Genがドキュメントの生成に失敗しました。                                   | あり         | いいえ        |
+| `DOCGEN_DOCUMENT_GENERATION_STARTED`   | Doc Genがドキュメントの作成を開始しました。                                   | あり         | いいえ        |
+| `DOCGEN_DOCUMENT_GENERATION_SUCCEEDED` | Doc Genがドキュメントの作成に成功しました。                                   | あり         | いいえ        |
+| `FILE.UPLOADED`                        | ファイルがこのフォルダにアップロードまたは移動される。                                 | いいえ        | あり         |
+| `FILE.PREVIEWED`                       | ファイルがプレビューされる。                                              | あり         | あり         |
+| `FILE.DOWNLOADED`                      | ファイルがダウンロードされる。                                             | あり         | あり         |
+| `FILE.TRASHED`                         | ファイルがごみ箱に移動される。                                             | あり         | あり         |
+| `FILE.DELETED`                         | ファイルが完全に削除される。                                              | あり         | あり         |
+| `FILE.RESTORED`                        | ファイルがごみ箱から復元される。                                            | あり         | あり         |
+| `FILE.COPIED`                          | ファイルがコピーされる。                                                | あり         | あり         |
+| `FILE.MOVED`                           | ファイルが別のフォルダに移動される。                                          | あり         | あり         |
+| `FILE.LOCKED`                          | ファイルがロックされる。                                                | あり         | あり         |
+| `FILE.UNLOCKED`                        | ファイルのロックが解除される。                                             | あり         | あり         |
+| `FILE.RENAMED`                         | ファイル名が変更される。                                                | あり         | あり         |
+| `FOLDER.CREATED`                       | フォルダが作成される。                                                 | いいえ        | あり         |
+| `FOLDER.RENAMED`                       | フォルダ名が変更される。                                                | いいえ        | あり         |
+| `FOLDER.DOWNLOADED`                    | フォルダがダウンロードされる。                                             | いいえ        | あり         |
+| `FOLDER.RESTORED`                      | フォルダがごみ箱から復元される。                                            | いいえ        | あり         |
+| `FOLDER.DELETED`                       | フォルダが完全に削除される。                                              | いいえ        | あり         |
+| `FOLDER.COPIED`                        | フォルダがコピーされる。                                                | いいえ        | あり         |
+| `FOLDER.MOVED`                         | フォルダが別のフォルダに移動される。                                          | いいえ        | あり         |
+| `FOLDER.TRASHED`                       | フォルダがごみ箱に移動される。                                             | いいえ        | あり         |
+| `METADATA_INSTANCE.CREATED`            | ファイルまたはフォルダに新しいメタデータテンプレートインスタンスが関連付けられる。                   | あり         | あり         |
+| `METADATA_INSTANCE.UPDATED`            | ファイルまたはフォルダに関連付けられている既存のメタデータテンプレートインスタンスの属性 (値) が更新/削除される。 | あり         | あり         |
+| `METADATA_INSTANCE.DELETED`            | ファイルまたはフォルダに関連付けられている既存のメタデータテンプレートインスタンスが削除される。            | あり         | あり         |
+| `SHARED_LINK.DELETED`                  | 共有リンクが削除される。                                                | あり         | あり         |
+| `SHARED_LINK.CREATED`                  | 共有リンクが作成される。                                                | あり         | あり         |
+| `SHARED_LINK.UPDATED`                  | 共有リンクが更新される。                                                | あり         | あり         |
+| `TASK_ASSIGNMENT.CREATED`              | タスクの作成                                                      | あり         | あり         |
+| `TASK_ASSIGNMENT.UPDATED`              | タスク割り当てが変更される。                                              | あり         | あり         |
+| `SIGN_REQUEST.COMPLETED`               | 署名リクエストが完了する。                                               | あり         | あり         |
+| `SIGN_REQUEST.DECLINED`                | 署名リクエストが拒否される。                                              | あり         | あり         |
+| `SIGN_REQUEST.EXPIRED`                 | 署名リクエストの有効期限が切れる。                                           | あり         | あり         |
+| `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED`    | 署名者のメールが差し戻される。                                             | あり         | あり         |
+| `SIGN_REQUEST.SIGNER_SIGNED`           | 署名リクエストが特定の署名者によって署名される。                                    | あり         | あり         |
+| `SIGN_REQUEST.SIGNATURE_REQUESTED`     | 署名者に対して署名がリクエストされる。                                         | あり         | あり         |
+| `SIGN_REQUEST.ERROR_FINALIZING`        | 署名リクエストの確定時にエラーが発生する。                                       | あり         | あり         |
 | `WEBHOOK.DELETED`                      | Webhookが削除される。                                              | いいえ        | いいえ        |
 
 <!-- | `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED` | A sign request recipient email notification was not delivered | -->
