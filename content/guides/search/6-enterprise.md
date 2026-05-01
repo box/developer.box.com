@@ -68,9 +68,10 @@ client.search.query(
 
 <Message warning>
 
-The `enterprise_content` scope can be requested by an admin through our
-[support channels](p://support). Once this scope has been enabled for a user, it
-will allow that user to query for content across the entire enterprise and not
-only the content that they have access to.
+The `enterprise_content` scope (also called Global Content Manager, or 'GCM') can be requested by an admin through our
+[support channels](p://support). Once this scope has been enabled for an app, it
+will allow an admin user to query for content across the entire enterprise and not
+only the content that they have access to. 
+For more information about enabling this scope, see [Global Content Manager](p://https://developer.box.com/guides/api-calls/permissions-and-errors/scopes#global-content-manager-gcm).
 
 </Message >
