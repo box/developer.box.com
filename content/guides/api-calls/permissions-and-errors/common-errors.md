@@ -57,6 +57,58 @@ for solution to common errors encountered when working with the Box APIs.
 | **Error**    | `bad_request`|
 |**Message**  |  |
 | **Solution** | Required parameters supplied in the API request are either missing or invalid. Check the extended error message in the response body for more details. |
+| | |
+| **Error**    | `unauthorized_client` |
+| **Message**  | This app is not authorized by the enterprise admin. |
+| **Solution** | Server authentication applications using JWT or Client Credentials Grant must be authorized by a Box Admin before use. Follow the steps in <Link href="/guides/authorization/platform-app-approval">Platform App Approval</Link>. |
+| | |
+| **Error**    | `invalid_client` |
+| **Message**  | The client credentials are invalid. |
+| **Solution** | Verify the Client ID and Client Secret in the token request match the values in the Developer Console.|
+| | |
+| **Error**    | `invalid_grant` |
+| **Message**  | Invalid refresh token |
+| **Solution** | The refresh token may be invalid, revoked, or expired. Correct your application's refresh-token handling and obtain a new token pair through the OAuth 2.0 authorization flow if needed. |
+| | |
+| **Error**    | `invalid_request` |
+| **Message**  | The grant type is unauthorized for this client_id. |
+| **Solution** | You may be requesting a token using standard OAuth 2.0 while the app is configured for Server Authentication (JWT), or vice versa. Use the token request type that matches your app's authentication method. See [The grant type is unauthorized for this client_id](https://support.box.com/hc/en-us/articles/360044193033-API-Authentication-The-grant-type-is-unauthorized-for-this-client-id). |
+| | |
+| **Error**    | `invalid_request` |
+| **Message**  | Invalid `grant_type` parameter or parameter missing. |
+| **Solution** | You may be sending token requests to wrong domains (such as `app.box.com` or `www.box.com`). Send token requests to `https://api.box.com`. Use the `grant_type` and other parameters required for your flow (authorization code, refresh token, JWT assertion, and so on). |
+| | |
+| **Error**    | `invalid_request` |
+| **Message**  | Cannot obtain user token based on the enterprise configuration for your app. |
+| **Solution** | Your app may be missing a scope or configuration needed to request a user token. See [Cannot Obtain Token Based on Enterprise Configuration for Your App](https://support.box.com/hc/en-us/articles/360044192553). |
+| | |
+| **Error**    | `invalid_grant` |
+| **Message**  | The authorization code has expired. |
+| **Solution** | Authorization codes expire shortly after they are issued (on the order of tens of seconds). Exchange the code for tokens immediately after the user is redirected back to your application. |
+| | |
+| **Error**    | `invalid_grant` |
+| **Message**  | Please check the `sub` claim. |
+| **Solution** | For JWT auth, set the `sub` (subject) claim to the correct user ID or enterprise ID depending on `box_sub_type`. See [JWT `invalid_grant`: check the `sub` claim](https://support.box.com/hc/en-us/articles/360043691734). |
+| | |
+| **Error**    | `invalid_grant` |
+| **Message**  | Please check the `jti` claim. A unique `jti` value is required. |
+| **Solution** | Ensure the JWT ID (`jti`) is set to a valid, unique value for each assertion. The same `jti` cannot be reused. |
+| | |
+| **Error**    | `invalid_grant` |
+| **Message**  | Please check the `iss` claim. |
+| **Solution** | The issuer (`iss`) claim must match the OAuth client ID for your application when using JWT authentication. |
+| | |
+| **Error**    | `invalid_grant` |
+| **Message**  | Signature verification error. The public key identified by `kid` must correspond to the private key used for signing. |
+| **Solution** | Use the public/private keypair associated with your app in the Developer Console. If you rotate keys, add the new key, remove the old one, update your configuration file with the new keypair and `kid`, then request a new access token. |
+| | |
+| **Error**    | `invalid_grant` |
+| **Message**  | `kid` invalid, unable to lookup correct key. |
+| **Solution** | The key ID (`kid`) in the JWT header must match a public key registered for the application (for example, the `publicKeyID` in your configuration). Confirm you are using the correct configuration file, or generate a new RSA keypair in the Developer Console and update your app to use it. |
+| | |
+| **Error**    | `invalid_grant` |
+| **Message**  | Current date time must be before the expiration date time listed in the 'exp' claim. |
+| **Solution** | This error occurs when the Unix time on your local machine and the Box server are out of sync. To fix this error, update the Unix time on your machine to match a synchronized time server, then try the request again. |
 | |  |
 | **Error**    | `cannot_make_collaborated_subfolder_private` |
 | **Message**  | Cannot move a collaborated subfolder to a private folder unless the new owner is explicitly specified. |
@@ -77,14 +129,6 @@ for solution to common errors encountered when working with the Box APIs.
 | **Error**   | `invalid_collaboration_item` |
 | **Message**  | Item type must be specified and set to 'folder'  |
 | **Solution** | The `item.type` field of the collaboration item should be set to folder.|
-| | |
-| **Error**    | `invalid_grant`   |
-| **Message**  | Verify the authorization code is set correctly in your request, or your application likely needs to get a new authorization code.  |
-| **Solution** | The authorization code supplied in the API request is missing or no longer valid. Possible solutions are to verify that the access token is added correctly in the request. If correctly set, the access token may have expired. Attempt to refresh the access token or fetch a new one.  |
-| | |
-| **Error**    | `invalid_grant` |
-| **Message**  | Current date time must be before the expiration date time listed in the 'exp' claim. |
-| **Solution** | This error occurs when the Unix time on your local machine and the Box server are out of sync. To fix this error, update the Unix time on your machine to match a synchronized time server, then try the request again. |
 |  |  |
 | **Error**    | `invalid_limit` |
 | **Message**  | Limit is not a valid number |
@@ -156,6 +200,10 @@ for solution to common errors encountered when working with the Box APIs.
 | **Error**    | `unauthorized`  |
 | **Message**  | Unauthorized    |
 | **Solution** | Authorization token is not authorized, check extended error message in body for more details. |
+|  |  |
+| **Error**    | `invalid_token`  |
+| **Message**  | The access token provided is invalid. |
+| **Solution** | The access token may be incorrect, corrupted, or expired—for example, because of a typo, using a token from another environment, or revocation or deletion. Obtain a new access token from the token endpoint. For OAuth 2.0 auth, you can refresh an expired access token; see <Link href="/guides/authentication/tokens/refresh">Refresh a token</Link>. |
 
 ### 403 Forbidden
 
