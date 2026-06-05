@@ -82,6 +82,7 @@ outlined actions.
 * **Manage Enterprise Properties**: Required to enable or edit the enterprise's settings for Terms of Services as well as to view them for external users.
 * **Manage Users**: Required to accept Terms of Services for other users.
 
+[user-types]: page://platform/user-types
 [euserstatuses]: e://get-terms-of-service-user-statuses
 [euserstatuses_put]: e://put-terms-of-service-user-statuses-id
 [euserstatuses_post]: e://post-terms-of-service-user-statuses
