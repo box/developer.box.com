@@ -31,7 +31,7 @@ in to Box (for example, standard managed users with credentials).
 The following user types are **not** subject to Managed Terms of Service, even
 though they belong to the enterprise:
 
-| User type | Managed ToS required? |
+| User type | Managed Terms of Service required? |
 | --------- | --------------------- |
 | Admin/Co-Admin and Managed user (can log in to Box) | **Yes** |
 | [Service account][user-types] (Automation User) | **No** |

@@ -66,12 +66,12 @@ a [service account][user-types], an [App User][user-types], or a managed user.
 Terms of Service enforcement depends on which user is in context for the API
 request.
 
-| Scenario | Blocked if Managed ToS not accepted? |
+| Scenario | Blocked if Managed Terms of Service not accepted? |
 | -------- | ------------------------------------ |
 | API call with a service account or App User token (no `As-User`) | **No** — headless users are exempt |
 | API call with CCG/JWT and [`As-User`][as-user] set to a managed user | **Yes** — the impersonated user must have accepted |
-| User access token issued for a managed user | **Yes** — token issuance is blocked until ToS is accepted |
-| OAuth authorization code flow for a managed user | **Yes** — authorization is blocked until ToS is accepted |
+| User access token issued for a managed user | **Yes** — token issuance is blocked until Terms of Service is accepted |
+| OAuth authorization code flow for a managed user | **Yes** — authorization is blocked until Terms of Service is accepted |
 | API call with `As-User` set to a service account or App User | **No** — headless users are exempt |
 
 ### Accepting Terms of Service programmatically
@@ -83,8 +83,8 @@ without requiring the user to sign in to the Box web application:
 1. Obtain a server authentication access token (JWT or CCG).
 2. Set the [`As-User`][as-user] header to the managed user's ID so subsequent
    requests run in that user's context.
-3. Call the Terms of Service endpoints, which remain available even when ToS
-   acceptance is outstanding:
+3. Call the Terms of Service endpoints, which remain available even when Terms
+   of Service acceptance is outstanding:
    * [`GET /terms_of_services/:id`][get_tos_id] to retrieve the terms text
    * [`POST /terms_of_service_user_statuses`][post_tosus] or
      [`PUT /terms_of_service_user_statuses/:id`][put_tosus] to accept or reject
