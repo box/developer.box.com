@@ -18,9 +18,28 @@ within which all users are allowed to work with an enterprise's data in Box.
 
 There are currently two types of Terms of Service for any enterprise that can be
 enabled independently. The **Managed Terms of Service** can be
-enabled for the enterprise's own users, where the **External Terms of Service*
+enabled for the enterprise's own users, where the **External Terms of Service**
 can be enabled for users from other enterprises that collaborated in on the
 primary enterprise's data.
+
+### Who is subject to Managed Terms of Service?
+
+When Managed Terms of Service is enabled for an enterprise, it applies to
+**login-capable managed users** in that enterprise. These are users who can sign
+in to Box (for example, standard managed users with credentials).
+
+The following user types are **not** subject to Managed Terms of Service, even
+though they belong to the enterprise:
+
+| User type | Managed ToS required? |
+| --------- | --------------------- |
+| Admin/Co-Admin and Managed user (can log in to Box) | **Yes** |
+| [Service account][user-types] (Automation User) | **No** |
+| [App User][user-types] | **No** |
+
+Service accounts and App Users are API-only, headless users. They are exempt
+from Managed Terms of Service enforcement. The Admin Console setting for
+managed users refers to these login-capable users, not every enterprise member.
 
 ## Terms of Service User Statuses
 

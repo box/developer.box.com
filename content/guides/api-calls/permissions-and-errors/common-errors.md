@@ -183,7 +183,7 @@ for solution to common errors encountered when working with the Box APIs.
 |   |    |
 | **Error**    | `terms_of_service_required`   |
 | **Message**  | User must accept custom terms of service before action can be taken  |
-| **Solution** | The admin of your Box account has set custom terms of service and the user has not logged in to accept the terms yet. The user will need to accept the terms of service, or the admin will have to disable them, in order to proceed. More information is available [here](https://support.box.com/hc/en-us/articles/360044192733-Using-Custom-Terms-Of-Service). |
+| **Solution** | The user in context for the API request has not accepted the enterprise's custom Terms of Service. For login-capable managed users, acceptance is required before most API calls, user access token issuance, or OAuth authorization can proceed. Service accounts and App Users are exempt. If you are using server authentication with the `As-User` header or a user access token, the impersonated or token subject user must have accepted. The user can accept via the Box web application, or your application can accept programmatically using the <Link href="/guides/security/terms-of-service/flow">Terms of Service application flow</Link>. More information is available [here](https://support.box.com/hc/en-us/articles/360044192733-Using-Custom-Terms-Of-Service). |
 |  |   |
 | **Error**| `user_already_collaborator`  |
 | **Message**  | User is already a collaborator  |
