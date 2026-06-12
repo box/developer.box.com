@@ -18,7 +18,7 @@ alias_paths:
 With Box AI API, you can extract metadata from the provided file
 and get the result in the form of key-value pairs.
 As input, you can either create a structure using the `fields` parameter, or use an already defined metadata template.
-To learn more about creating templates, see [Creating metadata templates in the Admin Console][templates-console] or use the [metadata template API][templates-api].
+To learn more about creating templates, see [Creating metadata templates in the Admin Console][templates-console] or use the [metadata template API][templates-api]. There is also information available for [Autofilling Metadata in Templates][autofill-metadata]. 
 
 ## Supported file formats
 
@@ -276,3 +276,4 @@ print(f"box_ai_response: {box_ai_response.answer}")
 [blog]: https://medium.com/box-developer-blog
 [inline-field]: #use-fields-parameter
 [metadata-template]: #use-metadata-template
+[autofill-metadata]: https://support.box.com/hc/en-us/articles/360044196173-Using-Metadata#h_01JJSRYKDKXHGJT9ZHCW1E9RX5
