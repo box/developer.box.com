@@ -24,6 +24,11 @@ An end user is considered subject to Terms of Service when:
     * A managed Terms of Service for a user that is part of the same enterprise
     * An external Terms of Service for users collaborating into the enterprise
 
+For **Managed** Terms of Service specifically, the user must also be a
+login-capable managed user. [Service accounts][user-types] and
+[App Users][user-types] are headless users and are not subject to Managed Terms
+of Service, even when they belong to the enterprise.
+
 Terms of Service settings can be viewed by an end user if:
 
 * The user is subject to a  Terms of Service; and
@@ -38,7 +43,7 @@ if:
 
 Terms of Service settings can be edited by an enterprise admin or co-admin if:
 
-* They have **'Edit settings for your company** permissions
+* They have **Edit settings for your company** permissions
 * The application has the **Manage enterprise properties** scope enabled
 * The Terms of Service belongs to their enterprise
 
@@ -67,6 +72,7 @@ enterprise admins and co-admins if:
 
 * They have **Manager users** permissions
 * The application has the **Manage users** scope enabled
+* The application has the **As-User**[as-user] scope enabled
 * The end user is subject to the Terms of Service
 * The end user is not an admin or co-admin
 * The Terms of Service belongs to their enterprise
@@ -76,3 +82,6 @@ An end user cannot accept, reject, view external Terms of Service settings for
 an enterprise they are collaborating into until the end user accepts the managed
 Terms of service for their own enterprise, where applicable. Trying to do so
 will result in a `TERMS_OF_SERVICE_REQUIRED` error.
+
+[user-types]: page://platform/user-types
+[as-user]: g://authentication/oauth2/as-user

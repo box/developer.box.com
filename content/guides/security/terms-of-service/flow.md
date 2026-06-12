@@ -59,6 +59,43 @@ When the user accepts or rejects the terms, it makes a call to either
 [`POST /terms_of_service_user_statuses`][post_tosus] depending on if the initial
 error returned a `tos_user_status_id` in the response.
 
+## Server authentication and impersonation
+
+Applications using JWT, Client Credentials Grant (CCG), or OAuth 2.0 may act as
+a [service account][user-types], an [App User][user-types], or a managed user.
+Terms of Service enforcement depends on which user is in context for the API
+request.
+
+| Scenario | Blocked if Managed Terms of Service not accepted? |
+| -------- | ------------------------------------ |
+| API call with a service account or App User token (no `As-User`) | **No** — headless users are exempt |
+| API call with CCG/JWT and [`As-User`][as-user] set to a managed user | **Yes** — the impersonated user must have accepted |
+| User access token issued for a managed user | **Yes** — token issuance is blocked until Terms of Service is accepted |
+| OAuth authorization code flow for a managed user | **Yes** — authorization is blocked until Terms of Service is accepted |
+| API call with `As-User` set to a service account or App User | **No** — headless users are exempt |
+
+### Accepting Terms of Service programmatically
+
+When a managed user has not accepted Managed Terms of Service, most API calls
+made on their behalf return `terms_of_service_required`. To resolve this
+without requiring the user to sign in to the Box web application:
+
+1. Obtain a server authentication access token (JWT or CCG).
+2. Set the [`As-User`][as-user] header to the managed user's ID so subsequent
+   requests run in that user's context.
+3. Call the Terms of Service endpoints, which remain available even when Terms
+   of Service acceptance is outstanding:
+   * [`GET /terms_of_services/:id`][get_tos_id] to retrieve the terms text
+   * [`POST /terms_of_service_user_statuses`][post_tosus] or
+     [`PUT /terms_of_service_user_statuses/:id`][put_tosus] to accept or reject
+4. Retry the original API call.
+
+An admin cannot accept Managed Terms of Service for another user without using
+the `As-User` header to act as that user. Acceptance must be recorded for the
+user who is subject to the Terms of Service.
+
+[as-user]: g://authentication/oauth2/as-user
+[user-types]: page://platform/user-types
 [put_tosus]: e://put_terms_of_service_user_statuses_id
 [post_tosus]: e://post_terms_of_service_user_statuses
 [get_tos_id]: e://get_terms_of_services_id
