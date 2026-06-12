@@ -5,9 +5,9 @@ rank: 0
 
 # Learn Box Platform
 
-If you are new to Box, **start here**!
-In the following pages, you'll learn how all the Box Platform
-concepts and components work together to help you create an application quickly.
+**Start here** if you are new to Box! 
+In the following pages, you'll learn the basics of [Box Platform][platform] to
+help you create an application quickly.
 
 <!-- To kick off your learning journey, checkout this video for an overview
 on everything Box Platform. -->
@@ -18,27 +18,32 @@ on everything Box Platform. -->
 
 <!-- REPLACE ABOVE IMAGE WITH VIDEO -->
 
+
+
 ## Learn Sections
 
-These pages go into more depth on each topic. Checkout each one and become
-a Box Platform expert.
+These sections explain how the concepts and components of Box Platform work
+together. Use Box glossary[glossary] to learn the terms and definitions we use in Box
+Platform.
 
-- [Box Platform 101][platform101]
-- [Use Cases][usecases]
-- [User Types][usertypes]
-- [Application Types][apptypes]
-- [Authentication Methods][authtypes]
-- [Support][support]
-- [Tools][tools]
+- Box Platform 101[platform101]
+- Use Cases[usecases]
+- User Types[usertypes]
+- Application Types[apptypes]
+- Authentication Methods[authmethods]
+- Support[support]
+- Tools[tools]
 
 <Next>
-  Get Started
+	Get Started
 </Next>
 
-[platform101]: page://platform/box-platform-101
-[usecases]: page://platform/use-cases
-[usertypes]: page://platform/user-types
-[apptypes]: page://platform/application-types
-[authtypes]: page://platform/authentication-methods
-[support]: page://platform/support
-[tools]: page://platform/tools
+[box-glossary]:page://platform/box-glossary
+[platform101]:page://platform/box-platform-101
+[usecases]:page://platform/use-cases
+[usertypes]:page://platform/user-types
+[apptypes]:page://platform/application-types
+[authmetods]:page://platform/authentication-methods
+[support]:page://platform/support
+[tools]:page://platform/tools
+[platform]: https://www.box.com/platform
