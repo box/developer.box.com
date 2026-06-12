@@ -13,18 +13,42 @@ alias_paths:
 
 # Deprovision Users
 
-Part of regular Box enterprise maintenance is removing accounts for users that
-are no longer active in your enterprise. When removing a user from your
-enterprise, you'll need to move all content owned by the user into another
-account before deleting the user account.
+Part of regular Box enterprise maintenance is deactivating (recommended) or removing accounts for users that are no longer active in your enterprise. 
 
-<Message type='notice'>
-  The delete user request will fail if the user account still has content in
-  it. An optional `force` parameter is available in the API call, which will
-  force delete the user account along with all content in the account.
+## Deactivating users — recommended
+
+User deactivation is the recommended practice as it removes the user's access but keeps all of their files, folders, and audit history.
+
+<!--alex ignore -->
+Deactivated users no longer count toward login activity or sharing metrics, but their content and history remain intact.
+<!--alex enable -->
+
+Deactivation is safe, reversible, and preserves everything your legal, IT, and content teams care about. You can always delete user's account later.
+
+Tips for automation:
+
+* Use Box Events or Admin Insights to detect inactive users.
+* Automatically deactivate users after 90+ days of inactivity.
+* Set up reactivation workflows in your internal tools.
+
+To deactivate a user, use:
+
+```bash
+PATCH /users/
+
+{user_id}
+with body
+
+{ "status": "inactive" }
+```
+
+## Deleting users
+
+<Message type='danger'>
+Deleting a user permanently deletes all of their data unless you transfer them to another account. It is recommended to make users inactive instead.
 </Message>
 
-The standard best practice when decommissioning a user account is to move all
+The standard best practice when [deleting a user account][delete] is to move all
 content owned by that user into another admin level account or into the
 application service account. Once moved, you can transfer ownership of the
 content to a different user or collaborate a different user on the content if
@@ -113,3 +137,5 @@ box users:delete $transfer_from_user_id --yes
 
   </Tab>
 </Tabs>
+
+[delete]: g://users/delete-user
