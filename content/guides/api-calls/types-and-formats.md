@@ -161,7 +161,7 @@ object with a `request_id` field.
   "type": "error",
   "status": 400,
   "code": "item_name_invalid",
-  "help_url": "https://developer.box.com/guides/api-calls/permissions-and-errors/common-errors/",
+  "help_url": "https://developer.box.com/guides/api-calls/permissions-and-errors/common-errors",
   "message": "Method Not Allowed",
   "request_id": "abcdef123456"
 }
@@ -187,7 +187,7 @@ number.
 In these cases these numbers are returned in [IEEE754][numbers] format for
 example `1.2318237429383e+31`.
 
-[post-oauth2-token]: endpoint://post-oauth2-token
-[post-files-content]: endpoint://post-files-content
+[post-oauth2-token]: e://post-oauth2-token
+[post-files-content]: e://post-files-content
 [numbers]: https://en.wikipedia.org/wiki/IEEE_754
 [rfc3339]: https://www.ietf.org/rfc/rfc3339.txt

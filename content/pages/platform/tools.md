@@ -56,10 +56,10 @@ the YouTube video below.
 </Next>
 
 [samples]: g://cli/scripts
-[sdk]: page://sdks-and-tools
+[sdk]: p://sdks-and-tools
 [file]: e://get-files-id
 [tooling]: g://tooling
 <!-- i18n-enable localize-links -->
-[sample_code]: https://developer.box.com/sample-code/
+[sample_code]: pages/sample-code
 [postman]: https://www.postman.com/boxdev
 <!-- i18n-disable localize-links -->
