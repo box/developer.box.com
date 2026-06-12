@@ -17,8 +17,8 @@ Box, the search index is updated accordingly.
 It can take time between uploading or modifying a
 file for it to be fully indexed and ready to be searched. In most cases,
 newly added or changed files can be expected to be available via Box search
-in 10 minutes. The current service load determines the index time and it may
-take more than 10 minutes in some cases.
+in seconds. The current service load determines the index time and it may
+take more than a few seconds in some cases.
 
 <Message info>
 
